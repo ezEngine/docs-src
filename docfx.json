@@ -1,0 +1,46 @@
+{
+  "metadata": [
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "pages/**/*.md",
+          "pages/**/*.yml",
+          "toc.yml",
+          "*.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "assets/**",
+          "pages/**/media/**"
+        ]
+      }
+    ],
+    "overwrite": [
+    ],
+    "dest": "_site",
+	"globalMetadata": {
+		"_appTitle": "ezEngine Documentation",
+		"_appLogoPath": "assets/images/EZ-text.svg",
+		"_appFaviconPath": "assets/images/favicon.svg",
+		"_enableSearch": true,
+		"_enableGoogleAnalytics": true
+	},
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "template": [
+      "default",
+	  "template"
+    ],
+    "postProcessors": [],
+    "markdownEngineName": "markdig",
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false
+  }
+}

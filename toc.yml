@@ -1,0 +1,12 @@
+- name: Getting Started
+  href: pages/getting-started/
+- name: Documentation
+  href: pages/docs/
+- name: Samples
+  href: pages/samples/
+- name: Contact
+  homepage: pages/contact.md
+- name: Releases
+  href: pages/releases/
+- name: Github
+  href: https://github.com/ezEngine/ezEngine

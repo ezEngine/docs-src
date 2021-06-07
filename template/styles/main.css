@@ -1,0 +1,56 @@
+footer a {
+	color: #9d9d9d;
+}
+
+footer a:hover {
+	font-weight: bold;
+	color: #fff;
+}
+
+span.footer-logo {
+}
+
+span.footer-logo a {
+  display: inline-block;
+  z-index: 10;
+  padding: 15px;
+  background-size: contain;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+}
+
+#logo_ez {
+  background-image: url('https://raw.githubusercontent.com/ezEngine/docs/main/assets/images/EZ-logo.svg');
+}
+
+#logo_github {
+  background-image: url('https://raw.githubusercontent.com/ezEngine/docs/main/assets/images/logo-github-white.svg');
+}
+
+#logo_twitter {
+  background-image: url('https://raw.githubusercontent.com/ezEngine/docs/main/assets/images/logo-twitter.svg');
+}
+
+#logo_discord {
+  background-image: url('https://raw.githubusercontent.com/ezEngine/docs/main/assets/images/logo-discord.svg');
+}
+
+#logo_youtube {
+  background-image: url('https://raw.githubusercontent.com/ezEngine/docs/main/assets/images/logo-youtube.svg');
+}
+
+footer {
+	background-color: #222;
+	border-color: #080808;
+}
+
+.footer {
+	background-color: inherit;
+}
+
+.grad-bottom{
+	display: none;
+}

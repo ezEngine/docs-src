@@ -1,0 +1,7 @@
+physx-joints.md
+physx-revolute-joint-component.md
+physx-spherical-joint-component.md
+physx-fixed-joint-component.md
+physx-prismatic-joint-component.md
+physx-distance-joint-component.md
+physx-6dof-joint-component.md

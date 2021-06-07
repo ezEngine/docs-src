@@ -1,0 +1,6 @@
+{{!Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.}}
+
+<a class="navbar-brand" href="{{_rel}}index.html" style="padding-right: 15px;">
+  <!--<img id="logo" class="svg" src="{{_rel}}{{{_appLogoPath}}}{{^_appLogoPath}}logo.svg{{/_appLogoPath}}" style="width: 100px; height: 50px;" alt="{{_appName}}" >-->
+  <img id="logo" src="{{_rel}}{{{_appLogoPath}}}{{^_appLogoPath}}logo.svg{{/_appLogoPath}}" style="width: 100px; height: 50px;" alt="{{_appName}}" >
+</a>

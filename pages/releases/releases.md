@@ -5,7 +5,7 @@ Releases can be downloaded [from GitHub](https://github.com/ezEngine/ezEngine/re
 Follow [@ezEngineProject](https://twitter.com/ezEngineProject) for release announcements.
 
 <!-- Please be careful changing the version number below, the editor parses this page to detect new releases. -->
-**The latest version is:** <!--<VERSION>-->20.8<!--</VERSION>-->
+**The latest version is:** <!--<VERSION>-->21.6<!--</VERSION>-->
 
 ## Release Notes
 

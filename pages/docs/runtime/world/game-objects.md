@@ -85,7 +85,7 @@ Within an object hierarchy, you can use the *name* of objects to search for cert
 * `ezGameObject::SearchForChildByNameSequence()`
 * `ezGameObject::SearchForChildrenByNameSequence()`
 
-For details please consult the [API Docs](../../../getting-started/api-docs.md) on those functions.
+For details please consult the [API Docs](../../api-docs.md) on those functions.
 
 ## Coordinate System
 

@@ -1,6 +1,6 @@
 # Input System
 
-All input devices, such as mouse, keyboard, controllers and other periphery are managed by the central `ezInputManager`. New devices are exposed to the system by implementing a custom `ezInputDevice`. For details, please see the [API Docs](../../getting-started/api-docs.md) for those classes.
+All input devices, such as mouse, keyboard, controllers and other periphery are managed by the central `ezInputManager`. New devices are exposed to the system by implementing a custom `ezInputDevice`. For details, please see the [API Docs](../api-docs.md) for those classes.
 
 ## Abstract State
 

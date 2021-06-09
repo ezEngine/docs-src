@@ -24,11 +24,12 @@
     ],
     "dest": "_site",
 	"globalMetadata": {
-		"_appTitle": "ezEngine Documentation",
+		"_appTitle": "ezEngine",
 		"_appLogoPath": "assets/images/EZ-text.svg",
 		"_appFaviconPath": "assets/images/favicon.svg",
 		"_enableSearch": true,
-		"_enableGoogleAnalytics": true
+		"_enableGoogleAnalytics": true,
+		"_enableNewTab": true
 	},
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],

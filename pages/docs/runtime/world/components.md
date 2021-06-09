@@ -128,7 +128,7 @@ Components can be 'active' or 'inactive'. This can be used to switch them on and
 
 It should be extremely rare that you need to override `ezComponent::Initialize()` or `ezComponent::Deinitialize()`.
 
-For all the details on the activation functions, refer to the [API Docs](../../../getting-started/api-docs.md).
+For all the details on the activation functions, refer to the [API Docs](../../api-docs.md).
 
 > **Caution:**
 >

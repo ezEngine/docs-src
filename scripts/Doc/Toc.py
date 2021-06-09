@@ -5,11 +5,10 @@ from typing import List, Tuple
 def DetermineTocOrder(curDir, order: list):
 
     tocTxt = os.path.join(curDir, "toc.txt")
-    folders = []
     subItems = []
 
-    ymlContent = ""
-    writeLocalYml = False
+    #ymlContent = ""
+    #writeLocalYml = False
 
     if os.path.exists(tocTxt):
         
@@ -54,27 +53,36 @@ def DetermineTocOrder(curDir, order: list):
             folderName = folderName.strip()
             displayName = displayName.strip()
 
-            subPath = os.path.join(curDir, folderName)
+            if folderName.startswith("http"):
 
-            if os.path.isdir(subPath):
-
-                order.append(">>>" + displayName)
-                DetermineTocOrder(subPath, order)
-                order.append("<<<")
-
-
-                ymlContent += f"- name: {displayName}\n"
-                ymlContent += f"  href: {folderName}/\n"
-
+                if sep < 0:
+                    order.append(f"[{folderName}]({folderName})")
+                else:
+                    order.append(f"[{displayName}]({folderName})")
+            
             else:
-                order.append(subPath)
 
-                ymlContent += f"- name: {displayName}\n"
-                ymlContent += f"  href: {folderName}\n"
+                subPath = os.path.join(curDir, folderName)
 
-    if writeLocalYml:
-        with open(os.path.join(curDir, "toc.yml"), "w") as ymlToc:
-            ymlToc.write(ymlContent)
+                if os.path.isdir(subPath):
+
+                    order.append(">>>" + displayName)
+                    DetermineTocOrder(subPath, order)
+                    order.append("<<<")
+
+
+                    #ymlContent += f"- name: {displayName}\n"
+                    #ymlContent += f"  href: {folderName}/\n"
+
+                else:
+                    order.append(subPath)
+
+                    #ymlContent += f"- name: {displayName}\n"
+                    #ymlContent += f"  href: {folderName}\n"
+
+    #if writeLocalYml:
+    #    with open(os.path.join(curDir, "toc.yml"), "w") as ymlToc:
+    #        ymlToc.write(ymlContent)
 
     return
 
@@ -155,6 +163,10 @@ def GenerateTocDocFX(nameToFile: dict, order: list):
 
             #tocContent += f"\n{indentation}---\n"
             continue
+
+        elif line.startswith("["):
+
+            tocContent += f"{indentLevel(indentation)} {line}\n"
 
         else:
 

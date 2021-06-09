@@ -6,7 +6,7 @@ A description of Fmod events is out of scope for this documentation. Please see 
 
 Fmod event components reference [sound event assets](fmod-soundevent-asset.md). The component plays the referenced sound. If the Fmod event has looping regions, the sound will play indefinitely, until it is stopped programmatically, or the component is deleted. There is no looping option on the component, since this feature controlled through Fmod Studio.
 
-Advanced Fmod features, like *sound cues* and adjusting *event parameters* are only accessible programmatically (C++ or TypeScript). For details please see the [API Docs](../../getting-started/api-docs.md) about `ezFmodEventComponent`.
+Advanced Fmod features, like *sound cues* and adjusting *event parameters* are only accessible programmatically (C++ or TypeScript). For details please see the [API Docs](../api-docs.md) about `ezFmodEventComponent`.
 
 ## Sound Occlusion
 

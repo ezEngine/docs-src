@@ -1,4 +1,5 @@
 docs-overview.md
+api-docs.md
 build
 ---
 editor

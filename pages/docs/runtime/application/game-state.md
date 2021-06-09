@@ -44,7 +44,7 @@ The idea is, that there are typically only few game states available anyway. Usu
 
 For an example game state have a look at the [Sample Game Plugin](../../../samples/sample-game-plugin.md). The game state in the sample derives from `ezFallbackGameState` to benefit from its utilities, such as the default fly camera. In fact, it is a good idea to look at the source of `ezFallbackGameState` as an example, as well.
 
-For all the details, read the [API Docs](../../../getting-started/api-docs.md) for `ezGameStateBase`.
+For all the details, read the [API Docs](../../api-docs.md) for `ezGameStateBase`.
 
 ## See Also
 

@@ -1,4 +1,5 @@
 # [Welcome](docs-overview.md)
+# [API Docs](api-docs.md)
 # Build
 ## [Building ezEngine](build/building-ez.md)
 ## [Supported Platforms](build/supported-platforms.md)

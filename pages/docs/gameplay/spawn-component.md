@@ -18,7 +18,7 @@ The *SpawnComponent* is frequently used to spawn instances of [prefabs](../prefa
 
 ## Details
 
-See the [API Docs](../../getting-started/api-docs.md) for `ezSpawnComponent` for the component's interface.
+See the [API Docs](../api-docs.md) for `ezSpawnComponent` for the component's interface.
 
 ## See Also
 

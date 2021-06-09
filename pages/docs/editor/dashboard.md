@@ -20,7 +20,7 @@ On the samples page you can see all the available sample projects. Open one via 
 
 ## Docs & Community
 
-On the community page you find buttons to quickly go to the available online resources, such as the [API Docs](../../getting-started/api-docs.md) and [contact options](../../contact.md).
+On the community page you find buttons to quickly go to the available online resources, such as the [API Docs](../api-docs.md) and [contact options](../../contact.md).
 
 ## See Also
 

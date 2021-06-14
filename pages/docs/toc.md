@@ -167,11 +167,11 @@
 ### [Authoring and Exporting Animations with Blender](animation/skeletal-animation/blender-export.md)
 # Sound
 ## [Sound](sound/sound-overview.md)
-## [Fmod Integration](sound/fmod-overview.md)
-## [Fmod Sound Bank Asset](sound/fmod-soundbank-asset.md)
-## [Fmod Sound Event Asset](sound/fmod-soundevent-asset.md)
-## [Fmod Listener Component](sound/fmod-listener-component.md)
-## [Fmod Event Component](sound/fmod-event-component.md)
+## [FMOD Integration](sound/fmod-overview.md)
+## [FMOD Sound Bank Asset](sound/fmod-soundbank-asset.md)
+## [FMOD Sound Event Asset](sound/fmod-soundevent-asset.md)
+## [FMOD Listener Component](sound/fmod-listener-component.md)
+## [FMOD Event Component](sound/fmod-event-component.md)
 # Terrain and Vegetation
 ## [Terrain and Vegetation](terrain/terrain-overview.md)
 ## [Heightfield Component](terrain/heightfield-component.md)

@@ -2,11 +2,11 @@
 
 The engine doesn't have sound support directly built-in, instead all sound functionality is provided through [plugins](../custom-code/cpp/engine-plugins.md).
 
-## Fmod Plugin
+## FMOD Plugin
 
-ezEngine comes with support [Fmod](https://www.fmod.com/).
+ezEngine comes with support [FMOD](https://www.fmod.com/).
 
-For details, please checkout the [page about Fmod](fmod-overview.md).
+For details, please checkout the [page about FMOD](fmod-overview.md).
 
 ## Sound Interface
 
@@ -16,5 +16,4 @@ A game can use this interface to adjust the volume of the entire game or specifi
 
 ## See Also
 
-
-* [Fmod Integration](fmod-overview.md)
+* [FMOD Integration](fmod-overview.md)

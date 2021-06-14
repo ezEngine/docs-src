@@ -62,7 +62,7 @@ Apart from the window position and size, the window configuration also controls 
 
 ## FMOD
 
-If the [FMOD Integration](../sound/fmod-overview.md) is enabled, *Editor > Project Settings > Fmod Project Settings...* will be available to configure the speaker mode and which master sound bank to use.
+If the [FMOD Integration](../sound/fmod-overview.md) is enabled, *Editor > Project Settings > FMOD Project Settings...* will be available to configure the speaker mode and which master sound bank to use.
 
 ## PhysX
 

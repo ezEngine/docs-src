@@ -2,6 +2,10 @@
 
 This page lists which third party code and data is used by EZ.
 
+> **Important:**
+>
+> Before you distribute any project, please check the licensing conditions for all used components. The list below tries to be exhaustive and up-to-date for components directly used by EZ, but this is only provided for your convenience and we give no guarantee for correctness. It is still your responsibility to make absolutely certain that your project doesn't violate any licensing conditions from third-party components used directly or indirectly in your project.
+
 ## Assimp
 
 Link: [http://www.assimp.org](http://www.assimp.org)
@@ -53,7 +57,7 @@ Link: [http://enet.bespin.org](http://enet.bespin.org)
 
 Compile switch: **EZ_3RDPARTY_ENET_SUPPORT**
 
-An efficient and easy to use networking library, built on top of the UDP protocoll. It is used by ezTelemetry to interact with the ezInspector, and it is also used to implement the file serving functionality.
+An efficient and easy to use networking library, built on top of the UDP protocol. It is used by ezTelemetry to interact with the ezInspector, and it is also used to implement the file serving functionality.
 
 ## FleetOps
 
@@ -61,20 +65,24 @@ Link: [https://www.fleetops.net](https://www.fleetops.net)
 
 Some assets were kindly provided with permission to use and redistribute, by the awesome team behind the FleetOps project. Thanks so much guys!
 
-## Fmod 2.x
+## FMOD 2.x
 
 Link: [https://www.fmod.com](https://www.fmod.com)
 
 Compile switch: **EZ_BUILD_FMOD**
 
-EZ has an integration for the Fmod sound system. However, you need to download the SDK yourself.
+EZ has an [integration for the FMOD sound system](../sound/fmod-overview.md). However, you need to download the SDK yourself.
 
 1. Go to [fmod.com](https://www.fmod.com)
 1. Sign up / log in
-1. Download and install the Fmod Studio API for the desired platforms
-1. For editing sounds you also need to download and install the Fmod Studio Tool
-1. In CMake, enable the Fmod compile switch
+1. Download and install the FMOD Studio API for the desired platforms
+1. For editing sounds you also need to download and install the FMOD Studio Tool
+1. In CMake, enable the FMOD compile switch
 1. Recompile ezEngine
+
+> **Important:**
+>
+> FMOD is a commercial product and you may need to buy a license to use it in your project.
 
 ## FreeSound
 
@@ -130,7 +138,7 @@ NVIDIA PhysX is used to provide collision detection, physics simulation, charact
 
 To build PhysX yourself:
 
-1. Checkout **https://github.com/NVIDIAGameWorks/PhysX.git**
+1. Checkout **<https://github.com/NVIDIAGameWorks/PhysX.git>**
 1. Goto **physx/buildtools/presets/public** and open all presets that you want to build and change or add\
 \<cmakeSwitch name="NV_USE_STATIC_WINCRT" value="False" comment="Use the statically linked windows CRT" />\
 \<cmakeSwitch name="NV_USE_DEBUG_WINCRT" value="True" comment="Use the debug version of the CRT" />
@@ -139,6 +147,10 @@ To build PhysX yourself:
 1. Uwp installs are missing two include folders: **PhysX/include/cudamanager** and **PhysX/include/gpu** so copy those from **physx/include** to **physx/install/.../PhysX/include**
 1. The content of the built configuration in **physx/install** is now ready to be consumed by ezEngine by pointing the advanced cmake var **EZ_PHYSX_SDK** to it.
 
+> **Important:**
+>
+> Depending on how you use PhysX, you may need to acquire (buy) a license for it from NVIDIA.
+
 ## Qt 5
 
 Link: [https://www.qt.io](https://www.qt.io)
@@ -146,6 +158,10 @@ Link: [https://www.qt.io](https://www.qt.io)
 Compile switch: **EZ_ENABLE_QT_SUPPORT**
 
 Used for all desktop GUI code in the editor and tools.
+
+> **Important:**
+>
+> Depending on how you use Qt, you may need to acquire (buy) a license for it. See <https://www.qt.io/terms-conditions/>.
 
 ## Qt Advanced Docking System
 
@@ -244,7 +260,3 @@ Link: [https://facebook.github.io/zstd](https://facebook.github.io/zstd)
 Compile switch: **EZ_3RDPARTY_ZSTD_SUPPORT**
 
 A very fast lossless compression library. It is used by ezCompressedStreamReaderZstd and ezCompressedStreamWriterZstd and also by ezArchive.
-
-## See Also
-
-

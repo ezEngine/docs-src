@@ -8,7 +8,7 @@ The screenshot above shows a common setup. Noteworthy are the following points:
 
 * **EZ_ENABLE_QT_SUPPORT** Disable this setting, if you want to compile EZ without Qt. This will remove all editor code and several tools from the final solution. The default is "on". When possible the EZ CMake scripts will automatically download Qt libraries and set everything up for you. On configurations for which we do not support fully automatic setup, you need to install Qt manually and then set set **EZ_QT_DIR** to its installation folder.
 
-* **EZ_BUILD_FMOD** Enable this, if you want to add [Fmod sound](../sound/fmod-overview.md) support to your build. You need to have the fmod prerequisites installed for this to work.
+* **EZ_BUILD_FMOD** Enable this, if you want to add [FMOD sound](../sound/fmod-overview.md) support to your build. You need to have the fmod prerequisites installed for this to work.
 
 * **EZ_BUILD_PHYSX** Enable this, if you want to add [NVIDIA PhysX](../physics/physx-overview.md) support to your build. Once enabled, the next run of "Configure" will automatically download PhysX binaries and set the **EZ_PHYSX_SDK** variable accordingly.
 

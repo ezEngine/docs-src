@@ -130,7 +130,7 @@
 
 * Added PhysX support
 * Added 'Surface' assets / resources, which describe the physical properties (e.g. friction) and interactions with objects. E.g. which effects to spawn when shooting a surface or which sounds to play when walking on them.
-* Added Fmod support for sound and music.
+* Added FMOD support for sound and music.
 * Added a particle effect system and editor.
 * Added a Visual Shader editor. Can be used to easily create custom material shaders.
 * Added UWP port

@@ -1,6 +1,6 @@
-# Fmod Listener Component
+# FMOD Listener Component
 
-The *Fmod listener component* represents the position and direction from where the player perceives sound. Every game must have exactly one listener component in the scene, to instruct Fmod how to compute the spatial sound.
+The *FMOD listener component* represents the position and direction from where the player perceives sound. Every game must have exactly one listener component in the scene, to instruct FMOD how to compute the spatial sound.
 
 For first-person and third-person games the listener component would be attached to the character controller, typically the same node where the main [camera component](../graphics/camera-component.md) is located.
 
@@ -16,7 +16,7 @@ The red cone represents what the camera sees. The green circle visualizes the ar
 
 If you build a multi-player game, you should be careful to only instantiate a single listener component for the local player, and don't accidentally duplicate the listeners from remote players.
 
-However, Fmod also supports multiple listeners locally, in case you want to do split screen multi-player on the same machine. This is automatically enabled if multiple listeners are in the scene, with non-zero `ListenerIndex`. In multi-listener mode Fmod will deactivate many spatial audio effects and try to render the audio in the most sensible way. For details refer to the Fmod documentation.
+However, FMOD also supports multiple listeners locally, in case you want to do split screen multi-player on the same machine. This is automatically enabled if multiple listeners are in the scene, with non-zero `ListenerIndex`. In multi-listener mode FMOD will deactivate many spatial audio effects and try to render the audio in the most sensible way. For details refer to the FMOD documentation.
 
 ## Component Properties
 
@@ -24,5 +24,4 @@ However, Fmod also supports multiple listeners locally, in case you want to do s
 
 ## See Also
 
-
-* [Fmod Integration](fmod-overview.md)
+* [FMOD Integration](fmod-overview.md)

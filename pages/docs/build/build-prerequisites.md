@@ -6,9 +6,9 @@ We try to keep the number of prerequisites to build ezEngine as small as possibl
 
 [CMake](https://cmake.org/) is used as the build system. Version 3.12 or newer is required.
 
-## Fmod (optional)
+## FMOD (optional)
 
-EZ supports [Fmod](https://www.fmod.com/) for sound. If you want to enable Fmod support, register with Fmod and then download the "Fmod Studio API 2.x installer" and install it.
+EZ supports [FMOD](../sound/fmod-overview.md) for sound. If you want to enable FMOD support, register with FMOD and then download the "FMOD Studio API 2.x installer" and install it.
 
 ## See Also
 

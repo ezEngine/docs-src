@@ -6,7 +6,5 @@
   href: pages/samples/
 - name: Contact
   homepage: pages/contact.md
-- name: Releases
-  href: pages/releases/
 - name: Github
   href: https://github.com/ezEngine/ezEngine

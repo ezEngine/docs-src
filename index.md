@@ -20,7 +20,7 @@ It is also not comparable in feature completeness to commercial offerings such a
 
 ## Getting Started
 
-* You can download [prebuilt binaries](pages/releases/releases.md) or [clone the latest dev branch](https://github.com/ezEngine/ezEngine).
+* You can download [prebuilt binaries](pages/getting-started/binaries.md) or [clone the latest dev branch](https://github.com/ezEngine/ezEngine).
 * See the [documentation](pages/docs/docs-overview.md) for [build instructions](pages/docs/build/building-ez.md) and available [samples](pages/samples/samples-overview.md).
 * Check out the [FAQ](pages/getting-started/faq.md).
 * There are [videos](pages/getting-started/videos.md) about various topics on our [YouTube channel](https://www.youtube.com/channel/UCPoIG0ohCnCdIrCid00u15w).

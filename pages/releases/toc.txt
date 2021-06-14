@@ -1,6 +1,0 @@
-releases.md
-release-21-6.md
-release-20-8.md
-release-20-5.md
-release-20-2.md
-release-old.md

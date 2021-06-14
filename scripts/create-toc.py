@@ -27,7 +27,6 @@ def GenerateFolderTOC(nameToFile: dict, folder: str):
 nameToFile = Doc.File.BuildFileDictionary("./pages")
 
 GenerateFolderTOC(nameToFile, "./pages/docs")
-GenerateFolderTOC(nameToFile, "./pages/releases")
 GenerateFolderTOC(nameToFile, "./pages/getting-started")
 GenerateFolderTOC(nameToFile, "./pages/samples")
 

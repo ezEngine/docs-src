@@ -1,6 +1,6 @@
-# Releases
+# Prebuilt Binaries
 
-Releases can be downloaded [from GitHub](https://github.com/ezEngine/ezEngine/releases).
+Packages with prebuilt binaries are published with [GitHub releases](https://github.com/ezEngine/ezEngine/releases).
 
 Follow [@ezEngineProject](https://twitter.com/ezEngineProject) for release announcements.
 

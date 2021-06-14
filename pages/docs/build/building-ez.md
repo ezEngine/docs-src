@@ -1,6 +1,6 @@
 # Building ezEngine
 
-To try out ezEngine, you can download a [precompiled binary package](https://github.com/ezEngine/ezEngine/releases). This article describes how you can build the engine yourself, which enables you to extend the engine with custom functionality.
+To try out ezEngine, you can download a [precompiled binary package](../../getting-started/binaries.md). This article describes how you can build the engine yourself, which enables you to extend the engine with custom functionality.
 
 ## Getting the Code and Data
 

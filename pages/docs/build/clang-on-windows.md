@@ -4,7 +4,7 @@ You can build ezEngine using the Clang on Windows. This can be useful to find an
 
 ## Using Clang/LLVM with the CMake GUI
 
-1. Get the latest clang windows distribution: https://releases.llvm.org/download.html (the 64-bit version is recommended)
+1. Get the latest clang windows distribution: <https://releases.llvm.org/download.html> (the 64-bit version is recommended)
 1. Create a new solution for the Clang build by pointing *Where to build the binaries* to a new location.
 1. Press **Configure** once, a dialog will show up.
 1. Choose **Ninja** as the generator. (Note: Get ninja from https://ninja-build.org and put it in your **PATH**)

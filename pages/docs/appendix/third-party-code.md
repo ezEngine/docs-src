@@ -71,14 +71,7 @@ Link: [https://www.fmod.com](https://www.fmod.com)
 
 Compile switch: **EZ_BUILD_FMOD**
 
-EZ has an [integration for the FMOD sound system](../sound/fmod-overview.md). However, you need to download the SDK yourself.
-
-1. Go to [fmod.com](https://www.fmod.com)
-1. Sign up / log in
-1. Download and install the FMOD Studio API for the desired platforms
-1. For editing sounds you also need to download and install the FMOD Studio Tool
-1. In CMake, enable the FMOD compile switch
-1. Recompile ezEngine
+EZ has an [integration for the FMOD sound system](../sound/fmod-overview.md).
 
 > **Important:**
 >

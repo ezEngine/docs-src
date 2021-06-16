@@ -2,19 +2,29 @@
 
 [FMOD](https://www.fmod.com) is a world class sound engine used by many AAA games. *FMOD Studio* is an incredibly powerful tool to manage your sounds.
 
-ezEngine integrates FMOD with a plugin. To enable FMOD support, follow these steps:
-
-1. Create a free account at [fmod.com](https://www.fmod.com) and sign in
-1. Download and install the *FMOD Studio API SDK for Windows* (needed to compile the FMOD plugin)
-1. Download and install *FMOD Studio* (only needed by people who want to edit FMOD projects)
-1. Enable FMOD in the [CMake configuration](../build/cmake-config.md)
-1. Compile the engine
+ezEngine integrates FMOD with a plugin.
 
 > **Important:**
 >
 > Be aware that FMOD is a commercial product. Before you distribute a project made with EZ that includes FMOD functionality, check the [FMOD licensing options](https://www.fmod.com/licensing).
 
+## Using a Different FMOD SDK
+
+To compile the FMOD plugin, parts of the official FMOD SDK are necessary. On Windows, EZ contains these files already. If you build EZ for a different platform, or want to use a newer FMOD version, follow these steps:
+
+1. Create a free account at [fmod.com](https://www.fmod.com) and sign in.
+1. Download and install the *FMOD Studio API SDK for Windows* (or whichever platform you need).
+1. Download and install *FMOD Studio* (only needed by people who want to edit FMOD projects).
+1. Enable FMOD in the [CMake configuration](../build/cmake-config.md).
+1. Clean the CMake cache and regenerate. This way CMake will pick up the installed FMOD SDK rather than the built-in one.
+1. Compile the engine.
+
 ## Using FMOD Studio
+
+FMOD Studio is the tool with which you edit the FMOD sound events. This tool is not provided with EZ and has to be installed separately:
+
+1. Create a free account at [fmod.com](https://www.fmod.com) and sign in.
+1. Download and install *FMOD Studio*.
 
 FMOD Studio has a vast number of features. Describing how it works is out of scope for this documentation. Instead have a look at these resources:
 
@@ -45,6 +55,10 @@ Once you have these things set up, you can create your first [sound bank asset](
 ## Sample Data
 
 A sample FMOD Studio project is available under *Data/Content/Sound*, including pre-exported sound banks. These are also used by the sample projects, such as the [Testing Chambers](../../samples/testing-chambers.md).
+
+> **Note:**
+>
+> When opening the sample FMOD Studio projects from EZ, FMOD Studio may ask you to upgrade the project to the latest version. This should work fine.
 
 ## Scene Editing Settings
 

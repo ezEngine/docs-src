@@ -27,7 +27,7 @@ The following engine plugins are useful to enable for most projects:
 * **ezParticlePlugin** - for [particle effects](../effects/particle-effects/particle-effects-overview.md)
 * **ezTypeScriptPlugin** - for [scripting with TypeScript](../custom-code/typescript/typescript-overview.md)
 * **ezPhysXPlugin** - for physics with [PhysX](../physics/physx-overview.md)
-* **ezFmodPlugin** - for sound with [FMOD](../sound/fmod-overview.md) (requires that you have [FMOD support](../build/build-prerequisites.md) enabled)
+* **ezFmodPlugin** - for sound with [FMOD](../sound/fmod-overview.md)
 
 If you don't use a particular feature in your project, you can of course keep the respective plugin deactivated.
 

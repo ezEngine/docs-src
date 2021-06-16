@@ -4,7 +4,7 @@ The engine doesn't have sound support directly built-in, instead all sound funct
 
 ## FMOD Plugin
 
-ezEngine comes with support [FMOD](https://www.fmod.com/).
+ezEngine comes with support for [FMOD](https://www.fmod.com/).
 
 For details, please checkout the [page about FMOD](fmod-overview.md).
 

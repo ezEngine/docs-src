@@ -9,7 +9,7 @@ You need the following to build for Android:
 * Android SDK Tools
 * Android SDK Platform-Tools
 * Java (JRE)
-* Ninja
+* [Ninja](https://ninja-build.org)
 * Android Emulator (optional)
 * Visual Studio 2019
 
@@ -18,15 +18,15 @@ The easiest way to install the Android components is to download [Android Studio
 Once installed, the following environment variables need to be set:
 Change the version to reflect the one you are using.
   
-* **ANDROID_NDK_HOME** needs to point to your installed version, by default this is: `C:\Users\[USERNAME]\AppData\Local\Android\Sdk\ndk-bundle`
+* **ANDROID_NDK_HOME** needs to point to your installed version, by default this is: `C:\Users\[USERNAME]\AppData\Local\Android\Sdk\ndk\[VERSION]`
 * **ANDROID_HOME** needs to point to your installed version, by default this is: `C:\Users\[USERNAME]\AppData\Local\Android\Sdk`
 * **JAVA_HOME** needs to point to a java runtime. Android Studio has its own version so there is no need to download it separately: `C:\Program Files\Android\Android Studio\jre`
 
 ## Visual Studio Open Folder
 
-While you can manually run cmake to use the ninja generator, a more convenient solution is to use Visual Studio's open folder functionality. Go to `File>Open>Folder...` and select the root of the repository. The cmake settings used by this feature are stored inside the `CMakeSettings.json` file in the root folder (`CppProperties.json` contains additional information for VS). Note that if a different API level is used, the **ANDROID_PLATFORM** parameter in the `CMakeSettings.json` has to be changed for all configurations.
+While you can manually run CMake to use the ninja generator, a more convenient solution is to use Visual Studio's open folder functionality. Go to `File>Open>Folder...` and select the root of the repository. The CMake settings used by this feature are stored inside the `CMakeSettings.json` file in the root folder (`CppProperties.json` contains additional information for VS). Note that if a different API level is used, the **ANDROID_PLATFORM** parameter in the `CMakeSettings.json` has to be changed for all configurations.
 
-If all environment variables were set correctly VS should automatically configure CMake. Once done, a drop down appears in the VS toolbar, allowing you to select the configuration, e.g. `Android-x86-Debug`. Once changed, VS will start to configure Cmake again for the new configuration. 
+If all environment variables were set correctly VS should automatically configure CMake. Once done, a drop down appears in the VS toolbar, allowing you to select the configuration, e.g. `Android-x86-Debug`. Once changed, VS will start to configure CMake again for the new configuration.
 
 Next, select a build target, e.g. `libFoundationTest.so` which are the foundation unit tests. Note that you can only select applications, not all libraries here.
 
@@ -36,7 +36,7 @@ Open Android Studio, go to `Configure>AVD Manager` and select `Create Virtual De
 
 ## Debugging Code
 
-Before debugging it should be ensured that you have a emulator setup or a device connected. There should only be every one device or emulator. Otherwise debugging is going to fail because its unkown which target to use.
+Before debugging it should be ensured that you have a emulator setup or a device connected. There should only be one device or emulator. Otherwise debugging is going to fail because it's unknown which target to use.
 
 ``` cmd
 $ adb devices
@@ -81,4 +81,3 @@ adb logcat ezEngine:D *:S
 ## See Also
 
 * [Building ezEngine](building-ez.md)
-

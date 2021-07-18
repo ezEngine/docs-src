@@ -106,6 +106,7 @@
 ## Special
 ### [Character Controller](physics/special/physx-character-controller.md)
 ### [PhysX Grab Object Component](physics/special/physx-grab-object-component.md)
+### [PhysX Rope Component](physics/special/physx-rope-component.md)
 # Effects
 ## [Beam Component](effects/beam-component.md)
 ## [Decals](effects/decals.md)
@@ -120,6 +121,7 @@
 ### [Particle Effect Component](effects/particle-effects/particle-effect-component.md)
 ## [Render Target Activator Component (TODO)](effects/render-target-activator-component.md)
 ## [Render to Texture (TODO)](effects/render-to-texture.md)
+## [Rope Render Component](effects/rope-render-component.md)
 ## [Simple Wind Component (TODO)](effects/simple-wind-component.md)
 ## [Sky](effects/sky.md)
 ## [Wind (TODO)](effects/wind.md)

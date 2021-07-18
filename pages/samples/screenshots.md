@@ -52,6 +52,8 @@ For tutorial videos, [have a look here](../getting-started/videos.md).
 
 <video src="../docs/physics/special/media/grab-items.webm" width="600" height="600" autoplay loop></video>
 
+<video src="../docs/physics/special/media/rope-swing.webm" width="600" height="600" autoplay loop></video>
+
 ## Terrain
 
 ![Terrain](../docs/terrain/media/terrain-overview.jpg)

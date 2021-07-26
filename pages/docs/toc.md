@@ -110,6 +110,7 @@
 # Effects
 ## [Beam Component](effects/beam-component.md)
 ## [Decals](effects/decals.md)
+## [Fake Rope Component](effects/fake-rope-component.md)
 ## [Fog](effects/fog.md)
 ## Particle Effects
 ### [Particle Effects](effects/particle-effects/particle-effects-overview.md)

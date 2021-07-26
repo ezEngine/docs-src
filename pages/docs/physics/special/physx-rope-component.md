@@ -6,21 +6,21 @@ The *PhysX rope component* is used to physically simulate ropes, cables and chai
 
 Ropes can be attached to walls as decorative elements (cables, wires), or they can even be attached to [dynamic physics objects](../actors/physx-dynamic-actor-component.md) to link them together. This can be used as a gameplay feature.
 
+If all you need is a decorative rope, that doesn't react to physical stimuli (except [wind (TODO)](../../effects/wind.md)), prefer to use a [fake rope component](../../effects/fake-rope-component.md), as that has a much lower performance overhead.
+
 ## Setting Up a Rope
 
-A rope requires two anchor points between which it hangs. For this, one typically uses dummy game objects. The `AnchorA` and `AnchorB` [object references](../../scenes/object-references.md) are used to configure which two objects to use.
+A rope requires two anchor points between which it hangs. One anchor point is the rope object position itself, for the other one typically uses a dummy game object. The `Anchor` [object reference](../../scenes/object-references.md) is used to select which one to use.
 
 In the object hierarchy it typically looks like this:
 
 ![Rope Objects](media/rope-hierarchy.png)
 
-The position of the anchors can be moved in the 3D viewport to position the rope as desired. Additionally, the position of the rope object itself determines how much *slack* the rope will have. If the rope object is exactly on the straight line between the anchors, the rope has no slack. Otherwise, the rope becomes longer and longer, the farther its position is away from the straight line between the anchors.
+The position of the anchors can be moved in the 3D viewport to position the rope as desired. The approximate shape of the simulated rope will be shown as a preview. Use the `Slack` property to make the rope sag.
 
 ![Basic Rope Config](media/rope-config.jpg)
 
-Note that the preview visualization of the rope is very simplistic and doesn't follow a [natural curve](https://en.wikipedia.org/wiki/Catenary). [Run the scene](../../editor/run-scene.md) to see the final shape and behavior.
-
-If you want a rope without any slack, only use a single anchor. The position of the rope object will be used as the second anchor then, and there will be no slack whatsoever. This is easier than trying to position the rope object exactly on the line between the anchors.
+[Run the scene](../../editor/run-scene.md) to see the final shape and behavior.
 
 ### Rendering
 
@@ -38,13 +38,15 @@ The rope simulation uses a dedicated PhysX feature ("articulations"), which exhi
 
 ## Component Properties
 
-* `AnchorA`, `AnchorB`: [References](../../scenes/object-references.md) to objects whose position determine where the rope will start and end. If only one anchor is used, the position of the object with the rope component is used as the other end.
+* `Anchor`: A [reference](../../scenes/object-references.md) to an object whose position determines where the rope ends.
 
-* `AttachToA`, `AttachToB`: Whether the rope will be tied to the respective anchor location. If the anchor is attached to a [dynamic actor](../actors/physx-dynamic-actor-component.md), the rope will pull that actor. Otherwise, the rope will be fixed at that static location. If the rope is not attached to the anchor, the respective end is free to move around.
+* `AttachToOrigin`, `AttachToAnchor`: Whether the rope is fixed at the origin or anchor location. If the respective object is attached to a [dynamic actor](../actors/physx-dynamic-actor-component.md), the rope will pull that actor. Otherwise, the rope will be fixed at that static location. If the rope is not attached at one or both ends it is free to move away from there.
 
 * `Mass`: The total mass of the rope. It will be distributed equally among all pieces.
 
-* `Pieces`: Of how many individual pieces the rope is made up. More pieces look prettier, but cost more performance and may decrease the simulation stability.
+* `Pieces`: How many individual pieces the rope is made up of. More pieces look prettier, but cost more performance and may decrease the simulation stability.
+
+* `Slack`: How much slack the rope has. A value of zero means the rope is hung perfectly straight between its anchors. Positive values make the rope sag downwards. Negative values are also allowed, they make the rope hang upside down. This is useful to create a longer rope that shouldn't spawn inside the ground. The rope can thus be placed above the ground and it will simply fall down after creation.
 
 * `Thickness`: How thick the simulated rope is. This may be very different from how thick it is rendered. A thinner rope will have more simulation issues, such as tunneling through other geometry.
 
@@ -62,5 +64,7 @@ The rope simulation uses a dedicated PhysX feature ("articulations"), which exhi
 
 ## See Also
 
+* [Fake Rope Component](../../effects/fake-rope-component.md)
+* [Rope Render Component](../../effects/rope-render-component.md)
 * [Physics Joints](../joints/physx-joints.md)
 * [PhysX Actors](../actors/physx-actors.md)

@@ -1,8 +1,8 @@
-# Wind
+# Wind Volume Components
 
 <!-- PAGE IS TODO -->
 
 ## See Also
 
-* [Wind Volume Components](wind-volume-components.md)
+* [Wind](wind.md)
 * [Simple Wind Component](simple-wind-component.md)

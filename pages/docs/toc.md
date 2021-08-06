@@ -125,6 +125,7 @@
 ## [Rope Render Component](effects/rope-render-component.md)
 ## [Simple Wind Component (TODO)](effects/simple-wind-component.md)
 ## [Sky](effects/sky.md)
+## [Wind Volume Components](effects/wind-volume-components.md)
 ## [Wind (TODO)](effects/wind.md)
 # Animation
 ## Common

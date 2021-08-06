@@ -5,4 +5,4 @@
 ## See Also
 
 * [Wind Volume Components](wind-volume-components.md)
-* [Simple Wind Component (TODO)](simple-wind-component.md)
+* [Simple Wind Component](simple-wind-component.md)

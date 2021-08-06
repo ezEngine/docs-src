@@ -123,7 +123,7 @@
 ## [Render Target Activator Component (TODO)](effects/render-target-activator-component.md)
 ## [Render to Texture (TODO)](effects/render-to-texture.md)
 ## [Rope Render Component](effects/rope-render-component.md)
-## [Simple Wind Component (TODO)](effects/simple-wind-component.md)
+## [Simple Wind Component](effects/simple-wind-component.md)
 ## [Sky](effects/sky.md)
 ## [Wind Volume Components](effects/wind-volume-components.md)
 ## [Wind (TODO)](effects/wind.md)

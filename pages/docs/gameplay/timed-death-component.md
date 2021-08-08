@@ -10,5 +10,4 @@ The *timed death component* is used to automatically delete the object that it i
 
 ## See Also
 
-
 * [Spawn Component](spawn-component.md)

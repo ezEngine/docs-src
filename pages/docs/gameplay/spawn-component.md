@@ -22,5 +22,4 @@ See the [API Docs](../api-docs.md) for `ezSpawnComponent` for the component's in
 
 ## See Also
 
-
 * [Prefabs](../prefabs/prefabs-overview.md)

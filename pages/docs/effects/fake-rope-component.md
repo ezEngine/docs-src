@@ -42,7 +42,7 @@ The [Testing Chambers](../../samples/testing-chambers.md) project contains a ded
 
 * `Damping`: How quickly the rope loses energy while swinging. Higher values make the rope come to rest more quickly, low values make the rope swing for a long time. Once a rope comes to rest, it takes significantly less processing power.
 
-* `WindInfluence`: How strongly [wind (TODO)](wind.md) should make the rope swing. Be aware that having many swinging ropes costs a lot of performance.
+* `WindInfluence`: How strongly [wind](wind.md) should make the rope swing. Be aware that having many swinging ropes costs a lot of performance.
 
 ## See Also
 

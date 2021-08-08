@@ -16,4 +16,5 @@ The *area damage component* posts an `ezMsgDamage` to all objects in its vicinit
 
 ## See Also
 
-
+* [Spawn Component](spawn-component.md)
+* [Timed Death Component](timed-death-component.md)

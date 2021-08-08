@@ -126,7 +126,7 @@
 ## [Simple Wind Component](effects/simple-wind-component.md)
 ## [Sky](effects/sky.md)
 ## [Wind Volume Components](effects/wind-volume-components.md)
-## [Wind (TODO)](effects/wind.md)
+## [Wind](effects/wind.md)
 # Animation
 ## Common
 ### [Color Gradients](animation/common/color-gradients.md)

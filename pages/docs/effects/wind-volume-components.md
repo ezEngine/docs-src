@@ -4,7 +4,7 @@ Wind volume components are used to define areas in a scene where wind should blo
 
 > **Note:**
 >
-> On their own these components won't have any effect in a scene. A [wind system (TODO)](wind.md) additionally has to be set up. Placing a [simple wind component](simple-wind-component.md) in a scene creates a basic wind system.
+> On their own these components won't have any effect in a scene. A [wind system](wind.md) additionally has to be set up. Placing a [simple wind component](simple-wind-component.md) in a scene creates a basic wind system.
 
 ## Shared Component Properties
 
@@ -38,5 +38,5 @@ All wind volume components have these properties:
 
 ## See Also
 
-* [Wind (TODO)](wind.md)
+* [Wind](wind.md)
 * [Simple Wind Component](simple-wind-component.md)

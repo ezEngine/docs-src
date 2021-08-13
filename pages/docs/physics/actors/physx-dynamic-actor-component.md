@@ -57,6 +57,7 @@ Consequently, you have to be careful how you set up your rigid-bodies, to improv
 * `LinearDamping`, `AngularDamping`: The damping properties affect how quickly an actor loses momentum and comes to rest. This can be adjusted separately for positional (linear) movement and rotational (angular) movement.
 * `MaxContactImpulse`: See [Simulation Stability](#simulation-stability) above.
 * `ContinuousCollisionDetection`: See [Simulation Stability](#simulation-stability) above.
+* `LockingFlags`: These flags can be used to prevent movement or rotation along one or multiple axis (in global space). This can be useful to make 2D games where objects shall only move in a plane. It can also be used to create objects that can't be tipped over, or to immitate basic constraints. Be aware that forces acting on such locked objects may be partially lost. It is therefore much harder to push a locked object along the floor, when friction would introduce a motion that is not allowed on this object. Reduce the objects mass to compensate.
 
 ## See Also
 

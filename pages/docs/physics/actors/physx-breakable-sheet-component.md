@@ -2,6 +2,8 @@
 
 <!-- PAGE IS TODO -->
 
+The breakable sheet component is fully functional, but currently undocumented.
+
 ## Component Properties
 
 * `Material`, `BrokenMaterial`:
@@ -17,4 +19,5 @@
 
 ## See Also
 
+* [PhysX Actors](physx-actors.md)
 

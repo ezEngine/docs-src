@@ -48,6 +48,5 @@ For all the details, read the [API Docs](../../api-docs.md) for `ezGameStateBase
 
 ## See Also
 
-
 * [Custom Code](../../custom-code/custom-code-overview.md)
 * [Application (TODO)](application.md)

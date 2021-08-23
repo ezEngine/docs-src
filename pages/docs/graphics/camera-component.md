@@ -1,6 +1,6 @@
 # Camera Component
 
-The *camera component* is used to tell the renderer from which position and with which settings to render the scene. Apart from the component that acts as the *main camera*, there can be additional cameras in active use for [render to texture (TODO)](../effects/render-to-texture.md) effects. Additionally, camera components can be used in the editor as 'bookmarks' to be able to quickly jump to specific positions in a level.
+The *camera component* is used to tell the renderer from which position and with which settings to render the scene. Apart from the component that acts as the *main camera*, there can be additional cameras in active use for [render to texture (TODO)](render-to-texture/render-to-texture.md) effects. Additionally, camera components can be used in the editor as 'bookmarks' to be able to quickly jump to specific positions in a level.
 
 ![Camera](media/camera-component.jpg)
 
@@ -55,7 +55,7 @@ To enable this mode, the `UsageHint` has to be set to `Render to Texture`. You a
 
 The `RenderTargetOffset` and `RenderTargetSize` allow you to render only to a part of the texture.
 
-Note that rendering to a texture involves additional steps. See the chapter about [render-to-texture (TODO)](../effects/render-to-texture.md) for full instructions.
+Note that rendering to a texture involves additional steps. See the chapter about [render-to-texture (TODO)](render-to-texture/render-to-texture.md) for full instructions.
 
 ## Component Properties
 
@@ -79,7 +79,7 @@ Note that rendering to a texture involves additional steps. See the chapter abou
 
 
 * [Editor Camera](../scenes/editor-camera.md)
-* [Render to Texture (TODO)](../effects/render-to-texture.md)
+* [Render to Texture (TODO)](render-to-texture/render-to-texture.md)
 * [Render Pipeline (TODO)](render-pipeline-overview.md)
 * [Asset Profiles (TODO)](../assets/asset-profiles.md)
 * [Tags](../projects/tags.md)

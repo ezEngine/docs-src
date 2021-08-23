@@ -61,6 +61,9 @@
 ### [Mesh Component](graphics/meshes/mesh-component.md)
 ### [Instanced Mesh Component](graphics/meshes/instanced-mesh-component.md)
 ## [Render Pipeline (TODO)](graphics/render-pipeline-overview.md)
+## Render To Texture
+### [Render Target Activator Component (TODO)](graphics/render-to-texture/render-target-activator-component.md)
+### [Render to Texture (TODO)](graphics/render-to-texture/render-to-texture.md)
 ## Shaders
 ### [Shader Debugging](graphics/shaders/shader-debugging.md)
 ### [Shader Permutation Variables](graphics/shaders/shader-permutation-variables.md)
@@ -109,6 +112,7 @@
 ### [PhysX Rope Component](physics/special/physx-rope-component.md)
 # Effects
 ## [Beam Component](effects/beam-component.md)
+## [Cloth Sheet Component](effects/cloth-sheet-component.md)
 ## [Decals](effects/decals.md)
 ## [Fake Rope Component](effects/fake-rope-component.md)
 ## [Fog](effects/fog.md)
@@ -120,8 +124,6 @@
 ### [Particle Behaviors](effects/particle-effects/particle-behaviors.md)
 ### [Particle Renderers](effects/particle-effects/particle-renderers.md)
 ### [Particle Effect Component](effects/particle-effects/particle-effect-component.md)
-## [Render Target Activator Component (TODO)](effects/render-target-activator-component.md)
-## [Render to Texture (TODO)](effects/render-to-texture.md)
 ## [Rope Render Component](effects/rope-render-component.md)
 ## [Simple Wind Component](effects/simple-wind-component.md)
 ## [Sky](effects/sky.md)
@@ -191,6 +193,7 @@
 # Gameplay
 ## [Area Damage Component](gameplay/area-damage-component.md)
 ## [Grabbable Item Component](gameplay/grabbable-item-component.md)
+## [Head Bone Component (TODO)](gameplay/headbone-component.md)
 ## [Marker Component](gameplay/marker-component.md)
 ## [Player Start Point](gameplay/player-start-point.md)
 ## [Projectile Component](gameplay/projectile-component.md)

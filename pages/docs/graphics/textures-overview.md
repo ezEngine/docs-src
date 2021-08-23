@@ -1,6 +1,6 @@
 # Textures
 
-Textures come in multiple forms. Most common are 2D textures loaded from file. 2D textures can also be created as render targets for [render-to-texture (TODO)](../effects/render-to-texture.md). For [sky boxes](../effects/sky.md) or special effects you can also set up cubemap textures.
+Textures come in multiple forms. Most common are 2D textures loaded from file. 2D textures can also be created as render targets for [render-to-texture (TODO)](render-to-texture/render-to-texture.md). For [sky boxes](../effects/sky.md) or special effects you can also set up cubemap textures.
 
 When the source texture comes from a file, you can create a texture [asset](../assets/assets-overview.md) for that file by [importing](../assets/import-assets.md) it. Otherwise you need to create the respective asset [document](../editor/editor-documents.md) manually, for example for render targets.
 
@@ -56,7 +56,7 @@ Cubemap assets have a subset of the properties that 2D textures have. Their beha
 
 ## Render Target Asset
 
-Render targets can be used like regular 2D textures. That means materials can reference them and display their content. However, they are filled by rendering to them at runtime, for example by using a camera to render the scene from a certain viewpoint. Have a look at the [render to texture (TODO)](../effects/render-to-texture.md) article for details.
+Render targets can be used like regular 2D textures. That means materials can reference them and display their content. However, they are filled by rendering to them at runtime, for example by using a camera to render the scene from a certain viewpoint. Have a look at the [render to texture (TODO)](render-to-texture/render-to-texture.md) article for details.
 
 Apart from some properties shared with 2D texture assets, render targets have these unique properties:
 
@@ -70,6 +70,6 @@ Apart from some properties shared with 2D texture assets, render targets have th
 
 
 * [Materials](../materials/materials-overview.md)
-* [Render to Texture (TODO)](../effects/render-to-texture.md)
+* [Render to Texture (TODO)](render-to-texture/render-to-texture.md)
 * [Sky](../effects/sky.md)
 * [Color Spaces (TODO)](../appendix/color-spaces.md)

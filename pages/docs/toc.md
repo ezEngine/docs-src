@@ -88,6 +88,7 @@
 ### [PhysX Static Actor Component](physics/actors/physx-static-actor-component.md)
 ### [PhysX Dynamic Actor Component](physics/actors/physx-dynamic-actor-component.md)
 ### [PhysX Trigger Component](physics/actors/physx-trigger-component.md)
+### [PhysX Query Shape Actor Component (TODO)](physics/actors/physx-queryshape-actor-component.md)
 ### [PhysX Breakable Sheet Component (TODO)](physics/actors/physx-breakable-sheet-component.md)
 ## Collision Shapes
 ### [PhysX Shapes](physics/collision-shapes/physx-shapes.md)

@@ -2,4 +2,5 @@ physx-actors.md
 physx-static-actor-component.md
 physx-dynamic-actor-component.md
 physx-trigger-component.md
+physx-queryshape-actor-component.md
 physx-breakable-sheet-component.md

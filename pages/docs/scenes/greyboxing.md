@@ -38,7 +38,7 @@ You can change the material of a greybox shape either through its properties, or
 
 ## Static Collision
 
-As long as a greyboxing object has the `AutoColMesh` [tag](../projects/tags.md), it will automatically get a [collision mesh](../physics/collision-shapes/collision-meshes.md) with the default [collision layer](../physics/collision-shapes/collision-layers.md) (`0`). It's assigned [material](../materials/materials-overview.md) determines which [surface](../materials/surfaces.md) is used for physical interactions.
+As long as a greyboxing object has the `GenerateCollision` property set, it will automatically get a [collision mesh](../physics/collision-shapes/collision-meshes.md) with the default [collision layer](../physics/collision-shapes/collision-layers.md) (`0`). It's assigned [material](../materials/materials-overview.md) determines which [surface](../materials/surfaces.md) is used for physical interactions.
 
 ## Dynamic Collision
 

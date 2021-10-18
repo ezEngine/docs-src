@@ -33,17 +33,19 @@ If all goes well, everything should work as before. The only difference is now, 
 
 ### Terminate and Restart the Engine
 
-Select *Tools > Reload Engine* or just press `Ctrl+Shift+F4`.
+You can always manually restart the engine process through *Tools > Reload Engine* or the hotkey `Ctrl+Shift+F4`.
 
 This instructs the editor to kill its engine process and restart it right away. This takes a few seconds, and you will see the 3D viewports flicker and notice how the new engine process loads all the data. Once that is done you can again [simulate the scene](../../editor/run-scene.md) and will now get the latest behavior from your game plugin.
+
+Additionally, when a pluggin is set as `LoadCopy`, and it gets modified, the editor already **automatically restarts the engine process**, once no scene is being simulated.
 
 ## Restrictions
 
 The `LoadCopy` option should only be used for select game plugins. Enabling this feature can have unintended side-effects.
 
-* If any code links against a plugin, that plugin cannot be loaded as a copy. Therefore, if you want to put shared code into a separate library that other of your plugins link against, you can't load that shared library as a copy.
-* You can't compile code while debugging a process. To compile your code, you first have to detach your debugger.
-* Consequently, if you want to continue debugging after you restarted the engine process, you need to manually re-attach your debugger to *EditorEngineProcess.exe*.
+* If any code links against a plugin, that plugin cannot be loaded as a copy. Therefore, if you want to put shared code into a separate library that other users of your plugins link against, you can't load that shared library as a copy.
+* You can't compile code while debugging a process. To compile your code, you first have to detach your debugger. In Visual Studio that can be done via `Debug > Detach All`.
+* Consequently, if you want to continue debugging after you restarted the engine process, you need to manually re-attach your debugger to *EditorEngineProcess.exe*. In Visual Studio this is done via `Debug > Attach to Process...` or even better `Debug > Reattach to Process` (`SHIFT+ALT+P`) when you want to repeat the same thing a second time.
 
 ## See Also
 

@@ -33,8 +33,8 @@
 ## [Editing Gizmos](scenes/gizmos.md)
 ## [Greyboxing](scenes/greyboxing.md)
 ## [Object References](scenes/object-references.md)
-## [Procedural Object Placement (TODO)](scenes/procedural-generation.md)
 ## [Scene Editing](scenes/scene-editing.md)
+## [Scene Layers (TODO)](scenes/scene-layers.md)
 ## [Selecting Objects](scenes/selection.md)
 # Assets
 ## [Asset Browser](assets/asset-browser.md)
@@ -186,6 +186,16 @@
 ## [Terrain and Vegetation](terrain/terrain-overview.md)
 ## [Heightfield Component](terrain/heightfield-component.md)
 ## [Kraut](terrain/kraut-overview.md)
+## Procedural Generation
+### [Procedural Object Placement (TODO)](terrain/procedural/procedural-generation.md)
+### [ProcGen Graph Asset (TODO)](terrain/procedural/procgen-graph-asset.md)
+### [ProcGen Graph Placement Output (TODO)](terrain/procedural/procgen-graph-output-placement.md)
+### [ProcGen Graph Vertex Color Output (TODO)](terrain/procedural/procgen-graph-output-vertexcolor.md)
+### [Procedural Placement Component (TODO)](terrain/procedural/procgen-placement-component.md)
+### [Procedural Vertex Color Component (TODO)](terrain/procedural/procgen-vertex-color-component.md)
+### [Procedural Volume Box Component (TODO)](terrain/procedural/procgen-volume-box-component.md)
+### [Procedural Volume Image Component (TODO)](terrain/procedural/procgen-volume-image-component.md)
+### [Procedural Volume Sphere Component (TODO)](terrain/procedural/procgen-volume-sphere-component.md)
 # Ai
 ## [Recast Navmesh Component](ai/recast-navmesh-component.md)
 ## [Recast Navmesh](ai/recast-navmesh.md)

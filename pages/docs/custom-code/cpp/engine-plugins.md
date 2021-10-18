@@ -45,25 +45,23 @@ If your plugin will be entirely on its own, you don't even need this. However, i
 
 ### ezPlugin Instance
 
-The 'secret sauce' to EZ engine plugins can be found in `SampleGamePlugin.cpp`:
+EZ provides additional hooks for initialization when a plugin gets loaded or unloaded. You can find these in `SampleGamePlugin.cpp`:
 
 <!-- BEGIN-DOCS-CODE-SNIPPET: plugin-setup -->
 ```cpp
-static void OnPluginLoaded(bool)
+EZ_PLUGIN_ON_LOADED()
 {
   // you could do something here, though this is rare
 }
 
-static void OnPluginUnloaded(bool)
+EZ_PLUGIN_ON_UNLOADED()
 {
   // you could do something here, though this is rare
 }
-
-ezPlugin s_Plugin(false, &OnPluginLoaded, &OnPluginUnloaded);
 ```
 <!-- END-DOCS-CODE-SNIPPET -->
 
-The important part here is the definition of the global variable `s_Plugin`. This injects code into the plugin DLL, that helps the engine to distinguish which plugin things like [components](../../runtime/world/components.md) or [subsystems](../../runtime/configuration/startup.md) belong to. You really don't have to do more than this. In the snippet above we provide callbacks that are triggered when a plugin is loaded or unloaded. These callbacks are optional, though in some cases you may want to register and unregister things here.
+These callbacks are optional, though in some cases you may want to register and unregister things here. However, it is way more common to rather use the [startup system](../../runtime/configuration/startup.md) instead.
 
 ## Loading a Plugin
 
@@ -82,7 +80,6 @@ If you want to write a plugin that provides some functionality for shared access
 Also, have a look at [singletons](../../runtime/configuration/interfaces.md) if your plugin is supposed to provide an implementation of some abstract interface.
 
 ## See Also
-
 
 * [Sample Game Plugin](../../../samples/sample-game-plugin.md)
 * [Game States](../../runtime/application/game-state.md)

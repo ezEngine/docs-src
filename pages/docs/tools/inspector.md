@@ -10,10 +10,11 @@ The current version allows to monitor the following data:
 * __Memory Usage__: The Memory panel displays the number of allocations, the amount of memory in use (per allocator) and a time-line how memory usage changes.
 * __Input__: Shows which physical buttons are available and what their state is. Also displays the virtual input actions, by which keys they get triggered and what their current state is.
 * __Subsystems__: Displays information about all the available subsystems in the engine.
-* __Plugins__: Shows which plugins are loaded, which other plugins they depend on and whether they can be reloaded dynamically.
+* __Plugins__: Shows which plugins are loaded and which other plugins they depend on.
 * __Global Events__: Shows which global events are registered and how often they occur.
 * __File Operations__: This panel shows which files get accessed by the engine, whether they occur on the main thread, how much data is read or written per operation, how much time that takes (and thus why an application might be blocking or stuttering). Allows to sort and filter by different criteria to get a better grasp at what and how data is accessed.
 * __CVars__: This panel displays all CVars that are available. You can not only see their current values, but also modify them, such that you can change the behavior of the application without restarting it. This allows to quickly change parameters of things that you are trying out, such that you can see the effects immediately.
+* __Console__: The CVar panel also displays a console window, where you can type commands the same way as in the [in-game console](../debugging/console.md). Pressing `TAB` auto-completes input, arrow up/down searches the history, and so on. This can be used to modify CVar state, but also to execute [console functions](../debugging/console.md#console-functions).
 * __Stats__: Using ezStats a game can display the status of certain internals. This allows to make it easy to inspect what a game object is doing or what state some component is in. So instead of printing this debug information on screen inside the game, you can watch it with ezInspector. Additionally ezInspector allows to mark stats as 'favorites' which means you can output hundreds of stats in your game, but easily only display the subset that you are currently interested in inside ezInspector. Additionally, it is now possible to display the history of a stat variable in a separate panel as a graph. This makes it easy to observe how some stats behave over time (such as frame time, frames-per-second, etc.).
 * __Time__: Displays all ezClock instances that are active. Shows the raw time step and the filtered time step, which allows to see hiccups and general performance characteristics of the application.
 * __Reflection__: Shows all reflected types and their class hierarchy. Also shows which properties each reflected type provides.
@@ -22,7 +23,7 @@ The current version allows to monitor the following data:
 
 ## Setting up your game to support ezInspector
 
-**Note:** None of this setup is required when you use `ezGameApplication` as your application base class, or even better, your game only implements an `ezGameState` and is run directly through `ezPlayer`.
+> **Note:** None of this setup is required when you use `ezGameApplication` as your application base class, or even better, your game only implements an `ezGameState` and is run directly through `ezPlayer`.
 
 The inspection functionality is implemented in the `ezInspectorPlugin` plugin, so you need to have that compiled.
 
@@ -49,6 +50,13 @@ ezTelemetry::PerFrameUpdate();
 ```
 
 And that's it! The rest is done automatically.
+
+## Connecting to a Process
+
+1. If you run a custom app or ezPlayer on the same machine, ezInspector should manage to automatically connect.
+2. If you are running your app on a different machine, you need the respective IP address.
+3. For [ezPlayer](player.md) and custom apps, the **default port is 1040**.
+4. For *EditorEngineProcess.exe*, the **default port is 1050**. So if you want to connect with ezInspector to the editor, you need to provide this port instead. 
 
 ## How to get the best out of ezInspector
 

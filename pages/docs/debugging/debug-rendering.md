@@ -32,6 +32,7 @@ The debug renderer allows you to render arbitrary lines and triangles. For conve
 * 2D rectangles (solid, screenspace)
 * 2D rectangles (textured, screenspace)
 * 2D text (screenspace)
+* 2D info text (screenspace, automatically placed non-overlapping)
 * 3D text (3D location, fixed size and always facing the camera)
 
 ### Shading

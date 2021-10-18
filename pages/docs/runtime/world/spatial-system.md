@@ -30,7 +30,7 @@ In C++ code you register a spatial data category through `ezSpatialData::Registe
 
 <!-- BEGIN-DOCS-CODE-SNIPPET: spatial-category-registration -->
 ```cpp
-ezSpatialData::Category RtsSelectableComponent::s_SelectableCategory = ezSpatialData::RegisterCategory("Selectable");
+ezSpatialData::Category RtsSelectableComponent::s_SelectableCategory = ezSpatialData::RegisterCategory("Selectable", ezSpatialData::Flags::None);
 ```
 <!-- END-DOCS-CODE-SNIPPET -->
 
@@ -87,8 +87,9 @@ When calling functions such as `ezSpatialSystem::FindObjectsInSphere()` you have
 void RtsGameState::InspectObjectsInArea(const ezVec2& position, float radius, ezSpatialSystem::QueryCallback callback) const
 {
   ezBoundingSphere sphere(position.GetAsVec3(0), radius);
-  ezUInt32 uiCategoryBitmask = RtsSelectableComponent::s_SelectableCategory.GetBitmask();
-  m_pMainWorld->GetSpatialSystem()->FindObjectsInSphere(sphere, uiCategoryBitmask, callback, nullptr);
+  ezSpatialSystem::QueryParams queryParams;
+  queryParams.m_uiCategoryBitmask = RtsSelectableComponent::s_SelectableCategory.GetBitmask();
+  m_pMainWorld->GetSpatialSystem()->FindObjectsInSphere(sphere, queryParams, callback);
 }
 ```
 <!-- END-DOCS-CODE-SNIPPET -->

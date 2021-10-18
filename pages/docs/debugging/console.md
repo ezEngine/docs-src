@@ -95,6 +95,5 @@ You can also register custom console functions through the [TypeScript API](../c
 
 ## See Also
 
-
 * [CVars](cvars.md)
 * [Logging](logging.md)

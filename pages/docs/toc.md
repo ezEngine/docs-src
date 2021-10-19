@@ -34,7 +34,7 @@
 ## [Greyboxing](scenes/greyboxing.md)
 ## [Object References](scenes/object-references.md)
 ## [Scene Editing](scenes/scene-editing.md)
-## [Scene Layers (TODO)](scenes/scene-layers.md)
+## [Scene Layers](scenes/scene-layers.md)
 ## [Selecting Objects](scenes/selection.md)
 # Assets
 ## [Asset Browser](assets/asset-browser.md)

@@ -45,8 +45,11 @@ Both *Simulate Mode* and *Play-the-Game Mode* run inside the editor process. Com
 1. The editor process limits the maximum framerate, and has some performance overhead of its own, so this is not useful for performance testing.
 1. All component properties are initialized from the values as the editor has saved them. This is not the (optimized) binary serialization that is used for a final game. Since the binary serialization code has to be written manually, it can happen that properties that are exposed in the editor and work fine there, have been forgotten to be included in the binary serialization and therefore have no effect in the final game. Therefore, always make sure to test [custom components](../runtime/world/components.md) properly with exported scenes.
 
-## See Also
+> **Important:**
+>
+> If a scene is composed of multiple [scene layers](../scenes/scene-layers.md), only the objects from the currently *loaded* layers are exported.
 
+## See Also
 
 * [ezPlayer](../tools/player.md)
 * [Game States](../runtime/application/game-state.md)

@@ -72,6 +72,10 @@ The fun really starts once you get to play around with physics. Read up on the [
 
 Once you have *one* physically correct falling box, you may want to have one hundred. Using [these tools](advanced-object-transform.md), you are only a few clicks away from that.
 
+### Scene Layers
+
+Once your scene starts to become bigger, you may want to use [scene layers](scene-layers.md) for better organization.
+
 ## Video
 
 [![ezEngine Overview](https://img.youtube.com/vi/tIr5UEgSz2s/0.jpg)](https://www.youtube.com/watch?v=tIr5UEgSz2s)

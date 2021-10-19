@@ -51,10 +51,13 @@ When [visualizers](gizmos.md#visualizers) are enabled, the editor display a yell
 
 Press the `U` key to toggle whether transparent objects should be selectable. Disabling this can be very useful if you have large objects with special shaders, for instance to create atmospheric effects like volumetric lighting. Such shapes can prevent you from selecting anything else, even though they are mostly invisible.
 
-## See Also
+## Scene Layers
 
+[Scene layers](scene-layers.md) are a convenient tool to organize a scene and make it easier to find important objects. When an object is selected through the viewport, the *Layers* panel automatically switches the **active layer** to the one that contains the picked object.
+
+## See Also
 
 * [Editing Gizmos](gizmos.md)
 * [Greyboxing](greyboxing.md)
 * [Scene Editing](scene-editing.md)
-
+* [Scene Layers](scene-layers.md)

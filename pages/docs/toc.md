@@ -187,8 +187,11 @@
 ## [Heightfield Component](terrain/heightfield-component.md)
 ## [Kraut](terrain/kraut-overview.md)
 ## Procedural Generation
-### [Procedural Object Placement (TODO)](terrain/procedural/procedural-generation.md)
-### [ProcGen Graph Asset (TODO)](terrain/procedural/procgen-graph-asset.md)
+### [Procedural Object Placement](terrain/procedural/procedural-object-placement.md)
+### [ProcGen Graph Asset](terrain/procedural/procgen-graph-asset.md)
+### [ProcGen Graph Input Nodes (TODO)](terrain/procedural/procgen-graph-inputs.md)
+### [ProcGen Graph Math Nodes](terrain/procedural/procgen-graph-math.md)
+### [ProcGen Graph Modifier Nodes (TODO)](terrain/procedural/procgen-graph-modifies.md)
 ### [ProcGen Graph Placement Output (TODO)](terrain/procedural/procgen-graph-output-placement.md)
 ### [ProcGen Graph Vertex Color Output (TODO)](terrain/procedural/procgen-graph-output-vertexcolor.md)
 ### [Procedural Placement Component (TODO)](terrain/procedural/procgen-placement-component.md)

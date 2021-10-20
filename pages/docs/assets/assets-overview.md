@@ -56,7 +56,6 @@ Consequently, when the documentation mentions 'assets', it always refers the dat
 
 ## See Also
 
-
 * [Editor Documents](../editor/editor-documents.md)
 * [Asset Browser](asset-browser.md)
 * [Asset Curator](asset-curator.md)

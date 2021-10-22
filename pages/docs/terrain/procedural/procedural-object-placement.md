@@ -14,7 +14,7 @@ To get started, the *Vegetation* scene in the [Testing Chambers](../../../sample
 
 ## Technical Overview
 
-The procedural generation system is active in a scene once a [procedural placement component (TODO)](procgen-placement-component.md) is added to it. The component defines in which area a certain rule is used to place objects. The rules are set up through [ProcGen graph assets](procgen-graph-asset.md). The rules specify which objects to place under which conditions and with what kind of variation.
+The procedural generation system is active in a scene once a [procedural placement component](procgen-placement-component.md) is added to it. The component defines in which area a certain rule is used to place objects. The rules are set up through [ProcGen graph assets](procgen-graph-asset.md). The rules specify which objects to place under which conditions and with what kind of variation.
 
 Additional components can be placed to affect the object placement in select areas, such as for clearing an area or increasing the density of a certain type of plant.
 
@@ -29,4 +29,4 @@ Object placement is deterministic. As long as the placement rules and the condit
 ## See Also
 
 * [ProcGen Graph Asset](procgen-graph-asset.md)
-* [Procedural Placement Component (TODO)](procgen-placement-component.md)
+* [Procedural Placement Component](procgen-placement-component.md)

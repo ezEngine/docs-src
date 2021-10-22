@@ -6,7 +6,7 @@ These node types are available as *inputs* for [ProcGen graph assets](procgen-gr
 
 When an object gets placed at a specific location, the *Slope* node calculates the slope of the terrain at that position and determines whether it is within a desired range. The better it is within the range, the closer the output value is to `1`, and if the slope is outside the desired range, the output value is `0`.
 
-The output value of this node can be passed unchanged as `Density` into the [placement output node (TODO)](procgen-graph-output-placement.md). In this case the slope directly decides whether an object gets placed or not. It may, however, also be passed into other values, for instance to affect the color of an object.
+The output value of this node can be passed unchanged as `Density` into the [placement output node](procgen-graph-output-placement.md). In this case the slope directly decides whether an object gets placed or not. It may, however, also be passed into other values, for instance to affect the color of an object.
 
 On the node you select a `MinSlope` and a `MaxSlope` which define the desired range. For example, if the `MinSlope` is set to `0` (flat ground) and the `MaxSlope` is set to `20` (slightly uphill), then objects will only be placed on nearly flat terrain.
 If, however, `MinSlope` is set to `30` (steep) and `MaxSlope` is set to `70` (nearly vertical), then objects will only be placed along strong slopes, for example the sides of mountains.

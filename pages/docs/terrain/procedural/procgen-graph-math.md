@@ -20,8 +20,7 @@ This value can be used to add variety, however, not through completely random va
 
 In the two images below, the same plants are placed. However, in the second image, Perlin noise is used to affect their color. Note how in the second image all plants in an area become darker or brighter.
 
-![Perlin Noise off](media/proc-noise-off.jpg)
-![Perlin Noise on](media/proc-noise-on.jpg)
+![Perlin Noise off and on](media/proc-perlin-noise.jpg)
 
 ### Node Properties
 

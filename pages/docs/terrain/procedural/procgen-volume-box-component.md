@@ -4,6 +4,10 @@ The *procedural volume box component* defines a box shaped volume in which the r
 
 For more details see the chapter on [ProcGen graph modifier nodes (TODO)](procgen-graph-modifiers.md).
 
+The image below shows a box volume used to locally increase the scale of an object type. A fade out value of 0.5 makes the transition soft.
+
+![Box modifier volume](media/procgen-box.jpg)
+
 ## Component Properties
 
 * `Value`: A single number value. This is combined with the *InputValue* from the [modifier node (TODO)](procgen-graph-modifiers.md) in the graph, using the `BlendMode` formula.

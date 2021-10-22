@@ -62,4 +62,4 @@ Once you've figured out the basics, you can build more complex rules.
 * [Procedural Vertex Color Component (TODO)](procgen-vertex-color-component.md)
 * [ProcGen Graph Vertex Color Output (TODO)](procgen-graph-output-vertexcolor.md)
 * [Procedural Volume Box Component](procgen-volume-box-component.md)
-* [Procedural Volume Image Component (TODO)](procgen-volume-image-component.md)
+* [Procedural Volume Image Component](procgen-volume-image-component.md)

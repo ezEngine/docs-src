@@ -197,7 +197,7 @@
 ### [Procedural Placement Component](terrain/procedural/procgen-placement-component.md)
 ### [Procedural Vertex Color Component (TODO)](terrain/procedural/procgen-vertex-color-component.md)
 ### [Procedural Volume Box Component](terrain/procedural/procgen-volume-box-component.md)
-### [Procedural Volume Image Component (TODO)](terrain/procedural/procgen-volume-image-component.md)
+### [Procedural Volume Image Component](terrain/procedural/procgen-volume-image-component.md)
 ### [Procedural Volume Sphere Component](terrain/procedural/procgen-volume-sphere-component.md)
 # Ai
 ## [Recast Navmesh Component](ai/recast-navmesh-component.md)

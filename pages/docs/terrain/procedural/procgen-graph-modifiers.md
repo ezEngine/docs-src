@@ -16,4 +16,4 @@
 * [Procedural Object Placement](procedural-object-placement.md)
 * [Procedural Volume Box Component](procgen-volume-box-component.md)
 * [Procedural Volume Sphere Component](procgen-volume-sphere-component.md)
-* [Procedural Volume Image Component (TODO)](procgen-volume-image-component.md)
+* [Procedural Volume Image Component](procgen-volume-image-component.md)

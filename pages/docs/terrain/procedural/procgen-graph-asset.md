@@ -53,7 +53,7 @@ Once you've figured out the basics, you can build more complex rules.
 
 1. Use the [ProcGen graph input nodes (TODO)](procgen-graph-inputs.md) to receive more information about a location, such as its slope or height.
 1. Pass the data through [ProcGen graph math nodes](procgen-graph-math.md) to adjust it as necessary.
-1. Use [ProcGen graph modifier nodes (TODO)](procgen-graph-modifiers.md) to make it possible to configure the rules locally.
+1. Use [ProcGen graph modifier nodes](procgen-graph-modifiers.md) to make it possible to configure the rules locally.
 
 ## See Also
 

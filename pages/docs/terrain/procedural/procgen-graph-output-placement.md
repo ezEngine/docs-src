@@ -7,7 +7,7 @@ A [ProcGen graph](procgen-graph-asset.md) can already work, even if it contains 
 For example one node would be used to spawn stones on rocky surfaces, another node spawns bushes on grassy surfaces, a third spawns trees and so on. Every type of object has a *footprint*, meaning an certain size of area in which only one of them will be placed. The larger the footprint, the more sparse these objects are spawned.
 The node itself can already filter whether to place an object, at all, by inspecting the [surface](../../materials/surfaces.md). This way vegetation isn't planted on concrete or water.
 
-More elaborate filtering can be achieved with [modifier nodes (TODO)](procgen-graph-modifiers.md). For example an image can represent where exactly what type of object should appear.
+More elaborate filtering can be achieved with [modifier nodes](procgen-graph-modifiers.md). For example an image can represent where exactly what type of object should appear.
 
 ## Node Properties
 
@@ -34,7 +34,7 @@ More elaborate filtering can be achieved with [modifier nodes (TODO)](procgen-gr
 
      ![Placement mode: raycast](media/procgen-placement-raycast.jpg)
 
-  1. *Fixed:* In this mode objects are always placed at the height of the [placement component](procgen-placement-component.md). No ray is cast, and no location is filtered out. This can be used for 2D games where no [collision geometry](../../physics/collision-shapes/collision-meshes.md) exists. Custom filtering can still be achieved through [image volumes](procgen-volume-image-component.md) and other [modifiers (TODO)](procgen-graph-modifiers.md).
+  1. *Fixed:* In this mode objects are always placed at the height of the [placement component](procgen-placement-component.md). No ray is cast, and no location is filtered out. This can be used for 2D games where no [collision geometry](../../physics/collision-shapes/collision-meshes.md) exists. Custom filtering can still be achieved through [image volumes](procgen-volume-image-component.md) and other [modifiers](procgen-graph-modifiers.md).
 
      ![Placement mode: fixed](media/procgen-placement-fixed.jpg)
 
@@ -49,7 +49,7 @@ More elaborate filtering can be achieved with [modifier nodes (TODO)](procgen-gr
 
 ## Input Pins
 
-* `Density`: A value in [0;1] range that determines how likely it is that an object gets spawned. A lower density means that fewer objects get spawned. If this pin is not connected, a default density of `1` is assumed. Connect this pin to a [Perlin noise node](procgen-graph-math.md#perlin-noise-node) or an [modifier node (TODO)](procgen-graph-modifiers.md) to vary density by location. The image below shows varying density using Perlin noise.
+* `Density`: A value in [0;1] range that determines how likely it is that an object gets spawned. A lower density means that fewer objects get spawned. If this pin is not connected, a default density of `1` is assumed. Connect this pin to a [Perlin noise node](procgen-graph-math.md#perlin-noise-node) or an [modifier node](procgen-graph-modifiers.md) to vary density by location. The image below shows varying density using Perlin noise.
 
   ![Varying density by location using Perlin noise](media/procgen-density.jpg)
 

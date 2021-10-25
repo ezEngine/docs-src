@@ -43,7 +43,7 @@ The file `SampleGamePluginDLL.h` only contains `#define`s for DLL import/export 
 
 If your plugin will be entirely on its own, you don't even need this. However, if you want to use multiple plugins and some of them should contain shared code, then others need to be able to link against the shared libraries and access classes and functions from that library. By tagging classes with these macros you can *export* symbols from a DLL and thus make those things available to other code. For examples how to use this, just search the sample plugin.
 
-### ezPlugin Instance
+### Plugin Callbacks
 
 EZ provides additional hooks for initialization when a plugin gets loaded or unloaded. You can find these in `SampleGamePlugin.cpp`:
 

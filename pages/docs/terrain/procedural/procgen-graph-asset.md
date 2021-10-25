@@ -47,6 +47,24 @@ You also need a component that applies the ProcGen graph. Depending on the *outp
 
 Make sure the ProcGen graph asset is [transformed](../../assets/assets-overview.md). Then [press play to simulate it](../../editor/run-scene.md). If everything is set up right, you should see objects getting placed around the camera, within the specified volume.
 
+## Live Editing
+
+When you edit a ProcGen graph asset, most changes trigger a live update in any running scene. That means you can switch back and forth between the asset and a test scene, and see changes update right away.
+
+However, this is limited to certain types of changes. Changes to referenced assets (such as [color gradients](../../animation/common/color-gradients.md) or [prefabs](../../prefabs/prefabs-overview.md)) won't update the already placed objects.
+
+If such a change was done, you need to stop simulating a scene, and [run it again](../../editor/run-scene.md).
+
+## Debug Mode
+
+It can be difficult to get an idea for the values that a rule graph produces. To visualize the values, you can right-click any pin and enable the *Debug* flag. This disables all placement output and instead switches to a mode where for every location only a sphere is rendered, and the shade of the sphere represents the value of the pin on which the debug flag is enabled. Black for `0` and white for `1`.
+
+![Debug pin](media/procgen-debug-pin.png)
+
+When you then switch to a scene and run the simulation, you will see this pattern:
+
+![Debug mode](media/procgen-debug.jpg)
+
 ## Building Complex Rules
 
 Once you've figured out the basics, you can build more complex rules.

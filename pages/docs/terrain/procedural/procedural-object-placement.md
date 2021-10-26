@@ -2,7 +2,7 @@
 
 ![Procedural Vegetation Placement](media/procgen-beaty-shot.jpg)
 
-Creating large terrain with convincing vegetation is a lot of work. Since nature generally follows certain rules, such as on which type of terrain which plant can grow, how densely they are packed and so on, it makes sense to rather build and apply such rules to automatically place objects, rather than attempting to place vegetation by hand.
+Creating large terrain with convincing vegetation is a lot of work. Since nature generally follows certain rules, such as on which type of terrain which plant can grow, how densely they are packed and so on, it makes sense to rather build and apply such rules to automatically place objects, than attempting to place vegetation by hand.
 
 EZ comes with a *procedural generation* feature. This is designed specifically for decorating terrain with vegetation, but can also be used in other scenarios.
 

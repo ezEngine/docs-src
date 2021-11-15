@@ -220,6 +220,7 @@
 # Miscellaneous
 ## [Blackboard Component](Miscellaneous/blackboard-component.md)
 ## [Blackboards](Miscellaneous/blackboards.md)
+## [Config File Resource](Miscellaneous/config-file-resource.md)
 ## [ImageData Asset](Miscellaneous/imagedata-asset.md)
 # Custom Code
 ## [Custom Code](custom-code/custom-code-overview.md)

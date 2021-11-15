@@ -178,7 +178,6 @@ Armed with these basics, you should have a look at existing components to see ho
 
 ## See Also
 
-
 * [Components](../../runtime/world/components.md)
 * [Custom Code](../custom-code-overview.md)
 * [Sample Game Plugin](../../../samples/sample-game-plugin.md)

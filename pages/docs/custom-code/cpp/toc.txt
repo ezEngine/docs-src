@@ -1,4 +1,5 @@
 cpp-overview.md
+cpp-project-generation.md
 engine-plugins.md
 custom-cpp-component.md
 cpp-code-reload.md

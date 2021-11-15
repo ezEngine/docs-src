@@ -225,6 +225,7 @@
 ## [Custom Code](custom-code/custom-code-overview.md)
 ## C++
 ### [Custom Code with C++](custom-code/cpp/cpp-overview.md)
+### [C++ Project Generation](custom-code/cpp/cpp-project-generation.md)
 ### [Engine Plugins](custom-code/cpp/engine-plugins.md)
 ### [Custom Components with C++](custom-code/cpp/custom-cpp-component.md)
 ### [Hot Reloading C++ Game Plugins in the Editor](custom-code/cpp/cpp-code-reload.md)

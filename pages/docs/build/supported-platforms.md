@@ -1,6 +1,6 @@
 # Supported Platforms
 
-ezEngine is developed primarily on Windows 10, using Visual Studio 2017 and 2019, typically in 64 Bit builds. As such this is the best tested and therefore most stable platform. The code uses C++ 11, 14 and 17 features, but only where broad compiler and platform support is available.
+ezEngine is developed primarily on Windows 10, using Visual Studio 2019, typically in 64 Bit builds. As such this is the best tested and therefore most stable platform. The code uses C++ 11, 14 and 17 features, but only where broad compiler and platform support is available.
 
 ## Windows
 
@@ -11,8 +11,6 @@ ezEngine is developed primarily on Windows 10, using Visual Studio 2017 and 2019
 
 ### Compilers
 
-* Visual Studio 2017 32 Bit
-* Visual Studio 2017 64 Bit
 * Visual Studio 2019 32 Bit
 * Visual Studio 2019 64 Bit
 

@@ -1,6 +1,6 @@
 # CMake Setup
 
-To generate a solution, run the CMake GUI. Specify *Where is the source code* and *Where to build the binaries*, then run **Configure**. As a generator, pick *Visual Studio 2017 x64* or *Visual Studio 2019 x64* (or one of the other [Supported Platforms](supported-platforms.md)).
+To generate a solution, run the CMake GUI. Specify *Where is the source code* and *Where to build the binaries*, then run **Configure**. As a generator, pick *Visual Studio 2019 x64* (or one of the other [supported platforms](supported-platforms.md)).
 
 ![CMake configuration](media/cmake-config.png)
 
@@ -18,7 +18,9 @@ Once you have configured everything, run **Generate** and then **Open Project**.
 
 ## Adding a Custom Project
 
-The easiest way to get started with a custom project, is to copy an existing sample, such as the [Sample Game Plugin](../../samples/sample-game-plugin.md). For starters, just create it in the same location, within the EZ source tree. If you want to move it into your own repository, you can then reference its location as an *external project* (see below).
+The easiest way to get started with a custom project, is to use the [C++ project generation](../custom-code/cpp/cpp-project-generation.md).
+
+Another method is to copy an existing sample, such as the [Sample Game Plugin](../../samples/sample-game-plugin.md). For starters, just create it in the same location, within the EZ source tree. If you want to move it into your own repository, you can then reference its location as an *external project* (see below).
 
 ## External Projects
 
@@ -34,6 +36,6 @@ Checking *Advanced* in the CMake GUI will show additional options to configure t
 
 ## See Also
 
-
 * [Supported Platforms](supported-platforms.md)
+* [C++ Project Generation](../custom-code/cpp/cpp-project-generation.md)
 * [ezEngine as a Submodule](submodule.md)

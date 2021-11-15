@@ -4,13 +4,13 @@ To extend the engine with C++ code, you should put your code into an [engine plu
 
 ## Build Setup
 
-The first thing you need to set up is your build system, meaning you need to have a project for your plugin. The easiest way to do so, is to add your own project into the ezEngine source tree and just use EZ's CMake build setup and generated solution.
+The first thing you need to set up is your build system, meaning you need to have a project for your plugin. The easiest way to do so, is to use the [C++ Project Generation](cpp-project-generation.md) functionality in the editor. Another option is to add your own project into the ezEngine source tree and just use EZ's CMake build setup and generated solution.
 
 A cleaner approach is to do basically the same, but to put your code outside the EZ source tree, and add a reference to that folder:
 
 ![CMake](media/cmake-external-project.png)
 
-This will integrate you source into the ezEngine solution. Make sure to use the same CMakeLists.txt files as the engine plugins in EZ do. With this option, you can have your code in a separate repository.
+This will integrate your source into the ezEngine solution. Make sure to use the same CMakeLists.txt files as the engine plugins in EZ do. With this option, you can have your code in a separate repository.
 
 Another way is to use your own CMake based build setup, and integrate [ezEngine as a Submodule](../../build/submodule.md).
 

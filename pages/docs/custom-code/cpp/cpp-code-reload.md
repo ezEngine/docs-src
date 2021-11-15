@@ -18,6 +18,10 @@ This trick works quite well if we only do it for plugins that are loaded fully d
 
 For this feature there is no UI, you need to edit a config file directly.
 
+> **Note:**
+>
+> If you used the [C++ Project Generation](cpp-project-generation.md) feature to create your project, the reference to your C++ plugin in your EZ project is automatically set up to use the `LoadCopy` option mentioned below.
+
 ### Edit Plugin Config File
 
 1. If you have any editor open, close it.
@@ -49,6 +53,6 @@ The `LoadCopy` option should only be used for select game plugins. Enabling this
 
 ## See Also
 
-
 * [Debugging C++ Code](../../debugging/debug-cpp.md)
 * [Engine Plugins](engine-plugins.md)
+* [C++ Project Generation](cpp-project-generation.md)

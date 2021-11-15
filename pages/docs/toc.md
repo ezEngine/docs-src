@@ -60,6 +60,7 @@
 ### [Mesh Asset](graphics/meshes/mesh-asset.md)
 ### [Mesh Component](graphics/meshes/mesh-component.md)
 ### [Instanced Mesh Component](graphics/meshes/instanced-mesh-component.md)
+### [Custom Mesh Component](graphics/meshes/custom-mesh-component.md)
 ## [Render Pipeline (TODO)](graphics/render-pipeline-overview.md)
 ## Render To Texture
 ### [Render Target Activator Component (TODO)](graphics/render-to-texture/render-target-activator-component.md)

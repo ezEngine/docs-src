@@ -14,16 +14,12 @@ Therefore an object should [deactivate](../runtime/world/components.md#component
 
 The message `ezMsgInputActionTriggered` contains information about a single *input action*. It passes along the current state (up, down, pressed, released) and how much the input slot got activated (for instance how far the mouse was moved).
 
-The name of the input slot is only sent as a hashed value, for performance reasons. To compare against a known input action name, compute the hash for your string and compare those values. In C++ use `ezTempHashedString::ComputeHash()` in TypeScript use `ez.Utils.StringToHash()`.
-
-In both cases, prefer to precompute the hash once.
-
 ## Component Properties
 
 * `InputSet`: The name of the *input set* to use. All *input actions* that are part of this input set will be forwarded as messages.
 * `Granularity`: Configures whether the component sends messages only for certain state changes, or also continuously while a button is held down.
+* `ForwardToBlackboard`: If enabled, the input component will attempt to store input states in a nearby [blackboard](../Miscellaneous/blackboards.md). If it can find a blackboard on the same owner game object, or a parent game object, it will set a value with the name of the action to a float value between `0` and `1`, depending on whether the action is fully triggered (`1`), not triggered (`0`) or partially triggered (e.g. for a thumb stick). This is an quick way to forward input data to an easily accessible data structure.
 
 ## See Also
-
 
 * [Input](input-overview.md)

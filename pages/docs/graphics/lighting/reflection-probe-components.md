@@ -13,7 +13,7 @@ By default, each probe captures everything in its radius. In many cases it makes
 
 The captured reflection is only visible in the probe's influence volume. For sphere probes this is defined by their radius and for box probes by their extents.
 
-At runtime, all probes are sorted by their volume and the smallest probe is sampled first. If the reflection is transparent in the cubemap, then next bigger cubemap that influences the geometry is sampled next. This continues until we hit an opaque pixel in a cubemap or if the fallback reflection of the * [sky light component](sky-light-component.md) is reached.
+At runtime, all probes are sorted by their volume and the smallest probe is sampled first. If the reflection is transparent in the cubemap, then next bigger cubemap that influences the geometry is sampled next. This continues until we hit an opaque pixel in a cubemap or if the fallback reflection of the [sky light component](sky-light-component.md) is reached.
 
 The probe's `ReflectionProbeMode` by default is set to `static`, in which case the captured cubemap reflection is only updated once at the start or whenever the settings change. Alternatively it can be set to `dynamic`, in which case probe is updated  continuously.
 
@@ -27,16 +27,16 @@ Sphere reflection component:
 Box reflection component:
 
 * `Extents`: The extents of the box projection. The cubemap will be projected to this box.
-* `InfluenceScale`, * `InfluenceShift`: The influence volume can be smaller than the projected volume (extents) of the probe. This can be useful if your have e.g. a long corridor that you want to place multiple probes in. Each will have the same projection but a different part of the projection volume will be set as the influence volume centred around a probe capture offset.
-* `PositiveFalloff`, * `NegativeFalloff`: Percentage of the influence volume in each direction that is smoothly blended into other probes. The falloff is defined for each face of the box.
+* `InfluenceScale`, `InfluenceShift`: The influence volume can be smaller than the projected volume (extents) of the probe. This can be useful if you have e.g. a long corridor that you want to place multiple probes in. Each will have the same projection but a different part of the projection volume will be set as the influence volume centred around a probe capture offset.
+* `PositiveFalloff`, `NegativeFalloff`: Percentage of the influence volume in each direction that is smoothly blended into other probes. The falloff is defined for each face of the box.
 
 Common properties for both sphere and box reflection probes that describe how the probe is captured:
 
 * `ReflectionProbeMode`: `Dynamic` makes the skylight update continuously. `Static` will only update once at the start.
-* `IncludeTags`, `ExcludeTags`: These [tags](../../projects/tags.md) define which objects in the scene are used to compute the skylight. Make sure that the object that renders your [sky](../../effects/sky.md) has this include tag set. This is the same mechanism as used in the [camera component](../camera-component.md).
+* `IncludeTags`, `ExcludeTags`: These [tags](../../projects/tags.md) define which objects in the scene are used to capture the scene. This is the same mechanism as used in the [camera component](../camera-component.md). By default, the `SkyLight` tag is excluded to allow for dynamic composition with the [sky light component](sky-light-component.md).
 * `NearPlane`, `FarPlane`: Camera settings used when the lighting is captured from the scene. If `NearPlane` is set to `Auto`, a value is computed automatically from the `FarPlane`.
 * `CaptureOffset`: The capture offset allows for the capture position of the probe to be decoupled from the game object position.
-* `ShowDebugInfo`: If enabled, a sphere with a preview of the sky image is rendered at the position of the skylight object. Use this to check whether all desired objects contribute to the skylight.
+* `ShowDebugInfo`: If enabled, a sphere with a preview of the probe cubemap is rendered at the position of the capture offset. Use this to check whether all desired objects contribute to the probe. Above the sphere will be a stack of other spheres that showcase the reflection with increased roughness.
 
 ## See Also
 

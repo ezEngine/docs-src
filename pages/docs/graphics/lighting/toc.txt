@@ -5,3 +5,4 @@ spot-light-component.md
 dynamic-shadows.md
 ambient-light-component.md
 sky-light-component.md
+reflection-probe-components.md

@@ -125,7 +125,7 @@ The type (`bool` or `enum`) and the available values are automatically read from
 
 ## See Also
 
-
 * [Shaders (TODO)](shaders-overview.md)
+* [Shader Templates](shader-templates.md)
 * [Shader Debugging](shader-debugging.md)
 * [The Shader Render State Section](shader-render-state.md)

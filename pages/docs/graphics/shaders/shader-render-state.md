@@ -312,4 +312,5 @@ The following variables exist with suffix 0 to 7. If **IndependentBlend** is dis
 
 * [Shaders (TODO)](shaders-overview.md)
 * [Shader Permutation Variables](shader-permutation-variables.md)
+* [Shader Templates](shader-templates.md)
 * [Render Pipeline (TODO)](../render-pipeline-overview.md)

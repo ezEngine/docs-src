@@ -32,6 +32,14 @@ The only caveat is, that you should never duplicate an asset by actually copy an
 
 All assets are listed in the [asset browser](asset-browser.md).
 
+## Asset Transform
+
+Asset documents must be **transformed** to produce the actual runtime data that the engine uses. In an open asset document you can either press `CTRL+E` or click the green arrow button in the toolbar to export (transform) the asset.
+
+To transform all assets in a project, open the [asset browser](asset-browser.md) and click the **Transform All** button there.
+
+Optionally, you can also enable [background asset processing](asset-browser.md#background-processing-and-transform-state).
+
 ## Asset Errors
 
 An asset can be in an error state. The most common reason for this is, that it references files or other assets that don't exist (anymore). In this case the asset cannot be transformed correctly and will therefore not produce any new output.

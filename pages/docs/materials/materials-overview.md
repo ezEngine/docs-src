@@ -18,6 +18,8 @@ Through the `ShaderMode` property there are three ways a material can select whi
 
 * **From File:** In this mode the material actually references a proper shader file. This allows you to select a custom [shader (TODO)](../graphics/shaders/shaders-overview.md). By default, EZ doesn't have many different shader files, as all important variations are provided by the same shader file. However, if you do decide to write a custom one, this is the way to select it for your material. The engine parses the shader file for configurable properties and displays those as UI elements in the material editor. So things like which texture you can select and what other lighting properties the material will have, are all defined by the selected shader.
 
+  You can easily create a custom shader from a [shader template](../graphics/shaders/shader-templates.md).
+
 * **Visual Shader:** In this mode the material editor will show an additional editing area beneath the 3D view, where you can create your own shader through a visual graph system. This enables you to create custom shader effects like animated textures. There is a dedicated chapter about [visual shaders (TODO)](visual-shaders.md) that explains how to do so.
 
 If you change the selected shader, you need to *transform* (`Ctrl+E`) the material [asset](../assets/assets-overview.md) for the change to take full effect.

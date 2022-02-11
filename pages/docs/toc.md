@@ -156,6 +156,7 @@
 ### [Skeleton Component](animation/skeletal-animation/skeleton-component.md)
 ### [Animation Clip Asset](animation/skeletal-animation/animation-clip-asset.md)
 ### [Simple Animation Component](animation/skeletal-animation/simple-animation-component.md)
+### [Skeleton Pose Component](animation/skeletal-animation/skeleton-pose-component.md)
 ### Animation Controller
 #### [Animation Controller](animation/skeletal-animation/animation-controller/animation-controller-overview.md)
 #### [Animation Controller Asset](animation/skeletal-animation/animation-controller/animation-controller-asset.md)

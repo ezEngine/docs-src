@@ -14,6 +14,8 @@ Some objects will also be spawned by the simulation, and therefore are unknown t
 
 In general, modifying the scene during simulation will work for some objects, and won't work for others. The only way to find out, is to try it. Once the simulation is stopped, though, all modifications will be applied as expected, to the reset scene.
 
+### Keep Simulation Changes
+
 This mode is useful to quickly check how some object behaves. It can also be used to simulate physical objects (e.g. boxes falling down) and then to save that simulated transform to the scene, by selecting them and pressing `K` (or *Scene > Utilities > Keep Simulation Changes*).
 
 ## Play the Game Mode

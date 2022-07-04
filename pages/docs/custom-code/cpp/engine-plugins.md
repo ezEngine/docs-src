@@ -6,7 +6,11 @@ Contrary to using a plugin, you could also build your own [application (TODO)](.
 
 ## Creating a Plugin
 
-The [Sample Game Plugin](../../../samples/sample-game-plugin.md) is a good reference for how to build a custom game plugin. To just create a plugin, at all, you only need very little setup.
+The easiest way to create a custom plugin is to use the [C++ Project Generation](cpp-project-generation.md). This will create a template project for you, set up the CMake files for your build and configure the [plugin selection](../../projects/plugin-selection.md).
+
+### Creating a Plugin Manually
+
+In case you want more control, you can also set up your game plugin manually. The [Sample Game Plugin](../../../samples/sample-game-plugin.md) is a good reference for how to do that. To just create a plugin, at all, you only need very little setup.
 
 The only files you need to look at are:
 
@@ -17,10 +21,6 @@ The only files you need to look at are:
 ### Build System Setup
 
 The file `CMakeLists.txt` is only of interest here in case you want to reuse the EZ build infrastructure to generate your library. If you use [ezEngine as a Submodule](../../build/submodule.md) then you probably have your own CMake scripts. Either way, you need to add a project that generates a DLL.
-
-### Plugin DLL Name
-
-Make sure to call your plugin DLL `XyzPlugin.dll`. That means it should have the `Plugin` suffix in its name. Generally, plugins can have any name, but only DLLs with this naming convention will be listed by the editor in the [project settings](../../projects/project-settings.md) for you to activate.
 
 ### DLL Symbol Import/Export
 
@@ -67,7 +67,7 @@ These callbacks are optional, though in some cases you may want to register and 
 
 If you want to load a plugin from code, you would use `ezPlugin::LoadPlugin()` and provide only the name (no path) of your plugin. Make sure that the DLL is stored in the same directory as all other DLLs and EXEs.
 
-The more convenient way to load your game plugin, though, is to enable it in the [project settings](../../projects/project-settings.md). Then it will be automatically loaded by every [application (TODO)](../../runtime/application/application.md).
+The more convenient way to load your game plugin, though, is to enable it in the [project settings](../../projects/plugin-selection.md). Then it will be automatically loaded by every [application (TODO)](../../runtime/application/application.md).
 
 ## Add Custom Code
 

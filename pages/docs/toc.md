@@ -23,6 +23,7 @@
 ## [Running a Scene](editor/run-scene.md)
 # Projects
 ## [Data Directories](projects/data-directories.md)
+## [Plugin Selection](projects/plugin-selection.md)
 ## [Project Settings](projects/project-settings.md)
 ## [Projects](projects/projects-overview.md)
 ## [Tags](projects/tags.md)

@@ -20,16 +20,7 @@ The name of the folder represents the name of your project. This name is stored 
 
 Now you have a new, blank project. The first thing you should do is to check the [project settings](project-settings.md). Specifically, if you want to share assets between multiple projects, you need to put those assets into a dedicated folder and then add that folder to your project as a [data directory](data-directories.md).
 
-The second thing you should check is which [engine plugins](project-settings.md#engine-plugins) you want to use. This is not critical at this point, but if you start using features from some plugin (e.g. [PhysX](../physics/physx-overview.md)) and then try to [run a scene standalone](../editor/run-scene.md), it won't work.
-
-The following engine plugins are useful to enable for most projects:
-
-* **ezParticlePlugin** - for [particle effects](../effects/particle-effects/particle-effects-overview.md)
-* **ezTypeScriptPlugin** - for [scripting with TypeScript](../custom-code/typescript/typescript-overview.md)
-* **ezPhysXPlugin** - for physics with [PhysX](../physics/physx-overview.md)
-* **ezFmodPlugin** - for sound with [FMOD](../sound/fmod-overview.md)
-
-If you don't use a particular feature in your project, you can of course keep the respective plugin deactivated.
+The second thing you should check is which [plugins](plugin-selection.md) you want to use, so that you have all desired features available.
 
 ### Create a Scene
 
@@ -53,4 +44,5 @@ Plugins may add project wide options. Not all options may be exposed through edi
 
 ## See Also
 
-
+* [Data Directories](data-directories.md)
+* [Plugin Selection](plugin-selection.md)

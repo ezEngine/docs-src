@@ -30,19 +30,10 @@ The list on the left lists all the available preferences. Items prefixed with `A
 
 ![Preferences](media/editor-shortcuts.png)
 
-## Editor Plugins
-
-*Editor > Editor Settings > Shortcuts...* opens a dialog that lists all active editor plugins. By default the editor will load all editor plugins. This dialog allows you to disable loading of certain plugins. This should only be done if a plugin is in conflict with some other plugin and you only need one of the two. For well behaving editor plugins there should be no need to disable them.
-
-Please be aware that disabling the loading of an editor plugin is machine wide and thus will affect all projects equally.
-
-![Preferences](media/editor-plugins.png)
-
 ## Video
 
 [![video](https://img.youtube.com/vi/ivkAIlbK5f0/0.jpg)](https://www.youtube.com/watch?v=ivkAIlbK5f0)
 
 ## See Also
-
 
 * [Project Settings](../projects/project-settings.md)

@@ -16,36 +16,23 @@ This trick works quite well if we only do it for plugins that are loaded fully d
 
 ## How to Enable Plugin Hot Reloading
 
-For this feature there is no UI, you need to edit a config file directly.
+In the [plugin selection](../../projects/plugin-selection.md) dialog, select your custom plugin and check **Enable Reload**.
 
 > **Note:**
 >
-> If you used the [C++ Project Generation](cpp-project-generation.md) feature to create your project, the reference to your C++ plugin in your EZ project is automatically set up to use the `LoadCopy` option mentioned below.
+> If you used the [C++ Project Generation](cpp-project-generation.md) feature to create your project, the reference to your C++ plugin is automatically set up this way.
 
-### Edit Plugin Config File
+Now you can modify the code of your plugin and compile it, while the editor is open. Of course, you can't do that while being attached with a debugger.
 
-1. If you have any editor open, close it.
-1. Go to the directory where your project is located, for example `Data/Samples/SampleGame`.
-1. Open the file `Plugins.ddl` in a text editor.
-1. You should see a list of all the known engine plugins. Search for the plugin for which you want to enable reloading, for example `ezSampleGamePlugin`.
-1. Change its `LoadCopy` value to `true`.
-    ![Plugin Config](media/load-plugin-copy.png)
-1. Save and close the text file.
-1. Open your project in the editor.
+When a plugin is marked as `Enable Reload`, and it gets modified, the editor already **automatically restarts the engine process**, once no scene is being simulated.
 
-If all goes well, everything should work as before. The only difference is now, that you can modify the code of your plugin and compile it, while the editor is open. Of course you can't do that while being attached with a debugger, so detach your debugger, if necessary.
-
-### Terminate and Restart the Engine
+## Terminate and Restart the Engine
 
 You can always manually restart the engine process through *Tools > Reload Engine* or the hotkey `Ctrl+Shift+F4`.
 
-This instructs the editor to kill its engine process and restart it right away. This takes a few seconds, and you will see the 3D viewports flicker and notice how the new engine process loads all the data. Once that is done you can again [simulate the scene](../../editor/run-scene.md) and will now get the latest behavior from your game plugin.
-
-Additionally, when a pluggin is set as `LoadCopy`, and it gets modified, the editor already **automatically restarts the engine process**, once no scene is being simulated.
-
 ## Restrictions
 
-The `LoadCopy` option should only be used for select game plugins. Enabling this feature can have unintended side-effects.
+The `Enable Reload` option should only be used for select game plugins. Enabling this feature can have unintended side-effects.
 
 * If any code links against a plugin, that plugin cannot be loaded as a copy. Therefore, if you want to put shared code into a separate library that other users of your plugins link against, you can't load that shared library as a copy.
 * You can't compile code while debugging a process. To compile your code, you first have to detach your debugger. In Visual Studio that can be done via `Debug > Detach All`.

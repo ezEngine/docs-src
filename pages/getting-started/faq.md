@@ -4,15 +4,13 @@
 
 The ezEngine base libraries (Foundation, Core) have been built to be fully cross platform. The corresponding unit tests are run on Windows, Linux, Mac and Android every day. There are some stubs for functions that are currently only needed on Windows, but implementing them is easy to do, when needed.
 
-Everything higher level (editor, tools, rendering) is **only implemented for Windows 10**. There is **no Linux**, **no Mac** and also **no Windows 8 or lower** support.
+Everything higher level (editor, tools, rendering) is **currently only implemented for Windows 10**. There is **no (official) Linux**, **no Mac** and also **no Windows 8 or lower** support.
 
-The editor uses Qt, so that is generally portable, and it wouldn't even be too crazy, but also not entirely trivial. There is some Windows specific code for inter process communication (pipes), which would need to be implemented differently on other systems.
+A **Linux port** is currently being worked on, though.
 
 ## Render API
 
-At the moment we only provide a **DX11 renderer**. We would like to switch to Vulkan at some point, but some non-trivial refactoring is needed first. This currently doesn't have a high priority for us.
-
-Obviously, this would also be a prerequisite to porting the editor to other platforms.
+At the moment we (officially) only provide a **DX11 renderer**. A **Vulkan renderer** is currently in development.
 
 ## Networking & Multiplayer
 
@@ -30,8 +28,6 @@ Yes, EZ has [visual scripting](../docs/custom-code/visual-script/visual-script-o
 
 We have a [TypeScript](../docs/custom-code/typescript/typescript-overview.md) binding which is pretty decent. The entire game logic in the [Testing Chambers](../samples/testing-chambers.md) project is done with this.
 
-Future work for the TypeScript binding is [gathered here](https://github.com/ezEngine/ezEngine/projects/2). If you have some experience working with the TypeScript compiler tools, we could use your help.
-
 ## Rendering
 
 We don't have occlusion culling at the moment (through a CPU rasterizer), though would like to add that at some point.
@@ -39,10 +35,6 @@ We don't have occlusion culling at the moment (through a CPU rasterizer), though
 ## Terrain
 
 We currently have **no terrain system**. We have several ideas how we would like to do this, but this is very low priority at the moment. If you want to do terrain, you should just import static meshes. Of course that also means you need to do terrain sculpting in a separate tool. What we do have, is a simple [heightfield component](../docs/terrain/heightfield-component.md). For basic scenarios this may already be sufficient.
-
-## Skeletal Animation
-
-We started implementing a skeletal animation system and got the basics up an running. It's still very, very limited, though. However, a skeletal animation system does have **high priority** for us.
 
 ## AI
 
@@ -56,12 +48,12 @@ All our resources (textures, materials, shaders, ...) always use streaming. Howe
 
 We don't plan very far ahead. Here are the things we intend to work on in the near term.
 
-1. High level documentation.
-1. Small code samples, where needed for the documentation.
-1. Automated tests for some features, especially where the documentation can benefit as well.
-1. Bug fixing for issues discovered by the documentation efforts.
-1. Polish user experience, especially for first time users, where possible with little effort.
-1. Skeletal Animation System.
+1. Vulkan renderer
+1. Linux port
+1. Switch from PhysX to Jolt physics
+1. Animation system improvements
+1. Better ragdoll system
+1. General usability improvements
 
 "Intend to work" **doesn't mean complete**, though. We can't give estimates on that.
 
@@ -78,7 +70,6 @@ Consequently, good documentation both directly inside code, as well as external,
 We would love to see EZ being used by other people. We try to fix issues and help out as well as possible, but there is only so much we can do with our time. We understand that for many people other engines are a better fit. If EZ does fit your needs, that's great. And if you are able to help out make it better, that's really awesome.
 
 ## See Also
-
 
 * [How to Contribute](how-to-contribute.md)
 * [Contact](../contact.md)

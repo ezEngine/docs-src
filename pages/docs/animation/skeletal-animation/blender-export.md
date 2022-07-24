@@ -44,6 +44,8 @@ If you export such a mesh to a GLB and enable **Y UP** convention, you need to c
 
     ![Vertex Weights](../media/blender-vertex-weights.png)
 
+1. EZ does not support scaling of bones. All bones must have scaling values of 1. If you have an object scaled in *object mode* and attached to a bone, the scaling will be represented by the bone, so even if your animation keyframes do not use scaling, the exported animation track  does. To fix this, select your scaled object and use *Mesh > Apply > Scaling* to bake the object scaling into the vertex positions and get rid of the scaling in the bone transforms.
+
 1. EZ uses a maximum of 4 bones per vertex. By default Blender's GLTF export already restricts vertex weights to 4 bones, though there is an option to allow more influences. This won't have a positive effect in EZ though.
 
 1. Be aware that Blender exports ALL keyframes of an animation. The preview window of an animation has no effect on the exported animation data.
@@ -74,7 +76,7 @@ There are many good tutorials how to rig meshes. However, here are some addition
 
 1. Make sure your mesh is rigged perfectly before you start animating. Even small adjustments to the rig later may require you to redo all your animations.
 
-1. Make sure that all bones are connected correctly to each other. For example, hand and foot bones MUST be connected to their respective arm and leg bones. You must not have any disconnected bones that would be connected in a real skeleton. Some tutorials suggest to disconnect hand and foot bones and use a *copy transform constraint* instead, when setting up IK in Blender. This is a really bad practice. It will appear to work at first, but once you use partial animation blending (for example to play an animation only on the upper or lower body), it won't work, because the disconnected bones are not part of the correct hierarchy. Similarly, setting up rag dolls for physics (currently not available in EZ) requires the bone hierarchy to be correct. Other engines have the same requirement.<br>
+1. Make sure that all bones are connected correctly to each other. For example, hand and foot bones MUST be connected to their respective arm and leg bones. You must not have any disconnected bones that would be connected in a real skeleton. Some tutorials suggest to disconnect hand and foot bones and use a *copy transform constraint* instead, when setting up IK in Blender. This is a really bad practice. It will appear to work at first, but once you use partial animation blending (for example to play an animation only on the upper or lower body), it won't work, because the disconnected bones are not part of the correct hierarchy. Similarly, setting up rag dolls for physics requires the bone hierarchy to be correct. Other engines have the same requirement.<br>
 ![Armature Structure](../media/blender-rig-structure.png)<br>
 
 1. If you want to add IK to your Blender rig, duplicate the desired bone (for instance the hand bone), then disconnect that bone from the hierarchy (making it a root bone), disable `Deformation` on that bone, and then use that as the IK target bone. Since `Deformation` is disabled, this bone won't be exported to GLTF either, which is what you want. It will only be a control bone.<br>
@@ -92,6 +94,5 @@ There are many good tutorials how to rig meshes. However, here are some addition
 1. If you seem to not get the pole target configuration correct, first make sure the target joint has a slight bend (for instance an elbow shouldn't be fully straight). Then remove the IK constraint on the bone entirely and set it up from scratch. Blender seems to have internal state that can't be fixed differently.
 
 ## See Also
-
 
 * [Skeletal Animations](skeletal-animation-overview.md)

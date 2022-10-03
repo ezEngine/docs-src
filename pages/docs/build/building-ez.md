@@ -42,6 +42,5 @@ The **Shipping** build has all optimizations enabled. It does not include *debug
 
 ## See Also
 
-
 * [Supported Platforms](supported-platforms.md)
 * [ezEngine as a Submodule](submodule.md)

@@ -14,7 +14,7 @@ Components are not directly managed by a world. Instead, worlds manage [world mo
 
 ## World Modules
 
-World modules are bigger systems that manage aspects like [particle effects](../../effects/particle-effects/particle-effects-overview.md), the [PhysX integration](../../physics/physx-overview.md), [wind](../../effects/wind.md) and so on. [Component managers](component-managers.md) are a special type of world modules that take care of updating the various component types.
+World modules are bigger systems that manage aspects like [particle effects](../../effects/particle-effects/particle-effects-overview.md), the [PhysX integration](../../physics/physx/physx-overview.md), [wind](../../effects/wind.md) and so on. [Component managers](component-managers.md) are a special type of world modules that take care of updating the various component types.
 
 ## Simulation State
 

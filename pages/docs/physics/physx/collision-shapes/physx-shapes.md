@@ -2,7 +2,7 @@
 
 A [PhysX actor](../actors/physx-actors.md) configures how an object behaves in the physics simulation. However, every physical presence also requires to have a 3D shape. The shape of actors is set up using PhysX shape components.
 
-[Dynamic actors](../actors/physx-dynamic-actor-component.md) can only be simulated with convex shapes. Therefore concave [collision meshes](collision-meshes.md) are exclusive to [static actors](../actors/physx-static-actor-component.md). All shape components represent convex geometry and work with all physics actor types.
+[Dynamic actors](../actors/physx-dynamic-actor-component.md) can only be simulated with convex shapes. Therefore concave [collision meshes](physx-collision-meshes.md) are exclusive to [static actors](../actors/physx-static-actor-component.md). All shape components represent convex geometry and work with all physics actor types.
 
 ## Shape Components
 
@@ -15,7 +15,7 @@ The following shape components are available:
 
 ## Actor Shape Setup
 
-The easiest kind of actor shape setup is to simply attach a shape component to the same [game object](../../runtime/world/game-objects.md) that the actor component is attached to. This way the position of the game object is also the center of the shape, which is often sufficient.
+The easiest kind of actor shape setup is to simply attach a shape component to the same [game object](../../../runtime/world/game-objects.md) that the actor component is attached to. This way the position of the game object is also the center of the shape, which is often sufficient.
 
 For more complex shapes, you can add child nodes below the actor node, attach the shapes to those nodes, and position the nodes as needed.
 
@@ -31,7 +31,7 @@ The *center of mass* (COM) is the point in space around which an actor spins whe
 
 ## Friction and Restitution
 
-*Friction* and *restitution* are the two physical properties that affect a shape's physical behavior the most. See [this section](../../materials/surfaces.md#physics-properties) for details.
+*Friction* and *restitution* are the two physical properties that affect a shape's physical behavior the most. See [this section](../../../materials/surfaces.md#physics-properties) for details.
 
 ## OnContact Reactions
 
@@ -41,13 +41,13 @@ TODO
 
 All shape components share these properties:
 
-* `Surface`: The [surface](../../materials/surfaces.md) configures the **friction** and **restitution** of the physics material. It also specifies what effects ([prefabs](../../prefabs/prefabs-overview.md)) to spawn when objects collide or interact in other ways.
-* `CollisionLayer`: The [collision layers](collision-layers.md) configures which shapes collide with each other, and which shapes pass through each other. Note that each shape has its own collision layer, even in a complex compound object.
+* `Surface`: The [surface](../../../materials/surfaces.md) configures the **friction** and **restitution** of the physics material. It also specifies what effects ([prefabs](../../../prefabs/prefabs-overview.md)) to spawn when objects collide or interact in other ways.
+* `CollisionLayer`: The [collision layers](physx-collision-layers.md) configures which shapes collide with each other, and which shapes pass through each other. Note that each shape has its own collision layer, even in a complex compound object.
 * `OnContact`: This option specifies what should happen when this shape collides with another shape, in addition to the regular physical reaction. See the 'OnContact Reactions' section above.  
 
 ## See Also
 
 
 * [PhysX Actors](../actors/physx-actors.md)
-* [Surfaces](../../materials/surfaces.md)
-* [Collision Layers](collision-layers.md)
+* [Surfaces](../../../materials/surfaces.md)
+* [Collision Layers](physx-collision-layers.md)

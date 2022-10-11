@@ -44,15 +44,15 @@ For tutorial videos, [have a look here](../getting-started/videos.md).
 
 ## Physics
 
-<video src="../docs/physics/joints/media/fixed-joint.webm" width="600" height="600" autoplay loop></video>
+<video src="../docs/physics/physx/joints/media/fixed-joint.webm" width="600" height="600" autoplay loop></video>
 
-<video src="../docs/physics/joints/media/revolute-joint.webm" width="600" height="600" autoplay loop></video>
+<video src="../docs/physics/physx/joints/media/revolute-joint.webm" width="600" height="600" autoplay loop></video>
 
-<video src="../docs/physics/special/media/cc.webm" width="600" height="600" autoplay loop></video>
+<video src="../docs/physics/physx/special/media/cc.webm" width="600" height="600" autoplay loop></video>
 
-<video src="../docs/physics/special/media/grab-items.webm" width="600" height="600" autoplay loop></video>
+<video src="../docs/physics/physx/special/media/grab-items.webm" width="600" height="600" autoplay loop></video>
 
-<video src="../docs/physics/special/media/rope-swing.webm" width="600" height="600" autoplay loop></video>
+<video src="../docs/physics/physx/special/media/rope-swing.webm" width="600" height="600" autoplay loop></video>
 
 ## Terrain
 

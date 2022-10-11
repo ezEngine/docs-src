@@ -6,11 +6,11 @@ The *PhysX rope component* is used to physically simulate ropes, cables and chai
 
 Ropes can be attached to walls as decorative elements (cables, wires), or they can even be attached to [dynamic physics objects](../actors/physx-dynamic-actor-component.md) to link them together. This can be used as a gameplay feature.
 
-If all you need is a decorative rope, that doesn't react to physical stimuli (except [wind](../../effects/wind.md)), prefer to use a [fake rope component](../../effects/fake-rope-component.md), as that has a much lower performance overhead.
+If all you need is a decorative rope, that doesn't react to physical stimuli (except [wind](../../../effects/wind.md)), prefer to use a [fake rope component](../../../effects/fake-rope-component.md), as that has a much lower performance overhead.
 
 ## Setting Up a Rope
 
-A rope requires two anchor points between which it hangs. One anchor point is the rope object position itself, for the other one typically uses a dummy game object. The `Anchor` [object reference](../../scenes/object-references.md) is used to select which one to use.
+A rope requires two anchor points between which it hangs. One anchor point is the rope object position itself, for the other one typically uses a dummy game object. The `Anchor` [object reference](../../../scenes/object-references.md) is used to select which one to use.
 
 In the object hierarchy it typically looks like this:
 
@@ -20,15 +20,15 @@ The position of the anchors can be moved in the 3D viewport to position the rope
 
 ![Basic Rope Config](media/rope-config.jpg)
 
-[Run the scene](../../editor/run-scene.md) to see the final shape and behavior.
+[Run the scene](../../../editor/run-scene.md) to see the final shape and behavior.
 
 ### Rendering
 
-With just the rope simulation component, you won't be able to see the rope, at all. You also need to attach a [rope render component](../../effects/rope-render-component.md) to the same game object.
+With just the rope simulation component, you won't be able to see the rope, at all. You also need to attach a [rope render component](../../../effects/rope-render-component.md) to the same game object.
 
 ### Examples
 
-The [Testing Chambers](../../../samples/testing-chambers.md) project contains a dedicated **Ropes scene** with many examples.
+The [Testing Chambers](../../../../samples/testing-chambers.md) project contains a dedicated **Ropes scene** with many examples.
 
 ## Simulation Stability
 
@@ -38,7 +38,7 @@ The rope simulation uses a dedicated PhysX feature ("articulations"), which exhi
 
 ## Component Properties
 
-* `Anchor`: A [reference](../../scenes/object-references.md) to an object whose position determines where the rope ends.
+* `Anchor`: A [reference](../../../scenes/object-references.md) to an object whose position determines where the rope ends.
 
 * `AttachToOrigin`, `AttachToAnchor`: Whether the rope is fixed at the origin or anchor location. If the respective object is attached to a [dynamic actor](../actors/physx-dynamic-actor-component.md), the rope will pull that actor. Otherwise, the rope will be fixed at that static location. If the rope is not attached at one or both ends it is free to move away from there.
 
@@ -56,15 +56,15 @@ The rope simulation uses a dedicated PhysX feature ("articulations"), which exhi
 
 * `MaxBend`, `MaxTwist`: These angles restrict how much each individual pieces in the rope can bend or twist relative to its neighboring piece. Low angles mean the rope is very stiff. A very flexible rope would use values above 45 degrees. Note that this only restricts how much the rope will bend or twist. If it should additionally try to uncoil itself, also set the stiffness values.
 
-* `CollisionLayer`: The [collision layer](../collision-shapes/collision-layers.md) defines with which other objects the rope collides.
+* `CollisionLayer`: The [collision layer](../collision-shapes/physx-collision-layers.md) defines with which other objects the rope collides.
 
-* `Surface`: The [surface](../../materials/surfaces.md) defines how slippery or bouncy the rope is.
+* `Surface`: The [surface](../../../materials/surfaces.md) defines how slippery or bouncy the rope is.
 
 * `DisableGravity`: If set, the rope will have no gravity applied and just floats in the air.
 
 ## See Also
 
-* [Fake Rope Component](../../effects/fake-rope-component.md)
-* [Rope Render Component](../../effects/rope-render-component.md)
+* [Fake Rope Component](../../../effects/fake-rope-component.md)
+* [Rope Render Component](../../../effects/rope-render-component.md)
 * [Physics Joints](../joints/physx-joints.md)
 * [PhysX Actors](../actors/physx-actors.md)

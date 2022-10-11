@@ -10,7 +10,7 @@ The image above shows a surface for glass. Each surface stores a small number of
 
 ## Physics Properties
 
-Surfaces are used by [collision meshes](../physics/collision-shapes/collision-meshes.md) and other physics components to look up basic physics properties.
+Surfaces are used by [collision meshes](../physics/physx/collision-shapes/physx-collision-meshes.md) and other physics components to look up basic physics properties.
 
 **Restitution:** Configures how "bouncy" a material is. Objects with a high restitution will bounce very strongly (like rubber) and objects with a low restitution will come to rest quickly (like soft wood).
 
@@ -24,7 +24,7 @@ Every surface interaction is configured by adding an entry to the *Interactions*
 
 ### Triggering Interactions
 
-Interactions are triggered by different systems. The [physics engine](../physics/physx-overview.md) triggers interactions when objects collide with enough force. Components, such as the [projectile component](../gameplay/projectile-component.md) trigger interactions when they hit something. The [character controller](../physics/special/physx-character-controller.md) component triggers an interaction with the ground every time the player moved a certain distance (for footsteps). There are many ways that both built in code, as well as custom code can leverage surface interactions to spawn effects. Having the configuration defined by the surfaces, and not by the components themselves, decouples and centralizes this information and makes maintaining and changing this configuration a lot easier.
+Interactions are triggered by different systems. The [physics engine](../physics/physx/physx-overview.md) triggers interactions when objects collide with enough force. Components, such as the [projectile component](../gameplay/projectile-component.md) trigger interactions when they hit something. The [character controller](../physics/physx/special/physx-character-controller.md) component triggers an interaction with the ground every time the player moved a certain distance (for footsteps). There are many ways that both built in code, as well as custom code can leverage surface interactions to spawn effects. Having the configuration defined by the surfaces, and not by the components themselves, decouples and centralizes this information and makes maintaining and changing this configuration a lot easier.
 
 > **Example:**
 >
@@ -59,7 +59,7 @@ This way you can set up many generic interactions on a common base surface and o
 
 ### Physics Interactions
 
-Dynamic [physics objects](../physics/physx-overview.md) can have three types of interactions with surfaces:
+Dynamic [physics objects](../physics/physx/physx-overview.md) can have three types of interactions with surfaces:
 
 1. They can *bump* into each other
 1. They can *slide* across a surface
@@ -101,5 +101,5 @@ See issue [#231](https://github.com/ezEngine/ezEngine/issues/231).
 
 
 * [Materials](materials-overview.md)
-* [PhysX Integration](../physics/physx-overview.md)
+* [PhysX Integration](../physics/physx/physx-overview.md)
 * [Sound](../sound/sound-overview.md)

@@ -8,9 +8,9 @@ The *PhysX dynamic actor component* is used to add physical behavior to an objec
 
 Dynamic actors can be in one of two modes: *fully simulated* or *kinematic*. For a kinematic body, the game code dictates its position and rotation, and the physics engine uses this information to push simulated objects out of their way. Kinematic actors are typically used for elevators, doors and other large pieces that are supposed to push other objects away and strictly follow an animation without any physical simulation of their movement.
 
-Non-kinematic, or fully simulated objects on the other hand, are fully controlled by the physics engine. Their position and rotation is determined by forces, such as gravity, acting on them, as well as what other static and dynamic objects they collide with. Setting the position of such an actor has no effect, the physics engine will override the value with its own result. To affect a simulated object, you can apply external **forces** and **impulses**. For example the [area damage component](../../gameplay/area-damage-component.md) applies an outward impulse to all rigid bodies in its vicinity to push them away.
+Non-kinematic, or fully simulated objects on the other hand, are fully controlled by the physics engine. Their position and rotation is determined by forces, such as gravity, acting on them, as well as what other static and dynamic objects they collide with. Setting the position of such an actor has no effect, the physics engine will override the value with its own result. To affect a simulated object, you can apply external **forces** and **impulses**. For example the [area damage component](../../../gameplay/area-damage-component.md) applies an outward impulse to all rigid bodies in its vicinity to push them away.
 
-Whether a dynamic actor is kinematic or not is simply a flag and it is possible to toggle that state back and forth at runtime. This for example allows to animate an object along a predetermined path by making it kinematic at first, and then switch it to simulated at the end of its animation, to make it fall and collide realistically from there on. In the video below a [property animation (TODO)](../../animation/property-animation/property-animation-overview.md) was used to do exactly that:
+Whether a dynamic actor is kinematic or not is simply a flag and it is possible to toggle that state back and forth at runtime. This for example allows to animate an object along a predetermined path by making it kinematic at first, and then switch it to simulated at the end of its animation, to make it fall and collide realistically from there on. In the video below a [property animation (TODO)](../../../animation/property-animation/property-animation-overview.md) was used to do exactly that:
 
 <video src="media/kinematic-switch.webm" width="600" height="600" autoplay loop></video>
 
@@ -20,7 +20,7 @@ Dynamic actors have a weight. The weight determines how much force it takes to p
 
 The other way is to set its `Density` property instead. In this case the volume of all the attached [shapes](../collision-shapes/physx-shapes.md) is computed and scaled by the density. That means the object's final mass will depend on its scale, so a small stone would get a weight of 0.5 (kilogram) whereas a huge boulder would get a weight of 1000 kg.
 
-Using densities is more convenient to get started. The default density often already produces believable results. If you create a [prefab](../../prefabs/prefabs-overview.md) that is supposed to be instantiated at various sizes, it is best to use density.
+Using densities is more convenient to get started. The default density often already produces believable results. If you create a [prefab](../../../prefabs/prefabs-overview.md) that is supposed to be instantiated at various sizes, it is best to use density.
 
 > **Important:**
 >
@@ -47,7 +47,7 @@ Consequently, you have to be careful how you set up your rigid-bodies, to improv
 * **Reduce the maximum contact impulse:** When two objects collide, they apply *impulses* to each other. Small or thin objects can act erratic, with large impulses. If this is a problem for an object, you can reduce the `MaxContactImpulse` that shall be applied to it, to prevent it being flung away at high speeds. Be careful though, tweaking this parameter can have unintended side effects as well.
 * **Use Continuous Collision Detection (CCD) for important small objects:** Continuous collision detection is mainly used to prevent objects from *tunneling* through other objects. For example a physically simulated grenade may be thrown at a high speed, which means it is prone to get through walls. This is less likely to happen for larger objects. CCD costs extra performance for every object on which it is used, but significantly reduces the likelihood for tunneling to happen.
 * **Increase angular damping:** Some objects tend to spin too fast after collisions. By increasing angular damping, you can make them come to rest more quickly.
-* **Reduce the complexity of the shape:** Especially [convex meshes](../collision-shapes/collision-meshes.md) are prone to *jittering* when the mesh has long thin triangles. Build convex meshes by hand to control their complexity, if an automatically created convex mesh results in unstable behavior.
+* **Reduce the complexity of the shape:** Especially [convex meshes](../collision-shapes/physx-collision-meshes.md) are prone to *jittering* when the mesh has long thin triangles. Build convex meshes by hand to control their complexity, if an automatically created convex mesh results in unstable behavior.
 
 ## Component Properties
 

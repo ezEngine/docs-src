@@ -44,5 +44,5 @@ Similarly, if you want to make an object invisible in one view, you probably als
 
 
 * [Project Settings](project-settings.md)
-* [PhysX Integration](../physics/physx-overview.md)
+* [PhysX Integration](../physics/physx/physx-overview.md)
 * [Lighting](../graphics/lighting/lighting-overview.md)

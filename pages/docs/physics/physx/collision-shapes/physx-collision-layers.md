@@ -28,4 +28,4 @@ When doing a raycast or other shape query, you also need to provide a collision 
 
 
 * [PhysX Integration](../physx-overview.md)
-* [Collision Meshes](collision-meshes.md)
+* [Collision Meshes](physx-collision-meshes.md)

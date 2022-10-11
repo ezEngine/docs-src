@@ -228,7 +228,7 @@ Link: [https://github.com/kmammou/v-hacd](https://github.com/kmammou/v-hacd)
 
 Compile switch: **EZ_3RDPARTY_VHACD_SUPPORT**
 
-The "Volumetric Hierarchical Approximate Convex Decomposition" library is used to decompose a concave triangle mesh into multiple convex pieces. This allows you to generate complex [collision meshes](../physics/collision-shapes/collision-meshes.md) which can be used as the shapes of [dynamic PhysX actors](../physics/actors/physx-dynamic-actor-component.md).
+The "Volumetric Hierarchical Approximate Convex Decomposition" library is used to decompose a concave triangle mesh into multiple convex pieces. This allows you to generate complex [collision meshes](../physics/physx/collision-shapes/physx-collision-meshes.md) which can be used as the shapes of [dynamic PhysX actors](../physics/physx/actors/physx-dynamic-actor-component.md).
 
 ## xxHash
 

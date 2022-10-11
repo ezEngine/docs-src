@@ -14,7 +14,7 @@ Shadows are implemented using *shadow maps*. That means every light source that 
 
 This also is more expensive, the more complex the shadow casting geometry is. Therefore consider switching shadows off for complex geometry and for small objects that don't contribute much anyway. For large complex geometry, you can also use low resolution proxy geometry for casting shadows, though you have to be careful with self-shadowing artifacts if the geometry is very different.
 
-Use your knowledge about the scene to switch shadow casting lights off when they are not needed. For example, if you need a light inside a room to cast dramatic shadows, but the room entrance is only visible from a corridor, use a [trigger](../../physics/actors/physx-trigger-component.md) to only switch the light on when the player can actually see the light.
+Use your knowledge about the scene to switch shadow casting lights off when they are not needed. For example, if you need a light inside a room to cast dramatic shadows, but the room entrance is only visible from a corridor, use a [trigger](../../physics/physx/actors/physx-trigger-component.md) to only switch the light on when the player can actually see the light.
 
 Prefer to use spot lights over point lights, if that makes it possible to get away without shadows in the first place.
 

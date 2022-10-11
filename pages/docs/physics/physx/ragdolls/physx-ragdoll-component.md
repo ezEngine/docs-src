@@ -6,5 +6,5 @@ Ragdolls are a work-in-progress feature. They are partially working, but unfinis
 
 ## See Also
 
-* [Skeletal Animations](../../animation/skeletal-animation/skeletal-animation-overview.md)
+* [Skeletal Animations](../../../animation/skeletal-animation/skeletal-animation-overview.md)
 * [PhysX Bone Collider Component (TODO)](physx-bone-collider-component.md)

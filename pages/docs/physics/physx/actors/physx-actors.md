@@ -2,17 +2,17 @@
 
 In PhysX objects that are part of the physical simulation are called **actors**. Every actor has its own simulation state, such as position, velocity, torque, contact points with other actors, and so on. Everything that should participate in the simulation, be it static background geometry, or fully simulated bodies, has to be an actor.
 
-In some special cases, for instance for [greyboxing geometry](../../scenes/greyboxing.md), the engine takes care to create collision meshes and actors automatically for you. However, for the most part, you have to take care to set up physics actors as needed. 
+In some special cases, for instance for [greyboxing geometry](../../../scenes/greyboxing.md), the engine takes care to create collision meshes and actors automatically for you. However, for the most part, you have to take care to set up physics actors as needed. 
 
 PhysX distinguishes between two types of actors: *static* actors and *dynamic* actors. Additionally, dynamic actors can be *kinematic* and actors may be used as triggers.
 
-Actors don't have a physical shape. Instead they have to be made up of pieces which hold [shape components](../collision-shapes/physx-shapes.md). Upon creation, every actor traverses the node hierarchy below its owner [game object](../../runtime/world/game-objects.md) to search for shape components. All shapes that are found are added to the actor as a *compound shape*. If another actor is found in the process, shapes below that node are ignored, though. This way a single actor can have a complex shape, even if every single piece is only a sphere, box, capsule or other simple shape.
+Actors don't have a physical shape. Instead they have to be made up of pieces which hold [shape components](../collision-shapes/physx-shapes.md). Upon creation, every actor traverses the node hierarchy below its owner [game object](../../../runtime/world/game-objects.md) to search for shape components. All shapes that are found are added to the actor as a *compound shape*. If another actor is found in the process, shapes below that node are ignored, though. This way a single actor can have a complex shape, even if every single piece is only a sphere, box, capsule or other simple shape.
 
 ## Static Actors
 
 Static actors represent physical objects that never move. This should be the case for the vast majority of the scene geometry. Static actors are much more efficient to deal with. Also, they are the only actors that can use **concave collision geometry**, meaning arbitrary triangle meshes. Obviously, those meshes cannot be animated.
 
-Static actors are set up by attaching a [static actor component](physx-static-actor-component.md) to a [game object](../../runtime/world/game-objects.md).
+Static actors are set up by attaching a [static actor component](physx-static-actor-component.md) to a [game object](../../../runtime/world/game-objects.md).
 
 ## Dynamic Actors
 
@@ -26,15 +26,15 @@ Regular actors are used to represent all the physical objects in a world that sh
 
 Whether a dynamic actor is treated as a kinematic actor or not, is a simple boolean property. It is fully supported to switch this property back and forth at will.
 
-Dynamic actors are set up by attaching a [dynamic actor component](physx-dynamic-actor-component.md) to a [game object](../../runtime/world/game-objects.md).
+Dynamic actors are set up by attaching a [dynamic actor component](physx-dynamic-actor-component.md) to a [game object](../../../runtime/world/game-objects.md).
 
 ## Triggers
 
-Triggers are a special type of actor. Triggers don't interfere with the simulation, meaning nothing ever collides with them. Instead, triggers monitor whether any other actor overlaps with their volume. If so, they raise an [event message](../../runtime/world/world-messaging.md#event-messages) to inform other code.
+Triggers are a special type of actor. Triggers don't interfere with the simulation, meaning nothing ever collides with them. Instead, triggers monitor whether any other actor overlaps with their volume. If so, they raise an [event message](../../../runtime/world/world-messaging.md#event-messages) to inform other code.
 
 Triggers are an efficient solution to detect overlaps, when it is imperative that no overlap is ever missed. If on the other hand you only want to check for overlapping objects at some (relatively rare) times or only every couple of seconds, it can be more efficient to just do an *overlap check* through the physics API.
 
-Triggers are set up by attaching a [trigger component](physx-trigger-component.md) to a [game object](../../runtime/world/game-objects.md).
+Triggers are set up by attaching a [trigger component](physx-trigger-component.md) to a [game object](../../../runtime/world/game-objects.md).
 
 ## Other Actors
 

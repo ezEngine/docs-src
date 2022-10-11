@@ -46,7 +46,7 @@ Through `ezInputManager` all input state (both for slots and actions) is accessi
 
 ### Direct Input Access
 
-In some games the player doesn't have a physical presence, but is rather an outside observer. Examples would be an RTS or Tetris. Here you don't have a [character controller](../physics/special/physx-character-controller.md) inside the world. Implementing the control scheme for such game logic through game objects and components can be tedious. Instead, it is much easier to write a custom [game state](../runtime/application/game-state.md) and handle all the interaction, the camera movement and the general game logic there.
+In some games the player doesn't have a physical presence, but is rather an outside observer. Examples would be an RTS or Tetris. Here you don't have a [character controller](../physics/physx/special/physx-character-controller.md) inside the world. Implementing the control scheme for such game logic through game objects and components can be tedious. Instead, it is much easier to write a custom [game state](../runtime/application/game-state.md) and handle all the interaction, the camera movement and the general game logic there.
 
 In such a scenario, the game state would call `ezInputManager::GetInputActionState()` directly to retrieve the state of an action. This is also what the `ezFallbackGameState` uses to provide the most basic functionality (such as quitting when `ESC` is pressed).
 
@@ -64,7 +64,7 @@ If you write a [custom component](../custom-code/cpp/custom-cpp-component.md) fo
 
 Another option, though, is to use an [input component](input-component.md). All that this component does, is to check for state changes of input actions from a selected *input set* and send those state changes as [messages](../runtime/world/world-messaging.md) to its sub-tree of game objects and components. Any component that handles this message type, can react to the input.
 
-This message based approach is how [TypeScript components](../custom-code/typescript/typescript-overview.md) are able to handle input. Since the input messages are delivered to all child objects, you can have multiple scripts or other components which each react to different input. For example one script can forward movement related input to a [character controller](../physics/special/physx-character-controller.md) and another script can handle input for weapons.
+This message based approach is how [TypeScript components](../custom-code/typescript/typescript-overview.md) are able to handle input. Since the input messages are delivered to all child objects, you can have multiple scripts or other components which each react to different input. For example one script can forward movement related input to a [character controller](../physics/physx/special/physx-character-controller.md) and another script can handle input for weapons.
 
 ## Setting Up Input Sets
 

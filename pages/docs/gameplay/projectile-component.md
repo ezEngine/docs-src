@@ -14,7 +14,7 @@ There are many ways projectiles may work in different games. The projectile comp
 
 `OnTimeoutSpawn`: If the projectile destroys itself because it didn't hit anything before `MaxLifetime` ended, it will spawn this prefab. Can be used to let rockets 'explode' after a while.
 
-`CollisionLayer`: The physics [collision layer](../physics/collision-shapes/collision-layers.md) to use for raycasting whether the projectile hit something.
+`CollisionLayer`: The physics [collision layer](../physics/physx/collision-shapes/physx-collision-layers.md) to use for raycasting whether the projectile hit something.
 
 `FallbackSurface`: If the projectile hits something that has no [surface](../materials/surfaces.md) assigned, it will assume that this type of surface was hit. This just guarantees that you always get any kind of hit response, even when the hit geometry is just dummy or placeholder geometry.
 
@@ -46,5 +46,5 @@ With these settings you can build a wide variety of interesting projectiles, esp
 
 
 * [Surfaces](../materials/surfaces.md)
-* [Collision Layers](../physics/collision-shapes/collision-layers.md)
+* [Collision Layers](../physics/physx/collision-shapes/physx-collision-layers.md)
 * [Particle Effects](../effects/particle-effects/particle-effects-overview.md)

@@ -1,10 +1,10 @@
 # Collision Meshes
 
-Collision meshes are special [meshes](../../graphics/meshes/meshes-overview.md) that are used by the physics engine to compute physical interactions. Their internal representation is optimized to speed up this task. Additionally, physics engines generally distinguish between two types of meshes: *convex* meshes and *concave* meshes. While concave meshes can represent any arbitrary geometric shape, they can only be used for static [physics actors](../actors/physx-actors.md), which limits them to be used for the static level geometry. Convex meshes are often an oversimplification of the original mesh. However, they can be used for all physical interactions.
+Collision meshes are special [meshes](../../../graphics/meshes/meshes-overview.md) that are used by the physics engine to compute physical interactions. Their internal representation is optimized to speed up this task. Additionally, physics engines generally distinguish between two types of meshes: *convex* meshes and *concave* meshes. While concave meshes can represent any arbitrary geometric shape, they can only be used for static [physics actors](../actors/physx-actors.md), which limits them to be used for the static level geometry. Convex meshes are often an oversimplification of the original mesh. However, they can be used for all physical interactions.
 
 ## Concave Collision Meshes
 
-To create a concave collision mesh, use the asset type *Collision Mesh* (`ezCollisionMeshAsset`) when [importing an asset](../../assets/import-assets.md).
+To create a concave collision mesh, use the asset type *Collision Mesh* when [importing an asset](../../../assets/import-assets.md).
 
 ![Concave Collision Mesh](../media/colmesh-concave.jpg)
 
@@ -14,7 +14,7 @@ Concave collision meshes are set directly on the [static physics actor](../actor
 
 ## Convex Collision Meshes
 
-The simulation of [dynamic actors](../actors/physx-dynamic-actor-component.md) is only possible with convex shapes. To create a convex collision mesh, use the asset type *Collision Mesh (Convex)* (`ezConvexCollisionMeshAsset`) when [importing an asset](../../assets/import-assets.md). To attach a convex mesh to an actor, use the [Convex Mesh Shape component](physx-convex-shape-component.md).
+The simulation of [dynamic actors](../actors/physx-dynamic-actor-component.md) is only possible with convex shapes. To create a convex collision mesh, use the asset type *Collision Mesh (Convex)* (`ezConvexCollisionMeshAsset`) when [importing an asset](../../../assets/import-assets.md). To attach a convex mesh to an actor, use the [Convex Mesh Shape component](physx-convex-shape-component.md).
 
 There are multiple modes how to create the convex collision mesh:
 
@@ -44,9 +44,8 @@ Sometimes you want to visualize the collision mesh of an object within a scene. 
 
 ## See Also
 
-
 * [PhysX Integration](../physx-overview.md)
 * [Physics Shapes](physx-shapes.md)
 * [Physics Actors](../actors/physx-actors.md)
-* [Collision Layers](collision-layers.md)
+* [Collision Layers](physx-collision-layers.md)
 * [PhysX Visual Debugger](../physx-visual-debugger.md)

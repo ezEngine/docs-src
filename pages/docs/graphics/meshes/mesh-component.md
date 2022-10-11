@@ -1,6 +1,6 @@
 # Mesh Component
 
-A *mesh component* is used to instantiate a [mesh asset](mesh-asset.md). Mesh components are purely visual, they have no physical interaction, so other physical objects cannot collide with them. To add physical interaction capabilities, an object has to have an additional [collision shape](../../physics/collision-shapes/physx-shapes.md) and a static or dynamic [physics actor](../../physics/actors/physx-actors.md).
+A *mesh component* is used to instantiate a [mesh asset](mesh-asset.md). Mesh components are purely visual, they have no physical interaction, so other physical objects cannot collide with them. To add physical interaction capabilities, an object has to have an additional [collision shape](../../physics/physx/collision-shapes/physx-shapes.md) and a static or dynamic [physics actor](../../physics/physx/actors/physx-actors.md).
 
 ![Mesh](media/mesh.jpg)
 

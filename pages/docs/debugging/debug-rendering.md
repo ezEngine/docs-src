@@ -64,5 +64,5 @@ The debug renderer is meant for quickly visualizing data. If the data potentiall
 
 * [Debugging C++ Code](debug-cpp.md)
 * [Shader Debugging](../graphics/shaders/shader-debugging.md)
-* [PhysX Visual Debugger](../physics/physx-visual-debugger.md)
+* [PhysX Visual Debugger](../physics/physx/physx-visual-debugger.md)
 * [Custom Code with TypeScript](../custom-code/typescript/typescript-overview.md)

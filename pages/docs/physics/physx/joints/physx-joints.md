@@ -9,7 +9,7 @@ Joints can be used for simple things like door hinges, up to complex configurati
 Joints can be used to link:
 
 * Two [dynamic actors](../actors/physx-dynamic-actor-component.md). This will create a more complex dynamic object that can still freely move throughout the scene, but has multiple parts that can wiggle around.
-* One [static actor](../actors/physx-static-actor-component.md) with one [dynamic actor](../actors/physx-dynamic-actor-component.md). In this case the dynamic actor is now constrained in its movement relative to the static actor. Since the static actor never moves, the dynamic actor's freedom is severly limited.
+* One [static actor](../actors/physx-static-actor-component.md) with one [dynamic actor](../actors/physx-dynamic-actor-component.md). In this case the dynamic actor is now constrained in its movement relative to the static actor. Since the static actor never moves, the dynamic actor's freedom is severely limited.
 * One [dynamic actor](../actors/physx-dynamic-actor-component.md) with no second actor. This just affixes the dynamic actor with 'the world'. This is effectively the same as joining it with another static actor.
 * One [dynamic actor](../actors/physx-dynamic-actor-component.md) with one [kinematic actor](../actors/physx-dynamic-actor-component.md#kinematic-vs-simulated). If the kinematic actor moves, the dynamic actor is forced to follow according to the constraint between them. The dynamic actor does not affect the kinematic actor in any way. This setup is common to have full control over the movement of one part (the kinematic actor) and still get physically plausible behavior from another part.
 
@@ -17,11 +17,11 @@ There are two ways that a joint component can link actors.
 
 ### Using Object References
 
-You can use the [object references](../../scenes/object-references.md) on the joint component to specify both the *parent actor* and the *child actor*:
+You can use the [object references](../../../scenes/object-references.md) on the joint component to specify both the *parent actor* and the *child actor*:
 
 ![Linking Actors](media/link-joints.png)
 
-With this method, the [game objects](../../runtime/world/game-objects.md) for the actors and the joint don't need to have a specific hierarchy, they can be placed just next to each other. This also allows to create *loops* of linked actors. On the other hand, you always need to know exactly which actors shall be linked.
+With this method, the [game objects](../../../runtime/world/game-objects.md) for the actors and the joint don't need to have a specific hierarchy, they can be placed just next to each other. This also allows to create *loops* of linked actors. On the other hand, you always need to know exactly which actors shall be linked.
 
 > **Note:**
 >
@@ -33,7 +33,7 @@ To determine which `Parent Actor` to link the joint to, you can utilize the obje
 
 If it does not find any such actor on a parent node, the joint will attach to 'the world', meaning it will be fixed to its current world position.
 
-This method can be useful especially when you want to put the joint into a [prefab](../../prefabs/prefabs-overview.md). For example, if you have a prefab for a chandelier that can swing around, you can set up the joint to only reference the actor that represents the chandelier, but the prefab does not contain an actor for the anchor point. If this prefab is placed into a scene, the rule that a joint *without* a parent actor just gets linked to the world, means that you can easily place these prefabs in a scene, and they will swing around the location where they have been instantiated.
+This method can be useful especially when you want to put the joint into a [prefab](../../../prefabs/prefabs-overview.md). For example, if you have a prefab for a chandelier that can swing around, you can set up the joint to only reference the actor that represents the chandelier, but the prefab does not contain an actor for the anchor point. If this prefab is placed into a scene, the rule that a joint *without* a parent actor just gets linked to the world, means that you can easily place these prefabs in a scene, and they will swing around the location where they have been instantiated.
 
 However, if your scene contains for example a moveable room, you can also place it there and make sure to attach the chandelier prefab as a child node of the moveable room actor. That means, the joint of the chandelier will now link the chandelier actor with the moveable room actor, and thus whenever the room moves, the chandelier will be physically dragged along as well.
 
@@ -97,9 +97,7 @@ Joining multiple actors in a chain can quickly result in really bad simulation r
 
 Also have a look at NVIDIA's recommendations: [Configuring Joints for Best Behavior (nvidia.com)](https://gameworksdocs.nvidia.com/PhysX/4.0/documentation/PhysXGuide/Manual/Joints.html#configuring-joints-for-best-behavior)
 
-
 ## See Also
-
 
 * [PhysX Actors](../actors/physx-actors.md)
 * [Joints (nvidia.com)](https://gameworksdocs.nvidia.com/PhysX/4.0/documentation/PhysXGuide/Manual/Joints.html)

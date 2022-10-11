@@ -38,7 +38,7 @@ What exact output the procedural rules generate depends on which *output nodes* 
 
 The ProcGen graph asset doesn't have any kind of pre-visualization. To see what effect a rule has, you need a scene in which the necessary setup is available.
 
-The scene should contain some geometry with [collision meshes](../../physics/collision-shapes/collision-meshes.md), such that raycasts can hit the geometry. [Greyboxing](../../scenes/greyboxing.md) and [heightfield components](../heightfield-component.md) work just fine for that.
+The scene should contain some geometry with [collision meshes](../../physics/physx/collision-shapes/physx-collision-meshes.md), such that raycasts can hit the geometry. [Greyboxing](../../scenes/greyboxing.md) and [heightfield components](../heightfield-component.md) work just fine for that.
 
 You also need a component that applies the ProcGen graph. Depending on the *output nodes* used in the graph this would be one of these:
 

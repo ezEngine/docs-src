@@ -98,11 +98,11 @@ In other language bindings you may instead need to pass in a list of all the des
 
 ## Spatial System vs. Physics Engines
 
-Both the spatial system, as well as [physics engines](../../physics/physx-overview.md) allow you to do spatial queries. There are cases where a problem can be solved using either system, but generally they are meant to complement each other.
+Both the spatial system, as well as [physics engines](../../physics/physx/physx-overview.md) allow you to do spatial queries. There are cases where a problem can be solved using either system, but generally they are meant to complement each other.
 
 If you want to query for things that already need to have a physical representation, and therefore will be handled by the physics engine anyway, it is best to leverage the physics engine to query for such objects. For example a shockwave effect that is supposed to push objects away, only makes sense to be applied to physically simulated objects. Therefore, querying which objects are close-by, to figure out what objects to apply the effect to, should be done through the physics engine, and there is no reason to even have information about these objects in the spatial system.
 
-On the other hand, things like the `RtsSelectableComponent` (see above) could be achieved by setting up fake [physics actors](../../physics/actors/physx-actors.md) so that they can be found with physics queries. The performance cost for doing so would be unnecessary high though, as the physics engine would perform additional maintenance that is ultimately not needed, and it may waste precious resources such as [collision layers](../../physics/collision-shapes/collision-layers.md). Here, using the spatial system makes much more sense.
+On the other hand, things like the `RtsSelectableComponent` (see above) could be achieved by setting up fake [physics actors](../../physics/physx/actors/physx-actors.md) so that they can be found with physics queries. The performance cost for doing so would be unnecessary high though, as the physics engine would perform additional maintenance that is ultimately not needed, and it may waste precious resources such as [collision layers](../../physics/physx/collision-shapes/physx-collision-layers.md). Here, using the spatial system makes much more sense.
 
 > **Note:**
 >

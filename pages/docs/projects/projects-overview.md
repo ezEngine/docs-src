@@ -28,7 +28,7 @@ Select *Editor > Create Document...* and create a [document](../editor/editor-do
 
 ![New Scene](media/new-project-scene.jpg)
 
-If you don't see the [asset browser](../assets/asset-browser.md), make sure to open it. You can now [edit your scene](../scenes/scene-editing.md). When you need more assets to play with, you need to [import them](../assets/import-assets.md) into your project. Once you have something in your scene that could *do something*, you can [test your scene](../editor/run-scene.md). A good starting point for that is to simply attach a `Rotor` component to a mesh. A fun next step is to let objects fall down using [PhysX](../physics/physx-overview.md) (hint: you need a `Dynamic Actor` component and a `Box Shape` component)
+If you don't see the [asset browser](../assets/asset-browser.md), make sure to open it. You can now [edit your scene](../scenes/scene-editing.md). When you need more assets to play with, you need to [import them](../assets/import-assets.md) into your project. Once you have something in your scene that could *do something*, you can [test your scene](../editor/run-scene.md). A good starting point for that is to simply attach a `Rotor` component to a mesh. A fun next step is to let objects fall down using [PhysX](../physics/physx/physx-overview.md) (hint: you need a `Dynamic Actor` component and a `Box Shape` component)
 
 ## Project-wide options
 
@@ -36,7 +36,7 @@ Plugins may add project wide options. Not all options may be exposed through edi
 
 * [Data directories](data-directories.md)
 * [Engine plugins](../custom-code/cpp/engine-plugins.md)
-* [Collision layers](../physics/collision-shapes/collision-layers.md)
+* [Collision layers](../physics/physx/collision-shapes/physx-collision-layers.md)
 * [Input Configuration](project-settings.md#input-configuration)
 * [Tags](tags.md)
 * [Window Configuration](project-settings.md#window-configuration)

@@ -115,7 +115,7 @@ This prefab has two physics shapes. One for the body, one for the cap. If the bo
 
 ![Gas Cylinder](media/gas-cylinder.jpg)
 
-To implement this, we attach a script component to the very top of the hierarchy. The script contains a message handler for `ezMsgDamage`. When a [projectile](../../gameplay/projectile-component.md) hits the cylinder, it calls `ezGameObject::SendEventMessage()` on the node whose [physics shape](../../physics/collision-shapes/physx-shapes.md) it hit. The event message contains the information through which game object and which component it was sent.
+To implement this, we attach a script component to the very top of the hierarchy. The script contains a message handler for `ezMsgDamage`. When a [projectile](../../gameplay/projectile-component.md) hits the cylinder, it calls `ezGameObject::SendEventMessage()` on the node whose [physics shape](../../physics/physx/collision-shapes/physx-shapes.md) it hit. The event message contains the information through which game object and which component it was sent.
 
 The message is then delivered to the closest parent node that handles event messages, which in this case is the `GasCylinder` node, because it has the script attached. The script can then differentiate what child node was hit and implement the desired game logic:
 

@@ -25,6 +25,6 @@ You can't reload any C++ code at runtime. You can, however, reload the entire en
 ## See Also
 
 * [Debug Rendering](debug-rendering.md)
-* [PhysX Visual Debugger](../physics/physx-visual-debugger.md)
+* [PhysX Visual Debugger](../physics/physx/physx-visual-debugger.md)
 * [Shader Debugging](../graphics/shaders/shader-debugging.md)
 * [Hot Reloading C++ Game Plugins in the Editor](../custom-code/cpp/cpp-code-reload.md)

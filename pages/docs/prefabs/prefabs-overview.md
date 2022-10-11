@@ -16,7 +16,7 @@ The idea of prefabs is, that when you modify the *template*, all *instances* wil
 
 ### Instantiation Process
 
-A prefab is basically just a chunk of a level. It contains game objects (entities / nodes) with components. For example a *box prefab* would contain a single game object, a [mesh component](../graphics/meshes/mesh-component.md), a [physics actor component](../physics/actors/physx-actors.md) and a [physics box shape](../physics/collision-shapes/physx-shapes.md). Together these make up an object that looks like a box and behaves like a box.
+A prefab is basically just a chunk of a level. It contains game objects (entities / nodes) with components. For example a *box prefab* would contain a single game object, a [mesh component](../graphics/meshes/mesh-component.md), a [physics actor component](../physics/physx/actors/physx-actors.md) and a [physics box shape](../physics/physx/collision-shapes/physx-shapes.md). Together these make up an object that looks like a box and behaves like a box.
 
 Now if you want to have such a box in your scene, you need to add a copy of this structure in your level. To have multiple boxes in your scene you would need to copy the same structure multiple times into the scene, and you need to adjust their positions for each object to end up in the desired place.
 

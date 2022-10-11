@@ -29,13 +29,13 @@ Consequently, the character controller functionality is split up into multiple c
 
 The player object is often the most complicated object in a game. The character controller only provides the locomotion aspect, but this is often coupled tightly to the overall game logic. For example, the player may move slower or be disallowed to jump while [carrying an object](physx-grab-object-component.md). Many of these aspects can be handled by an overall player logic script. Other aspects, like the details of the characters velocity while sliding down a slope or jumping through the air, have to be implemented directly inside a character controller component.
 
-The [Testing Chambers sample](../../../samples/testing-chambers.md) contains a [prefab](../../prefabs/prefabs-overview.md) called **Player.ezPrefab**, which demonstrates how to build your own player object. The top level node contains both a *PhysX Character Capsule Shape* component (for the raw movement functionality), as well as a *PhysX Character Controller* component. You could replace the latter with a custom character controller component, to test out entirely different movement behavior.
+The [Testing Chambers sample](../../../../samples/testing-chambers.md) contains a [prefab](../../../prefabs/prefabs-overview.md) called **Player.ezPrefab**, which demonstrates how to build your own player object. The top level node contains both a *PhysX Character Capsule Shape* component (for the raw movement functionality), as well as a *PhysX Character Controller* component. You could replace the latter with a custom character controller component, to test out entirely different movement behavior.
 
-Note that the player object also uses an [input component](../../input/input-component.md) to funnel input into a [script](../../custom-code/typescript/typescript-overview.md), which implements high level game logic, like weapon selection.
+Note that the player object also uses an [input component](../../../input/input-component.md) to funnel input into a [script](../../../custom-code/typescript/typescript-overview.md), which implements high level game logic, like weapon selection.
 
 ## ezPxCharacterShapeComponent Component Properties
 
-* `CollisionLayer`: The [collision layer](../collision-shapes/collision-layers.md) to use for colliding with other geometry.
+* `CollisionLayer`: The [collision layer](../collision-shapes/physx-collision-layers.md) to use for colliding with other geometry.
 * `Mass`: The mass of the character affects how much force it applies to objects it is standing on.
 * `MaxStepHeight`: The maximum height of obstacles that the CC will step over automatically. Unless `ConstrainedClimbMode` is enabled, the CC may step over higher objects, though, because of the rounded bottom of the capsule controller.
 * `MaxSlopeAngle`: The maximum angle of slopes that the character controller may walk up.
@@ -58,10 +58,10 @@ The `ezPxCharacterControllerComponent` expects to find a `ezPxCharacterShapeComp
 * `CrouchHeight`: How tall the CC is during crouching. Note that the total height of the capsule character shape is `2 * radius + height`.
 * `JumpImpulse`: With how much force the CC will jump, and consequently how high it will jump.
 * `PushingForce`: With how much force the CC will push [dynamic actors](../actors/physx-dynamic-actor-component.md) when walking into them.
-* `WalkSurfaceInteraction`: The [surface interaction](../../materials/surfaces.md#surface-interactions) to trigger on the [surfaces](../../materials/surfaces.md) that the CC walks over. This is typically used to create footstep sounds.
+* `WalkSurfaceInteraction`: The [surface interaction](../../../materials/surfaces.md#surface-interactions) to trigger on the [surfaces](../../../materials/surfaces.md) that the CC walks over. This is typically used to create footstep sounds.
 * `WalkInteractionDistance`, `RunInteractionDistance`: The distance that the CC has to walk or run, until another surface interaction is triggered.
-* `FallbackWalkSurface`: The [surface](../../materials/surfaces.md) to use for triggering footstep interactions, if the ground has no surface of its own.
-* `HeadObject`: An [object reference](../../scenes/object-references.md) to a child object of the CC, which is considered the 'head'. If such a reference is set, the CC will move this object up and down when the CC crouches or stands up. The [main camera component](../../graphics/camera-component.md) should be attached to this head object, such that the player sees the difference. This property is only useful for first-person player characters.
+* `FallbackWalkSurface`: The [surface](../../../materials/surfaces.md) to use for triggering footstep interactions, if the ground has no surface of its own.
+* `HeadObject`: An [object reference](../../../scenes/object-references.md) to a child object of the CC, which is considered the 'head'. If such a reference is set, the CC will move this object up and down when the CC crouches or stands up. The [main camera component](../../../graphics/camera-component.md) should be attached to this head object, such that the player sees the difference. This property is only useful for first-person player characters.
 
 ## See Also
 

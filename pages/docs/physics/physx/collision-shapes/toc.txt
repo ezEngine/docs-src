@@ -4,5 +4,5 @@ physx-box-shape-component.md
 physx-capsule-shape-component.md
 physx-convex-shape-component.md
 physx-center-of-mass-component.md
-collision-meshes.md
-collision-layers.md
+physx-collision-meshes.md
+physx-collision-layers.md

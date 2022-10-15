@@ -4,15 +4,22 @@ ezEngine is developed primarily on Windows 10, using Visual Studio 2019, typical
 
 ## Windows
 
-### Supported Versions
+### Supported Windows Versions
 
 * Windows 10 (Desktop)
 * Windows 10 [UWP builds](build-uwp.md)
+* Windows 11
 
-### Compilers
+### Supported Compilers on Windows
 
-* Visual Studio 2019 32 Bit
 * Visual Studio 2019 64 Bit
+* Visual Studio 2022 64 Bit
+
+You need to have these workloads installed in Visual Studio:
+
+* Desktop Development with C++
+* Game Development with C++
+* .Net Desktop Development
 
 ## Windows Clang
 
@@ -20,16 +27,16 @@ It is possible to [build with Clang on Windows](clang-on-windows.md) through Vis
 
 ## MacOS
 
-### Supported Versions
+### Supported MacOS Versions
 
 * OS X 10.9 (Mavericks)
 
-### Compilers
+### Supported Compilers on MacOS
 
 * Makefiles 64 Bit
 * XCode 5.1.1 or higher (GCC / Clang) 64 Bit
 
-### Dependencies
+### MacOS Dependencies
 
 * XQuartz 2.7.5 or higher
 * SFML-2.5.1
@@ -39,15 +46,15 @@ See [MacOS Builds](build-macos.md) for details.
 
 ## Linux
 
-### Versions
+### Supported Linux Versions
 
 * Ubuntu 19.4
 
-### Compilers
+### Supported Compilers on Linux
 
 * GCC 7 64 Bit
 
-### Dependencies
+### Linux Dependencies
 
 * uuid-dev
 * SFML-2.5.1

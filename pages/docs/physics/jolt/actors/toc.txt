@@ -1,0 +1,5 @@
+jolt-actors.md
+jolt-static-actor-component.md
+jolt-dynamic-actor-component.md
+jolt-trigger-component.md
+jolt-queryshape-actor-component.md

@@ -4,7 +4,7 @@
 
 The ezEngine base libraries (Foundation, Core) have been built to be fully cross platform. The corresponding unit tests are run on Windows, Linux, Mac and Android every day. There are some stubs for functions that are currently only needed on Windows, but implementing them is easy to do, when needed.
 
-Everything higher level (editor, tools, rendering) is **currently only implemented for Windows 10**. There is **no (official) Linux**, **no Mac** and also **no Windows 8 or lower** support.
+Everything higher level (editor, tools, rendering) is **currently only implemented for Windows 10/11**. There is **no (official) Linux**, **no Mac** and also **no Windows 8 or lower** support.
 
 A **Linux port** is currently being worked on, though.
 
@@ -50,7 +50,6 @@ We don't plan very far ahead. Here are the things we intend to work on in the ne
 
 1. Vulkan renderer
 1. Linux port
-1. Switch from PhysX to Jolt physics
 1. Animation system improvements
 1. Better ragdoll system
 1. General usability improvements

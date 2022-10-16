@@ -1,6 +1,6 @@
 # ezEngine as a Submodule
 
-When using git and CMake for a project, ezEngine can be integrated as a submodule into the git repository and reference from CMake.
+When using git and CMake for a project, ezEngine can be integrated as a submodule into the git repository and referenced from CMake.
 
 First ezEngine needs to be added as a submodule to git:
 
@@ -51,6 +51,5 @@ When integrating EZ this way, you may only want a subset of the available functi
 When integrating EZ as a submodule, it is common for the binaries to be located outside of the ezEngine sub-folder, which means the engine won't be able to find the SDK root folder anymore. See [this article](sdk-root.md) for ways to fix this.
 
 ## See Also
-
 
 * [CMake Setup](cmake-config.md)

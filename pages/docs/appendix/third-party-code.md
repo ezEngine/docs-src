@@ -91,6 +91,14 @@ Compile switch: None
 
 A fast single file 2D voronoi diagram generator. Used by ezBreakableSheetComponent.
 
+## Jolt Physics
+
+Link: [https://github.com/jrouwe/JoltPhysics](https://github.com/jrouwe/JoltPhysics)
+
+Compile switch: **EZ_3RDPARTY_JOLT_SUPPORT**
+
+Jolt Physics is a free and open source physics engine. It is used to provide collision detection, physics simulation, character controllers and other interactions.
+
 ## Kenney.nl
 
 Link: [kenney.nl](https://kenney.nl/)

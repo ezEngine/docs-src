@@ -1,11 +1,11 @@
 building-ez.md
 supported-platforms.md
-build-prerequisites.md
 cmake-config.md
 submodule.md
 sdk-root.md
-clang-on-windows.md
+build-windows.md
 build-uwp.md
+clang-on-windows.md
 build-android.md
 build-linux.md
 build-macos.md

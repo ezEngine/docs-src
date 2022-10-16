@@ -1,13 +1,13 @@
 # Building with Clang on Windows
 
-You can build ezEngine using the Clang on Windows. This can be useful to find and fix compilation errors and warnings, that do not happen with MSVC. However, as Clang support on Windows is still experimental, you may not be able to build a working executable.
+You can build ezEngine using Clang on Windows. This can be useful to find and fix compilation errors and warnings, that do not happen with MSVC. However, as Clang support on Windows is still experimental, you may not be able to build a working executable.
 
 ## Using Clang/LLVM with the CMake GUI
 
 1. Get the latest clang windows distribution: <https://releases.llvm.org/download.html> (the 64-bit version is recommended)
 1. Create a new solution for the Clang build by pointing *Where to build the binaries* to a new location.
 1. Press **Configure** once, a dialog will show up.
-1. Choose **Ninja** as the generator. (Note: Get ninja from https://ninja-build.org and put it in your **PATH**)
+1. Choose **Ninja** as the generator. (Note: Get ninja from <https://ninja-build.org> and put it in your **PATH**)
 1. Choose *Specify native compilers* then hit **Finish**.
 1. Specify the *C* and *C++* compiler. When using the default paths they are located at:
     * C: C:/Program Files/LLVM/bin/clang.exe
@@ -34,5 +34,4 @@ The clang frontend for the Visual Studio Compiler is no longer in development. U
 
 ## See Also
 
-
-* [Building ezEngine](building-ez.md)
+* [Windows Builds](build-windows.md)

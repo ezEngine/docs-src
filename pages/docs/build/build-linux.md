@@ -18,15 +18,16 @@ C++17 support is required, so make sure that your respective compiler supports i
 These generators are currently supported for Linux:
 
 * Unix Makefiles
-* Ninja 
+* Ninja
 
 ## Automatic Setup
 
 The `Generate.sh` script in the root folder of ezEngine can be used to automatically install all required packages and run CMake, so that you can start building right away.
 
 This script currently supports these distributions:
- * Ubuntu 22
- * Linux Mint 21
+
+* Ubuntu 22
+* Linux Mint 21
 
 We welcome contributions to add support for more distributions.
 
@@ -58,7 +59,7 @@ To build a different [build type](building-ez.md#build-types) then `Dev`, pass t
 
 If you would like to use Clang instead of GCC, simply add `--clang` to all invocations of `Generate.sh`:
 
-```
+```bash
 ./Generate.sh --setup --clang
 ./Generate.sh --clang
 ./Generate.sh --build-type Debug --clang
@@ -94,6 +95,7 @@ Then invoke CMake with the following arguments:
 | `-DCMAKE_EXPORT_COMPILE_COMMANDS=ON`   | Generate a `compile_commands.json` file to be used for code completion in editors like Visual Studio Code. |
 
 Example usage:
+
 ```bash
 mkdir build
 cmake -B build -S . -G Ninja -DCMAKE_CXX_COMPILER=g++-12 -DCMAKE_C_COMPILER=gcc-12 -DEZ_EXPERIMENTAL_EDITOR_ON_LINUX=ON -DEZ_BUILD_EXPERIMENTAL_VULKAN=ON -DCMAKE_BUILD_TYPE=Dev -DCMAKE_EXPORT_COMPILE_COMMANDS=ON

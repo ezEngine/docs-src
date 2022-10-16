@@ -49,7 +49,6 @@ The SDK root folder doesn't need to point to the folder where ezEngine is stored
 
 ## See Also
 
-
 * [ezEngine as a Submodule](submodule.md)
 * [CMake Setup](cmake-config.md)
 * [Building ezEngine](building-ez.md)

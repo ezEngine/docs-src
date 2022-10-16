@@ -1,74 +1,20 @@
 # Supported Platforms
 
-ezEngine is developed primarily on Windows 10, using Visual Studio 2019, typically in 64 Bit builds. As such this is the best tested and therefore most stable platform. The code uses C++ 11, 14 and 17 features, but only where broad compiler and platform support is available.
+ezEngine is developed primarily on Windows 10/11, using Visual Studio 2022 in 64 Bit builds. As such platform has the largest feature set and is the best tested one.
 
-## Windows
+The code uses C++ 11, 14 and 17 features, but only where broad compiler support is available.
 
-### Supported Windows Versions
+The renderer currently uses DX11 on Windows and a Vulkan implementation is in progress. The editor is currently available on Windows, and being ported to Linux.
 
-* Windows 10 (Desktop)
-* Windows 10 [UWP builds](build-uwp.md)
-* Windows 11
+On Mac, Android and Linux currently only the base libraries are fully functional. Once the Vulkan renderer is more mature, the goal is to have most features available everywhere.
 
-### Supported Compilers on Windows
+## List of Supported Platforms
 
-* Visual Studio 2019 64 Bit
-* Visual Studio 2022 64 Bit
-
-You need to have these workloads installed in Visual Studio:
-
-* Desktop Development with C++
-* Game Development with C++
-* .Net Desktop Development
-
-## Windows Clang
-
-It is possible to [build with Clang on Windows](clang-on-windows.md) through Visual Studio.
-
-## MacOS
-
-### Supported MacOS Versions
-
-* OS X 10.9 (Mavericks)
-
-### Supported Compilers on MacOS
-
-* Makefiles 64 Bit
-* XCode 5.1.1 or higher (GCC / Clang) 64 Bit
-
-### MacOS Dependencies
-
-* XQuartz 2.7.5 or higher
-* SFML-2.5.1
-* Qt 5.11 (optional)
-
-See [MacOS Builds](build-macos.md) for details.
-
-## Linux
-
-### Supported Linux Versions
-
-* Ubuntu 19.4
-
-### Supported Compilers on Linux
-
-* GCC 7 64 Bit
-
-### Linux Dependencies
-
-* uuid-dev
-* SFML-2.5.1
-* Qt 5.11 (optional)
-
-See [Linux Builds](build-linux.md) for details.
-
-## Android
-
-Versions:
-
-* Android 6.0 Marshmallow (API 23) or newer
-
-See [Android Builds](build-android.md) for details.
+* Windows 10/11 desktop ([details](build-windows.md))
+* Windows 10/11 UWP ([details](build-uwp.md))
+* OS X 10.9 (Mavericks) ([details](build-macos.md))
+* Linux ([details](build-linux.md))
+* Android 6.0 Marshmallow (API 23) or newer ([details](build-android.md))
 
 ## See Also
 

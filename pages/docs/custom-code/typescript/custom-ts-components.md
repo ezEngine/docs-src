@@ -15,7 +15,7 @@ If it extends `ez.TickedTypescriptComponent`, the member function `Tick()` is ex
 
 Often game components need to do regular checks and update their own state. Use the *ticked* base class when this is necessary. Choose a tick interval that is as long as possible to reduce their performance cost. You can also dynamically change the tick rate, to e.g. do more updates when the player is close, than when they are far away.
 
-Whenever possible, though, prefer to use the non-ticked base class and have no regular update, at all. Such components rely on other machnisms, such as [triggers](../../physics/physx/actors/physx-trigger-component.md) to detect when they need to react, and they can use delayed messages (sent by others or by themselves) to trigger follow up work.
+Whenever possible, though, prefer to use the non-ticked base class and have no regular update, at all. Such components rely on other machnisms, such as [triggers](../../physics/jolt/actors/jolt-trigger-component.md) to detect when they need to react, and they can use delayed messages (sent by others or by themselves) to trigger follow up work.
 
 ### Tick Function
 

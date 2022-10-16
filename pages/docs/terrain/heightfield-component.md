@@ -10,7 +10,7 @@ The heightfield component uses an [ImageData asset](../Miscellaneous/imagedata-a
 
 ## Collision Mesh
 
-When the [tag](../projects/tags.md) `AutoColMesh` is set on the owner game object, the component adds its mesh to the scene [collision mesh](../physics/physx/collision-shapes/physx-collision-meshes.md), just like the [greyboxing components](../scenes/greyboxing.md). This is only supported for [static game objects](../runtime/world/game-objects.md#static-vs-dynamic-objects) though.
+When the [tag](../projects/tags.md) `AutoColMesh` is set on the owner game object, the component adds its mesh to the scene [collision mesh](../physics/jolt/collision-shapes/jolt-collision-meshes.md), just like the [greyboxing components](../scenes/greyboxing.md). This is only supported for [static game objects](../runtime/world/game-objects.md#static-vs-dynamic-objects) though.
 
 Currently all triangles in the collision mesh will all use the same [surface](../materials/surfaces.md), the one set on the main material.
 

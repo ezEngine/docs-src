@@ -38,7 +38,7 @@ To add wind locally, have a look at the [wind volume components](wind-volume-com
 
 ## Affecting Physics Objects
 
-Be aware that **wind does not affect** any [physics objects](../physics/physx/actors/physx-dynamic-actor-component.md). Such behavior could be implemented, but it would be difficult to not have a serious performance impact, since it would keep the physics engine constantly busy (usually objects *go to sleep* when no forces act upon them, but wind would be a constantly active force).
+Be aware that **wind does not affect** any [physics objects](../physics/jolt/actors/jolt-dynamic-actor-component.md). Such behavior could be implemented, but it would be difficult to not have a serious performance impact, since it would keep the physics engine constantly busy (usually objects *go to sleep* when no forces act upon them, but wind would be a constantly active force).
 
 Instead, explosions and such rather use a physics shape query to determine objects in range, and then apply a short impulse to only those objects once. See the [area damage component](../gameplay/area-damage-component.md) as an example.
 

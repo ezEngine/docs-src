@@ -12,7 +12,7 @@ The main classes involved are `ezWorld`, `ezGameObject`, `ezComponent` and `ezWo
 
 Each `ezWorld` represents the entire state of a scene. Worlds hold all [game objects](game-objects.md) and all [world modules](world-modules.md), which in turn hold all [components](components.md).
 
-Each world has its own simulation state, such as a clock and a random number generator. Through the world modules, worlds also hold their own state for other simulation aspects, such as [physics](../../physics/physx/physx-overview.md).
+Each world has its own simulation state, such as a clock and a random number generator. Through the world modules, worlds also hold their own state for other simulation aspects, such as [physics](../../physics/jolt/jolt-overview.md).
 
 You can have multiple worlds in parallel and they will be completely separated. This is for example the case when you have multiple [documents](../../editor/editor-documents.md) open in the editor.
 
@@ -56,7 +56,7 @@ You can also write components in [TypeScript](../../custom-code/typescript/types
 
 When a component gets updated, it can access other components and call functions on them. Of course that requires that the other component type is known at compile time. In practice, that is often not the case.
 
-Take the [projectile component](../../gameplay/projectile-component.md) as an example. Whenever a projectile hits something, it should apply damage to the hit object. However, what it hit was just the physical representation of an object (e.g. a [physics actor](../../physics/physx/actors/physx-actors.md)). The physics object doesn't have a concept of 'receiving damage' and therefore calling some 'OnDamage' function on the physics component makes no sense.
+Take the [projectile component](../../gameplay/projectile-component.md) as an example. Whenever a projectile hits something, it should apply damage to the hit object. However, what it hit was just the physical representation of an object (e.g. a [physics actor](../../physics/jolt/actors/jolt-actors.md)). The physics object doesn't have a concept of 'receiving damage' and therefore calling some 'OnDamage' function on the physics component makes no sense.
 
 Instead, on the object that has the physics component, there may be another component which knows how it would react to damage, so we want to send the information there. That component may be a custom component, though, which the projectile component knows nothing about, so there is no way to call a function on that.
 

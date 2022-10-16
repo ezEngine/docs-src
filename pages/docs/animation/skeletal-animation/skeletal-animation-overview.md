@@ -32,7 +32,7 @@ The [animation clip asset](animation-clip-asset.md) represents **a single animat
 
 Additionally, in case all animations are in one large clip, you can use the `FirstFrame` and `NumFrames` properties to extract only a subset of the animation. This allows you to import the same source file many times, each time extracting only a specific range as a single clip.
 
-The [root motion](root-motion.md) properties are meant for enabling an animation clip to move an animated character (ie. the actual [character controller](../../physics/physx/special/physx-character-controller.md) that sits on top of the animated mesh).
+The [root motion](root-motion.md) properties are meant for enabling an animation clip to move an animated character (ie. the actual [character controller](../../physics/jolt/special/jolt-character-controller.md) that sits on top of the animated mesh).
 
 The *event track* property allows you to add [markers](animation-events.md) to the clip, that indicate what happens at what time in the clip. This can be used to indicate when a foot touches the ground, or at what point in the animation a weapon fires. Using this information, the game logic could react by, for example, spawning an effect.
 

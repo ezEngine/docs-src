@@ -4,7 +4,7 @@ The *rope render component* is used to render a rope or cable.
 
 ![Rope](media/rope-rendering.jpg)
 
-The rope simulation is done by other components, such as the [PhysX rope component](../physics/physx/special/physx-rope-component.md) or the [fake rope component](fake-rope-component.md). The rope render component has to be attached to the same object as the simulation component.
+The rope simulation is done by other components, such as the [rope component](../physics/jolt/special/jolt-rope-component.md) or the [fake rope component](fake-rope-component.md). The rope render component has to be attached to the same object as the simulation component.
 
 ## Component Properties
 
@@ -17,5 +17,5 @@ The rope simulation is done by other components, such as the [PhysX rope compone
 
 ## See Also
 
-* [PhysX Rope Component](../physics/physx/special/physx-rope-component.md)
+* [Jolt Rope Component](../physics/jolt/special/jolt-rope-component.md)
 * [Fake Rope Component](fake-rope-component.md)

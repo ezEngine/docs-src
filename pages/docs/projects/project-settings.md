@@ -48,9 +48,9 @@ Apart from the window position and size, the window configuration also controls 
 
 If the [FMOD Integration](../sound/fmod-overview.md) is enabled, *Editor > Project Settings > FMOD Project Settings...* will be available to configure the speaker mode and which master sound bank to use.
 
-## PhysX
+## Jolt
 
-If the [PhysX Integration](../physics/physx/physx-overview.md) is enabled, *Editor > Project Settings > PhysX Project Settings...* will be available to configure the [collision layers](../physics/physx/collision-shapes/physx-collision-layers.md).
+If the [Jolt Physics Integration](../physics/jolt/jolt-overview.md) is enabled, *Editor > Project Settings > Jolt Project Settings...* will be available to configure the [collision layers](../physics/jolt/collision-shapes/jolt-collision-layers.md).
 
 ## Video
 

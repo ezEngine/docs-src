@@ -38,14 +38,13 @@ You can change the material of a greybox shape either through its properties, or
 
 ## Static Collision
 
-As long as a greyboxing object has the `GenerateCollision` property set, it will automatically get a [collision mesh](../physics/physx/collision-shapes/physx-collision-meshes.md) with the default [collision layer](../physics/physx/collision-shapes/physx-collision-layers.md) (`0`). It's assigned [material](../materials/materials-overview.md) determines which [surface](../materials/surfaces.md) is used for physical interactions.
+As long as a greyboxing object has the `GenerateCollision` property set, it will automatically get a [collision mesh](../physics/jolt/collision-shapes/jolt-collision-meshes.md) with the default [collision layer](../physics/jolt/collision-shapes/jolt-collision-layers.md) (`0`). It's assigned [material](../materials/materials-overview.md) determines which [surface](../materials/surfaces.md) is used for physical interactions.
 
 ## Dynamic Collision
 
-The greyboxing shape is not meant to be used for dynamic collisions. That means, if you attach a dynamic [PhysX](../physics/physx/physx-overview.md) actor, it will not get the necessary physical setup to behave correctly. Instead, its collision mesh will simply be disabled entirely. You can therefore use greybox shapes for dynamic objects, but you need to add the required physics shapes yourself.
+The greyboxing shape is not meant to be used for dynamic collisions. That means, if you attach a dynamic [Jolt](../physics/jolt/jolt-overview.md) actor, it will not get the necessary physical setup to behave correctly. Instead, its collision mesh will simply be disabled entirely. You can therefore use greybox shapes for dynamic objects, but you need to add the required physics shapes yourself.
 
 ## See Also
-
 
 * [Scene Editing](scene-editing.md)
 * [Editing Gizmos](gizmos.md)

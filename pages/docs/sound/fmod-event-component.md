@@ -22,7 +22,7 @@ The event component allows you to enable a simple physics raycast based heuristi
 * `SoundEvent`: The [sound event asset](fmod-soundevent-asset.md) that will be played by this component.
 * `UseOcclusion`: If enabled, the component will use physics raycasts to determine whether the sound source is occluded by geometry. The occlusion factor is passed to the FMOD event as the event parameter `Occlusion`.
 * `OcclusionThreshold`: How strongly the sound source must be occluded, before the occlusion value will be larger than zero.
-* `OcclusionCollisionLayer`: The physics [collision layer](../physics/physx/collision-shapes/physx-collision-layers.md) to use for the occlusion raycasts.
+* `OcclusionCollisionLayer`: The physics [collision layer](../physics/jolt/collision-shapes/jolt-collision-layers.md) to use for the occlusion raycasts.
 * `OnFinishedAction`: For sounds that end by themselves, this option allows you to specify whether the component should delete itself or its entire object afterwards.
 * `ShowDebugInfo`: If enabled, the component displays some statistics about its state.
 

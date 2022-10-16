@@ -42,7 +42,6 @@ Similarly, if you want to make an object invisible in one view, you probably als
 
 ## See Also
 
-
 * [Project Settings](project-settings.md)
-* [PhysX Integration](../physics/physx/physx-overview.md)
+* [Jolt Physics Integration](../physics/jolt/jolt-overview.md)
 * [Lighting](../graphics/lighting/lighting-overview.md)

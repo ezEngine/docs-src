@@ -84,7 +84,7 @@ Of course all of these methods can also be mixed and matched as makes most sense
 
 ## Miscellaneous Tips
 
-Some objects are more important during editing than others. For example the objects that configure the overall level [lighting](../graphics/lighting/ambient-light-component.md), [skybox](../effects/sky.md), [player start position](../gameplay/player-start-point.md), [physics settings](../physics/physx/physx-settings-component.md), [cameras](../graphics/camera-component.md) and so on. It is very useful to put all of these objects into a dedicated layer, because that makes finding them much easier.
+Some objects are more important during editing than others. For example the objects that configure the overall level [lighting](../graphics/lighting/ambient-light-component.md), [skybox](../effects/sky.md), [player start position](../gameplay/player-start-point.md), [physics settings](../physics/jolt/jolt-settings-component.md), [cameras](../graphics/camera-component.md) and so on. It is very useful to put all of these objects into a dedicated layer, because that makes finding them much easier.
 
 ## See Also
 

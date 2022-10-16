@@ -4,7 +4,7 @@ The *fake rope component* is used to simulate simple cables, ropes and wires for
 
 ![Fake Ropes](media/fake-rope-component.jpg)
 
-These ropes are not able to pull on another object and thus can't be used as a gameplay element. Use the [PhysX rope component](../physics/physx/special/physx-rope-component.md) for such use cases.
+These ropes are not able to pull on another object and thus can't be used as a gameplay element. Use the [rope component](../physics/jolt/special/jolt-rope-component.md) for such use cases.
 
 On the other hand, the fake rope component is more lightweight to simulate and is optimized to have very little overhead when it has reached a resting state (doesn't swing anymore). Therefore it can be used in larger quantities for decorative purposes.
 
@@ -46,5 +46,5 @@ The [Testing Chambers](../../samples/testing-chambers.md) project contains a ded
 
 ## See Also
 
-* [PhysX Rope Component](../physics/physx/special/physx-rope-component.md)
+* [Jolt Rope Component](../physics/jolt/special/jolt-rope-component.md)
 * [Rope Render Component](rope-render-component.md)

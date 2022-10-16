@@ -66,7 +66,7 @@ Materials are what is used to give objects a texture. There is much more to this
 
 ### Physics
 
-The fun really starts once you get to play around with physics. Read up on the [PhysX Integration](../physics/physx/physx-overview.md) for this. For a basic setup you always need at least an *actor component* (*static* for scene geometry, *dynamic* for stuff that should fall down) and a *shape component* to give the object a physical shape.
+The fun really starts once you get to play around with physics. Read up on the [Jolt Physics integration](../physics/jolt/jolt-overview.md) for this. For a basic setup you always need at least an [actor component](../physics/jolt/actors/jolt-actors.md) ([static](../physics/jolt/actors/jolt-static-actor-component.md) for scene geometry, [dynamic](../physics/jolt/actors/jolt-dynamic-actor-component.md) for stuff that should fall down) and a [shape component](../physics/jolt/collision-shapes/jolt-shapes.md) to give the object a physical shape.
 
 ### Advanced Editing
 

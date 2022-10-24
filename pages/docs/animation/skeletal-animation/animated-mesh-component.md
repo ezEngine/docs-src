@@ -12,7 +12,7 @@ An *animated mesh component* is used to instantiate an [animated mesh asset](ani
 
 ## See Also
 
-
 * [Meshes](../../graphics/meshes/meshes-overview.md)
 * [Skeletal Animations](skeletal-animation-overview.md)
 * [Simple Animation Component](simple-animation-component.md)
+* [Animated Mesh Asset](animated-mesh-asset.md)

@@ -16,7 +16,11 @@ In general, modifying the scene during simulation will work for some objects, an
 
 ### Keep Simulation Changes
 
-This mode is useful to quickly check how some object behaves. It can also be used to simulate physical objects (e.g. boxes falling down) and then to save that simulated transform to the scene, by selecting them and pressing `K` (or *Scene > Utilities > Keep Simulation Changes*).
+The *simulate mode* is useful to quickly check how some object behaves. It can also be used to simulate physical objects (e.g. boxes falling down) and then save that simulated transform to the scene.
+
+While the simulation is active, select the objects that you are interested in and press `K` (or *Scene > Utilities > Keep Simulation Changes*). Once you stop the simulation, an undoable action is executed that moves the selected objects to the recorded location.
+
+You can record multiple *keep changes* actions during one simulation.
 
 ## Play the Game Mode
 
@@ -42,6 +46,8 @@ Another way to test the scene is to export it to a binary format and run it in t
 
 If you keep `Transform all Assets` checked, all [assets](../assets/assets-overview.md) in the project will be *transformed* first, making sure they are up-to-date. You can uncheck this, to speed up the process, if you know that all assets that you require are up-to-date already.
 
+`Update Thumbnail` will use the [scene camera](../graphics/camera-component.md) with the *Thumbnail* usage hint, to create a scene thumbnail.
+
 Both *Simulate Mode* and *Play-the-Game Mode* run inside the editor process. Compared to a game running in a stand-alone process this has two drawbacks:
 
 1. The editor process limits the maximum framerate, and has some performance overhead of its own, so this is not useful for performance testing.
@@ -50,6 +56,10 @@ Both *Simulate Mode* and *Play-the-Game Mode* run inside the editor process. Com
 > **Important:**
 >
 > If a scene is composed of multiple [scene layers](../scenes/scene-layers.md), only the objects from the currently *loaded* layers are exported.
+
+### Custom Player Executable
+
+In the *export and run* dialog you can add a custom executable to run instead of the default [ezPlayer](../tools/player.md) application. Use this, if you have a custom game application. The command line used is the same as for ezPlayer as shown in the dialog.
 
 ## See Also
 

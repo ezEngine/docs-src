@@ -56,6 +56,7 @@ Consequently, you have to be careful how you set up your rigid-bodies, to improv
 
 * `CollisionLayer`: The [collision layer](../collision-shapes/jolt-collision-layers.md) to use.
 * `Kinematic`: See [Kinematic vs. Simulated](#kinematic-vs-simulated) above.
+* `StartAsleep`: If enabled, the actor starts in the 'sleeping' state and will not be physically simulated until it gets into contact with another active actor. This is a performance optimization to prevent performance spikes after loading a level. If used badly, an object can float in air and not fall down until something else touches it. Make sure to only use this on objects that are [convincingly placed](../../../editor/run-scene.md#keep-simulation-changes) to begin with.
 * `Mass`, `Density`: See [Mass vs. Density](#mass-vs-density) above.
 * `Surface`: The [surface](../../../materials/surfaces.md) to use for this actor's shapes. The surface determines the friction and restitution during simulation, but also determines what effects are spawned when you interact with the object. Note that [collision meshes](../collision-shapes/jolt-collision-meshes.md) already specify the surface to use. If a surface is selected on the actor, it overrides the mesh's surface.
 * `GravityFactor`: Adjusts the influence of gravity on this object. If set to zero, it will float in space.

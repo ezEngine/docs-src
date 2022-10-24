@@ -34,6 +34,10 @@ Below the search field, all available asset types are listed with checkboxes. Cl
 
 On the bottom left the asset browser displays all [data directories](../projects/data-directories.md). When you select a folder in this tree view, the asset browser will only display assets located below that folder.
 
+### Filter to this Path
+
+You can right-click on any asset and select **Filter to this Path** to set the folder filter to the path in which the selected asset resides. This is useful when you already see an asset in the browser but are interested in an asset that you know is located next to that asset (same folder or sub-folder).
+
 ### Show Assets in Sub-Folders
 
 Right click on a folder and toggle **Show items in sub-folders**. When enabled (the default) the asset browser shows *all* assets that are anywhere below a selected folder. When disabled, only the assets that are directly inside the a selected folder are shown. Assets that are in a sub-folder are not displayed.

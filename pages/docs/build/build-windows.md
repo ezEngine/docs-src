@@ -23,7 +23,7 @@ These *workloads* have to be installed:
 
 ### CMake (optional)
 
-[CMake](https://cmake.org/) is used as the build system. On Windows you only need to install CMake, if you want to use the CMake GUI to choose custom [CMake configurations](cmake-config.md). If you only use the provided `GenerateXYZ.bat` scripts, those will use a `cmake.exe` that comes with the EZ repository.
+[CMake](https://cmake.org/) is used as the build system. On Windows you only need to install CMake if you want to use the CMake GUI to choose custom [CMake configurations](cmake-config.md). If you only use the provided `GenerateXYZ.bat` scripts, those will use a `cmake.exe` that comes with the EZ repository.
 
 ## Generate the Solution
 
@@ -34,7 +34,7 @@ In the root folder of the EZ repository you will find a couple of `.bat` files, 
 * `GenerateWin64vs2019.bat`
 * `GenerateWin64vs2022.bat`
 
-Run one of them to generate a Visual Studio solution for your preferred compiler. If these scripts fail, you most likely don't have all the [prerequisites](#prerequisites) installed. They also sometimes fail, if Visual Studio recently installed an update and you haven't rebooted your PC since.
+Run one of them to generate a Visual Studio solution for your preferred compiler. If these scripts fail, you most likely don't have all the [prerequisites](#prerequisites) installed. They also sometimes fail, if Visual Studio recently installed an update and you haven't rebooted your PC since. Usually when this script fails it is due to common issues with CMake or the MSVC installation. Read the error messages carefully and search the internet, you'll usually find a solution quickly.
 
 Once the script finished successfully, there will be a **Workspace** folder in the EZ root folder. You fill find a `ezEngine_***.sln` file in the respective folder for the Visual Studio version that you chose.
 

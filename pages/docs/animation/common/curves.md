@@ -52,8 +52,11 @@ The rightmost control point determines the overall length of the curve. As you c
 
 To make a curve loop nicely, open the context menu and select *Curve > Loop: Adjust First/Last Point*. This will modify either the first or the last control point in the curve to match up with the respective other point. Make sure that the two control points use the same *tangent mode*. You may need to switch to *Bezier* or *Fixed Length* tangents to make the curvature match perfectly.
 
-## See Also
+### Curve Presets
 
+In the context menu under *Presets* you will find a number of presets for commonly used curves. You can also save the current curve as a **preset**. You can save presets anywhere, but as long as you save it under the path *Editor/Presets/Curves* (in any [data directory](../../projects/data-directories.md)), it will automatically show up in the context menu. You can also use sub-folders to organize presets, as folders will introduce sub-menus.
+
+## See Also
 
 * [Color Gradients](color-gradients.md)
 * [Property Animation (TODO)](../property-animation/property-animation-overview.md)

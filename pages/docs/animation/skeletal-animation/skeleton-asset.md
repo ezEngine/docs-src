@@ -36,8 +36,6 @@ In the future the skeleton asset will also be used to define physics shapes for 
 
 ## See Also
 
-
 * [Skeletal Animations](skeletal-animation-overview.md)
-* [Mesh Asset](../../graphics/meshes/mesh-asset.md)
 * [Animated Mesh Asset](animated-mesh-asset.md)
 * [Skeleton Component](skeleton-component.md)

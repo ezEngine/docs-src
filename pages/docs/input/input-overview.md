@@ -72,6 +72,5 @@ Input sets can be configured either from code, or through the editor [project se
 
 ## See Also
 
-
 * [Input Set Configuration](input-config.md)
 * [Input Component](input-component.md)

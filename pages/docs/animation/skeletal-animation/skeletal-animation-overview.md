@@ -78,10 +78,9 @@ The [joint override component](joint-override-component.md) is the opposite to t
 
 In the sample scene there are two objects for each turret that override two bones: one for left/right rotation and one for pointing up/down. You can manually modify these values from the property grid, while the editor is in play mode, to control the turrets aim. Note how the recoil animation continues to play properly relative to the turret's main direction.
 
-## Future Work
-
-Work on the animation system is ongoing. For a list of planned features, [have a look here](https://github.com/ezEngine/ezEngine/projects/12).
-
 ## See Also
 
-
+* [Animated Mesh Asset](animated-mesh-asset.md)
+* [Skeleton Asset](skeleton-asset.md)
+* [Animation Clip Asset](animation-clip-asset.md)
+* [Animation Controller](animation-controller/animation-controller-overview.md)

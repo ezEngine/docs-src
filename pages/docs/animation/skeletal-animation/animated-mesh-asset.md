@@ -22,8 +22,8 @@ Animated meshes are placed in a scene with a dedicated [animated mesh component]
 
 ## See Also
 
-
-* [Skeletal Animations](skeletal-animation-overview.md)
+* [Animated Mesh Component](animated-mesh-component.md)
 * [Skeleton Asset](skeleton-asset.md)
+* [Skeletal Animations](skeletal-animation-overview.md)
 * [Animation Clip Asset](animation-clip-asset.md)
 * [Simple Animation Component](simple-animation-component.md)

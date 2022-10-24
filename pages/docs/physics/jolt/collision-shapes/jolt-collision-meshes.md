@@ -12,9 +12,13 @@ The image above shows a mesh imported as a concave collision mesh. As you can se
 
 Concave collision meshes are set directly on the [static physics actor](../actors/jolt-actors.md) component and have no dedicated [physics shape](jolt-shapes.md) component.
 
+Triangle meshes can use a different [surface](../../../materials/surfaces.md) for each submesh.
+
 ## Convex Collision Meshes
 
 The simulation of [dynamic actors](../actors/jolt-dynamic-actor-component.md) is only possible with convex shapes. To create a convex collision mesh, use the asset type *Jolt Convex Collision Mesh* when [importing an asset](../../../assets/import-assets.md). To attach a convex mesh to an actor, use the [convex mesh shape component](jolt-convex-shape-component.md).
+
+Convex meshes may only use a single [surface](../../../materials/surfaces.md), even if the mesh is made up of multiple convex pieces.
 
 There are multiple modes how to create the convex collision mesh:
 
@@ -45,3 +49,4 @@ Sometimes you want to visualize the collision mesh of an object within a scene. 
 * [Jolt Physics Actors](../actors/jolt-actors.md)
 * [Jolt Collision Layers](jolt-collision-layers.md)
 * [Jolt Debug Visualizations](../jolt-debug-visualizations.md)
+* [Surfaces](../../../materials/surfaces.md)

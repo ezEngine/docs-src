@@ -42,7 +42,7 @@ Simple animation state machines can be built directly in the animation controlle
 
 ## See Also
 
-
 * [Skeletal Animations](../skeletal-animation-overview.md)
 * [Animation Controller Asset](animation-controller-asset.md)
 * [Animation Controller Component](animation-controller-component.md)
+* [Animated Mesh Component](../animated-mesh-component.md)

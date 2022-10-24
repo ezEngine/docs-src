@@ -48,32 +48,37 @@ For testing transparent materials it may be useful to create an object in a scen
 
 **Two Sided:** If enabled, polygons with this material can be seen from both sides. This is useful for fences, vegetation and other *masked* geometry that is often represented only by a single polygon but can be looked at from both sides.
 
-**MaskThreshold:** Used for the *Masked* blend mode (see above).
+**Base Color:** The base color of the material. When no *base texture* is used, this is its only color, otherwise it is multiplied into the base texture color.
 
 **UseBaseTexture:** If enabled, the *Base Texture* is used to color the object. This requires proper UV coordinates on the mesh.
 
-**Base Color:** The base color of the material. When no *base texture* is used, this is its only color, otherwise it is multiplied into the base texture color.
+**MaskThreshold:** Used for the *Masked* blend mode (see above).
 
-**UseNormalAndRoughnessTexture:** If enabled, the shader uses the *Normal Texture* to apply *normal mapping* and the *Roughness Texture* to determine how rough the surface is. These affect the quality of lighting on the objects.
-
-**Roughness Value:** If no *Roughness Texture* is given, this is the fallback roughness value to use for lighting. The rougher a material is (value closer to one), the more *diffuse* the lighting will be (stone, cloth, etc). The smoother the material is (value closer to zero), the more pronounced specular highlights it will have (glass, ceramic).
-
-**UseMetallicTexture:** If enabled, a dedicated *Metallic Texture* is used to specify per pixel whether it is a metal or not. In physics, a material is either a metal or not, in computer graphics values in between are allowed and used to blend between the two results.
-
-**Metallic Value:** If no *Metallic Texture* is provided, this is the fallback value. Typically this should be `1` for metals and `0` for all other material types.
-
-**UseEmissiveTexture:** If enabled, the *Emissive Texture* is used to define per pixel where the material will *glow*. This is multiplied with the *EmissiveColor*, so make sure that is not set to black (its default).
-
-**EmissiveColor:** An additional overall emissive color. If an *Emissive Texture* is activated, these two colors are multiplied, so you need to set this to *white* for the texture to have an effect. This is an HDR color, so you can scale up its *intensity* and thus pronounce the glow even further.
+**UseNormalTexture:** If enabled, the shader uses the *Normal Texture* to apply *normal mapping*.
 
 **UseOcclusionTexture:** If enabled, an *OcclusionTexture* is used to affect lighting and to pronounce crevices. The effect of this can be very subtle.
 
-## Render Modes
+**Roughness Value:** If no *Roughness Texture* is given, this value is used for lighting. If a roughness texture is available, this value is multiplied into the texture's value. The rougher a material is (value closer to one), the more *diffuse* the lighting will be (stone, cloth, etc). The smoother the material is (value closer to zero), the more pronounced specular highlights it will have (glass, ceramic).
 
-The 3D viewport of the material editor allows you to switch [render modes](../editor/editor-views.md#render-modes) to inspect only specific aspects of the material.
+**UseRoughnessTexture:** If enabled, the shader uses the *Roughness Texture* to determine how rough the surface is. The texture's value is multiplied with the *Roughness Value* so make sure to set that `1` to get the exact result.
+
+**Metallic Value:** If no *Metallic Texture* is provided, this is the fallback value. Typically this should be `1` for metals and `0` for all other material types.
+
+**UseMetallicTexture:** If enabled, a dedicated *Metallic Texture* is used to specify per pixel whether it is a metal or not. In physics, a material is either a metal or not, in computer graphics values in between are allowed and used to blend between the two results.
+
+**UseOrmTexture:** If enabled, a dedicated *Occlusion / Roughness / Metallic (ORM) Texture* is used to specify these values per pixel. This takes precedence over the individual *UseOcclusionTexture*, *UseRoughnessTexture* and *UseMetallicTexture* options and if individual textures are also specified, they are not going to be used. ORM textures pack these three values into 3 channels (*Red = Occlusion*, *Green = Roughness*, *Blue* = *Metallic*) which is generally more efficient, though it means you can't have different resolutions for each texture.
+
+**EmissiveColor:** An additional overall emissive color. If an *Emissive Texture* is activated, these two colors are multiplied, so you need to set this to *white* for the texture to have an effect. This is an HDR color, so you can scale up its *intensity* and thus pronounce the glow even further.
+
+**UseEmissiveTexture:** If enabled, the *Emissive Texture* is used to define per pixel where the material will *glow*. This is multiplied with the *EmissiveColor*, so make sure that is not set to black (its default).
+
+## Material Preview
+
+The 3D viewport of the material editor allows you to switch the [render mode](../editor/editor-views.md#render-modes) to inspect only specific aspects of the material.
+
+Using the *eye dropdown menu* you can also select different meshes for previewing the material on.
 
 ## See Also
-
 
 * [Visual Shaders (TODO)](visual-shaders.md)
 * [Textures](../graphics/textures-overview.md)

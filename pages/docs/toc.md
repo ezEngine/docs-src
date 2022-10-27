@@ -18,7 +18,7 @@
 ## [Editor Documents](editor/editor-documents.md)
 ## [Editor Plugins (TODO)](editor/editor-plugins.md)
 ## [Editor Settings](editor/editor-settings.md)
-## [Template Documents (TODO)](editor/editor-template-documents.md)
+## [Template Documents](editor/editor-template-documents.md)
 ## [Editing Views](editor/editor-views.md)
 ## [Running a Scene](editor/run-scene.md)
 # Projects

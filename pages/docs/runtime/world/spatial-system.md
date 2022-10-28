@@ -116,6 +116,5 @@ Ultimately, both systems can be used to solve many of the same problems. When yo
 
 ## See Also
 
-
 * [Marker Component](../../gameplay/marker-component.md)
 * [The World / Scenegraph System](world-overview.md)

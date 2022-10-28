@@ -10,5 +10,4 @@ In C++ code you can use the `ezBlackboard` data structure directly. In scenes an
 
 ## See Also
 
-
 * [Blackboard Component](blackboard-component.md)

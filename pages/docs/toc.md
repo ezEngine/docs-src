@@ -244,6 +244,9 @@
 ## [Recast Navmesh Component](ai/recast-navmesh-component.md)
 ## [Recast Navmesh](ai/recast-navmesh.md)
 ## [Recast Integration (TODO)](ai/recast.md)
+## [Sensor Components](ai/sensor-components.md)
+## [State Machine Asset (TODO)](ai/state-machine-asset.md)
+## [State Machine Component (TODO)](ai/state-machine-component.md)
 # Ui
 ## [Ingame UI](ui/ui.md)
 ## [ImGui](ui/imgui.md)

@@ -15,7 +15,7 @@ The captured reflection is only visible in the probe's influence volume. For sph
 
 At runtime, all probes are sorted by their volume and the smallest probe is sampled first. If the reflection is transparent in the cubemap, then next bigger cubemap that influences the geometry is sampled next. This continues until we hit an opaque pixel in a cubemap or if the fallback reflection of the [sky light component](sky-light-component.md) is reached.
 
-The probe's `ReflectionProbeMode` by default is set to `static`, in which case the captured cubemap reflection is only updated once at the start or whenever the settings change. Alternatively it can be set to `dynamic`, in which case probe is updated continuously.
+The probe's `ReflectionProbeMode` by default is set to `static`, in which case the captured cubemap reflection is only updated once at the start or whenever the settings change. Alternatively it can be set to `dynamic`, in which case the probe is updated continuously.
 
 ## Component Properties
 
@@ -23,14 +23,14 @@ Sphere reflection component:
 
 * `Radius`: The influence range of the probe. The reflection is only visible on geometry intersecting this radius.
 * `Falloff`: Percentage of the radius that is smoothly blended into other probes.
-* `SphereProjection`: Enables paralax correction to project the reflection onto the shape of the sphere's radius.
+* `SphereProjection`: Enables paralax correction to project the reflection onto the shape of the sphere.
 
 Box reflection component:
 
 * `Extents`: The extents of the box projection. The cubemap will be projected to this box.
 * `InfluenceScale`, `InfluenceShift`: The influence volume can be smaller than the projected volume (extents) of the probe. This can be useful if you have e.g. a long corridor that you want to place multiple probes in. Each will have the same projection but a different part of the projection volume will be set as the influence volume centred around a probe capture offset.
 * `PositiveFalloff`, `NegativeFalloff`: Percentage of the influence volume in each direction that is smoothly blended into other probes. The falloff is defined for each face of the box.
-* `BoxProjection`: Enables paralax correction to project the reflection onto the shape of the box's extents.
+* `BoxProjection`: Enables paralax correction to project the reflection onto the shape of the box.
 
 Common properties for both sphere and box reflection probes that describe how the probe is captured:
 
@@ -44,9 +44,9 @@ Common properties for both sphere and box reflection probes that describe how th
 
 ### Don't try to create mirrors with reflection probes
 
-Avoid mirrors or other perfectly reflective surfaces. Reflection probes are approximite and should not be used to emulate mirrors and other perfect reflectors.
+Avoid mirrors or other perfectly reflective surfaces. Reflection probes are approximate and should not be used to emulate mirrors and other perfect reflectors.
 
-Even when using projection, the illusion of a perfect mirror immediately brakes down once objects are in the box-shaped room as the will be splatted in the box extends as seen here:
+Even when using projection, the illusion of a perfect mirror immediately brakes down once objects are in the box-shaped room as the objects will be splatted to the box extends as seen here:
 
 ![Avoid perfect reflective surfaces](media/reflection-avoid-mirrors.jpg)
 
@@ -57,9 +57,9 @@ If a box projection has very different dimensions on each axis you will run into
 ![Box projection stretching](media/reflection-stretching.jpg)
 
 
-Instead of just one box probe, use multiple boxes to span long corridor to prevent this.
+Instead of just one box probe, use multiple boxes to span long corridors to prevent this.
 To do this, take the existing box that spans the entire area and do the following:
-1. Changed it's Influence scale to e.g. 0.4 on the long axis, X in this case.
+1. Change it's Influence scale to e.g. 0.4 on the long axis, X in this case.
 2. Duplicate the object at the same positions.
 3. Set the duplicate's influence shift of the X-axis to 1.
 4. Duplicate the object in-place again.
@@ -71,7 +71,7 @@ This should result in the following image. The first box is highlighted to show 
 
 ### Don't align box probes perfectly with walls
 
-When usung `BoxProjection`, it is best to not try to align a box extents perfectly with a room. Projections are intended to anchor reflections, not as a mirror substitute.
+When using `BoxProjection`, it is best to not try to align a box's extent perfectly with a room. Projections are intended to anchor reflections, not as a mirror substitute.
 
 In the following image you can see some of the pitfalls when trying to do so:
 While the floor reflection now fits perfectly, there is no reflection on the wall mirror. This is because there is a door to another room and to avoid hard interpolation discontinuties between reflection probes, the falloff in that direction needs to be set. As the falloff moves inwards the mirror on the wall basically gets no contribution of the room's probe anymore.
@@ -83,7 +83,7 @@ Instead, increase the extents and set a falloff in each direction to fade into t
 
 ![Box reflection probe placement 2](media/reflection-box-placement2.jpg)
 
-Once the floor material is replaced with a more reasonable one that is not a perfect mirror the missalignment will no longer be aparent while still provinding the desired parallax effect to the reflections.
+Once the floor material is replaced with a more reasonable one that is not a perfect mirror the missalignment will no longer be aparent while still providing the desired parallax effect to the reflections.
 
 ## See Also
 

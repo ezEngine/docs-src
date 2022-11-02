@@ -1,7 +1,7 @@
 # Videos
 
 If you are interested in learning more about ezEngine, this page lists a couple of interesting videos.
-For the full list of available videos, see the [ezEngine YouTube channel](https://www.youtube.com/ezEngine).
+For the full list of available videos, see the [ezEngine YouTube channel](https://www.youtube.com/@ezEngine).
 
 ## ezEngine Overview
 

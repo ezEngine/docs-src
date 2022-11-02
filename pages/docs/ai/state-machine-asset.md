@@ -27,6 +27,10 @@ Select state nodes in the main window to see their *properties*. Here you can gi
 
 Select transition arrows to see their *properties*. Again, you need to **select the transition type**. Typically you also then need to configure the transition's properties.
 
+### Default Initial State
+
+Right click on a state and select **Set as Initial State** to make a state the *default initial state*. That means, when this state machine is used in a [state machine component](state-machine-component.md) or as a [nested state machine](#nested-state-machine), and no *initial state* is selected by the user, this state is used.
+
 ## State Types
 
 You have to select a *state type* for every node in your state machine.
@@ -42,6 +46,8 @@ The message can be sent with a delay. Also, if this state type is configured to 
 A *Nested State Machine* state references another state machine. When the state is entered, it starts executing an instance of that state machine. Messages sent from the nested state machine will be delivered to the same owner game object. As long as the surrounding state stays active, the nested state machine gets updated. Once the surrounding state is exited, execution of the nested state machine is suspended. You can choose whether it gets reset to the initial state, or stay in the last active state. This way, once the nested state machine gets activated again later, it may either start from the beginning, or resume where it left off.
 
 Nested state machines can be very useful to reuse state machines and to make editing easier. Also the fact that a state machine can be suspended and resumed at its last active state allows for more complex behavior.
+
+If no *initial state* is specified, the [default initial state](#default-initial-state) is used.
 
 ## Transition Types
 

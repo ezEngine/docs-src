@@ -7,7 +7,7 @@ This component also enables a state machine to send messages to [components](../
 ## Component Properties
 
 * `Resource`: The [state machine](state-machine-asset.md) to use.
-* `InitialState`: In which state the state machine is supposed to start.
+* `InitialState`: In which state the state machine is supposed to start. If left empty, the [default initial state](state-machine-asset.md#default-initial-state) is used.
 
 ## See Also
 

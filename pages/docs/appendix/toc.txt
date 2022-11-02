@@ -1,3 +1,4 @@
+coding-guidelines.md
 library-structure.md
 container-usage.md
 string-usage.md

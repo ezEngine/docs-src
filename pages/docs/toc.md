@@ -334,6 +334,7 @@
 ## [ezTexConv](tools/texconv.md)
 ## [Unit Tests](tools/unit-tests.md)
 # Appendix
+## [Coding Guidelines](appendix/coding-guidelines.md)
 ## [Library Structure](appendix/library-structure.md)
 ## [Container Usage Guidelines](appendix/container-usage.md)
 ## [String Usage Guidelines](appendix/string-usage.md)

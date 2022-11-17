@@ -41,6 +41,8 @@ When the *Send Message State* gets activated (transitioned into) or deactivated 
 
 The message can be sent with a delay. Also, if this state type is configured to send neither a message on enter, nor on exit, it effectively does nothing and can be used for states that don't require further action.
 
+You can also turn on logging on enter or exit, for better debugging.
+
 ### Nested State Machine
 
 A *Nested State Machine* state references another state machine. When the state is entered, it starts executing an instance of that state machine. Messages sent from the nested state machine will be delivered to the same owner game object. As long as the surrounding state stays active, the nested state machine gets updated. Once the surrounding state is exited, execution of the nested state machine is suspended. You can choose whether it gets reset to the initial state, or stay in the last active state. This way, once the nested state machine gets activated again later, it may either start from the beginning, or resume where it left off.
@@ -49,13 +51,29 @@ Nested state machines can be very useful to reuse state machines and to make edi
 
 If no *initial state* is specified, the [default initial state](#default-initial-state) is used.
 
+### Compound State
+
+A *Compound State* has no functionality by itself, rather it holds an array of other state types. All events (state entered/left) are forwarded to all sub-states equally. Thus it can be used to trigger multiple reactions at the same time.
+
 ## Transition Types
 
 You have to select a *transition type* for every transition in your state machine.
 
 ### Blackboard Conditions
 
-*Blackboard conditions* query the [blackboard](../Miscellaneous/blackboards.md). The transition condition is fulfilled, once all the specified blackboard entries have the desired values.
+*Blackboard conditions* query the [blackboard](../Miscellaneous/blackboards.md). You can configure the transition condition to be fulfilled either when at least one or all the specified blackboard entries have the desired values.
+
+### Timeout Transition
+
+This transition is fulfilled after a certain amount of time has passed. This can be used to automatically transition to the next state after a fixed amount of time. Together with a *compound transition* it can also be used to prevent transitioning before a minimum of time has passed.
+
+### Compound Transition
+
+The *Compound Transition* allows you to create complex logical conditions. It holds an array of other transition types. You can select whether either at least one of them, or all of these conditions need to be met, for the compound transition to be fulfilled.
+
+For example, you can add a blackboard condition and a timeout transition. If you set the compound transition to `AND`, both of these must be true, meaning the transition can only be taken after the blackboard values are correct and the minimum time has passed. If, however, you set it to `OR`, the transition is taken once either the timeout or the blackboard state is fulfilled.
+
+Note that you can use nested compound transitions to create even more complex logical conditions.
 
 ## Executing State Machines
 

@@ -44,6 +44,10 @@ As long as a greyboxing object has the `GenerateCollision` property set, it will
 
 The greyboxing shape is not meant to be used for dynamic collisions. That means, if you attach a dynamic [Jolt](../physics/jolt/jolt-overview.md) actor, it will not get the necessary physical setup to behave correctly. Instead, its collision mesh will simply be disabled entirely. You can therefore use greybox shapes for dynamic objects, but you need to add the required physics shapes yourself.
 
+## Occlusion
+
+Greyboxing geometry can act as occluders for [occlusion culling](../performance/occlusion-culling.md). By default this is enabled for all greyboxing geometry, but it should be disabled for small objects and objects that are unlikely to occlude much. Also consider disabling it for more detailed geometry. If you need an invisible occluder, use an [occluder component](../graphics/occluder-component.md) instead.
+
 ## See Also
 
 * [Scene Editing](scene-editing.md)

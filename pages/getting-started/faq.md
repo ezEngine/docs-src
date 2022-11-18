@@ -28,10 +28,6 @@ Yes, EZ has [visual scripting](../docs/custom-code/visual-script/visual-script-o
 
 We have a [TypeScript](../docs/custom-code/typescript/typescript-overview.md) binding which is pretty decent. The entire game logic in the [Testing Chambers](../samples/testing-chambers.md) project is done with this.
 
-## Rendering
-
-We don't have occlusion culling at the moment (through a CPU rasterizer), though would like to add that at some point.
-
 ## Terrain
 
 We currently have **no terrain system**. We have several ideas how we would like to do this, but this is very low priority at the moment. If you want to do terrain, you should just import static meshes. Of course that also means you need to do terrain sculpting in a separate tool. What we do have, is a simple [heightfield component](../docs/terrain/heightfield-component.md). For basic scenarios this may already be sufficient.

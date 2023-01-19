@@ -8,6 +8,12 @@ How much shake to apply is controlled through the `MinShake` and `MaxShake` prop
 
 However, it is more convenient to instead place a [camera shake volume](camera-shake-volume-components.md). This allows to easily define where in a scene the camera should shake and how much.
 
+The shake is applied as a local rotation around the Y and Z axis, assuming the [camera](../../graphics/camera-component.md) is looking along the positive X axis. Insert a dedicated shake object as a parent of your camera like this:
+
+![Camera shake setup](../media/camera-shake-setup.png)
+
+The component could theoretically also be used to add a shake effect to other decorative objects.
+
 ## Component Properties
 
 * `MinShake`: The minimum amount of shake to apply to the owner object at all times. Measured in angle, because the shake is applied as a rotation.

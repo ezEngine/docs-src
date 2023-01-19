@@ -157,9 +157,11 @@
 #### [PhysX Rope Component](physics/physx/special/physx-rope-component.md)
 # Effects
 ## [Beam Component](effects/beam-component.md)
+## Camera Shake
+### [Camera Shake Component](effects/camera-shake/camera-shake-component.md)
+### [Camera Shake Volume Components](effects/camera-shake/camera-shake-volume-components.md)
 ## [Cloth Sheet Component](effects/cloth-sheet-component.md)
 ## [Decals](effects/decals.md)
-## [Fake Rope Component](effects/fake-rope-component.md)
 ## [Fog](effects/fog.md)
 ## Particle Effects
 ### [Particle Effects](effects/particle-effects/particle-effects-overview.md)
@@ -169,11 +171,14 @@
 ### [Particle Behaviors](effects/particle-effects/particle-behaviors.md)
 ### [Particle Renderers](effects/particle-effects/particle-renderers.md)
 ### [Particle Effect Component](effects/particle-effects/particle-effect-component.md)
-## [Rope Render Component](effects/rope-render-component.md)
-## [Simple Wind Component](effects/simple-wind-component.md)
+## Ropes
+### [Fake Rope Component](effects/ropes/fake-rope-component.md)
+### [Rope Render Component](effects/ropes/rope-render-component.md)
 ## [Sky](effects/sky.md)
-## [Wind Volume Components](effects/wind-volume-components.md)
-## [Wind](effects/wind.md)
+## Wind
+### [Simple Wind Component](effects/wind/simple-wind-component.md)
+### [Wind Volume Components](effects/wind/wind-volume-components.md)
+### [Wind](effects/wind/wind.md)
 # Animation
 ## Common
 ### [Color Gradients](animation/common/color-gradients.md)

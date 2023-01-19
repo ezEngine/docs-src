@@ -4,7 +4,7 @@ The *cloth sheet component* simulates a square patch of cloth as it hangs and sw
 
 <video src="media/wind-cone.webm" width="600" height="600" autoplay loop></video>
 
-Cloth sheets are affected by [wind](wind.md) and movement of the owner object. They do not interact with physics objects and they don't collide with scene geometry.
+Cloth sheets are affected by [wind](wind/wind.md) and movement of the owner object. They do not interact with physics objects and they don't collide with scene geometry.
 
 ## Component Properties
 
@@ -16,7 +16,7 @@ Cloth sheets are affected by [wind](wind.md) and movement of the owner object. T
 
 * `Damping`: How quickly the cloth loses energy while swinging. Higher values make it come to rest more quickly, low values make it swing for a longer time. Once it comes to rest, it takes significantly less processing power.
 
-* `WindInfluence`: How strongly [wind](wind.md) should make the cloth swing.
+* `WindInfluence`: How strongly [wind](wind/wind.md) should make the cloth swing.
 
 * `Flags`: These define at which corners and edges the sheet of cloth is attached to the world.
 
@@ -26,5 +26,5 @@ Cloth sheets are affected by [wind](wind.md) and movement of the owner object. T
 
 ## See Also
 
-* [Fake Rope Component](fake-rope-component.md)
-* [Wind](wind.md)
+* [Fake Rope Component](ropes/fake-rope-component.md)
+* [Wind](wind/wind.md)

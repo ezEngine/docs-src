@@ -6,7 +6,7 @@ The *PhysX rope component* is used to physically simulate ropes, cables and chai
 
 Ropes can be attached to walls as decorative elements (cables, wires), or they can even be attached to [dynamic physics objects](../actors/physx-dynamic-actor-component.md) to link them together. This can be used as a gameplay feature.
 
-If all you need is a decorative rope, that doesn't react to physical stimuli (except [wind](../../../effects/wind.md)), prefer to use a [fake rope component](../../../effects/fake-rope-component.md), as that has a much lower performance overhead.
+If all you need is a decorative rope, that doesn't react to physical stimuli (except [wind](../../../effects/wind/wind.md)), prefer to use a [fake rope component](../../../effects/ropes/fake-rope-component.md), as that has a much lower performance overhead.
 
 ## Setting Up a Rope
 
@@ -24,7 +24,7 @@ The position of the anchors can be moved in the 3D viewport to position the rope
 
 ### Rendering
 
-With just the rope simulation component, you won't be able to see the rope, at all. You also need to attach a [rope render component](../../../effects/rope-render-component.md) to the same game object.
+With just the rope simulation component, you won't be able to see the rope, at all. You also need to attach a [rope render component](../../../effects/ropes/rope-render-component.md) to the same game object.
 
 ### Examples
 
@@ -64,7 +64,7 @@ The rope simulation uses a dedicated PhysX feature ("articulations"), which exhi
 
 ## See Also
 
-* [Fake Rope Component](../../../effects/fake-rope-component.md)
-* [Rope Render Component](../../../effects/rope-render-component.md)
+* [Fake Rope Component](../../../effects/ropes/fake-rope-component.md)
+* [Rope Render Component](../../../effects/ropes/rope-render-component.md)
 * [Physics Joints](../joints/physx-joints.md)
 * [PhysX Actors](../actors/physx-actors.md)

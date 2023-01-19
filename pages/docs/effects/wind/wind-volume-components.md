@@ -19,7 +19,7 @@ All wind volume components have these properties:
 
 * `Radius`: The radius of the wind volume.
 
-<video src="media/wind-sphere.webm" width="600" height="600" autoplay loop></video>
+<video src="../media/wind-sphere.webm" width="600" height="600" autoplay loop></video>
 
 ## Cylinder Wind Volume Properties
 
@@ -28,13 +28,13 @@ All wind volume components have these properties:
   * `Directional`: The wind force is along the main cylinder axis.
   * `Vortex`: The wind whirls around the cylinder's axis. See the video below.
 
-<video src="media/wind-vortex.webm" width="600" height="600" autoplay loop></video>
+<video src="../media/wind-vortex.webm" width="600" height="600" autoplay loop></video>
 
 ## Cone Wind Volume Properties
 
 * `Angle`, `Length`: Angle and length of the cone shape.
 
-<video src="media/wind-cone.webm" width="600" height="600" autoplay loop></video>
+<video src="../media/wind-cone.webm" width="600" height="600" autoplay loop></video>
 
 ## See Also
 

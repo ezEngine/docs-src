@@ -2,7 +2,7 @@
 
 Some components can be animated by wind. For instance [particle effects](../particle-effects/particle-effects-overview.md), [ropes](../ropes/fake-rope-component.md) and [Kraut trees](../../terrain/kraut-overview.md) will react to wind. Usually these animations are for decorative purposes.
 
-<video src="media/wind-cone.webm" width="600" height="600" autoplay loop></video>
+<video src="../media/wind-cone.webm" width="600" height="600" autoplay loop></video>
 
 Wind is implemented as a [world module](../../runtime/world/world-modules.md). Thus, it is possible to have different wind system implementations, and choose the most suitable for each scene. For example, one system may do a full volumetric fluid simulation, whereas another does not.
 

@@ -50,15 +50,3 @@ For the full list of available videos, see the [ezEngine YouTube channel](https:
 ## Scripting with TypeScript
 
 [![video](https://img.youtube.com/vi/T1eDenHWPKc/0.jpg)](https://www.youtube.com/watch?v=T1eDenHWPKc)
-
-## Physics Joints: Basic Setup
-
-[![video](https://img.youtube.com/vi/r3wVz3Xd8xU/0.jpg)](https://www.youtube.com/watch?v=r3wVz3Xd8xU)
-
-## Physics Joints: How to use the Anchor Property
-
-[![video](https://img.youtube.com/vi/xnQEaA8E0SM/0.jpg)](https://www.youtube.com/watch?v=xnQEaA8E0SM)
-
-## See Also
-
-

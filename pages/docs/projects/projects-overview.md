@@ -2,6 +2,10 @@
 
 The term *project* refers to one game or application, its global settings, and all its data. The editor distinguishes between projects, and allows you to configure various options of each one. On the runtime side, however, the concept of a project does not exist, the current state of the runtime represents the project. Therefore, when you switch to a different project in the editor, the engine will in fact be shut down completely and restarted with different settings (editor and engine are two separate processes).
 
+## Video: How to create a project
+
+[![video](https://img.youtube.com/vi/5wskaNSRbzE/0.jpg)](https://www.youtube.com/watch?v=5wskaNSRbzE)
+
 ## Creating a Project
 
 You can use ezEngine entirely without the editor. In that case, you do not need to create a project, at all. Your [application (TODO)](../runtime/application/application.md) is your project and you set up things like the [fileSystem](../runtime/filesystem.md), the [plugins](../custom-code/cpp/engine-plugins.md) and so on, entirely from code.

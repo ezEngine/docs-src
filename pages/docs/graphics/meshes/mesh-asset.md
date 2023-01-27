@@ -12,6 +12,10 @@ On the right hand side the asset properties specify how to import or generate th
 >
 > The mesh asset does not automatically update when you edit its properties. Instead you need to *transform* the asset (`Ctrl+E` or with the rightmost button in the toolbar).
 
+## Video: How to import meshes
+
+[![video](https://img.youtube.com/vi/XBO4OPcF2bs/0.jpg)](https://www.youtube.com/watch?v=XBO4OPcF2bs)
+
 ## Asset Properties
 
 * `PrimitiveType`: This selects how the mesh data is generated. If `From File` is chosen, you need to also specify the `MeshFile` property. If you choose a procedural method, other configuration options appear.

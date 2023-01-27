@@ -152,6 +152,14 @@ To build PhysX yourself:
 >
 > Depending on how you use PhysX, you may need to acquire (buy) a license for it from NVIDIA.
 
+## PolyHaven
+
+Link: [PolyHaven.com](https://polyhaven.com/)
+
+Poly Haven is a small company based in South Africa, working with artists around the world, with the goal to create a constantly growing community-funded resource of open content (CC0 license).
+
+Some of PolyHaven's assets are used in our sample projects.
+
 ## Qt 5
 
 Link: [https://www.qt.io](https://www.qt.io)

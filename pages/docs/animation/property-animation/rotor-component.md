@@ -2,6 +2,10 @@
 
 The *rotor component* is a very useful utility component to rotate an object around an axis. This can be used for simple animations, such as having an itme in the world spin around itself.
 
+## Video: How to make objects rotate and bounce
+
+[![video](https://img.youtube.com/vi/skzDv7IUk2M/0.jpg)](https://www.youtube.com/watch?v=skzDv7IUk2M)
+
 ## Component Properties
 
 * `Speed`: The maximum speed at which the rotor will turn.
@@ -13,7 +17,6 @@ The *rotor component* is a very useful utility component to rotate an object aro
 * `Acceleration, Deceleration`: How fast to speed up and slow down. Use zero if the rotor should reverse course instantly.
 
 ## See Also
-
 
 * [Slider Component](slider-component.md)
 * [Property Animation (TODO)](property-animation-overview.md)

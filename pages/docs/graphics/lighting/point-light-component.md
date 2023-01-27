@@ -8,6 +8,10 @@ Each light source costs performance. Try to reduce the number of light sources t
 
 Note that unless a light source casts [dynamic shadows](dynamic-shadows.md), it's light will shine through walls. Casting shadows is very costly, though. When it is possible to avoid casting shadows, for example by using multiple smaller lights instead, the performance should always be better.
 
+## Video: How to create a light source
+
+[![video](https://img.youtube.com/vi/XBO4OPcF2bs/0.jpg)](https://www.youtube.com/watch?v=XBO4OPcF2bs)
+
 ## Component Properties
 
 See [this page](dynamic-shadows.md#shadow-component-properties) for shadow related component properties.

@@ -4,6 +4,10 @@
 
 ![Greyboxing](media/greyboxing.jpg)
 
+## Video: How to use the greyboxing tool
+
+[![video](https://img.youtube.com/vi/lkh70cpaDPE/0.jpg)](https://www.youtube.com/watch?v=lkh70cpaDPE)
+
 ## Creating Shapes
 
 To activate the greyboxing tool, press the `B` key or click the brick icon in the toolbar. The statusbar will now display how to proceed.

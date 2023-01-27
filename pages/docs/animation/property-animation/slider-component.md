@@ -2,6 +2,10 @@
 
 The *slider component* is a very useful utility component to move an object back and forth along a single axis. This can be used for simple animations, such as having a pickup item bounce up and down, or for simple buttons or sliding doors.
 
+## Video: How to make objects rotate and bounce
+
+[![video](https://img.youtube.com/vi/skzDv7IUk2M/0.jpg)](https://www.youtube.com/watch?v=skzDv7IUk2M)
+
 ## Component Properties
 
 * `Speed`: The maximum speed at which the slider will move.
@@ -18,9 +22,7 @@ The *slider component* is a very useful utility component to move an object back
 * `IsDirectionForwards`: Queries whether the slider is currently moving forwards or backwards.
 * `ToggleDirection`: Toggles the current direction of the slider.
 
-
 ## See Also
-
 
 * [Rotor Component](rotor-component.md)
 * [Property Animation (TODO)](property-animation-overview.md)

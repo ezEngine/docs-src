@@ -44,6 +44,10 @@ The way objects are parented to each other is often very important. There are mu
 
 * **Paste As Child:** When you copied an object, you can select a desired parent node and then use *Paste As Child* from the context menu, to paste a new object and attach it to the selected object right away.
 
+#### Video: How to parent objects
+
+[![video](https://img.youtube.com/vi/7wPy3g75weY/0.jpg)](https://www.youtube.com/watch?v=7wPy3g75weY)
+
 ### Blocking Out a Scene
 
 To get some geometry into your scene, you can use the [greyboxing](greyboxing.md) tool. The nice thing about greyboxing geometry is, that it automatically sets up colliders, as well, thus once you try to play your game, you won't fall through the geometry.

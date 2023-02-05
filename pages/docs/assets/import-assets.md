@@ -34,8 +34,15 @@ Once you click *Import* the asset documents are generated and you can then open 
 
 The automatic import creates the documents using a set of rules to fill out its properties, depending on the template that you selected for it. So for example an image imported as a "diffuse texture" and one imported as a "normal map" are mostly the same, except that a few options are already configured in a certain way for you. You should review all options for correctness afterwards.
 
-## See Also
+## Video: How to import textures
 
+[![video](https://img.youtube.com/vi/x4qUFga-Jis/0.jpg)](https://www.youtube.com/watch?v=x4qUFga-Jis)
+
+## Video: How to import meshes
+
+[![video](https://img.youtube.com/vi/XBO4OPcF2bs/0.jpg)](https://www.youtube.com/watch?v=XBO4OPcF2bs)
+
+## See Also
 
 * [Assets](assets-overview.md)
 * [Asset Browser](asset-browser.md)

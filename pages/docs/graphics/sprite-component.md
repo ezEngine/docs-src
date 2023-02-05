@@ -22,4 +22,4 @@ Although sprites have a world space size, their on-screen size is clamped to a m
 
 ## See Also
 
-
+* [Textures](textures-overview.md)

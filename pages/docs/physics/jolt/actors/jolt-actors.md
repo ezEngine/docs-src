@@ -28,6 +28,10 @@ Whether a dynamic actor is treated as a kinematic actor or not, is an on/off swi
 
 Dynamic actors are set up by attaching a [dynamic actor component](jolt-dynamic-actor-component.md) to a [game object](../../../runtime/world/game-objects.md).
 
+### Video: How to create a physics object
+
+[![video](https://img.youtube.com/vi/hlEUdO5yVig/0.jpg)](https://www.youtube.com/watch?v=hlEUdO5yVig)
+
 ## Triggers
 
 Triggers are a special type of actor. Triggers don't interfere with the simulation, meaning nothing ever collides with them. Instead, triggers monitor whether any other actor overlaps with their volume. If so, they raise an [event message](../../../runtime/world/world-messaging.md#event-messages) to inform other code.

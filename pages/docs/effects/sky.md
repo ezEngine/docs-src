@@ -2,6 +2,10 @@
 
 By default the background of a rendered scene is black. To change this, you need to create a game object in the scene and attach a sky component.
 
+## Video: How to set up a Skybox
+
+[![video](https://img.youtube.com/vi/i545O9gm1cw/0.jpg)](https://www.youtube.com/watch?v=i545O9gm1cw)
+
 ## SkyBox component
 
 The *SkyBox component* implements a simply sky, which displays a cubemap texture as a static background. The position and scale of the game object has no effect on the sky, it will always appear behind all other geometry. The rotation, however, can be used to orient the sky as desired.
@@ -15,7 +19,6 @@ The *SkyBox component* implements a simply sky, which displays a cubemap texture
 * **UseFog, VirtualDistance**: If enabled, [fog](fog.md) will be applied to the sky. In that case *VirtualDistance* is being used to compute how foggy the sky should appear.
 
 ## See Also
-
 
 * [Fog](fog.md)
 * [Textures](../graphics/textures-overview.md)

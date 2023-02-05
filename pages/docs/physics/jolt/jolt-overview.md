@@ -30,6 +30,10 @@ Often games have invisible areas that either need to be reached as a goal, or th
 
 Several non-Jolt components either use the available physics engine, or even expose new functionality. For example the [raycast placement component](../../gameplay/raycast-placement-component.md) does a raycast (using the abstract physics interface) and exposes the hit position to the user by moving a linked object there. The [area damage component](../../gameplay/area-damage-component.md) does a shape query and both damages and pushes the found physical objects.
 
+## Video: How to create a physics object
+
+[![video](https://img.youtube.com/vi/hlEUdO5yVig/0.jpg)](https://www.youtube.com/watch?v=hlEUdO5yVig)
+
 ## See Also
 
 * [Jolt Physics](https://github.com/jrouwe/JoltPhysics)

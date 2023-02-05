@@ -20,6 +20,10 @@ If you additionally set a *Rotation Step*, the objects will line up as in the th
 
 ![Duplicate](media/duplicate-2.jpg)
 
+### Video: How to duplicate objects
+
+[![video](https://img.youtube.com/vi/sH3eVNE0Jds/0.jpg)](https://www.youtube.com/watch?v=sH3eVNE0Jds)
+
 ## Delta Transform
 
 The *Delta Transform* dialog can be opened with `CTRL+M`. It can be used to move, rotate or scale objects precisely by typing in the desired amount of change. Its true power, however, lies in adding random variation to objects, to make them look more natural.
@@ -63,7 +67,6 @@ Now our small patch of plants looks much less artificial:
 You could go even further and apply a random scale to each object, as well.
 
 ## See Also
-
 
 * [Editing Gizmos](gizmos.md)
 * [Scene Editing](scene-editing.md)

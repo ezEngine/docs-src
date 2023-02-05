@@ -4,6 +4,10 @@ When you build a game you need many different objects that you can place in your
 
 These *prefabricated* objects are commonly referred to as *prefabs*. Generally, prefabs in EZ are the same as [scenes](../scenes/scene-editing.md). Therefore the workflow for creating prefabs is mostly identical.
 
+## Video: How to use Prefabs
+
+[![video](https://img.youtube.com/vi/WuuT0kNk73k/0.jpg)](https://www.youtube.com/watch?v=WuuT0kNk73k)
+
 ## Templates and Instances
 
 When talking about prefabs, you need to distinguish between *prefab templates* and *prefab instances*.
@@ -63,7 +67,6 @@ Prefab templates are allowed to have multiple top-level nodes. When a prefab is 
 This is especially important to keep in mind when writing custom (script) code that searches for a node within a hierarchy. You can give a name to the prefab reference node, and therefore find a specific instance of the prefab. From there on, you can continue searching for nodes by name, and thus find a specific sub-node from the prefab template.
 
 ## See Also
-
 
 * [Scene Editing](../scenes/scene-editing.md)
 * [Spawn Component](../gameplay/spawn-component.md)

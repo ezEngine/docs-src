@@ -12,6 +12,10 @@ All texture assets show a **3D preview**. Here you can move the camera around to
 
 On the right-hand side you see the property grid where you choose the **texture settings**. Since transforming a texture can take quite some time, these assets are not automatically updated when you change their properties or even save the asset. Instead, **transform the asset manually** either by clicking the transform button in the toolbar or with `Ctrl + E`.
 
+## Video: How to import textures
+
+[![video](https://img.youtube.com/vi/x4qUFga-Jis/0.jpg)](https://www.youtube.com/watch?v=x4qUFga-Jis)
+
 ## 2D Texture Asset
 
 The following properties are available:
@@ -67,7 +71,6 @@ Apart from some properties shared with 2D texture assets, render targets have th
 **CVarResScale:** If the resolution is read from a CVar, this allows to scale it. For instance to create a *half resolution* render target.
 
 ## See Also
-
 
 * [Materials](../materials/materials-overview.md)
 * [Render to Texture (TODO)](render-to-texture/render-to-texture.md)

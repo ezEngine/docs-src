@@ -4,6 +4,10 @@
 
 *Decals* are textures that are projected onto the underlying geometry. Decals can be used to to apply text and other signs to geometry. The most common use-case, though, is to make scenes look more natural by simulating wear and tear, such as dirt and scratches. Decals can also be used to simulate dynamic surface imperfections like bullet holes, soot and blood spatters.
 
+## Video: How to make decals
+
+[![video](https://img.youtube.com/vi/wtDagwkcTpU/0.jpg)](https://www.youtube.com/watch?v=wtDagwkcTpU)
+
 ## Decal Asset
 
 Before being able to place a *decal component*, you must create a decal [asset](../assets/assets-overview.md).
@@ -58,4 +62,3 @@ If disabled, the decal will completely overwrite the normal of the underlying ge
 ## See Also
 
 * [Particle Effects](particle-effects/particle-effects-overview.md)
-

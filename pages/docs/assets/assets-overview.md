@@ -28,6 +28,10 @@ For the rare case that you need to know the actual GUID of an asset, you can rig
 
 The only caveat is, that you should never duplicate an asset by actually copy and pasting an asset file, as this would result in two assets with the same GUID. The editor will try to detect and fix such cases, but it may not work out the way you planned. Instead use the *File > Save as...* functionality to create a copy of an asset with a different name. This will assign a new asset GUID to the new asset document.
 
+### Video: How to copy asset documents
+
+[![video](https://img.youtube.com/vi/jHB6TY2FulI/0.jpg)](https://www.youtube.com/watch?v=jHB6TY2FulI)
+
 ## Asset Browser
 
 All assets are listed in the [asset browser](asset-browser.md).

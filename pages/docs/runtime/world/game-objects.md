@@ -22,6 +22,10 @@ You can query or modify either, though in the editor the property grid only allo
 
 The global transform is computed from the local transform and the global transform of the parent (recursively). For *dynamic* objects (see below) the global transform is recomputed regularly. *Static* objects will not be updated after their initial placement.
 
+### Video: How to parent objects
+
+[![video](https://img.youtube.com/vi/7wPy3g75weY/0.jpg)](https://www.youtube.com/watch?v=7wPy3g75weY)
+
 ## Static vs. Dynamic Objects
 
 *Static* game objects are objects that are considered to never move. *Dynamic* objects, however, can move around the scene arbitrarily. Internally the engine separates these two types of objects into different memory regions. The object transform for dynamic objects is updated *every frame*. That means from a performance perspective it makes no difference whether a dynamic object was moved in a frame or not. The transforms for static objects, however, are only updated when it is needed (after creation). If you try to move a static object, you will see warnings in the [log](../../debugging/logging.md) in development builds, and the object will not move.

@@ -6,6 +6,10 @@ The *camera component* is used to tell the renderer from which position and with
 
 When an object with a camera component is selected, the editor shows a preview of what the camera sees in the top left corner.
 
+## Video: How to add a Game Camera
+
+[![video](https://img.youtube.com/vi/PNBwuQsddkc/0.jpg)](https://www.youtube.com/watch?v=PNBwuQsddkc)
+
 ## Main Camera
 
 The camera settings that are used for rendering the scene are fully under control of the [game state](../runtime/application/game-state.md). Every frame it decides where to place the main camera and with which settings. At this point, no camera component is involved, your game may control the main camera without having any camera component in the scene.
@@ -76,7 +80,6 @@ Note that rendering to a texture involves additional steps. See the chapter abou
 * `Aperture`, `ShutterTime`, `ISO`, `ExposureCompensation`: These options are currently only used for *tonemapping*. They all affect the final exposure value, which means you can adjust any one of them to change the brightness of the output. In the future these values may be used for motion blur and depth-of-field.
 
 ## See Also
-
 
 * [Editor Camera](../scenes/editor-camera.md)
 * [Render to Texture (TODO)](render-to-texture/render-to-texture.md)

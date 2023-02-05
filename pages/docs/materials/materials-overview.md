@@ -6,6 +6,10 @@
 
 The image above shows the material asset editor. Material assets are often automatically created when you [import a mesh asset](../assets/import-assets.md). For example importing an `FBX` or `OBJ` file will not only create a mesh asset, but can additionally create the necessary material and texture assets for you. Unfortunately, this process is not always perfect, so you should always review which assets were created and how.
 
+## Video: How to create a material
+
+[![video](https://img.youtube.com/vi/km40-WyzkiU/0.jpg)](https://www.youtube.com/watch?v=km40-WyzkiU)
+
 ## Physical Properties
 
 Although materials are mainly used to configure the rendering, they can optionally reference a [surface](surfaces.md), which is used to define physical properties (e.g. friction) and gameplay relevant interactions. Whether the referenced surface is actually used depends on where the material is applied. For instance, on a [greyboxing component](../scenes/greyboxing.md) the material sets up both the graphics and the physics properties, on a [mesh component](../graphics/meshes/mesh-component.md) it only sets up the rendering and you would need to additionally select a surface for the corresponding [collision mesh](../physics/jolt/collision-shapes/jolt-collision-meshes.md).

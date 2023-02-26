@@ -3,6 +3,7 @@
 # [Asteroids Sample](asteroids.md)
 # [Compute Shader Histogram Sample](cs-histogram.md)
 # [LineCount Sample](line-count.md)
+# [PacMan Sample](pacman.md)
 # [RTS Sample](rts.md)
 # [Sample Game Plugin](sample-game-plugin.md)
 # [Shader Explorer Sample](shader-explorer.md)

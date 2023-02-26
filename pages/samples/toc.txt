@@ -3,6 +3,7 @@ screenshots.md
 asteroids.md
 cs-histogram.md
 line-count.md
+pacman.md
 rts.md
 sample-game-plugin.md
 shader-explorer.md

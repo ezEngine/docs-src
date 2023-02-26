@@ -14,7 +14,7 @@ Afterwards [run the scene](../docs/editor/run-scene.md). For the best experience
 
 This tutorial video shows how to build a PacMan game from scratch. It walks you through the project setup and the fundamental steps to get the game logic working. To get a deeper insight into how to make a more fully functional game, have a look at the code of the sample project.
 
-[![video](https://img.youtube.com/vi/tyvcO50WPkQ/0.jpg)](https://www.youtube.com/watch?v=tyvcO50WPkQ)
+[![video](https://img.youtube.com/vi/-qsysf06xsU/0.jpg)](https://www.youtube.com/watch?v=-qsysf06xsU)
 
 ## Project
 

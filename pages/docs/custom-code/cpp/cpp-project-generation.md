@@ -11,6 +11,10 @@ The most convenient way, however, is to let the editor create a stand-alone proj
 > One downside with this approach is that your solution does **not** contain the EZ engine sources. That makes it less convenient to search for existing functionality, look up code [API docs](../../api-docs.md) and stepping through EZ code while debugging.
 However, if you want that, you can include the generated plugin as an [external project](../../build/cmake-config.md#external-projects) into the EZ engine solution.
 
+## Video: How to add custom C++ code to your game
+
+[![video](https://img.youtube.com/vi/EGobr-BqhSI/0.jpg)](https://www.youtube.com/watch?v=EGobr-BqhSI)
+
 ## How to Generate a New Solution
 
 1. Select *Editor > Open C++ Project...*. The following dialog will appear:

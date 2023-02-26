@@ -6,6 +6,10 @@ The animated mesh asset is very similar to the [mesh asset](../../graphics/meshe
 
 Animated meshes are placed in a scene with a dedicated [animated mesh component](animated-mesh-component.md). Which animations are played on it can be controlled with a [simple animation component](simple-animation-component.md) or an [animation controller component](animation-controller/animation-controller-component.md).
 
+## Video: HHow to import an animated mesh
+
+[![video](https://img.youtube.com/vi/yT-F5d-V3HU/0.jpg)](https://www.youtube.com/watch?v=yT-F5d-V3HU)
+
 ## Asset Properties
 
 * `MeshFile`: The file that contains the mesh data. For animated meshes prefer to use **GLB** (binary GLTF) files. **FBX** files can be used as well, though due to FBX's complexity chances are higher that it won't work as expected. The referenced file must contain the mesh data with skinning information. It doesn't need to contain any animation clips.

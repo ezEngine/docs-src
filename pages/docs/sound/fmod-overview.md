@@ -8,6 +8,10 @@ ezEngine integrates FMOD with a plugin.
 >
 > Be aware that FMOD is a commercial product. Before you distribute a project made with EZ that includes FMOD functionality, check the [FMOD licensing options](https://www.fmod.com/licensing).
 
+## Video: How to set up Fmod for Sound
+
+[![video](https://img.youtube.com/vi/pRd_5ErH5aA/0.jpg)](https://www.youtube.com/watch?v=pRd_5ErH5aA)
+
 ## Using a Different FMOD SDK
 
 To compile the FMOD plugin, parts of the official FMOD SDK are necessary. On Windows, EZ contains these files already. If you build EZ for a different platform, or want to use a newer FMOD version, follow these steps:

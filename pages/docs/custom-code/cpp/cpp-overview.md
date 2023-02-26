@@ -2,6 +2,10 @@
 
 To extend the engine with C++ code, you should put your code into an [engine plugin](engine-plugins.md). This enables both the editor as well as [ezPlayer](../../tools/player.md) to load and execute your code.
 
+## Video: How to add custom C++ code to your game
+
+[![video](https://img.youtube.com/vi/EGobr-BqhSI/0.jpg)](https://www.youtube.com/watch?v=EGobr-BqhSI)
+
 ## Build Setup
 
 The first thing you need to set up is your build system, meaning you need to have a project for your plugin. The easiest way to do so, is to use the [C++ Project Generation](cpp-project-generation.md) functionality in the editor. Another option is to add your own project into the ezEngine source tree and just use EZ's CMake build setup and generated solution.

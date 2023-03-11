@@ -183,6 +183,10 @@
 ## Common
 ### [Color Gradients](animation/common/color-gradients.md)
 ### [Curves](animation/common/curves.md)
+## Paths
+### [Follow Path Component](animation/paths/follow-path-component.md)
+### [Path Component](animation/paths/path-component.md)
+### [Path Node Component](animation/paths/path-node-component.md)
 ## Property Animation
 ### [Color Animation Component](animation/property-animation/color-animation-component.md)
 ### [MoveTo Component (TODO)](animation/property-animation/move-to-component.md)

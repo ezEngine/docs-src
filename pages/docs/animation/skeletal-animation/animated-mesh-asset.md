@@ -6,7 +6,7 @@ The animated mesh asset is very similar to the [mesh asset](../../graphics/meshe
 
 Animated meshes are placed in a scene with a dedicated [animated mesh component](animated-mesh-component.md). Which animations are played on it can be controlled with a [simple animation component](simple-animation-component.md) or an [animation controller component](animation-controller/animation-controller-component.md).
 
-## Video: HHow to import an animated mesh
+## Video: How to import an animated mesh
 
 [![video](https://img.youtube.com/vi/yT-F5d-V3HU/0.jpg)](https://www.youtube.com/watch?v=yT-F5d-V3HU)
 

@@ -296,6 +296,8 @@
 ### [TypeScript Component](custom-code/typescript/ts-component.md)
 ## Visual Script
 ### [Custom Code with Visual Scripts](custom-code/visual-script/visual-script-overview.md)
+## Game Logic
+### [Forward Events To Game State Component](custom-code/game-logic/forward-events-to-game-state-component.md)
 # Runtime
 ## Application
 ### [Application (TODO)](runtime/application/application.md)

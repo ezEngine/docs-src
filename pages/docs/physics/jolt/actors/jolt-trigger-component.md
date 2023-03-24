@@ -18,6 +18,8 @@ When a trigger fires, it sends the event message `ezMsgTriggerTriggered`. The me
 >
 > Physics triggers only detect overlaps with other physics objects. For such scenarios they are an efficient solution. If, however, you need to query overlaps with other kinds of objects, you should take a look at the [spatial system](../../../runtime/world/spatial-system.md).
 
+To achieve more complex trigger behavior, for instance to only activate something after a delay, you can utilize the [trigger delay modifier component](../../../custom-code/game-logic/trigger-delay-modifier-component.md).
+
 ## Component Properties
 
 * `CollisionLayer`: The [collision layer](../collision-shapes/jolt-collision-layers.md) to use.
@@ -25,6 +27,7 @@ When a trigger fires, it sends the event message `ezMsgTriggerTriggered`. The me
 
 ## See Also
 
+* [Trigger Delay Modifier Component](../../../custom-code/game-logic/trigger-delay-modifier-component.md)
 * [Jolt Actors](jolt-actors.md)
 * [Jolt Shapes](../collision-shapes/jolt-shapes.md)
 * [Spatial System](../../../runtime/world/spatial-system.md)

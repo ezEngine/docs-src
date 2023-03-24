@@ -298,6 +298,7 @@
 ### [Custom Code with Visual Scripts](custom-code/visual-script/visual-script-overview.md)
 ## Game Logic
 ### [Forward Events To Game State Component](custom-code/game-logic/forward-events-to-game-state-component.md)
+### [Trigger Delay Modifier Component](custom-code/game-logic/trigger-delay-modifier-component.md)
 # Runtime
 ## Application
 ### [Application (TODO)](runtime/application/application.md)

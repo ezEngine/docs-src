@@ -274,6 +274,9 @@
 # Miscellaneous
 ## [Blackboard Component](Miscellaneous/blackboard-component.md)
 ## [Blackboards](Miscellaneous/blackboards.md)
+## Components
+### [Comment Component](Miscellaneous/components/comment-component.md)
+### [Shape Icon Component](Miscellaneous/components/shape-icon-component.md)
 ## [Config File Resource](Miscellaneous/config-file-resource.md)
 ## [ImageData Asset](Miscellaneous/imagedata-asset.md)
 # Custom Code

@@ -6,7 +6,7 @@ If a system requires a blackboard, it will typically search for a blackboard com
 
 For example the [animation controller](../animation/skeletal-animation/animation-controller/animation-controller-overview.md) is controlled by modifying blackboard entries, which the controller reads. You can modify the entries through [custom code](../custom-code/custom-code-overview.md). For this, the blackboard component has to be attached either to the same object, or a parent object.
 
-## Properties
+## Component Properties
 
 * `BlackboardName`: The *name* for the blackboard. This could be used to search for a specific blackboard (if multiple are available), however, that is rarely a problem.
 

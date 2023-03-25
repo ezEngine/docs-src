@@ -12,7 +12,7 @@ All that the marker component does, is to insert a sphere of a given size and [c
 >
 > Keep in mind that the number of categories available for use is limited to about 25. You should therefore prefer generic categories where possible.
 
-## Properties
+## Component Properties
 
 `Marker`: Which [spatial data category](../runtime/world/spatial-system.md#spatial-data-categories) to use for this marker.
 
@@ -32,7 +32,6 @@ The marker component can be used for many purposes. Here are a couple of example
 For an example how marker components and spatial queries can be used to find nearby objects, have a look at the [Sample Game Plugin](../../samples/sample-game-plugin.md).
 
 ## See Also
-
 
 * [Spatial System](../runtime/world/spatial-system.md)
 * [Sample Game Plugin](../../samples/sample-game-plugin.md)

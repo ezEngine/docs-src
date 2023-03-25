@@ -7,10 +7,6 @@ However, since they are not part of the [world](../../runtime/world/worlds.md), 
 
 This way, a game state can receive information, such as when a trigger gets activated. Multiple of these components can exist in a scene, gathering and forwarding messages from many different game objects, so that the game state can react to all of them.
 
-## Properties
-
-None.
-
 ## See Also
 
 * [Game States](../../runtime/application/game-state.md)

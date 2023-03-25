@@ -10,7 +10,7 @@ Note that the animation controller itself cannot *react* to events. For that pur
 
 When this node is triggered, it broadcasts an `ezMsgGenericEvent` with `Message` set to the value of `EventName`.
 
-### Properties
+### Node Properties
 
 * **EventName**: The string that is used as the `Message` property of the `ezMsgGenericEvent` that is broadcast.
 

@@ -8,7 +8,7 @@ The *enter* and *leave* events can be sent with a delay. The *enter* event is on
 
 The sent `ezMsgTriggerTriggered` does not contain a reference to the *triggering* object, since there may be multiple and they may change randomly.
 
-## Properties
+## Component Properties
 
 * `ActivationDelay`, `DeactivationDelay`: The time that an object needs to be present inside the trigger, or have fully left the trigger area, before the trigger is considered to be activated or deactivated. Only after this delay is the `ezMsgTriggerTriggered` event sent to the parent object.  
 

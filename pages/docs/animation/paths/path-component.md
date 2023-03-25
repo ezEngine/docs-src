@@ -1,10 +1,10 @@
-# Path Component
+# Path Shape Component
 
-The *path component* is used to set up path shapes. Other components, such as the [follow path component](follow-path-component.md) can then use the path shape to animate objects or to build geometry.
+This component is used to set up path shapes. Other components, such as the [follow path component](follow-path-component.md) can then use the path shape to animate objects or to build geometry.
 
 <video src="media/path-component.webm" width="800" height="600" autoplay loop></video>
 
-## How to Configure a Path
+## How to Configure a Path Shape
 
 1. Add a [game object](../../runtime/world/game-objects.md) and attach a *path component* to it.
 1. Add several game objects as child objects (at least three)
@@ -20,7 +20,7 @@ The *path component* is used to set up path shapes. Other components, such as th
 1. Position the child objects in the world to form a path. Make sure the `Visualize Path` flag is enabled on the path component, so that you can see a preview of the shape.
 1. Additionally to the options on the path component itself, you can also edit each node's properties, to adjust the curvature, and whether the path should curl around itself.
 
-## What to do with a Path
+## What to do with a Path Shape
 
 A path component by itself has no functionality other than to define a shape. Currently these component types can utilize path shapes:
 

@@ -14,7 +14,7 @@ When the [tag](../projects/tags.md) `AutoColMesh` is set on the owner game objec
 
 Currently all triangles in the collision mesh will all use the same [surface](../materials/surfaces.md), the one set on the main material.
 
-## Properties
+## Component Properties
 
 `HeightfieldImage:` The [ImageData asset](../Miscellaneous/imagedata-asset.md) that contains the terrain height information.
 
@@ -37,6 +37,5 @@ Currently all triangles in the collision mesh will all use the same [surface](..
 1. Deactivate the collision mesh generation, if the terrain (or pile of rubble) is purely visual.
 
 ## See Also
-
 
 * [Terrain and Vegetation](terrain-overview.md)

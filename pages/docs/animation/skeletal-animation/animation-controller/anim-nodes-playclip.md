@@ -22,7 +22,7 @@ All animation controller nodes that sample animation clips share these propertie
 
   These values determine how responsive animation playback is in regards to input changes. Immediately fading in and out can drastically reduce delay between input and a visual reaction, but may also only work well with certain animations.
 
-## Properties
+## Node Properties
 
 * `Clips`: One or multiple [animation clips](../animation-clip-asset.md) to play. If more than one is added, the node will pick one at random in every loop iteration.
 

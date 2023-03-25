@@ -6,7 +6,7 @@ These animation controller nodes can be used to find problems.
 
 The *log node* simply prints a *dev* string to the [log](../../../debugging/logging.md) whenever it gets activated.
 
-### Properties
+### Node Properties
 
 * `Text`: The text to print. This may include placeholders for the input values. Use `{0}` to `{3}` to embed the values from `Input0` to `Input3` respectively. 
 

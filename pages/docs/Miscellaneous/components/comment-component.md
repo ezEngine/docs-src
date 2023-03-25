@@ -6,7 +6,7 @@ The *comment component* is for adding notes to objects in a scene. These comment
 >
 > Comment components are not meant for use at runtime. All instances are automatically stripped from a scene during export.
 
-## Properties
+## Component Properties
 
 * `Comment`: The string to store at the component.
 

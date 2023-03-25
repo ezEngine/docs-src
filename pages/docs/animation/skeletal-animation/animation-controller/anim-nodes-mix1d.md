@@ -16,7 +16,7 @@ For this to work, all animation clips have to follow the rule that they do the s
 
 In the video above you can see such a transition in action. The *lerp* input value is varyied to demonstrate how the resulting interpolated animation looks. Here the node also has an *idle* and a *walk backward* clip, so it can interpolate between even more states.
 
-## Properties
+## Node Properties
 
 See [common properties](anim-nodes-playclip.md#common-properties).
 

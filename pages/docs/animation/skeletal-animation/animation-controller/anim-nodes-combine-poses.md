@@ -8,7 +8,7 @@ Certain nodes in the animation controller graph allow you to accomplish this.
 
 Currently the `Combine Poses` node is the only available node to combine multiple poses in *local space* into one.
 
-### Properties
+### Node Properties
 
 * **MaxPoses**: The maximum number of *active* poses to blend. You can have more input pins connected to this node. This number just says how many of them will be blended, if more poses than this are actually active at any given time. If more poses are active, the ones with the lowest *weight* will be ignored.
 

@@ -9,7 +9,7 @@ The animation controller provides nodes to read and write values from and to a [
 
 When activated or deactivated, this node writes a given value to the blackboard.
 
-### Properties
+### Node Properties
 
 * **BlackboardEntry**: The name of the blackboard entry (variable) to write to.
 
@@ -29,7 +29,7 @@ When activated or deactivated, this node writes a given value to the blackboard.
 
 This node constantly monitors a blackboard value and compares it to a reference value. Whenever the comparison yields `true`, the `Active` output pin is enabled, otherwise disabled.
 
-### Properties
+### Node Properties
 
 * **BlackboardEntry**: The name of the blackboard entry (variable) to monitor.
 
@@ -45,7 +45,7 @@ This node constantly monitors a blackboard value and compares it to a reference 
 
 This node outputs the value of a specific blackboard entry. The number value can then be forwarded to other nodes.
 
-### Properties
+### Node Properties
 
 * **BlackboardEntry**: The name of the blackboard entry (variable) to read.
 
@@ -53,9 +53,7 @@ This node outputs the value of a specific blackboard entry. The number value can
 
 * **Number**: The value of the blackboard entry. If the entry doesn't exist, the pin outputs zero.
 
-
 ## See Also
-
 
 * [Animation Controller](animation-controller-overview.md)
 * [Skeletal Animations](../skeletal-animation-overview.md)

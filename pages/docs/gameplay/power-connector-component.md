@@ -19,7 +19,7 @@ To have a sensor (or other effects) only active when the connector is grabbed, p
 
 To build a cable, don't forget to set each end as the *buddy* of the other end.
 
-## Properties
+## Component Properties
 
 * `Output`: Sets how much output (of whatever kind) this connector produces.
 

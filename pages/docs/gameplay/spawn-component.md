@@ -2,7 +2,7 @@
 
 The *SpawnComponent* is frequently used to spawn instances of [prefabs](../prefabs/prefabs-overview.md) at runtime. The component references a prefab. It can then either spawn this prefab continuously in intervals, or at will by triggering the spawn command from (script) code.
 
-## Properties
+## Component Properties
 
 `Prefab:` The [prefab](../prefabs/prefabs-overview.md) that will be spawned by this component.
 

@@ -20,7 +20,7 @@ Through the `X` and `Y` input pins you provide a 2D coordinate. During testing y
 
 The node will then take that input coordinate to decide which clips should be used with what influence, and mix them together to a single output pose.
 
-## Properties
+## Node Properties
 
 See [common properties](anim-nodes-playclip.md#common-properties).
 

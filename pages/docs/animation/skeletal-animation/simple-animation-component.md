@@ -28,7 +28,6 @@ The component will broadcast the event `ezMsgGenericEvent` every time it encount
 
 ## See Also
 
-
 * [Skeletal Animations](skeletal-animation-overview.md)
 * [Animation Clip Asset](animation-clip-asset.md)
 * [Animated Mesh Component](animated-mesh-component.md)

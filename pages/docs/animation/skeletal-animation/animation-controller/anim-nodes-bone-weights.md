@@ -18,7 +18,7 @@ Bone weights are typically connected directly to an animation clip sampling node
 
 This node creates a mask for every bone in the skeleton. By default, the mask is zero for every bone. You then add bones by name to the `RootBones` array. Every bone that is reachable from any of the root bones, will get a weight of one. You can specify multiple root bones, in case that an animation should for example affect both arms, but not the spine and head.
 
-### Properties
+### Node Properties
 
 * **Weight**: The overall weight for the mask. A higher weight means that animation clips that use this weight mask will have stronger influence on the final pose.
 

@@ -6,7 +6,7 @@ The animation controller provides a couple of nodes to evaluate basic arithmatic
 
 This node sets its output pin to *triggered* when **all** incoming connections on the input pin are triggered at the same time. Note that even though there is only a single input pin, it can be connected to multiple sources.
 
-### Properties
+### Node Properties
 
 * **NegateResult**: If set, the output value will be negated. This effectively turns it into a `NAND` logic node.
 
@@ -14,7 +14,7 @@ This node sets its output pin to *triggered* when **all** incoming connections o
 
 This node sets its output pin to *triggered* when **any** incoming connections on the input pin are triggered. Note that even though there is only a single input pin, it can be connected to multiple sources.
 
-### Properties
+### Node Properties
 
 * **NegateResult**: If set, the output value will be negated. This effectively turns it into a `NOR` logic node.
 
@@ -28,7 +28,7 @@ As with the other nodes, you can connect multiple sources to this input pin. In 
 
 This node can be used to check whether a number value compares in a certain way against a reference value. For example whether some input value is larger than 0.5. If this is the case, the output pin will be triggered.
 
-### Properties
+### Node Properties
 
 * **ReferenceValue**: The reference value to compare the incoming value against.
 * **Comparison**: The mathematical operation with which to compare the two values.
@@ -47,7 +47,7 @@ The math expression node takes up to four different numbers as its input, plugs 
 
 The expression must be syntactically correct, otherwise the node prints an error to the [log](../../../debugging/logging.md).
 
-### Properties
+### Node Properties
 
 **Expression**: The expression can use the following:
 

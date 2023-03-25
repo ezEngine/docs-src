@@ -8,7 +8,7 @@ Such sequences are common for actions such as jumping or climbing a ladder. The 
 
 The video above shows such a sequence. Here the node uses a *point gun* animation clip for the start, middle and end clip. The *point gun* clip is only a single keyframe and just represents a static pose. Using it for the start clip, allows to slowly fade from the idle state to the pointing state, making the character raise their arm. Using it for the end state similarly allows to fade it out over a short duration, making the character lower their arm slowly as well. As the middle clip there are two options: *point gun* and *shoot gun*. Using the `ClipIndex` input pin, the game code can switch at any time whether the gun is only pointed or shot as well.
 
-## Properties
+## Node Properties
 
 See [common properties](anim-nodes-playclip.md#common-properties).
 

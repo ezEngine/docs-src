@@ -82,6 +82,7 @@ These properties are shared among all joint types:
 * `PairCollision`: If disabled, joined actors will not collide with each other. This can be preferable, because then the joined actors may overlap.
 * `ParentActor`, `ChildActor`: References to objects with [actor components](../actors/jolt-actors.md) to link with this constraint. See [joining actors](#joining-actors) above.
 * `ChildActorAnchor`: An optional reference to an object that tells the constraint where it should attach to the child actor. See [using the ChildActorAnchor property](#using-the-childactoranchor-property) above.
+* `BreakForce`, `BreakTorque`: If either of these values is larger than zero, the constraint is *breakable*. That means if during the physics simulation the force or torque acting upon the constraint exceeds this threshold, the constraint will be deleted and the bodies won't be joined any longer. When this happens, `ezMsgPhysicsJointBroke` will be sent as an [event message](../../../runtime/world/world-messaging.md).
 
 ## Constraint Types
 

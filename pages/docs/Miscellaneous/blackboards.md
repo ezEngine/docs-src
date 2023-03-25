@@ -8,6 +8,16 @@ Blackboards are a convenient data structure to share information between differe
 
 In C++ code you can use the `ezBlackboard` data structure directly. In scenes and [prefabs](../prefabs/prefabs-overview.md) you can attach a [blackboard component](blackboard-component.md) to an object. Systems that require a blackboard to function, such as [animation controllers](../animation/skeletal-animation/animation-controller/animation-controller-component.md), will traverse the object hierarchy upwards to find a blackboard component which they can use to read and write their state.
 
+## Global Blackboards
+
+Through the [blackboard component](blackboard-component.md) you create *local blackbards* that store object specific data and usually are used within that object hierarchy.
+
+However, you can also create *global blackboards*. These will exist as long as anyone references them. If, for instance, a [game state](../runtime/application/game-state.md) holds on to a global blackboard, it will be available throughout the application lifetime, even across worlds.
+
+Global blackboards are created from C++ using `ezBlackboard::GetOrCreateGlobal()` and providing a name. All global blackboards are identified by name, meaning that you can have many different ones, for different purposes.
+
+Similarly, if `ezBlackboardComponent::FindBlackboard()` is used, and a non-empty name is provided, a global blackboard may get created, if no other matching blackboard is available.
+
 ## See Also
 
 * [Blackboard Component](blackboard-component.md)

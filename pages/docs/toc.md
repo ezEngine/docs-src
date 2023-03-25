@@ -185,7 +185,7 @@
 ### [Curves](animation/common/curves.md)
 ## Paths
 ### [Follow Path Component](animation/paths/follow-path-component.md)
-### [Path Component](animation/paths/path-component.md)
+### [Path Shape Component](animation/paths/path-component.md)
 ### [Path Node Component](animation/paths/path-node-component.md)
 ## Property Animation
 ### [Color Animation Component](animation/property-animation/color-animation-component.md)
@@ -267,6 +267,7 @@
 ## [Head Bone Component (TODO)](gameplay/headbone-component.md)
 ## [Marker Component](gameplay/marker-component.md)
 ## [Player Start Point](gameplay/player-start-point.md)
+## [Power Connector Component](gameplay/power-connector-component.md)
 ## [Projectile Component](gameplay/projectile-component.md)
 ## [Raycast Placement Component](gameplay/raycast-placement-component.md)
 ## [Spawn Component](gameplay/spawn-component.md)

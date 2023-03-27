@@ -10,7 +10,10 @@ This file is already referenced by our CMake scripts in the `Foundation` library
 
 Please be aware that the editor uses at least one, but potentially multiple child processes for its operation. Everything that is actually 3D rendered, is done by the `EditorEngineProcess.exe`, which is spawned when the editor opens a project. This makes the editor more resilient. However, it means that if you launch the editor in a debugger, by default breakpoints inside the engine runtime code cannot be hit, as you are not attached to the right process.
 
-You can attach manually to this process. However, it is much easier to use an extension for Visual Studio: [Microsoft Child Process Debugging Power Tool](https://marketplace.visualstudio.com/items?itemName=vsdbgplat.MicrosoftChildProcessDebuggingPowerTool)
+You can attach manually to this process. However, it is much easier to use an extension for Visual Studio:
+
+* [Microsoft Child Process Debugging Power Tool 2022](https://marketplace.visualstudio.com/items?itemName=vsdbgplat.MicrosoftChildProcessDebuggingPowerTool2022)
+* [Microsoft Child Process Debugging Power Tool 2019](https://marketplace.visualstudio.com/items?itemName=vsdbgplat.MicrosoftChildProcessDebuggingPowerTool)
 
 This tool enables Visual Studio to automatically attach to all child processes spawned by the parent process, which makes debugging the EZ editor much easier.
 

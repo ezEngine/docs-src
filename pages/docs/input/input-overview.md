@@ -12,7 +12,7 @@ Input slots represent the state of actual device features, such as the buttons o
 
 Each input slot is a single `float` value that is typically in the range `[0; 1]` or `[0; inf]`. If a device feature has both a positive and a negative value, such as the X and Y axis of a stick, these are typically exposed as two input slots, one for the positive part of the axis, one for the negative part, and each uses an absolute value. This generalized concept makes it easier to map input slots to actions in various ways. For example, each stick on a controller is represented as four input slots (+X, -X, +Y, -Y). The same would be true for a DPad. That allows to map either the stick or the DPad to, e.g. steering a vehicle. The only difference is that the stick can report values between zero and one, whereas the DPad would only report values that are exactly zero or one.
 
-If you to allow the player to map input slots themselves, you can query `ezInputSlotFlags` for each slot, which describe how a slot can be used, to only let them map keys that make sense for a given action.
+If you want to allow the player to map input slots themselves, you can query `ezInputSlotFlags` for each slot, which describe how a slot can be used, to only let them map keys that make sense for a given action.
 
 In practice though, you rarely work directly with input slots. Typically the only situation where one works directly with input slots, is during the initial setup of the slot to action key binding.
 

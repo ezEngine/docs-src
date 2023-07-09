@@ -34,6 +34,10 @@ Safe the prefab and play the scene again. You should now be able to move the con
 
 Next, you will need to map XR controller input to input actions. Go to the [Input Set Configuration](../input/input-config.md) dialog and change `Shoot` to `xr_hand_right_select_click`. If you play the scene again, you should be able to shoot with your right controller. More details can be found in the [XR Input](xr-input.md) chapter.
 
+### Rendering Multithreading
+
+By default, the engine renders multithreaded. This means that one frame of delay is introduced. This will worsen the stability of the XR experience. If enough CPU headroom is available, consider disabling the cvar `Rendering.Multithreading` using the methods outlined [here](../debugging/cvars.md).
+
 ## See Also
 
 * [XR Graphics](xr-graphics.md)

@@ -214,7 +214,7 @@ This library provides a simple and portable interface for window creation, input
 
 Link: [http://www.famfamfam.com/lab/icons/silk](http://www.famfamfam.com/lab/icons/silk)
 
-Icons from this set are used by the tools.
+Icons from this set were extensively used in the past and may still be used by some of the tools.
 
 ## Sonniss
 
@@ -229,6 +229,68 @@ Link: [https://github.com/nothings/stb](https://github.com/nothings/stb)
 Compile switch: None
 
 Public domain licensed code by Sean Barrett. Used by ezImage to read and write some of the supported formats like PNG and JPEG.
+
+## SVG Repo
+
+Link: [https://www.svgrepo.com](https://www.svgrepo.com)
+
+Most of the SVG icons used have been taken from this website.
+All icons taken are free for commercial use, but some require attribution. The following is a list of all icon sets with and without attribution licenses that we know are used by our tools. If you notice that we forgot to mention a set, please [contact us](../../contact.md).
+
+* <https://www.svgrepo.com/collection/zwicon-line-icons>
+* <https://www.svgrepo.com/collection/atomicons-interface-line-icons>
+* <https://www.svgrepo.com/collection/bigmug-interface-icons>
+* <https://www.svgrepo.com/collection/rpg-game-filled-icons>
+* <https://www.svgrepo.com/collection/colour-creative-oval-line-icons>
+* <https://www.svgrepo.com/collection/dazzle-line-icons>
+* <https://www.svgrepo.com/collection/game-skills-vectors>
+* <https://www.svgrepo.com/collection/gentlecons-interface-icons>
+* <https://www.svgrepo.com/collection/solar-broken-line-icons>
+* <https://www.svgrepo.com/collection/untitled-ui-oval-interface-icons>
+* <https://www.svgrepo.com/collection/science-bold-flat-vectors>
+* <https://www.svgrepo.com/collection/tetrisly-interface-icons>
+* <https://www.svgrepo.com/collection/smoothie-line-icons>
+* <https://www.svgrepo.com/collection/lightning-design-utility-icons>
+
+* <https://www.svgrepo.com/collection/iconsax-line-oval-icons>
+* <https://www.svgrepo.com/collection/simple-line-icons>
+* <https://www.svgrepo.com/collection/web-design-development-6>
+* <https://www.svgrepo.com/collection/codicons-coding-icons>
+* <https://www.svgrepo.com/collection/neuicons-oval-line-icons>
+* <https://www.svgrepo.com/collection/metrize-circled-icons>
+* <https://www.svgrepo.com/collection/maki-filled-ui-icons>
+* <https://www.svgrepo.com/collection/framework7-line-icons>
+* <https://www.svgrepo.com/collection/nature-and-animals-infographic-icons>
+* <https://www.svgrepo.com/collection/nonicons-programming-icons>
+* <https://www.svgrepo.com/collection/kalai-oval-interface-icons>
+* <https://www.svgrepo.com/collection/line-awesome>
+* <https://www.svgrepo.com/collection/transportation-icooon-mono-vectors>
+* <https://www.svgrepo.com/collection/iconcino-interface-icons>
+* <https://www.svgrepo.com/collection/minimal-ui-icons>
+* <https://www.svgrepo.com/collection/design-20>
+* <https://www.svgrepo.com/collection/location-compilation>
+* <https://www.svgrepo.com/collection/variety-flat-bordered-icons>
+* <https://www.svgrepo.com/collection/wellness-line-craft>
+* <https://www.svgrepo.com/collection/zest-interface-icons/>
+* <https://www.svgrepo.com/collection/mingcute-tiny-bold-line-icons>
+* <https://www.svgrepo.com/collection/fluent-ui-icons-filled>
+* <https://www.svgrepo.com/collection/iconsax-bold-oval-icons>
+* <https://www.svgrepo.com/collection/variety-duotone-filled-icons>
+* <https://www.svgrepo.com/collection/vaadin-flat-vectors>
+* <https://www.svgrepo.com/collection/calcite-sharp-line-icons>
+* <https://www.svgrepo.com/collection/design-collection>
+* <https://www.svgrepo.com/collection/baby-19>
+* <https://www.svgrepo.com/collection/ecology-elements-line>
+* <https://www.svgrepo.com/collection/adverse-phenomena>
+* <https://www.svgrepo.com/collection/startup>
+* <https://www.svgrepo.com/collection/nature-icon-collection>
+* <https://www.svgrepo.com/collection/sign-and-symbols-icooon-mono-vectors>
+* <https://www.svgrepo.com/collection/industrial-sharp-ui-icons>
+* <https://www.svgrepo.com/collection/carbon-design-line-icons>
+* <https://www.svgrepo.com/collection/nuiverse-sharp-interface-icons>
+* <https://www.svgrepo.com/collection/vscode-icons>
+* <https://www.svgrepo.com/collection/hashicorp-line-interface-icons>
+* <https://www.svgrepo.com/collection/wave-oval-interface-icons>
 
 ## UTF8-CPP
 

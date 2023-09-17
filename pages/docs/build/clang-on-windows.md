@@ -13,7 +13,7 @@ You can build ezEngine using Clang on Windows. This can be useful to find and fi
     * C: C:/Program Files/LLVM/bin/clang.exe
     * C++: C:/Program Files/LLVM/bin/clang++.exe
 1. Hit **Finish**
-1. You will now get an error from cmake ```No CMAKE_RC_COMPILER could be found```. Check the **Advanced** checkbox to show additional options and point ```CMAKE_RC_COMPILER``` to ```C:\Program Files (x86)\Windows Kits\10\bin\<windows-sdk-version>\x64\rc.exe``` (for example ```C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x64\rc.exe```).
+1. You will now get an error from cmake ```No CMAKE_RC_COMPILER could be found```. Check the **Advanced** checkbox to show additional options and point ```CMAKE_RC_COMPILER``` to ```C:\Program Files (x86)\Windows Kits\10\bin\<windows-sdk-version>\x64\rc.exe``` (for example ```C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x64\rc.exe```). Also set ```CMAKE_RC_COMPILER_INIT``` to ```rc```.
 1. Hit **Configure**
 1. Hit **Generate**
 1. ```cd``` into the build location and run ```ninja``` to build.

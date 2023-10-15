@@ -4,11 +4,11 @@
 
 As an example, we will use the [Testing Chambers](../../samples/testing-chambers.md) project and its **Surfaces** scene to set up XR rendering for desktop VR use. Start by opening the project and scene.
 
-Enable *Show in Development Features* in the [editor settings](..\editor\editor-settings.md) and restart it to see XR features in the editor.
+Enable *Show in Development Features* in the [editor settings](../editor/editor-settings.md) and restart it to see XR features in the editor.
 
 To use XR in your project you must first load a plugin to support XR devices. In the [plugin selection](../projects/plugin-selection.md) dialog, select your custom XR plugin. In this case, we select the *Open XR* plugin and close the dialog.
 
-Next is to enable XR rendering under [asset profiles (TODO)](asset-profiles.md). Select the profile you want to enable XR in and then check the *Enable XR* checkbox. You also need to select the *XR Render Pipeline* here. Currently, both the `MainRenderPipeline` and the `HololensRenderPipeline` fully support XR rendering. Let's select the `MainRenderPipeline` for this example and close the dialog.
+Next is to enable XR rendering under [asset profiles (TODO)](../assets/asset-profiles.md). Select the profile you want to enable XR in and then check the *Enable XR* checkbox. You also need to select the *XR Render Pipeline* here. Currently, both the `MainRenderPipeline` and the `HololensRenderPipeline` fully support XR rendering. Let's select the `MainRenderPipeline` for this example and close the dialog.
 
 Pressing 'Play the Game' in the scene should now already start rendering on the HMD and you can look around but it will not be very interactive.
 

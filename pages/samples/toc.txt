@@ -3,6 +3,7 @@ screenshots.md
 asteroids.md
 cs-histogram.md
 line-count.md
+monster-attack
 pacman.md
 rts.md
 sample-game-plugin.md

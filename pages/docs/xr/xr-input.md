@@ -69,5 +69,5 @@ for (ezXRHand::Enum hand : {ezXRHand::Left, ezXRHand::Right})
 ## See Also
 
 * [Input](../input/input-overview.md)
-* [XR Overview](xr-overview.md.md)
+* [XR Overview](xr-overview.md)
 * [XR Components](xr-components.md)

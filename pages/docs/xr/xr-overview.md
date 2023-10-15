@@ -2,7 +2,7 @@
 
 > **NOTE:**
 >
-> XR support is still in development. You will need to enable *Show in Development Features* in the [editor settings](..\editor\editor-settings.md) to use it.
+> XR support is still in development. You will need to enable *Show in Development Features* in the [editor settings](../editor/editor-settings.md) to use it.
 
 *XR* stands for both *VR* (virtual reality) as well as *AR* (augmented reality) devices. Currently supported devices:
  * **VR**: Windows desktop VR devices that support DX11 and OpenXR.

@@ -8,7 +8,7 @@ This sample is a basic implementation of the classic *PacMan* game. It demonstra
 
 To run this sample, you have to first compile the code for it. Go to *Editor > Open C++ Project*, click *Generate Solution*, then open the Visual Studio solution and compile the code.
 
-Afterwards [run the scene](../docs/editor/run-scene.md). For the best experience, use the *Export and Run* mode (**Ctrl+E**).
+Afterwards [run the scene](../docs/editor/run-scene.md). For the best experience, use the *Export and Run* mode (**Ctrl+R**).
 
 ## Video: Game Tutorial - PacMan
 

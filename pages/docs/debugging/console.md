@@ -9,7 +9,7 @@ The in-game console is a utility for inspecting the [log](logging.md), modifying
 The default key binding for the console is:
 
 * **F1** - Opens/closes the console.
-* **Up / Down** - Select a previously entered command from the history.
+* **Up / Down** - Select a previously entered command from the history. Note that the history is saved to disk so that commands don't need to be typed again after restarting.
 * **F2** and **F3** - Repeat last and second-to-last commands. This works even when the console is currently closed.
 * **ESC** - Clears the input line.
 * **Page Up / Page Down** - Scrolls the log output up / down.

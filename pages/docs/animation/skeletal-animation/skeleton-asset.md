@@ -34,6 +34,12 @@ In the future the skeleton asset will also be used to define physics shapes for 
 
 * `BoneDirection`: This setting only affects the visualization of the skeleton. It has no effect on the actual mesh skinning. It is used to tell the visualizer which cardinal direction the bones should point into. You only need to change this setting, if the skeleton visualization looks all wrong (all lines point into weird directions). You need to *transform* the asset to apply the change. Just try all options until it looks right.
 
+* `PreviewMesh`: An [animated mesh](animated-mesh-asset.md) to render transparently over the skeleton to serve as a preview. This is especially useful when setting up collider shapes, to know how large they should be to fit nicely.
+
+* `CollisionLayer`, `Surface`: The default [collision layer](../../physics/jolt/collision-shapes/jolt-collision-layers.md) and [surface](../../materials/surfaces.md) to use for all bone shapes. This can be overridden on each bone.
+
+* `MaxImpulse`: When projectiles and other things apply impulses to ragdoll limbs, the forces can quickly add up and fling a ragdoll far away. This value is used to clamp the maximum impulse to apply to prevent that.
+
 ## See Also
 
 * [Skeletal Animations](skeletal-animation-overview.md)

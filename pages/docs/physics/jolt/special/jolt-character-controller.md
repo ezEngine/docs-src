@@ -34,4 +34,4 @@ Note that the player object also uses an [input component](../../../input/input-
 
 ## See Also
 
-* [PhysX Character Controller](../../physx/special/physx-character-controller.md)
+* [Character Controller](jolt-character-controller.md)

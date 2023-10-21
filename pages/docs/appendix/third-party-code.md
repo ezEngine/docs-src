@@ -131,6 +131,10 @@ Used as the basis for skeletal animations. Both during asset import (to build an
 
 ## PhysX 4.1.1
 
+> **Important:**
+>
+> NVIDIA PhysX in EZ is no longer maintained. The code is currently still there, but most likely doesn't compile without errors anymore. 
+
 Link: [https://github.com/NVIDIAGameWorks/PhysX](https://github.com/NVIDIAGameWorks/PhysX)
 
 Compile switch: **EZ_BUILD_PHYSX**

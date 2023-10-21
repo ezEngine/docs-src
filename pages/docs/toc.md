@@ -120,41 +120,6 @@
 #### [Character Controller](physics/jolt/special/jolt-character-controller.md)
 #### [Jolt Grab Object Component](physics/jolt/special/jolt-grab-object-component.md)
 #### [Jolt Rope Component](physics/jolt/special/jolt-rope-component.md)
-## Physx
-### [PhysX Integration](physics/physx/physx-overview.md)
-### [PhysX Settings Component](physics/physx/physx-settings-component.md)
-### [PhysX Visual Debugger](physics/physx/physx-visual-debugger.md)
-### Actors
-#### [PhysX Actors](physics/physx/actors/physx-actors.md)
-#### [PhysX Static Actor Component](physics/physx/actors/physx-static-actor-component.md)
-#### [PhysX Dynamic Actor Component](physics/physx/actors/physx-dynamic-actor-component.md)
-#### [PhysX Trigger Component](physics/physx/actors/physx-trigger-component.md)
-#### [PhysX Query Shape Actor Component (TODO)](physics/physx/actors/physx-queryshape-actor-component.md)
-#### [PhysX Breakable Sheet Component (TODO)](physics/physx/actors/physx-breakable-sheet-component.md)
-### Collision Shapes
-#### [PhysX Shapes](physics/physx/collision-shapes/physx-shapes.md)
-#### [PhysX Sphere Shape Component](physics/physx/collision-shapes/physx-sphere-shape-component.md)
-#### [PhysX Box Shape Component](physics/physx/collision-shapes/physx-box-shape-component.md)
-#### [PhysX Capsule Shape Component](physics/physx/collision-shapes/physx-capsule-shape-component.md)
-#### [PhysX Convex Shape Component](physics/physx/collision-shapes/physx-convex-shape-component.md)
-#### [PhysX Center of Mass Component](physics/physx/collision-shapes/physx-center-of-mass-component.md)
-#### [Collision Meshes](physics/physx/collision-shapes/physx-collision-meshes.md)
-#### [Collision Layers](physics/physx/collision-shapes/physx-collision-layers.md)
-### Joints
-#### [Physics Joints](physics/physx/joints/physx-joints.md)
-#### [PhysX Revolute Joint Component](physics/physx/joints/physx-revolute-joint-component.md)
-#### [PhysX Spherical Joint Component](physics/physx/joints/physx-spherical-joint-component.md)
-#### [PhysX Fixed Joint Component](physics/physx/joints/physx-fixed-joint-component.md)
-#### [PhysX Prismatic Joint Component](physics/physx/joints/physx-prismatic-joint-component.md)
-#### [PhysX Distance Joint Component](physics/physx/joints/physx-distance-joint-component.md)
-#### [PhysX 6DOF Joint Component](physics/physx/joints/physx-6dof-joint-component.md)
-### Ragdolls
-#### [PhysX Bone Collider Component (TODO)](physics/physx/ragdolls/physx-bone-collider-component.md)
-#### [PhysX Ragdoll Component (TODO)](physics/physx/ragdolls/physx-ragdoll-component.md)
-### Special
-#### [Character Controller](physics/physx/special/physx-character-controller.md)
-#### [PhysX Grab Object Component](physics/physx/special/physx-grab-object-component.md)
-#### [PhysX Rope Component](physics/physx/special/physx-rope-component.md)
 # Effects
 ## [Beam Component](effects/beam-component.md)
 ## Camera Shake

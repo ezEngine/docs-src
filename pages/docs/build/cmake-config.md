@@ -1,6 +1,6 @@
 # CMake Setup
 
-To generate a solution, run the CMake GUI. Specify *Where is the source code* and *Where to build the binaries*, then run **Configure**. As a generator, pick *Visual Studio 2019 x64* (or one of the other [supported platforms](supported-platforms.md)).
+To generate a solution, run the CMake GUI. Specify *Where is the source code* and *Where to build the binaries*, then run **Configure**. As a generator, pick *Visual Studio 2022 x64* (or one of the other [supported platforms](supported-platforms.md)).
 
 ![CMake configuration](media/cmake-config.png)
 

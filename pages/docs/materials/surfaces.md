@@ -14,7 +14,7 @@ Surfaces are used by [collision meshes](../physics/jolt/collision-shapes/jolt-co
 
 **Restitution:** Configures how "bouncy" a material is. Objects with a high restitution will bounce very strongly (like rubber) and objects with a low restitution will come to rest quickly (like soft wood).
 
-**Friction:** The friction values affect how slippery a material is and thus how much it will slide or roll. Smooth surfaces typically have lower and rough surfaces higher friction. [PhysX](../physics/physx/physx-overview.md) also differentiates between *static* friction for objects that are currently standing still and *dynamic* friction for objects that are already moving. Static friction is typically higher than dynamic friction, meaning it is more difficult to get something to move, than to keep something moving. Note that [Jolt](../physics/jolt/jolt-overview.md) does not differentiate between the two, and we use an average value here.
+**Friction:** The friction values affect how slippery a material is and thus how much it will slide or roll. Smooth surfaces typically have lower and rough surfaces higher friction. Some physics engines also differentiates between *static* friction for objects that are currently standing still and *dynamic* friction for objects that are already moving. Static friction is typically higher than dynamic friction, meaning it is more difficult to get something to move, than to keep something moving. Note that [Jolt](../physics/jolt/jolt-overview.md) does not differentiate between the two, and we use an average value here.
 
 ## Surface Interactions
 

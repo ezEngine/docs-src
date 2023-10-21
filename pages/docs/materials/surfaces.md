@@ -38,6 +38,8 @@ All surface interactions ultimately spawn [prefabs](../prefabs/prefabs-overview.
 
 The following options allow you to adjust how prefabs are spawned:
 
+**Parameters:** [Exposed Parameters](../scenes/exposed-parameters.md) can be used to spawn the same prefab but with different configurations.
+
 **Alignment:** Defines how the spawned prefab instance will be rotated. The +X axis of the prefab is considered to be 'forwards'.
 
 * **Surface Normal:** The 'forwards' direction (+X) of the prefab will be aligned with the normal of the object where the interaction happened. With this mode, the angle at which you shoot at a surface would not make a difference, as the effect is always spawned orthogonal to the hit geometry.
@@ -67,9 +69,7 @@ Dynamic [physics objects](../physics/jolt/jolt-overview.md) can have three types
 
 Surface interactions enable you to let these make sounds or play effects.
 
-> **Important:**
->
-> At the time of writing only the object collisions (bumping into each other) are configurable. See issue [#231](https://github.com/ezEngine/ezEngine/issues/231).
+Which types of physics interactions an object creates is configured on each [dynamic actor](../physics/jolt/actors/jolt-dynamic-actor-component.md) with the `On Contact` flags. Only if the respective flags are set, will the engine even attempt to spawn a prefab for a physical interaction.
 
 #### Bump
 
@@ -83,15 +83,11 @@ Note that looking up surface interactions is generally [hierarchical](#hierarchi
 
 Basically, once a surface overrides a surface interaction, it completely replaces all available interactions of that type and should have full control which interaction is taken at which threshold.
 
-<!-- TODO ImpulseScale -->
+#### Slide and Roll
 
-#### Slide
+Similar to the *Bump* interaction, prefabs can be spawned to deal with situations where an object slides or rolls across another object. The difference here is, that prefabs for these interactions get spawned when a slide or roll starts, and then only their (average) position gets updated, until the interaction stops, at which point the prefab gets deleted again.
 
-See issue [#231](https://github.com/ezEngine/ezEngine/issues/231).
-
-#### Roll
-
-See issue [#231](https://github.com/ezEngine/ezEngine/issues/231).
+That means that slide and roll interaction prefabs should do things in a loop, for instance play a looped sound or contain an endless particle effect, such that the effect will last as long as the interaction is active.
 
 ## Video
 

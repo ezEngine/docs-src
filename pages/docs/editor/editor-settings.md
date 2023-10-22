@@ -34,7 +34,7 @@ The list on the left lists all the available preferences. Items prefixed with `A
 
 ## Shortcuts
 
-*Editor > Editor Settings > Shortcuts...* opens a dialog to configure the shortcuts.
+*Tools > Shortcuts...* opens a dialog to configure the shortcuts.
 
 ![Preferences](media/editor-shortcuts.png)
 

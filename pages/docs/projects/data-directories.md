@@ -10,7 +10,7 @@ The engine only operates with relative paths, it never stores absolute file path
 
 ### Using the Editor
 
-Typically you should use the editor to configure which folders will be accessible as data directories. Go to *Editor > Project Settings > Data Directories...*:
+Typically you should use the editor to configure which folders will be accessible as data directories. Go to *Project > Project Settings > Data Directories...*:
 
 ![Data directories](media/editor-data-dir.png)
 

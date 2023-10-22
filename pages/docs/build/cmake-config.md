@@ -1,6 +1,6 @@
 # CMake Setup
 
-To generate a solution, run the CMake GUI. Specify *Where is the source code* and *Where to build the binaries*, then run **Configure**. As a generator, pick *Visual Studio 2019 x64* (or one of the other [supported platforms](supported-platforms.md)).
+To generate a solution, run the CMake GUI. Specify *Where is the source code* and *Where to build the binaries*, then run **Configure**. As a generator, pick *Visual Studio 2022 x64* (or one of the other [supported platforms](supported-platforms.md)).
 
 ![CMake configuration](media/cmake-config.png)
 
@@ -8,7 +8,7 @@ The screenshot above shows a common setup. Noteworthy are the following points:
 
 * **EZ_ENABLE_QT_SUPPORT** Disable this setting, if you want to compile EZ without Qt. This will remove all editor code and several tools from the final solution. The default is *on*. When possible the EZ CMake scripts will automatically download Qt libraries and set everything up for you. On configurations for which we do not support fully automatic setup, you need to install Qt manually and then set set **EZ_QT_DIR** to its installation folder.
 
-* **EZ_BUILD_FMOD** Enable this, if you want to [FMOD sound](../sound/fmod-overview.md) support in your build. One Windows and Linux the default is *on*.
+* **EZ_BUILD_FMOD** Enable this, if you want to [FMOD sound](../sound/fmod-overview.md) support in your build. On Windows and Linux the default is *on*.
 
 * **EZ_BUILD_PHYSX** Enable this, if you want to add [NVIDIA PhysX](../physics/physx/physx-overview.md) support to your build. Once enabled, the next run of "Configure" will automatically download PhysX binaries (Windows only) and set the **EZ_PHYSX_SDK** variable accordingly. The default is *off*. Note that PhysX support has been superseded by the [Jolt Physics integration](../physics/jolt/jolt-overview.md).
 

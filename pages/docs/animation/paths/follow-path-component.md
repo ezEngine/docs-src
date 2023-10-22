@@ -17,6 +17,13 @@ This component is mainly meant for mechanical movement, such as objects moving o
 * `Speed`: How fast to move along the path.
 * `LookAhead`: The component will rotate the object according to the path direction. For this it samples the path some distance ahead. The farther the look-ahead the earlier the object will rotate into upcoming curves. At a very low look-ahead, it will rotate very rigidly.
 * `Smoothing`: With zero smoothing the position of the object will be exactly that of the path. With some smoothing, the position doesn't change as abruptly. For mechanical objects attached to a rail, this should be zero, for more organic movement, increase the value towards one.
+* `FollowMode`: How the transform of the owner object gets modified:
+    * `OnlyPosition`: Only the position gets moved along the path. The orientation of the object stays unaffected.
+    * `AlignUpZ`: While moving along the path, the object rotates only around the up axis (Z) to look into the direction of the path. This is useful for moving platforms that should always stay perfectly flat.
+    * `FullRotation`: The object is both moved and oriented accoring to the path.
+* `TiltAmount`, `MaxTilt`: If `FollowMode` is `AlignUpZ`, *MaxTilt* defines whether the object may tilt a little when turning. *TiltAmount* specifies how much tilting will occur.
+
+<video src="media/follow-path-mode.mp4" width="800" height="600" autoplay controls></video>
 
 ## See Also
 

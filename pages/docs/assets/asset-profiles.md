@@ -4,7 +4,7 @@ Asset profiles are used to make project configurations for each platform. For ex
 
 ## Modify asset profiles
 
-Under *Editor > Project Settings > Asset Profiles* you can open the **asset profiles** dialog. At the top you can select for which platform you want to make modifications.
+Under *Project > Project Settings > Asset Profiles* you can open the **asset profiles** dialog. At the top you can select for which platform you want to make modifications.
 
 <!-- PAGE IS TODO -->
 

@@ -16,6 +16,8 @@ There are many ways projectiles may work in different games. The projectile comp
 
 `CollisionLayer`: The physics [collision layer](../physics/jolt/collision-shapes/jolt-collision-layers.md) to use for raycasting whether the projectile hit something.
 
+`ShapeTypesToHit`: Specifies what types of physics geometry to hit, at all.
+
 `FallbackSurface`: If the projectile hits something that has no [surface](../materials/surfaces.md) assigned, it will assume that this type of surface was hit. This just guarantees that you always get any kind of hit response, even when the hit geometry is just dummy or placeholder geometry.
 
 `Interactions`: This array allows you to specify exactly what the projectile will do, when it hits different types of surfaces. Each entry is used to configure the action of the projectile if a certain type of surface is hit. Note that surfaces and surface interactions already work hierarchically. That means for most types of projectiles this array only needs to contain a single entry, with a base surface, and all it needs to specify is what 'interaction' to trigger. The exact type of surface that is hit, will then decide what prefabs to spawn for that kind of interaction.

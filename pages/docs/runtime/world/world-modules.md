@@ -2,7 +2,7 @@
 
 *World modules* are systems that are used to update certain aspects of a world. There can be only one instance of each world module for each [world](worlds.md).
 
-A good example for a world module is the `ezPhysXWorldModule`. This module is responsible for updating the physics world every frame. To do so, it hooks into two *update phases* of the world, once early in the frame, where it kicks off the physics simulation in a parallel task, and once late in the frame, where it fetches the results of the simulation and applies them to the world.
+A good example for a world module is the `ezJoltWorldModule`. This module is responsible for updating the physics world every frame. To do so, it hooks into two *update phases* of the world, once early in the frame, where it kicks off the physics simulation in a parallel task, and once late in the frame, where it fetches the results of the simulation and applies them to the world.
 
 Components represent individual pieces in the world. World modules represent large systems that provide the foundation for the components to work. World modules are frequently needed when integrating third party systems that require per frame updates to function.
 

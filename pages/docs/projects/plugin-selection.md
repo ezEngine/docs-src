@@ -4,7 +4,7 @@ Plugins are used to add functionality both to the runtime (the actual game) as w
 
 ## Modify the Set of Active Plugins
 
-Under *Editor > Project Settings > Plugin Selection* you can open the **plugin selection** dialog:
+Under *Project > Plugin Settings > Plugin Selection* you can open the **plugin selection** dialog:
 
 ![Plugin Selection](media/plugin-selection.png)
 

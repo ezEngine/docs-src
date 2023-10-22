@@ -2,31 +2,23 @@
 
 Project settings are options that are configured once and affect the entire application. Most project settings can be configured from the editor, though some (currently) can only be configured by writing certain configuration files manually.
 
-In the editor you will find the project settings under *Editor > Project Settings > ...*.
+In the editor you will find the project settings under *Project > Project Settings > ...*.
 
 ## Data Directories
 
-*Editor > Project Settings > Data Directories...* opens a dialog to set up the [data directories](data-directories.md).
-
-## Plugin Selection
-
-Which optional functionality should be available is configured on a per-project basis. See the [plugin selection chapter](plugin-selection.md) for details.
-
-### Loading Plugins from Code
-
-A custom [application (TODO)](../runtime/application/application.md) or [game state](../runtime/application/game-state.md) can load plugins directly from code if necessary. For example the `ezInspectorPlugin` is automatically loaded for you by stock EZ applications, when building the code for development.
+*Project > Project Settings > Data Directories...* opens a dialog to set up the [data directories](data-directories.md).
 
 ## Input Configuration
 
-*Editor > Project Settings > Input Configuration...* opens a dialog to [configure input actions](../input/input-config.md).
+*Project > Project Settings > Input Configuration...* opens a dialog to [configure input actions](../input/input-config.md).
 
 ## Tags
 
-*Editor > Project Settings > Tags...* opens a dialog to configure which [tags](tags.md) are available in the project.
+*Project > Project Settings > Tags...* opens a dialog to configure which [tags](tags.md) are available in the project.
 
 ## Window Configuration
 
-*Editor > Project Settings > Window Configuration...* opens a dialog to configure the default window configuration when [running a scene](../editor/run-scene.md).
+*Project > Project Settings > Window Configuration...* opens a dialog to configure the default window configuration when [running a scene](../editor/run-scene.md).
 
 ![Window Configuration](media/editor-window-config.png)
 
@@ -42,15 +34,25 @@ Apart from the window position and size, the window configuration also controls 
 
 ## Asset Profiles
 
-*Editor > Project Settings > Asset Profiles...* opens a dialog to edit [asset profiles (TODO)](../assets/asset-profiles.md).
+*Project > Project Settings > Asset Profiles...* opens a dialog to edit [asset profiles (TODO)](../assets/asset-profiles.md).
+
+## Plugin Selection
+
+Which optional functionality should be available is configured on a per-project basis. See the [plugin selection chapter](plugin-selection.md) for details.
+
+If plugins provide additional editor options, they are typically found under *Project > Plugin Settings > ...*.
+
+### Loading Plugins from Code
+
+A custom [application (TODO)](../runtime/application/application.md) or [game state](../runtime/application/game-state.md) can load plugins directly from code if necessary. For example the `ezInspectorPlugin` is automatically loaded for you by stock EZ applications, when building the code for development.
 
 ## FMOD
 
-If the [FMOD Integration](../sound/fmod-overview.md) is enabled, *Editor > Project Settings > FMOD Project Settings...* will be available to configure the speaker mode and which master sound bank to use.
+If the [FMOD Integration](../sound/fmod-overview.md) is enabled, *Project > Plugin Settings > FMOD Project Settings...* will be available to configure the speaker mode and which master sound bank to use.
 
 ## Jolt
 
-If the [Jolt Physics Integration](../physics/jolt/jolt-overview.md) is enabled, *Editor > Project Settings > Jolt Project Settings...* will be available to configure the [collision layers](../physics/jolt/collision-shapes/jolt-collision-layers.md).
+If the [Jolt Physics Integration](../physics/jolt/jolt-overview.md) is enabled, *Project > Plugin Settings > Jolt Project Settings...* will be available to configure the [collision layers](../physics/jolt/collision-shapes/jolt-collision-layers.md).
 
 ## Video
 

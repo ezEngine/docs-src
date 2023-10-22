@@ -9,9 +9,9 @@ If a deactivated collection component is part of a scene, it will not trigger a 
 ## Component Properties
 
 * `Collection`: The referenced [collection asset](asset-collections.md).
+* `RegisterNames`: If enabled, the component will register the resources in the collection asset that have a dedicated *name* under that name, so that these resources can be loaded that way. See [Referencing Assets by Name](asset-collections.md#referencing-assets-by-name).
 
 ## See Also
-
 
 * [Asset Collections](asset-collections.md)
 * [Profiling](profiling.md)

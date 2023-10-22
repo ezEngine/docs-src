@@ -20,6 +20,8 @@ Sensor components poll the world in regular intervals and thus incur a performan
 
 Still, it is best to reduce the update rate as much as possible. For example in a game with large levels, you should check how close the player is to an NPC and dynamically adjust the update rate. At a large distance, the sensor can be set to update only every second, or you could even deactivate the sensor entirely. Similarly, you can use the 'alterness' state of an NPC to increase or decrease the sensor update rate.
 
+It is also possible to set the update rate to **Never** which disables automatic updates. In this case you can explicitely instruct to sensor to do an update only on demand, via the C++ function `RunSensorCheck()`. This is for more advanced usage, for instance when writing custom AI code.
+
 Finally, you should decide whether doing a visibility check is always necessary. The sensor would do this check for every possible target at every update. However, for a lot of game logic, once something has attracted attention, further visibility checks are not necessary. In such a case, it can be more efficient to do visibility raycasts only while a creature is not yet alert.
 
 ## Component Properties

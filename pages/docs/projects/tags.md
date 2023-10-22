@@ -12,7 +12,7 @@ In the image below the selected game object only has `My Custom Tag` assigned, a
 
 ## Tags Configuration
 
-*Editor > Project Settings > Tags...* opens a dialog to configure which tags are available in the project.
+*Project > Project Settings > Tags...* opens a dialog to configure which tags are available in the project.
 
 ![Tag editor](media/editor-tags.png)
 

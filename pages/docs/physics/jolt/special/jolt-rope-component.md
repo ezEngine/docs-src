@@ -38,9 +38,15 @@ Overall the same guidelines to prevent stability issues apply here as well.
 
 ## Component Properties
 
-* `Anchor`: A [reference](../../../scenes/object-references.md) to an object whose position determines where the rope ends.
+* `Anchor1`, `Anchor2`: A [reference](../../../scenes/object-references.md) to an object whose position determines one end of the rope. If only one anchor is specified, the position of the rope component's owner object is used as the other end.
 
-* `AttachToOrigin`, `AttachToAnchor`: Whether the rope is fixed at the origin or anchor location. If the respective object is attached to a [dynamic actor](../actors/jolt-dynamic-actor-component.md), the rope will pull that actor. Otherwise, the rope will be fixed at that static location. If the rope is not attached at one or both ends it is free to move away from there.
+* `Anchor1Constraint`, `Anchor2Constraint`: How the rope is attached to each anchor:
+    * `None`: The rope is not attached to the object, at all, and once the simulation starts, it will fall down at that end.
+    * `Point`: The rope is attached with a point constraint and thus can freely rotate around that end.
+    * `Fixed`: The rope won't be able to rotate around that end point. The orientation of the anchor is used to specified the direction of the rope there.
+    * `Cone`: The rope can rotate around that anchor, but only within a cone of `MaxBend` opening. Similar to `Fixed`, the orientation of the anchor defines the starting direction of the rope.
+
+  If an anchor object is attached to a [dynamic actor](../actors/jolt-dynamic-actor-component.md), the rope will pull that actor. Otherwise, the rope will be fixed at that static location. If the rope is not attached at one or both ends it is free to move away from there.
 
 * `Mass`: The total mass of the rope. It will be distributed equally among all pieces.
 
@@ -59,6 +65,10 @@ Overall the same guidelines to prevent stability issues apply here as well.
 * `Surface`: The [surface](../../../materials/surfaces.md) defines how slippery or bouncy the rope is.
 
 * `GravityFactor`: How much gravity affects the rope.
+
+* `SelfCollision`: Whether the rope should be able to collide with itself.
+
+* `ContinuousCollisionDetection`: If enabled, the physics simulation tries harder to prevent the rope from passing through other objects. This costs additional performance.
 
 ## See Also
 

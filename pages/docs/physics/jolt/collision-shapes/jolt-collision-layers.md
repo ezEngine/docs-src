@@ -14,7 +14,7 @@ For convenience, in the editor you can give a name to each layer. The name is ir
 
 ![Collision layer config](../media/jolt-settings.png)
 
-Under *Editor > Project Settings > Jolt Project Settings...* you can configure the Jolt collision layers, as seen above.
+Under *Project > Plugin Settings > Jolt Project Settings...* you can configure the Jolt collision layers, as seen above.
 
 ## Physics Actors and Shapes
 

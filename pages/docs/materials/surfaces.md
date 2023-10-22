@@ -14,7 +14,7 @@ Surfaces are used by [collision meshes](../physics/jolt/collision-shapes/jolt-co
 
 **Restitution:** Configures how "bouncy" a material is. Objects with a high restitution will bounce very strongly (like rubber) and objects with a low restitution will come to rest quickly (like soft wood).
 
-**Friction:** The friction values affect how slippery a material is and thus how much it will slide or roll. Smooth surfaces typically have lower and rough surfaces higher friction. [PhysX](../physics/physx/physx-overview.md) also differentiates between *static* friction for objects that are currently standing still and *dynamic* friction for objects that are already moving. Static friction is typically higher than dynamic friction, meaning it is more difficult to get something to move, than to keep something moving. Note that [Jolt](../physics/jolt/jolt-overview.md) does not differentiate between the two, and we use an average value here.
+**Friction:** The friction values affect how slippery a material is and thus how much it will slide or roll. Smooth surfaces typically have lower and rough surfaces higher friction. Some physics engines also differentiates between *static* friction for objects that are currently standing still and *dynamic* friction for objects that are already moving. Static friction is typically higher than dynamic friction, meaning it is more difficult to get something to move, than to keep something moving. Note that [Jolt](../physics/jolt/jolt-overview.md) does not differentiate between the two, and we use an average value here.
 
 ## Surface Interactions
 
@@ -37,6 +37,8 @@ Interactions are triggered by different systems. The [physics engine](../physics
 All surface interactions ultimately spawn [prefabs](../prefabs/prefabs-overview.md). So if you want to have different footstep sounds when walking over stone, sand and mud, you need three prefabs, each playing a different sound. However, since they are prefabs, your creativity is not limited to playing a sound. Your "sand footstep effect" may contain spawning a small dust [particle effect](../effects/particle-effects/particle-effects-overview.md). And the "mud footstep effect" could additionally spawn a footprint [decal](../effects/decals.md).
 
 The following options allow you to adjust how prefabs are spawned:
+
+**Parameters:** [Exposed Parameters](../scenes/exposed-parameters.md) can be used to spawn the same prefab but with different configurations.
 
 **Alignment:** Defines how the spawned prefab instance will be rotated. The +X axis of the prefab is considered to be 'forwards'.
 
@@ -67,9 +69,7 @@ Dynamic [physics objects](../physics/jolt/jolt-overview.md) can have three types
 
 Surface interactions enable you to let these make sounds or play effects.
 
-> **Important:**
->
-> At the time of writing only the object collisions (bumping into each other) are configurable. See issue [#231](https://github.com/ezEngine/ezEngine/issues/231).
+Which types of physics interactions an object creates is configured on each [dynamic actor](../physics/jolt/actors/jolt-dynamic-actor-component.md) with the `On Contact` flags. Only if the respective flags are set, will the engine even attempt to spawn a prefab for a physical interaction.
 
 #### Bump
 
@@ -83,15 +83,11 @@ Note that looking up surface interactions is generally [hierarchical](#hierarchi
 
 Basically, once a surface overrides a surface interaction, it completely replaces all available interactions of that type and should have full control which interaction is taken at which threshold.
 
-<!-- TODO ImpulseScale -->
+#### Slide and Roll
 
-#### Slide
+Similar to the *Bump* interaction, prefabs can be spawned to deal with situations where an object slides or rolls across another object. The difference here is, that prefabs for these interactions get spawned when a slide or roll starts, and then only their (average) position gets updated, until the interaction stops, at which point the prefab gets deleted again.
 
-See issue [#231](https://github.com/ezEngine/ezEngine/issues/231).
-
-#### Roll
-
-See issue [#231](https://github.com/ezEngine/ezEngine/issues/231).
+That means that slide and roll interaction prefabs should do things in a loop, for instance play a looped sound or contain an endless particle effect, such that the effect will last as long as the interaction is active.
 
 ## Video
 

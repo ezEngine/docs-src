@@ -1,6 +1,6 @@
 # TypeScript Asset
 
-Each *TypeScript asset* manages the script for a single [custom TypeScript component](custom-ts-components.md). You create a new TypeScript asset using *Editor > Create Document...*.
+Each *TypeScript asset* manages the script for a single [custom TypeScript component](custom-ts-components.md). You create a new TypeScript asset using *File > Create...*.
 
 ![TypeScript asset](media/ts-asset.png)
 

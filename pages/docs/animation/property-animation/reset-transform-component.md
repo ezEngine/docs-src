@@ -21,6 +21,6 @@ After that, it does nothing else, until it gets deactivated and reactivated agai
 
 ## See Also
 
-* [Property Animations](property-animation-overview.md)
+* [Property Animations (TODO)](property-animation-overview.md)
 * [Follow Path Component](../paths/follow-path-component.md)
 

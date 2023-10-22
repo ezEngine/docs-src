@@ -154,10 +154,11 @@
 ### [Path Node Component](animation/paths/path-node-component.md)
 ## Property Animation
 ### [Color Animation Component](animation/property-animation/color-animation-component.md)
-### [MoveTo Component (TODO)](animation/property-animation/move-to-component.md)
+### [MoveTo Component](animation/property-animation/move-to-component.md)
 ### [Property Animation Asset (TODO)](animation/property-animation/property-animation-asset.md)
 ### [Property Animation Component (TODO)](animation/property-animation/property-animation-component.md)
 ### [Property Animations (TODO)](animation/property-animation/property-animation-overview.md)
+### [Reset Transform Component](animation/property-animation/reset-transform-component.md)
 ### [Rotor Component](animation/property-animation/rotor-component.md)
 ### [Slider Component](animation/property-animation/slider-component.md)
 ## Skeletal Animation
@@ -261,7 +262,7 @@
 ### [Messaging in TypeScript Code](custom-code/typescript/ts-messaging.md)
 ### [TypeScript Component](custom-code/typescript/ts-component.md)
 ## Visual Script
-### [Custom Code with Visual Scripts](custom-code/visual-script/visual-script-overview.md)
+### [Custom Code with Visual Scripts (TODO)](custom-code/visual-script/visual-script-overview.md)
 ## Game Logic
 ### [Forward Events To Game State Component](custom-code/game-logic/forward-events-to-game-state-component.md)
 ### [Trigger Delay Modifier Component](custom-code/game-logic/trigger-delay-modifier-component.md)

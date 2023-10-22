@@ -22,7 +22,7 @@ If you want to do multiplayer, you have to implement that aspect yourself. This 
 
 ## Visual Scripting
 
-Yes, EZ has [visual scripting](../docs/custom-code/visual-script/visual-script-overview.md). It's not really great, though. You can do simple level logic, like "if that lever is pulled, open that door". You shouldn't really use it for anything else. We are generally not convinced that visual scripting is a great way to program (in no engine, no matter how good their tools are). Therefore we have no plans on improving our implementation at the moment, we rather improve the [TypeScript](../docs/custom-code/typescript/typescript-overview.md) binding. Though, if you are a fan of visual scripting and want to improve it, feel free to look into it.
+Yes, EZ has [visual scripting (TODO)](../docs/custom-code/visual-script/visual-script-overview.md). It's not really great, though. You can do simple level logic, like "if that lever is pulled, open that door". You shouldn't really use it for anything else. We are generally not convinced that visual scripting is a great way to program (in no engine, no matter how good their tools are). Therefore we have no plans on improving our implementation at the moment, we rather improve the [TypeScript](../docs/custom-code/typescript/typescript-overview.md) binding. Though, if you are a fan of visual scripting and want to improve it, feel free to look into it.
 
 ## Scripting with TypeScript
 

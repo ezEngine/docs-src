@@ -36,7 +36,7 @@ The [root motion](root-motion.md) properties are meant for enabling an animation
 
 The *event track* property allows you to add [markers](animation-events.md) to the clip, that indicate what happens at what time in the clip. This can be used to indicate when a foot touches the ground, or at what point in the animation a weapon fires. Using this information, the game logic could react by, for example, spawning an effect.
 
-Animation events are sent as [event messages](../../runtime/world/world-messaging.md#event-messages) and therefore can only be captured by *event handler components* such as [visual scripts](../../custom-code/visual-script/visual-script-overview.md) or [TypeScript components](../../custom-code/typescript/typescript-overview.md).
+Animation events are sent as [event messages](../../runtime/world/world-messaging.md#event-messages) and therefore can only be captured by *event handler components* such as [visual scripts (TODO)](../../custom-code/visual-script/visual-script-overview.md) or [TypeScript components](../../custom-code/typescript/typescript-overview.md).
 
 ### Simple Animation Playback
 
@@ -44,7 +44,7 @@ Once you have an animated mesh asset, a skeleton asset and an animation clip ass
 
 ![Animation configuration](../media/anim-setup.png)
 
-Here we have also attached a [visual script](../../custom-code/visual-script/visual-script-overview.md) to react to events in the animation clip, but that is entirely optional. When you press play, the editor will play back the animation on the mesh.
+Here we have also attached a [visual script (TODO)](../../custom-code/visual-script/visual-script-overview.md) to react to events in the animation clip, but that is entirely optional. When you press play, the editor will play back the animation on the mesh.
 
 ### Advanced Animation Playback
 

@@ -4,7 +4,7 @@ So today was all about getting my first trap working. Here is the result:
 
 <video src="media/devlog2/ma-dl2-Spike_Trap.mp4" width=600 controls></video>
 
-The most flexible way to do these things, is to just use [custom C++ components](../../docs/custom-code/cpp/custom-cpp-component.md) for everything. However, I want to test out our other infrastructure as well, for example the new [visual scripting](../../docs/custom-code/visual-script/visual-script-overview.md), the [state machines](../../docs/ai/state-machine-asset.md), and so on, so the goal is to prefer those, and only use C++ for the things that really need it.
+The most flexible way to do these things, is to just use [custom C++ components](../../docs/custom-code/cpp/custom-cpp-component.md) for everything. However, I want to test out our other infrastructure as well, for example the new [visual scripting (TODO)](../../docs/custom-code/visual-script/visual-script-overview.md), the [state machines](../../docs/ai/state-machine-asset.md), and so on, so the goal is to prefer those, and only use C++ for the things that really need it.
 
 At the moment I only have two custom C++ components, one for the player logic and one for the monsters. The former mostly does [input handling](../../docs/input/input-overview.md) and forwarding to the [character controller](../../docs/physics/jolt/special/jolt-character-controller.md), the latter mainly does the path finding and steering.
 
@@ -63,7 +63,7 @@ First this meant that my creatures need to have some kind of physics representat
 
 Now whenever the creature walks into a trap, the trigger in my trap prefab will fire an event. However, so far this event won't have any effect.
 
-I need to hook up the event from the trigger to my state machine. And this is what [visual scripts](../../docs/custom-code/visual-script/visual-script-overview.md) are really good for.
+I need to hook up the event from the trigger to my state machine. And this is what [visual scripts (TODO)](../../docs/custom-code/visual-script/visual-script-overview.md) are really good for.
 
 On the root node of my trap, I added a *Script Component*:
 

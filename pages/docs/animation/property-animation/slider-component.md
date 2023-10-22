@@ -26,4 +26,4 @@ The *slider component* is a very useful utility component to move an object back
 
 * [Rotor Component](rotor-component.md)
 * [Property Animation (TODO)](property-animation-overview.md)
-* [MoveTo Component (TODO)](move-to-component.md)
+* [MoveTo Component](move-to-component.md)

@@ -23,6 +23,8 @@ However, if you want that, you can include the generated plugin as an [external 
 
    Currently the locations for where the C++ source is stored and where the project will be built are both hard-coded to be within the project directory.
 
+1. Choose the desired name for the plugin or leave the default.
+
 1. Choose the desired MSVC solution version.
 
 1. Press the **Generate Solution** button and wait for it to finish.
@@ -35,18 +37,15 @@ However, if you want that, you can include the generated plugin as an [external 
 >
 > The code has to be built for the very same build type that the editor is running in (*Debug*, *Dev* or *Shipping*), otherwise the editor won't be able to load the DLL. If the build fails because certain EZ DLLs are missing, you are most likely building the wrong build type. The same may be true if you do code changes, but running the game from the editor doesn't reflect those changes.
 
-> **Note:**
->
-> After compiling your new plugin for the very first time, you have to close the [editor project](../../projects/projects-overview.md) and reopen it, for it to load the information properly. Due to automatic [hot reloading](cpp-code-reload.md) this shouldn't be necessary later anymore, but it can still be necessary, for example when you add a new component type to your C++ code.
-
 ## Opening an Existing Solution
 
-If you have generated the solution before, the *Open Solution* button will be active right away when you open this dialog. In this case you don't need to generate the solution again.
+If you have generated the solution before, the *Open Solution* button will be active right away when you open this dialog. In this case you don't need to generate the solution again. You can also skip this dialog and use *Project > C++ Project > Open Solution* instead.
 
 ## Regenerating a Solution
 
-If you have added or removed source files on disk, you need to regenerate the solution for those changes to show up in the Visual Studio solution. You have two options to do so:
+If you have added or removed source files on disk, you need to regenerate the solution for those changes to show up in the Visual Studio solution. You have three options to do so:
 
+1. Use *Project > C++ Project > Regenerate C++ Solution*.
 1. Run CMake yourself. For example you can use the CMake GUI app, point it to the plugin's build directory, and then *Configure* and *Generate* the solution at any point you like.
 1. Rerun *Generate Solution* from the dialog above. This will **clear the CMake cache** and fully regenerate the solution. Be aware that this resets all CMake options to their default values and often takes longer than strictly necessary.
 

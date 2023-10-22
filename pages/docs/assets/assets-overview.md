@@ -16,7 +16,7 @@ Examples for the latter are [scenes](../scenes/scene-editing.md), [prefabs](../p
 
 ## Creating Assets
 
-The straight forward way to create an asset document is through the menu *Editor > Create Document...*. This gives you a blank asset and you can (and must) fill out all properties manually.
+The straight forward way to create an asset document is through the menu *File > Create...*. This gives you a blank asset and you can (and must) fill out all properties manually.
 
 For common types of assets there is a more convenient way to quickly fill out the common properties. See the [asset import](import-assets.md) documentation for details.
 

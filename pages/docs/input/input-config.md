@@ -6,7 +6,7 @@ The project settings mostly exist for convenience. They allow you to set up a fi
 
 ## From the Editor
 
-*Editor > Project Settings > Input Configuration...* opens a dialog to configure the available input actions.
+*Project > Project Settings > Input Configuration...* opens a dialog to configure the available input actions.
 
 ![Input Configuration](../projects/media/editor-input-config.png)
 

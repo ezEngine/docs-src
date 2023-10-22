@@ -8,7 +8,7 @@ The project export feature consolidates all these files into a single directory,
 
 ## Export Project Dialog
 
-To get started with generating a self-contained package of your game, use the *project export dialog* that you find in the editor under *Editor > Export Project...*.
+To get started with generating a self-contained package of your game, use the *project export dialog* that you find in the editor under *Project > Export Project...*.
 
 ![Project Export Dialog](media/project-export-dlg.png)
 

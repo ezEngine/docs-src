@@ -22,7 +22,7 @@ For further details also see `ezComponent`.
 
 ## Project
 
-Under *Data/Samples/SampleGame* you will find an [editor project](../docs/projects/projects-overview.md) which uses the `SampleGamePlugin`. Note that the project references the plugin as a [runtime plugin](../docs/custom-code/cpp/engine-plugins.md) (under *Editor > [Project Settings](../docs/projects/project-settings.md) > Engine Plugins*). This makes the custom components available to the editor.
+Under *Data/Samples/SampleGame* you will find an [editor project](../docs/projects/projects-overview.md) which uses the `SampleGamePlugin`. Note that the project references the plugin as a [runtime plugin](../docs/custom-code/cpp/engine-plugins.md) (under *Project > [Plugin Settings](../docs/projects/project-settings.md) > Plugin Selection...*). This makes the custom components available to the editor.
 
 When you press 'Play' in the editor, the scene will be simulated and the custom components, such as the `DemoComponent`, will take effect.
 

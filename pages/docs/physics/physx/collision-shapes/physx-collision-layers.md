@@ -14,7 +14,7 @@ For convenience, in the editor you can give a name to each layer. The name is ir
 
 ![Collision layer config](../media/physx-settings.png)
 
-Under *Editor > Project Settings > PhysX Project Settings...* you can configure the PhysX collision layers, as seen above.
+Under *Project > Plugin Settings > PhysX Project Settings...* you can configure the PhysX collision layers, as seen above.
 
 ## Physics Actors and Shapes
 

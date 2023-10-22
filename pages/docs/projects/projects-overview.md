@@ -10,7 +10,7 @@ The term *project* refers to one game or application, its global settings, and a
 
 You can use ezEngine entirely without the editor. In that case, you do not need to create a project, at all. Your [application (TODO)](../runtime/application/application.md) is your project and you set up things like the [fileSystem](../runtime/filesystem.md), the [plugins](../custom-code/cpp/engine-plugins.md) and so on, entirely from code.
 
-It is more convenient, though, to maintain your project through the editor. To create a new project, open the editor's [dashboard](../editor/dashboard.md) (*Editor > Show Dashboard*) and select **New** from the top-right corner:
+It is more convenient, though, to maintain your project through the editor. To create a new project, open the editor's [dashboard](../editor/dashboard.md) (*Project > Show Dashboard*) and select **New** from the top-right corner:
 
 ![Dashboard](../editor/media/dashboard-projects.png)
 
@@ -28,7 +28,7 @@ The second thing you should check is which [plugins](plugin-selection.md) you wa
 
 ### Create a Scene
 
-Select *Editor > Create Document...* and create a [document](../editor/editor-documents.md) of type `ezScene`. The new scene will be filled with some default objects and you should see something like this:
+Select *File > Create...* and create a [document](../editor/editor-documents.md) of type `ezScene`. The new scene will be filled with some default objects and you should see something like this:
 
 ![New Scene](media/new-project-scene.jpg)
 

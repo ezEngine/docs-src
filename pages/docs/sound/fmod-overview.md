@@ -42,7 +42,7 @@ There is a set of tutorials about FMOD in Unreal, which is a very good introduct
 
 ## FMOD Project Settings
 
-For project wide FMOD settings, go to *Editor > Project Settings > FMOD Project Settings...*
+For project wide FMOD settings, go to *Project > Plugin Settings > FMOD Project Settings...*
 
 ![FMOD settings](media/fmod-settings.png)
 

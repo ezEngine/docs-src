@@ -2,7 +2,7 @@
 
 Particle effects are used to create the visual part of things like explosions, smoke, fire, water splashes and much more. They are randomized to have slight variations every time. To create a full effect, like an explosion, with [sound](../../sound/sound-overview.md) and physical properties such as pushing nearby objects away or damaging objects and creatures, a particle effect is typically put into a [prefab](../../prefabs/prefabs-overview.md), which contains additional components for sound and game play logic (e.g. through [scripts](../../custom-code/typescript/typescript-overview.md)).
 
-To create a new particle effect, use *Editor > Create Document* and select *Particle Effect* as the file type. Or alternatively, right-click on any asset in the [asset browser](../../assets/asset-browser.md) and select *New > Particle Effect*.
+To create a new particle effect, use *File > Create...* and select *Particle Effect* as the file type. Or alternatively, right-click on any asset in the [asset browser](../../assets/asset-browser.md) and select *New > Particle Effect*.
 
 ## Particle Editor UI
 

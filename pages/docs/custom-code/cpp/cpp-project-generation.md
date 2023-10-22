@@ -17,7 +17,7 @@ However, if you want that, you can include the generated plugin as an [external 
 
 ## How to Generate a New Solution
 
-1. Select *Editor > Open C++ Project...*. The following dialog will appear:
+1. Select *Project > C++ Project > Setup C++ Plugin...*. The following dialog will appear:
 
    ![Project Generation Dialog](media/generate-project.png)
 

@@ -239,13 +239,15 @@
 ## [Spawn Component](gameplay/spawn-component.md)
 ## [Timed Death Component](gameplay/timed-death-component.md)
 # Miscellaneous
-## [Blackboard Component](Miscellaneous/blackboard-component.md)
+## [Blackboard Template Asset](Miscellaneous/blackboard-template-asset.md)
 ## [Blackboards](Miscellaneous/blackboards.md)
 ## Components
 ### [Comment Component](Miscellaneous/components/comment-component.md)
 ### [Shape Icon Component](Miscellaneous/components/shape-icon-component.md)
 ## [Config File Resource](Miscellaneous/config-file-resource.md)
+## [Global Blackboard Component](Miscellaneous/global-blackboard-component.md)
 ## [ImageData Asset](Miscellaneous/imagedata-asset.md)
+## [Local Blackboard Component](Miscellaneous/local-blackboard-component.md)
 # Custom Code
 ## [Custom Code](custom-code/custom-code-overview.md)
 ## C++

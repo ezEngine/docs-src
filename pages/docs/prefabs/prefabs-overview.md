@@ -64,7 +64,15 @@ Much game functionality requires to spawn objects dynamically at runtime. This i
 
 Prefab templates are allowed to have multiple top-level nodes. When a prefab is referenced in a scene, the node that holds the *prefab reference component* acts as a root node (or group node) for all nodes that will be instantiated from the template. All instantiated nodes will be attached to this parent node.
 
-This is especially important to keep in mind when writing custom (script) code that searches for a node within a hierarchy. You can give a name to the prefab reference node, and therefore find a specific instance of the prefab. From there on, you can continue searching for nodes by name, and thus find a specific sub-node from the prefab template.
+In the prefab asset, this parent node is accessible. By default, new prefabs have a root node called **<prefab-root>** which acts as a proxy node for the node on which the prefab template will be instantiated on.
+
+![Prefab Root](media/prefab-root.png)
+
+This way you can add components directly to this entity. If you don't need access to this object, you can give the proxy object a different name, then it shows up as a regular game object and will become a child object of the prefab root node, when the prefab is instantiated.
+
+All of this is especially important to keep in mind when writing custom (script) code that searches for a node within a hierarchy. You can give a name to the prefab reference node (the one that instantiates a prefab), and therefore find a specific instance of the prefab by that name. From there on, you can continue searching for nodes by name, and thus find a specific sub-node from the prefab template.
+
+Another situation where this is important, is when a prefab needs to create components on the prefab instance entity. For example when setting up physical objects, it can be useful to add the [dynamic actor component](../physics/jolt/actors/jolt-dynamic-actor-component.md) to the *<prefab-root>* node. This way [constraints](../physics/jolt/constraints/jolt-constraints.md) can attach directly to a prefab. For instance, you can have two instances of a box prefab, and add a constraint (or a [rope](../physics/jolt/special/jolt-rope-component.md)) between them. As long as the dynamic actor exists directly on the prefab-root object, the constraint is able to attach to both boxes. If the actor component were on a sub-node instead, the constraint would not be able to find it, and wouldn't work.
 
 ## See Also
 

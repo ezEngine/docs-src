@@ -48,7 +48,7 @@ Finally, you certainly noticed the *Any State*. This is a convenience feature, t
 
 Here our simple logic just says, that if the `Points` blackboard value reaches zero, we transition into the *Lost* state. You lose points every time a monster arrives at the level end.
 
-So how do we get all this running in our game? We just add a [State Machine](../../docs/ai/state-machine-component.md) object into our scene:
+So how do we get all this running in our game? We just add a [State Machine](../../docs/custom-code/game-logic/state-machine-component.md) object into our scene:
 
 ![LevelNodes](media/devlog6/ma-dl6-LevelNodes.png)
 

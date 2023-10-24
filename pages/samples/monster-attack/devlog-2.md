@@ -4,7 +4,7 @@ So today was all about getting my first trap working. Here is the result:
 
 <video src="media/devlog2/ma-dl2-Spike_Trap.mp4" width=600 controls></video>
 
-The most flexible way to do these things, is to just use [custom C++ components](../../docs/custom-code/cpp/custom-cpp-component.md) for everything. However, I want to test out our other infrastructure as well, for example the new [visual scripting (TODO)](../../docs/custom-code/visual-script/visual-script-overview.md), the [state machines](../../docs/ai/state-machine-asset.md), and so on, so the goal is to prefer those, and only use C++ for the things that really need it.
+The most flexible way to do these things, is to just use [custom C++ components](../../docs/custom-code/cpp/custom-cpp-component.md) for everything. However, I want to test out our other infrastructure as well, for example the new [visual scripting (TODO)](../../docs/custom-code/visual-script/visual-script-overview.md), the [state machines](../../docs/custom-code/game-logic/state-machine-asset.md), and so on, so the goal is to prefer those, and only use C++ for the things that really need it.
 
 At the moment I only have two custom C++ components, one for the player logic and one for the monsters. The former mostly does [input handling](../../docs/input/input-overview.md) and forwarding to the [character controller](../../docs/physics/jolt/special/jolt-character-controller.md), the latter mainly does the path finding and steering.
 
@@ -16,7 +16,7 @@ Here is what it looks like in a close up:
 
 <video src="media/devlog2/ma-dl2-SpikeTrapAnim.mp4" width=600 controls></video>
 
-The trap has four states, therefore I built a [state machine](../../docs/ai/state-machine-asset.md).
+The trap has four states, therefore I built a [state machine](../../docs/custom-code/game-logic/state-machine-asset.md).
 
 ![Spike Trap States](media/devlog2/ma-dl2-image1.png)
 
@@ -73,7 +73,7 @@ The script is quite trivial:
 
 ![Script](media/devlog2/ma-dl2-image7.png)
 
-Whenever the trigger fires, the script's *OnMsgTriggerTriggered* node gets executed. We then switch over the state and only react to *Activated* events. If so, we call *FireTransitionEvent* on the sibling [StateMachineComponent](../../docs/ai/state-machine-component.md) and tell it to *Fire*.
+Whenever the trigger fires, the script's *OnMsgTriggerTriggered* node gets executed. We then switch over the state and only react to *Activated* events. If so, we call *FireTransitionEvent* on the sibling [StateMachineComponent](../../docs/custom-code/game-logic/state-machine-component.md) and tell it to *Fire*.
 
 ![SM transitions](media/devlog2/ma-dl2-image8.png)
 

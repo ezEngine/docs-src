@@ -217,12 +217,15 @@
 ### [Procedural Volume Image Component](terrain/procedural/procgen-volume-image-component.md)
 ### [Procedural Volume Sphere Component](terrain/procedural/procgen-volume-sphere-component.md)
 # Ai
-## [Recast Navmesh Component](ai/recast-navmesh-component.md)
-## [Recast Navmesh](ai/recast-navmesh.md)
-## [Recast Integration (TODO)](ai/recast.md)
+## Aiplugin
+### [AiPlugin Overview](ai/AiPlugin/ai-plugin-overview.md)
+### [Navmesh Path Test Component](ai/AiPlugin/navmesh-path-test-component.md)
+### [Runtime Navmesh](ai/AiPlugin/runtime-navmesh.md)
+## Recastplugin
+### [Recast Navmesh Component](ai/RecastPlugin/recast-navmesh-component.md)
+### [Recast Navmesh](ai/RecastPlugin/recast-navmesh.md)
+### [Recast Integration](ai/RecastPlugin/recast.md)
 ## [Sensor Components](ai/sensor-components.md)
-## [State Machine Asset](ai/state-machine-asset.md)
-## [State Machine Component](ai/state-machine-component.md)
 # Ui
 ## [Ingame UI](ui/ui.md)
 ## [ImGui](ui/imgui.md)
@@ -237,6 +240,7 @@
 ## [Projectile Component](gameplay/projectile-component.md)
 ## [Raycast Placement Component](gameplay/raycast-placement-component.md)
 ## [Spawn Component](gameplay/spawn-component.md)
+## [Spawnbox Component](gameplay/spawnbox-component.md)
 ## [Timed Death Component](gameplay/timed-death-component.md)
 # Miscellaneous
 ## [Blackboard Template Asset](Miscellaneous/blackboard-template-asset.md)
@@ -264,9 +268,13 @@
 ### [Messaging in TypeScript Code](custom-code/typescript/ts-messaging.md)
 ### [TypeScript Component](custom-code/typescript/ts-component.md)
 ## Visual Script
+### [Script Component (TODO)](custom-code/visual-script/script-component.md)
+### [Visual Script Class Asset (TODO)](custom-code/visual-script/visual-script-class-asset.md)
 ### [Custom Code with Visual Scripts (TODO)](custom-code/visual-script/visual-script-overview.md)
 ## Game Logic
 ### [Forward Events To Game State Component](custom-code/game-logic/forward-events-to-game-state-component.md)
+### [State Machine Asset](custom-code/game-logic/state-machine-asset.md)
+### [State Machine Component](custom-code/game-logic/state-machine-component.md)
 ### [Trigger Delay Modifier Component](custom-code/game-logic/trigger-delay-modifier-component.md)
 # Runtime
 ## Application

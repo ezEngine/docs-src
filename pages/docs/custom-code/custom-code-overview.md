@@ -20,4 +20,4 @@ TypeScript code is updated every time you [run a scene](../editor/run-scene.md),
 
 ## Visual Scripting
 
-Visual script code is the most limited both in functionality and tooling. It can be used for simple if-then scripts. The visual script system is not bad, but it is very far away from what can be done with TypeScript, and due to auto-completion and type checking provided by Visual Studio Code, using TypeScript is even more convenient. Without serious investment into the visual scripting system and tools (for which the core team has no time), there is no reason to ever prefer it over the other options.
+Visual script code is the most limited both in functionality and tooling, but it is quite convenient to use for small scripts that act as the glue code, for example between C++ and [state machines](game-logic/state-machine-asset.md), or for handling simple logic.

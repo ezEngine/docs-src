@@ -6,7 +6,7 @@ Navmeshes are special meshes that define which areas of a scene are traversable 
 
 To add a navmesh to a scene, place a [navmesh component](recast-navmesh-component.md) to it.
 
-Navmeshes are unique to each scene, therefore they are not treated as reusable assets. Instead, each navmesh component generates and holds the data directly. Since generating a navmesh can take a long time, this process is exposed as an [editor background operation](../editor/editor-bg-operations.md).
+Navmeshes are unique to each scene, therefore they are not treated as reusable assets. Instead, each navmesh component generates and holds the data directly. Since generating a navmesh can take a long time, this process is exposed as an [editor background operation](../../editor/editor-bg-operations.md).
 
 To update a navmesh, open the background operations panel and start the corresponding operation.
 
@@ -26,6 +26,5 @@ Be aware that the Recast integration is very basic. Any help improving it would 
 
 ## See Also
 
-
 * [Recast Navmesh Component](recast-navmesh-component.md)
-* [Recast Integration (TODO)](recast.md)
+* [Recast Integration](recast.md)

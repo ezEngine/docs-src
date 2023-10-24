@@ -16,6 +16,10 @@ Surfaces are used by [collision meshes](../physics/jolt/collision-shapes/jolt-co
 
 **Friction:** The friction values affect how slippery a material is and thus how much it will slide or roll. Smooth surfaces typically have lower and rough surfaces higher friction. Some physics engines also differentiates between *static* friction for objects that are currently standing still and *dynamic* friction for objects that are already moving. Static friction is typically higher than dynamic friction, meaning it is more difficult to get something to move, than to keep something moving. Note that [Jolt](../physics/jolt/jolt-overview.md) does not differentiate between the two, and we use an average value here.
 
+## AI Properties
+
+**Ground Type:** This property is used by the [AiPlugin](../ai/AiPlugin/ai-plugin-overview.md) during [navmesh generation](../ai/AiPlugin/runtime-navmesh.md) and path searches to determine whether a character can traverse this kind of terrain and at what speed.
+
 ## Surface Interactions
 
 The main feature of surfaces are *surface interactions*. These are used to tell the engine which effects it should spawn when a surface interacts with something else. The other thing may be another surface, for example when a box slides over the ground, then both the box and the ground have a surface. However, the other thing could also be something entirely different. For example a laser beam. In this case the surface may define whether the beam should create sparks or fire or steam, etc.

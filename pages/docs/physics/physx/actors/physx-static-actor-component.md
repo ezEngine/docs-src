@@ -10,7 +10,7 @@ If you need your geometry to be able to move, use a [dynamic actor](physx-dynami
 
 * `CollisionMesh`: An optional convex or concave [collision mesh](../collision-shapes/physx-collision-meshes.md) representing the static actor geometry. This will be combined with all [shapes](../collision-shapes/physx-shapes.md) found in the hierarchy below the owner object.
 * `CollisionLayer`: The [collision layer](../collision-shapes/physx-collision-layers.md) defines which objects will collide with this actor.
-* `IncludeInNavmesh`: If set, this object will be considered an obstacle for AI and [navmeshes](../../../ai/recast-navmesh.md) are generated around it.
+* `IncludeInNavmesh`: If set, this object will be considered an obstacle for AI and [navmeshes](../../../ai/RecastPlugin/recast-navmesh.md) are generated around it.
 * `PullSurfacesFromGraphicsMesh`: If this is enabled, at startup the actor will check whether there is a [graphics mesh component](../../../graphics/meshes/mesh-component.md) attached to the same owner, which has the same amount of materials, as the collision mesh. If so, it will query those materials for their [surfaces](../../../materials/surfaces.md) and use them to override the surfaces that are stored in the collision mesh. This can be very convenient, especially for complex meshes, because you only need to set up the materials for the graphics mesh, and don't need to mirror the same setup on the collision mesh. Also modifications to the graphics mesh (or its materials) will then apply to the collision mesh as well. Enabling this option forces the graphics mesh to be loaded at startup and therefore reduces potential for streaming data in the background.
 
 ## See Also

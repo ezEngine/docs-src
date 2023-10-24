@@ -68,7 +68,7 @@ For tutorial videos, [have a look here](../getting-started/videos.md).
 
 ## AI
 
-![Navmesh generation](../docs/ai/media/navmesh.jpg)
+![Navmesh generation](../docs/ai/RecastPlugin/media/navmesh.jpg)
 
 ## Other
 

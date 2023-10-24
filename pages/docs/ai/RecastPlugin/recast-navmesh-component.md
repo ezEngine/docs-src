@@ -4,7 +4,7 @@ The Recast Navmesh component is used to add a navigation mesh to a scene. See th
 
 ## Component Properties
 
-* `ShowNavMesh`: If enabled, a debug visualization of the navmesh is rendered. **Note:** The same can be achieved through the [CVar](../debugging/cvars.md) `ai_ShowNavMesh` which can be dynamically toggled at runtime.
+* `ShowNavMesh`: If enabled, a debug visualization of the navmesh is rendered. **Note:** The same can be achieved through the [CVar](../../debugging/cvars.md) `ai_ShowNavMesh` which can be dynamically toggled at runtime.
 * `AgentHeight`, `AgentRadius`: The height and radius of the average agent for which the navmesh will be generated.
 * `AgentClimbHeight`: How high obstacles can be before they prevent the agent from stepping over.
 * `WalkableSlope`: The slope angle that the agent is able to walk up.
@@ -14,6 +14,5 @@ The Recast Navmesh component is used to add a navigation mesh to a scene. See th
 
 ## See Also
 
-
 * [Recast Navmesh](recast-navmesh.md)
-* [Recast Integration (TODO)](recast.md)
+* [Recast Integration](recast.md)

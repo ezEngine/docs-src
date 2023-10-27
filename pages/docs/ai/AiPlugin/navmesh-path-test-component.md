@@ -2,7 +2,7 @@
 
 This component is for testing the [runtime navmesh](runtime-navmesh.md).
 
-Place an object with this component in you scene, then specify another object as the `PathEnd`. 
+Place an object with this component in your scene, then specify another object as the `PathEnd`. 
 Make sure you have a [navmesh config](runtime-navmesh.md#navmesh-types) and a [path search config](runtime-navmesh.md#path-search-types) set up and chosen for this component to use.
 
 Path searches are only possible while [simulating a scene](../../editor/run-scene.md), so press the *play* button to test it.

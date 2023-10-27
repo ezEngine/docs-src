@@ -10,9 +10,9 @@ State machines are also often used for AI (creatures or NPCs), to give them beha
 
 At any time exactly one *state* is **active** in a state machine. The active state determines what actions an entity will do and what other states it can *transition* into. For example in the image above you can see that this state machine can only transition from the *Idle* state into the *Alert* state (and back), but it can't directly transition into the *Attacking* state.
 
-What an entity does, when a certain state is active, is usually up to [other code](../custom-code-overview.md). On the state node in the state machine asset you select what *type of state* this is. Different state types can be implemented in C++ or [visual scripts (TODO)](../visual-script/visual-script-overview.md).
+What an entity does, when a certain state is active, is usually up to [other code](../custom-code-overview.md). On the state node in the state machine asset you select what *type of state* this is. Different state types can be implemented in C++ or [visual scripts](../visual-script/visual-script-overview.md).
 
-State machines are updated regularly and during every update they may *transition* into another state. Possible transitions are represented by arrows between states. Just as with states, there are also different *types of transitions*. As with states, custom transition types can be implemented with C++ or [visual scripts (TODO)](../visual-script/visual-script-overview.md).
+State machines are updated regularly and during every update they may *transition* into another state. Possible transitions are represented by arrows between states. Just as with states, there are also different *types of transitions*. As with states, custom transition types can be implemented with C++ or [visual scripts](../visual-script/visual-script-overview.md).
 
 During the state machine update, each transition on the active state is queried, whether its condition is met. If so, the transition is taken, and the state that it points to becomes the new active state. What it means that a transition's condition is met, is up to the transition type's implementation. For example the *blackboard transition* inspects values from a nearby [blackboard](../../Miscellaneous/blackboards.md), allowing you to set up logical rules. Another type of transition may simply wait for a second and then allow to transition further, acting as a timer.
 
@@ -59,7 +59,7 @@ A *Compound State* has no functionality by itself, rather it holds an array of o
 
 ### Script State
 
-The *Script State* runs a [visual scripts (TODO)](../visual-script/visual-script-overview.md). It executes the `OnEnter`, `OnExit` and `Update` event handlers for state machine states.
+The *Script State* runs a [visual scripts](../visual-script/visual-script-overview.md). It executes the `OnEnter`, `OnExit` and `Update` event handlers for state machine states.
 
 ### Switch Object State
 
@@ -108,7 +108,7 @@ Note that you can use nested compound transitions to create even more complex lo
 
 ### Transition Event Transition
 
-This type of transition is taken when a *transition event* with the expected name has been raised. Transition events can be raised from [visual scripts (TODO)](../visual-script/visual-script-overview.md) or C++ through the [state machine component](state-machine-component.md). This allows script code to report back, that a certain condition was met, and that the state machine may leave its current state.
+This type of transition is taken when a *transition event* with the expected name has been raised. Transition events can be raised from [visual scripts](../visual-script/visual-script-overview.md) or C++ through the [state machine component](state-machine-component.md). This allows script code to report back, that a certain condition was met, and that the state machine may leave its current state.
 
 ## Executing State Machines
 

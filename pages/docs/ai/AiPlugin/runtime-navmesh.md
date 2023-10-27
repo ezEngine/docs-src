@@ -1,12 +1,12 @@
 # Runtime Navmesh
 
-The [AiPlugin](ai-plugin-overview.md) add functionality to generate navmeshes on-demand at runtime. This is a very convenient workflow, as you don't need to create and store navmeshes before.
+The [AiPlugin](ai-plugin-overview.md) adds functionality to generate navmeshes on-demand at runtime. This is a very convenient workflow, as the navmesh incorporates level changes every time you restart the simulation.
 
 ![Navmesh](media/ai-navmesh.jpg)
 
 ## Input Data
 
-The runtime navmesh generation uses the [collision geometry](../../physics/jolt/collision-shapes/jolt-collision-meshes.md) and its [surfaces](../../materials/surfaces.md) as the input data from which to build the navmesh.
+The runtime navmesh generation uses the [collision geometry](../../physics/jolt/collision-shapes/jolt-collision-meshes.md) and its [surfaces](../../materials/surfaces.md) as the input data from which to build the navmesh. The data is queried *on-demand* in an area around where *path searches* are done. To see the resulting navmesh, enable the [navmesh visualization](#navmesh-visualization).
 
 ## Navigation Configuration
 
@@ -57,6 +57,10 @@ Use the the [navmesh path test component](navmesh-path-test-component.md) to see
 ## Navmesh Visualization
 
 To be able to see the navmesh, use the [CVar](../../debugging/cvars.md) `Ai.Navmesh.Visualize`. There can be multiple different navmeshes for different character heights etc. This CVar enables visualization for *one of them* by index. So set it to `0` to see the first navmesh, `1` if you have a second one and so on.
+
+> **Important:**
+>
+> No navmesh will be generated, as long as no path searches are done. Use the [navmesh path test component](navmesh-path-test-component.md) to initiate a path search.
 
 # See Also
 

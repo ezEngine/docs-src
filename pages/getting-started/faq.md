@@ -4,13 +4,13 @@
 
 The ezEngine base libraries (Foundation, Core) have been built to be fully cross platform. The corresponding unit tests are run on Windows, Linux, Mac and Android every day. There are some stubs for functions that are currently only needed on Windows, but implementing them is easy to do, when needed.
 
-Everything higher level (editor, tools, rendering) is **currently only implemented for Windows 10/11**. There is **no (official) Linux**, **no Mac** and also **no Windows 8 or lower** support.
+Everything higher level (editor, tools, rendering) is **currently only implemented for Windows 11**. There is **no (official) Linux**, **no Mac** and also **no Windows 8 or lower** support.
 
 A **Linux port** is currently being worked on, though.
 
 ## Render API
 
-At the moment we (officially) only provide a **DX11 renderer**. A **Vulkan renderer** is currently in development.
+At the moment we (officially) only provide a **DX11 renderer**. A **Vulkan renderer** is in development.
 
 ## Networking & Multiplayer
 
@@ -22,7 +22,7 @@ If you want to do multiplayer, you have to implement that aspect yourself. This 
 
 ## Visual Scripting
 
-Yes, EZ has [visual scripting (TODO)](../docs/custom-code/visual-script/visual-script-overview.md). It's not really great, though. You can do simple level logic, like "if that lever is pulled, open that door". You shouldn't really use it for anything else. We are generally not convinced that visual scripting is a great way to program (in no engine, no matter how good their tools are). Therefore we have no plans on improving our implementation at the moment, we rather improve the [TypeScript](../docs/custom-code/typescript/typescript-overview.md) binding. Though, if you are a fan of visual scripting and want to improve it, feel free to look into it.
+Yes, EZ has [visual scripting](../docs/custom-code/visual-script/visual-script-overview.md). You can do simple level logic, like "if that lever is pulled, open that door". You shouldn't expect to use it for larger features, though. We are generally not convinced that visual scripting is a great way to program (in no engine, no matter how good their tools are). However, for taking care of smaller tasks and as glue code between systems, it is a great way to get things done that would otherwise be quite cumbersome.
 
 ## Scripting with TypeScript
 
@@ -49,8 +49,7 @@ We don't plan very far ahead. Here are the things we intend to work on in the ne
 1. Animation system improvements
 1. Better ragdoll system
 1. General usability improvements
-
-"Intend to work" **doesn't mean complete**, though. We can't give estimates on that.
+1. Game AI functionality
 
 ## History & Team
 

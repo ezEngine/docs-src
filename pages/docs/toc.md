@@ -268,9 +268,9 @@
 ### [Messaging in TypeScript Code](custom-code/typescript/ts-messaging.md)
 ### [TypeScript Component](custom-code/typescript/ts-component.md)
 ## Visual Script
-### [Script Component (TODO)](custom-code/visual-script/script-component.md)
-### [Visual Script Class Asset (TODO)](custom-code/visual-script/visual-script-class-asset.md)
-### [Custom Code with Visual Scripts (TODO)](custom-code/visual-script/visual-script-overview.md)
+### [Script Component](custom-code/visual-script/script-component.md)
+### [Visual Script Class Asset](custom-code/visual-script/visual-script-class-asset.md)
+### [Custom Code with Visual Scripts](custom-code/visual-script/visual-script-overview.md)
 ## Game Logic
 ### [Forward Events To Game State Component](custom-code/game-logic/forward-events-to-game-state-component.md)
 ### [State Machine Asset](custom-code/game-logic/state-machine-asset.md)

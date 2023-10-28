@@ -1,8 +1,0 @@
-physx-overview.md
-physx-settings-component.md
-physx-visual-debugger.md
-actors
-collision-shapes
-joints
-ragdolls
-special

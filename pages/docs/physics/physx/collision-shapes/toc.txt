@@ -1,8 +1,0 @@
-physx-shapes.md
-physx-sphere-shape-component.md
-physx-box-shape-component.md
-physx-capsule-shape-component.md
-physx-convex-shape-component.md
-physx-center-of-mass-component.md
-physx-collision-meshes.md
-physx-collision-layers.md

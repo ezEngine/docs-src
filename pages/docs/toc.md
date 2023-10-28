@@ -128,6 +128,7 @@
 ## [Cloth Sheet Component](effects/cloth-sheet-component.md)
 ## [Decals](effects/decals.md)
 ## [Fog](effects/fog.md)
+## [Lensflare Component (TODO)](effects/lensflare-component.md)
 ## Particle Effects
 ### [Particle Effects](effects/particle-effects/particle-effects-overview.md)
 ### [How Particle Effects Work](effects/particle-effects/how-particle-effects-work.md)
@@ -136,6 +137,9 @@
 ### [Particle Behaviors](effects/particle-effects/particle-behaviors.md)
 ### [Particle Renderers](effects/particle-effects/particle-renderers.md)
 ### [Particle Effect Component](effects/particle-effects/particle-effect-component.md)
+## Post Processing
+### [Post-Processing Component](effects/post-processing/post-processing-component.md)
+### [Volume Components](effects/post-processing/volume-components.md)
 ## Ropes
 ### [Fake Rope Component](effects/ropes/fake-rope-component.md)
 ### [Rope Render Component](effects/ropes/rope-render-component.md)

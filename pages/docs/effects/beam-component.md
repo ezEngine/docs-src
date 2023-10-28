@@ -20,5 +20,4 @@ The beam component is purely a graphical effect, it has no game play functionali
 
 ## See Also
 
-
 * [Raycast Placement Component](../gameplay/raycast-placement-component.md)

@@ -128,7 +128,7 @@
 ## [Cloth Sheet Component](effects/cloth-sheet-component.md)
 ## [Decals](effects/decals.md)
 ## [Fog](effects/fog.md)
-## [Lensflare Component (TODO)](effects/lensflare-component.md)
+## [Lensflare Component](effects/lensflare-component.md)
 ## Particle Effects
 ### [Particle Effects](effects/particle-effects/particle-effects-overview.md)
 ### [How Particle Effects Work](effects/particle-effects/how-particle-effects-work.md)

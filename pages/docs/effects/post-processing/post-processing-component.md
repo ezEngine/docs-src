@@ -12,7 +12,7 @@ With post processing, the area can be made to look very different:
 
 The level uses a volume component to specify that this area should have a different athmosphere and thus use different values for post processing.
 
-To enable custom post processing, attach the post processing component to the same object where the main [camera component](../../graphics/camera-component.md) is attached to. This would typically be inside a player prefab.
+To enable custom post processing, attach the post processing component to the same object where the main [camera component](../../graphics/camera-component.md) is attached to. This would typically be inside a player prefab. If, however, the post processing component is attached to an object with a camera component that is configured for [render to texture (TODO)](../../graphics/render-to-texture/render-to-texture.md), it will only affect that.
 
 It is also possible to place this component simply anywhere in a level. In this case it is always active and affects the currently active camera. This can be very useful during testing, since it also affects the editor camera and thus you can test values and volume placement just by moving the editor camera around, without even simulating the scene.
 
@@ -37,6 +37,10 @@ The image below shows the *Tonemapping* render pass from the game's [render pipe
 ![Render Pass](media/tonemap-pass.png)
 
 Be aware that once post processing component is used, the values for these properties on the render pipeline have no effect anymore, since they are always being overwritten anyway.
+
+## Constant Overrides
+
+If you leave the `Volume Value` property for a mapping empty, the component overrides the render pipeline with the default value, but never reads a value from a volume. This can be used to just set a value to a different value in a level. This way you can also use this component just to have different values per level. In this case the component should not exist on the player object, but just be added to each level.
 
 ## See Also
 

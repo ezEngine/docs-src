@@ -24,4 +24,4 @@ By using a query shape actor, it is very easy to define that this object only pa
 ## See Also
 
 * [Jolt Actors](jolt-actors.md)
-* [Jolt Bone Collider Component (TODO)](../ragdolls/jolt-bone-collider-component.md)
+* [Jolt Hitbox Component](../ragdolls/jolt-hitbox-component.md)

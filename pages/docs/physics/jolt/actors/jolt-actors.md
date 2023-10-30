@@ -42,7 +42,7 @@ Triggers are set up by attaching a [trigger component](jolt-trigger-component.md
 
 ## Other Actors
 
-ezEngine comes with a couple of additional components that end up as physics actors in the simulation, but have additional functionality for specific use cases. For example the [query shape actor](jolt-queryshape-actor-component.md) and the [hitbox component](../ragdolls/jolt-hitbox-component.md) can be used to define hit-boxes and the [ragdoll component (TODO)](../ragdolls/jolt-ragdoll-component.md) is used to physically simulate creatures.
+ezEngine comes with a couple of additional components that end up as physics actors in the simulation, but have additional functionality for specific use cases. For example the [query shape actor](jolt-queryshape-actor-component.md) and the [hitbox component](../ragdolls/jolt-hitbox-component.md) can be used to define hit-boxes and the [ragdoll component](../ragdolls/jolt-ragdoll-component.md) is used to physically simulate creatures.
 
 ### Character Controller
 

@@ -115,7 +115,7 @@
 #### [Jolt Swing-Twist Constraint Component](physics/jolt/constraints/jolt-swing-twist-constraint-component.md)
 ### Ragdolls
 #### [Jolt Hitbox Component](physics/jolt/ragdolls/jolt-hitbox-component.md)
-#### [Jolt Ragdoll Component (TODO)](physics/jolt/ragdolls/jolt-ragdoll-component.md)
+#### [Jolt Ragdoll Component](physics/jolt/ragdolls/jolt-ragdoll-component.md)
 ### Special
 #### [Character Controller](physics/jolt/special/jolt-character-controller.md)
 #### [Jolt Grab Object Component](physics/jolt/special/jolt-grab-object-component.md)

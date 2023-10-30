@@ -8,7 +8,7 @@ The component must be attached next to another component that defines the [skele
 
 Consequently, the configuration of the hitbox shapes is set up through the [skeleton asset](../../../animation/skeletal-animation/skeleton-asset.md).
 
-The hitboxes are usually used to be able to shoot an animated character. Although they share the collider setup with the [Jolt ragdoll component (TODO)](jolt-ragdoll-component.md), hitboxes and ragdolls are separate features that can be used independently of each other. For example, while a character is alive, it would use hitboxes, so that raycasts can determine where it would be hit, but it would not use a ragdoll component yet. Once a character dies, a ragdoll component would be activated to make it fall to the ground. The hitbox component could now be deactivated (which also makes sense for performance reasons), since it's functionality may not be needed anymore.
+The hitboxes are usually used to be able to shoot an animated character. Although they share the collider setup with the [Jolt ragdoll component](jolt-ragdoll-component.md), hitboxes and ragdolls are separate features that can be used independently of each other. For example, while a character is alive, it would use hitboxes, so that raycasts can determine where it would be hit, but it would not use a ragdoll component yet. Once a character dies, a ragdoll component would be activated to make it fall to the ground. The hitbox component could now be deactivated (which also makes sense for performance reasons), since it's functionality may not be needed anymore.
 
 ## Component Properties
 
@@ -17,7 +17,7 @@ The hitboxes are usually used to be able to shoot an animated character. Althoug
 
 ## See Also
 
-* [Jolt Ragdoll Component (TODO)](jolt-ragdoll-component.md)
+* [Jolt Ragdoll Component](jolt-ragdoll-component.md)
 * [Jolt Query Shape Actor Component](../actors/jolt-queryshape-actor-component.md)
 * [Skeleton Asset](../../../animation/skeletal-animation/skeleton-asset.md)
 * [Skeletal Animations](../../../animation/skeletal-animation/skeletal-animation-overview.md)

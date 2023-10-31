@@ -34,7 +34,7 @@ Apart from the window position and size, the window configuration also controls 
 
 ## Asset Profiles
 
-*Project > Project Settings > Asset Profiles...* opens a dialog to edit [asset profiles (TODO)](../assets/asset-profiles.md).
+*Project > Project Settings > Asset Profiles...* opens a dialog to edit [asset profiles](../assets/asset-profiles.md).
 
 ## Plugin Selection
 

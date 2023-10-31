@@ -44,7 +44,7 @@ Plugins may add project wide options. Not all options may be exposed through edi
 * [Input Configuration](project-settings.md#input-configuration)
 * [Tags](tags.md)
 * [Window Configuration](project-settings.md#window-configuration)
-* [Asset profiles (TODO)](../assets/asset-profiles.md)
+* [Asset profiles](../assets/asset-profiles.md)
 
 ## See Also
 

@@ -40,7 +40,7 @@
 # Assets
 ## [Asset Browser](assets/asset-browser.md)
 ## [Asset Curator](assets/asset-curator.md)
-## [Asset Profiles (TODO)](assets/asset-profiles.md)
+## [Asset Profiles](assets/asset-profiles.md)
 ## [Assets](assets/assets-overview.md)
 ## [Asset Import](assets/import-assets.md)
 # Prefabs
@@ -237,7 +237,7 @@
 # Gameplay
 ## [Area Damage Component](gameplay/area-damage-component.md)
 ## [Grabbable Item Component](gameplay/grabbable-item-component.md)
-## [Head Bone Component (TODO)](gameplay/headbone-component.md)
+## [Head Bone Component](gameplay/headbone-component.md)
 ## [Marker Component](gameplay/marker-component.md)
 ## [Player Start Point](gameplay/player-start-point.md)
 ## [Power Connector Component](gameplay/power-connector-component.md)

@@ -55,7 +55,7 @@ So for the example with the object labels above, you would assign a 'label' tag 
 
 Camera components can be used to render their view to a texture, which can then be referenced by a [material](../materials/materials-overview.md) and displayed on any [mesh](meshes/meshes-overview.md).
 
-To enable this mode, the `UsageHint` has to be set to `Render to Texture`. You also need to select a `CameraRenderPipeline`. The render pipeline defines how the scene is rendered and which rendering effects are applied. You need to configure which [render pipelines (TODO)](render-pipeline-overview.md) are available to the cameras in the [asset profiles (TODO)](../assets/asset-profiles.md).
+To enable this mode, the `UsageHint` has to be set to `Render to Texture`. You also need to select a `CameraRenderPipeline`. The render pipeline defines how the scene is rendered and which rendering effects are applied. You need to configure which [render pipelines (TODO)](render-pipeline-overview.md) are available to the cameras in the [asset profiles](../assets/asset-profiles.md).
 
 The `RenderTargetOffset` and `RenderTargetSize` allow you to render only to a part of the texture.
 
@@ -73,7 +73,7 @@ Note that rendering to a texture involves additional steps. See the chapter abou
 
 * `IncludeTags`, `ExcludeTags`: See [Include/Exclude Tags](#includeexclude-tags) above.
 
-* `CameraRenderPipeline`: Allows you to select a specific [render pipeline (TODO)](render-pipeline-overview.md) that shall be used to render the output from this camera. Available render pipelines are set up in the [asset profiles (TODO)](../assets/asset-profiles.md).
+* `CameraRenderPipeline`: Allows you to select a specific [render pipeline (TODO)](render-pipeline-overview.md) that shall be used to render the output from this camera. Available render pipelines are set up in the [asset profiles](../assets/asset-profiles.md).
 
 * `RenderTarget`, `RenderTargetOffset`, `RenderTargetSize`: Only available when `UsageHint` is set to `Render to Texture`.
 
@@ -84,5 +84,5 @@ Note that rendering to a texture involves additional steps. See the chapter abou
 * [Editor Camera](../scenes/editor-camera.md)
 * [Render to Texture (TODO)](render-to-texture/render-to-texture.md)
 * [Render Pipeline (TODO)](render-pipeline-overview.md)
-* [Asset Profiles (TODO)](../assets/asset-profiles.md)
+* [Asset Profiles](../assets/asset-profiles.md)
 * [Tags](../projects/tags.md)

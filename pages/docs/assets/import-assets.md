@@ -16,9 +16,11 @@ This method always works for all asset types and for some types it is the only w
 
 For asset types that are mostly defined by a single source file (e.g. [textures](../graphics/textures-overview.md) and [meshes](../graphics/meshes/mesh-asset.md)), the editor often provides an importing method that automates most of the trivial setup.
 
-Select **Project > Import Assets...** or press **CTRL+I** to open a file browse dialog. Navigate to the file(s) that you want to import and select them. If you want to know which asset types are currently supported for automatic import, you can open the dropdown with the allowed file extensions here.
+The most convenient way is to find the source asset file in the [asset browser](asset-browser.md) (ensure it shows *importable files*), right-click on it and select **Import...**.
 
-After you selected the source files, you will be presented with a table of options how to import them:
+Another method is to select **Project > Import Assets...** or press **CTRL+I** to open a file browse dialog. Navigate to the file(s) that you want to import and select them. If you want to know which asset types are currently supported for automatic import, you can open the dropdown with the allowed file extensions here.
+
+Afterwards, you will be presented with a table of options how to import the selected files:
 
 ![Asset Import Table](media/asset-import.png)
 

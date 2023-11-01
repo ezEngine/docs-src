@@ -10,7 +10,19 @@ If the asset browser panel is not visible, select *Panels > Asset Browser*. You 
 
 Several other options are available, for example, *Open Asset* allows you to open the referenced asset document, which can be useful to follow a chain of asset references.
 
-## Search
+## File Display
+
+The asset browser can show all files that are on disk in the selected d[data directories](../projects/data-directories.md). It distinguishes between *assets*, *importable files* and *non-importable files*.
+
+**Assets** are typically shown with a thumbnail or dedicated icon. These are the files you work with most.
+
+**Importable files** are files that can be [imported as an asset](import-assets.md). Right click such a file and select `Import...` to do so. If an importable file is not referenced by any asset, it is color-coded orange. Otherwise it shows up white and its context menu contains the sub-menu `Imported via` which lists all the assets that reference this file.
+
+**Non-Importable files** are all other files. The editor can't do anything with them, other than to open the default application associated with this file type.
+
+You can also move and delete files and assets. Note that deleting a file moves it to the trash folder, so you can restore the file through the operating system functionality, if necessary. 
+
+## Search Field
 
 The *Search* field in the top-left corner allows you to search for assets by name, path and GUID. The search by path or name is case insensitive. For paths, both slashes and backslashes are allowed. You can also input the GUID of an asset (for example *{ 1c47ee4c-0379-4280-85f5-b8cda61941d2 }*).
 
@@ -28,19 +40,19 @@ However, it is much more convenient to just *right-click* an asset and select *F
 
 ## Filter by Asset Type
 
-Below the search field, all available asset types are listed with checkboxes. Click the checkboxes to only display assets of those types. Click *\<All\>* or uncheck all asset types to display assets of all types.
+Below the search field is a combo box containing all asset types. Select one to only show assets of this type.
 
 ## Filter by Folder
 
-On the bottom left the asset browser displays all [data directories](../projects/data-directories.md). When you select a folder in this tree view, the asset browser will only display assets located below that folder.
+On the left the asset browser displays all [data directories](../projects/data-directories.md). When you select a folder in this tree view, the asset browser only displays assets located below that folder.
+
+### Show Assets in Sub-Folders
+
+Right click on a folder and toggle **Show items in sub-folders**. When enabled (the default) the asset browser shows *all* assets that are anywhere below a selected folder. When disabled, only the assets that are directly inside the a selected folder are shown. Assets that are in a sub-folder are not displayed. This behavior is more like a typical file explorer.
 
 ### Filter to this Path
 
 You can right-click on any asset and select **Filter to this Path** to set the folder filter to the path in which the selected asset resides. This is useful when you already see an asset in the browser but are interested in an asset that you know is located next to that asset (same folder or sub-folder).
-
-### Show Assets in Sub-Folders
-
-Right click on a folder and toggle **Show items in sub-folders**. When enabled (the default) the asset browser shows *all* assets that are anywhere below a selected folder. When disabled, only the assets that are directly inside the a selected folder are shown. Assets that are in a sub-folder are not displayed.
 
 ### Hidden Folders
 
@@ -54,7 +66,7 @@ You can toggle this feature by right clicking any folder and selecting **Show it
 
 ## Create Asset Documents
 
-You can create new asset [documents](../editor/editor-documents.md) by right clicking a folder on the bottom left, or an asset on the right and selecting *New > Asset Type*. The advantage over creating a document via *File > Create...* is that the create file dialog opens directly in the location of the selected asset or folder, which makes it easier to create a new asset next to an existing asset.
+You can create new asset [documents](../editor/editor-documents.md) by right clicking a folder on the left or the empty area of a folder on the right or an existing asset on the right and then selecting *New > Asset Type*. The advantage over creating a document via *File > Create...* is that the create file dialog opens directly in the location of the selected asset or folder, which makes it easier to create a new asset next to an existing asset.
 
 ## Display Assets in Recently Used Order
 

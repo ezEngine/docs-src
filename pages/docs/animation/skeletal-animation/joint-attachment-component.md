@@ -4,7 +4,7 @@ The *joint attachment component* is used to expose the animated position of a bo
 
 <video src="../media/anim-point-shoot.webm" width="800" height="600" autoplay loop></video>
 
-In the video above a joint override component was used to expose the position of the right hand as a game object. This was then used as the parent object for a gun object.
+In the video above a joint attachment component was used to expose the position of the right hand as a game object. This was then used as the parent object for a gun object.
 
 ## Component Properties
 

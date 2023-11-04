@@ -10,7 +10,7 @@ The rest of this document gives a high-level overview, how to get started with g
 
 ## Sample Scene
 
-For a sample scene to look at, open the **Animation** scene from the [Testing Chambers](../../../samples/testing-chambers.md) project.
+For a sample scene to look at, open the **Animation** scene from the [Testing Chambers](../../../samples/testing-chambers.md) project. Additionally, the [Monster Attack Sample](../../../samples/monster-attack/monster-attack.md) may also be a useful resource.
 
 ## The Animation System Pieces
 
@@ -22,7 +22,7 @@ The [animated mesh](animated-mesh-asset.md) asset represents the mesh of the ani
 
 ### Skeleton Asset
 
-The [skeleton asset](skeleton-asset.md) stores the bone hierarchy of the animated object. This is also where you configure the overall scaling and which direction should be the forward, right and up vector of the imported model. The skeleton asset is also where you would set up physics collision shapes.
+The [skeleton asset](skeleton-asset.md) stores the bone hierarchy of the animated object. This is also where you configure the overall scaling and which direction should be the forward, right and up vector of the imported model. The skeleton asset is also where you set up physics collision shapes for [hit detection](../../physics/jolt/ragdolls/jolt-hitbox-component.md) and [ragdolls](../../physics/jolt/ragdolls/jolt-ragdoll-component.md).
 
 ### Animation Clip Asset
 
@@ -60,7 +60,7 @@ To import an animated object, you need to set up multiple assets (the mesh, the 
 
 ![Animation import](../media/anim-import.png)
 
-This will create all three necessary assets. You can repeat this process, if you want to import multiple animation clips (select *No Import* for the other asset types then). You'll need to change the filename for each additional animation clip asset.
+This will create all three necessary assets. To import additional animation clips, the easiest method is to just use *File > Save As...* in the existing animation clip asset to duplicate it for the next clip.
 
 ## Animation Utility Components
 

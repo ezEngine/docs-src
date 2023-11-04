@@ -12,10 +12,15 @@ This component is only meant for debugging purposes.
 
 * `VisualizeSkeleton`: Whether the component should visualize the skeleton at this time.
 
+* `VisualizeColliders`: Whether the collision shapes of the skeleton should be visualized.
+
+* `VisualizeJoints`: Whether the joints between the bones shall be visualized.
+
+* `VisualizeSwingLimits`, `VisualizeTwistLimits`: Whether the swing and twist limits of the joints shall be visualized.
+
 * `BonesToHighlight`: A semicolon-separated list of bone names (case sensitive). Every bone whose name appears in the list will be rendered with a highlight. To know the available bone names, inspect the bone hierarchy in the respective [skeleton asset](skeleton-asset.md).
 
 ## See Also
-
 
 * [Skeletal Animations](skeletal-animation-overview.md)
 * [Animated Mesh Component](animated-mesh-component.md)

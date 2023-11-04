@@ -2,11 +2,11 @@
 
 By default a skeletal animation has its origin at the position of the game object on which it is played. Relative to that location  animations will move the bones and the skinned mesh will move accordingly. The game object itself stays fixed at that location, though.
 
-This is sufficient if either the game object shouldn't change its location anyway, or when any change in position is controlled through other means anyway. For example a player character might be moved around the world through [custom code](../../custom-code/custom-code-overview.md) and a walking animation is only played to visualize the action. This approach can be the right solution, depending on the type of game.
+This is sufficient if either the game object shouldn't change its location anyway, or when any change in position is controlled through other means. For example a player character might be moved around the world through [custom code](../../custom-code/custom-code-overview.md) and a walking animation is only played to visualize the action. This approach can be the right solution, depending on the type of game.
 
-Such a method is, however, very prone to *foot sliding*, meaning an artifact where the feet move, but don't *stick* to the ground. It the movement of a game object should generally be determined by the exact blend of animation clips, it is better to have the motion be part of each animation clip.
+Such a method is, however, very prone to *foot sliding*, meaning an artifact where the feet move, but don't *stick* to the ground. If the movement of a game object should generally be determined by the exact blend of animation clips, it is better to have the motion be part of each animation clip.
 
-For example a *walk animations* would contain the information into which direction and at what speed a game object should be moved to fit the animation. When a *forward* and *walk right* animation get mixed together, their root motion information is equally mixed and the object would be moved diagonally.
+For example a *walk animation* would contain the information into which direction and at what speed a game object should be moved to fit the animation. When a *forward* and *walk right* animation get mixed together, their root motion information is equally mixed and the object would be moved diagonally.
 
 ## Defining Root Motion
 

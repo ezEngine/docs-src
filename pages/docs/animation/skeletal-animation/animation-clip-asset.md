@@ -16,7 +16,7 @@ An animation clip represents a single motion, such as a walk cycle, a jump or ot
 
 * `FirstFrame`, `NumFrames`: It is best to put every animation into a separate clip and export them that way. However, sometimes files contain only a single animation and each clip is found at another interval. By specifying the index of the first frame and the number of frames to use, you can extract individual clips from such data. Note that setting NumFrames to zero always means to use all the remaining frames after the first frame.
 
-  **Note:** It can be difficult to know the exact indices. Sometimes the data is authored at 24 frame per second and also exported that way, then you can plug in the numbers straight away. However, GLTF/GLB files are always exported at 1000 FPS. That means if your animation clip was authored with 24 FPS and starts at the one second mark, in the GLB file this wouldn't be at keyframe 24, but at keyframe 1000.
+  **Note:** It can be difficult to know the exact indices. Sometimes the data is authored at 24 frames per second and also exported that way, then you can plug in the numbers straight away. However, GLTF/GLB files are always exported at 1000 FPS. That means if your animation clip was authored with 24 FPS and starts at the one second mark, in the GLB file this wouldn't be at keyframe 24, but instead at keyframe 1000.
 
 * `PreviewMesh`: The [animated mesh](animated-mesh-asset.md) to use for previewing this animation clip. This has to be set to see any preview.
 

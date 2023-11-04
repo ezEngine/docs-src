@@ -1,6 +1,6 @@
 # Skeleton Pose Component
 
-The *skeleton pose component* allows you to assign a custom, static pose to an animated mesh. This can be used for decorative purposes, for instance to place an animated mesh in different poses in your scenes, but it can also be used as a start pose for a mesh that is further animated, for example through [ragdoll physics](../../physics/jolt/ragdolls/jolt-ragdoll-component.md).
+The *skeleton pose component* allows you to assign a custom, static pose to an [animated mesh](animated-mesh-component.md). This can be used for decorative purposes, for instance to place an animated mesh in different poses in your scenes, but it can also be used as a start pose for a mesh that is further animated, for example through [ragdoll physics](../../physics/jolt/ragdolls/jolt-ragdoll-component.md).
 
 ![Custom pose for animated mesh](media/custom-pose.jpg)
 

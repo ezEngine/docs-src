@@ -4,7 +4,7 @@ An animation graph typically samples more than one animation. Sometimes these an
 
 ## Lerp Poses Node
 
-The *lerp poses node* linearly interpolates between two poses. It is typically used to fade over from one pose to another and potentially to a third. Note that the node only controls the mix of the two animation poses, it is not used for synchronizing playback across clips. See the [Mix Clips 1D Node (TODO)](anim-nodes-mix1d.md) for that.
+The *lerp poses node* linearly interpolates between two poses. It is typically used to fade over from one pose to another and potentially to a third. Note that the node only controls the mix of the two animation poses, it is not used for synchronizing playback across clips. See the [Sample Blendspace 1D Node (TODO)](anim-nodes-blendspace1d.md) for that.
 
 ### Node Properties
 
@@ -44,5 +44,5 @@ The *Pose Switch Node* is used to quickly but smoothly transition from one pose 
 
 ## See Also
 
-* [Animation Graph (TODO)](animation-graph-overview.md)
+* [Animation Graphs (TODO)](animation-graph-overview.md)
 * [Skeletal Animations](../skeletal-animation-overview.md)

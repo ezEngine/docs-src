@@ -17,7 +17,7 @@ The goal of an animation graph is to sample a number of [animation clips](../ani
 
 <!-- TODO: TEXT IS OUTDATED -->
 
-Right click into the main area to open a context menu. Here you select which nodes to add to the graph. Every graph requires at least an [output node (TODO)](anim-nodes-output.md), a model space conversion node and a node to sample a clip, for example a [play single clip node (TODO)](anim-nodes-playclip.md). Once the graph samples two different clips you also need a combine poses node.
+Right click into the main area to open a context menu. Here you select which nodes to add to the graph. Every graph requires at least an [output node (TODO)](anim-nodes-output.md), a model space conversion node and a node to sample a clip, for example a play single clip node. Once the graph samples two different clips you also need a combine poses node.
 
 ### Connecting Nodes
 

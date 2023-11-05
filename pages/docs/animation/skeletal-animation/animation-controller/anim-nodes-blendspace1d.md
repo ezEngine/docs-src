@@ -1,4 +1,4 @@
-# Mix Clips 1D Node
+# Sample Blendspace 1D Node
 
 <!-- PAGE IS TODO -->
 <!-- TODO THIS PAGE IS OUTDATED -->
@@ -21,23 +21,23 @@ In the video above you can see such a transition in action. The *lerp* input val
 
 ## Node Properties
 
-See [common properties](anim-nodes-playclip.md#common-properties).
+See common properties.
 
 * `Clips`: A list of animation clips between which this animation node will interpolate. The node will only ever sample the two clips whose `Position` values are closest the the value provided through the `Lerp` input pin.
 
 ## Input Pins
 
-See [common input pins](anim-nodes-playclip.md#common-input-pins).
+See common input pins.
 
 * `Lerp`: This value determines which animation clips get mixed together. If the *lerp* value is in between two `Position` values of two clips, the output pose will be the linear interpolation of those two clips. If the *lerp* value is lower than the lowest `Position` value or higher than the highest, the output will be exactly that animation clip (there will be no extrapolation).
 
 ## Output Pins
 
-See [common output pins](anim-nodes-playclip.md#common-output-pins).
+See common output pins.
 
 ## See Also
 
 * [Animation Graph (TODO)](animation-graph-overview.md)
 * [Skeletal Animations](../skeletal-animation-overview.md)
-* [Mix Clips 2D Node (TODO)](anim-nodes-mix2d.md)
-* [Play Single Clip Nodes (TODO)](anim-nodes-playclip.md)
+* [Sample Clip Node (TODO)](anim-nodes-sample-clip.md)
+* [Sample Blendspace 2D Node (TODO)](anim-nodes-blendspace2d.md)

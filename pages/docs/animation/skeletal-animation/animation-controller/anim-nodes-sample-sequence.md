@@ -1,9 +1,9 @@
-# Play Clip Sequence Node
+# Sample Sequence Node
 
 <!-- PAGE IS TODO -->
 <!-- TODO THIS PAGE IS OUTDATED -->
 
-The *play clip sequence node* is similar to the [play single clip node (TODO)](anim-nodes-playclip.md), however, instead of playing just a single clip (looped), the sequence node plays at least three clips in a row. One to enter an animation state, one (looped) animation while it stays active, and one to exit the animation state.
+The *play clip sequence node* is similar to the play single clip node, however, instead of playing just a single clip (looped), the sequence node plays at least three clips in a row. One to enter an animation state, one (looped) animation while it stays active, and one to exit the animation state.
 
 Such sequences are common for actions such as jumping or climbing a ladder. The start clip transitions the character from a start state, such as idle or walking into the new state, such as *jumping*. The middle clip is then played as long as the jumping state needs to continue, and once the character hits the ground again, the end clip is played to transition back.
 
@@ -13,7 +13,7 @@ The video above shows such a sequence. Here the node uses a *point gun* animatio
 
 ## Node Properties
 
-See [common properties](anim-nodes-playclip.md#common-properties).
+See common properties.
 
 * `StartClip`: The [animation clip](../animation-clip-asset.md) to start with. This clip should end on a keyframe from where the `MiddleClips` can continue seemlessly.
 
@@ -23,13 +23,13 @@ See [common properties](anim-nodes-playclip.md#common-properties).
 
 ## Input Pins
 
-See [common input pins](anim-nodes-playclip.md#common-input-pins).
+See common input pins.
 
 * `MiddleClipIndex`: This pin can be used to select which of the `MiddleClips` to play next. In the video above this is used to select whether the gun should get fired or not.
 
 ## Output Pins
 
-See [common output pins](anim-nodes-playclip.md#common-output-pins).
+See common output pins.
 
 * `OnNextClip`: This pin will get triggered every time a clip finishes and the next middle or end clip starts. This can be used to know for example when the start phase has finished.
   

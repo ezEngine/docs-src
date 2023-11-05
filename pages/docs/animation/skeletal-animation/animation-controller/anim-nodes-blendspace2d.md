@@ -1,4 +1,4 @@
-# Mix Clips 2D Node
+# Sample Blendspace 2D Node
 
 <!-- PAGE IS TODO -->
 <!-- TODO THIS PAGE IS OUTDATED -->
@@ -15,7 +15,7 @@ Be aware that the poses will be combined linearly, though. If the poses from two
 
 ## How To Use
 
-You add multiple animation clips and give each clip a position (`X` and `Y`). As with the [mix clips 1D node (TODO)](anim-nodes-mix1d.md), the playback of all clips is synchronized, meaning that the length of each clip may differ, but they will be played back such that they start and end in unison. That means your clips must be authored accordingly, so for example for locomotion all clips should start with the left foot forwards, then move the right foot forwards, then the left again. From that point on the clips will be looped.
+You add multiple animation clips and give each clip a position (`X` and `Y`). As with the mix clips 1D node, the playback of all clips is synchronized, meaning that the length of each clip may differ, but they will be played back such that they start and end in unison. That means your clips must be authored accordingly, so for example for locomotion all clips should start with the left foot forwards, then move the right foot forwards, then the left again. From that point on the clips will be looped.
 
 What the coordinates represent is up to you. For locomotion you could say that `X` represents left/right movement and `Y` forwards/backwards. You would then position a *walk left* clip at `(-1, 0)` a *walk right* clip at `(+1, 0)` a *walk forward* clip at `(0, +1)` and a *run forward* clip at `(0, +2)`.
 
@@ -25,7 +25,7 @@ The node will then take that input coordinate to decide which clips should be us
 
 ## Node Properties
 
-See [common properties](anim-nodes-playclip.md#common-properties).
+See common properties.
 
 * `InputResponse`: A time duration over which changes to the `X` and `Y` input values are applied. This prevents sudden extreme changes. For example when `X` and `Y` are connected to physical buttons, which are just turned *on* or *off*, the final animation would jerk between those extremes. In a finished game you may want to smooth out the input yourself, but for starters this node can do a basic smoothing of the input values for you. Thus, if an input value switches from `1` to `0`, an `InputResponse` of 50ms means that the used value will transition smoothly towards `0` over that amount of time and thus the output pose will also transition smoothly.  
 
@@ -35,17 +35,17 @@ See [common properties](anim-nodes-playclip.md#common-properties).
 
 ## Input Pins
 
-See [common input pins](anim-nodes-playclip.md#common-input-pins).
+See common input pins.
 
 * `X`, `Y`: The input coordinate to select how to blend the `Clips`. It directly relates to the clips` positions.
 
 ## Output Pins
 
-See [common output pins](anim-nodes-playclip.md#common-output-pins).
+See common output pins.
   
 ## See Also
 
 * [Animation Graph (TODO)](animation-graph-overview.md)
 * [Skeletal Animations](../skeletal-animation-overview.md)
-* [Mix Clips 1D Node (TODO)](anim-nodes-mix1d.md)
-* [Play Single Clip Nodes (TODO)](anim-nodes-playclip.md)
+* [Sample Clip Node (TODO)](anim-nodes-sample-clip.md)
+* [Sample Blendspace 1D Node (TODO)](anim-nodes-blendspace1d.md)

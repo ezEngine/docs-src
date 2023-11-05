@@ -75,6 +75,7 @@
 ### [Shader Templates](graphics/shaders/shader-templates.md)
 ### [Shaders (TODO)](graphics/shaders/shaders-overview.md)
 ## [Sprite Component](graphics/sprite-component.md)
+## [Substance Textures](graphics/substance-textures.md)
 ## [Textures](graphics/textures-overview.md)
 # Materials
 ## [Materials](materials/materials-overview.md)

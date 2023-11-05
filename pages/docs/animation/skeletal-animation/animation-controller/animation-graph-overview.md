@@ -27,7 +27,7 @@ The two light blue nodes are used to [sample animation clips (TODO)](anim-nodes-
 
 The sampling nodes have a *LocalPose* output pin. This pin represents the animation pose that was determined. The pin also carries information about *weighting* the pose. That means when the clip playback was just started, the pose may still be fading and shouldn't immediately have full influence. Similarly, if a pose shall only be applied to a certain body part these [bone weights](anim-nodes-bone-weights.md) are also included here and will be forwarded to any following node.
 
-In the middle of the graph the [combine poses (TODO)](anim-nodes-combine-poses.md) node is used to gather multiple poses and turn them into one. This node uses the aforementioned bone weights and overall pose weight to blend all the available poses together.
+In the middle of the graph the combine poses node is used to gather multiple poses and turn them into one. This node uses the aforementioned bone weights and overall pose weight to blend all the available poses together.
 
 Note that the blue nodes output *local poses*. That means the pose data is in a certain format. Data in this format can be used for certain operations, however, the data cannot be output in this format. Therefore the next step is to convert the pose from *local space* to *model space*. Once the data is in *model space* there are other operations that can be done with it.
 

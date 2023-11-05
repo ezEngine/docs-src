@@ -47,7 +47,7 @@ Many animation controller nodes have some or all of these input pins:
 
 Many animation controller nodes have some or all of these output pins:
 
-* `LocalPose`: The final pose from the sampled animation clips is output through this pin. This has to be passed to a [combine poses node (TODO)](anim-nodes-combine-poses.md) or a local to model pose node.
+* `LocalPose`: The final pose from the sampled animation clips is output through this pin. This has to be passed to a combine poses node or a local to model pose node.
 
 * `OnFadeOut`: This pin gets triggered for a single frame once the node changes its internal state to fade out the animation (affected by `ImmediateFadeOut` and `FadeOut`). This is typically a good time to start fading in another animation to take over. This pin is guaranteed to get triggered, even if the `FadeOut` time is zero.
 

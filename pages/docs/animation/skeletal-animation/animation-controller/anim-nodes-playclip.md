@@ -35,7 +35,7 @@ Many animation controller nodes have some or all of these input pins:
 
 * `Active`: This pin determines whether the node samples its animation clips *at all*. Once it gets triggered in a frame, the node starts to sample its animation clips, fades them in etc. If `Loop` is enabled, the playback will repeat as long as the `Active` pin is triggered. Once the pin is not triggered anymore, the node will start to fade out its animations. Either right away (`ImmediateFadeOut` on) or when it reaches the end of the currently playing clip (`ImmediateFadeOut` off).
 
-* `Weights`: If this pin is connected to a [bone weight node (TODO)](anim-nodes-bone-weights.md), then the sampled animation clip is only applied to that part of the character. This is used to limit playback of an animation to selected body parts.
+* `Weights`: If this pin is connected to a [bone weight node](anim-nodes-bone-weights.md), then the sampled animation clip is only applied to that part of the character. This is used to limit playback of an animation to selected body parts.
 
 * `Speed`: This pin adjusts the overall playback speed.
 
@@ -55,6 +55,6 @@ Many animation controller nodes have some or all of these output pins:
 
 * [Animation Graph (TODO)](animation-graph-overview.md)
 * [Skeletal Animations](../skeletal-animation-overview.md)
-* [Bone Weight Nodes (TODO)](anim-nodes-bone-weights.md)
+* [Bone Weight Nodes](anim-nodes-bone-weights.md)
 * [Play Clip Sequence Node (TODO)](anim-nodes-sequence.md)
 * [Mix Clips 2D Node (TODO)](anim-nodes-mix2d.md)

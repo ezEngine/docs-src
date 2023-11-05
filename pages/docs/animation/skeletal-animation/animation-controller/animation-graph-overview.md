@@ -21,11 +21,11 @@ The following image shows a very basic animation graph:
 
 The flow of information is from left to right.
 
-On the far left side the two green nodes are used to [read state from the blackboard (TODO)](anim-nodes-blackboard.md). Here we read the blackboard values *PlayIdle* and *PlayWave* to see which animation clips should get played. The pink output pins are *trigger pins*, meaning they can be *active* (*triggered*) or *inactive*. When the read value is `1` (in this case) the pins are set to *triggered* which then activates the connected nodes to the right.
+On the far left side the two green nodes are used to [read state from the blackboard](anim-nodes-blackboard.md). Here we read the blackboard values *PlayIdle* and *PlayWave* to see which animation clips should get played. The pink output pins are *trigger pins*, meaning they can be *active* (*triggered*) or *inactive*. When the read value is `1` (in this case) the pins are set to *triggered* which then activates the connected nodes to the right.
 
 The two light blue nodes are used to [sample animation clips (TODO)](anim-nodes-playclip.md). There are different ways how animation clips can be played, but here we only use very basic (looped) playback. When the *PlayIdle* blackboard value is set, the *Idle* clip will be sampled. When the *PlayWave* blackboard value is set, the *Wave* clip will get sampled. Any combination is possible, so both clips can be played at the same time.
 
-The sampling nodes have a *LocalPose* output pin. This pin represents the animation pose that was determined. The pin also carries information about *weighting* the pose. That means when the clip playback was just started, the pose may still be fading and shouldn't immediately have full influence. Similarly, if a pose shall only be applied to a certain body part these [bone weights (TODO)](anim-nodes-bone-weights.md) are also included here and will be forwarded to any following node.
+The sampling nodes have a *LocalPose* output pin. This pin represents the animation pose that was determined. The pin also carries information about *weighting* the pose. That means when the clip playback was just started, the pose may still be fading and shouldn't immediately have full influence. Similarly, if a pose shall only be applied to a certain body part these [bone weights](anim-nodes-bone-weights.md) are also included here and will be forwarded to any following node.
 
 In the middle of the graph the [combine poses (TODO)](anim-nodes-combine-poses.md) node is used to gather multiple poses and turn them into one. This node uses the aforementioned bone weights and overall pose weight to blend all the available poses together.
 
@@ -39,9 +39,9 @@ The animation graph uses a graph based workflow to let you visually configure ho
 
 The system is intelligent enough to optimize away operations that don't affect the output.
 
-You typically control which animations are played when through a [blackboard](../../../Miscellaneous/blackboards.md). For quick prototyping you can also use the [input nodes (TODO)](anim-nodes-input.md) to get certain input data directly into the graph.
+You typically control which animations are played when through a [blackboard](../../../Miscellaneous/blackboards.md). For quick prototyping you can also use the [input nodes](anim-nodes-input.md) to get certain input data directly into the graph.
 
-Simple animation state machines can be built directly in the animation controller graph using the [logic and math nodes (TODO)](anim-nodes-logic-math.md) as well as the [blackboard nodes (TODO)](anim-nodes-blackboard.md). For more complex logic you should use [custom code](../../../custom-code/custom-code-overview.md).
+Simple animation state machines can be built directly in the animation controller graph using the [logic and math nodes](anim-nodes-logic-math.md) as well as the [blackboard nodes](anim-nodes-blackboard.md). For more complex logic you should use [custom code](../../../custom-code/custom-code-overview.md).
 
 ## See Also
 

@@ -19,7 +19,7 @@ You add multiple animation clips and give each clip a position (`X` and `Y`). As
 
 What the coordinates represent is up to you. For locomotion you could say that `X` represents left/right movement and `Y` forwards/backwards. You would then position a *walk left* clip at `(-1, 0)` a *walk right* clip at `(+1, 0)` a *walk forward* clip at `(0, +1)` and a *run forward* clip at `(0, +2)`.
 
-Through the `X` and `Y` input pins you provide a 2D coordinate. During testing you may hook this up directly to an [input node (TODO)](anim-nodes-input.md), though later you'll probably need more control.
+Through the `X` and `Y` input pins you provide a 2D coordinate. During testing you may hook this up directly to an [input node](anim-nodes-input.md), though later you'll probably need more control.
 
 The node will then take that input coordinate to decide which clips should be used with what influence, and mix them together to a single output pose.
 

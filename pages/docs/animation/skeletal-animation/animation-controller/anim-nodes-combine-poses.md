@@ -21,9 +21,9 @@ This is used to clamp the maximum performance cost of the animation blending.
 
 ### Input Pins
 
-* **LocalPoses**: This is a single input pin that allows an unlimited number of connections. Each incoming pose carries not only the bone transformations, but also the *bone weights*. These are typically determined by the animation clip sampling nodes and the [bone weight nodes (TODO)](anim-nodes-bone-weights.md). All poses are mixed together according to their overall weight.
+* **LocalPoses**: This is a single input pin that allows an unlimited number of connections. Each incoming pose carries not only the bone transformations, but also the *bone weights*. These are typically determined by the animation clip sampling nodes and the [bone weight nodes](anim-nodes-bone-weights.md). All poses are mixed together according to their overall weight.
 
-In practice that means that two animations that don't use custom [bone weights (TODO)](anim-nodes-bone-weights.md) will be blended 50:50.
+In practice that means that two animations that don't use custom [bone weights](anim-nodes-bone-weights.md) will be blended 50:50.
 
 ### Output Pins
 
@@ -31,7 +31,7 @@ In practice that means that two animations that don't use custom [bone weights (
 
 ### Performance Considerations
 
-You can use multiple nodes to combine many poses in several steps. However, for best performance prefer to use only a single node to combine many poses and make use of [bone weights (TODO)](anim-nodes-bone-weights.md) to control each ones overall influence.
+You can use multiple nodes to combine many poses in several steps. However, for best performance prefer to use only a single node to combine many poses and make use of [bone weights](anim-nodes-bone-weights.md) to control each ones overall influence.
 
 
 ## See Also

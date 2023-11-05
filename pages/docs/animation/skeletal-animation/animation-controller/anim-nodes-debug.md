@@ -8,15 +8,15 @@ The `Log Info` and `Log Error` nodes print a string to the [log](../../../debugg
 
 ### Node Properties
 
-* `Text`: The text to print. This may include placeholders for the input values. Use `{0}`, `{1}`, `{2}`, etc to embed the value from the respective `In Numbers[]` pin.
+* `Text`: The text to print. This may include placeholders for the input values. Use `{0}`, `{1}`, `{2}`, etc to embed the value from the respective `Numbers[]` pin.
 
 * `Number Count`: Specifies how many number input pins the node should have.
 
 ### Input Pins
 
-* `In Activate`: Every frame in which this pin gets triggered, the node will log `Text` to the [log](../../../debugging/logging.md).
+* `Activate`: Every frame in which this pin gets triggered, the node will log `Text` to the [log](../../../debugging/logging.md).
 
-* `In Numbers[]`: These pins allow you to pass in number values for embedding in the output text.
+* `Numbers[]`: These pins allow you to pass in number values for embedding in the output text.
 
 ## See Also
 

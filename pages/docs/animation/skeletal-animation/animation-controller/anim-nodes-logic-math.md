@@ -1,6 +1,9 @@
 # Logic and Math Nodes
 
-The animation controller provides a couple of nodes to evaluate basic arithmatic and logic. This is meant for very simple use cases and for quick prototyping. Often animation logic requires much more complex rules than what would be feasible to express in the animation controller graph. Instead use [custom code](../../../custom-code/custom-code-overview.md) to decide which animation should run under which circumstances, and pass the result to the animation controller via a [blackboard](../../../Miscellaneous/blackboards.md). The animation controller can then simply read the state for each animation using the [blackboard nodes](anim-nodes-blackboard.md).
+<!-- PAGE IS TODO -->
+<!-- TODO THIS PAGE IS OUTDATED -->
+
+The animation controller provides a couple of nodes to evaluate basic arithmatic and logic. This is meant for very simple use cases and for quick prototyping. Often animation logic requires much more complex rules than what would be feasible to express in the animation controller graph. Instead use [custom code](../../../custom-code/custom-code-overview.md) to decide which animation should run under which circumstances, and pass the result to the animation controller via a [blackboard](../../../Miscellaneous/blackboards.md). The animation controller can then simply read the state for each animation using the [blackboard nodes (TODO)](anim-nodes-blackboard.md).
 
 ## Logic AND Node
 
@@ -73,6 +76,5 @@ The expression must be syntactically correct, otherwise the node prints an error
 
 ## See Also
 
-
-* [Animation Controller](animation-controller-overview.md)
+* [Animation Graph (TODO)](animation-graph-overview.md)
 * [Skeletal Animations](../skeletal-animation-overview.md)

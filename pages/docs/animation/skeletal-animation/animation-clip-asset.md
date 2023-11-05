@@ -4,7 +4,7 @@ The *animation clip asset* is used to import a single animation for an [animated
 
 <video src="../media/anim-clip.webm" width="800" height="600" autoplay loop></video>
 
-An animation clip represents a single motion, such as a walk cycle, a jump or other action. Simple animations can be played on a mesh using a [simple animation component](simple-animation-component.md). For complex behavior you will need to use multiple clips and fade from one to the other at the right times. Use an [animation controller](animation-controller/animation-controller-overview.md) for that.
+An animation clip represents a single motion, such as a walk cycle, a jump or other action. Simple animations can be played on a mesh using a [simple animation component](simple-animation-component.md). For complex behavior you will need to use multiple clips and fade from one to the other at the right times. Use an [animation graph (TODO)](animation-controller/animation-graph-overview.md) for that.
 
 ## Asset Properties
 

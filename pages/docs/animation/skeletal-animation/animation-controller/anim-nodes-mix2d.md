@@ -1,5 +1,8 @@
 # Mix Clips 2D Node
 
+<!-- PAGE IS TODO -->
+<!-- TODO THIS PAGE IS OUTDATED -->
+
 The *Mix Clips 2D* animation controller node is used to interpolate between a set of animations which are positioned in 2D space. You give it a 2D coordinate, and it will determine which animation clips are relevant and mix them together with proper weights depending on how close the coordinate is to each clip.
 
 The purpose of this node is to generate a continuous animation space from just a few discrete clips. This is often used for locomotion, where you only have animation clips for walking into a fixed number of directions and at certain speeds, but you'd like to be able to move a character into any direction and at any speed in between.  
@@ -12,11 +15,11 @@ Be aware that the poses will be combined linearly, though. If the poses from two
 
 ## How To Use
 
-You add multiple animation clips and give each clip a position (`X` and `Y`). As with the [mix clips 1D node](anim-nodes-mix1d.md), the playback of all clips is synchronized, meaning that the length of each clip may differ, but they will be played back such that they start and end in unison. That means your clips must be authored accordingly, so for example for locomotion all clips should start with the left foot forwards, then move the right foot forwards, then the left again. From that point on the clips will be looped.
+You add multiple animation clips and give each clip a position (`X` and `Y`). As with the [mix clips 1D node (TODO)](anim-nodes-mix1d.md), the playback of all clips is synchronized, meaning that the length of each clip may differ, but they will be played back such that they start and end in unison. That means your clips must be authored accordingly, so for example for locomotion all clips should start with the left foot forwards, then move the right foot forwards, then the left again. From that point on the clips will be looped.
 
 What the coordinates represent is up to you. For locomotion you could say that `X` represents left/right movement and `Y` forwards/backwards. You would then position a *walk left* clip at `(-1, 0)` a *walk right* clip at `(+1, 0)` a *walk forward* clip at `(0, +1)` and a *run forward* clip at `(0, +2)`.
 
-Through the `X` and `Y` input pins you provide a 2D coordinate. During testing you may hook this up directly to an [input node](anim-nodes-input.md), though later you'll probably need more control.
+Through the `X` and `Y` input pins you provide a 2D coordinate. During testing you may hook this up directly to an [input node (TODO)](anim-nodes-input.md), though later you'll probably need more control.
 
 The node will then take that input coordinate to decide which clips should be used with what influence, and mix them together to a single output pose.
 
@@ -42,8 +45,7 @@ See [common output pins](anim-nodes-playclip.md#common-output-pins).
   
 ## See Also
 
-
-* [Animation Controller](animation-controller-overview.md)
+* [Animation Graph (TODO)](animation-graph-overview.md)
 * [Skeletal Animations](../skeletal-animation-overview.md)
-* [Mix Clips 1D Node](anim-nodes-mix1d.md)
-* [Play Single Clip Nodes](anim-nodes-playclip.md)
+* [Mix Clips 1D Node (TODO)](anim-nodes-mix1d.md)
+* [Play Single Clip Nodes (TODO)](anim-nodes-playclip.md)

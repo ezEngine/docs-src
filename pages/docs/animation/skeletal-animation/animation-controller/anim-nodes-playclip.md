@@ -1,5 +1,8 @@
 # Play Single Clip Nodes
 
+<!-- PAGE IS TODO -->
+<!-- TODO THIS PAGE IS OUTDATED -->
+
 Animation controller graphs provide multiple node types that are used for sampling animation clips. The *play single clip node* is the most basic one. This node samples an animation clip and outputs the respective animation pose. It is thus used for typical playback of a single animation either once or in a loop. For added variety you may reference multiple animation clips, in which case the node will randomly pick one of them for playback.
 
 <video src="../../media/skeletal-anim.webm" width="500" height="500" autoplay loop></video>
@@ -8,7 +11,7 @@ Animation controller graphs provide multiple node types that are used for sampli
 
 All animation controller nodes that sample animation clips share these properties:
 
-* `Loop`: If enabled the node will loop playback while its `Active` pin is triggered. Which clip exactly gets looped depends on the node. The *play single clip node* for example just loops playback in general, but randomly picks a different clip in every iteration. The [play clip sequence node](anim-nodes-sequence.md) on the other hand will loop its middle clip instead.
+* `Loop`: If enabled the node will loop playback while its `Active` pin is triggered. Which clip exactly gets looped depends on the node. The *play single clip node* for example just loops playback in general, but randomly picks a different clip in every iteration. The [play clip sequence node (TODO)](anim-nodes-sequence.md) on the other hand will loop its middle clip instead.
 
 * `ApplyRootMotion`: If enabled, the node will compute the [root motion](../root-motion.md) from the sampled clips and forward this to the [animation controller component](animation-controller-component.md), which may apply this to the game object's position.
 
@@ -32,7 +35,7 @@ Many animation controller nodes have some or all of these input pins:
 
 * `Active`: This pin determines whether the node samples its animation clips *at all*. Once it gets triggered in a frame, the node starts to sample its animation clips, fades them in etc. If `Loop` is enabled, the playback will repeat as long as the `Active` pin is triggered. Once the pin is not triggered anymore, the node will start to fade out its animations. Either right away (`ImmediateFadeOut` on) or when it reaches the end of the currently playing clip (`ImmediateFadeOut` off).
 
-* `Weights`: If this pin is connected to a [bone weight node](anim-nodes-bone-weights.md), then the sampled animation clip is only applied to that part of the character. This is used to limit playback of an animation to selected body parts.
+* `Weights`: If this pin is connected to a [bone weight node (TODO)](anim-nodes-bone-weights.md), then the sampled animation clip is only applied to that part of the character. This is used to limit playback of an animation to selected body parts.
 
 * `Speed`: This pin adjusts the overall playback speed.
 
@@ -44,15 +47,14 @@ Many animation controller nodes have some or all of these input pins:
 
 Many animation controller nodes have some or all of these output pins:
 
-* `LocalPose`: The final pose from the sampled animation clips is output through this pin. This has to be passed to a [combine poses node](anim-nodes-combine-poses.md) or a [local to model pose node](anim-nodes-modelspace.md).
+* `LocalPose`: The final pose from the sampled animation clips is output through this pin. This has to be passed to a [combine poses node (TODO)](anim-nodes-combine-poses.md) or a local to model pose node.
 
 * `OnFadeOut`: This pin gets triggered for a single frame once the node changes its internal state to fade out the animation (affected by `ImmediateFadeOut` and `FadeOut`). This is typically a good time to start fading in another animation to take over. This pin is guaranteed to get triggered, even if the `FadeOut` time is zero.
 
 ## See Also
 
-
-* [Animation Controller](animation-controller-overview.md)
+* [Animation Graph (TODO)](animation-graph-overview.md)
 * [Skeletal Animations](../skeletal-animation-overview.md)
-* [Bone Weight Nodes](anim-nodes-bone-weights.md)
-* [Play Clip Sequence Node](anim-nodes-sequence.md)
-* [Mix Clips 2D Node](anim-nodes-mix2d.md)
+* [Bone Weight Nodes (TODO)](anim-nodes-bone-weights.md)
+* [Play Clip Sequence Node (TODO)](anim-nodes-sequence.md)
+* [Mix Clips 2D Node (TODO)](anim-nodes-mix2d.md)

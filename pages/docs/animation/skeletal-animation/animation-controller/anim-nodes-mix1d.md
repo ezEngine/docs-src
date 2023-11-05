@@ -1,5 +1,8 @@
 # Mix Clips 1D Node
 
+<!-- PAGE IS TODO -->
+<!-- TODO THIS PAGE IS OUTDATED -->
+
 The *Mix Clips 1D* animation controller node is used to linearly interpolate between a fixed set of animations.
 
 <video src="../../media/anim-mix1d.webm" width="500" height="500" autoplay loop></video>
@@ -34,8 +37,7 @@ See [common output pins](anim-nodes-playclip.md#common-output-pins).
 
 ## See Also
 
-
-* [Animation Controller](animation-controller-overview.md)
+* [Animation Graph (TODO)](animation-graph-overview.md)
 * [Skeletal Animations](../skeletal-animation-overview.md)
-* [Mix Clips 2D Node](anim-nodes-mix2d.md)
-* [Play Single Clip Nodes](anim-nodes-playclip.md)
+* [Mix Clips 2D Node (TODO)](anim-nodes-mix2d.md)
+* [Play Single Clip Nodes (TODO)](anim-nodes-playclip.md)

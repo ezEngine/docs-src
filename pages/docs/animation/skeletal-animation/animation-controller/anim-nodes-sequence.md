@@ -1,6 +1,9 @@
 # Play Clip Sequence Node
 
-The *play clip sequence node* is similar to the [play single clip node](anim-nodes-playclip.md), however, instead of playing just a single clip (looped), the sequence node plays at least three clips in a row. One to enter an animation state, one (looped) animation while it stays active, and one to exit the animation state.
+<!-- PAGE IS TODO -->
+<!-- TODO THIS PAGE IS OUTDATED -->
+
+The *play clip sequence node* is similar to the [play single clip node (TODO)](anim-nodes-playclip.md), however, instead of playing just a single clip (looped), the sequence node plays at least three clips in a row. One to enter an animation state, one (looped) animation while it stays active, and one to exit the animation state.
 
 Such sequences are common for actions such as jumping or climbing a ladder. The start clip transitions the character from a start state, such as idle or walking into the new state, such as *jumping*. The middle clip is then played as long as the jumping state needs to continue, and once the character hits the ground again, the end clip is played to transition back.
 
@@ -34,6 +37,5 @@ See [common output pins](anim-nodes-playclip.md#common-output-pins).
 
 ## See Also
 
-
-* [Animation Controller](animation-controller-overview.md)
+* [Animation Graph (TODO)](animation-graph-overview.md)
 * [Skeletal Animations](../skeletal-animation-overview.md)

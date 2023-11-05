@@ -1,23 +1,24 @@
 # Debug Nodes
 
-These animation controller nodes can be used to find problems.
+These animation graph nodes are used to find problems.
 
-## Log Node
+## Log Nodes
 
-The *log node* simply prints a *dev* string to the [log](../../../debugging/logging.md) whenever it gets activated.
+The `Log Info` and `Log Error` nodes print a string to the [log](../../../debugging/logging.md) whenever they get activated.
 
 ### Node Properties
 
-* `Text`: The text to print. This may include placeholders for the input values. Use `{0}` to `{3}` to embed the values from `Input0` to `Input3` respectively. 
+* `Text`: The text to print. This may include placeholders for the input values. Use `{0}`, `{1}`, `{2}`, etc to embed the value from the respective `In Numbers[]` pin.
+
+* `Number Count`: Specifies how many number input pins the node should have.
 
 ### Input Pins
 
-* `Active`: Every frame in which this pin is triggered, the node will log `Text` as a *Dev* message to the [log](../../../debugging/logging.md).
+* `In Activate`: Every frame in which this pin gets triggered, the node will log `Text` to the [log](../../../debugging/logging.md).
 
-* `Input0` to `Input3`: These pins allow you to pass in values that can be printed to the log.
+* `In Numbers[]`: These pins allow you to pass in number values for embedding in the output text.
 
 ## See Also
 
-
-* [Animation Controller](animation-controller-overview.md)
+* [Animation Graph (TODO)](animation-graph-overview.md)
 * [Skeletal Animations](../skeletal-animation-overview.md)

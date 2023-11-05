@@ -1,5 +1,8 @@
 # Blackboard Nodes
 
+<!-- PAGE IS TODO -->
+<!-- TODO THIS PAGE IS OUTDATED -->
+
 The animation controller provides nodes to read and write values from and to a [blackboard](../../../Miscellaneous/blackboards.md). For this, the [game object](../../../runtime/world/game-objects.md) on which the [animation controller component](animation-controller-component.md) is attached, also needs to hold a blackboard component.
 
 > **Note:**
@@ -55,5 +58,5 @@ This node outputs the value of a specific blackboard entry. The number value can
 
 ## See Also
 
-* [Animation Controller](animation-controller-overview.md)
+* [Animation Graph (TODO)](animation-graph-overview.md)
 * [Skeletal Animations](../skeletal-animation-overview.md)

@@ -1,5 +1,8 @@
 # Bone Weight Nodes
 
+<!-- PAGE IS TODO -->
+<!-- TODO THIS PAGE IS OUTDATED -->
+
 Bone weight nodes are used to generate a weight mask. The mask defines how strongly an animation clip will influence different parts of the skeleton. This is frequently used to apply an animation only to certain parts of a character, for example only the upper or lower body, or even only the left or right arm.
 
 For example it is common to play a walking animation only on the bones below the hip, whereas on the spine and upwards one would want to play an attack animation.
@@ -12,7 +15,7 @@ Bone weights are often in the range of zero to one, with zero meaning that that 
 >
 > Not all animations will work correctly when they are layered on top of each other. If one animation rotates a bone into one direction, and another animation rotates the same bone very differently, it is possible for the interpolation of the rotations to result in an invalid value. This will manifest as jerking or jumping bones at specific points in the animation. If that happens, you have to use an inverse bone mask to fully filter out the base animation, such that in the end only one of the animations really influences those bones. 
 
-Bone weights are typically connected directly to an animation clip sampling node, and the information that this animation clip shall only influence a part of the skeleton is passed along until it reaches a [combine poses node](anim-nodes-combine-poses.md) where the result is baked into one pose. Without such a node in the graph, the bone weights won't have an effect.
+Bone weights are typically connected directly to an animation clip sampling node, and the information that this animation clip shall only influence a part of the skeleton is passed along until it reaches a [combine poses node (TODO)](anim-nodes-combine-poses.md) where the result is baked into one pose. Without such a node in the graph, the bone weights won't have an effect.
 
 ## Bone Weight Config Node
 
@@ -30,9 +33,7 @@ This node creates a mask for every bone in the skeleton. By default, the mask is
 
 * **InverseWeights**: If this pin is connected, the node generates the inverse mask as well. So for example, if the node would generate a mask that only affects the head, then the inverse mask will affect everything but the head.
 
-
 ## See Also
 
-
-* [Animation Controller](animation-controller-overview.md)
+* [Animation Graph (TODO)](animation-graph-overview.md)
 * [Skeletal Animations](../skeletal-animation-overview.md)

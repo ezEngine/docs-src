@@ -1,5 +1,5 @@
-animation-controller-overview.md
-animation-controller-asset.md
+animation-graph-overview.md
+animation-graph-asset.md
 animation-controller-component.md
 anim-nodes-blackboard.md
 anim-nodes-bone-weights.md
@@ -10,7 +10,6 @@ anim-nodes-input.md
 anim-nodes-logic-math.md
 anim-nodes-mix1d.md
 anim-nodes-mix2d.md
-anim-nodes-modelspace.md
 anim-nodes-output.md
 anim-nodes-playclip.md
 anim-nodes-sequence.md

@@ -57,4 +57,4 @@ Many animation controller nodes have some or all of these output pins:
 * [Skeletal Animations](../skeletal-animation-overview.md)
 * [Bone Weight Nodes](anim-nodes-bone-weights.md)
 * [Sample Sequence Node (TODO)](anim-nodes-sample-sequence.md)
-* [Sample Blendspace 2D Node (TODO)](anim-nodes-blendspace2d.md)
+* [Sample Blendspace 2D Node](anim-nodes-blendspace2d.md)

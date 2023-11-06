@@ -57,4 +57,4 @@ The node will then take that input coordinate to decide which clips should be us
 * [Animation Graph (TODO)](animation-graph-overview.md)
 * [Skeletal Animations](../skeletal-animation-overview.md)
 * [Sample Clip Node (TODO)](anim-nodes-sample-clip.md)
-* [Sample Blendspace 1D Node (TODO)](anim-nodes-blendspace1d.md)
+* [Sample Blendspace 1D Node](anim-nodes-blendspace1d.md)

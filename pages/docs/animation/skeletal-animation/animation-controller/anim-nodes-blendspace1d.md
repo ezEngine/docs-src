@@ -49,4 +49,4 @@ In the video above you can see such a transition in action. The *lerp* input val
 * [Animation Graph (TODO)](animation-graph-overview.md)
 * [Skeletal Animations](../skeletal-animation-overview.md)
 * [Sample Clip Node (TODO)](anim-nodes-sample-clip.md)
-* [Sample Blendspace 2D Node (TODO)](anim-nodes-blendspace2d.md)
+* [Sample Blendspace 2D Node](anim-nodes-blendspace2d.md)

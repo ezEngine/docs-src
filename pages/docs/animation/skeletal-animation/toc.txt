@@ -6,7 +6,7 @@ skeleton-component.md
 animation-clip-asset.md
 simple-animation-component.md
 skeleton-pose-component.md
-animation-controller
+animation-graphs
 animation-events.md
 root-motion.md
 joint-attachment-component.md

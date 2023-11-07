@@ -1,6 +1,6 @@
 # Animated Mesh Component
 
-An *animated mesh component* is used to instantiate an [animated mesh asset](animated-mesh-asset.md). Animated mesh components are mostly identical to regular [mesh components](../../graphics/meshes/mesh-component.md) except that they can only be used with [animated mesh assets](animated-mesh-asset.md). An animated mesh will be skinned with its current animation pose. Which pose is applied to an animated mesh can be controlled with a [simple animation component](simple-animation-component.md) or an [animation controller component](animation-controller/animation-controller-component.md).
+An *animated mesh component* is used to instantiate an [animated mesh asset](animated-mesh-asset.md). Animated mesh components are mostly identical to regular [mesh components](../../graphics/meshes/mesh-component.md) except that they can only be used with [animated mesh assets](animated-mesh-asset.md). An animated mesh will be skinned with its current animation pose. Which pose is applied to an animated mesh can be controlled with a [simple animation component](simple-animation-component.md) or an [animation controller component](animation-graphs/animation-controller-component.md).
 
 ![Animated Mesh](../media/animated-mesh.jpg)
 

@@ -6,7 +6,7 @@ Blackboards are a convenient data structure to share information between differe
 
 ## Using Blackboards
 
-In C++ code you can use the `ezBlackboard` data structure directly. In scenes and [prefabs](../prefabs/prefabs-overview.md) you can attach a [blackboard component](local-blackboard-component.md) to an object. Systems that require a blackboard to function, such as [animation controllers](../animation/skeletal-animation/animation-controller/animation-controller-component.md), will traverse the object hierarchy upwards to find a blackboard component which they can use to read and write their state.
+In C++ code you can use the `ezBlackboard` data structure directly. In scenes and [prefabs](../prefabs/prefabs-overview.md) you can attach a [blackboard component](local-blackboard-component.md) to an object. Systems that require a blackboard to function, such as [animation controllers](../animation/skeletal-animation/animation-graphs/animation-controller-component.md), will traverse the object hierarchy upwards to find a blackboard component which they can use to read and write their state.
 
 ## Global Blackboards
 

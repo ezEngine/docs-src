@@ -20,7 +20,7 @@ It is planned to add more sophisticated methods for root motion in the future.
 
 ## Applying Root Motion
 
-The [simple animation component](simple-animation-component.md) and the [animation controller component](animation-controller/animation-controller-component.md) get the root motion data from the played animation clips. There are these modes to apply it to their owner game object:
+The [simple animation component](simple-animation-component.md) and the [animation controller component](animation-graphs/animation-controller-component.md) get the root motion data from the played animation clips. There are these modes to apply it to their owner game object:
 
 * `Ignore`: No root motion is applied, the game object will not be moved by the animation.
 
@@ -33,4 +33,4 @@ The [simple animation component](simple-animation-component.md) and the [animati
 
 * [Skeletal Animations](skeletal-animation-overview.md)
 * [Simple Animation Component](simple-animation-component.md)
-* [Animation Controller Component](animation-controller/animation-controller-component.md)
+* [Animation Controller Component](animation-graphs/animation-controller-component.md)

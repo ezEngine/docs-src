@@ -8,7 +8,7 @@ An animation clip represents a single motion, such as a walk cycle, a jump or ot
 
 > **Important:**
 >
-> In animation graph nodes animation clips are **not referenced directly** but rather through a name mapping. This mapping is configured in the [animation graph asset (TODO)](animation-controller/animation-graph-asset.md).
+> In animation graph nodes animation clips are **not referenced directly** but rather through a name mapping. This mapping is configured in the [animation graph asset](animation-controller/animation-graph-asset.md).
 
 ## Asset Properties
 

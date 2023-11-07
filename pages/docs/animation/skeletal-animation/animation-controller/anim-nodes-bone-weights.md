@@ -12,7 +12,7 @@ Bone weights are often in the range of zero to one, with zero meaning that that 
 >
 > Not all animations will work correctly when they are layered on top of each other. If one animation rotates a bone into one direction, and another animation rotates the same bone very differently, it is possible for the interpolation of the rotations to result in an invalid value. This will manifest as jerking or jumping bones at specific points in the animation. If that happens, you have to use an inverse bone mask to fully filter out the base animation, such that in the end only one of the animations really influences those bones.
 
-To use a bone weight mask, connect it to an [output node (TODO)](anim-nodes-output.md).
+To use a bone weight mask, connect it to an [output node](anim-nodes-output.md).
 
 ## Bone Weights Node
 

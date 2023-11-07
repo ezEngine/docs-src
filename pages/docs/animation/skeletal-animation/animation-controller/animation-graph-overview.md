@@ -6,7 +6,7 @@ An *animation graph* is used to configure how each animation clip of a character
 
 ## Creating and Using Animation Graphs
 
-Animation graphs are configured through the [animation graph asset type (TODO)](animation-graph-asset.md). To apply the output pose of an animation graph to an [animated mesh](../animated-mesh-component.md), add an [animation controller component](animation-controller-component.md) to the same [game object](../../../runtime/world/game-objects.md). The controller will send the output pose to the mesh every frame, but only while the scene is [simulated](../../../editor/run-scene.md).
+Animation graphs are configured through the [animation graph asset type](animation-graph-asset.md). To apply the output pose of an animation graph to an [animated mesh](../animated-mesh-component.md), add an [animation controller component](animation-controller-component.md) to the same [game object](../../../runtime/world/game-objects.md). The controller will send the output pose to the mesh every frame, but only while the scene is [simulated](../../../editor/run-scene.md).
 
 To control what an animation graph will output, you typically also need a [blackboard](../../../Miscellaneous/blackboards.md). The blackboard is used to store state. Scripts or other [custom code](../../../custom-code/custom-code-overview.md) decide which animations should be played and write that state to the blackboard. The animation graph in turn reads state from the blackboard and then activates the desired animation clip playback. The graph can also write back state to the blackboard, for example to communicate back that an animation clip has finished playing.
 
@@ -31,7 +31,7 @@ In the middle of the graph the combine poses node is used to gather multiple pos
 
 Note that the blue nodes output *local poses*. That means the pose data is in a certain format. Data in this format can be used for certain operations, however, the data cannot be output in this format. Therefore the next step is to convert the pose from *local space* to *model space*. Once the data is in *model space* there are other operations that can be done with it.
 
-In this graph, though, the converted pose is simply forwarded to the [output node (TODO)](anim-nodes-output.md). This is always the final step.
+In this graph, though, the converted pose is simply forwarded to the [output node](anim-nodes-output.md). This is always the final step.
 
 ## Summary
 
@@ -46,6 +46,6 @@ Simple animation state machines can be built directly in the animation controlle
 ## See Also
 
 * [Skeletal Animations](../skeletal-animation-overview.md)
-* [Animation Graph Asset (TODO)](animation-graph-asset.md)
+* [Animation Graph Asset](animation-graph-asset.md)
 * [Animation Controller Component](animation-controller-component.md)
 * [Animated Mesh Component](../animated-mesh-component.md)

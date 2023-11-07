@@ -177,7 +177,7 @@
 ### [Skeleton Pose Component](animation/skeletal-animation/skeleton-pose-component.md)
 ### Animation Controller
 #### [Animation Graphs (TODO)](animation/skeletal-animation/animation-controller/animation-graph-overview.md)
-#### [Animation Graph Asset (TODO)](animation/skeletal-animation/animation-controller/animation-graph-asset.md)
+#### [Animation Graph Asset](animation/skeletal-animation/animation-controller/animation-graph-asset.md)
 #### [Animation Controller Component](animation/skeletal-animation/animation-controller/animation-controller-component.md)
 #### [Blackboard Nodes](animation/skeletal-animation/animation-controller/anim-nodes-blackboard.md)
 #### [Sample Blendspace 1D Node](animation/skeletal-animation/animation-controller/anim-nodes-blendspace1d.md)
@@ -187,7 +187,7 @@
 #### [Event Nodes](animation/skeletal-animation/animation-controller/anim-nodes-events.md)
 #### [Input Nodes](animation/skeletal-animation/animation-controller/anim-nodes-input.md)
 #### [Logic and Math Nodes](animation/skeletal-animation/animation-controller/anim-nodes-logic-math.md)
-#### [Output Nodes (TODO)](animation/skeletal-animation/animation-controller/anim-nodes-output.md)
+#### [Output Nodes](animation/skeletal-animation/animation-controller/anim-nodes-output.md)
 #### [Pose Blending Nodes](animation/skeletal-animation/animation-controller/anim-nodes-pose-blending.md)
 #### [Pose Generation Nodes](animation/skeletal-animation/animation-controller/anim-nodes-pose-generation.md)
 #### [Sample Clip Node](animation/skeletal-animation/animation-controller/anim-nodes-sample-clip.md)

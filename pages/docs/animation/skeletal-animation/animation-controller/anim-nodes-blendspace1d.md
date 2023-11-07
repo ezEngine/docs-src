@@ -18,35 +18,23 @@ In the video above you can see such a transition in action. The *lerp* input val
 
 ## Node Properties
 
-* `Loop`: Whether to play the animation just once from start to finish, or loop it endlessly.
-
-* `Playback Speed`: An additional factor for speeding up or slowing down playback.
-
-* `Apply Root Motion`: Whether [root motion](../root-motion.md) should be sampled and passed through.
+Most node properties are the same as on the [sample clip node](anim-nodes-sample-clip.md#node-properties).
 
 * `Clips`: A list of animation clips between which this animation node will interpolate. The node will only ever sample the two clips whose `Position` values are closest the the value provided through the `Lerp` input pin. Additionally, the playback speed for each clip may be tweaked. 
 
 ## Input Pins
 
-* `Start`: When this pin gets triggered, the node starts playback. If it is already playing, playback is reset to the start. If this pin is *not connected* playback starts right away, which is useful for nodes that play in an endless loop anyway.
-
-* `Loop`: If connected, overrides the `Loop` property. When playback reaches the end and loop is enabled, it restarts, otherwise it stops playing and the `On Finished` output pin gets triggered.
-
-* `Speed`: If connected, overrides the `Playback Speed` property.
+Most input pin properties are the same as on the [sample clip node](anim-nodes-sample-clip.md#input-pins).
 
 * `Lerp`: This value determines which animation clips get mixed together. If the *lerp* value is in between two `Position` values of two clips, the output pose will be the linear interpolation of those two clips. If the *lerp* value is lower than the lowest `Position` value or higher than the highest, the output will be exactly that animation clip (there will be no extrapolation).
 
 ## Output Pins
 
-* `Pose`: The resulting interpolated pose. A valid pose is only produced during playback, once the node is inactive, there is no pose output.
-
-* `On Started`: This output pin gets triggered every time playback is started or restarted, either because of user input or because playback reached the end and was looped.
-
-* `On Finished`: This output pin gets triggered when playback reaches the end and looping is disabled.
+Most output pin properties are the same as on the [sample clip node](anim-nodes-sample-clip.md#output-pins).
 
 ## See Also
 
 * [Animation Graph (TODO)](animation-graph-overview.md)
 * [Skeletal Animations](../skeletal-animation-overview.md)
-* [Sample Clip Node (TODO)](anim-nodes-sample-clip.md)
+* [Sample Clip Node](anim-nodes-sample-clip.md)
 * [Sample Blendspace 2D Node](anim-nodes-blendspace2d.md)

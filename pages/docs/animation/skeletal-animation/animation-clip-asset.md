@@ -6,6 +6,10 @@ The *animation clip asset* is used to import a single animation for an [animated
 
 An animation clip represents a single motion, such as a walk cycle, a jump or other action. Simple animations can be played on a mesh using a [simple animation component](simple-animation-component.md). For complex behavior you will need to use multiple clips and fade from one to the other at the right times. Use an [animation graph (TODO)](animation-controller/animation-graph-overview.md) for that.
 
+> **Important:**
+>
+> In animation graph nodes animation clips are **not referenced directly** but rather through a name mapping. This mapping is configured in the [animation graph asset (TODO)](animation-controller/animation-graph-asset.md).
+
 ## Asset Properties
 
 * `File`: The file from which to import the animation clip.
@@ -33,6 +37,5 @@ The toolbar buttons allow you to play/pause/reset and slow-down the animation pl
 Below the time scrubber there is an additional strip to edit [animation events](animation-events.md). Here you can add events that shall occur at specific times during the animation clip playback, such as *foot-down* or *fire-weapon*. Use the time scrubber above to play the clip and inspect at which time the event shall occur. Then *right click* into the event track and select **Add Event**. Which type of event will be added is specified with the combo box at the bottom right.
 
 ## See Also
-
 
 * [Skeletal Animations](skeletal-animation-overview.md)

@@ -22,13 +22,13 @@ See [Sample Blendspace 2D Node](anim-nodes-blendspace2d.md) for details.
 
 This node plays back a single animation clip.
 
-See [Sample Clip Node (TODO)](anim-nodes-sample-clip.md) for details.
+See [Sample Clip Node](anim-nodes-sample-clip.md) for details.
 
 ## Sample Clip Sequence Node
 
 This node plays back multiple clips in sequence, optionally using one clip for start (fade in), one or multiple clips for the middle section (which may loop) and optionally one clip for the end (fade out).
 
-See [Sample Sequence Node (TODO)](anim-nodes-sample-sequence.md) for details.
+See [Sample Sequence Node](anim-nodes-sample-sequence.md) for details.
 
 ## Sample Frame Node
 
@@ -44,7 +44,7 @@ This node samples an animation clip at a specific, constant time and outputs tha
 
 * `Norm Pos`: If connected, overrides the `Norm Pos` property.
 
-* `Abs Pos`: If connected, overrides the `Norm Pos` value with an absolute playback position, which means you can pass in the actual time value where to sample a clip. Note that you could use this for proper playback of a clip, but it lacks features such as getting informed when the clip finishes, [animation events](../animation-events.md) and so on. Prefer to use a [Sample Clip node (TODO)](anim-nodes-sample-clip.md) instead.
+* `Abs Pos`: If connected, overrides the `Norm Pos` value with an absolute playback position, which means you can pass in the actual time value where to sample a clip. Note that you could use this for proper playback of a clip, but it lacks features such as getting informed when the clip finishes, [animation events](../animation-events.md) and so on. Prefer to use a [Sample Clip node](anim-nodes-sample-clip.md) instead.
 
 ### Output Pins
 

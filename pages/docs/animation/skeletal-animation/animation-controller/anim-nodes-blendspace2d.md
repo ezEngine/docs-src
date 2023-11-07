@@ -22,11 +22,7 @@ The node will then take that input coordinate to decide which clips should be us
 
 ## Node Properties
 
-* `Loop`: Whether to play the animation just once from start to finish, or loop it endlessly.
-
-* `Playback Speed`: An additional factor for speeding up or slowing down playback.
-
-* `Apply Root Motion`: Whether [root motion](../root-motion.md) should be sampled and passed through.
+Most node properties are the same as on the [sample clip node](anim-nodes-sample-clip.md#node-properties).
 
 * `Input Response`: A time duration over which changes to the `X` and `Y` input values are applied. This prevents sudden extreme changes. For example when `X` and `Y` are connected to physical buttons, which are just turned *on* or *off*, the final animation would jerk between those extremes. In a finished game you may want to smooth out the input yourself, but for starters this node can do a basic smoothing of the input values for you. Thus, if an input value switches from `1` to `0`, an `Input Response` of 50ms means that the used value will transition smoothly towards `0` over that amount of time and thus the output pose will also transition smoothly.  
 
@@ -36,25 +32,17 @@ The node will then take that input coordinate to decide which clips should be us
 
 ## Input Pins
 
-* `Start`: When this pin gets triggered, the node starts playback. If it is already playing, playback is reset to the start. If this pin is *not connected* playback starts right away, which is useful for nodes that play in an endless loop anyway.
-
-* `Loop`: If connected, overrides the `Loop` property. When playback reaches the end and loop is enabled, it restarts, otherwise it stops playing and the `On Finished` output pin gets triggered.
-
-* `Speed`: If connected, overrides the `Playback Speed` property.
+Most input pin properties are the same as on the [sample clip node](anim-nodes-sample-clip.md#input-pins).
 
 * `X`, `Y`: The input coordinate to select how to blend the `Clips`. It directly relates to the clips` positions.
 
 ## Output Pins
 
-* `Pose`: The resulting interpolated pose. A valid pose is only produced during playback, once the node is inactive, there is no pose output.
-
-* `On Started`: This output pin gets triggered every time playback is started or restarted, either because of user input or because playback reached the end and was looped.
-
-* `On Finished`: This output pin gets triggered when playback reaches the end and looping is disabled.
+Most output pin properties are the same as on the [sample clip node](anim-nodes-sample-clip.md#output-pins).
   
 ## See Also
 
 * [Animation Graph (TODO)](animation-graph-overview.md)
 * [Skeletal Animations](../skeletal-animation-overview.md)
-* [Sample Clip Node (TODO)](anim-nodes-sample-clip.md)
+* [Sample Clip Node](anim-nodes-sample-clip.md)
 * [Sample Blendspace 1D Node](anim-nodes-blendspace1d.md)

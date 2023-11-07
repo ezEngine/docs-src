@@ -1,6 +1,6 @@
 # Output Nodes
 
-Every [animation graph (TODO)](animation-graph-overview.md) must have at least one output node. All nodes that shall affect the result must ultimately be connected to an output node.
+Every [animation graph](animation-graph-overview.md) must have at least one output node. All nodes that shall affect the result must ultimately be connected to an output node.
 
 The *pose result* nodes do not define the final result, though. Rather the final result is a mix of all poses that reach a *pose result* node. This makes it easier to set up many different animations and also split work up into several animation graphs. 
 
@@ -52,5 +52,5 @@ This node is used to add angular [root motion](../root-motion.md) to the final p
 
 ## See Also
 
-* [Animation Graph (TODO)](animation-graph-overview.md)
+* [Animation Graph](animation-graph-overview.md)
 * [Skeletal Animations](../skeletal-animation-overview.md)

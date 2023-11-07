@@ -34,7 +34,7 @@ Most output pin properties are the same as on the [sample clip node](anim-nodes-
 
 ## See Also
 
-* [Animation Graph (TODO)](animation-graph-overview.md)
+* [Animation Graph](animation-graph-overview.md)
 * [Skeletal Animations](../skeletal-animation-overview.md)
 * [Sample Clip Node](anim-nodes-sample-clip.md)
 * [Sample Blendspace 2D Node](anim-nodes-blendspace2d.md)

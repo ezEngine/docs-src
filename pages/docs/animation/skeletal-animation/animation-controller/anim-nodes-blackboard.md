@@ -84,5 +84,5 @@ This node monitors a blackboard value and triggers its output event node when th
 
 ## See Also
 
-* [Animation Graph (TODO)](animation-graph-overview.md)
+* [Animation Graph](animation-graph-overview.md)
 * [Skeletal Animations](../skeletal-animation-overview.md)

@@ -50,7 +50,7 @@ Here we have also attached a [visual script](../../custom-code/visual-script/vis
 
 To create a playable character, you need multiple animations for all the actions that the character should be able to do. A big part revolves around *locomotion*, ie making the character walk around. Here it is not sufficient anymore to just play one animation, you will need to have multiple animations and blend them together in a convincing way.
 
-This is where the [animation graph (TODO)](animation-controller/animation-graph-overview.md) comes into play. This asset allows you to define how animations should be combined to make a character move fluidly and react to various inputs.
+This is where the [animation graph](animation-controller/animation-graph-overview.md) comes into play. This asset allows you to define how animations should be combined to make a character move fluidly and react to various inputs.
 
 Once you have basic animation playback working, getting familiar with animation controllers is the next step to make the most out of your animated characters.
 
@@ -83,4 +83,4 @@ In the sample scene there are two objects for each turret that override two bone
 * [Animated Mesh Asset](animated-mesh-asset.md)
 * [Skeleton Asset](skeleton-asset.md)
 * [Animation Clip Asset](animation-clip-asset.md)
-* [Animation Graph (TODO)](animation-controller/animation-graph-overview.md)
+* [Animation Graph](animation-controller/animation-graph-overview.md)

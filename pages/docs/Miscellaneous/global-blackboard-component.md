@@ -24,4 +24,4 @@ By adding a global blackboard component to a scene or prefab, you can ensure tha
 * [Blackboards](blackboards.md)
 * [Blackboard Template Asset](blackboard-template-asset.md)
 * [Local Blackboard Component](local-blackboard-component.md)
-* [Animation Graph (TODO)](../animation/skeletal-animation/animation-controller/animation-graph-overview.md)
+* [Animation Graph](../animation/skeletal-animation/animation-controller/animation-graph-overview.md)

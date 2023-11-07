@@ -49,5 +49,5 @@ This node is used to switch between different bone weight masks. For example a w
 
 ## See Also
 
-* [Animation Graph (TODO)](animation-graph-overview.md)
+* [Animation Graph](animation-graph-overview.md)
 * [Skeletal Animations](../skeletal-animation-overview.md)

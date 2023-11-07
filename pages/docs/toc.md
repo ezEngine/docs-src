@@ -176,7 +176,7 @@
 ### [Simple Animation Component](animation/skeletal-animation/simple-animation-component.md)
 ### [Skeleton Pose Component](animation/skeletal-animation/skeleton-pose-component.md)
 ### Animation Controller
-#### [Animation Graphs (TODO)](animation/skeletal-animation/animation-controller/animation-graph-overview.md)
+#### [Animation Graphs](animation/skeletal-animation/animation-controller/animation-graph-overview.md)
 #### [Animation Graph Asset](animation/skeletal-animation/animation-controller/animation-graph-asset.md)
 #### [Animation Controller Component](animation/skeletal-animation/animation-controller/animation-controller-component.md)
 #### [Blackboard Nodes](animation/skeletal-animation/animation-controller/anim-nodes-blackboard.md)

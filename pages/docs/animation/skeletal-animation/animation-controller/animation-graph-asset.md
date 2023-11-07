@@ -1,6 +1,6 @@
 # Animation Graph Asset
 
-The *animation graph asset* is used to configure complex animations. See the [animation graph (TODO)](animation-graph-overview.md) chapter for a conceptual description.
+The *animation graph asset* is used to configure complex animations. See the [animation graph](animation-graph-overview.md) chapter for a conceptual description.
 
 ![Animation Graph Asset](media/anim-controller-asset.png)
 

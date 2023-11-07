@@ -6,7 +6,7 @@ The *simple animation component* is used to play a single [animation clip](anima
 
 The component has to be attached on a [game object](../../runtime/world/game-objects.md) that also has an [animated mesh component](animated-mesh-component.md). The selected animation clip has to be compatible with the mesh's [skeleton](skeleton-asset.md).
 
-For more complex scenarios use an [animation graph (TODO)](animation-controller/animation-graph-overview.md) instead.
+For more complex scenarios use an [animation graph](animation-controller/animation-graph-overview.md) instead.
 
 ## Component Properties
 
@@ -33,4 +33,4 @@ The component will broadcast the event `ezMsgGenericEvent` every time it encount
 * [Skeletal Animations](skeletal-animation-overview.md)
 * [Animation Clip Asset](animation-clip-asset.md)
 * [Animated Mesh Component](animated-mesh-component.md)
-* [Animation Graph (TODO)](animation-controller/animation-graph-overview.md)
+* [Animation Graph](animation-controller/animation-graph-overview.md)

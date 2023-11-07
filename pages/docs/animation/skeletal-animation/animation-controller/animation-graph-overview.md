@@ -12,26 +12,23 @@ To control what an animation graph will output, you typically also need a [black
 
 ## Animation Graph Concept
 
-<!-- PAGE IS TODO -->
-<!-- ALL THIS IS OUTDATED -->
-
-The following image shows a very basic animation graph:
+The following image shows a basic animation graph:
 
 ![Basic Graph](media/anim-graph-basic.png)
 
-The flow of information is from left to right.
+The flow is from left to right.
 
-On the far left side the two green nodes are used to [read state from the blackboard](anim-nodes-blackboard.md). Here we read the blackboard values *PlayIdle* and *PlayWave* to see which animation clips should get played. The pink output pins are *trigger pins*, meaning they can be *active* (*triggered*) or *inactive*. When the read value is `1` (in this case) the pins are set to *triggered* which then activates the connected nodes to the right.
+The graph sets up two animations. One *idle* animation and one *wave* animation.
 
-The two light blue nodes are used to sample animation clips. There are different ways how animation clips can be played, but here we only use very basic (looped) playback. When the *PlayIdle* blackboard value is set, the *Idle* clip will be sampled. When the *PlayWave* blackboard value is set, the *Wave* clip will get sampled. Any combination is possible, so both clips can be played at the same time.
+The two top nodes configure the idle animation. The blue node is a [pose generation node](anim-nodes-pose-generation.md), in this case a node that simply samples an animation clip. The node is set to *loop* and it has no additional input pin connections, which is why it will automatically start and play indefinitely. Its output is fed directly into a [pose result node](anim-nodes-output.md) which means that this pose will always be active.
 
-The sampling nodes have a *LocalPose* output pin. This pin represents the animation pose that was determined. The pin also carries information about *weighting* the pose. That means when the clip playback was just started, the pose may still be fading and shouldn't immediately have full influence. Similarly, if a pose shall only be applied to a certain body part these [bone weights](anim-nodes-bone-weights.md) are also included here and will be forwarded to any following node.
+The other five nodes make up a second animation. In this case a *wave* animation that can be enabled at will. At its core it works the same as the idle animation. A *sample clip node* samples the wave animation clip and forwards it to a *pose result node*. When multiple pose results are available at the same time, they get mixed together.
 
-In the middle of the graph the combine poses node is used to gather multiple poses and turn them into one. This node uses the aforementioned bone weights and overall pose weight to blend all the available poses together.
+However, the wave animation should not play all the time, so a [check bool node](anim-nodes-blackboard.md) is used to query a [blackboard](../../../Miscellaneous/blackboards.md) value. Some [custom code](../../../custom-code/custom-code-overview.md) must decide whether the wave animation should be played and write this information to the blackboard. Since the `Start` pin of the *sample clip* node is connected, the node will only start playing the animation when the start pin gets triggered.
 
-Note that the blue nodes output *local poses*. That means the pose data is in a certain format. Data in this format can be used for certain operations, however, the data cannot be output in this format. Therefore the next step is to convert the pose from *local space* to *model space*. Once the data is in *model space* there are other operations that can be done with it.
+Additionally, since the wave animation should not always be active, we should set the `Target Weight` of the *pose result* to `0` to disable the pose output. Here we simply convert the `Bool` result of the *check bool* node to a number (`0` or `1`) and forward it as a weight to the *pose result*. Thus, as long as the *wave* animation should play, the pose result will be used. But when the wave animation should stop (which may be at any time even in the middle of the animation), the pose result target weight will be set to zero, and the pose result node will quickly fade out the animation.
 
-In this graph, though, the converted pose is simply forwarded to the [output node](anim-nodes-output.md). This is always the final step.
+Finally, we want the wave animation to only play on the upper body of the creature, so we generate a *bone weights mask* and forward that to the *pose result* as well. This makes sure that the wave animation only affects bones from the torso and above.
 
 ## Summary
 
@@ -39,7 +36,7 @@ The animation graph uses a graph based workflow to let you visually configure ho
 
 The system is intelligent enough to optimize away operations that don't affect the output.
 
-You typically control which animations are played when through a [blackboard](../../../Miscellaneous/blackboards.md). For quick prototyping you can also use the [input nodes](anim-nodes-input.md) to get certain input data directly into the graph.
+You typically control which animations are played through a [blackboard](../../../Miscellaneous/blackboards.md). For quick prototyping you can also use the [input nodes](anim-nodes-input.md) to get certain input data directly into the graph.
 
 Simple animation state machines can be built directly in the animation controller graph using the [logic and math nodes](anim-nodes-logic-math.md) as well as the [blackboard nodes](anim-nodes-blackboard.md). For more complex logic you should use [custom code](../../../custom-code/custom-code-overview.md).
 

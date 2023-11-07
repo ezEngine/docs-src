@@ -33,7 +33,7 @@ Use the properties `CenterPosition`, `CenterVelocity` and `CenterAngularVelocity
 * `SelfCollision`: Whether the individual bones of a ragdoll shall collide with each other. If disabled, they will pass through each other and only the joint constraints will prevent unnatural motion. Wether self collision works well or not on a given character highly depends on how the colliders for the bones are set up.
 * `StartMode`: In which *pose* the ragdall should start:
     * `WithBindPose`: The ragdoll starts immediately and uses the default bind pose (or rest pose) of the skeleton.
-    * `WithNextAnimPose`: The ragdoll waits for the next animation pose from and then starts from there. This requires a [simple animation component](../../../animation/skeletal-animation/simple-animation-component.md) or [animation graph (TODO)](../../../animation/skeletal-animation/animation-controller/animation-graph-overview.md) to be active.
+    * `WithNextAnimPose`: The ragdoll waits for the next animation pose from and then starts from there. This requires a [simple animation component](../../../animation/skeletal-animation/simple-animation-component.md) or [animation graph](../../../animation/skeletal-animation/animation-controller/animation-graph-overview.md) to be active.
     * `WithCurrentMeshPose`: The ragdoll starts immediately with the current pose. This does not require another component to regularly provide new poses and thus can also be used with a [skeleton pose component](../../../animation/skeletal-animation/skeleton-pose-component.md).
 * `GravityFactor`: How much gravity to use.
 * `Mass`: How heavy the ragdoll should be.

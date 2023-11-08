@@ -2,21 +2,19 @@
 
 For tutorial videos, [have a look here](../getting-started/videos.md).
 
-## Samples
-
-![RTS](media/rts2.jpg)
-
-![](media/tc0.jpg)
-
-![](media/tc2.jpg)
-
 ## Tools
 
-![](../docs/editor/media/ezEditor.jpg)
+![](media/showcase-1.jpg)
+
+![](media/showcase-2.jpg)
 
 ![](../docs/editor/media/quad-view.jpg)
 
 ![](../docs/tools/media/inspector.jpg)
+
+## Samples
+
+![RTS](media/rts2.jpg)
 
 ## UI
 

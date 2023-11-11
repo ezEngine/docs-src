@@ -1,4 +1,4 @@
-# Windows Builds
+# Building for Windows
 
 This page describes how to build EZ for desktop Windows. For UWP builds, see [this page](build-uwp.md).
 
@@ -12,7 +12,6 @@ This software has to be installed manually.
 
 These versions are currently supported:
 
-* Visual Studio 2019 64 Bit
 * Visual Studio 2022 64 Bit
 
 These *workloads* have to be installed:
@@ -20,6 +19,8 @@ These *workloads* have to be installed:
 * *Desktop Development with C++*
 * *Game Development with C++*
 * *.Net Desktop Development*
+
+You can also use the file [Utilities/VS2022-ezEngine.vsconfig](https://github.com/ezEngine/ezEngine/tree/dev/Utilities/VS2022-ezEngine.vsconfig) to import the necessary configuration into the Visual Studio installer.
 
 ### CMake (optional)
 
@@ -31,7 +32,6 @@ These *workloads* have to be installed:
 
 In the root folder of the EZ repository you will find a couple of `.bat` files, such as:
 
-* `GenerateWin64vs2019.bat`
 * `GenerateWin64vs2022.bat`
 
 Run one of them to generate a Visual Studio solution for your preferred compiler. If these scripts fail, you most likely don't have all the [prerequisites](#prerequisites) installed. They also sometimes fail, if Visual Studio recently installed an update and you haven't rebooted your PC since. Usually when this script fails it is due to common issues with CMake or the MSVC installation. Read the error messages carefully and search the internet, you'll usually find a solution quickly.
@@ -46,7 +46,7 @@ Run the CMake GUI and [configure the build options](cmake-config.md).
 
 ## Building the Code
 
-Open the generated solution with Visual Studio and build everything.
+Open the generated solution with Visual Studio and build everything. Run the **Editor** project afterwards.
 
 ## See Also
 

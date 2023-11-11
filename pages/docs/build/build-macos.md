@@ -1,4 +1,4 @@
-# MacOS Builds
+# Building for MacOS
 
 ## Prerequisites
 

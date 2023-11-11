@@ -1,4 +1,4 @@
-# UWP Builds
+# Building for Windows UWP
 
 This page describes how to build EZ for the Universal Windows Platform (UWP). For desktop builds, see [this page](build-windows.md).
 

@@ -1,4 +1,4 @@
-# Linux Builds
+# Building for Linux
 
 Linux support for ezEngine is currently in development and still to be considered experimental and incomplete. You can try it, but don't expect to be able to work productively with it.
 

@@ -1,4 +1,8 @@
-# CMake Setup
+# CMake Configuration
+
+> **Note:**
+>
+> Using CMake directly is only needed, if you want to choose advanced build options. This is rarely needed. Prefer to use the provided build scripts for [Windows](build-windows.md) or [Linux](build-linux.md).
 
 To generate a solution, run the CMake GUI. Specify *Where is the source code* and *Where to build the binaries*, then run **Configure**. As a generator, pick *Visual Studio 2022 x64* (or one of the other [supported platforms](supported-platforms.md)).
 

@@ -12,7 +12,7 @@ Several other options are available, for example, *Open Asset* allows you to ope
 
 ## File Display
 
-The asset browser can show all files that are on disk in the selected d[data directories](../projects/data-directories.md). It distinguishes between *assets*, *importable files* and *non-importable files*.
+The asset browser can show all files that are on disk in the selected [data directories](../projects/data-directories.md). It distinguishes between *assets*, *importable files* and *non-importable files*.
 
 **Assets** are typically shown with a thumbnail or dedicated icon. These are the files you work with most.
 
@@ -40,7 +40,7 @@ However, it is much more convenient to just *right-click* an asset and select *F
 
 ## Filter by Asset Type
 
-Below the search field is a combo box containing all asset types. Select one to only show assets of this type.
+Below the search field is a combo box containing all asset types. Select one to only show assets of this type. This is also where you select to show *all files* or *importable file types*.
 
 ## Filter by Folder
 

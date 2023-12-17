@@ -401,7 +401,7 @@ This again hides the implementation details in the header file.
 
 You can choose to ignore the leaky abstraction issue and tell the header checker tool to ignore a certain file to be included or give a certain file the permission to include anything.
 
-Each module in ezEngine that uses the header checker has a headerCkeckerIgnore.json file where you can add ignores. It looks like this:
+Each module in ezEngine that uses the header checker has a headerCheckerIgnore.json file where you can add ignores. It looks like this:
 
 ```json
 {

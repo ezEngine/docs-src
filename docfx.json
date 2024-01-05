@@ -1,6 +1,4 @@
 {
-  "metadata": [
-  ],
   "build": {
     "content": [
       {
@@ -9,6 +7,9 @@
           "pages/**/*.yml",
           "toc.yml",
           "*.md"
+        ],
+        "exclude": [
+          "_site/**"
         ]
       }
     ],
@@ -20,28 +21,22 @@
         ]
       }
     ],
-    "overwrite": [
-    ],
-    "dest": "_site",
+    "output": "_site",
+	"exportViewModel": true,
+    "template": [ "default", "modern", "template" ],
 	"globalMetadata": {
-		"_appTitle": "ezEngine",
-		"_appLogoPath": "assets/images/EZ-text.svg",
-		"_appFaviconPath": "assets/images/favicon.svg",
-		"_enableSearch": true,
-		"_enableGoogleAnalytics": true,
-		"_enableNewTab": true
-	},
-    "globalMetadataFiles": [],
-    "fileMetadataFiles": [],
-    "template": [
-      "default",
-	  "template"
-    ],
-    "postProcessors": [],
-    "markdownEngineName": "markdig",
-    "noLangKeyword": false,
-    "keepFileLink": false,
-    "cleanupCacheHistory": false,
-    "disableGitFeatures": false
+      "_appName": "ezEngine",
+	  "_appTitle": "ezEngine",
+	  "_appLogoPath": "assets/images/EZ-text.svg",
+	  "_appFaviconPath": "assets/images/favicon.svg",
+	  "_enableSearch": true,
+	  "_enableGoogleAnalytics": true,
+	  "_enableNewTab": true,
+	  "_appFooter": "Hello",
+	  "_gitContribute": {
+		  "repo": "https://github.com/ezEngine/docs-src",
+		  "branch": "main"
+	  }
+	}
   }
 }

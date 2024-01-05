@@ -22,6 +22,10 @@ span.footer-logo a {
   background-repeat: no-repeat;
 }
 
+footer .pull-right {
+  float: right;
+}
+
 #logo_ez {
   background-image: url('https://raw.githubusercontent.com/ezEngine/docs/main/assets/images/EZ-logo.svg');
 }
@@ -42,8 +46,8 @@ span.footer-logo a {
   background-image: url('https://raw.githubusercontent.com/ezEngine/docs/main/assets/images/logo-youtube.svg');
 }
 
-footer {
-	background-color: #222;
+header, footer {
+	background-color: #222 !important;
 	border-color: #080808;
 }
 

@@ -47,14 +47,16 @@ footer .pull-right {
 }
 
 header, footer {
-	background-color: #222 !important;
-	border-color: #080808;
+/*	
+  background-color: #222 !important;
+  border-color: #080808;
+*/
 }
 
 .footer {
-	background-color: inherit;
+  /*background-color: inherit;*/
 }
 
 .grad-bottom{
-	display: none;
+  display: none;
 }

@@ -119,6 +119,7 @@
 #### [Jolt Ragdoll Component](physics/jolt/ragdolls/jolt-ragdoll-component.md)
 ### Special
 #### [Character Controller](physics/jolt/special/jolt-character-controller.md)
+#### [Jolt Cloth Sheet Component](physics/jolt/special/jolt-cloth-sheet-component.md)
 #### [Jolt Grab Object Component](physics/jolt/special/jolt-grab-object-component.md)
 #### [Jolt Rope Component](physics/jolt/special/jolt-rope-component.md)
 # Effects

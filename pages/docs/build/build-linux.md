@@ -69,19 +69,22 @@ If you would like to use Clang instead of GCC, simply add `--clang` to all invoc
 
 ### Installing Qt 6 Manually
 
-Some distributions provide quite outdated versions of Qt 6 and the ezEngine Editor requires at least Qt 6.3.0 due to a bug that exists in previous versions of Qt and prevents the 3D viewport in the Editor from working correctly. 
+Some distributions provide quite outdated versions of Qt 6 and the ezEngine Editor requires at least Qt 6.3.0 due to a bug that exists in previous versions of Qt and prevents the 3D viewport in the Editor from working correctly.
 
 You have the following options:
+
   1. Install through [aqtinstall](https://github.com/miurahr/aqtinstall)
   2. Install Qt 6 through the [official installer](https://doc.qt.io/qt-6/get-and-install-qt.html#using-qt-online-installer)
   3. [Build from source](https://doc.qt.io/qt-6/linux-building.html)
 
  Once you have obtained a recent version of Qt, you have two options so that the ezEngine cmake scripts find it:
+
  1) Add the install location permantently to your `PATH` environment variable
- 2) Specify the install location when calling `RunCMake.sh` like this: 
-```
- > PATH=/path/to/qt6/install:$PATH ./RunCMake.sh
-```
+ 2) Specify the install location when calling `RunCMake.sh` like this:
+
+    ```bash
+    > PATH=/path/to/qt6/install:$PATH ./RunCMake.sh
+    ```
 
 ## Manual Setup
 
@@ -125,6 +128,10 @@ cmake -B build -S . -G Ninja -DCMAKE_CXX_COMPILER=g++-12 -DCMAKE_C_COMPILER=gcc-
 ## Using Qt Creator
 
 The root of the repository can also be opened in Qt Creator, which will generally do a good job at finding the Qt location on its own.
+
+<!-- TODO: should add something about building and setting the precompiled binaries.
+See https://github.com/ezEngine/ezEngine/pull/1152
+ -->
 
 ## See Also
 

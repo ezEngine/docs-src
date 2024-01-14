@@ -4,7 +4,7 @@ The *Jolt cloth sheet component* simulates a square patch of cloth as it hangs a
 
 ![Jolt Cloth](media/jolt-cloth-sheet.jpg)
 
-Jolt cloth sheets are affected by [wind](wind/wind.md) and contrary to the [cloth sheet component](../../../effects/cloth-sheet-component.md) they also interact with physics objects and collide with scene geometry.
+Jolt cloth sheets are affected by [wind](../../../effects/wind/wind.md) and contrary to the [cloth sheet component](../../../effects/cloth-sheet-component.md) they also interact with physics objects and collide with scene geometry.
 
 ## Component Properties
 
@@ -16,13 +16,13 @@ Jolt cloth sheets are affected by [wind](wind/wind.md) and contrary to the [clot
 
 * `Damping`: How quickly the cloth loses energy while swinging. Higher values make it come to rest more quickly, low values make it swing for a longer time.
 
-* `WindInfluence`: How strongly [wind](wind/wind.md) should make the cloth swing.
+* `WindInfluence`: How strongly [wind](../../../effects/wind/wind.md) should make the cloth swing.
 
 * `GravityFactor`: How strongly gravity pulls on the cloth.
 
 * `Flags`: These define at which corners and edges the sheet of cloth is attached to the world.
 
-* `Material`: The [material](../materials/materials-overview.md) used for rendering the cloth. Make sure to set it to *two-sided* for cloth that can be seen from both sides.
+* `Material`: The [material](../../../materials/materials-overview.md) used for rendering the cloth. Make sure to set it to *two-sided* for cloth that can be seen from both sides.
 
 * `TextureScale`: Scale for the texture UV coordinates.
 
@@ -32,4 +32,4 @@ Jolt cloth sheets are affected by [wind](wind/wind.md) and contrary to the [clot
 
 * [Cloth Sheet Component](../../../effects/cloth-sheet-component.md)
 * [Jolt Rope Component](jolt-rope-component.md)
-* [Wind](wind/wind.md)
+* [Wind](../../../effects/wind/wind.md)

@@ -102,13 +102,17 @@ The coroutine mode is selectable on every *entry point* node.
 
 Every entry point provides a coroutine ID. This can be used to cancel a specific coroutine if needed. Similarly, there are functions to stop all coroutines or start separate ones. You can also use the `Yield` node to interrupt a script at a specific point and have it continue in the next frame.
 
-## Loops
+## Loops and Arrays
 
 You can execute loops to iterate over data or repeat certain actions. Several different *loop nodes* are available. They all operate in the same way, that they have two outgoing *execution pins*. One execution pin is for the *loop body*. This execution path will be executed repeatedly until the loop is finished. Finally, the *completed* execution pin is executed to continue with the code that comes after the loop.
 
 For example, the following script loops from 0 to 8 (inclusive) and for each iteration it adds the loop index to the counter variable. After the loop has been completed the execution flow continues at the *completed* pin, so a `SetColor` message is sent to the owner game object. Also note that the loop body contains a `Yield` statement so the loop is paused after every iteration and resumed the next frame (see the *coroutines* section above).
 
 ![Loop](media/vs-loop.png)
+
+Loops are often used together with arrays. Various array operations such as `PushBack`, `GetCount`, `Contains` and `Remove` are available:
+
+![Array](media/vs-array.png)
 
 ## Node Types
 

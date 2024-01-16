@@ -28,6 +28,14 @@ jobs:
         with:
           dotnet-version: 8.x
 
+      - name: Install Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+ 
+      - name: Generate TOC
+        run: python scripts/create-toc.py
+
       - name: Clear docs host repo
         run: rm -rf _site/*
 

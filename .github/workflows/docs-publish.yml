@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   build:
@@ -23,6 +24,19 @@ jobs:
       - name: Generate TOC
         working-directory: .
         run: python ./scripts/create-toc.py
+
+      - name: Checkout ezEngine
+        uses: actions/checkout@v2
+        with:
+          repository: ezEngine/ezEngine
+          path: ezEngine
+          fetch-depth: 1
+          persist-credentials: false
+          submodules: false
+          
+      - name: Generate Code Snippetes
+        working-directory: .
+        run: python ./scripts/code-snippets.py
 
       - name: Checkout docs host repo
         uses: actions/checkout@v2

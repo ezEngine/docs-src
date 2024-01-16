@@ -140,13 +140,13 @@ def FixFileLinks(srcFile: str, nameToFile: dict):
     with open(srcFile, "w") as file:
         file.write(result)
 
-    if failure:
-        print(f"Failure!\n\n")
-        print(f"\n\n ======= INPUT ========== \n\n")
-        print(content)
-        print(f"\n\n ======= OUTPUT ========== \n\n")
-        print(result)
-        print(f"\n\n ======= END ========== \n\n")
+    # if failure:
+    #     print(f"Failure!\n\n")
+    #     print(f"\n\n ======= INPUT ========== \n\n")
+    #     print(content)
+    #     print(f"\n\n ======= OUTPUT ========== \n\n")
+    #     print(result)
+    #     print(f"\n\n ======= END ========== \n\n")
 
 
 def FixAllFileLinks(nameToFile: dict):

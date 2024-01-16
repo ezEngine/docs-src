@@ -4,13 +4,10 @@ from typing import List, Tuple
 
 def DetermineTocOrder(curDir, order: list):
 
-    print(f"=== DetermineTocOrder === ")
+    #print(f"=== DetermineTocOrder === ")
 
     tocTxt = os.path.join(curDir, "toc.txt")
     subItems = []
-
-    #ymlContent = ""
-    #writeLocalYml = False
 
     if os.path.exists(tocTxt):
         
@@ -24,7 +21,7 @@ def DetermineTocOrder(curDir, order: list):
 
     for item in subItems:
 
-        print(f"Item: ${item}")
+        #print(f"Item: {item}")
 
         itemName = item.strip()
 
@@ -41,7 +38,7 @@ def DetermineTocOrder(curDir, order: list):
         if folderName == "---":
 
             order.append("---")
-            print("order.append: ---")
+            #print("order.append: ---")
 
         else:
 
@@ -62,10 +59,10 @@ def DetermineTocOrder(curDir, order: list):
 
                 if sep < 0:
                     order.append(f"[{folderName}]({folderName})")
-                    print(f"order.append: [{folderName}]({folderName})")
+                    #print(f"order.append: [{folderName}]({folderName})")
                 else:
                     order.append(f"[{displayName}]({folderName})")
-                    print(f"order.append: [{displayName}]({folderName})")
+                    #print(f"order.append: [{displayName}]({folderName})")
             
             else:
 
@@ -74,77 +71,17 @@ def DetermineTocOrder(curDir, order: list):
                 if os.path.isdir(subPath):
 
                     order.append(">>>" + displayName)
-                    print(f"order.append: >>> + displayName")
+                    #print(f"order.append: >>> + {displayName}")
                     DetermineTocOrder(subPath, order)
                     order.append("<<<")
-                    print(f"order.append: <<< + displayName")
-
-
-                    #ymlContent += f"- name: {displayName}\n"
-                    #ymlContent += f"  href: {folderName}/\n"
+                    #print(f"order.append: <<< + {displayName}")
 
                 else:
                     order.append(subPath)
-                    print(f"order.append: ${subPath}")
+                    #print(f"order.append: {subPath}")
 
-                    #ymlContent += f"- name: {displayName}\n"
-                    #ymlContent += f"  href: {folderName}\n"
-
-    #if writeLocalYml:
-    #    with open(os.path.join(curDir, "toc.yml"), "w") as ymlToc:
-    #        ymlToc.write(ymlContent)
-
-    print(f"=== END DetermineTocOrder === ")
-
+    #print(f"=== END DetermineTocOrder === ")
     return
-
-def GenerateTocMD(nameToFile: dict, order: list):
-
-    tocContent = ""
-
-    topLevel = True
-    indentation = ""
-
-    for item in order:
-
-        line:str = item
-
-        if item == "<<<":
-
-            if indentation == "":
-                topLevel = True
-            else:
-                indentation = indentation[0:-2]
-            
-            continue
-
-        if line.startswith(">>>"):
-
-            headline = line[3:]
-
-            if topLevel:
-                tocContent += f"\n## {headline}\n\n"
-
-                topLevel = False
-                indentation = ""
-            else:
-                tocContent += f"{indentation}* __{headline}__\n"
-
-                indentation = indentation + "  "
-
-        elif line.startswith("---"):
-
-            tocContent += f"\n{indentation}---\n"
-
-        else:
-
-            tocContent += f"{indentation}* []({item})\n"
-
-    print(f"\n\n ======= GenerateTocMD ========== \n\n")
-    print(tocContent)
-    print(f"\n\n ======= END ========== \n\n")
-
-    return tocContent
 
 def indentLevel(n):
     word = '#'
@@ -177,7 +114,6 @@ def GenerateTocDocFX(nameToFile: dict, order: list):
 
         elif line.startswith("---"):
 
-            #tocContent += f"\n{indentation}---\n"
             continue
 
         elif line.startswith("["):
@@ -188,8 +124,8 @@ def GenerateTocDocFX(nameToFile: dict, order: list):
 
             tocContent += f"{indentLevel(indentation)} []({item})\n"
 
-    print(f"\n\n ======= GenerateTocDocFX ========== \n\n")
-    print(tocContent)
-    print(f"\n\n ======= END ========== \n\n")
+    #print(f"\n\n ======= GenerateTocDocFX ========== \n\n")
+    #print(tocContent)
+    #print(f"\n\n ======= END ========== \n\n")
 
     return tocContent

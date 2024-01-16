@@ -4,6 +4,8 @@ from typing import List, Tuple
 
 def DetermineTocOrder(curDir, order: list):
 
+    print(f"=== DetermineTocOrder === ")
+
     tocTxt = os.path.join(curDir, "toc.txt")
     subItems = []
 
@@ -22,6 +24,8 @@ def DetermineTocOrder(curDir, order: list):
 
     for item in subItems:
 
+        print(f"Item: ${item}")
+
         itemName = item.strip()
 
         if itemName == "":
@@ -37,6 +41,7 @@ def DetermineTocOrder(curDir, order: list):
         if folderName == "---":
 
             order.append("---")
+            print("order.append: ---")
 
         else:
 
@@ -57,8 +62,10 @@ def DetermineTocOrder(curDir, order: list):
 
                 if sep < 0:
                     order.append(f"[{folderName}]({folderName})")
+                    print(f"order.append: [{folderName}]({folderName})")
                 else:
                     order.append(f"[{displayName}]({folderName})")
+                    print(f"order.append: [{displayName}]({folderName})")
             
             else:
 
@@ -67,8 +74,10 @@ def DetermineTocOrder(curDir, order: list):
                 if os.path.isdir(subPath):
 
                     order.append(">>>" + displayName)
+                    print(f"order.append: >>> + displayName")
                     DetermineTocOrder(subPath, order)
                     order.append("<<<")
+                    print(f"order.append: <<< + displayName")
 
 
                     #ymlContent += f"- name: {displayName}\n"
@@ -76,6 +85,7 @@ def DetermineTocOrder(curDir, order: list):
 
                 else:
                     order.append(subPath)
+                    print(f"order.append: ${subPath}")
 
                     #ymlContent += f"- name: {displayName}\n"
                     #ymlContent += f"  href: {folderName}\n"
@@ -83,6 +93,8 @@ def DetermineTocOrder(curDir, order: list):
     #if writeLocalYml:
     #    with open(os.path.join(curDir, "toc.yml"), "w") as ymlToc:
     #        ymlToc.write(ymlContent)
+
+    print(f"=== END DetermineTocOrder === ")
 
     return
 

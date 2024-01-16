@@ -128,6 +128,10 @@ def GenerateTocMD(nameToFile: dict, order: list):
 
             tocContent += f"{indentation}* []({item})\n"
 
+    print(f"\n\n ======= GenerateTocMD ========== \n\n")
+    print(tocContent)
+    print(f"\n\n ======= END ========== \n\n")
+
     return tocContent
 
 def indentLevel(n):
@@ -171,5 +175,9 @@ def GenerateTocDocFX(nameToFile: dict, order: list):
         else:
 
             tocContent += f"{indentLevel(indentation)} []({item})\n"
+
+    print(f"\n\n ======= GenerateTocDocFX ========== \n\n")
+    print(tocContent)
+    print(f"\n\n ======= END ========== \n\n")
 
     return tocContent

@@ -99,6 +99,8 @@ def FixFileLinks(srcFile: str, nameToFile: dict):
     result = content
     pattern = r"\[([^\]]*)\]\(([^\)]*)\)"
 
+    failure = False
+
     for match in re.finditer(pattern, content):
 
         fullPattern:str = match.group(0)
@@ -129,6 +131,7 @@ def FixFileLinks(srcFile: str, nameToFile: dict):
 
             if not isValid:
                 print(f"Warning in '{srcFile}': Unknown link: '{orgLink}'")
+                failure = True
 
         newString = f"[{displayName}]({newRelLink})"
 
@@ -136,6 +139,14 @@ def FixFileLinks(srcFile: str, nameToFile: dict):
 
     with open(srcFile, "w") as file:
         file.write(result)
+
+    if failure:
+        print(f"Failure!\n\n")
+        print(f"\n\n ======= INPUT ========== \n\n")
+        print(content)
+        print(f"\n\n ======= OUTPUT ========== \n\n")
+        print(result)
+        print(f"\n\n ======= END ========== \n\n")
 
 
 def FixAllFileLinks(nameToFile: dict):

@@ -12,7 +12,7 @@ In shader code, permutation variables are exposed as `#define`'d preprocessor va
 
 ## The Shader Permutations Section
 
-Each shader is made up of several **sections**.
+Each shader is made up of several [sections](./shaders-overview.md#shader-sections):
 
 ```cpp
 [PLATFORMS]
@@ -125,7 +125,7 @@ The type (`bool` or `enum`) and the available values are automatically read from
 
 ## See Also
 
-* [Shaders (TODO)](shaders-overview.md)
+* [Shaders](shaders-overview.md)
 * [Shader Templates](shader-templates.md)
 * [Shader Debugging](shader-debugging.md)
 * [The Shader Render State Section](shader-render-state.md)

@@ -33,6 +33,6 @@ VS_OUT main(VS_IN Input)
 
 ## See Also
 
-* [Shaders (TODO)](shaders-overview.md)
+* [Shaders](shaders-overview.md)
 * [Shader Templates](shader-templates.md)
 * [ShaderCompiler](../../tools/shadercompiler.md)

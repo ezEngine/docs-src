@@ -8,5 +8,5 @@ An alternative to using visual shaders is to write a custom shader based off of 
 
 ## See Also
 
-* [Shaders (TODO)](../graphics/shaders/shaders-overview.md)
+* [Shaders](../graphics/shaders/shaders-overview.md)
 * [Shader Templates](../graphics/shaders/shader-templates.md)

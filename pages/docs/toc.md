@@ -73,7 +73,7 @@
 ### [Shader Permutation Variables](graphics/shaders/shader-permutation-variables.md)
 ### [Shader Render State](graphics/shaders/shader-render-state.md)
 ### [Shader Templates](graphics/shaders/shader-templates.md)
-### [Shaders (TODO)](graphics/shaders/shaders-overview.md)
+### [Shaders](graphics/shaders/shaders-overview.md)
 ## [Sprite Component](graphics/sprite-component.md)
 ## [Substance Textures](graphics/substance-textures.md)
 ## [Textures](graphics/textures-overview.md)

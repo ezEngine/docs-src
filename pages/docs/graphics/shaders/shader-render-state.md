@@ -1,6 +1,6 @@
 # Shader Render State
 
-The state of the [rendering pipeline (TODO)](../render-pipeline-overview.md) can only be set through [shaders (TODO)](shaders-overview.md). There is no way to change its state other than to select a shader which includes that specific state.
+The state of the [rendering pipeline (TODO)](../render-pipeline-overview.md) can only be set through [shaders](shaders-overview.md). There is no way to change its state other than to select a shader which includes that specific state.
 
 Use [shader permutations](shader-permutation-variables.md) to create variants of a shader. Each variant may incorporate a different render state. By setting shader permutation variables at runtime, you select the specific shader variant (permutation) and thus also get its render state.
 
@@ -8,7 +8,7 @@ This design follows what rendering APIs such as DirectX 12 and Vulkan require.
 
 ## The Shader Render State Section
 
-Each shader is made up of several **sections**.
+Each shader is made up of several [sections](./shaders-overview.md#shader-sections):
 
 ```cpp
 [PLATFORMS]
@@ -310,7 +310,7 @@ The following variables exist with suffix 0 to 7. If **IndependentBlend** is dis
 
 ## See Also
 
-* [Shaders (TODO)](shaders-overview.md)
+* [Shaders](shaders-overview.md)
 * [Shader Permutation Variables](shader-permutation-variables.md)
 * [Shader Templates](shader-templates.md)
 * [Render Pipeline (TODO)](../render-pipeline-overview.md)

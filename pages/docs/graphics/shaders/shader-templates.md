@@ -28,5 +28,5 @@ The final shader code is built by running a C preprocessor over the file, but in
 
 ## See Also
 
-* [Shaders (TODO)](shaders-overview.md)
+* [Shaders](shaders-overview.md)
 * [ShaderCompiler](../../tools/shadercompiler.md)

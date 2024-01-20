@@ -31,4 +31,4 @@ ShaderCompiler.exe -project "C:\ez\Data\Base" -platform DX11_SM50 -shader "Shade
 ## See Also
 
 
-* [Shaders (TODO)](../graphics/shaders/shaders-overview.md)
+* [Shaders](../graphics/shaders/shaders-overview.md)

@@ -31,9 +31,9 @@ The file `SampleGamePluginDLL.h` only contains `#define`s for DLL import/export 
 // Configure the DLL Import/Export Define
 #if EZ_ENABLED(EZ_COMPILE_ENGINE_AS_DLL)
 #  ifdef BUILDSYSTEM_BUILDING_SAMPLEGAMEPLUGIN_LIB
-#    define EZ_SAMPLEGAMEPLUGIN_DLL __declspec(dllexport)
+#    define EZ_SAMPLEGAMEPLUGIN_DLL EZ_DECL_EXPORT
 #  else
-#    define EZ_SAMPLEGAMEPLUGIN_DLL __declspec(dllimport)
+#    define EZ_SAMPLEGAMEPLUGIN_DLL EZ_DECL_IMPORT
 #  endif
 #else
 #  define EZ_SAMPLEGAMEPLUGIN_DLL

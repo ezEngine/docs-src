@@ -8,7 +8,7 @@ All applications that are built on top of `ezGameApplication` provide a number o
 
 ## Reload Resources
 
-**Press F4** to instruct the engine to reload all [resources (TODO)](../resource-management.md). This can be useful, if for example, you are working on a [shader (TODO)](../../graphics/shaders/shaders-overview.md) and want to see the result of your changes inside the game, without having to restart the game.
+**Press F4** to instruct the engine to reload all [resources (TODO)](../resource-management.md). This can be useful, if for example, you are working on a [shader](../../graphics/shaders/shaders-overview.md) and want to see the result of your changes inside the game, without having to restart the game.
 
 Reloading resources works for all assets that are used directly by the engine (e.g. [Shaders](../../graphics/shaders/shaders-overview.md)). For some assets it will work, after the editor processed the input [assets](../../assets/assets-overview.md). For example for [textures](../../graphics/textures-overview.md) and [materials](../../materials/materials-overview.md) and many others. Some resources, though, are not reloadable, e.g. things that get instantiated at runtime, such as [prefabs](../../prefabs/prefabs-overview.md).
 

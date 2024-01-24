@@ -34,8 +34,8 @@ class DemoComponent : public ezComponent
   // ezComponent
 
 public:
-  virtual void SerializeComponent(ezWorldWriter& stream) const override;
-  virtual void DeserializeComponent(ezWorldReader& stream) override;
+  virtual void SerializeComponent(ezWorldWriter& inout_stream) const override;
+  virtual void DeserializeComponent(ezWorldReader& inout_stream) override;
 
 protected:
   virtual void OnSimulationStarted() override;
@@ -51,7 +51,7 @@ private:
   void Update();
 
   float m_fAmplitude = 1.0f;             // [ property ]
-  ezAngle m_Speed = ezAngle::Degree(90); // [ property ]
+  ezAngle m_Speed = ezAngle::MakeFromDegree(90); // [ property ]
 };
 ```
 <!-- END-DOCS-CODE-SNIPPET -->
@@ -72,7 +72,7 @@ EZ_BEGIN_COMPONENT_TYPE(DemoComponent, 3 /* version */, ezComponentMode::Dynamic
   EZ_BEGIN_PROPERTIES
   {
     EZ_MEMBER_PROPERTY("Amplitude", m_fAmplitude)->AddAttributes(new ezDefaultValueAttribute(1), new ezClampValueAttribute(0, 10)),
-    EZ_MEMBER_PROPERTY("Speed", m_Speed)->AddAttributes(new ezDefaultValueAttribute(ezAngle::Degree(90))),
+    EZ_MEMBER_PROPERTY("Speed", m_Speed)->AddAttributes(new ezDefaultValueAttribute(ezAngle::MakeFromDegree(90))),
   }
   EZ_END_PROPERTIES;
 
@@ -127,11 +127,11 @@ Finally, to make our component also work in exported scenes, we need to implemen
 
 <!-- BEGIN-DOCS-CODE-SNIPPET: component-serialize -->
 ```cpp
-void DemoComponent::SerializeComponent(ezWorldWriter& stream) const
+void DemoComponent::SerializeComponent(ezWorldWriter& inout_stream) const
 {
-  SUPER::SerializeComponent(stream);
+  SUPER::SerializeComponent(inout_stream);
 
-  auto& s = stream.GetStream();
+  auto& s = inout_stream.GetStream();
 
   s << m_fAmplitude;
   s << m_Speed;
@@ -145,12 +145,12 @@ Obviously, at runtime we also need to deserialize our component. This is where w
 
 <!-- BEGIN-DOCS-CODE-SNIPPET: component-deserialize -->
 ```cpp
-void DemoComponent::DeserializeComponent(ezWorldReader& stream)
+void DemoComponent::DeserializeComponent(ezWorldReader& inout_stream)
 {
-  SUPER::DeserializeComponent(stream);
-  const ezUInt32 uiVersion = stream.GetComponentTypeVersion(GetStaticRTTI());
+  SUPER::DeserializeComponent(inout_stream);
+  const ezUInt32 uiVersion = inout_stream.GetComponentTypeVersion(GetStaticRTTI());
 
-  auto& s = stream.GetStream();
+  auto& s = inout_stream.GetStream();
 
   s >> m_fAmplitude;
 
@@ -160,7 +160,7 @@ void DemoComponent::DeserializeComponent(ezWorldReader& stream)
     // convert this to ezAngle
     float fDegree;
     s >> fDegree;
-    m_Speed = ezAngle::Degree(fDegree);
+    m_Speed = ezAngle::MakeFromDegree(fDegree);
   }
   else
   {

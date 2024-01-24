@@ -1,6 +1,6 @@
 # Materials
 
-*Materials* are used to define the visual properties of rendered objects. Materials specify what [shader (TODO)](../graphics/shaders/shaders-overview.md) to use to render an object and they allow you to configure that shader. Most commonly you select which [textures](../graphics/textures-overview.md) to use. The most common use case for materials is through [meshes](../graphics/meshes/meshes-overview.md). Each sub-mesh can have its own material.
+*Materials* are used to define the visual properties of rendered objects. Materials specify what [shader](../graphics/shaders/shaders-overview.md) to use to render an object and they allow you to configure that shader. Most commonly you select which [textures](../graphics/textures-overview.md) to use. The most common use case for materials is through [meshes](../graphics/meshes/meshes-overview.md). Each sub-mesh can have its own material.
 
 ![Material editor](media/material-editor.jpg)
 
@@ -20,7 +20,7 @@ Through the `ShaderMode` property there are three ways a material can select whi
 
 * **From Base Material:** This is the most convenient and most commonly used method. In this mode, you need to select a `BaseMaterial`, which is just another material. All the properties of that base material are copied over to your material, including the shader selection. You can then override each property as you like. This makes it easy to set up a few common base materials and then "derive" all other materials from this common base.
 
-* **From File:** In this mode the material actually references a proper shader file. This allows you to select a custom [shader (TODO)](../graphics/shaders/shaders-overview.md). By default, EZ doesn't have many different shader files, as all important variations are provided by the same shader file. However, if you do decide to write a custom one, this is the way to select it for your material. The engine parses the shader file for configurable properties and displays those as UI elements in the material editor. So things like which texture you can select and what other lighting properties the material will have, are all defined by the selected shader.
+* **From File:** In this mode the material actually references a proper shader file. This allows you to select a custom [shader](../graphics/shaders/shaders-overview.md). By default, EZ doesn't have many different shader files, as all important variations are provided by the same shader file. However, if you do decide to write a custom one, this is the way to select it for your material. The engine parses the shader file for configurable properties and displays those as UI elements in the material editor. So things like which texture you can select and what other lighting properties the material will have, are all defined by the selected shader.
 
   You can easily create a custom shader from a [shader template](../graphics/shaders/shader-templates.md).
 

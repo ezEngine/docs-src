@@ -73,8 +73,10 @@ EZ_BEGIN_COMPONENT_TYPE(DebugRenderComponent, 2, ezComponentMode::Static)
   {
     EZ_MEMBER_PROPERTY("Size", m_fSize)->AddAttributes(new ezDefaultValueAttribute(1), new ezClampValueAttribute(0, 10)),
     EZ_MEMBER_PROPERTY("Color", m_Color)->AddAttributes(new ezDefaultValueAttribute(ezColor::White)),
-    EZ_ACCESSOR_PROPERTY("Texture", GetTextureFile, SetTextureFile)->AddAttributes(new ezAssetBrowserAttribute("Texture 2D")),
+    EZ_ACCESSOR_PROPERTY("Texture", GetTextureFile, SetTextureFile)->AddAttributes(new ezAssetBrowserAttribute("CompatibleAsset_Texture_2D")),
     EZ_BITFLAGS_MEMBER_PROPERTY("Render", DebugRenderComponentMask, m_RenderTypes)->AddAttributes(new ezDefaultValueAttribute(DebugRenderComponentMask::Box)),
+
+    EZ_ACCESSOR_PROPERTY("CustomData", GetSampleCustomDataResource, SetSampleCustomDataResource)->AddAttributes(new ezAssetBrowserAttribute("CompatibleAsset_CustomData")),
   }
   EZ_END_PROPERTIES;
 
@@ -170,11 +172,11 @@ During serialization you simply write data to a stream, as you like:
 
 <!-- BEGIN-DOCS-CODE-SNIPPET: component-serialize -->
 ```cpp
-void DemoComponent::SerializeComponent(ezWorldWriter& stream) const
+void DemoComponent::SerializeComponent(ezWorldWriter& inout_stream) const
 {
-  SUPER::SerializeComponent(stream);
+  SUPER::SerializeComponent(inout_stream);
 
-  auto& s = stream.GetStream();
+  auto& s = inout_stream.GetStream();
 
   s << m_fAmplitude;
   s << m_Speed;
@@ -196,12 +198,12 @@ The version number should be increased every time the serialization format of th
 
 <!-- BEGIN-DOCS-CODE-SNIPPET: component-deserialize -->
 ```cpp
-void DemoComponent::DeserializeComponent(ezWorldReader& stream)
+void DemoComponent::DeserializeComponent(ezWorldReader& inout_stream)
 {
-  SUPER::DeserializeComponent(stream);
-  const ezUInt32 uiVersion = stream.GetComponentTypeVersion(GetStaticRTTI());
+  SUPER::DeserializeComponent(inout_stream);
+  const ezUInt32 uiVersion = inout_stream.GetComponentTypeVersion(GetStaticRTTI());
 
-  auto& s = stream.GetStream();
+  auto& s = inout_stream.GetStream();
 
   s >> m_fAmplitude;
 
@@ -211,7 +213,7 @@ void DemoComponent::DeserializeComponent(ezWorldReader& stream)
     // convert this to ezAngle
     float fDegree;
     s >> fDegree;
-    m_Speed = ezAngle::Degree(fDegree);
+    m_Speed = ezAngle::MakeFromDegree(fDegree);
   }
   else
   {

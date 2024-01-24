@@ -10,6 +10,8 @@ Since all resources can be hot reloaded at runtime, using `ezConfigFileResource`
 >
 > Currently, interacting with resources is only possible from C++ code.
 
+An alternative to *config file resources* is [custom data](custom-data.md).
+
 ## File Structure
 
 The layout of config files is similar to C/C++ code, including the support for the [C preprocessor](https://en.wikipedia.org/wiki/C_preprocessor).
@@ -81,3 +83,4 @@ int PlayerHealth = 100
 
 * [Resource Management (TODO)](../runtime/resource-management.md)
 * [C preprocessor (Wikipedia)](https://en.wikipedia.org/wiki/C_preprocessor)
+* [Custom Data](custom-data.md)

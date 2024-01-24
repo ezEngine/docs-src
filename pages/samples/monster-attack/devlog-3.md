@@ -37,7 +37,7 @@ pPhysics->Raycast(result, pCameraObject->GetGlobalPosition(), pCameraObject->Get
 
 Now I have the point that the player is looking at. The next step is to validate, that one can place a trap there. For now I only do very simply position snapping and some rotation, I don't yet prevent the player from placing traps where they don't belong.
 
-Of course, while in trap placement mode you want to have a preview how things would look like, so I built a copy of my trap prefab, that has no functionality, and I add that to the scene (and move it around) to show where the trap would end up. At some point this should probably also use a [custom shader (TODO)](../../docs/graphics/shaders/shaders-overview.md) for a nice "preview effect", and some sounds when placing traps for better feedback.
+Of course, while in trap placement mode you want to have a preview how things would look like, so I built a copy of my trap prefab, that has no functionality, and I add that to the scene (and move it around) to show where the trap would end up. At some point this should probably also use a [custom shader](../../docs/graphics/shaders/shaders-overview.md) for a nice "preview effect", and some sounds when placing traps for better feedback.
 
 <video src="media/devlog3/ma-dl3-TrapPlacement.mp4" width=600 controls></video>
 

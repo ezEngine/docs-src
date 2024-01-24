@@ -20,7 +20,7 @@ Each component only uses a single [material](../../materials/materials-overview.
 
 Custom mesh components use *vertex colors*, meaning every vertex stores its own color information. This is different to typical mesh data in EZ, where per-vertex colors are usually not used. If you do not require vertex colors, this is fine and you can use any default [material](../../materials/materials-overview.md) (and thus shader). The extra information will simply be ignored.
 
-However, if you do need the vertex color information, for instance to precisely control transparency, then you also need to set a material, which uses a [shader (TODO)](../shaders/shaders-overview.md) that actually reads the vertex color value and uses it in the way that you desire. You may need to write a custom shader for that.
+However, if you do need the vertex color information, for instance to precisely control transparency, then you also need to set a material, which uses a [shader](../shaders/shaders-overview.md) that actually reads the vertex color value and uses it in the way that you desire. You may need to write a custom shader for that.
 
 ## See Also
 

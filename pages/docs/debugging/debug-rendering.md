@@ -47,8 +47,7 @@ The following code snippet is sufficient to render a wireframe sphere at the loc
 
 <!-- BEGIN-DOCS-CODE-SNIPPET: debugrender-sphere -->
 ```cpp
-ezBoundingSphere sphere;
-sphere.SetElements(ezVec3::ZeroVector(), m_fSize);
+ezBoundingSphere sphere = ezBoundingSphere::MakeFromCenterAndRadius(ezVec3::MakeZero(), m_fSize);
 ezDebugRenderer::DrawLineSphere(GetWorld(), sphere, m_Color, ownerTransform);
 ```
 <!-- END-DOCS-CODE-SNIPPET -->

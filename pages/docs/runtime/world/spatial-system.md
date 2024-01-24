@@ -52,14 +52,14 @@ Components can handle this message and add spatial information to it. For 3D obj
 
 <!-- BEGIN-DOCS-CODE-SNIPPET: spatial-bounds-update -->
 ```cpp
-void RtsSelectableComponent::OnUpdateLocalBounds(ezMsgUpdateLocalBounds& msg)
+void RtsSelectableComponent::OnUpdateLocalBounds(ezMsgUpdateLocalBounds& ref_msg)
 {
   ezBoundingBoxSphere bounds;
   bounds.m_fSphereRadius = m_fSelectionRadius;
   bounds.m_vCenter.SetZero();
   bounds.m_vBoxHalfExtends.Set(m_fSelectionRadius);
 
-  msg.AddBounds(bounds, s_SelectableCategory);
+  ref_msg.AddBounds(bounds, s_SelectableCategory);
 }
 ```
 <!-- END-DOCS-CODE-SNIPPET -->
@@ -84,9 +84,9 @@ When calling functions such as `ezSpatialSystem::FindObjectsInSphere()` you have
 
 <!-- BEGIN-DOCS-CODE-SNIPPET: spatial-query -->
 ```cpp
-void RtsGameState::InspectObjectsInArea(const ezVec2& position, float radius, ezSpatialSystem::QueryCallback callback) const
+void RtsGameState::InspectObjectsInArea(const ezVec2& vPosition, float fRadius, ezSpatialSystem::QueryCallback callback) const
 {
-  ezBoundingSphere sphere(position.GetAsVec3(0), radius);
+  ezBoundingSphere sphere = ezBoundingSphere::MakeFromCenterAndRadius(vPosition.GetAsVec3(0), fRadius);
   ezSpatialSystem::QueryParams queryParams;
   queryParams.m_uiCategoryBitmask = RtsSelectableComponent::s_SelectableCategory.GetBitmask();
   m_pMainWorld->GetSpatialSystem()->FindObjectsInSphere(sphere, queryParams, callback);

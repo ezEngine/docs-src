@@ -8,7 +8,7 @@ This design follows what rendering APIs such as DirectX 12 and Vulkan require.
 
 ## The Shader Render State Section
 
-Each shader is made up of several [sections](./shaders-overview.md#shader-sections):
+Each shader is made up of several [sections](shaders-overview.md#shader-sections):
 
 ```cpp
 [PLATFORMS]

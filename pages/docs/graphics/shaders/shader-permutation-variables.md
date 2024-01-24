@@ -12,7 +12,7 @@ In shader code, permutation variables are exposed as `#define`'d preprocessor va
 
 ## The Shader Permutations Section
 
-Each shader is made up of several [sections](./shaders-overview.md#shader-sections):
+Each shader is made up of several [sections](shaders-overview.md#shader-sections):
 
 ```cpp
 [PLATFORMS]

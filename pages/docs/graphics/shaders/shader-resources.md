@@ -1,13 +1,13 @@
 # Shaders Resources
 
-Shader resources are things like textures, samplers constant buffers etc. that need to be separately bound in the renderer for the shader to function. Each resource must be bound to a set and slot. Depending on the [platform](./shaders-overview.md#platforms) used, the requirements for this binding can be very different. E.g. in Vulkan slot assignments must be unique within a set across all stages while in DX11 most slots only need to be unique within a stage. Not following these rules will result in a runtime error. Manually assigning slots can be an option be will be very tedious. To make this easier, the shader system can automate this process provided some constraints are met how resourced are declared.
+Shader resources are things like textures, samplers constant buffers etc. that need to be separately bound in the renderer for the shader to function. Each resource must be bound to a set and slot. Depending on the [platform](./shaders-overview.md#platforms) used, the requirements for this binding can be very different. E.g. in Vulkan slot assignments must be unique within a set across all stages while in DX11 most slots only need to be unique within a stage. Not following these rules will result in a runtime error. Manually assigning slots is an option but is very tedious. To make this easier, the shader system can automate this process provided some constraints are met how resourced are declared.
 
-1. Currently, EZ engine does not support arrays of resources like `Texture2D Diffuse[3]` in its shaders.
+1. Currently, EZ does not support arrays of resources like `Texture2D Diffuse[3]` in its shaders.
 2. Resources must have unique names across all shader stages. The same resource name can be used in multiple stages as long as the resource it maps to is exactly the same.
 
 ## Resource Binding
 
-The shader system only supports the DX11 / DX12 [register syntax](https://learn.microsoft.com/windows/win32/direct3d12/resource-binding-in-hlsl) for resource binding. Both the set and slot can be bound. In no set is given, it is implicitly set 0. Here is a list of a few examples of how to bind resources properly:
+The shader system only supports the DX11 / DX12 [register syntax](https://learn.microsoft.com/windows/win32/direct3d12/resource-binding-in-hlsl) for resource binding. Both the set and slot can be bound. If no set is given, it is implicitly set 0. Here is a list of a few examples of how to bind resources properly:
 
 ```cpp
 Texture2D Diffuse : register(t3, space1); // DX12 syntax, slot 3, set 1
@@ -83,9 +83,9 @@ The `BEGIN_PUSH_CONSTANTS` and `END_PUSH_CONSTANTS` macros define the struct. Un
 
 ## Samplers
 
-Samplers map to `ezGALShaderResourceType::Sampler` or `ezGALShaderResourceType::TextureAndSampler` in C++. Two types of samplers are supported: `SamplerState` and `SamplerComparisonState`. The naming of the samplers is important, as it can be used to optimize your workflow. EZ engine has a concept of immutable Samplers, these samplers are automatically bound so you can use them in the shader without needing to define them in C++. Immutable samplers are registered in code via `ezGALImmutableSamplers::RegisterImmutableSampler`. Currently, these samplers are registered: `LinearSampler`, `LinearClampSampler`, `PointSampler` and `PointClampSampler`.
+Samplers map to `ezGALShaderResourceType::Sampler` or `ezGALShaderResourceType::TextureAndSampler` in C++. Two types of samplers are supported: `SamplerState` and `SamplerComparisonState`. The naming of the samplers is important, as it can be used to optimize your workflow. ezEngine has a concept of immutable Samplers, these samplers are automatically bound so you can use them in the shader without needing to define them in C++. Immutable samplers are registered in code via `ezGALImmutableSamplers::RegisterImmutableSampler`. Currently, these samplers are registered: `LinearSampler`, `LinearClampSampler`, `PointSampler` and `PointClampSampler`.
 
-EZ engine does not allow for two different resources to have the same name, the only exception is textures and samplers which can have the same name by calling the sampler *NAME_AutoSampler*. The compiler will rename the sampler to *NAME* and on platforms that support combined image samplers both will be combined into a single resource of type `ezGALShaderResourceType::TextureAndSampler`. The benefit of this approach is that when binding a texture resource to a material for example, the texture resource can define both the texture as well as the sampler state, binding both to the same name.
+ezEngine does not allow for two different resources to have the same name, the only exception is textures and samplers which can have the same name by calling the sampler *NAME_AutoSampler*. The compiler will rename the sampler to *NAME* and on platforms that support combined image samplers both will be combined into a single resource of type `ezGALShaderResourceType::TextureAndSampler`. The benefit of this approach is that when binding a texture resource to a material for example, the texture resource can define both the texture as well as the sampler state, binding both to the same name.
 
 ```cpp
 SamplerState DiffuseSampler;
@@ -97,7 +97,7 @@ SamplerState BaseTexture_AutoSampler;
 
 ## Textures
 
-Textures map to `ezGALShaderResourceType::Texture` or `ezGALShaderResourceType::TextureAndSampler` in C++ (see samplers above). EZ Engine supports all HLSL texture types except for 1D textures. You can work around this by creating 1xN 2DTextures.
+Textures map to `ezGALShaderResourceType::Texture` or `ezGALShaderResourceType::TextureAndSampler` in C++ (see samplers above). ezEngine supports all HLSL texture types except for 1D textures. You can work around this by creating 1xN 2DTextures.
 
 ```cpp
 Texture1D texture1D; // 1D textures currently not supported.
@@ -123,7 +123,7 @@ RWTexture3D<uint> rwTexture3D;
 
 ## Buffers
 
-There are three types of buffers supported by EZ engine:
+There are three types of buffers supported by EZ:
 1. HLSL's `Buffer<T>` type is very similar to a 1D texture. A buffer of the same type T needs to be bound to the resource. Maps to `ezGALShaderResourceType::TexelBuffer` in C++.
 2. `StructuredBuffer<T>` should follow the same rules as for constant buffers: Put the declaration in a separate header file to allow access to it from C++ and ensure each struct is 16 bytes aligned. Maps to `ezGALShaderResourceType::StructuredBuffer` in C++.
 3. `ByteAddressBuffer` in just an array of bytes. A raw buffer needs to be bound to the resource. With HLSL 5.1, you can cast any offset of the buffer into a struct. Maps to `ezGALShaderResourceType::StructuredBuffer` in C++.
@@ -154,7 +154,7 @@ RWByteAddressBuffer rwByteAddressBuffer;
 
 ## Append / Consume Buffers
 
-TODO: Future work: Append / consume buffers can be defined in shaders and are correctly reflected, but EZ engine does not support binding resources to them right now.
+TODO: Future work: Append / consume buffers can be defined in shaders and are correctly reflected, but EZ does not support binding resources to them right now.
 
 ```cpp
 // Header:

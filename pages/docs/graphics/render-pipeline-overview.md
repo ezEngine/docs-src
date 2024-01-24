@@ -6,5 +6,5 @@ Render pipelines are fully functional, but currently undocumented.
 
 ## See Also
 
-* [Shaders (TODO)](shaders/shaders-overview.md)
+* [Shaders](shaders/shaders-overview.md)
 

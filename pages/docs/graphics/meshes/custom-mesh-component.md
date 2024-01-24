@@ -25,4 +25,4 @@ However, if you do need the vertex color information, for instance to precisely 
 ## See Also
 
 * [Meshes](meshes-overview.md)
-* [Shaders (TODO)](../shaders/shaders-overview.md)
+* [Shaders](../shaders/shaders-overview.md)

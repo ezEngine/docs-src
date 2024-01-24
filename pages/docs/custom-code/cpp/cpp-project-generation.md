@@ -1,6 +1,6 @@
 # C++ Project Generation
 
-There are multiple ways to get custom C++ code into EZ. The best way is to create an [engine plugin](engine-plugins.md), because this way the code can be executed directly inside the editor. Additionally such a plugins can be [hot reloaded](cpp-code-reload.md) to some degree.
+There are multiple ways to get custom C++ code into EZ. The best way is to create an [engine plugin](engine-plugins.md), because this way the code can be executed directly inside the editor. Additionally such plugins can be [hot reloaded](cpp-code-reload.md) to some degree.
 
 EZ uses CMake for its build infrastructure. See [this chapter](cpp-overview.md#build-setup) about different ways to integrate your own project into the EZ build.
 
@@ -8,14 +8,18 @@ The most convenient way, however, is to let the editor create a stand-alone proj
 
 > **Note:**
 >
-> One downside with this approach is that your solution does **not** contain the EZ engine sources. That makes it less convenient to search for existing functionality, look up code [API docs](../../api-docs.md) and stepping through EZ code while debugging.
-However, if you want that, you can include the generated plugin as an [external project](../../build/cmake-config.md#external-projects) into the EZ engine solution.
+> One downside with this approach is that your C++ IDE will **not** contain the EZ engine sources. That makes it less convenient to search for existing functionality, look up code [API docs](../../api-docs.md) and stepping through EZ code while debugging.
+However, if you want that, you can include the generated plugin as an [external project](../../build/cmake-config.md#external-projects) into the EZ build system.
 
 ## Video: How to add custom C++ code to your game
 
 [![video](https://img.youtube.com/vi/EGobr-BqhSI/0.jpg)](https://www.youtube.com/watch?v=EGobr-BqhSI)
 
-## How to Generate a New Solution
+## How to Generate a New C++ Project
+
+> **Note:**
+>
+> Generating C++ projects requires a one time setup. Go to the preferences *Tools > Preferences...* and configure the C++ compiler to use for your C++ projects. See [Editor Settings](../../editor/editor-settings.md) for details.
 
 1. Select *Project > C++ Project > Setup C++ Plugin...*. The following dialog will appear:
 
@@ -25,29 +29,27 @@ However, if you want that, you can include the generated plugin as an [external 
 
 1. Choose the desired name for the plugin or leave the default.
 
-1. Choose the desired MSVC solution version.
+1. Press the **CMake Generate** button and wait for it to finish.
 
-1. Press the **Generate Solution** button and wait for it to finish.
-
-   The CMake output is output in the *Output* window. In case of errors, please have a look here.
+   The CMake output is written into the *Output* window. In case of errors, please have a look here.
 
    If everything went fine, you can open the project and compile the code.
 
 > **Attention:**
 >
-> The code has to be built for the very same build type that the editor is running in (*Debug*, *Dev* or *Shipping*), otherwise the editor won't be able to load the DLL. If the build fails because certain EZ DLLs are missing, you are most likely building the wrong build type. The same may be true if you do code changes, but running the game from the editor doesn't reflect those changes.
+> The code has to be built for the very same build type that the editor is running in (*Debug*, *Dev* or *Shipping*), otherwise the editor won't be able to load the DLL. If the build fails because certain EZ DLLs are missing, you are most likely building the wrong build type. The same may be true if you do code changes, but running the game from the editor doesn't reflect those changes. The editor makes sure to generate the solution only for the necessary build type and will update the solution automatically when needed.
 
-## Opening an Existing Solution
+## Opening an Existing C++ Project
 
-If you have generated the solution before, the *Open Solution* button will be active right away when you open this dialog. In this case you don't need to generate the solution again. You can also skip this dialog and use *Project > C++ Project > Open Solution* instead.
+If you have generated a C++ project before, the *Open in IDE* button will be active right away when you open this dialog. In this case you don't need to generate the C++ project again. You can also skip this dialog and use *Project > C++ Project > Open in IDE* instead.
 
-## Regenerating a Solution
+## Regenerating a C++ Project
 
-If you have added or removed source files on disk, you need to regenerate the solution for those changes to show up in the Visual Studio solution. You have three options to do so:
+If you have added or removed source files on disk, you might need to regenerate the C++ project for those changes to show up in your IDE. You have three options to do so:
 
-1. Use *Project > C++ Project > Regenerate C++ Solution*.
-1. Run CMake yourself. For example you can use the CMake GUI app, point it to the plugin's build directory, and then *Configure* and *Generate* the solution at any point you like.
-1. Rerun *Generate Solution* from the dialog above. This will **clear the CMake cache** and fully regenerate the solution. Be aware that this resets all CMake options to their default values and often takes longer than strictly necessary.
+1. Use *Project > C++ Project > Regenerate C++ Project*.
+1. Run CMake yourself. For example you can use the CMake GUI app, point it to the plugin's build directory, and then *Configure* and *Generate* the C++ project at any time you like.
+1. Rerun *CMake Generate* from the dialog above. This will **clear the CMake cache** and fully regenerate the C++ project. Be aware that this resets all CMake options to their default values and often takes longer than strictly necessary.
 
 ## See Also
 

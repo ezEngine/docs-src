@@ -31,10 +31,10 @@ See the [CVars](cvars.md) chapter for details.
 To bind commands to certain keys you can call:
 
 ```cmd
-bind f g_showFPS=
+bind f App.ShowFPS=
 ```
 
-This would bind the command 'g_showFPS=' (which toggles the display of the FPS counter) to the f-key. You can only bind commands to printable characters (a-z, 0-9) and the casing matters. So you can also bind another command to SHIFT+f by using `bind F ...`.
+This would bind the command 'App.ShowFPS=' (which toggles the display of the FPS counter) to the f-key. You can only bind commands to printable characters (a-z, 0-9) and the casing matters. So you can also bind another command to SHIFT+f by using `bind F ...`.
 
 To unbind a key call:
 

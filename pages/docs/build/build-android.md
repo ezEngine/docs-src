@@ -76,10 +76,10 @@ The emulator can be comfortably started from within Android Studio or via the `e
 ./emulator -avd "Pixel7" -wipe-data -no-snapshot -no-audio -port 5555 -gpu swiftshader_indirect
 ```
 
-For better performance, the `-gpu host` option can be used but it may case crashes or graphical artifacts. For more information on the available options, see [the official emulator hardware acceleration](https://developer.android.com/studio/run/emulator-acceleration) page.
+For better performance, the `-gpu host` option can be used but it may cause crashes or graphical artifacts. For more information on the available options, see [the official emulator hardware acceleration](https://developer.android.com/studio/run/emulator-acceleration) page.
 The options `-wipe-data -no-snapshot -no-audio` are not strictly necessary but will provide the same environment our unit tests are run under.
 
-To use the GUI instead, open Android Studio, go to `Configure>AVD Manager` and select `Create Virtual Device`. Select the `Pixel 7` hardware profile. Next, select `x86 Images`, the select `Q (API 29), x86_64`. 
+To use the GUI instead, open Android Studio, go to `Configure>AVD Manager` and select `Create Virtual Device`. Select the `Pixel 7` hardware profile. Next, select `x86 Images`, then select `Q (API 29), x86_64`. 
 
 > **NOTE:**
 > If the emulator hangs on start, go to the AVD's `Advanced Settings` -> `Emulated Performance` and select **Cold boot** or reset the image to factory defaults.

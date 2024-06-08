@@ -14,6 +14,14 @@ Compile switch: None (hard dependency for the asset processing)
 
 Open Asset Import Library, a portable Open Source library to import various well-known 3D model formats in a uniform manner.
 
+## bc7enc_rdo
+
+Link [https://github.com/richgel999/bc7enc_rdo](https://github.com/richgel999/bc7enc_rdo)
+
+Compile switch: Currently none, but only enabled on Linux.
+
+Used by ezImage and the ezTexConv tool for BC7 encoding on Linux as an alternative to [DirectXTex](#directxtex).
+
 ## cc0Textures
 
 Link: [https://cc0textures.com](https://cc0textures.com)

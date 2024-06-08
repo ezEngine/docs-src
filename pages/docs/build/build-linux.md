@@ -101,6 +101,7 @@ If you want to setup things manually or your distribution is not supported by th
 * libxi
 * libfreetype
 * libtinfo5
+* libomp
 
 Then invoke CMake with the following arguments:
 

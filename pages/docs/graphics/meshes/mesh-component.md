@@ -10,6 +10,7 @@ Mesh components will cast [shadows](../lighting/dynamic-shadows.md) when the `Ca
 
 * `Mesh`: The [mesh asset](mesh-asset.md) to render.
 * `Color`: A tint color for the mesh instance. Typically this is just multiplied into the diffuse color of the mesh [materials](../../materials/materials-overview.md), though if the material uses a [visual shader (TODO)](../../materials/visual-shaders.md), the mesh color can be used to represent arbitrary input data, for example to blend between material states.
+* `CustomData`: A 4-component vector to pass in arbitrary values. By default, this data is not used, at all, but custom shaders are free to use it in any way they like.
 * `Materials`: By default the referenced mesh is rendered with the materials that are set up inside the mesh asset. However, the mesh component can override the materials. Each mesh has one or many *sub-meshes*, meaning mesh parts that use different materials. This array allows to set an override for each of those sub-meshes.
 
 ## See Also

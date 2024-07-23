@@ -76,7 +76,7 @@ EZ_BEGIN_COMPONENT_TYPE(DebugRenderComponent, 2, ezComponentMode::Static)
     EZ_ACCESSOR_PROPERTY("Texture", GetTextureFile, SetTextureFile)->AddAttributes(new ezAssetBrowserAttribute("CompatibleAsset_Texture_2D")),
     EZ_BITFLAGS_MEMBER_PROPERTY("Render", DebugRenderComponentMask, m_RenderTypes)->AddAttributes(new ezDefaultValueAttribute(DebugRenderComponentMask::Box)),
 
-    EZ_ACCESSOR_PROPERTY("CustomData", GetSampleCustomDataResource, SetSampleCustomDataResource)->AddAttributes(new ezAssetBrowserAttribute("CompatibleAsset_CustomData")),
+    EZ_ACCESSOR_PROPERTY("CustomData", GetSampleCustomDataResource, SetSampleCustomDataResource)->AddAttributes(new ezAssetBrowserAttribute("CompatibleAsset_CustomData", "SampleCustomData")),
   }
   EZ_END_PROPERTIES;
 

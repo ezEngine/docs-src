@@ -12,6 +12,6 @@ The plugin provides functionality to create navmeshes on-demand at runtime. See 
 
 Additionally there is C++ functionality available for searching paths and *steering* characters along the found path. See the [Monster Attack Sample](../../../samples/monster-attack/monster-attack.md), specifically the *monster component*, to see how this can be used. 
 
-# See Also
+## See Also
 
 * [Runtime Navmesh](runtime-navmesh.md)

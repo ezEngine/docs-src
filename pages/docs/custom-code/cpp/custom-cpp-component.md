@@ -50,7 +50,7 @@ public:
 private:
   void Update();
 
-  float m_fAmplitude = 1.0f;             // [ property ]
+  float m_fAmplitude = 1.0f;                     // [ property ]
   ezAngle m_Speed = ezAngle::MakeFromDegree(90); // [ property ]
 };
 ```

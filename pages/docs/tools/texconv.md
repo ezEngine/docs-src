@@ -9,7 +9,7 @@ Run TexConv.exe with the `--help` parameter to list all available options. Addit
 
 ## General Usage
 
-TexConv always produces **exactly one output** file. It may use **multiple input** files to assemble the output from. For the assembly, it also needs a **channel mapping**, which tells it which channel (*Red, Green, Blue* or *Alpha*) to take from which input file and move it into which channel of the output image.
+TexConv typically produces **one output** file. It may use **multiple input** files to assemble the output from. For the assembly, it also needs a **channel mapping**, which tells it which channel (*Red, Green, Blue* or *Alpha*) to take from which input file and move it into which channel of the output image.
 
 The most straight forward command line is this:
 
@@ -115,6 +115,12 @@ The `-usage` option specifies the purpose of the output and thus tells TexConv w
 * `-maxRes 1024` : Specifies the maximum resolution of the output. If the input image is larger, it will get downscaled.
 * `-downscale 1` : If this is larger than 0, the input images will be halved in resolution N times. Use this to apply an overall quality reduction.
 
+### Image Comparison
+
+TexConv can also compare two images and generate difference images and an HTML page with embedded images for easy inspection.
+
+Use `-mode Compare` to enable comparison mode, and the `-cmpXYZ` options to configure which images to compare and what outputs to generate. Console the `--help` for details.
+
 ## Examples
 
 ### Convert a Color Texture
@@ -151,4 +157,4 @@ TexConv.exe -out D:/alpha-mask-only.dds -in0 D:/DiffuseAlpha.dds -r in0.a
 
 ## See Also
 
-
+* [Textures](../graphics/textures-overview.md)

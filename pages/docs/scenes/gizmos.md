@@ -14,13 +14,9 @@ The translate and the rotate gizmo may operate either in **local space** (*objec
 
 ### Modifiers
 
-* Hold `ALT` while dragging a gizmo to disable snapping.
+* Hold `SHIFT` while dragging a gizmo to disable snapping.
 
-* Hold `SHIFT` before clicking a gizmo to duplicate the object in place. This works for all but the scale gizmo.
-
-* Hold `CTRL` while translating an object to move the camera in conjunction.
-
-All modifiers can be combined.
+* Hold `CTRL` before clicking a gizmo to duplicate the object in place. This works for all but the scale gizmo.
 
 ### Gizmos in Orthographic Views
 

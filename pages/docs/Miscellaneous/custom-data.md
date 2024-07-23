@@ -20,17 +20,15 @@ The code snippet below shows what should be added to a *header file (.h)*:
 
 <!-- BEGIN-DOCS-CODE-SNIPPET: customdata-decl -->
 ```cpp
-class SampleCustomData : public ezCustomData
+class SampleCustomData2 : public ezCustomData
 {
-  EZ_ADD_DYNAMIC_REFLECTION(SampleCustomData, ezCustomData);
+  EZ_ADD_DYNAMIC_REFLECTION(SampleCustomData2, ezCustomData);
 
 public:
   ezString m_sText;
-  ezInt32 m_iSize = 42;
-  ezColor m_Color;
 };
 
-EZ_DECLARE_CUSTOM_DATA_RESOURCE(SampleCustomData);
+EZ_DECLARE_CUSTOM_DATA_RESOURCE(SampleCustomData2);
 ```
 <!-- END-DOCS-CODE-SNIPPET -->
 
@@ -110,7 +108,7 @@ Then, in the source file of your component, add the property to the component's 
 
 <!-- BEGIN-DOCS-CODE-SNIPPET: customdata-property -->
 ```cpp
-EZ_ACCESSOR_PROPERTY("CustomData", GetSampleCustomDataResource, SetSampleCustomDataResource)->AddAttributes(new ezAssetBrowserAttribute("CompatibleAsset_CustomData")),
+EZ_ACCESSOR_PROPERTY("CustomData", GetSampleCustomDataResource, SetSampleCustomDataResource)->AddAttributes(new ezAssetBrowserAttribute("CompatibleAsset_CustomData", "SampleCustomData")),
 ```
 <!-- END-DOCS-CODE-SNIPPET -->
 
@@ -130,11 +128,14 @@ Finally, to actually access your custom data inside your game code, you have to 
 
 <!-- BEGIN-DOCS-CODE-SNIPPET: customdata-access -->
 ```cpp
-ezResourceLock<SampleCustomDataResource> pCustomDataResource(m_hCustomData, ezResourceAcquireMode::BlockTillLoaded);
+ezResourceLock<SampleCustomDataResource> pCustomDataResource(m_hCustomData, ezResourceAcquireMode::AllowLoadingFallback_NeverFail);
 
-const SampleCustomData* pCustomData = pCustomDataResource->GetData();
+if (pCustomDataResource.GetAcquireResult() == ezResourceAcquireResult::Final)
+{
+  const SampleCustomData* pCustomData = pCustomDataResource->GetData();
 
-ezDebugRenderer::Draw3DText(GetWorld(), ezFmt(pCustomData->m_sText), GetOwner()->GetGlobalPosition(), pCustomData->m_Color, pCustomData->m_iSize);
+  ezDebugRenderer::Draw3DText(GetWorld(), ezFmt(pCustomData->m_sText), GetOwner()->GetGlobalPosition(), pCustomData->m_Color, pCustomData->m_iSize);
+}
 ```
 <!-- END-DOCS-CODE-SNIPPET -->
 

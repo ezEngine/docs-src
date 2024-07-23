@@ -304,6 +304,14 @@ All icons taken are free for commercial use, but some require attribution. The f
 * <https://www.svgrepo.com/collection/hashicorp-line-interface-icons>
 * <https://www.svgrepo.com/collection/wave-oval-interface-icons>
 
+## TinyEXR
+
+Link: [https://github.com/syoyo/tinyexr](https://github.com/syoyo/tinyexr)
+
+Compile switch: **EZ_3RDPARTY_TINYEXR_SUPPORT**
+
+Adds support for `.exr` textures.
+
 ## UTF8-CPP
 
 Link: [https://github.com/nemtrif/utfcpp](https://github.com/nemtrif/utfcpp)

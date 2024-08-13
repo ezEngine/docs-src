@@ -119,7 +119,7 @@ The `-usage` option specifies the purpose of the output and thus tells TexConv w
 
 TexConv can also compare two images and generate difference images and an HTML page with embedded images for easy inspection.
 
-Use `-mode Compare` to enable comparison mode, and the `-cmpXYZ` options to configure which images to compare and what outputs to generate. Console the `--help` for details.
+Use `-mode Compare` to enable comparison mode, and the `-cmpXYZ` options to configure which images to compare and what outputs to generate. Consult the `--help` output for details.
 
 ## Examples
 

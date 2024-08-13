@@ -43,6 +43,14 @@ On the right hand side the asset properties specify how to import or generate th
 
 * `Materials`: The list of [materials](../../materials/materials-overview.md) to use. The mesh may have multiple *sub-meshes*, and each sub-mesh uses a different material slot. [Mesh components](mesh-component.md) can override which material is used for which slot.
 
+* `Simplify Mesh`: If enabled, the number of vertices and triangles in the mesh is attempted to be decimated. Note that this is done for exactly this one mesh asset. If you want to have multiple levels-of-detail for a mesh, you need to create several mesh assets that reference the same input mesh and use different simplification settings on each. How well simplification works is highly dependent on the original mesh. You need to play around with the various options to see which ones give the best result. If you build multiple levels-of-detail of a mesh, make sure that each level at least cuts the amount of triangles down to 50% or better 25%, compared to the previous level.
+
+* `Mesh Simplification`: How strongly to attempt to simplify the mesh.
+
+* `Max Simplification Error`: How much the mesh may change during simplification. A higher error theshold may allow for stronger simplification.
+
+* `Aggressive Simplification`: If enabled, the mesh simplification may throw away even more quality to reach the maximum simplification.
+
 ### Procedural Mesh Generation
 
 Through the `PrimitiveType` option you can choose to create a mesh procedurally. In this case object specific options appear. Note that by default objects use a *detail* level of `0` which means that the editor will pick a decent value, depending on the chosen primitive type.

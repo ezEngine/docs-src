@@ -28,6 +28,8 @@ Animated meshes are placed in a scene with a dedicated [animated mesh component]
 
 * `Materials`: See the [mesh asset properties](../../graphics/meshes/mesh-asset.md#asset-properties).
 
+* `Simplify Mesh` and related options: See the [mesh asset properties](../../graphics/meshes/mesh-asset.md#asset-properties).
+
 ## See Also
 
 * [Animated Mesh Component](animated-mesh-component.md)

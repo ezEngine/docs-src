@@ -38,6 +38,14 @@ In the image above the mesh import decomposed the mesh into multiple pieces (sev
 
 This mode allows you to dictate into how many pieces to split the mesh. The more pieces, the closer the result resembles the original shape. These collision meshes can still be used for dynamic simulation, the Jolt actors simply use multiple convex shapes as their representation. Of course the more pieces such a mesh contains, the less efficient the simulation becomes.
 
+## Mesh Simplification
+
+Collision meshes support mesh simplification to reduce their amount of triangles and vertices. See the [mesh asset](../../../graphics/meshes/mesh-asset.md#asset-properties) for details about the parameters.
+
+The image below shows the original mesh and a simplified collider mesh that has roughly one fourth the number of triangles.
+
+![Simplified Collider](media/jolt-simplified.jpg)
+
 ## Visualizing Collision Meshes
 
 Sometimes you want to visualize the collision mesh of an object within a scene. One way is to use the [Jolt debug visualizations](../jolt-debug-visualizations.md). However, for some use cases you can also just attach a *Collision Mesh Visualizer* component. This renders the collision mesh into your scene the same way as in the images above.

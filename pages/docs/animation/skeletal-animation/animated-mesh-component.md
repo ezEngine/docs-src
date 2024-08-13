@@ -8,6 +8,7 @@ An *animated mesh component* is used to instantiate an [animated mesh asset](ani
 
 * `Mesh`: The [animate mesh asset](animated-mesh-asset.md) to render.
 * `Color`: See [mesh component](../../graphics/meshes/mesh-component.md).
+* `CustomData`: See [mesh component](../../graphics/meshes/mesh-component.md).
 * `Materials`: See [mesh component](../../graphics/meshes/mesh-component.md).
 
 ## See Also

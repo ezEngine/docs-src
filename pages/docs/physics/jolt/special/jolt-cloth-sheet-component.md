@@ -14,11 +14,13 @@ Jolt cloth sheets are affected by [wind](../../../effects/wind/wind.md) and cont
 
 * `CollisionLayer`: The [collision layer](../collision-shapes/jolt-collision-layers.md) to use.
 
-* `Damping`: How quickly the cloth loses energy while swinging. Higher values make it come to rest more quickly, low values make it swing for a longer time.
-
 * `WindInfluence`: How strongly [wind](../../../effects/wind/wind.md) should make the cloth swing.
 
 * `GravityFactor`: How strongly gravity pulls on the cloth.
+
+* `Damping`: How quickly the cloth loses energy while swinging. Higher values make it come to rest more quickly, low values make it swing for a longer time.
+
+* `Thickness`: How thick the cloth shall be. The thicker it is, the less likely that it intersects with geometry such that the other geometry is visible through the cloth.
 
 * `Flags`: These define at which corners and edges the sheet of cloth is attached to the world.
 

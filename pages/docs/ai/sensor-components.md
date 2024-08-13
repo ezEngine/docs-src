@@ -30,6 +30,8 @@ Finally, you should decide whether doing a visibility check is always necessary.
 
 * `UpdateRate`: How often the sensor component should query the world for changes. The higher the update rate, the more responsive it will be, and the less likely that short events are missed. However, higher update rates also require more processing time.
 * `SpatialCategory`: The [spatial category](../runtime/world/spatial-system.md) of objects that should trigger the sensor component.
+* `IncludeTags`: If not empty, only objects with these tags are considered.
+* `ExcludeTags`: If not empty, objects with these tags are ignored.
 * `TestVisibility`: If enabled, the sensor will cast additional rays using the physics engine, to determine whether the target is occluded by walls or clearly visible.
 * `CollisionLayer`: The [collision layer](../physics/jolt/collision-shapes/jolt-collision-layers.md) to use for the visibility raycast.
 * `ShowDebugInfo`: If enabled, additional debug geometry is rendered to visualize the sensor volume and state.

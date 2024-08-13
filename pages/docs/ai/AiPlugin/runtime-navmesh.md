@@ -33,6 +33,10 @@ Enable the [navmesh visualization](#navmesh-visualization) and utilize the the [
 
 * `Collision Layer`: The [collision layer](../../physics/jolt/collision-shapes/jolt-collision-layers.md) to use for finding geometry from which to generate the navmesh. This is mainly used to filter out high detail geometry, to speed up navmesh generation. It can also be used to ignore ground types that are generally not traversable (such as water).
 
+* `Num Sectors (XY)`: How many sectors are generally available in the scene. Note that sectors are centered around the origin. Navmesh generation is done on-demand for every sector.
+
+* `Sector Size in Meters`: How wide each sector is. You may need to adjust the sector size in case your game has very large or very small scenes. If your scenes are very detailed, prefer smaller sectors, if your levels are nearly empty (for example in a space game), use large sectors, since the navmesh generation for each sector has a certain lag, because the engine never updates more than one sector per frame.
+
 * `Cell Size (XY):` How detailed the navmesh generation shall be. This has to be less than the desired character radius, and the agent radius should be a whole multiple of this value. For example if your cell size is `0.2`, the effective agent radius can only be `0.2`, `0.4`, `0.6` and so on.
 
 * `Cell Height (Z):` The detail along the up axis with which to generate the navmesh. This mainly affects how well *steps* are detected and dealt with. Similar to the *agent radius*, the *agent step height* should be a multiple of the cell height.

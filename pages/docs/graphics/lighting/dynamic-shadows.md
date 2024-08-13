@@ -24,6 +24,16 @@ All shadow casting light sources share a single shadow texture atlas. Every fram
 
 Shadow maps are prone to artifacts called *shadow acne*. Either light leaks through objects where there should be shadows, or shadows leak through objects where there should be light. This happens due to precision issues, especially when a shadow is cast nearly perpendicular to a surface. The `SlopeBias` and `ConstantBias` properties (see below) allow to tweak the shadows to reduce this issue in specific places, but there is no solution that will always work.
 
+## Global Shadow Settings
+
+You can adjust global settings for shadows in the platform-specific [asset profile](../../assets/asset-profiles.md).
+
+* `Shadow Atlas Texture Size`: How large the texture atlas should be that is used for all shadow rendering. This is a single texture, where all shadow maps are stored. For many shadow casting lights with high quality shadows, this texture has to be reasonably large.
+
+* `Min/Max Shadow Map Size`: The minimum and maximum space that a single shadow map should take up inside the shadow map atlas. The minimum size determines how bad the shadow quality can get, ie a very low value means that far away light sources can look very blurry. The maximum size determines how good the quality can get, ie with a large value, close up shadows are very crisp whereas with a low value, even close shadows are very blurry. If these values are low and only few dynamic lights are used, the shadow atlas size can also be reduced.
+
+**Note:** These values can also be adjusted at runtime using the [CVars](../../debugging/cvars.md) `cvar_RenderingShadowsAtlasSize`, `cvar_RenderingShadowsMaxShadowMapSize` and `cvar_RenderingShadowsMinShadowMapSize`.
+
 ## Shadow Component Properties
 
 Dynamic light sources such as [directional lights](directional-light-component.md), [point lights](point-light-component.md) and [spot lights](spot-light-component.md) can cast dynamic shadows. These components all have properties to tweak the shadows for quality. The following properties are common to these component types:

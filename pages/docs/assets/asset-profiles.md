@@ -14,6 +14,10 @@ For the selected profile, the right hand side shows the available options. In th
 
 Below that the available asset profile configs are listed. These can affect various aspect of the engine:
 
+### Rendering Options
+
+This allows you to configure some general rendering options that shall be used on this target platform. For example, the [dynamic shadows](../graphics/lighting/dynamic-shadows.md).
+
 ### Render Pipelines
 
 Here you can specify what the *default* [render pipeline (TODO)](../graphics/render-pipeline-overview.md) should be. Different platforms have different rendering capabilities, so you may want to use a different pipeline to target that hardware best.

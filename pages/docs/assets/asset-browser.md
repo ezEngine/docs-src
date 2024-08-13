@@ -88,7 +88,7 @@ The asset browser allows you to quickly transform assets in multiple ways:
 
 ## Resave all Asset Documents
 
-The rightmost button in the asset browser's toolbar triggers an action to open each and every document, save it and close it again. This can be used to migrate all documents to the very latest version. Since document versioning is very robust, there is little practical use for this operation, though.
+In the context menu of the folder hierarchy you can select `Re-save Assets in Folder`. This opens each and every document in the selected folder, saves it and closes it again. This can be used to migrate all documents to the very latest version. Since document versioning is very robust, there is little practical use for this operation, though.
 
 ## Check Filesystem
 

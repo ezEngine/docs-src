@@ -39,6 +39,10 @@ The debug renderer allows you to render arbitrary lines and triangles. For conve
 
 The debug renderer always uses a fullbright shading model. No lighting is ever applied to debug geometry. In fact, most geometry simply has a color, and only some functions allow you to choose a texture.
 
+### Text Size
+
+Text size is given in pixels, which means text will appear very small or very large on displays with different resolutions. The [CVar](cvars.md) `cvar_DebugTextScale` is used to scale debug text sizes. The same can be done through `ezDebugRenderer::SetTextScale()`. Use this to adjust debug text sizes as needed. The editor automatically sets this value to adjust for different resolutions.
+
 ## Example
 
 A full example for how to use the debug renderer is given in the [Sample Game Plugin](../../samples/sample-game-plugin.md). Here, the `DebugRenderComponent` shows how to utilize the debug renderer.

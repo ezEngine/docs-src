@@ -2,6 +2,8 @@
 
 The *Scene Transition Component* is used to load another level. It can be triggered via script code or through a [Trigger Component](../physics/jolt/actors/jolt-trigger-component.md).
 
+<video src="media/scene-transition.mp4" width="800" height="600" autoplay controls></video>
+
 ## Seamless Transitions
 
 To make a transition from one level to another as seamless as possible, two things need to happen:

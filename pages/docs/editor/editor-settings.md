@@ -34,13 +34,15 @@ The list on the left lists all the available preferences. Items prefixed with `A
 
 * **Field Of View:** The FOV of the generic editor camera.
 
+* **Max Framerate:** Limits how fast the editor should render the scene.
+
 * **Gizmo Size:** Allows you to change the size of the editor gizmos.
 
 * **Show In Development Features:** Some features (mainly [components](../runtime/world/components.md)) are hidden by default from menus. That's because those features are not considered ready to be used productively. If you do want to try them out regardless, check this option for them to show up.
 
 * **Use Precompiled Tools:** If enabled, the editor will prefer to use the tools under `Data\Tools\Precompiled`, rather than the ones from its own binary directory. The precompiled tools are built with maximum optimizations and are therefore typically faster, however, they only get updated infrequently and may not have all the latest features and bugfixes.
 
-* **Custom Precompiled Tools:** If not empty use the given path instead of `Data\Tools\Precompiled` when looking for tools. This is especially usefull on Linux if you want fast tools while using a debug build of the editor.
+* **Custom Precompiled Tools:** If not empty use the given path instead of `Data\Tools\Precompiled` when looking for tools. This is especially useful on Linux if you want fast tools while using a debug build of the editor.
 
 * **Expand Scene Tree On Selection:** If enabled, selecting an object in a scene will automatically expand the corresponding item in the scene tree view. If disabled, the scene tree will not change on selection from the viewport, and jumping to the selected tree item has to be done manually using `CTRL+T`.
 

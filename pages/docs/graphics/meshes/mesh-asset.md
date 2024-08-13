@@ -28,6 +28,13 @@ On the right hand side the asset properties specify how to import or generate th
 
 * `NormalPrecision`, `TexCoordPrecision`: These options allow you to choose how precise normals and UV coordinates are represented. Leave these at the default, unless you notice precision issues. Higher precision means the mesh takes up more RAM on the GPU and is slightly slower to render.
 
+* `VertexColorConversion`: How to convert the vertex colors during import:
+  * `None`: The color values are taken as-is.
+  * `Linear To sRGB`: The values are considered to be in linear space, and converted to Gamma space.
+  * `sRGB To Linear`: The values are considered to be in Gamme space, and converted to linear space.
+  
+  Which value to use depends on what the vertex color represents. Blender treats all vertex colors as sRGB but the behavior differs depending on which file format you export to. E.g. for FBX the colors are passed through as is but for GLTF the colors are converted to linear. It now depends on what the shader wants to do with the vertex colors: If used as a color multiplier, treating them as sRGB and converting to linear is correct, so the FBX file would be wrong when imported into EZ. If used as blend weights or other custom data, the sRGB to linear that GLTF does is wrong.
+
 * `ImportMaterials`: If enabled, the mesh import automatically generates [material assets](../../materials/materials-overview.md) for the materials that the mesh file specifies. It also tries to populate those materials with sensible values and if possible also creates [texture assets](../textures-overview.md). Unfortunately this rarely works perfectly, and typically requires you to fix the generated assets afterwards.
 
   > **Note:**
@@ -43,7 +50,6 @@ Through the `PrimitiveType` option you can choose to create a mesh procedurally.
 Be aware that some *detail* values seemingly have no effect. For instance, for cones, capsules and cylinders the *detail* represents the number of subdivisions along the circumference, and therefore can't be lower than 3. Therefore the values `1`, `2` and `3` all produce the same result.
 
 ## See Also
-
 
 * [Meshes](meshes-overview.md)
 * [Materials](../../materials/materials-overview.md)

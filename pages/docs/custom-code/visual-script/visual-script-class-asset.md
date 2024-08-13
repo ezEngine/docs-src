@@ -172,6 +172,12 @@ This group contains mathematical logic operators as well as conditions and loops
 
 All sorts of mathematical operations for working with number types.
 
+#### Expression Node
+
+The **Expression** node lets you write complex mathematical expressions with multiple input and output values. This is much more convenient than using many individual math nodes.
+
+![Math Expression](media/vs-expression.png)
+
 ### Messages
 
 While event handlers react to messages, the script can also *send messages* to other objects. Messages can be sent directly to a component, or to a game object, in which case they may be broadcast to all components on that object, or even to the whole sub-tree of objects and components. If the `Send Mode` is set to *Event*, however, they are delivered not downwards in the hierarchy, but *upwards* along the parent chain of the target object, to the closest component that handles this type of message. See [this chapter](../../runtime/world/world-messaging.md#event-messages) for details.

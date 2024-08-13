@@ -18,6 +18,8 @@ See [this page](dynamic-shadows.md#shadow-component-properties) for shadow relat
 
 * `LightColor, Intensity`: The color and brightness of the light.
 
+* `Use Color Temperature`: If enabled, the light color is defined through a temperature value. This makes it easier to set up physically accurate lighting conditions.
+
 * `Range`: The distance over which the light source affects geometry. By default this is set to `Auto`, meaning the necessary range will be computed from the light's brightness. For full control, the range can be set manually. The light will always attenuate to zero within the given range, so by specifying a small range you can create a small, yet very bright light.
 
 * `InnerSpotAngle`: The inner angle of the spot light's cone. Within this angle the spot light will not attenuate (except by distance) and stay equally bright.

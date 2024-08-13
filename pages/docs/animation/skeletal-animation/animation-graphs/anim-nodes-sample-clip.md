@@ -24,7 +24,7 @@ The *sample clip node* is the most basic node to play an animation. It is used f
 
 ## Output Pins
 
-* `Pose`: The sampled pose. A valid pose is only produced during playback, once the node is inactive, there is no pose output.
+* `Pose`: The sampled pose. Once playback reaches the end of the clip and is not set to loop, the last frame is output indefinitely.
 
 * `On Started`: This output pin gets triggered every time playback is started or restarted, either because of user input or because playback reached the end and was looped.
 

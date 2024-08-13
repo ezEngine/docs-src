@@ -14,7 +14,7 @@ Usually you would set up the graph such, that all actions that could overlap flo
 
 Now consider that you may have two different jump animations, one for when the character is standing and one while it is walking. These cases are mutually exclusive, and thus there is no need for separate output nodes for the two jump styles. In this case one would rather use one of the [pose blending nodes](anim-nodes-pose-blending.md) to select the desired jump animation and feed it into one output node.
 
-However, you *could* use different pose result nodes, regardless, if it is easier to set up the animation this way, there is no performance penalty for using additional nodes as long as the number of simultaneously active nodes is low. 
+However, you *could* use different pose result nodes, regardless, if it is easier to set up the animation this way, there is no performance penalty for using additional nodes as long as the number of simultaneously active nodes is low.
 
 ### Node Properties
 

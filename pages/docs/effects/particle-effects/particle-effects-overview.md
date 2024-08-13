@@ -176,8 +176,13 @@ And there are even effects that can be discarded entirely, when out of view. Bul
 
 Which update method to use can be chosen from the *Effect tab* using the **WhenInvisible** property.
 
-## See Also
+### Wind Influence
 
+Particles may be pushed by [wind](../wind/wind.md). Place [wind volumes](../wind/wind-volume-components.md) to define the local wind strength and direction.
+
+On the *effect* you can configure the number of *wind samples* that should be taken to evaluate how the particles are affected. Use as few samples as necessary, potentially even just 1. Only use more samples for large effects where a single sample would look unnatural.
+
+## See Also
 
 * [How Particle Effects Work](how-particle-effects-work.md)
 * [Particle Effect Component](particle-effect-component.md)

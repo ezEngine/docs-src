@@ -25,10 +25,11 @@ The typical things that a game state controls are:
 * Displaying game UI
 * Providing a main menu
 * Saving and restoring global state (progression, high-scores, etc)
+* Switching between levels
 
 For example when you have a [player start point component](../../gameplay/player-start-point.md) in a scene, the component itself doesn't do anything, it just holds some data. Instead, when you enter play-the-game mode, the active game state *can* (but is not required to) use the information from these components to spawn a player prefab.
 
-Similarly, most scenes have a camera component whose usage hint is set to 'Main Camera' (this may be part of the player prefab). This camera defines what part of the scene will be shown on screen. At least that's how it appears. In reality it is the game state that controls the camera for the main render target. It's simply a feature of the `ezFallbackGameState`, that it searches the world for an appropriate camera component and applies that to the main camera. If it doesn't find any such camera component, it provides simple WASD fly-camera controls. You can even cycle through the different camera components in a scene using `Page Up` and `Page Down`.
+Similarly, most scenes have a camera component whose usage hint is set to 'Main Camera' (this may be part of the player prefab). This camera defines what part of the scene will be shown on screen. At least that's how it appears. In reality it is the game state that controls the camera for the main render target. It's simply a feature of the game state, that it searches the world for an appropriate camera component and applies that to the main camera. If it doesn't find any such camera component, it may not do anything. Though the `ezFallbackGameState` provides simple WASD fly-camera controls and lets you cycle through the different camera components in a scene using `Page Up` and `Page Down`.
 
 As you can see, by implementing a custom game state, you can gain control over many things that otherwise appear to be built-in.
 
@@ -36,15 +37,13 @@ As you can see, by implementing a custom game state, you can gain control over m
 
 It is the responsibility of the `ezGameApplication` to instantiate a game state. By default this is done right at application startup, but if you write your own [application (TODO)](application.md) you could handle this differently. For example the editor only instantiates the game state for play-the-game mode.
 
-The application knows what game states are available through the [reflection information](../reflection-system.md). When a game state is needed, all available ones are instantiated and 'asked' (via `ezGameStateBase::DeterminePriority()`) whether it is the right one to handle the situation. The game state that is the best fit will be kept and gets control.
-
-The idea is, that there are typically only few game states available anyway. Usually you have the built-in `ezFallbackGameState` and then you have one other game state implementation from your custom game plugin. The latter one will take precedence. You could have multiple game states, for example when you have multiple game plugins loaded simultaneously, but then they would need to somehow figure out which one should get activated (e.g. through command line arguments).
+The application knows what game states are available through the [reflection information](../reflection-system.md). When a game state is needed, it instantiates either your custom game state, or a fallback one. So your game plugin should only contain a single custom game state.
 
 ## Sample Game State
 
 For an example game state have a look at the [Sample Game Plugin](../../../samples/sample-game-plugin.md). The game state in the sample derives from `ezFallbackGameState` to benefit from its utilities, such as the default fly camera. In fact, it is a good idea to look at the source of `ezFallbackGameState` as an example, as well.
 
-For all the details, read the [API Docs](../../api-docs.md) for `ezGameStateBase`.
+For all the details, read the [API Docs](../../api-docs.md) for `ezGameState`.
 
 ## See Also
 

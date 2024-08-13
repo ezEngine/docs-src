@@ -50,6 +50,18 @@ This renderer visualizes each particle as a quad. There are several modes to cho
 
   <video src="media/render-mode-distortion.webm" width="500" height="500" autoplay loop></video>
 
+**Lighting Mode:** Controls whether the particles receive dynamic lighting.
+    * `Fullbright`: Particles will not be lit dynamically.
+    * `Vertex Lit`: Lighting will be calculated at each vertex and interpolated across the particle.
+
+**Normal Curvature:** For particle lighting, how round the particle appears. At `0` the particles are treated like flat pieces, at `1` they are lit more like spheres. The image below shows a curvature of `0`, `0.5` and `1.0`.
+
+  ![Particle Curvature](media/normal-curvature.png)
+
+**Light Directionality:** For particle lighting, how much the light wraps around the particle. At `0` the direction of incoming light is completely ignored, whereas at `1` particles will be clearly lit from the side from which a light source shines at it. Note that the directionality somewhat depends on the camera direction. The image below shows smoke lit with light directionality of `0`, `0.5` and `1.0`.
+
+  ![Light Directionality](media/light-directionality.png)
+
 **Texture:** The texture used for rendering. May be a texture atlas or contain flipbook animations.
 
 **Texture Atlas:** Specifies how to interpret the content in *Texture*:
@@ -62,7 +74,7 @@ This renderer visualizes each particle as a quad. There are several modes to cho
 
 * *Random Row, Animated Column* - The texture contains *NumSpritesY* animations, each with *NumSpritesX* frames. Each particle plays one random animation over its lifetime.
 
-**TintColorParam:** An optional [effect parameter](particle-effects-overview.md#effect-parameters) name. If set, the parameter is used to tint the final color of the particle.
+**Tint Color Param:** An optional [effect parameter](particle-effects-overview.md#effect-parameters) name. If set, the parameter is used to tint the final color of the particle.
 
 **Particle Stretch:** Only available in the 'axis' render modes. Allows to stretch the particles along their fixed axis. Useful to create sparks.
 
@@ -74,7 +86,7 @@ This renderer visualizes each particle using a [mesh](../../graphics/meshes/mesh
 
 **Material:** The material to use on the mesh.
 
-**TintColorParam:** An optional [effect parameter](particle-effects-overview.md#effect-parameters) name. If set, the parameter is used to tint the color of the meshes.
+**Tint Color Param:** An optional [effect parameter](particle-effects-overview.md#effect-parameters) name. If set, the parameter is used to tint the color of the meshes.
 
 <video src="media/mesh-renderer.webm" width="500" height="500" autoplay loop></video>
 
@@ -82,17 +94,17 @@ This renderer visualizes each particle using a [mesh](../../graphics/meshes/mesh
 
 The light renderer treats each particle as a light source and thus illuminates the scene around it. Usually one would add this renderer as a second renderer to a particle system, such that one can easily reuse the behavior and color of for example billboards. Since light sources have a very high performance overhead, and adding as many lights into a scene as billboards would often be way too much, this renderer may visualize only a fraction of all particles in the system.
 
-**SizeFactor:** A factor to scale the particle's size with to determine the light influence radius. If the particles are also visualized as, for instance, billboards, the light source around the billboard should often be three to five times bigger.
+**Size Factor:** A factor to scale the particle's size with to determine the light influence radius. If the particles are also visualized as, for instance, billboards, the light source around the billboard should often be three to five times bigger.
 
 **Intensity:** The light intensity.
 
 **Percentage:** How many of the particles in the system should also be used as light sources. Typically you should only use 10% or so of the particles. Fewer lights is not only better for performance, it often also looks better, as there will be more contrast and flickering. Too many lights will result in constant brightness, making the effect less interesting.
 
-**TintColorParam:** An optional [effect parameter](particle-effects-overview.md#effect-parameters) name. If set, the parameter is used to tint the color of the lights.
+**Tint Color Param:** An optional [effect parameter](particle-effects-overview.md#effect-parameters) name. If set, the parameter is used to tint the color of the lights.
 
-**IntensityScaleParam:** An optional [effect parameter](particle-effects-overview.md#effect-parameters) name. If set, the parameter is used to scale the intensity of the lights.
+**Intensity Scale Param:** An optional [effect parameter](particle-effects-overview.md#effect-parameters) name. If set, the parameter is used to scale the intensity of the lights.
 
-**SizeScaleParam:** An optional [effect parameter](particle-effects-overview.md#effect-parameters) name. If set, the parameter is used to scale the light influence radius.
+**Size Scale Param:** An optional [effect parameter](particle-effects-overview.md#effect-parameters) name. If set, the parameter is used to scale the light influence radius.
 
 <video src="media/light-renderer.webm" width="500" height="500" autoplay loop></video>
 
@@ -100,7 +112,7 @@ The light renderer treats each particle as a light source and thus illuminates t
 
 This renderer visualizes particles as long lines that draw the path that the particle took. Trail particles are made up of a fixed number of segments. The more segments the renderer uses, the longer the trails will be. Also the faster a particle moves, the longer the trail will stretch. More segments cost more performance to update and render. For very short sparks that should just stretch a little, it is better to use billboards with *Orientation* set the *Axis: Particle Dir* and *StretchFactor* set to some value between 2 and 5.
 
-**Render Mode, Texture, Texture Atlas, TintColorParam:** These options are identical to the [quad renderer](#quad-renderer).
+**Render Mode, Texture, Texture Atlas, TintColorParam, Lighting Mode:** These options are identical to the [quad renderer](#quad-renderer).
 
 **Segments:** The number of segments to use for each particle. More segments cost more performance but also result in longer and more detailed trails.
 
@@ -112,7 +124,7 @@ This renderer visualizes each particle using another particle effect. The refere
 
 **Effect:** The particle effect to spawn and move along for each particle in this system. Usually the other particle system would use at least one continuous emitter, such that the effect will be active for the whole lifetime of the particle that references it.
 
-**RandomSeeed:** An optional random seed to pass into the spawned effect.
+**Random Seeed:** An optional random seed to pass into the spawned effect.
 
 <video src="media/effect-renderer.webm" width="500" height="500" autoplay loop></video>
 

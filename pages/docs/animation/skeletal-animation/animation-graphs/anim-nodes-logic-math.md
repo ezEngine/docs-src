@@ -45,6 +45,10 @@ This node can be used to check whether a number value compares in a certain way 
 
 Converts a boolean value (`true` or `false`) to a number. By default this node converts `false` to `0` and `true` to `1`, but you can select other numerical values to use.
 
+## Bool To Event Node
+
+Triggers the `On True` or `On False` output pin whenever the boolean input value changes.
+
 ### Node Properties
 
 * `False Value`, `True Value`: The *number value* to output for when the input is `false` or `true`.

@@ -10,6 +10,12 @@ An animation clip represents a single motion, such as a walk cycle, a jump or ot
 >
 > In animation graph nodes animation clips are **not referenced directly** but rather through a name mapping. This mapping is configured in the [animation graph asset](animation-graphs/animation-graph-asset.md).
 
+## Importing Many Animation Clips Quickly
+
+In the [asset browser](../../assets/asset-browser.md) select to show `<Importable Files>` then find your source animation clip file. Right click on it, and from the *Import As* sub-menu select `Animation Clips (All)`. Finally, select an [animated mesh](animated-mesh-asset.md) as the preview model.
+
+After this, the editor creates a new animation clip document for each animation that it finds in the file.
+
 ## Asset Properties
 
 * `File`: The file from which to import the animation clip.

@@ -40,5 +40,7 @@ The [Sample Game Plugin](../../samples/sample-game-plugin.md) contains prefabs t
 
 ## See Also
 
+* [LOD Mesh Component (TODO)](meshes/lod-mesh-component.md)
+* [LOD Animated Mesh Component (TODO)](../animation/skeletal-animation/lod-animated-mesh-component.md)
 * [Always Visible Component](always-visible-component.md)
 * [Profiling](../performance/profiling.md)

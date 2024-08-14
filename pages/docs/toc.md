@@ -55,6 +55,7 @@
 ### [Spot Light Component](graphics/lighting/spot-light-component.md)
 ### [Dynamic Shadows](graphics/lighting/dynamic-shadows.md)
 ### [Ambient Light Component](graphics/lighting/ambient-light-component.md)
+### [Fill Light Component](graphics/lighting/fill-light-component.md)
 ### [Skylight Component](graphics/lighting/sky-light-component.md)
 ### [Reflection Probe Components](graphics/lighting/reflection-probe-components.md)
 ## [LOD Component](graphics/lod-component.md)
@@ -328,6 +329,7 @@
 ## [Logging](debugging/logging.md)
 ## [RenderDoc Integration](debugging/renderdoc.md)
 ## [Stats](debugging/stats.md)
+## [Tracy Integration](debugging/tracy.md)
 # Performance
 ## [Asset Collections](performance/asset-collections.md)
 ## [Collection Component](performance/collection-component.md)

@@ -1,6 +1,6 @@
 # ShaderCompiler
 
-The *ShaderCompiler* is a command-line application to precompile shader permutations.
+The *ezShaderCompiler* is a command-line application to precompile shader permutations.
 
 This tool can be used to prepare shaders and shader permutations before they are needed at runtime. On platforms where runtime shader compilation is possible, EZ will compile shader permutations on demand. This leads to a small delay when a new permutation is encountered, but is very convenient during development.
 

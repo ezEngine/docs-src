@@ -234,7 +234,7 @@
 ## Aiplugin
 ### [AiPlugin Overview](ai/AiPlugin/ai-plugin-overview.md)
 ### [AI Navigation Component (TODO)](ai/AiPlugin/navigation-component.md)
-### [Navmesh Obstacle Component (TODO)](ai/AiPlugin/navmesh-obstacle-component.md)
+### [Navmesh Obstacle Component](ai/AiPlugin/navmesh-obstacle-component.md)
 ### [Navmesh Path Test Component](ai/AiPlugin/navmesh-path-test-component.md)
 ### [Runtime Navmesh](ai/AiPlugin/runtime-navmesh.md)
 ## Recastplugin

@@ -3,3 +3,4 @@ mesh-asset.md
 mesh-component.md
 instanced-mesh-component.md
 custom-mesh-component.md
+lod-mesh-component.md

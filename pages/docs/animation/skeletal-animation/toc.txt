@@ -1,6 +1,7 @@
 skeletal-animation-overview.md
 animated-mesh-asset.md
 animated-mesh-component.md
+lod-animated-mesh-component.md
 skeleton-asset.md
 skeleton-component.md
 animation-clip-asset.md
@@ -12,3 +13,4 @@ root-motion.md
 joint-attachment-component.md
 joint-override-component.md
 blender-export.md
+ik

@@ -64,6 +64,7 @@
 ### [Mesh Component](graphics/meshes/mesh-component.md)
 ### [Instanced Mesh Component](graphics/meshes/instanced-mesh-component.md)
 ### [Custom Mesh Component](graphics/meshes/custom-mesh-component.md)
+### [LOD Mesh Component (TODO)](graphics/meshes/lod-mesh-component.md)
 ## [Occluder Component](graphics/occluder-component.md)
 ## [Render Pipeline (TODO)](graphics/render-pipeline-overview.md)
 ## Render To Texture
@@ -173,6 +174,7 @@
 ### [Skeletal Animations](animation/skeletal-animation/skeletal-animation-overview.md)
 ### [Animated Mesh Asset](animation/skeletal-animation/animated-mesh-asset.md)
 ### [Animated Mesh Component](animation/skeletal-animation/animated-mesh-component.md)
+### [LOD Animated Mesh Component (TODO)](animation/skeletal-animation/lod-animated-mesh-component.md)
 ### [Skeleton Asset](animation/skeletal-animation/skeleton-asset.md)
 ### [Skeleton Component](animation/skeletal-animation/skeleton-component.md)
 ### [Animation Clip Asset](animation/skeletal-animation/animation-clip-asset.md)
@@ -200,6 +202,9 @@
 ### [Joint Attachment Component](animation/skeletal-animation/joint-attachment-component.md)
 ### [Joint Override Component](animation/skeletal-animation/joint-override-component.md)
 ### [Authoring and Exporting Animations with Blender](animation/skeletal-animation/blender-export.md)
+### Ik
+#### [Aim IK Component (TODO)](animation/skeletal-animation/ik/aim-ik-component.md)
+#### [Two Bone IK Component (TODO)](animation/skeletal-animation/ik/two-bone-ik-component.md)
 # Sound
 ## [Sound](sound/sound-overview.md)
 ## [FMOD Integration](sound/fmod-overview.md)
@@ -227,6 +232,8 @@
 # Ai
 ## Aiplugin
 ### [AiPlugin Overview](ai/AiPlugin/ai-plugin-overview.md)
+### [AI Navigation Component (TODO)](ai/AiPlugin/navigation-component.md)
+### [Navmesh Obstacle Component (TODO)](ai/AiPlugin/navmesh-obstacle-component.md)
 ### [Navmesh Path Test Component](ai/AiPlugin/navmesh-path-test-component.md)
 ### [Runtime Navmesh](ai/AiPlugin/runtime-navmesh.md)
 ## Recastplugin
@@ -240,6 +247,7 @@
 ## [RmlUi](ui/rmlui.md)
 # Gameplay
 ## [Area Damage Component](gameplay/area-damage-component.md)
+## [Creature Crawl Component (TODO)](gameplay/creature-crawl-component.md)
 ## [Grabbable Item Component](gameplay/grabbable-item-component.md)
 ## [Head Bone Component](gameplay/headbone-component.md)
 ## [Marker Component](gameplay/marker-component.md)

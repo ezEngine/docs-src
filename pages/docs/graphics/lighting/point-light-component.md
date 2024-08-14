@@ -24,6 +24,5 @@ See [this page](dynamic-shadows.md#shadow-component-properties) for shadow relat
 
 ## See Also
 
-
 * [Lighting](lighting-overview.md)
 * [Spot Light Component](spot-light-component.md)

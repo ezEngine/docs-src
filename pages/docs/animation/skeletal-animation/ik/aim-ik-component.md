@@ -1,0 +1,9 @@
+# Aim IK Component
+
+<!-- PAGE IS TODO -->
+
+## Component Properties
+
+## See Also
+
+* [Skeletal Animations](../skeletal-animation-overview.md)

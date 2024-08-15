@@ -15,4 +15,4 @@
 ## See Also
 
 * [Skeletal Animations](../animation/skeletal-animation/skeletal-animation-overview.md)
-* [Two Bone IK Component (TODO)](../animation/skeletal-animation/ik/two-bone-ik-component.md)
+* [Two Bone IK Component](../animation/skeletal-animation/ik/two-bone-ik-component.md)

@@ -205,7 +205,7 @@
 ### [Authoring and Exporting Animations with Blender](animation/skeletal-animation/blender-export.md)
 ### Ik
 #### [Aim IK Component](animation/skeletal-animation/ik/aim-ik-component.md)
-#### [Two Bone IK Component (TODO)](animation/skeletal-animation/ik/two-bone-ik-component.md)
+#### [Two Bone IK Component](animation/skeletal-animation/ik/two-bone-ik-component.md)
 # Sound
 ## [Sound](sound/sound-overview.md)
 ## [FMOD Integration](sound/fmod-overview.md)

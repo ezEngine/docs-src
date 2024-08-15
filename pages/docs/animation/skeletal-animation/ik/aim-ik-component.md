@@ -1,6 +1,6 @@
 # Aim IK Component
 
-The *aim IK component* adds procedural animation to an [animated mesh](../animated-mesh-component.md) through *inverse kinematics*.
+The *Aim IK component* adds procedural animation to an [animated mesh](../animated-mesh-component.md) through *inverse kinematics*.
 
 The aim IK component rotates a bone of the [skeleton](../skeleton-asset.md) such that it points towards a target position. Optionally, this rotation can be distributed over multiple bones in a chain, to make the result more natural.
 
@@ -20,7 +20,7 @@ In the video below, aim IK is used to correct both the right arm, as well as the
 
 ## How to Set Up Aim IK
 
-The *Aim IK component* has to be attached to a child node of the [animated mesh](../animated-mesh-component.md) that it is supposed to modify. The position of that game object is where the affect bones will point at. Add one or more entries to the `Joints` array. Each entry identifies a bone to control from the [skeleton](../skeleton-asset.md). The `Weight` of each entry defines how much of the necessary IK to apply. At a value of 1, the bone would be rotated to fully point at the target. With a weight of 0.5, only half the rotation would be applied. This is used to distribute the rotation piece-wise over multiple bones.
+The *Aim IK component* has to be attached to a child node of the [animated mesh](../animated-mesh-component.md) that it is supposed to affect. The position of that game object is where the target bones will point at. Add one or more entries to the `Joints` array. Each entry identifies a bone to control from the [skeleton](../skeleton-asset.md). The `Weight` of each entry defines how much of the necessary IK to apply. At a value of 1, the bone would be rotated to fully point at the target. With a weight of 0.5, only half the rotation would be applied. This is used to distribute the rotation piece-wise over multiple bones.
 
 ![Aim IK Settings](media/aimik-settings.png)
 
@@ -58,11 +58,11 @@ Again, for this to work, your skeleton needs to be build such, that the bones ha
 
 * `Pole Vector`: An optional object to use as a secondary target, to have the `Up Vector` point towards. See details above.
 
-* `Weight`: The overall weight to use to apply the aim IK. This is typically used at runtime to gradually fade the aim IK in and out.
+* `Weight`: The overall weight to use to apply the IK. This is typically used at runtime to gradually fade the IK in and out.
 
 * `Joints`: An array of bones to apply IK to. Order matters. Unrelated bones can be listed, for example you can let both the left and right arm point at the same thing. However, be careful to always list parent bones first. The `Weight` defines how much of the necessary rotation to apply to a bone.
 
 ## See Also
 
 * [Skeletal Animations](../skeletal-animation-overview.md)
-* [Two Bone IK Component (TODO)](two-bone-ik-component.md)
+* [Two Bone IK Component](two-bone-ik-component.md)

@@ -14,4 +14,4 @@
 ## See Also
 
 * [Skeletal Animations](../skeletal-animation-overview.md)
-* [Aim IK Component (TODO)](aim-ik-component.md)
+* [Aim IK Component](aim-ik-component.md)

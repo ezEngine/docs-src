@@ -204,7 +204,7 @@
 ### [Joint Override Component](animation/skeletal-animation/joint-override-component.md)
 ### [Authoring and Exporting Animations with Blender](animation/skeletal-animation/blender-export.md)
 ### Ik
-#### [Aim IK Component (TODO)](animation/skeletal-animation/ik/aim-ik-component.md)
+#### [Aim IK Component](animation/skeletal-animation/ik/aim-ik-component.md)
 #### [Two Bone IK Component (TODO)](animation/skeletal-animation/ik/two-bone-ik-component.md)
 # Sound
 ## [Sound](sound/sound-overview.md)

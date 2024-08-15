@@ -13,4 +13,4 @@ The obstacle must have a physical [collider](../../physics/jolt/collision-shapes
 ## See Also
 
 * [Runtime Navmesh](runtime-navmesh.md)
-* [AI Navigation Component (TODO)](navigation-component.md)
+* [AI Navigation Component](navigation-component.md)

@@ -65,7 +65,7 @@
 ### [Mesh Component](graphics/meshes/mesh-component.md)
 ### [Instanced Mesh Component](graphics/meshes/instanced-mesh-component.md)
 ### [Custom Mesh Component](graphics/meshes/custom-mesh-component.md)
-### [LOD Mesh Component (TODO)](graphics/meshes/lod-mesh-component.md)
+### [LOD Mesh Component](graphics/meshes/lod-mesh-component.md)
 ## [Occluder Component](graphics/occluder-component.md)
 ## [Render Pipeline (TODO)](graphics/render-pipeline-overview.md)
 ## Render To Texture
@@ -175,7 +175,7 @@
 ### [Skeletal Animations](animation/skeletal-animation/skeletal-animation-overview.md)
 ### [Animated Mesh Asset](animation/skeletal-animation/animated-mesh-asset.md)
 ### [Animated Mesh Component](animation/skeletal-animation/animated-mesh-component.md)
-### [LOD Animated Mesh Component (TODO)](animation/skeletal-animation/lod-animated-mesh-component.md)
+### [LOD Animated Mesh Component](animation/skeletal-animation/lod-animated-mesh-component.md)
 ### [Skeleton Asset](animation/skeletal-animation/skeleton-asset.md)
 ### [Skeleton Component](animation/skeletal-animation/skeleton-component.md)
 ### [Animation Clip Asset](animation/skeletal-animation/animation-clip-asset.md)
@@ -233,7 +233,7 @@
 # Ai
 ## Aiplugin
 ### [AiPlugin Overview](ai/AiPlugin/ai-plugin-overview.md)
-### [AI Navigation Component (TODO)](ai/AiPlugin/navigation-component.md)
+### [AI Navigation Component](ai/AiPlugin/navigation-component.md)
 ### [Navmesh Obstacle Component](ai/AiPlugin/navmesh-obstacle-component.md)
 ### [Navmesh Path Test Component](ai/AiPlugin/navmesh-path-test-component.md)
 ### [Runtime Navmesh](ai/AiPlugin/runtime-navmesh.md)

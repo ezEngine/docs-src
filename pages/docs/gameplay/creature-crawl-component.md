@@ -24,7 +24,7 @@ In the example above, the [character controller](../physics/jolt/special/jolt-ch
 
 > **IMPORTANT**
 >
-> The current implementation requires that an animation is played on the animated mesh, otherwise IK is never applied. That is why we also apply a dummy idle animation loop on the body through a [simple animation component](../animation/skeletal-animation/simple-animation-component.md).
+> The current implementation requires that an animation is played on the animated mesh, otherwise IK is never applied. That is why we also apply a dummy idle animation loop on the body through a [simple animation component](../animation/skeletal-animation/simple-animation-component.md). Additionally, you have to check **Enable IK** on the animation component.
 
 Finally the *creature crawl component* needs to know which legs to move and what body object to tilt:
 

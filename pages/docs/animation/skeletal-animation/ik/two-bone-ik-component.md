@@ -10,6 +10,10 @@ In the video below this is used to move the arms of a character such that they r
 
 <video src="media/two-bone-ik.mp4" width="800" height="600" autoplay controls></video>
 
+> **IMPORTANT**
+>
+> *Inverse kinematics* is currently only applied when an animated mesh receives a new animation pose. Thus, to actually see the result of IK, you need to have a [simple animation component](../simple-animation-component.md) or an [animation controller component](../animation-graphs/animation-controller-component.md) attached, and check the option **Enable IK** on it. It also has to play some animation in a loop, such as an idle animation or literally a single keyframe pose.
+
 ## How to Set Up Two Bone IK
 
 The *Two Bone IK component* has to be attached to a child node of the [animated mesh](../animated-mesh-component.md) that it is supposed to affect. The position of that game object is what the target bones will try to reach.

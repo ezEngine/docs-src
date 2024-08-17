@@ -24,6 +24,8 @@ For more complex scenarios use an [animation graph](animation-graphs/animation-g
 
 * `InvisibleUpdateRate`: How often to update the animation when the object is not visible. For performance reasons the update rate should be very low or even paused when an object isn't visible. However, since animations may have an important impact on gameplay, it can be undesirable to have a lower update rate even when the object is not visible. Note that this affects the update rate of objects that are not visible by the main camera, but by a shadow casting light. Objects whose shadow can be seen generally get updated, but at a low rate, unless this setting forces a higher update rate.
 
+* `Enable IK`: If *inverse kinematics*, such as [aim IK](ik/aim-ik-component.md) or [two bone IK](ik/two-bone-ik-component.md) shall affect the animated mesh, this option needs to be enabled.
+
 ## Animation Events
 
 The component will broadcast the event `ezMsgGenericEvent` every time it encounters an [animation event](animation-events.md) in the animation clip. [Custom code](../../custom-code/custom-code-overview.md) can listen for these events and trigger relevant game mechanics.

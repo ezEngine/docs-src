@@ -51,4 +51,4 @@ In the example video above, additional pole vectors are used to have the left el
 
 * [Skeletal Animations](../skeletal-animation-overview.md)
 * [Aim IK Component](aim-ik-component.md)
-* [Creature Crawl Component (TODO)](../../../gameplay/creature-crawl-component.md)
+* [Creature Crawl Component](../../../gameplay/creature-crawl-component.md)

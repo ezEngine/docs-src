@@ -248,7 +248,7 @@
 ## [RmlUi](ui/rmlui.md)
 # Gameplay
 ## [Area Damage Component](gameplay/area-damage-component.md)
-## [Creature Crawl Component (TODO)](gameplay/creature-crawl-component.md)
+## [Creature Crawl Component](gameplay/creature-crawl-component.md)
 ## [Grabbable Item Component](gameplay/grabbable-item-component.md)
 ## [Head Bone Component](gameplay/headbone-component.md)
 ## [Marker Component](gameplay/marker-component.md)

@@ -20,15 +20,17 @@ The code snippet below shows what should be added to a *header file (.h)*:
 
 <!-- BEGIN-DOCS-CODE-SNIPPET: customdata-decl -->
 ```cpp
-class SampleCustomData2 : public ezCustomData
+class SampleCustomData : public ezCustomData
 {
-  EZ_ADD_DYNAMIC_REFLECTION(SampleCustomData2, ezCustomData);
+  EZ_ADD_DYNAMIC_REFLECTION(SampleCustomData, ezCustomData);
 
 public:
   ezString m_sText;
+  ezInt32 m_iSize = 42;
+  ezColor m_Color;
 };
 
-EZ_DECLARE_CUSTOM_DATA_RESOURCE(SampleCustomData2);
+EZ_DECLARE_CUSTOM_DATA_RESOURCE(SampleCustomData);
 ```
 <!-- END-DOCS-CODE-SNIPPET -->
 
@@ -76,31 +78,11 @@ If a property doesn't show up, at all, make sure it is added to the reflection b
 
 To make use of your custom data type in a [C++ components](../custom-code/cpp/custom-cpp-component.md) you first need to make it possible to reference your *custom data asset* in that component, so that you can select on your component which asset it should use.
 
-To do so, add the corresponding *resource handle* as a member to your component and set up the necessary functions to modify the handle:
+To do so, add the corresponding *resource handle* as a member to your component:
 
 <!-- BEGIN-DOCS-CODE-SNIPPET: customdata-interface -->
 ```cpp
 SampleCustomDataResourceHandle m_hCustomData;
-
-void SetSampleCustomDataResource(const char* szFile)
-{
-  SampleCustomDataResourceHandle hCustomData;
-
-  if (!ezStringUtils::IsNullOrEmpty(szFile))
-  {
-    hCustomData = ezResourceManager::LoadResource<SampleCustomDataResource>(szFile);
-  }
-
-  m_hCustomData = hCustomData;
-}
-
-const char* GetSampleCustomDataResource() const
-{
-  if (m_hCustomData.IsValid())
-    return m_hCustomData.GetResourceID();
-
-  return "";
-}
 ```
 <!-- END-DOCS-CODE-SNIPPET -->
 
@@ -108,7 +90,7 @@ Then, in the source file of your component, add the property to the component's 
 
 <!-- BEGIN-DOCS-CODE-SNIPPET: customdata-property -->
 ```cpp
-EZ_ACCESSOR_PROPERTY("CustomData", GetSampleCustomDataResource, SetSampleCustomDataResource)->AddAttributes(new ezAssetBrowserAttribute("CompatibleAsset_CustomData", "SampleCustomData")),
+EZ_RESOURCE_MEMBER_PROPERTY("CustomData", m_hCustomData)->AddAttributes(new ezAssetBrowserAttribute("CompatibleAsset_CustomData", "SampleCustomData")),
 ```
 <!-- END-DOCS-CODE-SNIPPET -->
 
@@ -122,7 +104,7 @@ Now when you look at the properties of your component in the editor, it should s
 
 > **Important:**
 >
-> Be aware that currently there is no filtering for the specific custom data type, so all custom data assets show up, even if they don't match the desired custom data type. If you select an incompatible one, at runtime it will log an error and give you a default constructed object.
+> Note the second string passed to `ezAssetBrowserAttribute`. It tells the system to only show custom data assets that contain `SampleCustomData` objects (or derived ones). This is an additional filter, that makes it more convenient to pick matching assets in the editor. If you leave this out, the asset browser **doesn't show any** custom data asset. If you want to be able to select *all* types of custom data, pass a `*` here.
 
 Finally, to actually access your custom data inside your game code, you have to get a *resource lock* using your *resource handle*:
 

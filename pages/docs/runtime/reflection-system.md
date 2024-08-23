@@ -162,7 +162,7 @@ Type GetterFunc() const;
 void SetterFunc(Type value);
 ```
 
-Type can be decorated with const and reference but must be consistent between get and set function. The available macros are the following:
+Type can be decorated with const and reference, but must be consistent between the get and set function. The available macros are the following:
 
 ```cpp
 EZ_MEMBER_PROPERTY("Member", m_fFloat1),
@@ -172,6 +172,28 @@ EZ_ACCESSOR_PROPERTY_READ_ONLY("MemberAccessorRO", GetInt),
 ```
 
 To access an instance's member variable value, cast the property to `ezAbstractMemberProperty` and call `ezAbstractMemberProperty::GetPropertyType()` to determine the member type. Then either cast to `ezTypedMemberProperty` of the matching type, or if the type is not known to you at compile time, use `ezAbstractMemberProperty::GetPropertyPointer()` or `ezAbstractMemberProperty::GetValuePtr()` and `ezAbstractMemberProperty::SetValuePtr()` to access its data. The first solution will only return a valid pointer if the property is a direct member property.
+
+### Resource Handles
+
+Similar to regular members (see above), resource handles can be exposed either directly or through accessor functions:
+
+```cpp
+EZ_RESOURCE_MEMBER_PROPERTY("Texture1", m_hTexture1)->AddAttributes(new ezAssetBrowserAttribute("CompatibleAsset_Texture_2D")),
+EZ_RESOURCE_ACCESSOR_PROPERTY("Texture2", GetTexture2, SetTexture2)->AddAttributes(new ezAssetBrowserAttribute("CompatibleAsset_Texture_2D")),
+```
+
+Here `Texture1` is exposed directly, whereas all accesses for `Texture2` go through dedicated getters and setters.
+
+The function signatures for the accessors should look like this:
+
+```cpp
+void SetTexture2(const ezTexture2DResourceHandle& hResource);
+const ezTexture2DResourceHandle& GetTexture2() const;
+```
+
+> **IMPORTANT**
+>
+> The reflection system treats resource handles like strings. The macros above just automatically generate the necessary boilerplate code for this. It is the `ezAssetBrowserAttribute` which makes the editor treat such a string differently.
 
 ### Arrays
 

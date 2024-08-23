@@ -34,7 +34,7 @@ The `Shader Properties` section lists all the properties that the selected shade
 
 ### DefaultMaterial Properties
 
-The `DefaultMaterial` shader that comes with EZ implements a **P**hysically **B**ased **R**endering model (PBR), which is the de facto industry standard these days. The details of PBR rendering are beyond the scope of this documentation, if you want to get an understanding of how *roughness* and *metalness* are use (see below), please search the internet.
+The `DefaultMaterial` shader that comes with EZ implements a **P**hysically **B**ased **R**endering model (PBR), which is the de facto industry standard these days. The details of PBR rendering are beyond the scope of this documentation, if you want to get an understanding of how *roughness* and *metalness* are used (see below), please search the internet.
 
 The `DefaultMaterial` provides these options:
 
@@ -81,6 +81,19 @@ For testing transparent materials it may be useful to create an object in a scen
 The 3D viewport of the material editor allows you to switch the [render mode](../editor/editor-views.md#render-modes) to inspect only specific aspects of the material.
 
 Using the *eye dropdown menu* you can also select different meshes for previewing the material on.
+
+## Filtering Materials for Special Use Cases
+
+Most materials will be applied to standard meshes and thus use shaders that work with them. However, some materials are meant for meshes that have non-standard data. For example the [Kraut](../terrain/kraut-overview.md) tree meshes are not compatible with the standard materials.
+
+This means that materials authored for these trees should not be used on standard meshes, and vice versa. Thus when picking a material for a mesh (or a tree) the editor should only show the compatible materials for each situation.
+
+To set this up, two things are necessary:
+
+1. The C++ code has to specify which materials are compatible for each resource slot. This is defined through the `ezAssetBrowserAttribute`, using the *tag* argument (the second string). Setting this, for example, to `"Kraut"` makes the editor only show materials that have this tag.
+1. In the material, use the `Asset Filter Tags` option to configure what the material is compatible with. You can add multiple tags, separated by semicolon.
+
+For standard materials none of this is necessary, and for non-standard materials it is only a usability improvement.
 
 ## See Also
 

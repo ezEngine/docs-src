@@ -51,8 +51,8 @@ This renderer visualizes each particle as a quad. There are several modes to cho
   <video src="media/render-mode-distortion.webm" width="500" height="500" autoplay loop></video>
 
 **Lighting Mode:** Controls whether the particles receive dynamic lighting.
-    * `Fullbright`: Particles will not be lit dynamically.
-    * `Vertex Lit`: Lighting will be calculated at each vertex and interpolated across the particle.
+  * `Fullbright`: Particles will not be lit dynamically.
+  * `Vertex Lit`: Lighting will be calculated at each vertex and interpolated across the particle.
 
 **Normal Curvature:** For particle lighting, how round the particle appears. At `0` the particles are treated like flat pieces, at `1` they are lit more like spheres. The image below shows a curvature of `0`, `0.5` and `1.0`.
 

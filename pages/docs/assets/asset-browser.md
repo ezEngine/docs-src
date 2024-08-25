@@ -48,7 +48,11 @@ On the left the asset browser displays all [data directories](../projects/data-d
 
 ### Show Assets in Sub-Folders
 
-Right click on a folder and toggle **Show items in sub-folders**. When enabled (the default) the asset browser shows *all* assets that are anywhere below a selected folder. When disabled, only the assets that are directly inside the a selected folder are shown. Assets that are in a sub-folder are not displayed. This behavior is more like a typical file explorer.
+The **eye button** to the right of the search field, toggles which assets are shown. If it shows the *open eye*, the asset browser displays *all assets* below the currently selected folder, if it shows the *closed eye*, only the files directly inside the selected folder are shown. The former mode makes it easy to find assets for which you only roughly know where they are, the latter mode is more useful when you have many assets and you only want to see the ones from a specific folder.
+
+When any search term is entered into the text box, automatically all files are displayed. 
+
+Some people prefer one mode or the other as their default, which is why this setting is saved and restored between editor runs.
 
 ### Filter to this Path
 
@@ -74,13 +78,13 @@ The editor remembers which assets you used recently. The asset browser can list 
 
 ## Copy Asset Guid
 
-In rare cases you may need the internal *GUID* (Globally Unique Identifier) of an asset. You can easily copy it to the clipboard by right clicking an asset and selecting *Copy Asset Guid*.
+Sometimes you need the internal *GUID* (Globally Unique Identifier) of an asset. You can easily copy it to the clipboard by right clicking an asset and selecting *Copy Asset Guid*.
 
 ## Transform Assets
 
 The asset browser allows you to quickly transform assets in multiple ways:
 
-* **Transform All:** In the toolbar of the asset browser there is a button of a white box with a red arrow. When you press this button *all* assets that are not up-to-date get *transformed* (ie. their runtime data is created from the source input data).
+* **Transform All:** In the toolbar of the asset browser there is a button of a red box with a red arrow. When you press this button *all* assets that are not up-to-date get *transformed* (ie. their runtime data is created from the source input data).
 
 * **Transform Selected:** Select one or multiple assets in the asset browser, right click and choose *Transform* to update only the selected assets.
 

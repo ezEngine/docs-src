@@ -16,7 +16,7 @@ Typically you should use the editor to configure which folders will be accessibl
 
 Here you can add, remove and reorder them. Setting up the data directories of a project should be one of the very first steps after creating a new project.
 
-You may notice the `>sdk` and `>project` prefixes. These are *special directory* indicators, meaning those paths are relative to the *SDK directory* (where the engine is installed) or the *project directory* (where your project is located). These indicators are automatically inserted when you browse for a folder. They enable the engine to find the same folder again, even if you move the project, or you need to stream the data using [FileServe (TODO)](../tools/fileserve.md).
+You may notice the `>sdk` and `>project` prefixes. These are *special directory* indicators, meaning those paths are relative to the *SDK directory* (where the engine is installed) or the *project directory* (where your project is located). These indicators are automatically inserted when you browse for a folder. They enable the engine to find the same folder again, even if you move the project, or you need to stream the data using [FileServe](../tools/fileserve.md).
 
 ### From Custom Code
 
@@ -26,7 +26,7 @@ You can also mount data directories from code. Usually you would do this either 
 
 
 * [FileSystem](../runtime/filesystem.md)
-* [FileServe (TODO)](../tools/fileserve.md)
+* [FileServe](../tools/fileserve.md)
 * [Projects](projects-overview.md)
 * [Application (TODO)](../runtime/application/application.md)
 * [Game States](../runtime/application/game-state.md)

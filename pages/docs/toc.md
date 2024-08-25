@@ -339,7 +339,7 @@
 ## [Project Export](Shipping/project-export.md)
 # Tools
 ## [ArchiveTool](tools/archivetool.md)
-## [FileServe (TODO)](tools/fileserve.md)
+## [FileServe](tools/fileserve.md)
 ## [HeaderCheck Tool](tools/headercheck.md)
 ## [ezInspector](tools/inspector.md)
 ## [MiniDump Tool](tools/minidumptool.md)

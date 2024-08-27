@@ -1,6 +1,6 @@
 # Hot Reloading C++ Game Plugins in the Editor
 
-When writing game code in C++, the most annoying aspect are the iteration times. Due to how C++ works, it is nearly impossible to swap out code and replace it with a newer version. Some engines try to do this, but there are always limitations, and the effort to get this working and keep it from breaking is quite big.
+When writing game code in C++, the most annoying aspect are the iteration times. Due to how C++ works, it is nearly impossible to swap out code and replace it with a newer version (though [Live++](../../debugging/livepp.md) may be an option). Some engines try to do this, but there are always limitations, and the effort to get this working and keep it from breaking is quite big.
 
 ezEngine is no different here, reloading code at runtime is not possible. However, the editor is split into two processes: The actual *editor process* which displays the UI, and manages the scene state, and the *engine process* which does the scene rendering and executes the actual game code. This separation makes the editor more resilient to crashes. If the engine process crashes, the editor will typically just display this:
 
@@ -36,10 +36,11 @@ The `Enable Reload` option should only be used for select game plugins. Enabling
 
 * If any code links against a plugin, that plugin cannot be loaded as a copy. Therefore, if you want to put shared code into a separate library that other users of your plugins link against, you can't load that shared library as a copy.
 * You can't compile code while debugging a process. To compile your code, you first have to detach your debugger. In Visual Studio that can be done via `Debug > Detach All`.
-* Consequently, if you want to continue debugging after you restarted the engine process, you need to manually re-attach your debugger to *EditorEngineProcess.exe*. In Visual Studio this is done via `Debug > Attach to Process...` or even better `Debug > Reattach to Process` (`SHIFT+ALT+P`) when you want to repeat the same thing a second time.
+* Consequently, if you want to continue debugging after you restarted the engine process, you need to manually re-attach your debugger to *ezEditorEngineProcess.exe*. In Visual Studio this is done via `Debug > Attach to Process...` or even better `Debug > Reattach to Process` (`SHIFT+ALT+P`) when you want to repeat the same thing a second time.
 
 ## See Also
 
 * [Debugging C++ Code](../../debugging/debug-cpp.md)
 * [Engine Plugins](engine-plugins.md)
 * [C++ Project Generation](cpp-project-generation.md)
+* [Live++ Integration](../../debugging/livepp.md)

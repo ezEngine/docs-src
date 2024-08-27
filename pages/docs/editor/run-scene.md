@@ -40,7 +40,7 @@ If the scene contains a [Player Start Point component](../gameplay/player-start-
 
 ## Export and Run
 
-Another way to test the scene is to export it to a binary format and run it in the [ezPlayer](../tools/player.md). You do so using *Scene > Export and Run...* or by pressing `CTRL+R`.
+Another way to test the scene is to export it to a binary format and run it in the [ezPlayer](../tools/player.md). You do so using the *Export* button on the right or by pressing `CTRL+R`.
 
 ![Export and Run](media/export-and-run.png)
 

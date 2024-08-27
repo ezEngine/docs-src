@@ -14,8 +14,6 @@ The screenshot above shows a common setup. Noteworthy are the following points:
 
 * **EZ_BUILD_FMOD** Enable this, if you want to [FMOD sound](../sound/fmod-overview.md) support in your build. On Windows and Linux the default is *on*.
 
-* **EZ_BUILD_RMLUI** Enable this, if you want to add support for [RmlUi](https://github.com/mikke89/RmlUi) to your build. The default is *on*.
-
 Once you have configured everything, run **Generate** and then **Open Project**.
 
 ## Adding a Custom Project

@@ -34,6 +34,10 @@ Select *File > Create...* and create a [document](../editor/editor-documents.md)
 
 If you don't see the [asset browser](../assets/asset-browser.md), make sure to open it. You can now [edit your scene](../scenes/scene-editing.md). When you need more assets to play with, you need to [import them](../assets/import-assets.md) into your project. Once you have something in your scene that could *do something*, you can [test your scene](../editor/run-scene.md). A good starting point for that is to simply attach a `Rotor` component to a mesh. A fun next step is to let objects fall down using [physics](../physics/jolt/jolt-overview.md) (hint: you need a `Dynamic Actor` component and a `Box Shape` component)
 
+> **TIP**
+>
+> If you want new documents to always be populated with some default state, have a look at [template documents](../editor/editor-template-documents.md).
+
 ## Project-wide options
 
 Plugins may add project wide options. Not all options may be exposed through editor UI, there are a few things that can (at the moment) only be configured through config files or directly from code. Most options are stored in [OpenDDL](https://openddl.org/) format or other human-readable files, and you can edit them directly. Some options to be aware of are:

@@ -5,4 +5,4 @@ Packages with prebuilt binaries are published with [GitHub releases](https://git
 Follow [@ezEngineProject](https://twitter.com/ezEngineProject) for release announcements.
 
 <!-- Please be careful changing the version number below, the editor parses this page to detect new releases. -->
-**The latest version is:** <!--<VERSION>-->23.12<!--</VERSION>-->
+**The latest version is:** <!--<VERSION>-->24.09.0<!--</VERSION>-->

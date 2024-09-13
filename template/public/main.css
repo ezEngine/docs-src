@@ -34,6 +34,10 @@ footer .pull-right {
   background-image: url('https://raw.githubusercontent.com/ezEngine/docs/main/assets/images/logo-github-white.svg');
 }
 
+#logo_bluesky {
+  background-image: url('https://raw.githubusercontent.com/ezEngine/docs/main/assets/images/logo-bluesky.svg');
+}
+
 #logo_twitter {
   background-image: url('https://raw.githubusercontent.com/ezEngine/docs/main/assets/images/logo-twitter.svg');
 }

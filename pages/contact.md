@@ -16,7 +16,7 @@ If you find a bug, please file [an issue](https://github.com/ezEngine/ezEngine/i
 
 ## Announcements
 
-Sometimes we announce things [on Twitter](https://twitter.com/ezengineproject).
+Sometimes we announce things on [Bluesky](https://bsky.app/profile/ezengine.bsky.social) or [Twitter](https://twitter.com/ezengineproject).
 
 ## E-Mail
 

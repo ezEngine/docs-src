@@ -52,20 +52,26 @@ EZ_APPLICATION_ENTRY_POINT(ezPlayerApplication);
 
 Some platforms (mainly Windows) differentiate between *console apps* and *window apps*. Console apps are executed inside a command prompt and typically do not have graphical output, whereas *window apps* create their own window to display output and interact with.
 
-By default, applications are treated as *console apps* and thus show a command prompt on these platforms. This can be convenient for debugging, as you see the [log output](../../debugging/logging.md) there. To remove the command prompt, you need to configure you application as a *window app*. To do so, the *CMakeLists.txt* file for your application has to call `ez_make_windowapp`:
+By default, applications are treated as *console apps* and thus show a command prompt on these platforms. This can be convenient for debugging, as you see the [log output](../../debugging/logging.md) there. To remove the command prompt, you need to configure your application as a *window app*. To do so, the *CMakeLists.txt* file for your application has to call `ez_make_windowapp`:
 
 ```cmake
 ez_create_target(APPLICATION ${PROJECT_NAME})
 ez_make_windowapp(${PROJECT_NAME})
 ```
 
+### Injecting Custom Code
+
+The preprocessor define `EZ_APPLICATION_ENTRY_POINT_CODE_INJECTION` can be used to insert additional code before the generated C++ *main* function. By default this is defined to be empty, but you can change this in your *UserConfig.h* file.
+
+The main use case for this is to declare additional global functions or variables in your binary, which may modify how the OS or certain drivers treat your application. For example on Windows `EZ_WINDOWAPP_ENTRY_POINT` already adds `NvOptimusEnablement` and `AmdPowerXpressRequestHighPerformance`, which tell graphics drivers to prefer dedicated GPUs over onboard GPUs.
+
 ## ezApplication Based Apps
 
-If you are building an application that doesn't need the full engine, derive you application class directly from `ezApplication`.
+If you are building an application that doesn't need the full engine, derive your application class directly from `ezApplication`.
 
 The most important functions to override are the following:
 
-* `ezApplication::AfterCoreSystemsStartup()` - to set configure systems.
+* `ezApplication::AfterCoreSystemsStartup()` - to configure systems
 * `ezApplication::Run()` - the main loop
 
 Note that `Run` will be called repeatedly until you call `RequestApplicationQuit()`.
@@ -107,4 +113,4 @@ The intended effect is, that you can [run your game](../../editor/run-scene.md) 
 
 * [Common Application Features](common-application-features.md)
 * [Game States](game-state.md)
-
+* [Startup System](../configuration/startup.md)

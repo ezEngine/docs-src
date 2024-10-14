@@ -2,7 +2,7 @@
 
 Engine plugins are the best way to get your custom code into the engine, such that it is accessible by the editor and also [ezPlayer](../../tools/player.md).
 
-Contrary to using a plugin, you could also build your own [application (TODO)](../../runtime/application/application.md), which may link to static libraries that contain your code. However, that approach means that your code cannot be loaded into the editor process and therefore you won't be able to leverage those tools to their full extent. We strongly advise against that.
+Contrary to using a plugin, you could also build your own [application](../../runtime/application/application.md), which may link to static libraries that contain your code. However, that approach means that your code cannot be loaded into the editor process and therefore you won't be able to leverage those tools to their full extent. We strongly advise against that.
 
 ## Creating a Plugin
 
@@ -67,7 +67,7 @@ These callbacks are optional, though in some cases you may want to register and 
 
 If you want to load a plugin from code, you would use `ezPlugin::LoadPlugin()` and provide only the name (no path) of your plugin. Make sure that the DLL is stored in the same directory as all other DLLs and EXEs.
 
-The more convenient way to load your game plugin, though, is to enable it in the [project settings](../../projects/plugin-selection.md). Then it will be automatically loaded by every [application (TODO)](../../runtime/application/application.md).
+The more convenient way to load your game plugin, though, is to enable it in the [project settings](../../projects/plugin-selection.md). Then it will be automatically loaded by every [application](../../runtime/application/application.md).
 
 ## Add Custom Code
 

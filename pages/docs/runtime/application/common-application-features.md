@@ -31,7 +31,7 @@ Reloading resources works for all assets that are used directly by the engine (e
 ## See Also
 
 
-* [Application (TODO)](application.md)
+* [Application](application.md)
 * [ezPlayer](../../tools/player.md)
 * [Profiling](../../performance/profiling.md)
 * [RenderDoc Integration](../../debugging/renderdoc.md)

@@ -4,7 +4,7 @@ Most game code is implemented by writing custom [components](../world/components
 
 However, for a full game you need a layer of control that is outside the world, where you can do logic like what level to load, what to do when the player dies or reaches their goal, how to display a main menu for the game settings and level selection, and so on. Most of these things would be possible with world components alone, but it would be cumbersome. Especially switching from one level to another is difficult, if some of your overall game logic has to be transitioned as well.
 
-*Game States* are this extra layer. A game state sits between the [application (TODO)](application.md) layer and the [world](../world/worlds.md).
+*Game States* are this extra layer. A game state sits between the [application](application.md) layer and the [world](../world/worlds.md).
 
 ![Code Hierarchy](media/code-hierarchy.png)
 
@@ -35,7 +35,7 @@ As you can see, by implementing a custom game state, you can gain control over m
 
 ## Game State Instantiation
 
-It is the responsibility of the `ezGameApplication` to instantiate a game state. By default this is done right at application startup, but if you write your own [application (TODO)](application.md) you could handle this differently. For example the editor only instantiates the game state for play-the-game mode.
+It is the responsibility of the `ezGameApplication` to instantiate a game state. By default this is done right at application startup, but if you write your own [application](application.md) you could handle this differently. For example the editor only instantiates the game state for play-the-game mode.
 
 The application knows what game states are available through the [reflection information](../reflection-system.md). When a game state is needed, it instantiates either your custom game state, or a fallback one. So your game plugin should only contain a single custom game state.
 
@@ -48,4 +48,4 @@ For all the details, read the [API Docs](../../api-docs.md) for `ezGameState`.
 ## See Also
 
 * [Custom Code](../../custom-code/custom-code-overview.md)
-* [Application (TODO)](application.md)
+* [Application](application.md)

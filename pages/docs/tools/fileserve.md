@@ -22,7 +22,7 @@ Note that there is also [ezInspector](inspector.md), that you can also connect t
 
 Generally the fileserve functionality is added to the engine through the `ezFileservePlugin`. Enabling it is thus just a matter of loading that plugin during engine initialization. If your game is built on top of `ezGameApplication` (such as [ezPlayer](player.md)), it is automatically enabled in development builds for platforms that have file access restrictions (see `ezGameApplication::Init_LoadRequiredPlugins()` for details). This is also true for [ezInspector](inspector.md) support.
 
-If your game is [using a custom application class (TODO)](../runtime/application/application.md), make sure this is set up in your code. The [Shader Explorer Sample](../../samples/shader-explorer.md) is such an application and should be used as reference.
+If your game is [using a custom application class](../runtime/application/application.md), make sure this is set up in your code. The [Shader Explorer Sample](../../samples/shader-explorer.md) is such an application and should be used as reference.
 
 If you want more control over the fileserve connection in your application, have a look at `ezFileserveClient`.
 

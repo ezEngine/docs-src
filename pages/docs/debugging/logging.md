@@ -26,7 +26,7 @@ There are multiple ways to see the content of the log:
 * In the [ezEditor](../../getting-started/editor-overview.md) you can open *Panels > Log* to see two logs, the one for the editor and the one from the engine process.
 * [ezInspector](../tools/inspector.md) shows the log of the connected process.
 * The in-game [console](console.md) outputs the log messages.
-* By default all EZ [applications (TODO)](../runtime/application/application.md) also write the log output to a `Log.htm` file in the application's *appdata* folder.
+* By default all EZ [applications](../runtime/application/application.md) also write the log output to a `Log.htm` file in the application's *appdata* folder.
 
 ## Thread-local logging
 

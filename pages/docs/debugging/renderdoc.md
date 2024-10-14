@@ -6,7 +6,7 @@ ezEngine has a dedicated *RenderDocPlugin*, to integrate RenderDoc support even 
 
 ## Taking Captures
 
-If you write your own [application (TODO)](../runtime/application/application.md) you can hook up RenderDoc in different ways, however, by default these methods are available:
+If you write your own [application](../runtime/application/application.md) you can hook up RenderDoc in different ways, however, by default these methods are available:
 
 * **Press F11:** The `F11` key will take a capture of the current frame.
 * Type `CaptureFrame()` into the game [console](console.md).

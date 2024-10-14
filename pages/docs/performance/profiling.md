@@ -4,7 +4,7 @@ Profiling an application means to record information about its performance to an
 
 ## Capturing Profiling Data
 
-ezEngine has a built in profiling system with which you can record the function call graph, across all active threads, with precise timing information. The profiling system is very efficient, which is why in development builds it is constantly recording data to a ring buffer, which allows you to write recent profiling data to disk at any time. That means whenever you encounter a situation with bad performance, you can just press a button (in stock [applications (TODO)](../runtime/application/application.md) such as [ezPlayer](../tools/player.md) it's the `F8` key) to save a snapshot.
+ezEngine has a built in profiling system with which you can record the function call graph, across all active threads, with precise timing information. The profiling system is very efficient, which is why in development builds it is constantly recording data to a ring buffer, which allows you to write recent profiling data to disk at any time. That means whenever you encounter a situation with bad performance, you can just press a button (in stock [applications](../runtime/application/application.md) such as [ezPlayer](../tools/player.md) it's the `F8` key) to save a snapshot.
 
 The application will write to the [log](../debugging/logging.md) where it stored the profiling snapshot. You can see this in the [console](../debugging/console.md):
 

@@ -297,7 +297,7 @@
 ### [Trigger Delay Modifier Component](custom-code/game-logic/trigger-delay-modifier-component.md)
 # Runtime
 ## Application
-### [Application (TODO)](runtime/application/application.md)
+### [Application](runtime/application/application.md)
 ### [Common Application Features](runtime/application/common-application-features.md)
 ### [Game States](runtime/application/game-state.md)
 ## Configuration

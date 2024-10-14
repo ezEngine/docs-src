@@ -36,7 +36,7 @@ Finally, have a look at [profiling](../../performance/profiling.md), to know whe
 
 ## Standalone App
 
-If you want to write your own stand-alone application, have a look at the [application (TODO)](../../runtime/application/application.md) chapter. However, we encourage you to have your entire game code in a plugin, otherwise you can't use any of it in the editor. You would mostly need your own application for the finishing touches of how you present the main menu, etc, and a good starting point is to just copy the [ezPlayer](../../tools/player.md) and make adjustments.
+If you want to write your own stand-alone application, have a look at the [application](../../runtime/application/application.md) chapter. However, we encourage you to have your entire game code in a plugin, otherwise you can't use any of it in the editor. You would mostly need your own application for the finishing touches of how you present the main menu, etc, and a good starting point is to just copy the [ezPlayer](../../tools/player.md) and make adjustments.
 
 ## See Also
 

@@ -37,7 +37,7 @@ Using a redirection file is the least invasive method and it works for all EZ ap
 
 ## Custom SDK Root
 
-You can fully control where the SDK root should be and how it is found, if you write your own [application (TODO)](../runtime/application/application.md). During early startup you can simply set the path of the SDK root folder with `ezFileSystem::SetSdkRootDirectory()`.
+You can fully control where the SDK root should be and how it is found, if you write your own [application](../runtime/application/application.md). During early startup you can simply set the path of the SDK root folder with `ezFileSystem::SetSdkRootDirectory()`.
 
 This can be preferable when you use a very different structure.
 

@@ -7,5 +7,5 @@ Render to texture functionality is working, but needs a rewrite, which is why th
 ## See Also
 
 * [Render Target Activator Component (TODO)](render-target-activator-component.md)
-* [Render Pipeline (TODO)](../render-pipeline-overview.md)
+* [Render Pipeline](../render-pipeline/render-pipeline-overview.md)
 

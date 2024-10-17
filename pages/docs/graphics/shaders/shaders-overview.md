@@ -134,4 +134,4 @@ This section is only used when [creating a shader template](shader-templates.md#
 * [Shader Resources](shader-resources.md)
 * [Shader Templates](shader-templates.md)
 * [ShaderCompiler](../../tools/shadercompiler.md)
-* [Render Pipeline (TODO)](../render-pipeline-overview.md)
+* [Render Pipeline](../render-pipeline/render-pipeline-overview.md)

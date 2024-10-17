@@ -20,7 +20,7 @@ This allows you to configure some general rendering options that shall be used o
 
 ### Render Pipelines
 
-Here you can specify what the *default* [render pipeline (TODO)](../graphics/render-pipeline-overview.md) should be. Different platforms have different rendering capabilities, so you may want to use a different pipeline to target that hardware best.
+Here you can specify what the *default* [render pipeline](../graphics/render-pipeline/render-pipeline-overview.md) should be. Different platforms have different rendering capabilities, so you may want to use a different pipeline to target that hardware best.
 
 Additionally you can add render pipelines to be used for certain use cases. For example in the screenshot above an extra *Camera* pipeline was added, which uses a simpler render pipeline. This can then be selected on a [camera component](../graphics/camera-component.md), in case it is used for [render to texture (TODO)](../graphics/render-to-texture/render-to-texture.md). Again, you can define per platform, which pipeline to use.
 
@@ -41,5 +41,5 @@ Additionally, some assets produce platform specific output. For example textures
 ## See Also
 
 * [Assets](assets-overview.md)
-* [Render Pipeline (TODO)](../graphics/render-pipeline-overview.md)
+* [Render Pipeline](../graphics/render-pipeline/render-pipeline-overview.md)
 * [Supported Platforms](../build/supported-platforms.md)

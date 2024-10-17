@@ -1,6 +1,6 @@
 # Shader Render State
 
-The state of the [rendering pipeline (TODO)](../render-pipeline-overview.md) can only be set through [shaders](shaders-overview.md). There is no way to change its state other than to select a shader which includes that specific state.
+The state of the [rendering pipeline](../render-pipeline/render-pipeline-overview.md) can only be set through [shaders](shaders-overview.md). There is no way to change its state other than to select a shader which includes that specific state.
 
 Use [shader permutations](shader-permutation-variables.md) to create variants of a shader. Each variant may incorporate a different render state. By setting shader permutation variables at runtime, you select the specific shader variant (permutation) and thus also get its render state.
 
@@ -313,4 +313,4 @@ The following variables exist with suffix 0 to 7. If **IndependentBlend** is dis
 * [Shaders](shaders-overview.md)
 * [Shader Permutation Variables](shader-permutation-variables.md)
 * [Shader Templates](shader-templates.md)
-* [Render Pipeline (TODO)](../render-pipeline-overview.md)
+* [Render Pipeline](../render-pipeline/render-pipeline-overview.md)

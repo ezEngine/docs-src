@@ -1,6 +1,6 @@
 # Post-Processing Component
 
-The post processing component is used to dynamically modify settings of the [render pipeline (TODO)](../../graphics/render-pipeline-overview.md).
+The post processing component is used to dynamically modify settings of the [render pipeline](../../graphics/render-pipeline/render-pipeline-overview.md).
 
 The component relies on [volume components](volume-components.md) to define where in a level which values shall be used. The following image shows a scene without custom post processing values:
 
@@ -19,7 +19,7 @@ It is also possible to place this component simply anywhere in a level. In this 
 ## Component Properties
 
 * `Volume Type`: A [spatial category](../../runtime/world/spatial-system.md) that is used as a filter to determine which [volume components](volume-components.md) to use for looking up values.
-* `Mappings`: An array of mappings from that configure which values in a [render pipeline (TODO)](../../graphics/render-pipeline-overview.md) to modify. See the images below for an example.
+* `Mappings`: An array of mappings from that configure which values in a [render pipeline](../../graphics/render-pipeline/render-pipeline-overview.md) to modify. See the images below for an example.
     * `Render Pass`: The *name* of the render pass in the pipeline to change.
     * `Property`: The name of the *property* to change.
     * `Volume Value`: The name of the value to use from the [volume](volume-components.md).
@@ -32,7 +32,7 @@ In this example, the post processing component is used to alter the *Mood Color*
 
 ![Component properties](media/post-process-component.png)    
 
-The image below shows the *Tonemapping* render pass from the game's [render pipeline (TODO)](../../graphics/render-pipeline-overview.md). On the right are it's properties that get modified.
+The image below shows the *Tonemapping* render pass from the game's [render pipeline](../../graphics/render-pipeline/render-pipeline-overview.md). On the right are it's properties that get modified.
  
 ![Render Pass](media/tonemap-pass.png)
 

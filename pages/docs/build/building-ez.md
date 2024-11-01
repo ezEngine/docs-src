@@ -34,7 +34,14 @@ The **Dev** build has most of the optimizations enabled, yet still includes *deb
 
 The **Shipping** build has all optimizations enabled. It does not include *debug symbols* anymore and it also has all the developer features disabled. That means things like [ezInspector](../tools/inspector.md) won't work here. Similarly, features like *allocation tracking* (for detecting memory leaks) and [profiling features](../performance/profiling.md) are disabled as well.
 
+## Static Linking
+
+On some platforms, such as *Android*, all code needs to be statically linked. In this case some of the automatisms used to load and configure the engine may not work correctly, because the linker optimizes away code that it deems unreferenced.
+
+See the [StaticLinkUtil](../tools/staticlinkutil.md) for how to fix this.
+
 ## See Also
 
 * [Supported Platforms](supported-platforms.md)
 * [ezEngine as a Submodule](submodule.md)
+* [StaticLinkUtil](../tools/staticlinkutil.md)

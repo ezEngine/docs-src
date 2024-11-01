@@ -79,6 +79,12 @@ If you want to write a plugin that provides some functionality for shared access
 
 Also, have a look at [singletons](../../runtime/configuration/interfaces.md) if your plugin is supposed to provide an implementation of some abstract interface.
 
+## Statically Linking Plugins
+
+On platforms where you need to statically link all libraries, some of the automatisms used to load and configure the engine may not work correctly, because the linker optimizes away code that it deems unreferenced.
+
+See the [StaticLinkUtil](../../tools/staticlinkutil.md) for how to fix this.
+
 ## See Also
 
 * [Sample Game Plugin](../../../samples/sample-game-plugin.md)
@@ -86,3 +92,4 @@ Also, have a look at [singletons](../../runtime/configuration/interfaces.md) if 
 * [Custom Components with C++](custom-cpp-component.md)
 * [Startup System](../../runtime/configuration/startup.md)
 * [Singleton Interfaces](../../runtime/configuration/interfaces.md)
+* [StaticLinkUtil](../../tools/staticlinkutil.md)

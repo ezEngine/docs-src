@@ -157,7 +157,7 @@ These nodes are for working with enum values. There are two node types for each 
 
 ### Log
 
-Nodes for [logging](../../debugging/logging.md).
+Nodes for [logging](../../debugging/logging.md). You can add input values for printing. Reference them in the format string using `{0}`, `{1}`, `{2}` and so on.
 
 ### Logic
 
@@ -177,6 +177,46 @@ All sorts of mathematical operations for working with number types.
 The **Expression** node lets you write complex mathematical expressions with multiple input and output values. This is much more convenient than using many individual math nodes.
 
 ![Math Expression](media/vs-expression.png)
+
+The following built-in functions are available:
+* `abs(number)`
+* `saturate(number)` - clamps number to `[0; 1]` range
+* `sqrt(number)`
+* `exp(number)`
+* `ln(number)`
+* `log2(number)`
+* `log10(number)`
+* `pow2(number)`
+* `sin(number)`
+* `cos(number)`
+* `tan(number)`
+* `asin(number)`
+* `acos(number)`
+* `atan(number)`
+* `radToDeg(number)` or `rad_to_deg(number)`
+* `degToRad(number)` or `deg_to_rad(number)`
+* `round(number)`
+* `floor(number)`
+* `ceil(number)`
+* `trunc(number)`
+* `frac(number)`
+* `length(vector)`
+* `normalize(vector)`
+* `trunc(number)`
+* `all(number)`
+* `any(number)`
+* `mod(number, number)` - computes `a` modulo `b`
+* `log(number, number)`
+* `pow(number, number)`
+* `min(number, number)`
+* `max(number, number)`
+* `dot(vector, vector)`
+* `cross(vector, vector)`
+* `reflect(vector, vector)`
+* `clamp(value, min, max)`
+* `lerp(min, max, factor)`
+* `smoothstep(value, edge1, edge2)` - returns 0, if value is <= edge1, 1 if value >= edge2 and the hermite interpolation in between
+* `smootherstep(value, edge1, edge2)` - returns 0, if value is <= edge1, 1 if value >= edge2 and the second order hermite interpolation in between
 
 ### Messages
 

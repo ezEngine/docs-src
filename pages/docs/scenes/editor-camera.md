@@ -8,9 +8,9 @@ In the following `LMB` refers to the *left mouse button*, `RMB` to the *right mo
 
 ### Perspective Views
 
-* `LMB`: Move forwards/backwards and sideways
-
 * `MMB`: Move in the ground plane
+
+* `CTRL + MMB`: Move forwards/backwards and sideways
 
 * `Wheel`: Move forwards/backwards
 
@@ -19,7 +19,7 @@ In the following `LMB` refers to the *left mouse button*, `RMB` to the *right mo
   * `Q` and `E`: Fly straight up or down
   * `SHIFT`: Move faster
 
-* `LMB` and `RMB`: Pan
+* `LMB + RMB`: Pan
 
 * `CTRL + Wheel`: Change the camera's movement speed. This can also be changed using the *Camera Speed* slider in the toolbar.
 

@@ -103,6 +103,9 @@ def ReplaceTargetSnippets(targetDir: str, snippets: dict):
                 print(f"Replacing snippet: {snippetName}")
                 replacedAny = True
 
+                if not snippetName in snippets:
+                    print(f"\nERROR: Snippet '{snippetName}' doesn't exist. Check that the code wasn't removed or moved to a location that isn't searched.\n")
+
                 newLines.append("```cpp\n")
                 newLines.append(snippets[snippetName])
                 newLines.append("```\n")

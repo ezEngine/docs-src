@@ -9,8 +9,10 @@ snippets = {}
 
 if os.path.exists("./ezEngine/Code"):
     Doc.SearchSourceSnippets("./ezEngine/Code", snippets)
+    Doc.SearchSourceSnippets("./ezEngine/Data", snippets)
 elif os.path.exists("./../ezEngine/Code"):
     Doc.SearchSourceSnippets("./../ezEngine/Code", snippets)
+    Doc.SearchSourceSnippets("./../ezEngine/Data", snippets)
 else:
     raise Exception("Couldn't find ezEngine repository")
 

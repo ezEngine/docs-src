@@ -84,7 +84,7 @@ When calling functions such as `ezSpatialSystem::FindObjectsInSphere()` you have
 
 <!-- BEGIN-DOCS-CODE-SNIPPET: spatial-query -->
 ```cpp
-void RtsGameState::InspectObjectsInArea(const ezVec2& vPosition, float fRadius, ezSpatialSystem::QueryCallback callback) const
+void RTSGameState::InspectObjectsInArea(const ezVec2& vPosition, float fRadius, ezSpatialSystem::QueryCallback callback) const
 {
   ezBoundingSphere sphere = ezBoundingSphere::MakeFromCenterAndRadius(vPosition.GetAsVec3(0), fRadius);
   ezSpatialSystem::QueryParams queryParams;

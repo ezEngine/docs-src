@@ -6,10 +6,12 @@ Some samples may come purely as data (editor projects). Other samples require cu
 
 ## Getting Started
 
-The [Testing Chambers](testing-chambers.md) project is a good start point to see what you can do purely through the editor and using scripting. No custom C++ code is used in this project.
+The [Testing Chambers](testing-chambers.md) project is a good starting point to see what you can do purely through the editor and using [scripting](../docs/custom-code/custom-code-overview.md). No C++ code is used in this project.
 
 If you want to see how you can extend the engine with your own C++ code through a plugin, have a look at the [Sample Game Plugin](sample-game-plugin.md) or the [RTS Sample](rts.md). The former shows just the basics to get your own code running. The latter goes a bit further and shows how you can make a simple game.
 
 ## See Also
 
 * [Videos](../getting-started/videos.md)
+* [Custom Code](../docs/custom-code/custom-code-overview.md)
+* [Screenshots](screenshots.md)

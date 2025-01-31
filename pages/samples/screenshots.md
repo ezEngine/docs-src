@@ -1,6 +1,6 @@
 # Screenshots
 
-For tutorial videos, [have a look here](../getting-started/videos.md).
+For videos, [have a look here](../getting-started/videos.md).
 
 ## Tools
 
@@ -15,6 +15,8 @@ For tutorial videos, [have a look here](../getting-started/videos.md).
 ## Samples
 
 ![RTS](media/rts2.jpg)
+
+![Store](media/store-sample-editor.jpg)
 
 ## UI
 

@@ -40,6 +40,12 @@ Place [occluder components](../graphics/occluder-component.md) inside large obje
 
 Use the occlusion buffer visualization to inspect how well occluders are placed around your level. Use the CVar `Spatial.Culling.ShowStats` to see how many objects are rendered at any given time to get a feeling for how well occlusion culling works in your scene.
 
+## Video: Frustum and Occlusion Culling
+
+Click the image below to watch the video:
+
+[![video](https://img.youtube.com/vi/J2peIHEI3as/0.jpg)](https://www.youtube.com/watch?v=J2peIHEI3as)
+
 ## See Also
 
 * [Profiling](profiling.md)

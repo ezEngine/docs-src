@@ -24,6 +24,12 @@ The [Visual Script Class Asset](visual-script-class-asset.md) may also be used t
 
 Most visual script code actually calls existing C++ functions. A custom virtual machine ministrates those calls. The execution is relatively fast and shouldn't be a concern for the intended use cases. It is more likely that you run into the limitations of *editing the script*, than performance bottlenecks.
 
+## Video: Introduction to Visual Scripting
+
+Click the image below to watch the video:
+
+[![video](https://img.youtube.com/vi/0gVEXeWBF2Q/0.jpg)](https://www.youtube.com/watch?v=0gVEXeWBF2Q)
+
 ## See Also
 
 * [Custom Code](../custom-code-overview.md)

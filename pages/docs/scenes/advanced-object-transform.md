@@ -66,6 +66,12 @@ Now our small patch of plants looks much less artificial:
 
 You could go even further and apply a random scale to each object, as well.
 
+## Video: How to use the Delta Transform Feature
+
+Click the image below to watch the video:
+
+[![video](https://img.youtube.com/vi/FJS1SmEf9A4/0.jpg)](https://www.youtube.com/watch?v=FJS1SmEf9A4)
+
 ## See Also
 
 * [Editing Gizmos](gizmos.md)

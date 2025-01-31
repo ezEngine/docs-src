@@ -3,6 +3,10 @@
 If you are interested in learning more about ezEngine, this page lists a couple of interesting videos.
 For the full list of available videos, see the [ezEngine YouTube channel](https://www.youtube.com/@ezEngine).
 
+## ezEngine Feature Trailer
+
+[![video](https://img.youtube.com/vi/S342o8ZmPdA/0.jpg)](https://www.youtube.com/watch?v=S342o8ZmPdA)
+
 ## ezEngine Overview
 
 [![video](https://img.youtube.com/vi/fN5GIquWZLg/0.jpg)](https://www.youtube.com/watch?v=fN5GIquWZLg)
@@ -47,6 +51,6 @@ For the full list of available videos, see the [ezEngine YouTube channel](https:
 
 [![video](https://img.youtube.com/vi/q9_bGgBjENA/0.jpg)](https://www.youtube.com/watch?v=q9_bGgBjENA)
 
-## Scripting with TypeScript
+## Introduction to Visual Scripting
 
-[![video](https://img.youtube.com/vi/T1eDenHWPKc/0.jpg)](https://www.youtube.com/watch?v=T1eDenHWPKc)
+[![video](https://img.youtube.com/vi/0gVEXeWBF2Q/0.jpg)](https://www.youtube.com/watch?v=0gVEXeWBF2Q)

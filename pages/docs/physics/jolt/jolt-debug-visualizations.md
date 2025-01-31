@@ -38,6 +38,12 @@ These debug draw [CVars](../../debugging/cvars.md) are available:
 
 ![Jolt Debug Visualization](media/jolt-debug-vis.jpg)
 
+## Video: How To Visualize Physics Colliders
+
+Click the image below to watch the video:
+
+[![video](https://img.youtube.com/vi/ej4BWrucrFw/0.jpg)](https://www.youtube.com/watch?v=ej4BWrucrFw)
+
 ## See Also
 
 * [Jolt Integration](jolt-overview.md)

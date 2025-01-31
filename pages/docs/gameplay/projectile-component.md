@@ -46,8 +46,13 @@ There is a second entry in this array, for when the bullet hits *water*. The mai
 
 With these settings you can build a wide variety of interesting projectiles, especially if you use all the flexibility of surfaces and surface interactions. Still, there are many things that are not possible, and you are encouraged to write your own projectile component(s) that suit your needs. The code of the `ezProjectileComponent` is a good starting point for inspiration.
 
-## See Also
+## Video: How to Make Projectiles
 
+Click the image below to watch the video:
+
+[![video](https://img.youtube.com/vi/bU22XRaMQ1w/0.jpg)](https://www.youtube.com/watch?v=bU22XRaMQ1w)
+
+## See Also
 
 * [Surfaces](../materials/surfaces.md)
 * [Collision Layers](../physics/jolt/collision-shapes/jolt-collision-layers.md)

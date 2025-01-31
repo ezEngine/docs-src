@@ -2,6 +2,12 @@
 
 When you have a scene open in the editor, there are multiple ways how you can test it.
 
+## Video: How to Simulate and Play Your Game
+
+Click the image below to watch the video:
+
+[![video](https://img.youtube.com/vi/vc5iJkdm9HU/0.jpg)](https://www.youtube.com/watch?v=vc5iJkdm9HU)
+
 ## Simulate Mode
 
 The *Simulate Mode* is activated with the *Play* button in the toolbar or by pressing the `F5` key. It is deactivated with the *Stop* button or by pressing `Shift+F5`.
@@ -21,6 +27,12 @@ The *simulate mode* is useful to quickly check how some object behaves. It can a
 While the simulation is active, select the objects that you are interested in and press `K` (or *Scene > Utilities > Keep Simulation Changes*). Once you stop the simulation, an undoable action is executed that moves the selected objects to the recorded location.
 
 You can record multiple *keep changes* actions during one simulation.
+
+#### Video: How to Keep Simulation Changes
+
+Click the image below to watch the video:
+
+[![video](https://img.youtube.com/vi/wuKUzgac1Bk/0.jpg)](https://www.youtube.com/watch?v=wuKUzgac1Bk)
 
 ## Play the Game Mode
 

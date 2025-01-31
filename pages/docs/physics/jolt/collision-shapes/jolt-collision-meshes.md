@@ -48,7 +48,9 @@ The image below shows the original mesh and a simplified collider mesh that has 
 
 ## Visualizing Collision Meshes
 
-Sometimes you want to visualize the collision mesh of an object within a scene. One way is to use the [Jolt debug visualizations](../jolt-debug-visualizations.md). However, for some use cases you can also just attach a *Collision Mesh Visualizer* component. This renders the collision mesh into your scene the same way as in the images above.
+To visualize *all* colliders in a scene, see [Jolt Debug Visualizations](../jolt-debug-visualizations.md).
+
+However, for some use cases you can also just attach a *Collision Mesh Visualizer* component. This renders the collision mesh into your scene the same way as in the images above.
 
 ## See Also
 

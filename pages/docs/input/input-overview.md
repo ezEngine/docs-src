@@ -52,8 +52,6 @@ In such a scenario, the game state would call `ezInputManager::GetInputActionSta
 
 Therefore, if you write a custom game state to show a main menu, you would use this direct access to hook up the input system to the UI navigation.
 
-Direct access to `ezInputManager` is (currently) not possible through [TypeScript components](../custom-code/typescript/typescript-overview.md).
-
 ### Component Based Input Access
 
 In games where the player does have a physical presence, such as creatures or vehicles, and they may swap between those, it might be difficult to retrieve the input in a [game state](../runtime/application/game-state.md) and then use it to control any one of the many vehicles.
@@ -64,7 +62,7 @@ If you write a [custom component](../custom-code/cpp/custom-cpp-component.md) fo
 
 Another option, though, is to use an [input component](input-component.md). All that this component does, is to check for state changes of input actions from a selected *input set* and send those state changes as [messages](../runtime/world/world-messaging.md) to its sub-tree of game objects and components. Any component that handles this message type, can react to the input.
 
-This message based approach is how [TypeScript components](../custom-code/typescript/typescript-overview.md) are able to handle input. Since the input messages are delivered to all child objects, you can have multiple scripts or other components which each react to different input. For example one script can forward movement related input to a [character controller](../physics/jolt/special/jolt-character-controller.md) and another script can handle input for weapons.
+This message based approach is how [script components](../custom-code/visual-script/script-component.md) are able to handle input. Since the input messages are delivered to all child objects, you can have multiple scripts or other components which each react to different input. For example one script can forward movement related input to a [character controller](../physics/jolt/special/jolt-character-controller.md) and another script can handle input for weapons.
 
 ## Setting Up Input Sets
 

@@ -89,10 +89,6 @@ Print("Hello Console")
 
 If you need to call a certain function repeatedly, you can [bind the call to a key](#binding-keys) or use F2 and F3 to repeat it, as long as it is the last or second-to-last command in your history.
 
-### TypeScript
-
-You can also register custom console functions through the [TypeScript API](../custom-code/typescript/ts-api.md#ezdebug).
-
 ## See Also
 
 * [CVars](cvars.md)

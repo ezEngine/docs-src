@@ -1,5 +1,5 @@
 custom-code-overview.md|Custom Code
 cpp|C++
-typescript|TypeScript
+angelscript|AngelScript
 visual-script|Visual Script
 game-logic|Game Logic

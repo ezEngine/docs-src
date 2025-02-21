@@ -2,7 +2,7 @@
 
 The rendering in EZ is optimized to handle large and complex data efficiently. However, to achieve this you must implement certain patterns, and to get started a non-trivial amount of code is involved. To visualize simple things, the `ezDebugRenderer` is provided. This class allows you to quickly add debug visualizations to your game, with just a few lines of code.
 
-This interface is also (partially) available through [TypeScript](../custom-code/typescript/typescript-overview.md).
+This interface is also (partially) available through [AngelScript (TODO)](../custom-code/angelscript/angelscript-overview.md).
 
 ![Debug rendering](media/debug-rendering.jpg)
 
@@ -14,7 +14,7 @@ The `ezDebugRenderer` class has a number of static functions that you can call f
 
 Every function in `ezDebugRenderer` takes an `ezDebugRendererContext` as its first parameter. This specifies where the debug geometry should be rendered. You can either pass in an `ezViewHandle` or an `ezWorld` here. If you pass in a view handle, the geometry will only be rendered in the corresponding `ezView`, meaning you can have the debug geometry only appear in a specific render target. If you pass in an `ezWorld`, the geometry appears in all views that render that world.
 
-It is more common to bind debug geometry to an entire `ezWorld`, such that it appears in any view. The [TypeScript](../custom-code/typescript/typescript-overview.md) binding omits the `ezDebugRendererContext` parameter and always binds it to the world.
+It is more common to bind debug geometry to an entire `ezWorld`, such that it appears in any view.
 
 ### Debug Geometry Types
 
@@ -67,4 +67,4 @@ The debug renderer is meant for quickly visualizing data. If the data potentiall
 * [Debugging C++ Code](debug-cpp.md)
 * [Shader Debugging](../graphics/shaders/shader-debugging.md)
 * [Jolt Debug Visualizations](../physics/jolt/jolt-debug-visualizations.md)
-* [Custom Code with TypeScript](../custom-code/typescript/typescript-overview.md)
+* [Custom Code with AngelScript (TODO)](../custom-code/angelscript/angelscript-overview.md)

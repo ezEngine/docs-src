@@ -39,7 +39,7 @@ You have to select a *state type* for every node in your state machine.
 
 ### Send Message State
 
-When the *Send Message State* gets activated (transitioned into) or deactivated (transitioned out of), it sends the `ezMsgStateMachineStateChanged` [event message](../../runtime/world/world-messaging.md) to the [game object](../../runtime/world/game-objects.md) on which the executing [state machine component](state-machine-component.md) is attached. Thus other components, such as [TypeScript components](../typescript/typescript-overview.md) can listen for this message and react accordingly.
+When the *Send Message State* gets activated (transitioned into) or deactivated (transitioned out of), it sends the `ezMsgStateMachineStateChanged` [event message](../../runtime/world/world-messaging.md) to the [game object](../../runtime/world/game-objects.md) on which the executing [state machine component](state-machine-component.md) is attached. Thus other components, such as [AngelScript components (TODO)](../angelscript/angelscript-overview.md) can listen for this message and react accordingly.
 
 The message can be sent with a delay. Also, if this state type is configured to send neither a message on enter, nor on exit, it effectively does nothing and can be used for states that don't require further action.
 

@@ -8,7 +8,7 @@ The component is typically attached to the same object as the [camera component]
 
 When it finds a suitable grab point, it attaches a [constraint](../constraints/jolt-constraints.md) to an object that is specified to be the pivot point (see `AttachTo` property). That object has to have a [**kinematic** actor](../actors/jolt-dynamic-actor-component.md) and a dummy [shape](../collision-shapes/jolt-shapes.md). The joint will then pull the grabbed item towards it and try to align its orientation according to the grabbed anchor.
 
-The grabbed item can then be dropped, or thrown away. All actions must be triggered from code, either [C++](../../../custom-code/cpp/cpp-overview.md) or [TypeScript](../../../custom-code/typescript/typescript-overview.md).
+The grabbed item can then be dropped, or thrown away. All actions must be triggered [from code](../../../custom-code/custom-code-overview.md).
 
 The grabbed item still physically interacts with the environment. If such collisions hold the object too far back, the grab object component may decide to 'break' the joint and drop the object. In this case a `ezMsgPhysicsJointBroke` event message is sent.
 

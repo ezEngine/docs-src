@@ -2,7 +2,7 @@
 
 For an introduction what a message is and how it fits into the overall picture, see [The World / Scenegraph System](world-overview.md).
 
-This documentation focuses on the C++ `ezMessage` class. The functionality exposed through other mechanisms, such as [TypeScript](../../custom-code/typescript/typescript-overview.md), may be more limited in scope, but ultimately maps to the C++ implementation.
+This documentation focuses on the C++ `ezMessage` class. The functionality exposed through other mechanisms, such as [AngelScript (TODO)](../../custom-code/angelscript/angelscript-overview.md), may be more limited in scope, but ultimately maps to the C++ implementation.
 
 Messages can be sent from any code. They can only be received by [components](components.md), though, as the messaging system is implemented by `ezWorld`.
 
@@ -35,7 +35,7 @@ This is all that is needed to send and receive the message in C++ code.
 
 > **Note:**
 >
-> The code above does not add reflection for each message member, as that is not necessary to make this message work. However, if you want to send and receive this message from non-C++ code, for example from [TypeScript](../../custom-code/typescript/typescript-overview.md), then reflecting the members is necessary for the language binding to work. Be aware though, that language bindings may not support all types of reflected members and would ignore those.
+> The code above does not add reflection for each message member, as that is not necessary to make this message work. However, if you want to send and receive this message from non-C++ code, for example from [Visual Scripts](../../custom-code/visual-script/visual-script-overview.md), then reflecting the members is necessary for the language binding to work. Be aware though, that language bindings may not support all types of reflected members and would ignore those.
 
 ## Message Handlers
 
@@ -103,11 +103,11 @@ Regular messages are used to 'instruct' components to do something. For example 
 
 *Event messages* on the other hand, are used to 'inform' an object hierarchy that *something happened* inside that hierarchy. An example would be `ezMsgDamage` which is used to inform an object that it received damage. The difference is mainly in the routing. Regular messages are either sent directly to the recipient or to all its children. Event messages are delivered to a node or its closest **parent node** that has a message handler for this type of message.
 
-The idea is, that for complex objects you typically want to have a single script at the top of the hierarchy that deals with all everything that's happening below. For example an NPC may have many different child nodes, but if an `ezMsgDamage` is sent to any of them, the script at the top should decide what to do about it.
+The idea is, that for complex objects you typically want to have a single script at the top of the hierarchy that deals with everything that's happening below. For example an NPC may have many different child nodes, but if an `ezMsgDamage` is sent to any of them, the script at the top should decide what to do about it.
 
 Any message can be sent as an *event* by using `ezGameObject::SendEventMessage()`, however, messages that are meant to be always treated as events should derive from `ezEventMessage`, so that they include additional information.
 
-Finally, there is the `ezEventMessageHandlerComponent` interface, which is only implemented by very few component types. Out of the box, only by `ezTypeScriptComponent` and `ezVisualScriptComponent`.
+Finally, there is the `ezEventMessageHandlerComponent` interface, which is only implemented by very few component types, for example the [Script Component](../../custom-code/visual-script/script-component.md).
 
 When an `ezEventMessageHandlerComponent` is attached to a node, it will receive *all* event messages below that node hierarchy, no matter whether it has a message handler for it or not. It therefore prevents event messages from leaving the hierarchy. If an event message is supposed to 'bubble up' further, the message handler component must either forward the message manually or be configured to pass-through all unhandled event messages.
 

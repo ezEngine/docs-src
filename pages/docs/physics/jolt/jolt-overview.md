@@ -10,7 +10,7 @@ Support for Jolt is enabled by default on all platforms. It can be disabled in t
 
 ## Working with Jolt
 
-The most important Jolt functionality is exposed through components, as well as through [TypeScript](../../custom-code/typescript/typescript-overview.md).
+The most important Jolt functionality is exposed through components.
 
 When you write custom C++ code, you can access the most important functionality, like raycasts and shape queries, through the abstract `ezPhysicsWorldModuleInterface`, which is implementation independent. If you need to access Jolt features that are not exposed in EZ, you can cast that interface to `ezJoltWorldModule` and directly work with the `JPH::PhysicsSystem`. For Jolt details, refer to its [documentation](https://github.com/jrouwe/JoltPhysics).
 

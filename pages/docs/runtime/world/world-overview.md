@@ -50,7 +50,7 @@ See the [object lifetime chapter](object-lifetime.md) for details.
 
 A large part of writing your own game, is to write your own components. If you need maximum control and performance, you need to write your [components in C++](../../custom-code/cpp/custom-cpp-component.md).
 
-You can also write components in [TypeScript](../../custom-code/typescript/typescript-overview.md). Their functionality is very similar but a bit more limited. It is possible to use both and communicate between Typescript and C++ components using [messages](world-messaging.md).
+You can also write components in [VisualScript](../../custom-code/visual-script/visual-script-overview.md) or [AngelScript (TODO)](../../custom-code/angelscript/angelscript-overview.md). Their functionality is very similar but more limited. It is possible to mix their usage and communicate between script components and C++ components using [messages](world-messaging.md).
 
 ## Messaging
 

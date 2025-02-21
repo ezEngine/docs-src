@@ -18,7 +18,7 @@ EZ is also a very good fit for students interested in learning how modern game e
 
 ezEngine is mainly developed on Windows. The renderer currently uses DX11. A Vulkan port is in development and the tools are being ported to Linux as well, however this is still in the early phase and not yet productively usable.
 
-It is also not comparable in feature completeness to commercial offerings such as Unreal or Unity. Although it does support scripting game logic both with TypeScript and Visual Scripting, it is not meant for low-code or no-code development. The scripting capabilities are limited, for many game ideas you need to be comfortable writing C++ code.
+It is also not comparable in feature completeness to commercial offerings such as Unreal or Unity. Although it does support scripting game logic both with AngelScript and Visual Scripting, it is not meant for low-code or no-code development. The scripting capabilities are limited, for many game ideas you need to be comfortable writing C++ code.
 
 ## Getting Started
 

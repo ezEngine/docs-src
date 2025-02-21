@@ -2,7 +2,7 @@
 
 For an introduction what a game object is and how it fits into the overall picture, see [The World / Scenegraph System](world-overview.md).
 
-This documentation focuses on the C++ `ezGameObject` class. The functionality exposed through other mechanisms, such as [TypeScript](../../custom-code/typescript/typescript-overview.md), may be more limited in scope, but ultimately maps to the C++ implementation.
+This documentation focuses on the C++ `ezGameObject` class. The functionality exposed through other mechanisms, such as [Visual Scripts](../../custom-code/visual-script/visual-script-overview.md), may be more limited in scope, but ultimately maps to the C++ implementation.
 
 ## Creating Game Objects
 

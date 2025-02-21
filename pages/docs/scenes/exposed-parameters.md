@@ -1,6 +1,6 @@
 # Exposed Parameters
 
-Some [asset types](../assets/assets-overview.md) support so called *exposed parameters*. That means that an asset, such as a [particle effect](../effects/particle-effects/particle-effects-overview.md), a [prefab](../prefabs/prefabs-overview.md) or a [script](../custom-code/typescript/typescript-overview.md) may provide parameters, that can be set through a corresponding component, such that each instance of the asset acts differently.
+Some [asset types](../assets/assets-overview.md) support so called *exposed parameters*. That means that an asset, such as a [particle effect](../effects/particle-effects/particle-effects-overview.md), a [prefab](../prefabs/prefabs-overview.md) or a [script](../custom-code/visual-script/visual-script-overview.md) may provide parameters, that can be set through a corresponding component, such that each instance of the asset acts differently.
 
 As an example, particle effects may expose a parameter that allows you to adjust their color. Now every time you add that particle effect to a scene, you can select the color for that particular instance, through the particle effect component. Similarly, scripts can expose parameters, which allow you to configure the starting conditions of the script.
 
@@ -36,8 +36,7 @@ If a prefab contains an object that requires an [object reference](object-refere
 
 ## See Also
 
-
 * [Object References](object-references.md)
 * [Particle Effect Component](../effects/particle-effects/particle-effect-component.md)
-* [TypeScript Component](../custom-code/typescript/ts-component.md)
 * [Prefabs](../prefabs/prefabs-overview.md)
+* [Script Component](../custom-code/visual-script/script-component.md)

@@ -2,7 +2,7 @@
 
 For an introduction what a component is and how it fits into the overall picture, see [The World / Scenegraph System](world-overview.md).
 
-This documentation focuses on the C++ `ezComponent` class. The functionality exposed through other mechanisms, such as [TypeScript](../../custom-code/typescript/typescript-overview.md), may be more limited in scope, but ultimately maps to the C++ implementation.
+This documentation focuses on the C++ `ezComponent` class. The functionality exposed through other mechanisms, such as [AngelScript (TODO)](../../custom-code/angelscript/angelscript-overview.md), may be more limited in scope, but ultimately maps to the C++ implementation.
 
 Components are the fundamental building blocks with which to make the engine do things. Components act as glue between systems like the renderer and the user. They expose the available functionality to the editor and they control when and how each system is used. This document describes how components work.
 
@@ -108,7 +108,7 @@ The *attributes* section can additionally specify type specific properties. For 
 
 The *message handler* section is important to enable [messaging](world-messaging.md).
 
-The *functions* section is used to expose certain member functions to the reflection system, such that script bindings, such as [TypeScript](../../custom-code/typescript/typescript-overview.md) can call these functions.
+The *functions* section is used to expose certain member functions to the reflection system, such that script bindings, such as [Visual Scripts](../../custom-code/visual-script/visual-script-overview.md) can call these functions.
 
 <!-- TODO: at some point 'we' must document all the available options *sigh* -->
 
@@ -228,12 +228,12 @@ void DemoComponent::DeserializeComponent(ezWorldReader& inout_stream)
 You can extend the engine with custom components:
 
 * [Custom Components with C++](../../custom-code/cpp/custom-cpp-component.md)
-* [Custom Components with TypeScript](../../custom-code/typescript/custom-ts-components.md)
+* [Custom Components with AngelScript (TODO)](../../custom-code/angelscript/as-components.md)
+* [Visual Script Class Asset](../../custom-code/visual-script/visual-script-class-asset.md)
 
 For examples, have a look at the [Sample Game Plugin](../../../samples/sample-game-plugin.md).
 
 ## See Also
-
 
 * [Custom Code](../../custom-code/custom-code-overview.md)
 * [The World / Scenegraph System](world-overview.md)

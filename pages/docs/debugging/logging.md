@@ -15,10 +15,6 @@ The log is accessible through the `ezLog` class. There are multiple functions to
 
 Log messages can be *grouped* using the `EZ_LOG_BLOCK` macro.
 
-### TypeScript
-
-Information can also be logged through the [TypeScript API](../custom-code/typescript/ts-api.md#ezlog).
-
 ## Inspecting the Log
 
 There are multiple ways to see the content of the log:

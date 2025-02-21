@@ -24,9 +24,9 @@ If you want to do multiplayer, you have to implement that aspect yourself. This 
 
 Yes, EZ has [visual scripting](../docs/custom-code/visual-script/visual-script-overview.md). You can do simple level logic, like "if that lever is pulled, open that door". You shouldn't expect to use it for larger features, though. We are generally not convinced that visual scripting is a great way to program (in no engine, no matter how good their tools are). However, for taking care of smaller tasks and as glue code between systems, it is a great way to get things done that would otherwise be quite cumbersome.
 
-## Scripting with TypeScript
+## Scripting with AngelScript
 
-We have a [TypeScript](../docs/custom-code/typescript/typescript-overview.md) binding which is pretty decent. The entire game logic in the [Testing Chambers](../samples/testing-chambers.md) project is done with this.
+We have an [AngelScript (TODO)](../docs/custom-code/angelscript/angelscript-overview.md) binding which is pretty decent. The entire game logic in the [Testing Chambers](../samples/testing-chambers.md) project is done with this.
 
 ## Terrain
 

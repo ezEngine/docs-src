@@ -282,13 +282,11 @@
 ### [Engine Plugins](custom-code/cpp/engine-plugins.md)
 ### [Custom Components with C++](custom-code/cpp/custom-cpp-component.md)
 ### [Hot Reloading C++ Game Plugins in the Editor](custom-code/cpp/cpp-code-reload.md)
-## TypeScript
-### [Custom Code with TypeScript](custom-code/typescript/typescript-overview.md)
-### [TypeScript Asset](custom-code/typescript/ts-asset.md)
-### [Custom Components with TypeScript](custom-code/typescript/custom-ts-components.md)
-### [TypeScript API](custom-code/typescript/ts-api.md)
-### [Messaging in TypeScript Code](custom-code/typescript/ts-messaging.md)
-### [TypeScript Component](custom-code/typescript/ts-component.md)
+## AngelScript
+### [Custom Code with AngelScript (TODO)](custom-code/angelscript/angelscript-overview.md)
+### [AngelScript Asset (TODO)](custom-code/angelscript/as-asset.md)
+### [Custom Components with AngelScript (TODO)](custom-code/angelscript/as-components.md)
+### [Messaging in AngelScript Code (TODO)](custom-code/angelscript/as-messaging.md)
 ## Visual Script
 ### [Script Component](custom-code/visual-script/script-component.md)
 ### [Visual Script Class Asset](custom-code/visual-script/visual-script-class-asset.md)

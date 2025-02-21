@@ -28,10 +28,9 @@ The integration of RmlUi into ezEngine is functional, but still a work-in-progre
 
 Also, currently you need to work directly with the RmlUi C++ code to interact with the UI. We may add convenience functionality to make simple use cases of GUIs easier.
 
-There is no TypeScript binding for RmlUi. Most likely this will never change, however, if we get around to adding some convenience features, that may make it possible to use a limited feature set from script code.
+There is no script binding for RmlUi. Most likely this will never change, however, if we get around to adding some convenience features, that may make it possible to use a limited feature set from script code.
 
 ## See Also
-
 
 * [Ingame UI](ui.md)
 * [ImGui](imgui.md)

@@ -3,7 +3,7 @@
 There are currently three ways to write custom code:
 
 1. [Custom Code with C++](cpp/cpp-overview.md)
-1. [Custom Code with TypeScript](typescript/typescript-overview.md)
+1. [Custom Code with AngelScript (TODO)](angelscript/angelscript-overview.md)
 1. [Custom Code with Visual Scripts](visual-script/visual-script-overview.md)
 
 ## C++
@@ -12,11 +12,11 @@ Extending the engine with C++ is the most versatile and efficient. With C++ you 
 
 C++ obviously has the downsides of longer compilation times, and live updating code is not possible. There is a way for game plugins to be modifiable while the editor runs, and the editor can fully shut down and reload its engine process, which does enable a form of [live reloading of C++ code](cpp/cpp-code-reload.md).
 
-## TypeScript
+## AngelScript
 
-The TypeScript integration allows you to write custom components. The integration provides access to the most important aspects that are needed for game code. C++ components can be accessed, as long as they expose their functionality through [reflection](../runtime/reflection-system.md). TypeScript is very useful for game logic and allows to quickly create complex [prefabs](../prefabs/prefabs-overview.md). TypeScript is transpiled to JavaScript code, which is interpreted in a VM. Its performance is therefore far worse than C++. However, migrating a critical component from TypeScript to C++ at a later stage is possible.
+The AngelScript integration allows you to write custom components. The integration provides access to the most important aspects that are needed for game code. C++ components can be accessed, as long as they expose their functionality through [reflection](../runtime/reflection-system.md). AngelScript is very useful for game logic and allows to quickly create complex [prefabs](../prefabs/prefabs-overview.md). AngelScript is compiled to bytecode, which is interpreted in a VM. Its performance is decent, though, of course, slower than C++. However, migrating a critical component from AngelScript to C++ at a later stage is possible and usually straight-forward, due to the nearly identical syntax.
 
-TypeScript code is updated every time you [run a scene](../editor/run-scene.md), which allows for quick iteration times.
+AngelScript code is updated every time you [run a scene](../editor/run-scene.md), which allows for quick iteration times.
 
 ## Visual Scripting
 

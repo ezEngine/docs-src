@@ -6,6 +6,16 @@ This page lists which third party code and data is used by EZ.
 >
 > Before you distribute any project, please check the licensing conditions for all used components. The list below tries to be exhaustive and up-to-date for components directly used by EZ, but this is only provided for your convenience and we give no guarantee for correctness. It is still your responsibility to make absolutely certain that your project doesn't violate any licensing conditions from third-party components used directly or indirectly in your project.
 
+## AngelScript
+
+Link: <https://www.angelcode.com/angelscript>
+
+Compile switch: **EZ_3RDPARTY_ANGELSCRIPT_SUPPORT**
+
+AngelScript is an extremely flexible cross-platform library designed to allow applications to extend their functionality through external scripts.
+
+It is non-essential for the engine, but adds powerful functionality for writing [custom code with AngelScript](../custom-code/angelscript/angelscript-overview.md).
+
 ## Assimp
 
 Link: [http://www.assimp.org](http://www.assimp.org)

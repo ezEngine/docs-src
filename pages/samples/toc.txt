@@ -1,6 +1,7 @@
 samples-overview.md
 screenshots.md
 testing-chambers.md
+basic-fps-template.md
 monster-attack
 pacman.md
 store-sample.md

@@ -4,43 +4,45 @@ The term *project* refers to one game or application, its global settings, and a
 
 ## Video: How to create a project
 
+**Note:** This video is slightly outdated, as there is now a creation wizard that makes things even easier.
+
 [![video](https://img.youtube.com/vi/5wskaNSRbzE/0.jpg)](https://www.youtube.com/watch?v=5wskaNSRbzE)
 
 ## Creating a Project
 
 You can use ezEngine entirely without the editor. In that case, you do not need to create a project, at all. Your [application](../runtime/application/application.md) is your project and you set up things like the [fileSystem](../runtime/filesystem.md), the [plugins](../custom-code/cpp/engine-plugins.md) and so on, entirely from code.
 
-It is more convenient, though, to maintain your project through the editor. To create a new project, open the editor's [dashboard](../editor/dashboard.md) (*Project > Show Dashboard*) and select **New** from the top-right corner:
+It is more convenient, though, to maintain your project through the editor. To create a new project, select `Project > Create Project...`. 
 
-![Dashboard](../editor/media/dashboard-projects.png)
+A creation wizard will show up:
 
-The dialog will ask you to select a **new folder** for your project:
+![Create a Project](media/project-wizard-1.png)
 
-![Create a Project](media/editor-create-project.png)
+Choose a name for your project and a location where it should be stored. The project name is used to create a new folder. 
 
-The name of the folder represents the name of your project. This name is stored nowhere else, you can rename your project later simply by renaming the folder.
-
-### Basic Setup
-
-Now you have a new, blank project. The first thing you should do is to check the [project settings](project-settings.md). Specifically, if you want to share assets between multiple projects, you need to put those assets into a dedicated folder and then add that folder to your project as a [data directory](data-directories.md).
-
-The second thing you should check is which [plugins](plugin-selection.md) you want to use, so that you have all desired features available.
-
-### Create a Scene
-
-Select *File > Create...* and create a [document](../editor/editor-documents.md) of type `ezScene`. The new scene will be filled with some default objects and you should see something like this:
-
-![New Scene](media/new-project-scene.jpg)
-
-If you don't see the [asset browser](../assets/asset-browser.md), make sure to open it. You can now [edit your scene](../scenes/scene-editing.md). When you need more assets to play with, you need to [import them](../assets/import-assets.md) into your project. Once you have something in your scene that could *do something*, you can [test your scene](../editor/run-scene.md). A good starting point for that is to simply attach a `Rotor` component to a mesh. A fun next step is to let objects fall down using [physics](../physics/jolt/jolt-overview.md) (hint: you need a `Dynamic Actor` component and a `Box Shape` component)
-
-> **TIP**
+> **Note:**
 >
-> If you want new documents to always be populated with some default state, have a look at [template documents](../editor/editor-template-documents.md).
+> The name of the folder represents the name of your project. This name is stored nowhere else, you can rename your project later simply by renaming the folder.
 
-## Project-wide options
+### Project Templates
 
-Plugins may add project wide options. Not all options may be exposed through editor UI, there are a few things that can (at the moment) only be configured through config files or directly from code. Most options are stored in [OpenDDL](https://openddl.org/) format or other human-readable files, and you can edit them directly. Some options to be aware of are:
+In the next step you can choose a project template. If you choose a blank project, you get a mostly empty project and need to set up details yourself (see below).
+
+If you choose a project template, many things will be configured up front, and your project will be populated with sample assets, that show how to achieve certain things.
+
+The following project templates are currently available:
+
+* [Basic FPS Project Template](../../samples/basic-fps-template.md)
+
+## Configuring a Blank Project
+
+If you choose to create a blank project, the creation wizard asks you to select which [plugins](plugin-selection.md) to use, since this also determines which [asset types](../assets/assets-overview.md) will be available. This can be adjusted later.
+
+The editor will create a default 'Main' [scene](../scenes/scene-editing.md) for you, but other than that, only the assets from the `Base` [data directory](data-directories.md) are available.
+
+## Project-Wide Options
+
+You should be aware of these [project settings](project-settings.md), at some point you may need to adjust them for your purposes.
 
 * [Data directories](data-directories.md)
 * [Engine plugins](../custom-code/cpp/engine-plugins.md)
@@ -49,6 +51,10 @@ Plugins may add project wide options. Not all options may be exposed through edi
 * [Tags](tags.md)
 * [Window Configuration](project-settings.md#window-configuration)
 * [Asset profiles](../assets/asset-profiles.md)
+
+Plugins may add additional options. 
+
+Usually you should copy all required assets directly into your project folder, but in case that you want to share assets between multiple projects, you can put those assets into a dedicated folder and add that folder to your project as a [data directory](data-directories.md).
 
 ## See Also
 

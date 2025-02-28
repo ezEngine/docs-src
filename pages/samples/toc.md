@@ -1,6 +1,7 @@
 # [Samples](samples-overview.md)
 # [Screenshots](screenshots.md)
 # [Testing Chambers](testing-chambers.md)
+# [Basic FPS Project Template](basic-fps-template.md)
 # Monster Attack
 ## [Monster Attack Sample](monster-attack/monster-attack.md)
 ## [MA Devlog 1 - Intro](monster-attack/devlog-1.md)

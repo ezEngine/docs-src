@@ -108,14 +108,15 @@ The play/pause button is for switching **background processing** on and off. If 
 
 ## Drag and Drop
 
-You can drag assets from the asset browser into other documents, such as [scenes](../scenes/scene-editing.md). For mesh and prefab assets this will instantiate the asset (ie. create a new node that references the asset). For [materials](../materials/materials-overview.md) this may assign the material to the object that you drag it onto. Not all asset types support drag and drop. Also dragging an asset into the 3D viewport can have a different effect than dragging it into the scene tree.
+You can drag assets from the asset browser into other documents, such as [scenes](../scenes/scene-editing.md). For mesh and prefab assets this will instantiate the asset (ie. create a new node that references the asset). For [materials](../materials/materials-overview.md) this may assign the material to the object that you drag it onto. Not all asset types support drag and drop.
+
+When dragging assets directly into the scene tree, by default no sub-object gets created, instead the component is attached directly to the target object. Unless you hold down `Ctrl`, in which case the sub-object gets created anyway.
 
 ## Video
 
 [![ezEngine Overview](https://img.youtube.com/vi/yDD6aQWgrqg/0.jpg)](https://www.youtube.com/watch?v=yDD6aQWgrqg)
 
 ## See Also
-
 
 * [Asset Curator](asset-curator.md)
 * [Editor Documents](../editor/editor-documents.md)

@@ -24,7 +24,7 @@ For common types of assets there is a more convenient way to quickly fill out th
 
 The editor references assets not by file path, but by **GUID** (**G**lobally **U**nique **ID**entifier). Each asset is assigned a GUID upon creation and the GUID never changes. That means an asset document can be renamed and moved to a different location on disk, and the editor will continue to find it. Similarly, the engine runtime will also locate the transformed asset files through the asset GUID (the [file system](../runtime/filesystem.md) takes care of translating a GUID to an actual path). This makes reorganizing the file structure easy and resilient to errors.
 
-For the rare case that you need to know the actual GUID of an asset, you can right click any asset document and select *Copy Asset GUID*.
+In case that you need to know the actual GUID of an asset, you can right click any asset document and select *Copy Asset GUID*.
 
 The only caveat is, that you should never duplicate an asset by actually copy and pasting an asset file, as this would result in two assets with the same GUID. The editor will try to detect and fix such cases, but it may not work out the way you planned. Instead use the *File > Save as...* functionality to create a copy of an asset with a different name. This will assign a new asset GUID to the new asset document.
 

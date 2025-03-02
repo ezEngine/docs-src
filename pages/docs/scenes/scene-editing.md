@@ -76,6 +76,18 @@ The fun really starts once you get to play around with physics. Read up on the [
 
 Once you have *one* physically correct falling box, you may want to have one hundred. Using [these tools](advanced-object-transform.md), you are only a few clicks away from that.
 
+### Active Parent
+
+Usually when you drag assets into a scene, they are created on the top level of the scene hierarchy. However, you may prefer that they get added into a specific group right away.
+
+To do so, you can specify one game object to be the **active parent**. To do so, right click on a game object in the scene tree and choose *Set Active Parent* or use the shortcut `Ctrl + Shift + A`.
+
+From now on, all objects that get created through asset drag & drop, of through *Create Object Here* (`Ctrl + Shift + X`) will be created below this object. The active parent object is indicated by a selection box icon next to it:
+
+![Active Parent](media/active-parent.png)
+
+To reset this, right click in the scene tree and choose *Clear Active Parent* (`Ctrl + Shift + C`).
+
 ### Scene Layers
 
 Once your scene starts to become bigger, you may want to use [scene layers](scene-layers.md) for better organization.

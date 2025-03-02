@@ -68,7 +68,7 @@ For videos, [have a look here](../getting-started/videos.md).
 
 ## AI
 
-![Navmesh generation](../docs/ai/RecastPlugin/media/navmesh.jpg)
+![Navmesh generation](../docs/ai/AiPlugin/media/ai-navmesh.jpg)
 
 ## Other
 

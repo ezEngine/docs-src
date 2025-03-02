@@ -240,10 +240,6 @@
 ### [Navmesh Obstacle Component](ai/AiPlugin/navmesh-obstacle-component.md)
 ### [Navmesh Path Test Component](ai/AiPlugin/navmesh-path-test-component.md)
 ### [Runtime Navmesh](ai/AiPlugin/runtime-navmesh.md)
-## Recastplugin
-### [Recast Navmesh Component](ai/RecastPlugin/recast-navmesh-component.md)
-### [Recast Navmesh](ai/RecastPlugin/recast-navmesh.md)
-### [Recast Integration](ai/RecastPlugin/recast.md)
 ## [Sensor Components](ai/sensor-components.md)
 # Ui
 ## [Ingame UI](ui/ui.md)

@@ -88,6 +88,10 @@ From now on, all objects that get created through asset drag & drop, of through 
 
 To reset this, right click in the scene tree and choose *Clear Active Parent* (`Ctrl + Shift + C`).
 
+> **Note:**
+>
+> The active parent does not affect copy & paste or duplicate. These operations always use the parent of the currently selected object, such that the new objects become siblings of the selected object.
+
 ### Scene Layers
 
 Once your scene starts to become bigger, you may want to use [scene layers](scene-layers.md) for better organization.

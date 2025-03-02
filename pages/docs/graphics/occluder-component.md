@@ -12,7 +12,8 @@ Occluders can be moved around dynamically, so you can attach it to a door and it
 
 ## Component Properties
 
-* `Extents`: The size of the box.
+* `Type`: The occluder geometry type. Quads are more efficient than boxes, since they only need to rasterize a single polygon.
+* `Extents`: The size of the occluder geometry.
 
 ## See Also
 

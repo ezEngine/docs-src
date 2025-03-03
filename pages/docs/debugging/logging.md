@@ -19,7 +19,7 @@ Log messages can be *grouped* using the `EZ_LOG_BLOCK` macro.
 
 There are multiple ways to see the content of the log:
 
-* In the [ezEditor](../../getting-started/editor-overview.md) you can open *Panels > Log* to see two logs, the one for the editor and the one from the engine process.
+* In the [ezEditor](../../getting-started/editor-overview.md) you can open *Panels > Log*. Note that the editor consists of [multiple processes](../editor/editor-plugins.md) and the log panel shows the logs of two of those processes combined, which may result in unexpected output. If you want to see the logs separately, open the [preferences](../editor/editor-settings.md) and uncheck `Application: General > Combined Editor and Engine Logs`.
 * [ezInspector](../tools/inspector.md) shows the log of the connected process.
 * The in-game [console](console.md) outputs the log messages.
 * By default all EZ [applications](../runtime/application/application.md) also write the log output to a `Log.htm` file in the application's *appdata* folder.

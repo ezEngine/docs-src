@@ -52,11 +52,17 @@ When you click the button, a context menu shows up with various options:
 
 ## Asset Transform
 
-Asset documents must be **transformed** to produce the actual runtime data that the engine uses. In an open asset document you can either press `CTRL+E` or click the green arrow button in the toolbar to export (transform) the asset.
+Asset documents must be **transformed** to produce the actual runtime data that the engine uses. The current transform status of an asset is displayed in a small widget:
+
+![Asset Widget](media/asset-widget.png)
+
+You can click this, to save and transform an asset. If there was any error, this will also display more details.
+
+Alternatively, you can press `CTRL+E` or click the green arrow button in the toolbar to export (transform) the asset.
 
 To transform all assets in a project, open the [asset browser](asset-browser.md) and click the **Transform All** button there.
 
-Optionally, you can also enable [background asset processing](asset-browser.md#background-processing-and-transform-state).
+Additionally, [background asset processing](asset-browser.md#background-processing-and-transform-state) is enabled by default and already takes care of transforming assets when they get saved. The only exception are [scenes](../editor/run-scene.md), which have to be exported manually.
 
 ## Asset Errors
 

@@ -32,7 +32,7 @@ In the following `LMB` refers to the *left mouse button*, `RMB` to the *right mo
 * `SHIFT + F`: Same as `F` but frames the object in all [views](../editor/editor-views.md) simultaneously
   * This can also be triggered by double-clicking an item in the *Scenegraph*
 
-* `ALT + LMB`: Orbit around the last *framed* object
+* `ALT + LMB`: Orbit around the focus point. To set the focus point, select and frame an object (with `F`).
 
 * `ALT + RMB`: Dolly (same as move forwards/backwards just with inverted mouse)
 

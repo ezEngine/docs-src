@@ -183,6 +183,7 @@ The **Expression** node lets you write complex mathematical expressions with mul
 ![Math Expression](media/vs-expression.png)
 
 The following built-in functions are available:
+
 * `abs(number)`
 * `saturate(number)` - clamps number to `[0; 1]` range
 * `sqrt(number)`
@@ -226,9 +227,29 @@ The following built-in functions are available:
 
 While event handlers react to messages, the script can also *send messages* to other objects. Messages can be sent directly to a component, or to a game object, in which case they may be broadcast to all components on that object, or even to the whole sub-tree of objects and components. If the `Send Mode` is set to *Event*, however, they are delivered not downwards in the hierarchy, but *upwards* along the parent chain of the target object, to the closest component that handles this type of message. See [this chapter](../../runtime/world/world-messaging.md#event-messages) for details.
 
+### Physics
+
+Various functions to use the physics engine.
+
+### Prefabs
+
+Utility functions to spawn prefabs.
+
 ### Property
 
 For reading and writing component properties.
+
+### Quat
+
+Utility functions for working with quaternions.
+
+### Sound
+
+Functions for playing sounds.
+
+### Spatial
+
+The spatial system allows to find nearby objects. Contrary to using the physics engine for this, the spatial system is typically used to find tagged objects (see [Marker Component](../../gameplay/marker-component.md)). This is often useful for game logic. For example, an NPC may want to find the closest health-pack, so it would use the spatial system to search for objects that use a health-pack marker.
 
 ### StateMachineInstance and StateMachineState
 

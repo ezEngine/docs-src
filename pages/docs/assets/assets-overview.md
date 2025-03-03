@@ -36,6 +36,20 @@ The only caveat is, that you should never duplicate an asset by actually copy an
 
 All assets are listed in the [asset browser](asset-browser.md).
 
+## Asset Properties
+
+Some properties reference assets. These have a button on the right, which shows a thumbnail of the asset. The name of the asset is displayed with green text when it is a valid reference, otherwise a red error message can be seen.
+
+![Asset Properties](media/asset-properties.png)
+
+When you click the button, a context menu shows up with various options:
+
+![Asset Property Menu](media/asset-property-menu.png)
+
+* **Select Asset** shows an asset browser to change the asset reference. This can also be triggered by holding down `SHIFT` and left-clicking into the text box.
+
+* **Open Asset** will open the currently referenced asset in a separate document. This can also be triggered by clicking the text box with the middle mouse button, or by holding `Ctrl`and left-clicking it.
+
 ## Asset Transform
 
 Asset documents must be **transformed** to produce the actual runtime data that the engine uses. In an open asset document you can either press `CTRL+E` or click the green arrow button in the toolbar to export (transform) the asset.

@@ -25,6 +25,10 @@ You can filter the scene tree with the search box at the top:
 
 ![Scene Tree Filter](media/scene-tree-filter.png)
 
+## Selection Undo
+
+If you accidentally changed the selection, you can restore the previous selection using `Ctrl + B`. This will switch to another scene layer, if necessary.
+
 ## Selection Pivot
 
 If you select multiple objects, then the object that you add to your selection *last* determines the position of [editing gizmos](gizmos.md) and thus the pivot point for some operations. For example, you can rotate a group of objects around a specific point, by having a (dummy) object at that point and adding it to your selection last.

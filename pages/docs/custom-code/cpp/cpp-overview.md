@@ -40,7 +40,6 @@ If you want to write your own stand-alone application, have a look at the [appli
 
 ## See Also
 
-
 * [Custom Code](../custom-code-overview.md)
 * [Sample Game Plugin](../../../samples/sample-game-plugin.md)
 * [Engine Plugins](engine-plugins.md)

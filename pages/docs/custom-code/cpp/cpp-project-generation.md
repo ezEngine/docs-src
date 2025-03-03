@@ -51,6 +51,13 @@ If you have added or removed source files on disk, you might need to regenerate 
 1. Run CMake yourself. For example you can use the CMake GUI app, point it to the plugin's build directory, and then *Configure* and *Generate* the C++ project at any time you like.
 1. Rerun *CMake Generate* from the dialog above. This will **clear the CMake cache** and fully regenerate the C++ project. Be aware that this resets all CMake options to their default values and often takes longer than strictly necessary.
 
+## What Gets Generated
+
+The generated solution contains two projects.
+
+1. An engine plugin with some sample code for custom components and a [game state](../../runtime/application/game-state.md). You are supposed to implement all your game logic in here.
+1. A custom [application](../../runtime/application/application.md) that is similar to [ezPlayer](../../tools/player.md). This will automatically load the engine plugin and run the game logic. This is only meant to be changed to modify the integration into the host operating system. It also gives you an `.exe` file that you can distribute.
+
 ## See Also
 
 * [Custom Code with C++](cpp-overview.md)

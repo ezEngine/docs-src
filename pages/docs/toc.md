@@ -45,6 +45,7 @@
 ## [Asset Import](assets/import-assets.md)
 # Prefabs
 ## [Prefabs](prefabs/prefabs-overview.md)
+## [Random Prefab Component](prefabs/random-prefab-component.md)
 # Graphics
 ## [Always Visible Component](graphics/always-visible-component.md)
 ## [Camera Component](graphics/camera-component.md)

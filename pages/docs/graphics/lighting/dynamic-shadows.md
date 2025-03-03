@@ -43,11 +43,21 @@ Dynamic light sources such as [directional lights](directional-light-component.m
   > **Important:**
   > Casting shadows costs a lot of performance. Make sure to only have a small number of lights with shadows active at any one time, otherwise your game may perform poorly.
 
+* `TransparentShadows`: If enabled, geometry that uses the *dithering* mode for transparency, will cast shadows. The shadows appear transparent, though they may be quite noisy.
+
 * `PenumbraSize`: This value specifies how soft the edge of shadows is supposed to be. The image below shows a penumbra size of `0` on the left and `0.5` on the right:
 
   ![Penumbra Size](media/penumbra.jpg)
 
 * `SlopeBias, ConstantBias`: TODO
 
+* `ShadowFadeOutRange`: If specified, shadows are faded out when the light source has less than a certain size in screen space. This makes it possible to have many shadow casting lights in a scene, and although all of them contribute light, only the most prominent ones cast shadows, which reduces the performance impact.
+
+By default this range is the same as the light range.
+
 ## See Also
 
+* [Directional Light Component](directional-light-component.md)
+* [Point Light Component](point-light-component.md)
+* [Spot Light Component](spot-light-component.md)
+* [Fill Light Component](fill-light-component.md)

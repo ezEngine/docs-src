@@ -143,6 +143,10 @@ Additionally, all component specific functionality can be found in the sub-menus
 
 Here you find all functionality to work with coroutines, see [the coroutines section](#coroutines) above.
 
+### CVar
+
+These nodes allow to read and write [CVars](../../debugging/cvars.md).
+
 ### Debug
 
 These nodes are for [debug rendering](../../debugging/debug-rendering.md).
@@ -245,6 +249,10 @@ These nodes are for converting variables from one type to another. Especially im
 ### Variable Nodes
 
 These nodes operate on [visual script variables](#visual-script-variables). The variables have to be declared on the script first. Use these to keep track of state within the script and also to read state that was passed in through [exposed parameters](../../scenes/exposed-parameters.md).
+
+Additionally, the **Temp Variable** node can be used to store the result of an evaluated expression and reuse it multiple times. Since the node has execution pins, you can control exactly when its input should be evaluated. Its output can then be read as often as desired and won't change.
+
+This is useful for two reasons. The first is performance, as it allows to reuse the value many times without needlessly reevaluating it. The second is, that sometimes expressions can produce different results, depending on when exactly they are evaluated. For example, if an expression reads a variable `A`but then the script also writes to `A`, then evaluating the expression again, would now produce a different result. By using a temp variable, you can guarantee to the see the same value, even after the script already updated `A`.
 
 ### World
 

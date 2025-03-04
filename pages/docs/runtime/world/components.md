@@ -2,7 +2,7 @@
 
 For an introduction what a component is and how it fits into the overall picture, see [The World / Scenegraph System](world-overview.md).
 
-This documentation focuses on the C++ `ezComponent` class. The functionality exposed through other mechanisms, such as [AngelScript (TODO)](../../custom-code/angelscript/angelscript-overview.md), may be more limited in scope, but ultimately maps to the C++ implementation.
+This documentation focuses on the C++ `ezComponent` class. The functionality exposed through other mechanisms, such as [AngelScript](../../custom-code/angelscript/angelscript-overview.md), may be more limited in scope, but ultimately maps to the C++ implementation.
 
 Components are the fundamental building blocks with which to make the engine do things. Components act as glue between systems like the renderer and the user. They expose the available functionality to the editor and they control when and how each system is used. This document describes how components work.
 
@@ -228,7 +228,7 @@ void DemoComponent::DeserializeComponent(ezWorldReader& inout_stream)
 You can extend the engine with custom components:
 
 * [Custom Components with C++](../../custom-code/cpp/custom-cpp-component.md)
-* [Custom Components with AngelScript (TODO)](../../custom-code/angelscript/as-components.md)
+* [Custom Components with AngelScript](../../custom-code/angelscript/as-components.md)
 * [Visual Script Class Asset](../../custom-code/visual-script/visual-script-class-asset.md)
 
 For examples, have a look at the [Sample Game Plugin](../../../samples/sample-game-plugin.md).

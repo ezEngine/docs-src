@@ -18,7 +18,7 @@ The following steps are already taken care of:
 * [Tags](../docs/projects/tags.md) are set up, for the game code to find certain objects in the world.
 * A few [surface assets](../docs/materials/surfaces.md) are set up to provide a sample for how to make surface specific footstep sounds and bullet impact effects.
 * Two [scenes](../docs/scenes/scene-editing.md) are provided, when the player reaches the end of the *Main* scene, the game transitions to the second one.
-* All game logic is written in [AngelScript (TODO)](../docs/custom-code/angelscript/angelscript-overview.md).
+* All game logic is written in [AngelScript](../docs/custom-code/angelscript/angelscript-overview.md).
 * The project comes with an enemy type that uses the [AI navigation component](../docs/ai/AiPlugin/navigation-component.md) for path finding and steering.
 * And FMOD project is set up for making [sound](../docs/sound/sound-overview.md).
 * The gameplay code shows how to make basic weapons, health pickiups and explosions.

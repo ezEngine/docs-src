@@ -3,7 +3,7 @@
 There are currently three ways to write custom code:
 
 1. [Custom Code with C++](cpp/cpp-overview.md)
-1. [Custom Code with AngelScript (TODO)](angelscript/angelscript-overview.md)
+1. [Custom Code with AngelScript](angelscript/angelscript-overview.md)
 1. [Custom Code with Visual Scripts](visual-script/visual-script-overview.md)
 
 ## C++

@@ -16,4 +16,4 @@ The component itself is a C++ component. It mediates between C++ and the visual 
 
 * [Custom Code](../custom-code-overview.md)
 * [Custom Code with Visual Scripts](visual-script-overview.md)
-* [Custom Code with AngelScript (TODO)](../angelscript/angelscript-overview.md)
+* [Custom Code with AngelScript](../angelscript/angelscript-overview.md)

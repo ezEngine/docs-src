@@ -26,7 +26,7 @@ Yes, EZ has [visual scripting](../docs/custom-code/visual-script/visual-script-o
 
 ## Scripting with AngelScript
 
-We have an [AngelScript (TODO)](../docs/custom-code/angelscript/angelscript-overview.md) binding which is pretty decent. The entire game logic in the [Testing Chambers](../samples/testing-chambers.md) project is done with this.
+We have an [AngelScript](../docs/custom-code/angelscript/angelscript-overview.md) binding which is pretty decent. The entire game logic in the [Testing Chambers](../samples/testing-chambers.md) project is done with this.
 
 ## Terrain
 

@@ -2,7 +2,7 @@
 
 For an introduction what a message is and how it fits into the overall picture, see [The World / Scenegraph System](world-overview.md).
 
-This documentation focuses on the C++ `ezMessage` class. The functionality exposed through other mechanisms, such as [AngelScript (TODO)](../../custom-code/angelscript/angelscript-overview.md), may be more limited in scope, but ultimately maps to the C++ implementation.
+This documentation focuses on the C++ `ezMessage` class. The functionality exposed through other mechanisms, such as [AngelScript](../../custom-code/angelscript/angelscript-overview.md), may be more limited in scope, but ultimately maps to the C++ implementation.
 
 Messages can be sent from any code. They can only be received by [components](components.md), though, as the messaging system is implemented by `ezWorld`.
 
@@ -107,7 +107,7 @@ The idea is, that for complex objects you typically want to have a single script
 
 Any message can be sent as an *event* by using `ezGameObject::SendEventMessage()`, however, messages that are meant to be always treated as events should derive from `ezEventMessage`, so that they include additional information.
 
-Finally, there is the `ezEventMessageHandlerComponent` interface, which is only implemented by very few component types, for example the [Script Component](../../custom-code/visual-script/script-component.md).
+Finally, there is the `ezEventMessageHandlerComponent` interface, which is only implemented by very few component types, for example the [script component](../../custom-code/visual-script/script-component.md).
 
 When an `ezEventMessageHandlerComponent` is attached to a node, it will receive *all* event messages below that node hierarchy, no matter whether it has a message handler for it or not. It therefore prevents event messages from leaving the hierarchy. If an event message is supposed to 'bubble up' further, the message handler component must either forward the message manually or be configured to pass-through all unhandled event messages.
 

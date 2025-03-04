@@ -2,7 +2,7 @@
 
 The rendering in EZ is optimized to handle large and complex data efficiently. However, to achieve this you must implement certain patterns, and to get started a non-trivial amount of code is involved. To visualize simple things, the `ezDebugRenderer` is provided. This class allows you to quickly add debug visualizations to your game, with just a few lines of code.
 
-This interface is also (partially) available through [AngelScript (TODO)](../custom-code/angelscript/angelscript-overview.md).
+This interface is also (partially) available through [AngelScript](../custom-code/angelscript/angelscript-overview.md).
 
 ![Debug rendering](media/debug-rendering.jpg)
 
@@ -67,4 +67,4 @@ The debug renderer is meant for quickly visualizing data. If the data potentiall
 * [Debugging C++ Code](debug-cpp.md)
 * [Shader Debugging](../graphics/shaders/shader-debugging.md)
 * [Jolt Debug Visualizations](../physics/jolt/jolt-debug-visualizations.md)
-* [Custom Code with AngelScript (TODO)](../custom-code/angelscript/angelscript-overview.md)
+* [Custom Code with AngelScript](../custom-code/angelscript/angelscript-overview.md)

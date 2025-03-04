@@ -280,10 +280,11 @@
 ### [Custom Components with C++](custom-code/cpp/custom-cpp-component.md)
 ### [Hot Reloading C++ Game Plugins in the Editor](custom-code/cpp/cpp-code-reload.md)
 ## AngelScript
-### [Custom Code with AngelScript (TODO)](custom-code/angelscript/angelscript-overview.md)
-### [AngelScript Asset (TODO)](custom-code/angelscript/as-asset.md)
-### [Custom Components with AngelScript (TODO)](custom-code/angelscript/as-components.md)
-### [Messaging in AngelScript Code (TODO)](custom-code/angelscript/as-messaging.md)
+### [Custom Code with AngelScript](custom-code/angelscript/angelscript-overview.md)
+### [AngelScript Asset](custom-code/angelscript/as-asset.md)
+### [Custom Components with AngelScript](custom-code/angelscript/as-components.md)
+### [AngelScript API](custom-code/angelscript/as-api.md)
+### [Messaging in AngelScript Code](custom-code/angelscript/as-messaging.md)
 ## Visual Script
 ### [Script Component](custom-code/visual-script/script-component.md)
 ### [Visual Script Class Asset](custom-code/visual-script/visual-script-class-asset.md)

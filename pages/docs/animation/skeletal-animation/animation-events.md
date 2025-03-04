@@ -6,7 +6,7 @@ These events can be used for mundane things like *foot down* markers, in a walki
 
 Whenver the EZ animation system plays back any animation clip, it also inspects the *event track*. For every event that it encounters, it broadcasts an `ezMsgGenericEvent` with `Message` set to the value of the event's name.
 
-If you have an [AngelScript (TODO)](../../custom-code/angelscript/angelscript-overview.md) or [Visual Script](../../custom-code/visual-script/visual-script-overview.md) (or [custom C++ components](../../custom-code/cpp/custom-cpp-component.md) that is also an event handler) attached to any parent node of the animated mesh, you can handle this type of event and react with the desired game logic.
+If you have an [AngelScript](../../custom-code/angelscript/angelscript-overview.md) or [Visual Script](../../custom-code/visual-script/visual-script-overview.md) (or [custom C++ components](../../custom-code/cpp/custom-cpp-component.md) that is also an event handler) attached to any parent node of the animated mesh, you can handle this type of event and react with the desired game logic.
 
 <video src="../media/anim-point-shoot.webm" width="500" height="500" autoplay loop></video>
 

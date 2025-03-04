@@ -30,7 +30,7 @@ The player object is often the most complicated object in a game. The character 
 
 The [Testing Chambers sample](../../../../samples/testing-chambers.md) contains a [prefab](../../../prefabs/prefabs-overview.md) called **Player.ezPrefab**, which demonstrates how to build your own player object. The top level node contains a *Default Character Controller* component. You could replace this with a custom character controller component, to test out entirely different movement behavior.
 
-Note that the player object also uses an [input component](../../../input/input-component.md) to funnel input into a [script (TODO)](../../../custom-code/angelscript/angelscript-overview.md), which implements high level game logic, like weapon selection.
+Note that the player object also uses an [input component](../../../input/input-component.md) to funnel input into a [script](../../../custom-code/angelscript/angelscript-overview.md), which implements high level game logic, like weapon selection.
 
 ## See Also
 

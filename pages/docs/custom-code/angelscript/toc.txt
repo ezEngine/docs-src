@@ -1,4 +1,5 @@
 angelscript-overview.md
 as-asset.md
 as-components.md
+as-api.md
 as-messaging.md

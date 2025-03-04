@@ -14,7 +14,7 @@ Compile switch: **EZ_3RDPARTY_ANGELSCRIPT_SUPPORT**
 
 AngelScript is an extremely flexible cross-platform library designed to allow applications to extend their functionality through external scripts.
 
-It is non-essential for the engine, but adds powerful functionality for writing [custom code with AngelScript (TODO)](../custom-code/angelscript/angelscript-overview.md).
+It is non-essential for the engine, but adds powerful functionality for writing [custom code with AngelScript](../custom-code/angelscript/angelscript-overview.md).
 
 ## Assimp
 

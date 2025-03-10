@@ -5,7 +5,6 @@ The **RTS Game Plugin** is a more complex example of how to write a plugin that 
 ![RTS1](media/rts1.jpg)
 ![RTS2](media/rts2.jpg)
 ![RTS3](media/rts3.jpg)
-![RTS4](media/rts4.jpg)
 
 ## Prerequisites
 

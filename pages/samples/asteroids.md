@@ -3,7 +3,6 @@
 The **Asteroids Sample** is a small game that shows how to use various components and messages to create simple game logic.
 
 ![Asteroids](media/asteroids1.jpg)
-![Asteroids](media/asteroids2.jpg)
 
 ## Prerequisites
 

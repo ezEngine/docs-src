@@ -6,9 +6,6 @@ The **Testing Chambers Project** is an editor-only project (no sample code requi
 ![Testing Chamber](media/tc1.jpg)
 ![Testing Chamber](media/tc2.jpg)
 ![Testing Chamber](media/tc3.jpg)
-![Testing Chamber](media/tc4.jpg)
-![Testing Chamber](media/tc5.jpg)
-![Testing Chamber](media/tc6.jpg)
 
 ## Prerequisites
 

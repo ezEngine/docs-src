@@ -4,7 +4,6 @@ The **ShaderExplorer Sample** shows how to render a scene entirely in the shader
 
 ![ShaderExlorer1](media/shader-explorer1.jpg)
 ![ShaderExlorer2](media/shader-explorer2.jpg)
-![ShaderExlorer3](media/shader-explorer3.jpg)
 
 ## Prerequisites
 

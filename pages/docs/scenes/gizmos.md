@@ -28,11 +28,23 @@ When the *Translate*, *Rotate* or *Scale* gizmo is active, holding `LMB` and mov
 
 ## Snap Settings
 
-Press `End` or the respective icon from the toolbar to open the snap settings:
+In the toolbar there are three icons with numbers:
+
+![Snap Toolbar](media/snap-toolbar.png)
+
+These three dropdown menus allow you to quickly select the snap settings for position, rotation and scale. The icon displays the currently selected setting.
+
+Alternatively, you can press `End` to open the snap settings dialog:
 
 ![Snap Settings](media/snap-settings.png)
 
-These affect not only the gizmos, but also the positioning of [assets](../assets/assets-overview.md) dragged from the [asset browser](../assets/asset-browser.md) into the scene.
+These settings affect not only the gizmos, but also the positioning of [assets](../assets/assets-overview.md) dragged from the [asset browser](../assets/asset-browser.md) into the scene.
+
+> **Tip!**
+>
+> Use the shortcut `Ctrl+End` to snap the position of the selected objects to the current pivot point. The pivot point is at the location of the last selected object.
+>
+> You can also snap the position of all selected objects  to the grid individually, using *Edit > Edit Mode > Snap Each Object To Grid*.
 
 ## Grid
 

@@ -52,7 +52,7 @@ The resource manager keeps track, if and when resources are attempted to be acqu
 ```cpp
 ezShaderResourceHandle hShader = ezResourceManager::LoadResource<ezShaderResource>("ResourceID");
 {
-  ezResourceLock<ezShaderResource> pShader(hShader, ezResourceAcquireMode::PointerOnly);
+  ezResourceLock<ezShaderResource> pShader(hShader, ezResourceAcquireMode::AllowLoadingFallback);
   ezResourceAcquireResult result = pShader.GetAcquireResult();
   if (result == ezResourceAcquireResult::LoadingFallback)
   {

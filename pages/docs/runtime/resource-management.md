@@ -23,7 +23,7 @@ ezShaderResourceHandle hShader = ezResourceManager::LoadResource<ezShaderResourc
 
 ## Creating Runtime Resources
 
-As mentioned previously, to create a resource at runtime, you need to fill out the resource type specific resource descriptor. Below is an example of a `ezMeshBufferResource` created from an `ezGeometry` instance:
+To create a resource at runtime, you need to fill out the resource type specific resource descriptor. Below is an example of an `ezMeshBufferResource` created from an `ezGeometry` instance:
 ```cpp
 ezGeometry& inout_geom;
 ...

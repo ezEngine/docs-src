@@ -72,7 +72,7 @@ All erroneous assets are listed in the [asset curator](asset-curator.md). The cu
 
 ## Asset Profiles
 
-Assets can produce different, platform specific output, depending on which platform they are being transformed for. That means a texture may, for example, generate a runtime file that contains full resolution 4K textures for PC, but only limited 1K resolution textures for mobile devices. Such platform specific options can be configured through [asset profiles](asset-profiles.md). For some types of assets, such platform specific settings may also be handled externally, for example [FMOD](../sound/fmod-overview.md) already deals with platform specific audio encoding on its own.
+Assets can produce different, platform specific output, depending on which platform they are being transformed for. That means a texture may, for example, generate a runtime file that contains full resolution 4K textures for PC, but only limited 1K resolution textures for mobile devices. Such platform specific options can be configured through [asset profiles](asset-profiles.md). For some types of assets, such platform specific settings may also be handled externally, for example [FMOD](../sound/fmod/fmod-overview.md) already deals with platform specific audio encoding on its own.
 
 ## Assets and Resources
 

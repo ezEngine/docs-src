@@ -19,7 +19,7 @@ To compile the FMOD plugin, parts of the official FMOD SDK are necessary. On Win
 1. Create a free account at [fmod.com](https://www.fmod.com) and sign in.
 1. Download and install the *FMOD Studio API SDK for Windows* (or whichever platform you need).
 1. Download and install *FMOD Studio* (only needed by people who want to edit FMOD projects).
-1. Enable FMOD in the [CMake configuration](../build/cmake-config.md).
+1. Enable FMOD in the [CMake configuration](../../build/cmake-config.md).
 1. Clean the CMake cache and regenerate. This way CMake will pick up the installed FMOD SDK rather than the built-in one.
 1. Compile the engine.
 
@@ -44,7 +44,7 @@ There is a set of tutorials about FMOD in Unreal, which is a very good introduct
 
 For project wide FMOD settings, go to *Project > Plugin Settings > FMOD Project Settings...*
 
-![FMOD settings](media/fmod-settings.png)
+![FMOD settings](../media/fmod-settings.png)
 
 > **Important:**
 >
@@ -58,7 +58,7 @@ Once you have these things set up, you can create your first [sound bank asset](
 
 ## Sample Data
 
-A sample FMOD Studio project is available under *Data/Content/Sound*, including pre-exported sound banks. These are also used by the sample projects, such as the [Testing Chambers](../../samples/testing-chambers.md).
+A sample FMOD Studio project is available under *Data/Content/Sound*, including pre-exported sound banks. These are also used by the sample projects, such as the [Testing Chambers](../../../samples/testing-chambers.md).
 
 > **Note:**
 >
@@ -68,9 +68,9 @@ A sample FMOD Studio project is available under *Data/Content/Sound*, including 
 
 The FMOD editor plugin adds UI elements to *mute* sound entirely and to adjust the *master volume*:
 
-![FMOD UI](media/sound-ui.jpg)
+![FMOD UI](../media/sound-ui.jpg)
 
 ## See Also
 
-* [Sound](sound-overview.md)
+* [Sound](../sound-overview.md)
 * [www.fmod.com](https://www.fmod.com)

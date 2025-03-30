@@ -48,7 +48,7 @@ A custom [application](../runtime/application/application.md) or [game state](..
 
 ## FMOD
 
-If the [FMOD Integration](../sound/fmod-overview.md) is enabled, *Project > Plugin Settings > FMOD Project Settings...* will be available to configure the speaker mode and which master sound bank to use.
+If the [FMOD Integration](../sound/fmod/fmod-overview.md) is enabled, *Project > Plugin Settings > FMOD Project Settings...* will be available to configure the speaker mode and which master sound bank to use.
 
 ## Jolt
 

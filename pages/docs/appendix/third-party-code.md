@@ -89,7 +89,7 @@ Link: [https://www.fmod.com](https://www.fmod.com)
 
 Compile switch: **EZ_BUILD_FMOD**
 
-EZ has an [integration for the FMOD sound system](../sound/fmod-overview.md).
+EZ has an [integration for the FMOD sound system](../sound/fmod/fmod-overview.md).
 
 > **Important:**
 >

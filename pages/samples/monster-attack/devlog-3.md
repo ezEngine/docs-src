@@ -2,7 +2,7 @@
 
 Today I spent some time on improving and polishing what I built so far.
 
-First I set up sound. EZ uses Fmod, so [following the documentation](../../docs/sound/fmod-overview.md) and my own tutorial video, I created a new Fmod Studio project, downloaded a couple of sounds from <freesound.org> and added sounds for footsteps, the player's projectile and the trap.
+First I set up sound. EZ uses Fmod, so [following the documentation](../../docs/sound/fmod/fmod-overview.md) and my own tutorial video, I created a new Fmod Studio project, downloaded a couple of sounds from <freesound.org> and added sounds for footsteps, the player's projectile and the trap.
 
 Footsteps for the player are quite easy, because the [character controller](../../docs/physics/jolt/special/jolt-character-controller.md) already supports this through [surface interactions](../../docs/materials/surfaces.md). Basically, whenever something needs to interact with a surface, for example a bullet hitting a wall, we can easily spawn a *surface interaction*. Usually polygons are linked to a surface and the surface acts as a lookup table. So if I walk over a stone surface and I want to spawn a *footstep* interaction, the stone surface defines which prefab to use, and if I walk over a metal surface, it may define a different prefab to use.
 

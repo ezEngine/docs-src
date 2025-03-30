@@ -46,7 +46,7 @@ To access a resource, it needs to be acquired first. This is done by creating a 
 * **AllowLoadingFallback**: If the resource is loaded, it is immediately returned. If not, a fallback resouce is returned instead. If no fallback exists, this will assert. Prefer this version as is does not block.
 
 For additional modes and further information, please refer to the `ezResourceAcquireMode` declaration.
-The resource manager keeps track if and when resources are attempted to be acquired to decide which resources to load from disk. Thus, it is important that you try to acquire a resource you want to load via one of the `AllowLoadingFallback` variants at least once or the resource will never switch into a *loaded* state. 
+The resource manager keeps track, if and when resources are attempted to be acquired, to decide which resources to load from disk. Thus, it is important that you try to acquire a resource, which you want to load, using one of the `AllowLoadingFallback` variants at least once. Otherwise the resource will never switch to the *loaded* state. Alternatively, you can also call `ezResourceManager::PreloadResource()`.
 
 
 ```cpp

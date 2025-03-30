@@ -14,7 +14,7 @@ Additionally, you may only work with a small test level, but if you also want to
 
 To solve this issue, the EZ [fileSystem](../runtime/filesystem.md) makes it possible to get its files not from the device itself, but instead streamed over a network connection, from a development PC. You then deploy a much smaller package, that contains nearly no data files, and have all files sent over on demand. Files are cached on the device, such that repeated accesses don't need to re-send unchanged files.
 
-This means creating and deploying app packages becomes much faster. Additionally, you can now utilize the [resource manager's (TODO)](../runtime/resource-management.md) functionality to *reload modified resources*. Therefore, you can modify any file on the development PC, and then hot-reload that data onto the device, without even restarting the app. And even in situations where you need to restart the app on the device, this is still much faster than having to do a full re-deployment.
+This means creating and deploying app packages becomes much faster. Additionally, you can now utilize the [resource manager's](../runtime/resource-management.md) functionality to *reload modified resources*. Therefore, you can modify any file on the development PC, and then hot-reload that data onto the device, without even restarting the app. And even in situations where you need to restart the app on the device, this is still much faster than having to do a full re-deployment.
 
 Note that there is also [ezInspector](inspector.md), that you can also connect to your remote app, so that you can get additional insights, such as the log output.
 

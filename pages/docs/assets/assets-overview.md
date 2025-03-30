@@ -56,7 +56,7 @@ Assets can produce different, platform specific output, depending on which platf
 
 ## Assets and Resources
 
-The term *asset* mostly refers to the editor side and the [editor documents](../editor/editor-documents.md). When an asset gets transformed, it generates the data representation for the runtime side. Inside the engine this data will be read into a *resource* by the [resource manager (TODO)](../runtime/resource-management.md).
+The term *asset* mostly refers to the editor side and the [editor documents](../editor/editor-documents.md). When an asset gets transformed, it generates the data representation for the runtime side. Inside the engine this data will be read into a *resource* by the [resource manager](../runtime/resource-management.md).
 
 Assets and resources are conceptually two different things. Assets always live on the editor side, resources always on the runtime side. Their code is strictly separate. Resources can be loaded from files or procedurally generated at runtime. The files that they load can come from anywhere and there is no requirement that those files are created through assets. However, assets are the most common and most convenient way to generate the runtime data. You could replace the entire asset management system with a custom system, though. The editor may be the most convenient way to transform assets from source format to runtime format for most scenarios, but if you have a special use case, you could built a completely custom asset processing pipeline and ignore the editor entirely, there is no 'secret sauce' in the editor that is required to make the runtime work.
 

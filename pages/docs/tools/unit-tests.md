@@ -28,7 +28,7 @@ The following test suites are available:
 
 1. **FoundationTest**: These tests are for the absolute base functionality, that's found in the *Foundation* project and the *Texture* project.
 
-2. **CoreTest**: These tests are for the core engine functionality, like the [scenegraph](../runtime/world/world-overview.md) and [resource management (TODO)](../runtime/resource-management.md).
+2. **CoreTest**: These tests are for the core engine functionality, like the [scenegraph](../runtime/world/world-overview.md) and [resource management](../runtime/resource-management.md).
 
 3. **RendererTest**: This tests the basic rendering functionality that's available with the rendering API abstraction. It doesn't test the high level rendering features.
 

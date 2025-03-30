@@ -12,7 +12,7 @@ In the majoriy of cases, resources are binary representations of [assets](../ass
   * **LoadedResourceMissing**: The resource failed to load. Most likely it is missing on disk.
   * **Loaded**: The resource is loaded at some level of quality and can be used.
 * **Fallback Resource**: If a resource isn't loaded yet, a fallback resource can be returned by the *resource manager*. For this to work, either the resource type or the individual resource must provide a fallback resource and the user must acquire the resource with `ezResourceAcquireMode::AllowLoadingFallback`.
-* **Quality Levels**: Some resources can exist at multiple quality levels. E.g. textures can have some of their mip levels missing. The texture is considered loaded as long as a single mip level was loaded so that the texture can be used. 
+* **Quality Levels**: Some resources can exist at multiple quality levels. E.g. textures can have some of their mip levels missing. The resource is considered loaded as long as any quality level is loaded. 
 
 ## Loading Resources
 

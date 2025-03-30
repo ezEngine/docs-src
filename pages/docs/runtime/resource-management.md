@@ -16,7 +16,7 @@ In the majoriy of cases, resources are binary representations of [assets](../ass
 
 ## Loading Resources
 
-To load a resource, you will usually provide the [asset guid](../assets/assets-overview.md#asset-guid) or a relative path to a file. Note that this does not load the resource immediately. The resource manager is lazy and will only load resources that are actively being [acquired](#acquiring-resources). Similiarly, the resource manager might actually unload resources again to save memory if they haven't been acquiring in a while and no handles remain to them.
+To load a resource, you will usually provide the [asset guid](../assets/assets-overview.md#asset-guid) or a relative path to a file. Note that this does not load the resource immediately. The resource manager is lazy and only loads resources once they get [acquired](#acquiring-resources). Similiarly, the resource manager unloads resources again, when no handles reference them anymore, and they haven't been acquiring in a while.
 ```cpp
 ezShaderResourceHandle hShader = ezResourceManager::LoadResource<ezShaderResource>("ResourceID");
 ```

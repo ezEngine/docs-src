@@ -8,7 +8,7 @@ In the majoriy of cases, resources are binary representations of [assets](../ass
 * **Resource Pointer**: At some point you will want to access the content of a resource. As resource management is heavily multi-threaded, these accesses must happen by acquiring a lock to the resource. This is usually done via the `ezResourceLock`, which is explained later. The pointer must only be accessed under the lock and not stored after the lock is released.
 * **Resource State**: A resource is always in one of the following states:
   * **Invalid**: The resource no longer exists.
-  * **Unloaded**: The resource is not loaded yet. Each resources that is started to be loaded by the resource manager starts in this state.
+  * **Unloaded**: The resource is not loaded yet. Each resource that gets loaded by the resource manager starts in this state.
   * **LoadedResourceMissing**: The resource failed to load. Most likely it is missing on disk.
   * **Loaded**: The resource is loaded at some level of quality and can be used.
 * **Fallback Resource**: If a resource isn't loaded yet, a fallback resource can be returned by the *resource manager*. For this to work, either the resource type or the individual resource must provide a fallback resource and the user must acquire the resource with `ezResourceAcquireMode::AllowLoadingFallback`.

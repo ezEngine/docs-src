@@ -24,18 +24,20 @@ ezShaderResourceHandle hShader = ezResourceManager::LoadResource<ezShaderResourc
 ## Creating Runtime Resources
 
 To create a resource at runtime, you need to fill out the resource type specific resource descriptor. Below is an example of an `ezMeshBufferResource` created from an `ezGeometry` instance:
+
+<!-- BEGIN-DOCS-CODE-SNIPPET: resource-management-create -->
 ```cpp
-ezGeometry& inout_geom;
-...
-ezGALPrimitiveTopology::Enum topology;
+ezGeometry geom;
+geom.AddBox(ezVec3(2.0f), false);
+
 ezMeshBufferResourceDescriptor desc;
-  desc.AddStream(ezGALVertexAttributeSemantic::Position, ezGALResourceFormat::XYZFloat);
-  desc.AddStream(ezGALVertexAttributeSemantic::Color0, ezGALResourceFormat::RGBAUByteNormalized);
-  desc.AddStream(ezGALVertexAttributeSemantic::Normal, ezGALResourceFormat::XYZFloat);
-  desc.AllocateStreamsFromGeometry(inout_geom, topology);
-  desc.ComputeBounds();
-ezResourceManager::CreateResource<ezMeshBufferResource>("MyUniqueResourceID", std::move(desc), szDescription);
+desc.AddStream(ezGALVertexAttributeSemantic::Position, ezGALResourceFormat::XYZFloat);
+desc.AllocateStreamsFromGeometry(geom, ezGALPrimitiveTopology::Triangles);
+
+s_hSolidBoxMeshBuffer = ezResourceManager::CreateResource<ezMeshBufferResource>("DebugSolidBox", std::move(desc), "Mesh for Rendering Debug Solid Boxes");
 ```
+<!-- END-DOCS-CODE-SNIPPET -->
+
 Use `GetOrCreateResource` instead if you expect your resource to be created by multiple threads at the same time. E.g. your code runs inside a task or other multi-threaded environment. Unlike resources that are loaded via `ezResourceManager::LoadResource`, creating resources will block until the resource is fully created (i.e. in *Loaded* state) before returning to the caller. Therefore, complex resources should ideally be created inside tasks and not inside the runtime loop.
 
 ## Acquiring Resources
@@ -72,14 +74,20 @@ ezShaderResourceHandle hShader = ezResourceManager::LoadResource<ezShaderResourc
 
 You can either listen to a single resource's state changes or you can listen to the same for all resource via the resource manager. Note that if you add an event handler to a single resource's event, you need to also hold a handle to that resource as you can't unsubscribe inside the event handler callback when the resource gets destroyed.
 
+<!-- BEGIN-DOCS-CODE-SNIPPET: resource-management-listen -->
 ```cpp
-// All resources
-ezResourceManager::GetResourceEvents().AddEventHandler(ezMakeDelegate(...));
-
-// Single resource
-ezResourceLock<ezShaderResource> pShader(hShader, ezResourceAcquireMode::PointerOnly);
-pShader->m_ResourceEvents.AddEventHandler(ezMakeDelegate(...));
+// Subscribe to resource changes of the shader
+ezResourceLock<ezShaderResource> pShader(m_hShader, ezResourceAcquireMode::PointerOnly);
+pShader->m_ResourceEvents.AddEventHandler(ezMakeDelegate(&ezMaterialManager::MaterialShaderConstants::OnResourceEvent, this), m_ShaderResourceEventSubscriber);
 ```
+<!-- END-DOCS-CODE-SNIPPET -->
+
+<!-- BEGIN-DOCS-CODE-SNIPPET: resource-management-listen-all -->
+```cpp
+// Listening to all resource events
+ezResourceManager::GetResourceEvents().AddEventHandler(ezMakeDelegate(&WorldData::ResourceEventHandler, this));
+```
+<!-- END-DOCS-CODE-SNIPPET -->
 
 ## Unloading of Resources
 

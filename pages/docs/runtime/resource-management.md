@@ -40,7 +40,7 @@ Use `GetOrCreateResource` instead if you expect your resource to be created by m
 
 ## Acquiring Resources
 
-To access a resource, it needs to be acquired first. This is done by creating a scoped `ezResourceLock` on the handle. There are multiple modes in which a resource can be acquired defined by `ezResourceAcquireMode`:
+To access a resource, it needs to be acquired first. This is done by creating a scoped `ezResourceLock` on the handle. There are multiple modes for how a resource can be acquired, as defined by `ezResourceAcquireMode`:
 * **PointerOnly**: This will only acquire the pointer to the resource. It will not trigger the resource manager to actually load this resource from disk. Use this if you merely want to e.g. register to [resource changes](#listening-for-resource-changes).
 * **BlockTillLoaded**: As the name suggests, this blocks the current thread until the resource has switched to the *Loaded* state. This does NOT mean that all quality levels are loaded.
 * **AllowLoadingFallback**: If the resource is loaded, it is immediately returned. If not, a fallback resouce is returned instead. If no fallback exists, this will assert. Prefer this version as is does not block.

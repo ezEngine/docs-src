@@ -16,10 +16,11 @@ The event component allows you to enable a simple physics raycast based heuristi
 
 ## Component Properties
 
+* `SoundEvent`: The [sound event asset](fmod-soundevent-asset.md) that will be played by this component.
 * `Paused`: If set, the referenced sound won't start playing at start. Toggling this value programmatically will pause/resume a playing sound.
 * `Volume`: Adjusts the volume for this sound.
 * `Pitch`: Higher pitch means the sound plays faster, a lower pitch makes it play slower (and at lower frequency).
-* `SoundEvent`: The [sound event asset](fmod-soundevent-asset.md) that will be played by this component.
+* `NoGlobalPitch`: If disabled, changing the [world](../../runtime/world/worlds.md) clock speed (game speed) also affects the playback of sounds. For instancing, slowing down time will make sounds play back slower and at lower frequency. For sounds where this is not desired, enable this option.
 * `UseOcclusion`: If enabled, the component will use physics raycasts to determine whether the sound source is occluded by geometry. The occlusion factor is passed to the FMOD event as the event parameter `Occlusion`.
 * `OcclusionThreshold`: How strongly the sound source must be occluded, before the occlusion value will be larger than zero.
 * `OcclusionCollisionLayer`: The physics [collision layer](../../physics/jolt/collision-shapes/jolt-collision-layers.md) to use for the occlusion raycasts.

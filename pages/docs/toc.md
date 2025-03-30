@@ -212,11 +212,17 @@
 #### [Two Bone IK Component](animation/skeletal-animation/ik/two-bone-ik-component.md)
 # Sound
 ## [Sound](sound/sound-overview.md)
-## [FMOD Integration](sound/fmod/fmod-overview.md)
-## [FMOD Sound Bank Asset](sound/fmod/fmod-soundbank-asset.md)
-## [FMOD Sound Event Asset](sound/fmod/fmod-soundevent-asset.md)
-## [FMOD Listener Component](sound/fmod/fmod-listener-component.md)
-## [FMOD Event Component](sound/fmod/fmod-event-component.md)
+## Fmod
+### [FMOD Integration](sound/fmod/fmod-overview.md)
+### [FMOD Sound Bank Asset](sound/fmod/fmod-soundbank-asset.md)
+### [FMOD Sound Event Asset](sound/fmod/fmod-soundevent-asset.md)
+### [FMOD Listener Component](sound/fmod/fmod-listener-component.md)
+### [FMOD Event Component](sound/fmod/fmod-event-component.md)
+## Miniaudio
+### [MiniAudio Integration](sound/miniaudio/ma-overview.md)
+### [MiniAudio Sound Asset](sound/miniaudio/ma-sound-asset.md)
+### [MiniAudio Listener Component](sound/miniaudio/ma-listener-component.md)
+### [MiniAudio Sound Component](sound/miniaudio/ma-sound-component.md)
 # Terrain and Vegetation
 ## [Terrain and Vegetation](terrain/terrain-overview.md)
 ## [Heightfield Component](terrain/heightfield-component.md)

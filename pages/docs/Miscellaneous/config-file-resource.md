@@ -81,6 +81,6 @@ int PlayerHealth = 100
 
 ## See Also
 
-* [Resource Management (TODO)](../runtime/resource-management.md)
+* [Resource Management](../runtime/resource-management.md)
 * [C preprocessor (Wikipedia)](https://en.wikipedia.org/wiki/C_preprocessor)
 * [Custom Data](custom-data.md)

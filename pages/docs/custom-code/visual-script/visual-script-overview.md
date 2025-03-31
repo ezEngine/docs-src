@@ -10,7 +10,7 @@ Visual scripting is meant for **small scripts** that deal with simple tasks. Oft
 
 Visual script code may also be used to quickly prototype behavior to get an idea how something might work. However, dealing with edge-cases and errors typically involves a lot of complex code, and once the stage is reached where a feature should be fully fledged out and polished, it might be better to migrate to C++.
 
-In general, visual scripting is **no substitue for C++**. It only provides a subset of the features. A lot of functionality is deliberately left inaccessible, such as working with [resources (TODO)](../../runtime/resource-management.md) or [game states](../../runtime/application/game-state.md). If you need to access them, you definitely should [use C++](../cpp/cpp-overview.md).
+In general, visual scripting is **no substitue for C++**. It only provides a subset of the features. A lot of functionality is deliberately left inaccessible, such as working with [resources](../../runtime/resource-management.md) or [game states](../../runtime/application/game-state.md). If you need to access them, you definitely should [use C++](../cpp/cpp-overview.md).
 
 ### Custom Components
 

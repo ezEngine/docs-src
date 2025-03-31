@@ -14,7 +14,7 @@ Another option is to insert a [collection component](collection-component.md) in
 
 ## Keeping Assets Loaded
 
-Some assets are only ever needed for brief periods of time, for example particle effect textures. As long as no such effect is playing, their textures are not referenced and the [resource manager (TODO)](../runtime/resource-management.md) may decide to unload them. The next time those assets are needed, they will be loaded again either resulting in a stall, or a visual glitch.
+Some assets are only ever needed for brief periods of time, for example particle effect textures. As long as no such effect is playing, their textures are not referenced and the [resource manager](../runtime/resource-management.md) may decide to unload them. The next time those assets are needed, they will be loaded again either resulting in a stall, or a visual glitch.
 
 To prevent this, you can create a collection with all the assets that you consider vital, and place a collection component in your scene or prefab. The collection will not only preload those assets, but also hold a reference to each one, preventing them from being unloaded.
 
@@ -28,4 +28,4 @@ Not only can this be more convenient, it also allows you to switch which asset w
 
 
 * [Collection Component](collection-component.md)
-* [Resource Management (TODO)](../runtime/resource-management.md)
+* [Resource Management](../runtime/resource-management.md)

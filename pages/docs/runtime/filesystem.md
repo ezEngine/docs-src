@@ -174,5 +174,5 @@ Basically you give it some path, and it will return under which absolute path an
 
 ## See Also
 
-* [Resource Management (TODO)](resource-management.md)
+* [Resource Management](resource-management.md)
 * [FileServe](../tools/fileserve.md)

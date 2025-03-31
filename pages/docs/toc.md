@@ -305,7 +305,7 @@
 ### [Startup System](runtime/configuration/startup.md)
 ## [FileSystem](runtime/filesystem.md)
 ## [Reflection System](runtime/reflection-system.md)
-## [Resource Management (TODO)](runtime/resource-management.md)
+## [Resource Management](runtime/resource-management.md)
 ## World
 ### [The World / Scenegraph System](runtime/world/world-overview.md)
 ### [Game Objects](runtime/world/game-objects.md)

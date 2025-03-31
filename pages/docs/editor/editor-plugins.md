@@ -154,7 +154,7 @@ Plugins that are loaded into the actual game (either a custom [application](../r
 These plugins contain the following functionality:
 
 * [component](../runtime/world/components.md) types
-* [resource (TODO)](../runtime/resource-management.md) types
+* [resource](../runtime/resource-management.md) types
 * [world modules](../runtime/world/world-modules.md)
 * [game states](../runtime/application/game-state.md)
 * [CVars](../debugging/cvars.md)

@@ -14,7 +14,7 @@ An alternative to custom data is the [config file resource](config-file-resource
 
 *Custom data* types are fully defined in C++ code.
 
-To create a new custom data type, derive from the `ezCustomData` base class and add reflection capabilities. Then add all the properties that you need. Additionally we need to declare a dedicated [resource (TODO)](../runtime/resource-management.md) for your data type.
+To create a new custom data type, derive from the `ezCustomData` base class and add reflection capabilities. Then add all the properties that you need. Additionally we need to declare a dedicated [resource](../runtime/resource-management.md) for your data type.
 
 The code snippet below shows what should be added to a *header file (.h)*:
 
@@ -98,7 +98,7 @@ Make sure to add the necessary asset browser attribute, otherwise it only shows 
 
 > **Note:**
 >
-> Using a reflected resource handle isn't strictly necessary, you can also get a custom data resource directly in code by using the [asset GUID](../assets/assets-overview.md#asset-guid) to [load the resource (TODO)](../runtime/resource-management.md) manually. It is just more convenient and enables you to select the desired resource in the editor.
+> Using a reflected resource handle isn't strictly necessary, you can also get a custom data resource directly in code by using the [asset GUID](../assets/assets-overview.md#asset-guid) to [load the resource](../runtime/resource-management.md) manually. It is just more convenient and enables you to select the desired resource in the editor.
 
 Now when you look at the properties of your component in the editor, it should show a field that allows you to select *custom data assets*. 
 
@@ -123,7 +123,7 @@ if (pCustomDataResource.GetAcquireResult() == ezResourceAcquireResult::Final)
 
 As you can see in the snippet above, once you have a *resource lock* you can access your custom data type like a regular C++ class. Make sure not to hold direct pointers to the data struct, but always go through the resource lock and keep the resource handle around for the entire duration that you potentially want to access the resource, as it determines the resource's lifetime.
 
-For more details about how to use resources, see the [resource management (TODO)](../runtime/resource-management.md) chapter.
+For more details about how to use resources, see the [resource management](../runtime/resource-management.md) chapter.
 
 ## See Also
 

@@ -112,7 +112,6 @@ Texture2D BaseTexture @Default("{ ac614d7c-2b31-4a7b-aa0c-c5d8200b7b89 }");
 #endif
 
 [PIXELSHADER]
-#include <Shaders/Materials/MaterialConstants.h>
 
 Texture2D BaseTexture;
 SamplerState BaseTexture_AutoSampler;

@@ -61,9 +61,9 @@ Finally, during component serialization you just use `ezWorldWriter::WriteGameOb
 
 ## Limitations
 
-Object references are not possible across [scene layers](scene-layers.md).
+Object references are not possible across [scene layers](../scenes/scene-layers.md).
 
 ## See Also
 
-* [Scene Editing](scene-editing.md)
-* [Scene Layers](scene-layers.md)
+* [Scene Editing](../scenes/scene-editing.md)
+* [Scene Layers](../scenes/scene-layers.md)

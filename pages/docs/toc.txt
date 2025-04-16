@@ -19,6 +19,7 @@ ai
 ui
 gameplay
 Miscellaneous
+concepts
 ---
 custom-code
 runtime

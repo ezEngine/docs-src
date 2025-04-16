@@ -44,7 +44,7 @@ The image above shows the same prefab instantiated in two ways. One of the barre
 
 *Editor prefabs* should generally be avoided, except for very rare, special cases. As you can see in the image above, the entire structure of the prefab is available in the editor scene graph. That means you can modify the instance. For example you could switch out a mesh, change a color or even add or delete nodes. Because of this extra flexibility, the editor cannot delete and re-instantiate a prefab when the template changes. Instead, it has to try to *merge* both your changes and the changes to the template. This process is much slower, and error prone, which is why the editor never does this automatically. Instead, you have to trigger this manually by selecting *Tools > Update Prefabs*.
 
-The possibility to modify a prefab instance may sound appealing. However, *engine prefabs* allow you to [expose parameters](../scenes/exposed-parameters.md), which you can then set on the *prefab reference component*. This way you can control exactly which aspects of a prefab you want the user to be able to change.
+The possibility to modify a prefab instance may sound appealing. However, *engine prefabs* allow you to [expose parameters](../concepts/exposed-parameters.md), which you can then set on the *prefab reference component*. This way you can control exactly which aspects of a prefab you want the user to be able to change.
 
 It is possible to convert back and forth between engine prefabs and editor prefabs in the editor, through the context menu entries under *Prefabs > ...*. When doing so, all customizations to a prefab instance will be lost, though.
 
@@ -52,7 +52,7 @@ It is possible to convert back and forth between engine prefabs and editor prefa
 
 In the editor you typically instantiate a prefab by dragging and dropping it from the [asset browser](../assets/asset-browser.md) into the scene. By default this will create an engine prefab. If you hold `Shift` before starting to drag the prefab asset, it will be instantiated as an editor prefab.
 
-If the prefab has [exposed parameters](../scenes/exposed-parameters.md), you can set these on the *prefab reference component*.
+If the prefab has [exposed parameters](../concepts/exposed-parameters.md), you can set these on the *prefab reference component*.
 
 ### Spawning Objects at Runtime
 
@@ -78,5 +78,5 @@ Another situation where this is important, is when a prefab needs to create comp
 
 * [Scene Editing](../scenes/scene-editing.md)
 * [Spawn Component](../gameplay/spawn-component.md)
-* [Exposed Parameters](../scenes/exposed-parameters.md)
-* [Object References](../scenes/object-references.md)
+* [Exposed Parameters](../concepts/exposed-parameters.md)
+* [Object References](../concepts/object-references.md)

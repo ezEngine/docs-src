@@ -17,7 +17,7 @@ There are two ways that a constraint component can link actors.
 
 ### Using Object References
 
-You can use the [object references](../../../scenes/object-references.md) on the joint component to specify both the *parent actor* and the *child actor*:
+You can use the [object references](../../../concepts/object-references.md) on the joint component to specify both the *parent actor* and the *child actor*:
 
 ![Linking actors via references](media/jolt-link-joints.png)
 

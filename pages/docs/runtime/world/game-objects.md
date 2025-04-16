@@ -54,7 +54,7 @@ When deleting a game object, it typically stays alive till the end of the frame,
 
 The chapter about [object lifetime](object-lifetime.md) explains this in more detail.
 
-Components can also [reference objects](../../scenes/object-references.md) from their properties. These references are also based on handles.
+Components can also [reference objects](../../concepts/object-references.md) from their properties. These references are also based on handles.
 
 ## Tags
 

@@ -17,7 +17,7 @@ Also use the [navmesh visualization](runtime-navmesh.md#navmesh-visualization) f
 * `VisualizePathLine`: If enabled, the shortest line through the corridor is visualized.
 * `VisualizePathState`: If enabled, the current state of the path search is printed as text at the location of this object.
 
-* `PathEnd`: A [references](../../scenes/object-references.md) to another object that acts as the path's destination.
+* `PathEnd`: A [references](../../concepts/object-references.md) to another object that acts as the path's destination.
 * `NavmeshConfig`: Which [navmesh type](runtime-navmesh.md#navmesh-types) to do the search on. 
 * `PathSearchConfig`: Which [path search type](runtime-navmesh.md#path-search-types) to use for the path search.
 

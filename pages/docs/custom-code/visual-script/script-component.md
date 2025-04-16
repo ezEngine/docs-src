@@ -10,7 +10,7 @@ The component itself is a C++ component. It mediates between C++ and the visual 
 
 * `Script`: The [visual script](visual-script-class-asset.md) to execute.
 
-* `Parameters`: In case the referenced script has [exposed parameters](../../scenes/exposed-parameters.md), they are listed here and can be modified. When the script gets instantiated, the values of these parameters are passed into the script.
+* `Parameters`: In case the referenced script has [exposed parameters](../../concepts/exposed-parameters.md), they are listed here and can be modified. When the script gets instantiated, the values of these parameters are passed into the script.
 
 ## See Also
 

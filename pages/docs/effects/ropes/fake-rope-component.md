@@ -10,7 +10,7 @@ On the other hand, the fake rope component is more lightweight to simulate and i
 
 ## Setting Up a Rope
 
-A rope requires two anchor points between which it hangs. One anchor point is the rope object position itself, for the other one typically uses a dummy game object. The `Anchor` [object reference](../../scenes/object-references.md) is used to select which one to use.
+A rope requires two anchor points between which it hangs. One anchor point is the rope object position itself, for the other one typically uses a dummy game object. The `Anchor` [object reference](../../concepts/object-references.md) is used to select which one to use.
 
 In the object hierarchy it typically looks like this:
 
@@ -32,7 +32,7 @@ The [Testing Chambers](../../../samples/testing-chambers.md) project contains a 
 
 ## Component Properties
 
-* `Anchor`: A [reference](../../scenes/object-references.md) to an object whose position determines where the rope ends.
+* `Anchor`: A [reference](../../concepts/object-references.md) to an object whose position determines where the rope ends.
 
 * `AttachToOrigin`, `AttachToAnchor`: Whether the rope is fixed at the origin or anchor location. If the rope is not attached at one or both ends it is free to move away from there.
 

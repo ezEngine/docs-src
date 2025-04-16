@@ -8,7 +8,7 @@ The beam component is purely a graphical effect, it has no game play functionali
 
 ## Component Properties
 
-* `TargetObject`: The beam geometry starts at the beam component position and goes towards the position of the [referenced object](../scenes/object-references.md). If the target object moves, the beam follows.
+* `TargetObject`: The beam geometry starts at the beam component position and goes towards the position of the [referenced object](../concepts/object-references.md). If the target object moves, the beam follows.
 
 * `Material`: The material to use to render the beam geometry with.
 

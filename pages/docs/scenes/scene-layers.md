@@ -63,7 +63,7 @@ Since every layer is a separate file, each one also has its own modified flag (t
 
 ## Object References across Layers
 
-Creating [object references](object-references.md) across scene layers is not possible (and also not planned to ever be allowed). Objects that should reference each other must either be in the same scene layer, or one of them has to be a [prefab](../prefabs/prefabs-overview.md) and [expose the reference property](exposed-parameters.md) in a useful way.
+Creating [object references](../concepts/object-references.md) across scene layers is not possible (and also not planned to ever be allowed). Objects that should reference each other must either be in the same scene layer, or one of them has to be a [prefab](../prefabs/prefabs-overview.md) and [expose the reference property](../concepts/exposed-parameters.md) in a useful way.
 
 ## Multi-User Editing with Layers
 

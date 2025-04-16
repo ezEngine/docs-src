@@ -10,7 +10,7 @@ If all you need is a decorative rope, that doesn't react to physical stimuli (ex
 
 ## Setting Up a Rope
 
-A rope requires two anchor points between which it hangs. One anchor point is the rope object position itself, for the other one typically uses a dummy game object. The `Anchor` [object reference](../../../scenes/object-references.md) is used to select which one to use.
+A rope requires two anchor points between which it hangs. One anchor point is the rope object position itself, for the other one typically uses a dummy game object. The `Anchor` [object reference](../../../concepts/object-references.md) is used to select which one to use.
 
 In the object hierarchy it typically looks like this:
 
@@ -38,7 +38,7 @@ Overall the same guidelines to prevent stability issues apply here as well.
 
 ## Component Properties
 
-* `Anchor1`, `Anchor2`: A [reference](../../../scenes/object-references.md) to an object whose position determines one end of the rope. If only one anchor is specified, the position of the rope component's owner object is used as the other end.
+* `Anchor1`, `Anchor2`: A [reference](../../../concepts/object-references.md) to an object whose position determines one end of the rope. If only one anchor is specified, the position of the rope component's owner object is used as the other end.
 
 * `Anchor1Constraint`, `Anchor2Constraint`: How the rope is attached to each anchor:
     * `None`: The rope is not attached to the object, at all, and once the simulation starts, it will fall down at that end.

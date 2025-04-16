@@ -42,7 +42,7 @@ All surface interactions ultimately spawn [prefabs](../prefabs/prefabs-overview.
 
 The following options allow you to adjust how prefabs are spawned:
 
-**Parameters:** [Exposed Parameters](../scenes/exposed-parameters.md) can be used to spawn the same prefab but with different configurations.
+**Parameters:** [Exposed Parameters](../concepts/exposed-parameters.md) can be used to spawn the same prefab but with different configurations.
 
 **Alignment:** Defines how the spawned prefab instance will be rotated. The +X axis of the prefab is considered to be 'forwards'.
 

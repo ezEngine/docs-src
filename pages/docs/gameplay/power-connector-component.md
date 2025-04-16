@@ -27,9 +27,9 @@ To build a cable, don't forget to set each end as the *buddy* of the other end.
 
   If this is non-zero, it acts like a source, and when another connector gets connected to it, that output will be propagated through the connection/buddy chain.
 
-* `Buddy`: If this is intended to act like a cable with two ends, specify the [object references](../scenes/object-references.md) to the other end of the cable here. This way, if this end gets power, the other end will output that power, and vice versa.
+* `Buddy`: If this is intended to act like a cable with two ends, specify the [object references](../concepts/object-references.md) to the other end of the cable here. This way, if this end gets power, the other end will output that power, and vice versa.
 
-* `ConnectedTo`: If this object is supposed to start in a state connected to something else, e.g. a power socket or another cable, use this [object references](../scenes/object-references.md) to configure it connected. Note that this will create a physics joint with between this object and the target object. If they aren't aligned already, this will make the two objects snap together during the first simulation steps.
+* `ConnectedTo`: If this object is supposed to start in a state connected to something else, e.g. a power socket or another cable, use this [object references](../concepts/object-references.md) to configure it connected. Note that this will create a physics joint with between this object and the target object. If they aren't aligned already, this will make the two objects snap together during the first simulation steps.
 
 ## Message Handlers
 

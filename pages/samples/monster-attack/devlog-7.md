@@ -34,7 +34,7 @@ Thus my level is made up of relatively large and easy to place pieces:
 
 Once I had my level rebuilt with these pieces, I wanted some lighting and decoration. This becomes annoying pretty fast, especially when you want certain things to always look the same. For example the torches were all supposed to be in similar places (same height etc).
 
-So I had the idea to just put some decoration elements directly into my wall prefabs and make them an optional switch. I used [exposed prefab parameters](../../docs/scenes/exposed-parameters.md) to achieve this. Basically, I just expose the *Active* property of some group object under a nice name.
+So I had the idea to just put some decoration elements directly into my wall prefabs and make them an optional switch. I used [exposed prefab parameters](../../docs/concepts/exposed-parameters.md) to achieve this. Basically, I just expose the *Active* property of some group object under a nice name.
 
 For example for the floor prefab I added that it can optionally have a ceiling, and I added a second option to have a ceiling with a grate in it:
 

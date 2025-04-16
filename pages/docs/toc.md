@@ -30,10 +30,8 @@
 # Scenes
 ## [Advanced Object Transforms](scenes/advanced-object-transform.md)
 ## [Editor Camera](scenes/editor-camera.md)
-## [Exposed Parameters](scenes/exposed-parameters.md)
 ## [Editing Gizmos](scenes/gizmos.md)
 ## [Greyboxing](scenes/greyboxing.md)
-## [Object References](scenes/object-references.md)
 ## [Scene Editing](scenes/scene-editing.md)
 ## [Scene Layers](scenes/scene-layers.md)
 ## [Selecting Objects](scenes/selection.md)
@@ -254,9 +252,11 @@
 ## [RmlUi](ui/rmlui.md)
 # Gameplay
 ## [Area Damage Component](gameplay/area-damage-component.md)
+## Camera
+### [Head Bone Component](gameplay/camera/headbone-component.md)
+### [Thirdperson View Component](gameplay/camera/thirdpersonview-component.md)
 ## [Creature Crawl Component](gameplay/creature-crawl-component.md)
 ## [Grabbable Item Component](gameplay/grabbable-item-component.md)
-## [Head Bone Component](gameplay/headbone-component.md)
 ## [Marker Component](gameplay/marker-component.md)
 ## [Player Start Point](gameplay/player-start-point.md)
 ## [Power Connector Component](gameplay/power-connector-component.md)
@@ -277,6 +277,10 @@
 ## [Global Blackboard Component](Miscellaneous/global-blackboard-component.md)
 ## [ImageData Asset](Miscellaneous/imagedata-asset.md)
 ## [Local Blackboard Component](Miscellaneous/local-blackboard-component.md)
+# Concepts
+## [Exposed Parameters](concepts/exposed-parameters.md)
+## [Object Paths](concepts/object-paths.md)
+## [Object References](concepts/object-references.md)
 # Custom Code
 ## [Custom Code](custom-code/custom-code-overview.md)
 ## C++

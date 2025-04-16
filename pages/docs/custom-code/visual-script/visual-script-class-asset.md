@@ -30,7 +30,7 @@ These scripts are used in state machines through the [script state](../game-logi
 
 ## Visual Script Variables
 
-Through the general script properties you can add *variables* to your script. These may just be internal variables to keep track of state, but when the `Expose` flag is enabled, they become [exposed parameters](../../scenes/exposed-parameters.md). These variables will show up where the script is used (for example on [script components](script-component.md)) and allow you to pass in different starting values.
+Through the general script properties you can add *variables* to your script. These may just be internal variables to keep track of state, but when the `Expose` flag is enabled, they become [exposed parameters](../../concepts/exposed-parameters.md). These variables will show up where the script is used (for example on [script components](script-component.md)) and allow you to pass in different starting values.
 
 ## Editing Visual Scripts
 
@@ -269,7 +269,7 @@ These nodes are for converting variables from one type to another. Especially im
 
 ### Variable Nodes
 
-These nodes operate on [visual script variables](#visual-script-variables). The variables have to be declared on the script first. Use these to keep track of state within the script and also to read state that was passed in through [exposed parameters](../../scenes/exposed-parameters.md).
+These nodes operate on [visual script variables](#visual-script-variables). The variables have to be declared on the script first. Use these to keep track of state within the script and also to read state that was passed in through [exposed parameters](../../concepts/exposed-parameters.md).
 
 Additionally, the **Temp Variable** node can be used to store the result of an evaluated expression and reuse it multiple times. Since the node has execution pins, you can control exactly when its input should be evaluated. Its output can then be read as often as desired and won't change.
 

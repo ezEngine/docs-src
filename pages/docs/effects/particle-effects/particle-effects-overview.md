@@ -22,7 +22,7 @@ When you add a new particle system with the green '+' button, you get a new syst
 
 ### Effect
 
-The **Effect** panel lists options for the overall effect, independent of the individual particle systems. Adjusting these options is typically only necessary once an effect is working well and you need to tweak its performance or allow users to adjust details through [exposed parameters](../../scenes/exposed-parameters.md).
+The **Effect** panel lists options for the overall effect, independent of the individual particle systems. Adjusting these options is typically only necessary once an effect is working well and you need to tweak its performance or allow users to adjust details through [exposed parameters](../../concepts/exposed-parameters.md).
 
 ### Emitter, Initializers, Behaviors and Renderers
 
@@ -80,7 +80,7 @@ For details about all available renderer types, see [Particle Renderers](particl
 
 ## Effect Parameters
 
-*Effect parameters* are an advanced feature that allows you to make certain parts of an effect configurable from the outside. You add effect parameters in the *Effect tab*. At the moment only *number parameters* and *color parameters* are supported. All parameters that you add there will appear as [exposed parameters](../../scenes/exposed-parameters.md) on [particle effect components](particle-effect-component.md).
+*Effect parameters* are an advanced feature that allows you to make certain parts of an effect configurable from the outside. You add effect parameters in the *Effect tab*. At the moment only *number parameters* and *color parameters* are supported. All parameters that you add there will appear as [exposed parameters](../../concepts/exposed-parameters.md) on [particle effect components](particle-effect-component.md).
 
 Effect parameters can only affect select features. For example the [quad renderer](particle-renderers.md#quad-renderer) has a `TintColorParam` property. If you type in the name of a *color parameter* there, the quad renderer will look up the value of the color parameter during every update, and use that to modulate the final color of the rendered particle.
 

@@ -54,7 +54,7 @@ You can rename your component class at any time.
 
 In the example above, `PublicVariable` is visible from the outside. When you press the *Sync Parameters* button in the toolbar, all public variables are detected and listed in the `Parameters` section on the right.
 
-If you then check the `Expose` option and save the script, this parameter will show up as an [exposed parameter](../../scenes/exposed-parameters.md) for this script. Meaning, when this asset is used in a [script component](../visual-script/script-component.md), the component can override the values of these variables. Thus you can instantiate the same script many times with different starting parameters.
+If you then check the `Expose` option and save the script, this parameter will show up as an [exposed parameter](../../concepts/exposed-parameters.md) for this script. Meaning, when this asset is used in a [script component](../visual-script/script-component.md), the component can override the values of these variables. Thus you can instantiate the same script many times with different starting parameters.
 
 ## Non-Component AS Files
 

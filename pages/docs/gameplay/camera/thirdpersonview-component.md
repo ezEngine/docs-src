@@ -35,7 +35,7 @@ When the view is rotated to look straight, it zooms out up to `MaxDistance`. It 
 
 * `CollisionLayer`: The [collision layer](../../physics/jolt/collision-shapes/jolt-collision-layers.md) to use for checking collisions with the environment. Only static geometry is checked, dynamic geometry gets ignored.
 
-* `SweepWidth`: The radius of the sphere that is swept backwards to determine collisions with the environment. Too small values mean the camera may be able to move through small openings, which will move the camera back and forth frequently.
+* `SweepWidth`: The diameter of the sphere that is swept backwards to determine collisions with the environment. Too small values mean the camera may be able to move through small openings, which will move the camera back and forth frequently.
 
 * `ZoomInSpeed`, `ZoomOutSpeed`: The speed with which the camera zooms in when it encounters an obstacle, and out when the obstacle has passed.
 

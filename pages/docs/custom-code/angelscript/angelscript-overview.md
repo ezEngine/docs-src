@@ -8,6 +8,10 @@ There is a great extension for VSC, called [AngelScript Language Server](https:/
 
 AngelScript code compiles nearly instantly, and is automatically reloaded, which means you can edit a script, switch to the editor and press play, and have the latest code running without any delay.
 
+## Video: Introduction to AngelScript
+
+[![video](https://img.youtube.com/vi/3iWVQyZAp6k/0.jpg)](https://www.youtube.com/watch?v=3iWVQyZAp6k)
+
 ## The AngelScript Language
 
 For a description of the AngelScript language, please consult the [AngelScript documentation](https://www.angelcode.com/angelscript/sdk/docs/manual/doc_script.html).

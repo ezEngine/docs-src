@@ -40,6 +40,10 @@ Tags are always set directly on one object. They are not inherited to child obje
 
 Similarly, if you want to make an object invisible in one view, you probably also need to disable shadow casting on it. If, however, it should be visible in another view, it cannot cast a shadow in that view, as the shadow maps are shared between the views.
 
+## Video: How to Use Tags
+
+[![video](https://img.youtube.com/vi/DcTqmRdjwmg/0.jpg)](https://www.youtube.com/watch?v=DcTqmRdjwmg)
+
 ## See Also
 
 * [Project Settings](project-settings.md)

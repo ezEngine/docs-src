@@ -2,6 +2,13 @@
 
 *Assets* are the most common type of [documents](../editor/editor-documents.md) in the editor. Assets represent data that usually comes from some source file (like an image or a model) and must be processed into an optimized format for the engine to use at runtime.
 
+> **Note**
+>
+> There is asset specific documentation for every single asset type.
+> When you have an asset document open, select *Asset > Open Asset Documentation* from the main menu, or click the purple `?` button, to open the online documentation page.
+>
+> There you will find an explanation of the asset's purpose and all its configuration options.
+
 This processing step is called **asset transformation**. A good example are [textures](../graphics/textures-overview.md). Textures come in many different source formats, such as TGA, JPG, PNG, and so on. Texture data in these formats is not suited to be loaded directly by the engine. Instead, it must be encoded and compressed in formats that GPUs can decode efficiently. This step can be very time consuming and should therefore be done up front. Additionally, textures should contain mipmaps and may need to be downscaled for different platforms. Exactly how a texture should be transformed is something that you may want to have full control over, so you need some way to configure this.
 
 Therefore, instead of loading a texture directly into the engine, you need to create a texture asset in the editor. This document will reference one or multiple source files and allow you to configure the asset transform. When the asset gets *transformed* it will output an optimized file that the engine can then load and use efficiently.

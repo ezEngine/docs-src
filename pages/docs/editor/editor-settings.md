@@ -52,6 +52,8 @@ The list on the left lists all the available preferences. Items prefixed with `A
 
 * **Engine View Light Settings:** Many [assets](../assets/assets-overview.md) have 3D previews that require lighting. These are the lighting settings to use.
 
+* **CameraRotationSpeed:** Allows to adjust how quickly the [editor camera](../scenes/editor-camera.md) rotates.
+
 ## Shortcuts
 
 *Tools > Shortcuts...* opens a dialog to configure the shortcuts.

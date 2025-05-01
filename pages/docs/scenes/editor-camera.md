@@ -40,6 +40,10 @@ In the following `LMB` refers to the *left mouse button*, `RMB` to the *right mo
 
 * Context menu > *Align Camera with Object*: Orients the camera with the selected object
 
+> **Note:**
+>
+> The camera rotation speed can be adjusted through the [editor settings](../editor/editor-settings.md).
+
 ### Orthographic Views
 
 * `RMB`: Pan the selected view

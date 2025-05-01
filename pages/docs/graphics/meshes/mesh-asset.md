@@ -28,6 +28,12 @@ Since assets are often authered with many different conventions, you can adjust 
 
 * `PrimitiveType`: This selects how the mesh data is generated. If `From File` is chosen, you need to also specify the `MeshFile` property. If you choose a procedural method, other configuration options appear.
 
+* `MeshIncludeTags`, `MeshExcludeTags`: Some source assets pack different types of meshes into a single file, for example different LODs or a dedicated collider mesh. These options allow you to select which meshes to import. Both are *semicolon-separated* lists of strings. Ie *A;B* represents two *tags*, `A` and `B`.
+
+  If any *include tag* is specified, only meshes whose names **start or end** with that string are used. For instance, the include tag `LOD1` means that a mesh named *Bunny_LOD1* would be imported, but a mesh named *Bunny* would be skipped.
+
+  If any *exclude tag* is specified, meshes whose names *start or end** with that string are skipped. However, include tags take precedence.
+
 * `ImportTransform`, `RightDir`, `UpDir`, `FlipForwardDir`: How to rotate or mirror the mesh during import, so that it is oriented correctly for use in ezEngine. See [Mesh Orientation](#mesh-orientation) above.
 
 * `UniformScaling`: Adjusts the size of the mesh, for example to convert a mesh from centimeter to meter scale.

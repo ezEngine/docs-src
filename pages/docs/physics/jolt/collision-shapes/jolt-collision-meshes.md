@@ -38,6 +38,12 @@ In the image above the mesh import decomposed the mesh into multiple pieces (sev
 
 This mode allows you to dictate into how many pieces to split the mesh. The more pieces, the closer the result resembles the original shape. These collision meshes can still be used for dynamic simulation, the Jolt actors simply use multiple convex shapes as their representation. Of course the more pieces such a mesh contains, the less efficient the simulation becomes.
 
+## Selective Mesh Import
+
+Sometimes a **dedicated collider mesh** is embedded in the same source asset as the graphics mesh. You can use the properties `MeshIncludeTags` and `MeshExcludeTags` to selectively import only those meshes. See the [mesh asset properties](../../graphics/meshes/mesh-asset.md#asset-properties) for details.
+
+As an example, if the graphics mesh is called *Bunny* and the dedicated collider mesh is called *$COL_Bunny*, you can set the *MeshIncludeTags* to `$COL` to only import *$COL_Bunny* as the collider mesh.
+
 ## Mesh Simplification
 
 Collision meshes support mesh simplification to reduce their amount of triangles and vertices. See the [mesh asset](../../../graphics/meshes/mesh-asset.md#asset-properties) for details about the parameters.

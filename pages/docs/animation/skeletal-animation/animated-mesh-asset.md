@@ -14,6 +14,8 @@ Animated meshes are placed in a scene with a dedicated [animated mesh component]
 
 * `MeshFile`: The file that contains the mesh data. For animated meshes prefer to use **GLB** (binary GLTF) files. **FBX** files can be used as well, though due to FBX's complexity chances are higher that it won't work as expected. The referenced file must contain the mesh data with skinning information. It doesn't need to contain any animation clips.
 
+* `MeshIncludeTags`, `MeshExcludeTags`: See the [mesh asset properties](../../graphics/meshes/mesh-asset.md#asset-properties).
+
 * `DefaultSkeleton`: The [skeleton asset](skeleton-asset.md) that is used to skin the animated mesh by default.
 
 * `RecalculateNormals`, `RecalculateTangents`: See the [mesh asset properties](../../graphics/meshes/mesh-asset.md#asset-properties).

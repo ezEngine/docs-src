@@ -39,7 +39,7 @@ This node can be used to check whether a number value compares in a certain way 
 ### Output Pins
 
 * `Is True`: A boolean output for the result of the comparison.
-
+* `Is False`: Outputs the opposite value of `Is True`.
 
 ## Bool To Number Node
 

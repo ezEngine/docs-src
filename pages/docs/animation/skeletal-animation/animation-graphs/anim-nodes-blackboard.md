@@ -51,6 +51,7 @@ This node monitors a blackboard value and compares it to a reference value. When
 * `On True`: Gets triggered for one frame when the comparison result changes to `true`.
 * `On False`: Gets triggered for one frame when the comparison result changes to `false`.
 * `Is True`: Outputs the result of the comparison. This is a data pin that can always be read, contrary to the other two pins that are *event pins* and only get triggered when something changes.
+* `Is False`: Outputs the opposite value of `Is True`.
 
 ## Check Bool Node
 

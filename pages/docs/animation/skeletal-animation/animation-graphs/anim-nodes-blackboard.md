@@ -8,7 +8,7 @@ The animation graph provides nodes to read and write values from and to a [black
 
 ## Set Number Node / Set Bool Node
 
-When activated, this node writes a given value to the blackboard.
+When activated, this node writes a given value to the blackboard. If the activation pin is not connected, at all, the node updates the blackboard with the incoming number every update.
 
 ### Node Properties
 
@@ -22,7 +22,6 @@ When activated, this node writes a given value to the blackboard.
 
 * `Number` / `Bool`: The value to write. If not connected, the value configured on the node is used.
 
-
 ## Get Number Node / Get Bool Node
 
 Outputs the value of a specific blackboard entry.
@@ -34,7 +33,6 @@ Outputs the value of a specific blackboard entry.
 ### Output Pins
 
 * `Number` / `Bool`: The value of the entry. If the entry doesn't exist, the pin outputs zero.
-
 
 ## Check Number Node
 
@@ -54,7 +52,6 @@ This node monitors a blackboard value and compares it to a reference value. When
 * `On False`: Gets triggered for one frame when the comparison result changes to `false`.
 * `Is True`: Outputs the result of the comparison. This is a data pin that can always be read, contrary to the other two pins that are *event pins* and only get triggered when something changes.
 
-
 ## Check Bool Node
 
 This node monitors a boolean blackboard value and compares it to `true`. When the result of the comparison changes, the `On True` or `On False` output pin gets triggered for one frame. 
@@ -68,7 +65,6 @@ This node monitors a boolean blackboard value and compares it to `true`. When th
 * `On True`: Gets triggered for one frame when the value changes to `true`.
 * `On False`: Gets triggered for one frame when the value changes to `false`.
 * `Bool`: Outputs the blackboard value. This is a data pin that can always be read, contrary to the other two pins that are *event pins* and only get triggered when the value changes.
-
 
 ## OnChanged Node
 

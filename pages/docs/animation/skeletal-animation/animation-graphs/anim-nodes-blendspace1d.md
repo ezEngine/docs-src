@@ -20,7 +20,7 @@ In the video above you can see such a transition in action. The *lerp* input val
 
 Most node properties are the same as on the [sample clip node](anim-nodes-sample-clip.md#node-properties).
 
-* `Clips`: A list of animation clips between which this animation node will interpolate. The node will only ever sample the two clips whose `Position` values are closest the the value provided through the `Lerp` input pin. Additionally, the playback speed for each clip may be tweaked. 
+* `Clips`: A list of animation clips between which this animation node will interpolate. The node will only ever sample the two clips whose `Position` values are closest the the value provided through the `Lerp` input pin. Additionally, the playback speed for each clip may be tweaked.
 
 ## Input Pins
 

@@ -30,7 +30,6 @@ The [simple animation component](simple-animation-component.md) and the [animati
 
 ## See Also
 
-
 * [Skeletal Animations](skeletal-animation-overview.md)
 * [Simple Animation Component](simple-animation-component.md)
 * [Animation Controller Component](animation-graphs/animation-controller-component.md)

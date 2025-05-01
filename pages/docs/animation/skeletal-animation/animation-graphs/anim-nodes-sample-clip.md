@@ -10,7 +10,7 @@ The *sample clip node* is the most basic node to play an animation. It is used f
 
 * `Playback Speed`: Adjusts the speed with which the animation is sampled.
 
-* `Apply Root Motion`: Whether [root motion](../root-motion.md) should be sampled and passed through.
+* `Root Motion Amount`: How much [root motion](../root-motion.md) should be applied. A value of zero deactivates root motion, a value of 1 passes the motion from the clip through. Smaller or higher values can be used to tweak the movement speed.
 
 * `Clip`: The [animation clip](../animation-clip-asset.md) to play.
 

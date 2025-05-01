@@ -48,6 +48,8 @@ Select the `ezEditableSkeleton` node to edit the overall asset properties.
 
 * `MaxImpulse`: When projectiles and other things apply impulses to ragdoll limbs, the forces can quickly add up and fling a ragdoll far away. This value is used to clamp the maximum impulse to apply to prevent that.
 
+* `LeftFootJoint`, `RightFootJoint`: The names of the joints for the left foot and right foot. This is optional, and is only needed, if you want the engine to automatically calculate [root motion](root-motion.md) for an [animation clip](animation-clip-asset.md) from foot movement.
+
 ## Bone Properties
 
 Select a bone from the hierarchy to edit its properties.

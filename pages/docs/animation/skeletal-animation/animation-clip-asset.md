@@ -34,6 +34,12 @@ After this, the editor creates a new animation clip document for each animation 
 
   For the time being the only mode available is *constant motion*, which means that when this clip is played, the parent object will be moved at a constant speed into a single direction. This can be used for walking animations, but it might be tricky to avoid *foot sliding*.
 
+  * **Constant Root Motion**: The constant motion is separated into a direction and length value. If the length is non-zero, the direction value is rescaled to this length. This makes it easier to define diagonal directions. E.g. you can use the value `(1, 1, 0)` as direction and `1` as length, and don't need to *normalize* the direction yourself to `(0.7, 0.7, 0)`.
+
+    > **Automatic Extraction:**
+    >
+    > Constant root motion can be estimated automatically by the editor for you. Click the button *Extract Root Motion From Feet* in the toolbar, or from the *Asset* main menu. The editor then samples the animation clip and estimates how the feet would move the character to determine an average direction and speed. For this to work, the [skeleton](skeleton-asset.md) must specify which bones are the left and right foot bones. Upon success, it fills out the root motion direction value. You can then adjust the value, for example, it is often necessary to remove unwanted motion along the Z axis.
+
 ## Playback
 
 The toolbar buttons allow you to play/pause/reset and slow-down the animation playback. Additionally you can use the **time scrubber** right below the 3D viewport to manually play the animation. It is best to pause the automatic playback then.

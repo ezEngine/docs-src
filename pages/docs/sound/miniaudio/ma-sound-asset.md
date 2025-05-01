@@ -12,6 +12,8 @@ You can instantiate sounds by dragging a sound asset from the asset browser into
 
 * `Files`: A list of sound files. Every time a sound gets played, a random sound file is chosen. Every sound asset has to have at least one such input file.
 
+* `Group`: What sound group this sound belongs to. Sometimes also called a *bus* or *VCA* (*Voltage Controlled Amplifier*). Usually something like *music*, *effects*, *background* or *ui*. The game code can control the volume of groups through the `ezSoundInterface`.
+
 * `Loop`: Whether to play the sound in a looping fashion. If there are multiple input files, one random file is chosen and then that one file is played in a loop. If instead you want to loop the playback and play random files each time, use the `Restart` option on the [MiniAudio sound component](ma-sound-component.md) instead.
 
 * `MinRandomVolume`, `MaxRandomVolume`: Every time a sound gets played, the volume of the sound is randomized between these two values.

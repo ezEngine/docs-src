@@ -8,6 +8,8 @@ Everything higher level (editor, tools, rendering) is **currently only implement
 
 A **Linux port** is currently being worked on, though.
 
+For more details see [Supported Platforms](../docs/build/supported-platforms.md).
+
 ## Render API
 
 At the moment we (officially) only provide a **DX11 renderer**. A **Vulkan renderer** is in development.

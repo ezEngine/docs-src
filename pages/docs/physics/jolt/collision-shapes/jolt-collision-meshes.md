@@ -40,7 +40,7 @@ This mode allows you to dictate into how many pieces to split the mesh. The more
 
 ## Selective Mesh Import
 
-Sometimes a **dedicated collider mesh** is embedded in the same source asset as the graphics mesh. You can use the properties `MeshIncludeTags` and `MeshExcludeTags` to selectively import only those meshes. See the [mesh asset properties](../../graphics/meshes/mesh-asset.md#asset-properties) for details.
+Sometimes a **dedicated collider mesh** is embedded in the same source asset as the graphics mesh. You can use the properties `MeshIncludeTags` and `MeshExcludeTags` to selectively import only those meshes. See the [mesh asset properties](../../../graphics/meshes/mesh-asset.md#asset-properties) for details.
 
 As an example, if the graphics mesh is called *Bunny* and the dedicated collider mesh is called *$COL_Bunny*, you can set the *MeshIncludeTags* to `$COL` to only import *$COL_Bunny* as the collider mesh.
 

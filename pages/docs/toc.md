@@ -17,6 +17,7 @@
 ## [Editor Background Operations](editor/editor-bg-operations.md)
 ## [Editor Documents](editor/editor-documents.md)
 ## [Editor Plugins](editor/editor-plugins.md)
+## [Editor Preferences](editor/editor-preferences.md)
 ## [Editor Settings](editor/editor-settings.md)
 ## [Template Documents](editor/editor-template-documents.md)
 ## [Editing Views](editor/editor-views.md)

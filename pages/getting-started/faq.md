@@ -10,6 +10,10 @@ A **Linux port** is currently being worked on, though.
 
 For more details see [Supported Platforms](../docs/build/supported-platforms.md).
 
+## Building
+
+See [this page](https://ezengine.net/pages/docs/build/building-ez.html) for instructions how to build the engine.
+
 ## Render API
 
 At the moment we (officially) only provide a **DX11 renderer**. A **Vulkan renderer** is in development.

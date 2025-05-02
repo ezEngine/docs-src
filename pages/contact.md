@@ -8,7 +8,7 @@ We are also reachable via Discord. Use this link to join the server: [https://di
 
 > **NOTE:**
 >
-> Our community is *very* small at the moment and many questions can only reasonably be answered by the EZ developers. Please don't spam the Discord channel with general C++ or build setup questions that could be answered with a web search or by reading the available documentation.
+> Our community is *very* small at the moment and many questions can only reasonably be answered by the EZ developers. Please don't spam the Discord channel with general C++ or build setup questions that could be answered with a web search or by reading [the available documentation](docs/docs-overview.md).
 
 ## Bugs
 

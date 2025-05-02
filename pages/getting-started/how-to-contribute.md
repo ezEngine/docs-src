@@ -34,6 +34,5 @@ We also value feature contributions, but with those we might be much more picky.
 
 ## See Also
 
-
 * [Contact](../contact.md)
 * [Frequently Asked Questions](faq.md)

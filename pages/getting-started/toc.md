@@ -1,5 +1,5 @@
+# [Getting Started](start.md)
 # [Prebuilt Binaries](binaries.md)
-# [ezEditor Overview](editor-overview.md)
 # [Frequently Asked Questions](faq.md)
 # [How to Contribute](how-to-contribute.md)
 # [Videos](videos.md)

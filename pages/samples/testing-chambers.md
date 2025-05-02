@@ -15,7 +15,7 @@ This sample is data only and no extra code needs to be compiled to make it run.
 
 The editor project belonging to this sample can be found under *Data/Samples/Testing Chambers*.
 
-Open the *Corridor* scene document. Make sure to transform all assets (in the *AssetBrowser* panel the box with the red arrow). Then press 'Play the Game' in the scene. Use WSAD to move around, left click to shoot, *Space* to jump, *CTRL* to crouch and *1, 2 and 3* to switch weapons.
+Open the *Main* scene document. Make sure to transform all assets (in the *AssetBrowser* panel the box with the red arrow). Then press 'Play the Game' in the scene. Use WSAD to move around, left click to shoot, *Space* to jump, *CTRL* to crouch and *1, 2 and 3* to switch weapons.
 
 ## See Also
 

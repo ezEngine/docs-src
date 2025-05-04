@@ -4,7 +4,7 @@ ezEngine is a free, open source game engine written in C++. Its philosophy is to
 
 [![video](https://img.youtube.com/vi/S342o8ZmPdA/0.jpg)](https://www.youtube.com/watch?v=S342o8ZmPdA)
 
-Similarly, the EZ code base can be [built in multiple tiers](pages/docs/build/cmake-config.md#build-filter), where you either get the entire feature set, with a [fully functional editor](pages/getting-started/editor-overview.md), asset management and renderer, or you can strip it down to just the base libraries and core engine functionality. This can be extremely useful if you need to build a lot of custom technology, but require a high-performance, reliable foundation. EZ has a strong emphasis on providing robust, easy to use and well-tested base functionality. It is successfully being used in such a capacity in commercial products.
+Similarly, the EZ code base can be [built in multiple tiers](pages/docs/build/cmake-config.md#build-filter), where you either get the entire feature set, with a fully functional editor, asset management and renderer, or you can strip it down to just the base libraries and core engine functionality. This can be extremely useful if you need to build a lot of custom technology, but require a high-performance, reliable foundation. EZ has a strong emphasis on providing robust, easy to use and well-tested base functionality. It is successfully being used in such a capacity in commercial products.
 
 ## When to use ezEngine
 

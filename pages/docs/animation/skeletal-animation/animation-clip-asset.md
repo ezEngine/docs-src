@@ -12,9 +12,11 @@ An animation clip represents a single motion, such as a walk cycle, a jump or ot
 
 ## Importing Many Animation Clips Quickly
 
-In the [asset browser](../../assets/asset-browser.md) select to show `<Importable Files>` then find your source animation clip file. Right click on it, and from the *Import As* sub-menu select `Animation Clips (All)`. Finally, select an [animated mesh](animated-mesh-asset.md) as the preview model.
+In the [asset browser](../../assets/asset-browser.md) select to show `<Importable Files>` then find your source animation clip file. Right click on it, and from the *Import As* sub-menu select `Animation Clips (All)`. In the next step, you are asked to select an [animated mesh](animated-mesh-asset.md) as the preview model.
 
 After this, the editor creates a new animation clip document for each animation that it finds in the file.
+
+Animation clips can also be imported automatically when [importing an animated mesh](../../graphics/meshes/mesh-import.md).
 
 ## Asset Properties
 

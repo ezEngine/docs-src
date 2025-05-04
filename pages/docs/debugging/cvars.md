@@ -17,7 +17,7 @@ CVars are exposed in multiple ways.
 
 ### ezEditor
 
-In [ezEditor](../../getting-started/editor-overview.md) you can open *Panels > CVars* to show a panel that allows you to modify CVars. Be aware that some CVars only have an effect when simulating the scene, and some even only when using Play-the-Game mode. The latter mostly happens when the effect of a CVar is implemented by a [Game State](../runtime/application/game-state.md).
+In ezEditor you can open *Panels > CVars* to show a panel that allows you to modify CVars. Be aware that some CVars only have an effect when simulating the scene, and some even only when using Play-the-Game mode. The latter mostly happens when the effect of a CVar is implemented by a [Game State](../runtime/application/game-state.md).
 
 ### ezInspector
 

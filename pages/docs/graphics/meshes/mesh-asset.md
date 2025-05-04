@@ -4,6 +4,10 @@ A *mesh asset* represents a mesh that can be used for rendering. In the most com
 
 ![Mesh Asset](media/mesh-asset.jpg)
 
+> **Importing Meshes:**
+>
+> See the [Mesh Asset Import](mesh-import.md) chapter for how to get your own meshes into the engine.
+
 The left hand side of the [asset document](../../assets/assets-overview.md) shows a 3D preview of the mesh. The viewport allows to switch the [render mode](../../editor/editor-views.md#render-modes) to inspect the mesh normals, UV coordinates and so on.
 
 On the right hand side the asset properties specify how to import or generate the mesh data.

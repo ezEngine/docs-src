@@ -6,6 +6,10 @@ The main function of the *Skeleton asset* is to store information about the bone
 
 The skeleton is used to adjust the overall scale and rotation of animated meshes. It is also used to define [collision shapes](../../physics/jolt/collision-shapes/jolt-shapes.md) for bones, which is needed for [hit detection](../../physics/jolt/ragdolls/jolt-hitbox-component.md) and when additionally joint types and joint limits are configured, the skeleton can be used for [ragdolls](../../physics/jolt/ragdolls/jolt-ragdoll-component.md).
 
+> **Importing Skeletons:**
+>
+> Skeletons can be imported automatically during [mesh import](../../graphics/meshes/mesh-import.md).
+
 ## User Interface
 
 The left hand side shows a tree view with the bone hierarchy. The top most element is always the `ezEditableSkeleton` node, which represents the skeleton in general.

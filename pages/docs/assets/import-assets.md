@@ -2,7 +2,11 @@
 
 All [assets](assets-overview.md) are represented by [documents](../editor/editor-documents.md). That means to get a texture into the engine, you need a [texture document](../graphics/textures-overview.md) which describes which source files (png, jpg, etc) are used to create the texture and how they shall be imported. This is where you configure such things as, whether to use compression, whether an alpha channel should be present and so on.
 
-Other asset types of course have other options for importing.
+Other asset types, of course, have other options for importing.
+
+> **Important:**
+>
+> **Meshes** are the most common type of asset to import. See [this page](../graphics/meshes/mesh-import.md) for how to import them and their dependencies.
 
 To create these documents you have two options: Manual or automatic import.
 
@@ -20,25 +24,29 @@ For asset types that are mostly defined by a single source file (e.g. [textures]
 
 ### Quick Import
 
-The **most convenient** way is to find the source asset file in the [asset browser](asset-browser.md) (ensure it shows *importable files*), right-click on it and select **Import As**. This sub-menu makes it possible to quickly import one or multiple assets as a specific asset type. It does so fully automatically. For some file types this method also allows to import assets quickly multiple times. For example, [animation clips](../animation/skeletal-animation/animation-clip-asset.md) are often packed into a single file, which requires them to be imported many times.
+The **most convenient** way is to find the source asset file in the [asset browser](asset-browser.md) (ensure it shows *importable files*), right-click on it and select **Import As**.
+
+![Import As](media/import-as.png)
+
+This sub-menu makes it possible to quickly import one or multiple assets as a specific asset type. It does so fully automatically. For some file types this method also allows to import assets quickly multiple times. For example, [animation clips](../animation/skeletal-animation/animation-clip-asset.md) are often packed into a single file, which requires them to be imported many times.
 
 ### Controlled Import
 
-If you want to have a few more options, select **Import...** instead.
+If you import many files, but want to select for each one how to import it, select **Import...** in the context menu.
 
-Another method is to select **Project > Import Assets...** or press **CTRL+I** to open a file browse dialog. Navigate to the file(s) that you want to import and select them. If you want to know which asset types are currently supported for automatic import, you can open the dropdown with the allowed file extensions here.
+Another method is to select **Project > Import Assets...** or press **CTRL+I** to open a file browse dialog. Navigate to the file(s) that you want to import and select them.
 
-Afterwards, you will be presented with a table of options how to import the selected files:
+You then get a table where you can select for each file how to import it:
 
 ![Asset Import Table](media/asset-import.png)
 
-Here we selected four files for import. One .obj file and three .jpg files. The automatic import uses heuristics to make an educated guess how to import certain source files. Here it already suggests to import the "_col.jpg" file as a diffuse texture, the "_nrm.jpg" file as a normal map and so on. If the heuristic is incorrect, you can use the dropdown on the left to fix it.
+This can be useful, if you want to import many meshes, but need to decide which ones shall be static meshes and which ones animated meshes. It can also be useful, if you want to import many textures, as the dialog allows to select how each texture gets imported.
 
-Some source files can be imported in multiple ways. For example the .obj file could be imported as a mesh for rendering or as a mesh for physics. Often you want to import the same mesh for both, so you want two asset documents (a *Mesh* and a *Collision Mesh*) which reference the same input file. Therefore this table lists the .obj file twice but with different import options in the dropdown box. If, for example, you do not want a mesh to be imported as collision mesh, at all, you can just select *No Import* from the respective dropdown.
+> **Note:**
+>
+> Importing textures directly is typically not needed when the textures are part of meshes, since the mesh import automatically imports textures for you.
 
 Once you click *Import* the asset documents are generated and you can then open them. If background asset processing is enabled, the editor will already start [transforming](assets-overview.md#asset-transform) the asset data.
-
-The automatic import creates the documents using a set of rules to fill out its properties, depending on the template that you selected for it. So for example an image imported as a "diffuse texture" and one imported as a "normal map" are mostly the same, except that a few options are already configured in a certain way for you. You should review all options for correctness afterwards.
 
 ### Import Via Drag And Drop
 

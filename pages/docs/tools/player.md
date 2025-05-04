@@ -15,7 +15,7 @@ With:
 * `ProjectPath`: The absolute path to the project directory.
 * `ScenePath`: A relative path to a scene file. It is relative to the [data directory](../projects/data-directories.md) that it resides in. If it is a path to an `.ezScene` or `.ezPrefab` file, ezPlayer automatically redirects the path to the corresponding exported `.ezObjectGraph` file in the *AssetCache*.
 
-Typically you only need to pass the path to the project and scene (or prefab) file. The other options are used by the [ezEditor](../../getting-started/editor-overview.md) to select different configurations.
+Typically you only need to pass the path to the project and scene (or prefab) file. The other options are used by the ezEditor to select different configurations.
 
 ## Execution
 
@@ -36,4 +36,3 @@ See [this page](../runtime/application/common-application-features.md) for detai
 * [Game States](../runtime/application/game-state.md)
 * [Engine Plugins](../custom-code/cpp/engine-plugins.md)
 * [Projects](../projects/projects-overview.md)
-* [ezEditor Overview](../../getting-started/editor-overview.md)

@@ -1,5 +1,6 @@
 meshes-overview.md
 mesh-asset.md
+mesh-import.md
 mesh-component.md
 instanced-mesh-component.md
 custom-mesh-component.md

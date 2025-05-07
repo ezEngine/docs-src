@@ -8,6 +8,18 @@ The [MiniAudio sound asset](ma-sound-asset.md) is used to get a *.WAV* or *.MP3*
 
 Sounds can also be played programmatically, e.g. from [visual scripts](../../custom-code/visual-script/visual-script-overview.md) or [AngelScripts](../../custom-code/angelscript/angelscript-overview.md), using the script function `ezSound::PlaySound()`.
 
+## How To Enable MiniAudio
+
+To enable MiniAudio support in your project, follow these steps:
+
+1. Open ezEditor
+1. Go to *Project > Plugin Settings > Plugin Selection...* to open the [plugin selection](../../projects/plugin-selection.md) dialog.
+1. If *MiniAudio* is greyed out, you have another sound plugin active (such as FMOD). Deactivate that sound plugin.
+1. Activate the *MiniAudio* plugin and click *OK*.
+1. Click *Yes* to restart the editor.
+
+If your project already made use of other sound components, the [Asset Curator](../../assets/asset-curator.md) will now show you which assets need to be updated.
+
 ## Scene Editing Settings
 
 The MiniAudio editor plugin adds UI elements to *mute* sound entirely and to adjust the *overal volume*:

@@ -38,7 +38,17 @@ Because of the split into multiple processes, *ezEditor.exe* cannot simply read 
 
 *ezEditorProcessor.exe* is a trimmed down version of *ezEditor.exe* which is only used to [transform assets](../assets/assets-overview.md#asset-transform) in the background. Consequently it loads the same editor plugins and also launches its own engine process. In case an *ezEditorProcessor* crashes, a new one may be launched. Asset transform activity is shown in the [asset curator panel](../assets/asset-curator.md).
 
-*ezEditorProcessor.exe* doesn't show any UI. It can be launched manually, to transform all assets for a project. This is utilized, for example, by the *GameEngineTests*.
+*ezEditorProcessor.exe* doesn't show any UI. It can be launched manually to automate certain operations on a project without running the full editor. This is utilized, for example, by the *GameEngineTests*.
+
+| Flag        | Description                                                              |
+|-------------|--------------------------------------------------------------------------|
+|`-project`   | Path to the project root folder to be processed                          |
+|`-resave`    | If specified, assets will be resaved.                                    |
+|`-transform` | Transform all assets in the given project. Also compiles the C++ plugin. |
+|`-compile`   | Generate and compile the C++ plugin of the project (if any).             |
+|`-profiling` | Saves performance profiling information into the output folder.          |
+|`-outputDir` | Path to the output directory.                                            |
+
 
 ## Plugin Types
 

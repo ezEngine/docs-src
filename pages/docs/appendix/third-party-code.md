@@ -286,6 +286,16 @@ All icons taken are free for commercial use, but some require attribution. The f
 * <https://www.svgrepo.com/collection/hashicorp-line-interface-icons>
 * <https://www.svgrepo.com/collection/wave-oval-interface-icons>
 
+## Tracy Profiler
+
+Link: [https://github.com/wolfpld/tracy](https://github.com/wolfpld/tracy)
+
+Compile switch: **EZ_3RDPARTY_TRACY_SUPPORT**
+
+Switch for additionally tracking memory allocations: **EZ_3RDPARTY_TRACY_TRACK_ALLOCATIONS**
+
+Tracy is a real-time frame profiler. It is used to analyze and optimize the performance of the engine and applications built with EZ.
+
 ## TinyEXR
 
 Link: [https://github.com/syoyo/tinyexr](https://github.com/syoyo/tinyexr)

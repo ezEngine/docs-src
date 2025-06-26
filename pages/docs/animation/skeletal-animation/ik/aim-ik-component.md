@@ -62,9 +62,13 @@ Again, for this to work, your skeleton needs to be build such, that the bones ha
 
 * `Pole Vector`: An optional object to use as a secondary target, to have the `Up Vector` point towards. See details above.
 
+* `Inverse Pole Vector`: If enabled, the pole vector will point away from the given position, not towards it.
+
 * `Weight`: The overall weight to use to apply the IK. This is typically used at runtime to gradually fade the IK in and out.
 
 * `Joints`: An array of bones to apply IK to. Order matters. Unrelated bones can be listed, for example you can let both the left and right arm point at the same thing. However, be careful to always list parent bones first. The `Weight` defines how much of the necessary rotation to apply to a bone.
+
+* `DebugVisScale`: If larger than zero, debug visualization will be rendered, to show the direction of the aim, pole vectors, up vectors, forward vectors, etc. Use this to easier see the effect of the configuration.
 
 ## See Also
 

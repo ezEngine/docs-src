@@ -42,7 +42,7 @@ See [this page](dynamic-shadows.md#shadow-component-properties) for shadow relat
 
 * `Cookie`: A texture to project a light pattern ("cookie") into the scene. This can be used for effects like complex shadows or light shapes.
 
-* `Material`: Uses a decal material for animated light projection effects. Such materials can be created with the [Visual Shader Editor](../../materials/visual-shaders.md). They need to use the *decal* output node, and to be selectable in the [Asset Browser](../../assets/asset-browser.md) their `Asset Filter Tags` property has to be set to **Decal**.
+* `Material`: Uses a decal material for animated light projection effects. Such materials can be created with the [Visual Shader Editor (TODO)](../../materials/visual-shaders.md). They need to use the *decal* output node, and to be selectable in the [Asset Browser](../../assets/asset-browser.md) their `Asset Filter Tags` property has to be set to **Decal**.
 
 * **Note:** If both a material and a cookie are set, only the material will be used.
 

@@ -134,6 +134,26 @@ The root of the repository can also be opened in Qt Creator, which will generall
 See https://github.com/ezEngine/ezEngine/pull/1152
  -->
 
+## Building with SteamRT Sniper (Steam Linux Runtime 3)
+
+SteamRT Sniper (Steam Linux Runtime 3) is Valve's official containerized runtime for building and running Linux games on Steam. Building ezEngine inside the SteamRT Sniper SDK/container ensures maximum compatibility with the Steam client and other games using this environment.
+
+**Why use SteamRT Sniper?**
+
+* Provides a consistent, predictable build and runtime environment for Linux games on Steam.
+* Matches the environment used by modern native Linux games and Proton.
+* Reduces issues caused by differences between Linux distributions.
+* With the provided `CMakeUserPresets.json`, you can easily cross-compile ezEngine for SteamRT Sniper. This allows you to build once and run on all Steam-supported Linux distributions, making it ideal for shipping games on Steam.
+
+**How to use:**
+
+1. Download and set up the SteamRT Sniper SDK/container. See the [Steam Runtime 3 'sniper' SDK documentation](https://gitlab.steamos.cloud/steamrt/sniper/sdk/-/blob/steamrt/sniper/README.md) for details.
+2. You can also install the runtime via Steam: `steam steam://install/1628350`.
+3. Use the provided `CMakeUserPresets.json` to configure your build for SteamRT Sniper. For example, select the `Debug-SteamRT`, `Dev-SteamRT`, or `Shipping-SteamRT` preset when configuring with CMake.
+4. Build ezEngine inside the container using the usual CMake commands. The container provides all required dependencies.
+
+For more information, see the [Valve Steam Runtime repository](https://github.com/ValveSoftware/steam-runtime) and the [SteamRT Sniper SDK documentation](https://gitlab.steamos.cloud/steamrt/sniper/sdk/-/blob/steamrt/sniper/README.md).
+
 ## See Also
 
 * [Building ezEngine](building-ez.md)

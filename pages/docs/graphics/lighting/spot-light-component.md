@@ -12,6 +12,20 @@ Note that unless a light source casts [dynamic shadows](dynamic-shadows.md), it'
 
 [![video](https://img.youtube.com/vi/XBO4OPcF2bs/0.jpg)](https://www.youtube.com/watch?v=XBO4OPcF2bs)
 
+## Projected Light Patterns
+
+A spotlight may use a static texture or even an animated material to project an image.
+
+Use the `Cookie` option to mask the light with a static image. This is useful to give the projected light more structure, for example for flashlights. But it can also be used to fake complex shadows instead of casting dynamic shadows.
+
+![Light Cookie](media/light-cookie.jpg)
+
+For even more complex effects, an animated *decal material* may be used (see `Material` property below).
+
+![Light material](media/light-material.jpg)
+
+This allows for a dynamically changing light projection.
+
 ## Component Properties
 
 See [this page](dynamic-shadows.md#shadow-component-properties) for shadow related component properties.
@@ -26,8 +40,13 @@ See [this page](dynamic-shadows.md#shadow-component-properties) for shadow relat
 
 * `OuterSpotAngle`: The spot light will attenuate between the inner angle and the outer angle to zero. If the outer angler is very close to the inner angle, the spot light will have a very sharp cut off. If the outer angle is considerably larger than the inner angle, the spot light will smoothly fade to black at the edges.
 
-## See Also
+* `Cookie`: A texture to project a light pattern ("cookie") into the scene. This can be used for effects like complex shadows or light shapes.
 
+* `Material`: Uses a decal material for animated light projection effects. Such materials can be created with the [Visual Shader Editor](../../materials/visual-shaders.md). They need to use the *decal* output node, and to be selectable in the [Asset Browser](../../assets/asset-browser.md) their `Asset Filter Tags` property has to be set to **Decal**.
+
+* **Note:** If both a material and a cookie are set, only the material will be used.
+
+## See Also
 
 * [Lighting](lighting-overview.md)
 * [Point Light Component](point-light-component.md)

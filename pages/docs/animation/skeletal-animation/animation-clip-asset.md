@@ -48,6 +48,8 @@ Animation clips can also be imported automatically when [importing an animated m
     >
     > Constant root motion can be estimated automatically by the editor for you. Click the button *Extract Root Motion From Feet* in the toolbar, or from the *Asset* main menu. The editor then samples the animation clip and estimates how the feet would move the character to determine an average direction and speed. For this to work, the [skeleton](skeleton-asset.md) must specify which bones are the left and right foot bones. Upon success, it fills out the root motion direction value. You can then adjust the value, for example, it is often necessary to remove unwanted motion along the Z axis.
 
+* `AdjustScale`: Allows you to scale the position data of the animation clip during import. This is useful if the animation was authored or exported at a different scale than the mesh. The default value is `1.0` (no scaling).
+
 * `AvailableClips`: When you manually *transform* the asset, this list shows all the animation clips that have been found in the given file. Use this information to fill out the `UseAnimationClip` property.
 
 ## Playback

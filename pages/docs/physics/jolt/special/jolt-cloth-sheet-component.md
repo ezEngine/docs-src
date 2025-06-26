@@ -1,10 +1,10 @@
 # Jolt Cloth Sheet Component
 
-The *Jolt cloth sheet component* simulates a square patch of cloth as it hangs and swings in the wind. It is meant for decorative purposes such as flags but it also interacts with other physics objects. Note that this interaction isn't very precise and prone to tunneling as well as getting tangled up inside dynamic objects.
+The *Jolt cloth sheet component* simulates a square patch of cloth as it hangs and swings in the wind. It is meant for decorative purposes such as flags and curtains. Note that this interaction isn't very precise and prone to tunneling as well as getting tangled up inside dynamic objects.
 
 ![Jolt Cloth](media/jolt-cloth-sheet.jpg)
 
-Jolt cloth sheets are affected by [wind](../../../effects/wind/wind.md) and contrary to the [cloth sheet component](../../../effects/cloth-sheet-component.md) they also interact with physics objects and collide with scene geometry.
+Jolt cloth sheets are affected by [wind](../../../effects/wind/wind.md) and contrary to the [cloth sheet component](../../../effects/cloth-sheet-component.md) they also collide with other physics objects and scene geometry. However, the physics interactions are *one-sided*, meaning that the cloth is pushed by dynamic objects, but does not push them. Although this would be technically possible, it is deliberately disabled, to prevent undesirable physics simulation artifacts.
 
 ## Component Properties
 

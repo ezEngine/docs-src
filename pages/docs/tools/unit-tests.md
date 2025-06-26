@@ -37,9 +37,3 @@ The following test suites are available:
 5. **GameEngineTest**: These tests use the full engine functionality to test various high level features. Therefore they cover various rendering features as well as game features.
 
 6. **EditorTest**: This test runs the editor and exercises things like creating all types of asset [documents](../editor/editor-documents.md), and so on.
-
-7. **RemoteTestHarness**: This is a helper project to run tests on UWP. 
-
-## See Also
-
-

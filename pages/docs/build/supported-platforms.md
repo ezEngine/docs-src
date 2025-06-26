@@ -10,8 +10,7 @@ On Mac, Android and Linux only the base libraries are fully functional. Once the
 
 ## List of Officially Supported Platforms
 
-* Windows 10/11 desktop ([details](build-windows.md))
-* Windows 10/11 UWP ([details](build-uwp.md))
+* Windows 10/11 ([details](build-windows.md))
 * OS X 10.9 (Mavericks) ([details](build-macos.md))
 * Linux ([details](build-linux.md))
 * Android 6.0 Marshmallow (API 23) or newer ([details](build-android.md))

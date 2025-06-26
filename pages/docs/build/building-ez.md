@@ -12,7 +12,6 @@ To try out ezEngine, you can download a [precompiled binary package](../../getti
 ## Platform Builds
 
 * [Windows Builds](build-windows.md)
-* [UWP Builds](build-uwp.md)
 * [Linux Builds](build-linux.md)
 * [MacOS Builds](build-macos.md)
 * [Android Builds](build-android.md)

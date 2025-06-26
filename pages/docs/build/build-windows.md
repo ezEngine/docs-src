@@ -1,6 +1,6 @@
 # Building for Windows
 
-This page describes how to build EZ for desktop Windows. For UWP builds, see [this page](build-uwp.md).
+This page describes how to build EZ for desktop Windows.
 
 ## Prerequisites
 

@@ -4,7 +4,6 @@
 ## [Building ezEngine](build/building-ez.md)
 ## [Supported Platforms](build/supported-platforms.md)
 ## [Building for Windows](build/build-windows.md)
-## [Building for Windows UWP](build/build-uwp.md)
 ## [Building for Linux](build/build-linux.md)
 ## [Building for Android](build/build-android.md)
 ## [Building for MacOS](build/build-macos.md)

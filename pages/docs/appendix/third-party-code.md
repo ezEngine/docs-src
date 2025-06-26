@@ -60,15 +60,6 @@ Compile switch: Currently none
 
 Used by ezImage and the ezTexConv tool for GPU-enabled block compression.
 
-## Duktape
-
-Link: [https://duktape.org](https://duktape.org)
-
-Compile switch: **EZ_3RDPARTY_DUKTAPE_SUPPORT**
-
-Duktape is an embeddable Javascript engine, with a focus on portability and compact footprint.
-It can be used directly or through ezDuktapeWrapper. Non-essential for the engine, but scripting functionality (using [TypeScript](https://www.typescriptlang.org/)) is built on top of it.
-
 ## Enet
 
 Link: [http://enet.bespin.org](http://enet.bespin.org)
@@ -154,33 +145,6 @@ Link: [http://guillaumeblanc.github.io/ozz-animation](http://guillaumeblanc.gith
 Compile switch: None
 
 Used as the basis for skeletal animations. Both during asset import (to build an optimized skeleton structure) and at runtime for animation playback.
-
-## PhysX 4.1.1
-
-> **Important:**
->
-> NVIDIA PhysX in EZ is no longer maintained. The code is currently still there, but most likely doesn't compile without errors anymore. 
-
-Link: [https://github.com/NVIDIAGameWorks/PhysX](https://github.com/NVIDIAGameWorks/PhysX)
-
-Compile switch: **EZ_BUILD_PHYSX**
-
-NVIDIA PhysX is used to provide collision detection, physics simulation, character controllers and other interactions.
-
-To build PhysX yourself:
-
-1. Checkout **<https://github.com/NVIDIAGameWorks/PhysX.git>**
-1. Goto **physx/buildtools/presets/public** and open all presets that you want to build and change or add\
-\<cmakeSwitch name="NV_USE_STATIC_WINCRT" value="False" comment="Use the statically linked windows CRT" />\
-\<cmakeSwitch name="NV_USE_DEBUG_WINCRT" value="True" comment="Use the debug version of the CRT" />
-1. **Run physx/generate_projects.bat** for every configuration you want to build
-1. Open **physx/compiler/.../PhysXSDK.sln** and compile **CMakePredefinedTargets/INSTALL** for both debug and release
-1. Uwp installs are missing two include folders: **PhysX/include/cudamanager** and **PhysX/include/gpu** so copy those from **physx/include** to **physx/install/.../PhysX/include**
-1. The content of the built configuration in **physx/install** is now ready to be consumed by ezEngine by pointing the advanced cmake var **EZ_PHYSX_SDK** to it.
-
-> **Important:**
->
-> Depending on how you use PhysX, you may need to acquire (buy) a license for it from NVIDIA.
 
 ## PolyHaven
 

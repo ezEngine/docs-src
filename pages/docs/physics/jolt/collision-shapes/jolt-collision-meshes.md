@@ -38,6 +38,20 @@ In the image above the mesh import decomposed the mesh into multiple pieces (sev
 
 This mode allows you to dictate into how many pieces to split the mesh. The more pieces, the closer the result resembles the original shape. These collision meshes can still be used for dynamic simulation, the Jolt actors simply use multiple convex shapes as their representation. Of course the more pieces such a mesh contains, the less efficient the simulation becomes.
 
+### Convex Hull Group
+
+This mode creates a convex hull for each submesh (material group) in the mesh. Unlike convex decomposition, it does not attempt to approximate the original shape with multiple convex pieces, but instead generates one convex hull per material group. This is especially useful if each material group is already modeled as a good collider mesh, allowing the result to represent the real shape quite well. Each material can also have its own surface.
+
+For example, if a triangle mesh has two different materials:
+
+![Convex Hull Group Input](media/convex-hull-group-1.png)
+
+The resulting collision mesh will look like this:
+
+![Convex Hull Group Result](media/convex-hull-group-2.png)
+
+This approach can be used for dynamic rigid bodies and is particularly effective when the mesh is authored with separate material groups for each collider part.
+
 ## Selective Mesh Import
 
 Sometimes a **dedicated collider mesh** is embedded in the same source asset as the graphics mesh. You can use the properties `MeshIncludeTags` and `MeshExcludeTags` to selectively import only those meshes. See the [mesh asset properties](../../../graphics/meshes/mesh-asset.md#asset-properties) for details.

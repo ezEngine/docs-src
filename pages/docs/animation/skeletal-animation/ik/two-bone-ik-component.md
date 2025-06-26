@@ -40,12 +40,13 @@ In the example video above, additional pole vectors are used to have the left el
 
 ## Component Properties
 
-* `Joint Start`: The first bone to adjust.
-* `Joint Middle`: The second bone to adjust.
-* `Joint End`: The bone that should reach the target position.
-* `Mid Axis`: The cardinal axis of the middle joint around which the bone can rotate. The skeleton must be built such, that there is one such side axis that aligns with the desired bend axis.
-* `Pole Vector`: An optional object to use as a secondary target, to have the middle joint point towards. See details above.
+* `JointStart`: The first bone to adjust.
+* `JointMiddle`: The second bone to adjust.
+* `JointEnd`: The bone that should reach the target position.
+* `MidAxis`: The cardinal axis of the middle joint around which the bone can rotate. The skeleton must be built such, that there is one such side axis that aligns with the desired bend axis.
+* `PoleVector`: An optional object reference to use as a secondary target, to have the middle joint point towards. See details above.
 * `Weight`: The overall weight to use to apply the IK. This is typically used at runtime to gradually fade the IK in and out.
+* `DebugVisScale`: If larger than zero, debug visualization will be rendered, to show the joints, axis and pole vector. Use this to easier see the effect of the configuration.
 
 ## See Also
 

@@ -1,33 +1,64 @@
 # Shaders Resources
 
-Shader resources are things like textures, samplers constant buffers etc. that need to be separately bound in the renderer for the shader to function. Each resource must be bound to a set and slot. Depending on the [platform](shaders-overview.md#platforms) used, the requirements for this binding can be very different. E.g. in Vulkan slot assignments must be unique within a set across all stages while in DX11 most slots only need to be unique within a stage. Not following these rules will result in a runtime error. Manually assigning slots is an option but is very tedious. To make this easier, the shader system can automate this process provided some constraints are met how resourced are declared.
+Shader resources are things like textures, samplers constant buffers etc. that need to be separately bound in the renderer for the shader to function. Each resource must be bound to a bind group and slot. Depending on the [platform](shaders-overview.md#platforms) used, the requirements for this binding can be very different. E.g. in Vulkan slot assignments must be unique within a bind group (Vulkan descriptor set) across all stages while in DX11 most slots only need to be unique within a stage. Not following these rules will result in a runtime error. Manually assigning slots is an option but is very tedious. To make this easier, the shader system can automate this process provided some constraints are met how resourced are declared.
 
 1. Currently, EZ does not support arrays of resources like `Texture2D Diffuse[3]` in its shaders.
 2. Resources must have unique names across all shader stages. The same resource name can be used in multiple stages as long as the resource it maps to is exactly the same.
+3. Only four bind groups are supported (DX12 register space, Vulkan descriptor set).
 
 ## Resource Binding
 
-The shader system only supports the DX11 / DX12 [register syntax](https://learn.microsoft.com/windows/win32/direct3d12/resource-binding-in-hlsl) for resource binding. Both the set and slot can be bound. If no set is given, it is implicitly set 0. Here is a list of a few examples of how to bind resources properly:
+The shader system only supports the DX11 / DX12 [register syntax](https://learn.microsoft.com/windows/win32/direct3d12/resource-binding-in-hlsl) for binding resources to bind groups. Both the bind group and slot can be bound. If no bind group is given, it is implicitly set to 0.
+
+EZ uses the following bind groups - resources should ideally be bound to these sets according to their update frequency:
+* **BG_FRAME (0)**: Should only contain resources that are set only once per frame or once per view. 
+* **BG_RENDER_PASS (1)**: Resources that are unqiue to a render pass. Also use it for small shaders that e.g. do some image processing within a render pass.
+* **BG_MATERIAL (2)**: This group is normally occupied by the material resources. If a material exposes a resource like a texture, it must be put into this bind group.
+* **BG_DRAW_CALL (3)**: Resources that change every few draw calls should go in here.
+
+Here is a list of a few examples of how to bind resources properly:
 
 ```cpp
-Texture2D Diffuse : register(t3, space1); // DX12 syntax, slot 3, set 1
-SamplerState MySampler : register(s4); // DX11 syntax slot 4, set 0 (default)
-ByteAddressBuffer MyBuffer BIND_RESOURCE(SLOT_AUTO, SET_RENDER_PASS); // Slot Auto, set 1
-ByteAddressBuffer MyBuffer2 BIND_SET(SET_RENDER_PASS); // Slot Auto, set 1
+Texture2D Diffuse : register(t3, space1); // DX12 syntax, slot 3, bind group 1
+SamplerState MySampler : register(s4); // DX11 syntax slot 4, bind group 0 (default)
+ByteAddressBuffer MyBuffer BIND_RESOURCE(SLOT_AUTO, BG_RENDER_PASS); // Slot Auto, bind group 1
+ByteAddressBuffer MyBuffer2 BIND_GROUP(BG_RENDER_PASS); // Slot Auto, bind group 1
 
-CONSTANT_BUFFER(ezTestPositions, 1) // Slot 1, set 0 (default)
+CONSTANT_BUFFER(ezTestPositions, 1) // Slot 1, bind group 0 (default)
 {
   ...
 };
 
-CONSTANT_BUFFER2(ezTestPositions, SLOT_AUTO, SET_MATERIAL) // Slot Auto, set 2
+CONSTANT_BUFFER2(ezTestPositions, SLOT_AUTO, BG_MATERIAL) // Slot Auto, bind group 2
 {
   ...
 };
 ```
 
-The HLSL `register` syntax is a bit impractical, so the macros `BIND_RESOURCE(Slot, Set)` and `BIND_SET(Set)` were introduced. These will generate invalid HLSL code which the shader compiler will eventually parse, organize and patch to do the correct thing on each platform. In most cases, you should only be concerned about deciding in which set a resource should reside in. Either use the macro `SLOT_AUTO` when setting a slot or just use the `BIND_SET` macro which omits the slot entirely. While you can set any integer for the set, some platforms like Vulkan have a limit on how many sets can be managed at the same time with a minimum of four. EZ defines macros for these four sets: `SET_FRAME`, `SET_RENDER_PASS`, `SET_MATERIAL` and `SET_DRAW_CALL`. Resources should ideally be bound to these sets according to their update frequency.
+The HLSL `register` syntax is a bit impractical, so the macros `BIND_RESOURCE(Slot, BindGroup)` and `BIND_GROUP(BindGroup)` were introduced. These will generate invalid HLSL code which the shader compiler will eventually parse, organize and patch to do the correct thing on each platform. In most cases, you should only be concerned about deciding in which bind group a resource should reside in. Either use the macro `SLOT_AUTO` when setting a slot or just use the `BIND_GROUP` macro which omits the slot entirely.
 
+### C++ resource binding
+
+Before a shader can be used to render something, all the resources need to be bound to their respective bind groups. This is happening automatically for material resources but for custom shaders used in e.g. a custom render pass, this has to be done manually. To access the individual bind groups, use the following code:
+```cpp
+// By default, GetBindGroup uses `EZ_GAL_BIND_GROUP_FRAME`.
+ezBindGroupBuilder& bindGroup = ezRenderContext::GetDefaultInstance()->GetBindGroup();
+ezBindGroupBuilder& bindGroupRenderPass = ezRenderContext::GetDefaultInstance()->GetBindGroup(EZ_GAL_BIND_GROUP_RENDER_PASS);
+ezBindGroupBuilder& bindGroupMaterial = ezRenderContext::GetDefaultInstance()->GetBindGroup(EZ_GAL_BIND_GROUP_MATERIAL);
+ezBindGroupBuilder& bindGroupDraw = ezRenderContext::GetDefaultInstance()->GetBindGroup(EZ_GAL_BIND_GROUP_DRAW_CALL);
+```
+
+When binding a resource, it is sufficient to only provide the resource name and GAL handle to bind the entire resource. If you want to bind only a subset of the resource, you can use `ezGALTextureRange` or `ezGALBufferRange` like this:
+
+```cpp
+ezGALTextureRange textureRange;
+textureRange.m_uiBaseMipLevel = uiMipMapIndex;
+textureRange.m_uiBaseArraySlice = m_uiSpecularOutputIndex * 6;
+textureRange.m_uiArraySlices = 6;
+bindGroup.BindTexture("ReflectionOutput", pFilteredSpecularOutput->m_TextureHandle, textureRange);
+// Or as a shorter form:
+bindGroup.BindTexture("ReflectionOutput", pFilteredSpecularOutput->m_TextureHandle, {m_uiSpecularOutputIndex * 6, 6, uiMipMapIndex, EZ_GAL_ALL_MIP_LEVELS});
+```
 
 ## Constant Buffers
 
@@ -126,7 +157,7 @@ RWTexture3D<uint> rwTexture3D;
 There are three types of buffers supported by EZ:
 1. HLSL's `Buffer<T>` type is very similar to a 1D texture. A buffer of the same type T needs to be bound to the resource. Maps to `ezGALShaderResourceType::TexelBuffer` in C++.
 2. `StructuredBuffer<T>` should follow the same rules as for constant buffers: Put the declaration in a separate header file to allow access to it from C++ and ensure each struct is 16 bytes aligned. Maps to `ezGALShaderResourceType::StructuredBuffer` in C++.
-3. `ByteAddressBuffer` in just an array of bytes. A raw buffer needs to be bound to the resource. With HLSL 5.1, you can cast any offset of the buffer into a struct. Maps to `ezGALShaderResourceType::StructuredBuffer` in C++.
+3. `ByteAddressBuffer` in just an array of bytes. A raw buffer needs to be bound to the resource. With HLSL 5.1, you can cast any offset of the buffer into a struct. Maps to `ezGALShaderResourceType::ByteAddressBuffer` in C++.
 
 ```cpp
 // Header:
@@ -144,7 +175,7 @@ StructuredBuffer<PerInstanceData> structuredBuffer;
 ByteAddressBuffer byteAddressBuffer;
 ```
 
-Read-write variants of these buffers are also supported and map to `ezGALShaderResourceType::TexelBufferRW` and `ezGALShaderResourceType::StructuredBufferRW` respectively.
+Read-write variants of these buffers are also supported and map to `ezGALShaderResourceType::TexelBufferRW`, `ezGALShaderResourceType::StructuredBufferRW` and `ezGALShaderResourceType::ByteAddressBufferRW` respectively.
 
 ```cpp
 RWBuffer<uint> rwBuffer;

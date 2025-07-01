@@ -41,14 +41,14 @@ Overall the same guidelines to prevent stability issues apply here as well.
 * `Anchor1`, `Anchor2`: A [reference](../../../concepts/object-references.md) to an object whose position determines one end of the rope. If only one anchor is specified, the position of the rope component's owner object is used as the other end.
 
 * `Anchor1Constraint`, `Anchor2Constraint`: How the rope is attached to each anchor:
-    * `None`: The rope is not attached to the object, at all, and once the simulation starts, it will fall down at that end.
-    * `Point`: The rope is attached with a point constraint and thus can freely rotate around that end.
-    * `Fixed`: The rope won't be able to rotate around that end point. The orientation of the anchor is used to specified the direction of the rope there.
-    * `Cone`: The rope can rotate around that anchor, but only within a cone of `MaxBend` opening. Similar to `Fixed`, the orientation of the anchor defines the starting direction of the rope.
+  * `None`: The rope is not attached to the object, at all, and once the simulation starts, it will fall down at that end.
+  * `Point`: The rope is attached with a point constraint and thus can freely rotate around that end.
+  * `Fixed`: The rope won't be able to rotate around that end point. The orientation of the anchor is used to specified the direction of the rope there.
+  * `Cone`: The rope can rotate around that anchor, but only within a cone of `MaxBend` opening. Similar to `Fixed`, the orientation of the anchor defines the starting direction of the rope.
 
   If an anchor object is attached to a [dynamic actor](../actors/jolt-dynamic-actor-component.md), the rope will pull that actor. Otherwise, the rope will be fixed at that static location. If the rope is not attached at one or both ends it is free to move away from there.
 
-* `Mass`: The total mass of the rope. It will be distributed equally among all pieces.
+* `WeightCategory`, `WeightScale`: The total mass of the rope. It will be distributed equally among all pieces. See [weights and forces](../concepts/weights-forces.md) for details.
 
 * `Pieces`: How many individual pieces the rope is made up of. More pieces look prettier, but cost more performance and may decrease the simulation stability.
 
@@ -75,3 +75,4 @@ Overall the same guidelines to prevent stability issues apply here as well.
 * [Fake Rope Component](../../../effects/ropes/fake-rope-component.md)
 * [Rope Render Component](../../../effects/ropes/rope-render-component.md)
 * [Jolt Actors](../actors/jolt-actors.md)
+* [Weights and Forces](../concepts/weights-forces.md)

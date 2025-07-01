@@ -14,21 +14,13 @@ Whether a dynamic actor is kinematic or not is simply a flag and it is possible 
 
 <video src="media/kinematic-switch.webm" width="600" height="600" autoplay loop></video>
 
-## Mass vs. Density
+## Actor Mass
 
-Dynamic actors have a weight. The weight determines how much force it takes to push them and how much they push other rigid bodies. There are two ways to adjust an actor's weight. If you set the `Mass` property, this is the bodies absolute weight no matter its size and shape. Thus a small stone with mass 10 (kilogram) will appear heavy whereas a huge boulder also with mass 10 will appear light.
+Every dynamic actor needs to have a mass, to simulate how it behaves when it interacts with other rigid bodies.
 
-The other way is to set its `Density` property instead. In this case the volume of all the attached [shapes](../collision-shapes/jolt-shapes.md) is computed and scaled by the density. That means the object's final mass will depend on its scale, so a small stone would get a weight of 0.5 (kilogram) whereas a huge boulder would get a weight of 1000 kg.
+However, physics engines don't work well with real-world masses, which makes tweaking mass values difficult. Therefore EZ adds a layer of indirection to let you configure masses in one central place, the so-called *weight categories*.
 
-Using densities is more convenient to get started. The default density often already produces believable results. If you create a [prefab](../../../prefabs/prefabs-overview.md) that is supposed to be instantiated at various sizes, it is best to use density.
-
-> **Important:**
->
-> Physics engines are notoriously bad at dealing with large mass differences. Objects should never be too light or too heavy in general. Objects with a mass below 1 tend to be flung away at ridiculous speeds when they are pushed by heavy objects. Objects with a mass above 100 should be avoided as well.
-
-Due to these limitations, it is not advisable to use realistic weights for objects, as many objects would become too light and their simulation would suffer from erratic behavior. Instead, choose a weight somewhere in the 0.5 to 100 range that looks good enough.
-
-Consequently, it can often be easier to specify their value as an absolute `Mass`, instead of trying to achieve the same through the indirect `Density`.
+For more details, please see the chapter about [weights and forces](../concepts/weights-forces.md).
 
 ## Center Of Mass
 
@@ -47,7 +39,7 @@ These are all known issues with real-time physics engines. With the limited avai
 Consequently, you have to be careful how you set up your rigid-bodies, to improve simulation stability:
 
 * **Avoid small and thin objects:** Thin objects are always problematic. For small objects, consider making their collision shape as large as possible, potentially larger than the graphical representation.
-* **Avoid very heavy and very light objects:** See [Mass vs. Density](#mass-vs-density) above for details.
+* **Avoid very heavy and very light objects:** See [actor mass](#actor-mass) above for details.
 * **Use Continuous Collision Detection (CCD) for important small objects:** Continuous collision detection is mainly used to prevent objects from *tunneling* through other objects. For example a physically simulated grenade may be thrown at a high speed, which means it is prone to get through walls. This is less likely to happen for larger objects. CCD costs extra performance for every object on which it is used, but significantly reduces the likelihood for tunneling to happen.
 * **Increase angular damping:** Some objects tend to spin too fast after collisions. By increasing angular damping, you can make them come to rest more quickly.
 * **Reduce the complexity of the shape:** Especially [convex meshes](../collision-shapes/jolt-collision-meshes.md) are prone to *jittering* when the mesh has long thin triangles. Build convex meshes by hand to control their complexity, if an automatically created convex mesh results in unstable behavior.
@@ -57,7 +49,7 @@ Consequently, you have to be careful how you set up your rigid-bodies, to improv
 * `CollisionLayer`: The [collision layer](../collision-shapes/jolt-collision-layers.md) to use.
 * `Kinematic`: See [Kinematic vs. Simulated](#kinematic-vs-simulated) above.
 * `StartAsleep`: If enabled, the actor starts in the 'sleeping' state and will not be physically simulated until it gets into contact with another active actor. This is a performance optimization to prevent performance spikes after loading a level. If used badly, an object can float in air and not fall down until something else touches it. Make sure to only use this on objects that are [convincingly placed](../../../editor/run-scene.md#keep-simulation-changes) to begin with.
-* `Mass`, `Density`: See [Mass vs. Density](#mass-vs-density) above.
+* `WeightCategory`, `WeightScale`: See [actor mass](#actor-mass) above.
 * `Surface`: The [surface](../../../materials/surfaces.md) to use for this actor's shapes. The surface determines the friction and restitution during simulation, but also determines what effects are spawned when you interact with the object. Note that [collision meshes](../collision-shapes/jolt-collision-meshes.md) already specify the surface to use. If a surface is selected on the actor, it overrides the mesh's surface.
 * `GravityFactor`: Adjusts the influence of gravity on this object. If set to zero, it will float in space.
 * `LinearDamping`, `AngularDamping`: The damping properties affect how quickly an actor loses momentum and comes to rest. This can be adjusted separately for positional (linear) movement and rotational (angular) movement.
@@ -70,3 +62,4 @@ Consequently, you have to be careful how you set up your rigid-bodies, to improv
 * [Jolt Static Actor Component](jolt-static-actor-component.md)
 * [Jolt Shapes](../collision-shapes/jolt-shapes.md)
 * [Jolt Constraints](../constraints/jolt-constraints.md)
+* [Weights and Forces](../concepts/weights-forces.md)

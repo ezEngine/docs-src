@@ -124,6 +124,8 @@
 ### Ragdolls
 #### [Jolt Hitbox Component](physics/jolt/ragdolls/jolt-hitbox-component.md)
 #### [Jolt Ragdoll Component](physics/jolt/ragdolls/jolt-ragdoll-component.md)
+### Concepts
+#### [Weights and Forces](physics/jolt/concepts/weights-forces.md)
 ### Special
 #### [Character Controller](physics/jolt/special/jolt-character-controller.md)
 #### [Jolt Cloth Sheet Component](physics/jolt/special/jolt-cloth-sheet-component.md)

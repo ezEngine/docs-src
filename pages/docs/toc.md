@@ -127,6 +127,7 @@
 ### Concepts
 #### [Weights and Forces](physics/jolt/concepts/weights-forces.md)
 ### Special
+#### [Jolt Breakable Slab Component](physics/jolt/special/jolt-breakable-slab-component.md)
 #### [Character Controller](physics/jolt/special/jolt-character-controller.md)
 #### [Jolt Cloth Sheet Component](physics/jolt/special/jolt-cloth-sheet-component.md)
 #### [Jolt Grab Object Component](physics/jolt/special/jolt-grab-object-component.md)

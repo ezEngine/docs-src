@@ -46,13 +46,33 @@ As the next step, you need to specify which axis of the target bones to align wi
 
 When rotating a bone towards a target, there is not only the main direction to consider, but also the *roll* around that direction.
 
-The *pole vector* is an optional object to use as a secondary target, that the `Up Vector` should point towards. In the case of pointing an arm, this is typically used to specify into which direction the elbow should point (for instance to the left, right, downwards, etc). Usually the pole vector object would be another child object of the animated mesh and thus move along with it.
+The *pole vector* is an optional object to use as a secondary target, that the `Up Vector` should point towards. In the case of pointing an arm, this is typically used to specify into which direction the elbow should point (for instance to the left, right, up, down). Usually the pole vector object would be another child object of the animated mesh and thus move along with it.
 
 Again, for this to work, your skeleton needs to be build such, that the bones have the proper *roll*, such that their orthogonal directions point into a useful direction. For example an elbow joint should be built such, that the *forward* direction (for example `+Y`) goes straight along the forearm, and its *roll* should be such, that the sidewards direction (`+X` or `+Z`) points into the direction of the elbow.
 
 > **NOTE**
 >
 > Often aim IK already works good enough without a dedicated pole vector, so only set it up, when the result doesn't look convincing enough without it.
+
+> **IMPORTANT**
+>
+> The IK computation attempts to align the *up direction* with the *direction towards the pole vector* by rotating around each bone's *forwards direction*. Therefore the up vector will generally point roughly towards the pole vector (use the debug visualization to inspect this). However, there are always two directions that a bone could be rotated around, clockwise or counter-clockwise. The IK calculation will choose the shorter rotation, which means that if the pole vector is at a position where rotating either way round is close to 180 degrees, a minor change (such as from a playing idle-animation) will make the rotation flip back and forth between the two. If this is the case, first try to use a different *up direction* and potentially use an *inverse pole vector*. However, depending on the range of motion that you want to support, you may also need to dynamically **move the pole vector** when you change the aim target position.
+
+### Debug Visualization
+
+Set the `DebugVisScale` property to a non-zero value to see a visualization of the various joints and vectors. The visualization will only appear once you [simulate the scene](../../../editor/run-scene.md).
+
+![Aim IK Debug Visualization](media/aimik-debug.jpg)
+
+In the image above an aim IK chain with three bones was set up.
+
+* For every bone involved there are three arrows, one red (X), one green (Y), one blue (Z), indicating the cardinal directions of the bone, as they are defined in the model. These arrows should help you choose which direction to use for the forward and up vector.
+
+* There's a light green sphere at the target position and a light green arrow pointing towards the target position.
+
+* The orange arrows represent the chosen up direction. In this example they point into the +X direction, which is why they align with the red arrows.
+
+* The cyan cross represents the position of the pole vector and the cyan arrows point towards the pole vector. In case an *inverse pole vector* is used, they would point into the opposite direction.
 
 ## Component Properties
 

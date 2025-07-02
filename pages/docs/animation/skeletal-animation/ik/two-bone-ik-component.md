@@ -38,6 +38,22 @@ In the example video above, additional pole vectors are used to have the left el
 >
 > Although the pole vector is optional, two bone IK rarely works as desired without it.
 
+### Debug Visualization
+
+Set the `DebugVisScale` property to a non-zero value to see a visualization of the various joints and vectors. The visualization will only appear once you [simulate the scene](../../../editor/run-scene.md).
+
+![Two-Bone IK Debug Visualization](media/twoboneik-debug.jpg)
+
+* The light green sphere represents the *target position* that the *end joint* should reach.
+
+* The pink sphere represents the *start joint* position.
+
+* The red (X), green (Y) and blue (Z) arrows show the cardinal directions of the *middle joint*, as they are defined in the model. They should help you choose which *middle axis* to use.
+
+* The white cone represents the *middle axis*. It points into the chosen direction (positive or negative) along one of the joint's cardinal axis.
+
+* The cyan cross represents the *pole vector position*. The cyan arrow is the calculated *pole vector direction*. It starts at the mid-point between the *start joint* and the *target position* and points towards the *pole vector*. This is the direction that the IK calculation uses to rotate the *middle joint* such that it points towards the pole vector.
+
 ## Component Properties
 
 * `JointStart`: The first bone to adjust.

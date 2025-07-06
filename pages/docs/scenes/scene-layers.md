@@ -27,9 +27,11 @@ Every scene has exactly one *main layer*, the one that is represented by the `.e
 
 ## Active Layer
 
-The layer that is *selected* in the *Layers* panel is considered to be the **active layer**. The *Scenegraph* panel displays the list of objects that are part of the active layer.
+The layer that is *selected* in the *Layers* panel is considered to be the **active layer**. It is displayed in **bold**. The *Scenegraph* panel displays only those objects that are part of the active layer.
 
-When you [select an object](selection.md) in the viewport, the active layer is automatically set to be the one that contains the selected object.
+By default, when you [select an object](selection.md) in the viewport, the active layer is automatically switched to the one that contains the selected object. This behavior can be toggled using the "Auto Switch Layer to Selection" option, which is available in the toolbar of the *Layers* panel. When this option is disabled, selecting an object from a different layer will not change the active layer. In this case, the editor shows a notification in the statusbar.
+
+Use this option when you want to work exclusively on certain layers, and want to prevent accidentally switching to and editing other layers.
 
 ## Layer Visibility
 

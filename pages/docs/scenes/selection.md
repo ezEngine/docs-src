@@ -51,6 +51,10 @@ Some component types use a *shape icon* as their graphical representation. This 
 
 When [visualizers](gizmos.md#visualizers) are enabled, the editor display a yellow bounding box around each selected object. Visualizers can be toggled with the `V` key.
 
+## Select Parent Object
+
+The shortcut `Ctrl+P` selects the parent object of the currently selected object. This can be very useful when working with grouped objects, where it is easy to click-select a child object from the viewport, but actually want to select the parent object.
+
 ## Select Transparent
 
 Press the `U` key to toggle whether transparent objects should be selectable. Disabling this can be very useful if you have large objects with special shaders, for instance to create atmospheric effects like volumetric lighting. Such shapes can prevent you from selecting anything else, even though they are mostly invisible.

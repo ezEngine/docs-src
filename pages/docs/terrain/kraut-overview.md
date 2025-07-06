@@ -12,5 +12,4 @@ Once a Kraut tree config is imported and set up, dragging the asset into a scene
 
 ## See Also
 
-
 * [Heightfield Component](heightfield-component.md)

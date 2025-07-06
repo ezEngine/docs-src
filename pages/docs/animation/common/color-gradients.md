@@ -45,6 +45,5 @@ The dotted lines indicate which keyframe is the leftmost and which is the rightm
 
 ## See Also
 
-
 * [Curves](curves.md)
 * [Property Animation (TODO)](../property-animation/property-animation-overview.md)

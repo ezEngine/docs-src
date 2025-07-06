@@ -20,7 +20,7 @@ On the right-hand side you see the property grid where you choose the **texture 
 
 The following properties are available:
 
-**Usage:** Tells the texture converter what type of data the texture represents. This affects what [color space (TODO)](../appendix/color-spaces.md) will be used, ie. whether the format uses *sRGB* or *Linear* encoding. If your color texture ends up using the incorrect color space (e.g. *Linear* when it should be *sRGB*) you will typically notice that the texture appears too bright and washed out.
+**Usage:** Tells the texture converter what type of data the texture represents. This affects what [color space](../appendix/color-spaces.md) will be used, ie. whether the format uses *sRGB* or *Linear* encoding. If your color texture ends up using the incorrect color space (e.g. *Linear* when it should be *sRGB*) you will typically notice that the texture appears too bright and washed out.
 
 * **Auto:** In this mode the converter will guess the *usage*, utilizing file name heuristics, the source file format and sometimes even the content. If your file names use suffixes like `_D`, `_Normal`, etc. this can work pretty well.
 * **Color:** Use this for textures that represent color. For example diffuse textures, skyboxes and emissive color textures.
@@ -75,4 +75,4 @@ Apart from some properties shared with 2D texture assets, render targets have th
 * [Materials](../materials/materials-overview.md)
 * [Render to Texture (TODO)](render-to-texture/render-to-texture.md)
 * [Sky](../effects/sky.md)
-* [Color Spaces (TODO)](../appendix/color-spaces.md)
+* [Color Spaces](../appendix/color-spaces.md)

@@ -21,6 +21,5 @@ The *color animation component* allows you to apply an animated [color gradient]
 
 ## See Also
 
-
 * [Property Animation (TODO)](property-animation-overview.md)
 * [Color Gradients](../common/color-gradients.md)

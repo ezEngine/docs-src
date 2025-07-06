@@ -8,4 +8,3 @@ Property animations are fully functional (except for some known limitations), bu
 
 * [Property Animations (TODO)](property-animation-overview.md)
 * [Property Animation Component (TODO)](property-animation-component.md)
-

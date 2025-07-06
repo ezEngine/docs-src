@@ -367,5 +367,5 @@
 ## [Container Usage Guidelines](appendix/container-usage.md)
 ## [String Usage Guidelines](appendix/string-usage.md)
 ## [String Formatting](appendix/string-formatting.md)
-## [Color Spaces (TODO)](appendix/color-spaces.md)
+## [Color Spaces](appendix/color-spaces.md)
 ## [ThirdParty Code and Data](appendix/third-party-code.md)

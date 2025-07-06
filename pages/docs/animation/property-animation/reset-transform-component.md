@@ -23,4 +23,3 @@ After that, it does nothing else, until it gets deactivated and reactivated agai
 
 * [Property Animations (TODO)](property-animation-overview.md)
 * [Follow Path Component](../paths/follow-path-component.md)
-

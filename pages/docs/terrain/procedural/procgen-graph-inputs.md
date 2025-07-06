@@ -33,8 +33,6 @@ This node can be used to place objects only at specific altitudes, or to change 
 
 ## Mesh Vertex Color Input Node
 
-TODO
-
 <!-- PAGE IS TODO -->
 
 ## See Also

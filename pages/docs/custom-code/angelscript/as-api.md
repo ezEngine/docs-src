@@ -63,7 +63,7 @@ The `ezMath` namespace provides general math functions. `ezVec2`, `ezVec3` and `
 
 `ezAngle` is used for representing angles either in degree or Radians.
 
-`ezColor` is used for HDR colors in linear color space (the default) and `ezColorGammaUB` can be used for 8-bit colors in Gamma space (see [Color Spaces (TODO)](../../appendix/color-spaces.md)).
+`ezColor` is used for HDR colors in linear color space (the default) and `ezColorGammaUB` can be used for 8-bit colors in Gamma space (see [Color Spaces](../../appendix/color-spaces.md)).
 
 ### Time
 

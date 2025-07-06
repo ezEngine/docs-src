@@ -18,5 +18,4 @@ Finally, there is a system to procedurally place objects, typically plants, arou
 
 ## See Also
 
-
 * [Heightfield Component](heightfield-component.md)

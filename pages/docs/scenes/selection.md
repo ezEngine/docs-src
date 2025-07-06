@@ -53,7 +53,7 @@ When [visualizers](gizmos.md#visualizers) are enabled, the editor display a yell
 
 ## Select Parent Object
 
-The shortcut `Ctrl+P` selects the parent object of the currently selected object. This can be very useful when working with grouped objects, where it is easy to click-select a child object from the viewport, but actually want to select the parent object.
+The shortcut `Ctrl+Q` selects the parent object of the currently selected object. This can be very useful when working with grouped objects, where it is easy to click-select a child object from the viewport, but actually want to select the parent object.
 
 ## Select Transparent
 

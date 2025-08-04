@@ -90,6 +90,8 @@ In the image above an aim IK chain with three bones was set up.
 
 * `DebugVisScale`: If larger than zero, debug visualization will be rendered, to show the direction of the aim, pole vectors, up vectors, forward vectors, etc. Use this to easier see the effect of the configuration.
 
+* `Order`: In case multiple IK components are used, a larger number will make this IK get applied after those with a lower number. This can be important if, for example, one IK component rotates the torso, and another one adjusts a hand position. In this case the hand positioning must be done later.
+
 ## See Also
 
 * [Skeletal Animations](../skeletal-animation-overview.md)

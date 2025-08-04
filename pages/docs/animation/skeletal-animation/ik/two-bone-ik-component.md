@@ -57,12 +57,20 @@ Set the `DebugVisScale` property to a non-zero value to see a visualization of t
 ## Component Properties
 
 * `JointStart`: The first bone to adjust.
+
 * `JointMiddle`: The second bone to adjust.
+
 * `JointEnd`: The bone that should reach the target position.
+
 * `MidAxis`: The cardinal axis of the middle joint around which the bone can rotate. The skeleton must be built such, that there is one such side axis that aligns with the desired bend axis.
+
 * `PoleVector`: An optional object reference to use as a secondary target, to have the middle joint point towards. See details above.
+
 * `Weight`: The overall weight to use to apply the IK. This is typically used at runtime to gradually fade the IK in and out.
+
 * `DebugVisScale`: If larger than zero, debug visualization will be rendered, to show the joints, axis and pole vector. Use this to easier see the effect of the configuration.
+
+* `Order`: In case multiple IK components are used, a larger number will make this IK get applied after those with a lower number. This can be important if, for example, one IK component rotates the torso, and another one adjusts a hand position. In this case the hand positioning must be done later.
 
 ## See Also
 

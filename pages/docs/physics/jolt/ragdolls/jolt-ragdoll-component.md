@@ -67,6 +67,34 @@ In *powered* mode, you can also call `FadeJointMotorStrength()` to have the stre
 * `SetJointMotorStrength`: Changes the overall strength of the joint motors ("muscles") in an animation powered ragdoll.
 * `FadeJointMotorStrength`: Fades the motor ("muscle") strength of an animation powered ragdoll to a target value. Typically used to fade out the animation contribution.
 
+## Ragdoll Troubleshooting
+
+Getting ragdolls to behave correctly can be very hard. Here are some tips how to approach problems:
+
+1. All important configurations are set up in the [skeleton](../../../animation/skeletal-animation/skeleton-asset.md). While configuring a ragdoll, open a simple scene and add a game object only with an [animated mesh component](../../../animation/skeletal-animation/animated-mesh-component.md) and a ragdoll component into it, and frequently [simulate the scene](../../../editor/run-scene.md) to see how the ragdoll behaves.
+
+1. Start by just adding the most important bone shapes. Disable *self collision* on the ragdoll.
+
+1. Once you get to setting up the joints, disable gravity on the ragdoll (set `GravityFactor` to zero). When you simulate the scene, the ragdoll should not move at all. If it does, that means that the joint limits are incorrect and even the start state of the ragdoll is not allowed by the limits. Setting up correct joint limits can be very tricky, especially shoulder and hip joints are difficult.
+
+1. If the ragdoll moves at startup, with gravity disabled, deactivate joints in the skeleton, until you find the joint that introduces the force.
+
+1. Enable the rotation gizmo on a joint in the skeleton asset, to correct its overall orientation.
+
+1. Relax joint limits, especially shoulders should have quite loose limits, but pretty much all joints should allow some swing and twist.
+
+1. Use the *Twist Center Angle* to adjust the neutral rotation for the joint twisting. The gizmo tries to help you finding a good angle, by highlighting the center direction in red, in case it is outside the allowed min and max range.
+
+1. Once you fixed a joint to not modify a bone at startup, enable the next joints and try again. Repeat until all joints are configured and none introduce a force on the ragdoll at startup with gravity disables.
+
+1. If you want to use *self collision*, enable it and check that the ragdoll doesn't behave weirdly.
+
+1. Make sure that the shapes of adjacent bones overlap, so that there are no gaps anywhere. However, also check that shapes of bones that are not directly adjacent **do not overlap**, otherwise they will push each other away at the start.
+
+1. Increase `GravityFactor` again to see how the ragdoll behaves when falling down.
+
+1. The issues mentioned above can also happen from other poses, of course, so test your ragdoll from various different starting poses. You can use the [simple animation component](../../../animation/skeletal-animation/simple-animation-component.md) to play an animation on the mesh and manually activate the ragdoll at different times to test from that pose. Reduce the animation playback speed to make it easier to time the activation.
+
 ## See Also
 
 * [Skeletal Animations](../../../animation/skeletal-animation/skeletal-animation-overview.md)

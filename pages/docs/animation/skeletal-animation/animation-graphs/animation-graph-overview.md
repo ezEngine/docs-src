@@ -4,6 +4,10 @@ Animating characters is a complex task. Even simple creatures typically already 
 
 An *animation graph* is used to configure how each animation clip of a character should behave when it is actively played on the mesh. Animation graphs are the basis for complex animation playback. They also provide some very basic functionality for logic and math, such that one can build simple state machines. For more complex decisions which animations should play when, use [custom code](../../../custom-code/custom-code-overview.md).
 
+## Video: Introduction to Animation Graphs
+
+[![video](https://img.youtube.com/vi/nSesD8H1M4c/0.jpg)](https://youtu.be/nSesD8H1M4c)
+
 ## Creating and Using Animation Graphs
 
 Animation graphs are configured through the [animation graph asset type](animation-graph-asset.md). To apply the output pose of an animation graph to an [animated mesh](../animated-mesh-component.md), add an [animation controller component](animation-controller-component.md) to the same [game object](../../../runtime/world/game-objects.md). The controller will send the output pose to the mesh every frame, but only while the scene is [simulated](../../../editor/run-scene.md).

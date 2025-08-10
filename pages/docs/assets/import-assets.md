@@ -10,6 +10,10 @@ Other asset types, of course, have other options for importing.
 
 To create these documents you have two options: Manual or automatic import.
 
+## Video: How to import assets
+
+[![video](https://img.youtube.com/vi/KIh-rUbEnt0/0.jpg)](https://youtu.be/KIh-rUbEnt0)
+
 ## Create Documents Manually
 
 You can manually create documents by right clicking into the [asset browser](asset-browser.md) and selecting *New > Asset Type*. If you right clicked free space, the asset document will be created in the folder that is selected on the left. If you right clicked another document, the new document will be created in the same folder as the selected asset.
@@ -51,14 +55,6 @@ Once you click *Import* the asset documents are generated and you can then open 
 ### Import Via Drag And Drop
 
 The methods above assume that the source asset is already present inside one of the project's [data directories](../projects/data-directories.md). If that is not the case, you can drag and drop a file into the [asset browser](asset-browser.md) to copy the file into the selected directory. This also automatically launches the asset import dialog mentioned above.
-
-## Video: How to import textures
-
-[![video](https://img.youtube.com/vi/x4qUFga-Jis/0.jpg)](https://www.youtube.com/watch?v=x4qUFga-Jis)
-
-## Video: How to import meshes
-
-[![video](https://img.youtube.com/vi/XBO4OPcF2bs/0.jpg)](https://www.youtube.com/watch?v=XBO4OPcF2bs)
 
 ## See Also
 

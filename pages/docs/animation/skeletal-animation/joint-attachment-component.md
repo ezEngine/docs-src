@@ -6,6 +6,10 @@ The *joint attachment component* is used to expose the animated position of a bo
 
 In the video above a joint attachment component was used to expose the position of the right hand as a game object. This was then used as the parent object for a gun object.
 
+## Video: How to Use Joint Attachments
+
+[![video](https://img.youtube.com/vi/CvQNCBx5xGY/0.jpg)](https://youtu.be/CvQNCBx5xGY)
+
 ## Component Properties
 
 * `JointName`: The *name* of the joint/bone of which you want to use the position as an attachment point. You can look up the bone names in the respective [skeleton asset](skeleton-asset.md).

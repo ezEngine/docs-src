@@ -4,6 +4,12 @@
 
 The *Jolt hitbox component* is used to add collider shapes to an [animated mesh](../../../animation/skeletal-animation/animated-mesh-component.md).
 
+## Video: How to Setup Hitboxes
+
+[![video](https://img.youtube.com/vi/AB6vTTyQCnE/0.jpg)](https://youtu.be/AB6vTTyQCnE)
+
+## Setup
+
 The component must be attached next to another component that defines the [skeleton](../../../animation/skeletal-animation/skeleton-asset.md) to use, for instance an [animated mesh component](../../../animation/skeletal-animation/animated-mesh-component.md) or a [skeleton component](../../../animation/skeletal-animation/skeleton-component.md). It will then use that skeleton to create the physics shapes.
 
 Consequently, the configuration of the hitbox shapes is set up through the [skeleton asset](../../../animation/skeletal-animation/skeleton-asset.md).

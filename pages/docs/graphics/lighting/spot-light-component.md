@@ -10,7 +10,7 @@ Note that unless a light source casts [dynamic shadows](dynamic-shadows.md), it'
 
 ## Video: How to create a light source
 
-[![video](https://img.youtube.com/vi/XBO4OPcF2bs/0.jpg)](https://www.youtube.com/watch?v=XBO4OPcF2bs)
+[![video](https://img.youtube.com/vi/QCYoYexvynQ/0.jpg)](https://youtu.be/QCYoYexvynQ)
 
 ## Projected Light Patterns
 

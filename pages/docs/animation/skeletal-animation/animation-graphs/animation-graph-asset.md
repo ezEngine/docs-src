@@ -40,7 +40,7 @@ Every array entry represents one animation. From the drop down you select the na
 
 In the animation graph you never select animation clips directly, but rather always choose the animation by name. Because the mapping is defined in one central place in the animation graph asset, it is easy to replace an animation by another clip, simply by changing the mapping.
 
-In the future this feature is also meant to be used to switch between entirely different animation sets and be able to reuse an animation graph between different creatures and different skeletons. This is, however, not yet implemented, but if necessary, can already be emulated to some degree using graph composition (see next section).
+Animation mapping is meant to enable you to reuse an animation graph between different creatures. Using graph composition (see next section) you can set up a an animation graph that does the same as another graph, but uses different animation clips for the same actions. For example a regular human and a zombie could share the same animation graph logic for walking, running, etc, but of course the zombie animations would look different. The mapping can also be overridden on the [animation controller component](animation-controller-component.md), both statically, as well as at runtime (via code). This could, for instance, be used to use one animation graph for all the weapon-handling behavior, but when the player switches the active weapon, a script can remap all the animation clips, such that they work for another weapon.
 
 ## Compositing Animation Graphs
 

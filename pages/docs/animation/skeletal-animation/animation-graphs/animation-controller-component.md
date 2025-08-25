@@ -14,6 +14,12 @@ The component itself doesn't do much, other than updating the animation pose and
 
 * `Enable IK`: If *inverse kinematics*, such as [aim IK](../ik/aim-ik-component.md) or [two bone IK](../ik/two-bone-ik-component.md) shall affect the animated mesh, this option needs to be enabled.
 
+* `AnimationClipOverrides`: An array of overrides for the [animation mapping](animation-graph-asset.md#animation-mapping). See that page for details. Note that this can be changed at runtime using the script function `SetAnimationClipOverride()`
+
+## Component Script Functions
+
+* `SetAnimationClipOverride(sAnimationName, sAnimationClipResource)`: Allows to change the animation mapping at runtime, to for example use a different weapon animation when a character switches the active weapon.
+
 ## See Also
 
 * [Skeletal Animations](../skeletal-animation-overview.md)

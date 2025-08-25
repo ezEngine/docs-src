@@ -14,7 +14,7 @@ For the full list of available command line options, run
 ShaderCompiler.exe -help
 ```
 
-* `-project <path>`: The compiler takes a path to a [project](../projects/projects-overview.md) to resolve paths relative to the project directory.
+* `-project <path>`: The compiler takes a path to a [project](../projects/projects-overview.md) to resolve paths relative to the project directory. If only a project path is specified and no `-shader` option, all shaders that belong to a project (in all [data directories](../projects/data-directories.md)) are compiled.
 
 * `-platform <name>`: The name of the target platform for which to compile the shaders. For example `DX11_SM50`. See the command line help for all options.
 
@@ -28,7 +28,10 @@ ShaderCompiler.exe -help
 ShaderCompiler.exe -project "C:\ez\Data\Base" -platform DX11_SM50 -shader "Shaders\Debug" -perm TOPOLOGY=TOPOLOGY_LINES CAMERA_MODE=CAMERA_MODE_PERSPECTIVE
 ```
 
-## See Also
+```cmd
+ShaderCompiler.exe -project "C:\ez\Data\Base" -platform VULKAN
+```
 
+## See Also
 
 * [Shaders](../graphics/shaders/shaders-overview.md)

@@ -4,6 +4,10 @@ The *animation graph asset* is used to configure complex animations. See the [an
 
 ![Animation Graph Asset](media/anim-controller-asset.png)
 
+## Video: Introduction to Animation Graphs
+
+[![video](https://img.youtube.com/vi/nSesD8H1M4c/0.jpg)](https://www.youtube.com/watch?v=nSesD8H1M4c)
+
 ## Animation Graph
 
 In the animation graph nodes represent actions. Data flows from left to right. Nodes have **input pins** and **output pins** which represent different kinds of data, such as *trigger events*, *number values*, *animation poses* and *bone weights*.

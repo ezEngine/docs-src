@@ -4,6 +4,7 @@ testing-chambers.md
 basic-fps-template.md
 monster-attack
 pacman.md
+crazyball.md
 store-sample.md
 sample-game-plugin.md
 rts.md

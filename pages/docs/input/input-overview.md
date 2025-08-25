@@ -2,6 +2,10 @@
 
 All input devices, such as mouse, keyboard, controllers and other periphery are managed by the central `ezInputManager`. New devices are exposed to the system by implementing a custom `ezInputDevice`. For details, please see the [API Docs](../api-docs.md) for those classes.
 
+## Video: How to do Input
+
+[![video](https://img.youtube.com/vi/G16mBOH1I6A/0.jpg)](https://www.youtube.com/watch?v=G16mBOH1I6A)
+
 ## Abstract State
 
 All input state is abstracted away. There are two layers of abstraction: **input slots** and **input actions**. *Slots* are the lower level hardware representation, *actions* are a higher level semantic representation of what the player can do. Actions are bound to one or multiple slots and if possible the game should allow the player to change those bindings.

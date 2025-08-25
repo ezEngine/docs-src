@@ -4,6 +4,10 @@ The *Jolt ragdoll component* is used to physically simulate limp bodies.
 
 <video src="media/ragdolls.webm" width="800" height="600" autoplay loop></video>
 
+## Video: How to make Ragdolls
+
+[![video](https://img.youtube.com/vi/okvQ6SlBDvk/0.jpg)](https://www.youtube.com/watch?v=okvQ6SlBDvk)
+
 ## Ragdoll Configuration
 
 Ragdolls only work with [skeletons](../../../animation/skeletal-animation/skeleton-asset.md) that have a proper bone collider and joint setup. The most important bones need to have *collider shapes*. Additionally, bones that should be anatomically connected, need to have *joints* set up. Bones also must adhere to a physically plausible hierarchy, meaning that leg bones should be child bones of a hip bone, feet bones must be child bones of leg bones and so on. Unfortunately many assets don't strictly follow this rule, which often makes them unsuitable for use as a ragdoll.

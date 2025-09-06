@@ -18,7 +18,7 @@ Currently all triangles in the collision mesh will all use the same [surface](..
 
 `HeightfieldImage:` The [ImageData asset](../Miscellaneous/imagedata-asset.md) that contains the terrain height information.
 
-`Material:` The single [material](../materials/materials-overview.md) used for the entire mesh. If you need multiple layers (grass, dirt, rock, etc) you can write a custom [visual shader (TODO)](../materials/visual-shaders.md) that uses a mask texture to fetch and blend the various layers as desired. The vegetation scene in the [Testing Chambers](../../samples/testing-chambers.md) project does this.
+`Material:` The single [material](../materials/materials-overview.md) used for the entire mesh. If you need multiple layers (grass, dirt, rock, etc) you can write a custom [visual shader](../materials/visual-shaders.md) that uses a mask texture to fetch and blend the various layers as desired. The vegetation scene in the [Testing Chambers](../../samples/testing-chambers.md) project does this.
 
 `HalfExtents:` The size of the terrain in X and Y direction.
 

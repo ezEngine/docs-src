@@ -12,6 +12,7 @@
 ## [MA Devlog 6 - More Level Logic](monster-attack/devlog-6.md)
 ## [MA Devlog 7 - Level Pieces](monster-attack/devlog-7.md)
 # [PacMan Sample](pacman.md)
+# [Crazy Ball Sample](crazyball.md)
 # [Store Sample](store-sample.md)
 # [Sample Game Plugin](sample-game-plugin.md)
 # [RTS Sample](rts.md)

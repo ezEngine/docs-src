@@ -87,7 +87,7 @@
 # Materials
 ## [Materials](materials/materials-overview.md)
 ## [Surfaces](materials/surfaces.md)
-## [Visual Shaders (TODO)](materials/visual-shaders.md)
+## [Visual Shaders](materials/visual-shaders.md)
 # Input
 ## [Input System](input/input-overview.md)
 ## [Input Set Configuration](input/input-config.md)

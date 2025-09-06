@@ -24,7 +24,7 @@ Through the `ShaderMode` property there are three ways a material can select whi
 
   You can easily create a custom shader from a [shader template](../graphics/shaders/shader-templates.md).
 
-* **Visual Shader:** In this mode the material editor will show an additional editing area beneath the 3D view, where you can create your own shader through a visual graph system. This enables you to create custom shader effects like animated textures. There is a dedicated chapter about [visual shaders (TODO)](visual-shaders.md) that explains how to do so.
+* **Visual Shader:** In this mode the material editor will show an additional editing area beneath the 3D view, where you can create your own shader through a visual graph system. This enables you to create custom shader effects like animated textures. There is a dedicated chapter about [visual shaders](visual-shaders.md) that explains how to do so.
 
 If you change the selected shader, you need to *transform* (`Ctrl+E`) the material [asset](../assets/assets-overview.md) for the change to take full effect.
 
@@ -44,7 +44,7 @@ The `DefaultMaterial` provides these options:
 * **Masked:** In this mode the object can have fully transparent (invisible) areas and fully opaque ones. *Blending* is not possible. This is commonly used for vegetation or things like chain-link fences to cut out part of the object. *Masked* geometry does not require any sorting during rendering and is therefore the most efficient and reliable mode of transparency. Which areas appear transparent are defined by the *alpha channel* of the *base texture* and the `MaskThreshold` property. Every pixel whose alpha value is above the threshold (e.g. white) will be visible (opaque) and every pixel whose value is below the threshold (e.g. black) will be invisible.
 * **Transparent:** In this mode geometry will appear see-through, ie. it will be blended with the geometry behind it. This mode is commonly used for things like glass or water. Again, the *alpha channel* of the *base texture* determines which areas appear more or less transparent.
 * **Additive:** In this mode the geometry will not be blended with the background but simply added on top of it. The *alpha channel* affects how strongly it is added.
-* **Modulate:** This mode allows you to darken or brighten the background. A pure white material (base texture and base color) will brighten everything that is behind the object. A pure black material will darken the background. A material that is mid grey will let the background through unmodified. This mode can be used for various special effects, especially when writing a [visual shader (TODO)](visual-shaders.md) that animates the texture and the alpha channel with noise.
+* **Modulate:** This mode allows you to darken or brighten the background. A pure white material (base texture and base color) will brighten everything that is behind the object. A pure black material will darken the background. A material that is mid grey will let the background through unmodified. This mode can be used for various special effects, especially when writing a [visual shader](visual-shaders.md) that animates the texture and the alpha channel with noise.
 
 For testing transparent materials it may be useful to create an object in a scene and observe it there, where you can place it in front of different backgrounds.
 
@@ -97,6 +97,6 @@ For standard materials none of this is necessary, and for non-standard materials
 
 ## See Also
 
-* [Visual Shaders (TODO)](visual-shaders.md)
+* [Visual Shaders](visual-shaders.md)
 * [Textures](../graphics/textures-overview.md)
 * [Meshes](../graphics/meshes/meshes-overview.md)

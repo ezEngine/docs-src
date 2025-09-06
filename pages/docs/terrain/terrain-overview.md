@@ -10,7 +10,7 @@ A popular method to represent terrain are heightmaps - 2D grayscale images, wher
 
 ## Vegetation
 
-Vegetation can be created with standard meshes. Using custom [visual shaders (TODO)](../materials/visual-shaders.md), a basic per-vertex wind animation can be applied.
+Vegetation can be created with standard meshes. Using custom [visual shaders](../materials/visual-shaders.md), a basic per-vertex wind animation can be applied.
 
 Additionally, ezEngine has built in support for [Kraut](kraut-overview.md), a tool that allows you to procedurally generate tree meshes.
 

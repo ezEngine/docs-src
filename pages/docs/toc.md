@@ -314,7 +314,6 @@
 ### [Common Application Features](runtime/application/common-application-features.md)
 ### [Game States](runtime/application/game-state.md)
 ## Configuration
-### [Actor System (TODO)](runtime/configuration/actor-system.md)
 ### [Singleton Interfaces](runtime/configuration/interfaces.md)
 ### [Startup System](runtime/configuration/startup.md)
 ## [FileSystem](runtime/filesystem.md)

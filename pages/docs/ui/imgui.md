@@ -23,19 +23,7 @@ On the other hand, ImGui is not meant to be styled. Changing the appearance of I
 ```
 <!-- END-DOCS-CODE-SNIPPET -->
 
-This can be done for example in `OnActivation()` of a custom [game state](../runtime/application/game-state.md). Similarly, you should delete the `ezImgui` instance at shutdown:
-
-<!-- BEGIN-DOCS-CODE-SNIPPET: imgui-dealloc -->
-```cpp
-#ifdef BUILDSYSTEM_ENABLE_IMGUI_SUPPORT
-  if (ezImgui::GetSingleton() != nullptr)
-  {
-    ezImgui* pImgui = ezImgui::GetSingleton();
-    EZ_DEFAULT_DELETE(pImgui);
-  }
-#endif
-```
-<!-- END-DOCS-CODE-SNIPPET -->
+This can be done for example in `OnActivation()` of a custom [game state](../runtime/application/game-state.md).
 
 During a frame, the `ezImgui` instance needs to know which *view* to render the UI elements to. Therefore you should call this every frame:
 

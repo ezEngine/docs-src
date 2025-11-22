@@ -32,6 +32,23 @@ These scripts are used in state machines through the [script state](../game-logi
 
 Through the general script properties you can add *variables* to your script. These may just be internal variables to keep track of state, but when the `Expose` flag is enabled, they become [exposed parameters](../../concepts/exposed-parameters.md). These variables will show up where the script is used (for example on [script components](script-component.md)) and allow you to pass in different starting values.
 
+### Variable Types
+
+Variables support various data types including numbers, strings, vectors, and more. Additionally, you can create:
+
+* **Array Variables:** Set the variable category to *Array* to create a typed array. On the component side, arrays are displayed with their element type for better readability. Note that internally within visual scripts, arrays store variants and are not strictly typed.
+
+* **GameObject and Component References:** Internal (non-exposed) variables can store references to game objects and components. This is useful for caching the results of expensive lookups at runtime. Note that GameObject references cannot currently be exposed as public variables.
+
+### Numeric Variable Options
+
+For exposed numeric variables (Int, Float, etc.), additional options are available:
+
+* `ClampRange`: Enable this to restrict the value to a specific range.
+* `MinValue`, `MaxValue`: When clamping is enabled, these define the allowed range. Values are automatically clamped on the component side.
+
+<!-- TODO IMAGE: Screenshot of the variable properties panel showing a numeric variable with ClampRange enabled and Min/Max values set -->
+
 ## Editing Visual Scripts
 
 To build a visual script, right-click into the graph editor to open the context menu:

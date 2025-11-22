@@ -44,6 +44,39 @@ Both slots and actions have a current `ezKeyState`, which describes whether the 
 
 The key state is derived from the *key value*. Once a button gets pressed, the key value jumps from `0` to `1`. As a consequence the *key state* transitions from `ezKeyState::Up` to `ezKeyState::Pressed` for this frame, and continues to `ezKeyState::Down` in the next frame. Once a button is depressed, the key value goes back to `0` and the key state transitions first to `ezKeyState::Released` for one frame, and finally back to `ezKeyState::Up` in the next frame.
 
+## Controller Mapping
+
+The input system uses *virtual controllers* to abstract away physical controller hardware. By default, all physical controllers (up to 4) are mapped to virtual controller 0. This means any connected controller can be used to play the game without requiring configuration.
+
+### Multiple Controllers to One Virtual Controller
+
+Multiple physical controllers can send input to the same virtual controller. The inputs are combined, so pressing a button on any mapped controller will trigger the corresponding action. This is the default behavior and allows any player to pick up any controller and start playing.
+
+### Controller Mapping for Multiplayer
+
+For multiplayer games, you typically want each player to have their own virtual controller. Use `ezInputDeviceController::SetPhysicalControllerMapping()` to assign a physical controller to a specific virtual controller:
+
+```cpp
+// Map physical controller 0 to virtual controller 0 (player 1)
+pController->SetPhysicalControllerMapping(0, 0);
+// Map physical controller 1 to virtual controller 1 (player 2)
+pController->SetPhysicalControllerMapping(1, 1);
+// Disable physical controller 2 (pass negative value)
+pController->SetPhysicalControllerMapping(2, -1);
+```
+
+### Detecting Controller Usage
+
+To let players self-select their controllers (e.g., "Press Start to join"), use `ezInputDeviceController::GetRecentPhysicalControllerInput()`. This returns a bitmask indicating which buttons were recently pressed on a physical controller:
+
+```cpp
+auto recentInput = pController->GetRecentPhysicalControllerInput(uiPhysicalController);
+if (recentInput.IsSet(ezPhysicalControllerInput::Start))
+{
+  // This controller pressed Start, assign it to the next available player
+}
+```
+
 ## Accessing Input State
 
 Through `ezInputManager` all input state (both for slots and actions) is accessible by all code at all times. However, depending on the type of game you build, you may prefer to use the [input component](input-component.md) to get a specific *input set* routed to a specific component through `ezMsgInputActionTriggered`.

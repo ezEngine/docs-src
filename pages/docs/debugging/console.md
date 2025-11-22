@@ -2,19 +2,32 @@
 
 The in-game console is a utility for inspecting the [log](logging.md), modifying [CVars](cvars.md) and calling [console functions](#console-functions).
 
-![Console](media/console.png)
+![Ingame Console](media/debug-console.jpg)
 
-## Key bindings
+## Console Windows
 
-The default key binding for the console is:
+The console provides multiple windows that can be shown, hidden, and rearranged:
+
+* **Command Window:** Text input for entering commands with auto-completion. Shows command output separately from log messages.
+* **Log Window:** Displays engine [log messages](logging.md). Supports text filtering and severity level filtering.
+* **CVar Window:** Hierarchical tree view of all [CVars](cvars.md). CVars are organized by their dot-separated names (e.g., `r.Bloom` appears under "r" > "Bloom").
+* **Stats Window:** Shows FPS, frame time graph, and memory usage.
+
+### Pinnable Overlays
+
+The Stats and Log windows can be *pinned* using the "Pin Window" checkbox. Pinned windows remain visible as overlays even when the console is closed. This is useful for monitoring performance or watching for specific log messages during gameplay.
+
+## Key Bindings
+
+The default key bindings for the console are:
 
 * **F1** - Opens/closes the console.
-* **Up / Down** - Select a previously entered command from the history. Note that the history is saved to disk so that commands don't need to be typed again after restarting.
-* **F2** and **F3** - Repeat last and second-to-last commands. This works even when the console is currently closed.
-* **ESC** - Clears the input line.
-* **Page Up / Page Down** - Scrolls the log output up / down.
-* **TAB** - Auto-completes the current input. Also displays all available input options in the output. Ie. lists the names of CVars and console functions and prints their descriptions.
-* **Enter** - Executes the typed command. If the typed text is only the name of a CVar without an assignment, this will simply print the current value and the description of the CVar.
+* **Up / Down** - Select a previously entered command from the history. The history is saved to disk so that commands persist after restarting.
+* **F2** and **F3** - Repeat last and second-to-last commands. This works even when the console is closed.
+* **TAB** - Auto-completes the current input. Also displays all available input options in the output.
+* **Enter** - Executes the typed command. If the typed text is only the name of a CVar without an assignment, this will print the current value and description of the CVar.
+
+When the console is open, the mouse cursor is shown and not clipped to the window, allowing interaction with elements outside the console.
 
 ## Modify CVars
 
@@ -42,15 +55,13 @@ To unbind a key call:
 unbind f
 ```
 
-## Search
+## Log Filtering
 
-You can filter the output of the console (the log messages) to only strings that contain some string by typing a **\*** at the beginning:
+The Log window provides filtering options to help find specific messages:
 
-```cmd
-*some text
-```
-
-Now the output window will only show strings that contain 'some text'.
+* **Text Filter:** Type in the filter field to show only log messages containing that text (case-insensitive).
+* **Severity Filter:** Use the dropdown to filter messages by severity.
+* **Clear Log:** Remove all current log messages from the display.
 
 ## Console Functions
 

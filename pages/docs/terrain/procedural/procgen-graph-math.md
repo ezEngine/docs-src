@@ -2,9 +2,9 @@
 
 These node types implement math functions for [ProcGen graph assets](procgen-graph-asset.md).
 
-## Blend Node
+## Blend Node (Standard Math Operators)
 
-The *Blend* node provides the most common math expressions to combine two values.
+The *Blend* node provides the most common math expressions to combine two values. These include **Add**, **Subtract**, **Multiply**, **Divide**, **Min** and **Max**.
 
 ### Node Properties
 
@@ -43,6 +43,29 @@ This type of noise can be used to add variation between plants, where there is n
 
 * `Seed`: A seed value for the random number generator. If a fixed seed is chosen, the random number output is always exactly the same.
 * `OutputMin`, `OutputMax`: The output value will be between these two values.
+
+## Remap Node
+
+The *Remap* node transforms values from an input range to an output range. This is useful for converting values that come in one range (such as height or slope values) into a different range needed by another node.
+
+For example, if you have a height value between 0 and 100, but need to convert it to a density value between 0 and 1, you would set `InputMin` to 0, `InputMax` to 100, `OutputMin` to 0, and `OutputMax` to 1.
+
+### Node Properties
+
+* `InputMin`, `InputMax`: The expected range of the input value.
+* `OutputMin`, `OutputMax`: The range to map the output value to.
+* `ClampIntermediate`: If enabled, the normalized intermediate value is clamped to [0, 1] before being scaled to the output range. This prevents output values from going outside the output range when input values are outside the input range.
+
+## Curve Node
+
+The *Curve* node remaps values using a custom curve. This allows for non-linear transformations, such as easing functions or custom falloff patterns.
+
+The input value is used as the X coordinate on the curve, and the Y value at that point becomes the output.
+
+### Node Properties
+
+* `Curve`: The curve definition with control points. Click to open the curve editor.
+* `NumSamples`: The number of samples used to approximate the curve. Higher values give more accurate results but use more memory.
 
 ## See Also
 

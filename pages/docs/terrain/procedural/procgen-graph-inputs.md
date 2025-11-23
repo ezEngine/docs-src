@@ -35,6 +35,18 @@ This node can be used to place objects only at specific altitudes, or to change 
 
 <!-- PAGE IS TODO -->
 
+## Position Node
+
+The *Position* node outputs the world space coordinates of the current evaluation point. It provides three separate output pins for the X, Y, and Z components.
+
+This node is useful for creating placement rules based on absolute world position, such as restricting certain objects to specific areas of the map or creating patterns that align with world coordinates.
+
+## Normal Node
+
+The *Normal* node outputs the surface normal at the current evaluation point. Like the Position node, it provides three separate output pins for the X, Y, and Z components of the normal vector.
+
+This can be used to create placement rules based on surface orientation beyond just slope angle. For example, you could use the normal's X and Y components to prefer surfaces facing a particular direction.
+
 ## See Also
 
 * [Procedural Object Placement](procedural-object-placement.md)

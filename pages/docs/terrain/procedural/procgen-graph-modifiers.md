@@ -49,4 +49,5 @@ When using a reference color instead, you can have many more inputs, but each on
 * [Procedural Object Placement](procedural-object-placement.md)
 * [Procedural Volume Box Component](procgen-volume-box-component.md)
 * [Procedural Volume Sphere Component](procgen-volume-sphere-component.md)
+* [Procedural Volume Spline Component](procgen-volume-spline-component.md)
 * [Procedural Volume Image Component](procgen-volume-image-component.md)

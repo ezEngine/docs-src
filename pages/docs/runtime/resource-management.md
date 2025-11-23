@@ -31,7 +31,7 @@ ezGeometry geom;
 geom.AddBox(ezVec3(2.0f), false);
 
 ezMeshBufferResourceDescriptor desc;
-desc.AddStream(ezGALVertexAttributeSemantic::Position, ezGALResourceFormat::XYZFloat);
+desc.AddStream(ezMeshVertexStreamType::Position);
 desc.AllocateStreamsFromGeometry(geom, ezGALPrimitiveTopology::Triangles);
 
 s_hSolidBoxMeshBuffer = ezResourceManager::CreateResource<ezMeshBufferResource>("DebugSolidBox", std::move(desc), "Mesh for Rendering Debug Solid Boxes");

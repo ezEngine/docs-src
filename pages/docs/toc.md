@@ -141,6 +141,7 @@
 ## [Decals](effects/decals.md)
 ## [Fog](effects/fog.md)
 ## [Lensflare Component](effects/lensflare-component.md)
+## [Mesh Decals](effects/mesh-decals.md)
 ## Particle Effects
 ### [Particle Effects](effects/particle-effects/particle-effects-overview.md)
 ### [How Particle Effects Work](effects/particle-effects/how-particle-effects-work.md)
@@ -166,8 +167,8 @@
 ### [Curves](animation/common/curves.md)
 ## Paths
 ### [Follow Path Component](animation/paths/follow-path-component.md)
-### [Path Shape Component](animation/paths/path-component.md)
-### [Path Node Component](animation/paths/path-node-component.md)
+### [Spline Component](animation/paths/path-component.md)
+### [Spline Node Component](animation/paths/path-node-component.md)
 ## Property Animation
 ### [Color Animation Component](animation/property-animation/color-animation-component.md)
 ### [MoveTo Component](animation/property-animation/move-to-component.md)
@@ -242,6 +243,7 @@
 ### [Procedural Volume Box Component](terrain/procedural/procgen-volume-box-component.md)
 ### [Procedural Volume Image Component](terrain/procedural/procgen-volume-image-component.md)
 ### [Procedural Volume Sphere Component](terrain/procedural/procgen-volume-sphere-component.md)
+### [Procedural Volume Spline Component](terrain/procedural/procgen-volume-spline-component.md)
 # Ai
 ## Aiplugin
 ### [AiPlugin Overview](ai/AiPlugin/ai-plugin-overview.md)

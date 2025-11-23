@@ -14,13 +14,15 @@ For videos, [have a look here](../getting-started/videos.md).
 
 ## Samples
 
-![RTS](media/rts2.jpg)
+![RTS](media/rts1.jpg)
 
 ![Store](media/store-sample-editor.jpg)
 
 ## UI
 
-![](../docs/ui/media/imgui.jpg)
+![ImGui](../docs/ui/media/imgui.jpg)
+
+![RmlUI](media/rts3.jpg)
 
 ## Skeletal Animations
 

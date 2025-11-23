@@ -59,6 +59,10 @@ If disabled, the decal will completely overwrite the normal of the underlying ge
 
 **ApplyToDynamic:** By default, decals apply to *static geometry* but not to *dynamic geometry*. If it is desired for a decal to be projected onto a dynamic object, this property should be used to select exactly to which dynamic object the decal should be applied to. Note that decals can only be applied to a single dynamic game object. If the selected object turns out to be *static*, though, the decal will be invisible.
 
+## Mesh Decals
+
+In addition to projected decals, there are also [mesh decals](mesh-decals.md). Mesh decals map decal textures directly onto mesh geometry rather than projecting them. This is useful when decals need to follow the mesh topology precisely without projection distortion.
+
 ## See Also
 
 * [Particle Effects](particle-effects/particle-effects-overview.md)

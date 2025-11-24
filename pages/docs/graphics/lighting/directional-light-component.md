@@ -16,6 +16,12 @@ See [this page](dynamic-shadows.md#shadow-component-properties) for shadow relat
 
 * `MinShadowRange`: How far from the camera the light should cast shadows. A low value means that only objects a short distance away will cast shadows, and objects farther away won't.
 
+  > **Note:**
+  >
+  > The shadow cascades are distributed based on this value. When the camera's field of view (FOV) exceeds 45 degrees, the final cascade may extend beyond the configured distance, utilizing the available shadow map information across a wider range to optimize performance. This means actual shadow coverage often exceeds `MinShadowRange` at higher FOV values.
+  >
+  > When implementing zoom features that reduce the camera FOV, you may notice shadows appearing to have reduced distance at lower FOV settings. To address this, configure `MinShadowRange` for your lowest expected FOV. The shadows will then extend further at higher FOV values. Alternatively, you can dynamically adjust the shadow range when zooming, which is a common approach in games but requires a game-specific implementation.
+
 * `FadeOutStart`: At what fraction of the shadow range it should start to fade out. For instance, if the `MinShadowRange` is set to 10 meters, and `FadeOutStart` is set to 0.8, then the shadows will start to fade out at a distance of 8 meters.
 
 * `SplitModeWeight`: TODO

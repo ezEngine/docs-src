@@ -167,8 +167,8 @@
 ### [Curves](animation/common/curves.md)
 ## Paths
 ### [Follow Path Component](animation/paths/follow-path-component.md)
-### [Spline Component](animation/paths/path-component.md)
-### [Spline Node Component](animation/paths/path-node-component.md)
+### [Spline Component](animation/paths/spline-component.md)
+### [Spline Node Component](animation/paths/spline-node-component.md)
 ## Property Animation
 ### [Color Animation Component](animation/property-animation/color-animation-component.md)
 ### [MoveTo Component](animation/property-animation/move-to-component.md)

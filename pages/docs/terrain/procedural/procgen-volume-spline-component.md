@@ -1,6 +1,6 @@
 # Procedural Volume Spline Component
 
-The *procedural volume spline component* defines a tube-shaped volume along a [spline](../../animation/paths/path-component.md) in which the rules of [ProcGen graphs](procgen-graph-asset.md) are modified. Not every graph has to make use of this information, and what the exact effect is, is up to the ProcGen graph.
+The *procedural volume spline component* defines a tube-shaped volume along a [spline](../../animation/paths/spline-component.md) in which the rules of [ProcGen graphs](procgen-graph-asset.md) are modified. Not every graph has to make use of this information, and what the exact effect is, is up to the ProcGen graph.
 
 For more details see the chapter on [ProcGen graph modifier nodes](procgen-graph-modifiers.md).
 
@@ -10,9 +10,9 @@ Spline volumes are useful for creating paths, roads, rivers, or other linear fea
 
 ## Setup
 
-The procedural volume spline component must be on the same game object as a [spline component](../../animation/paths/path-component.md). The spline defines the path that the volume follows, while this component controls the volume's radius, value, and blending properties.
+The procedural volume spline component must be on the same game object as a [spline component](../../animation/paths/spline-component.md). The spline defines the path that the volume follows, while this component controls the volume's radius, value, and blending properties.
 
-1. Create a game object with a [spline component](../../animation/paths/path-component.md) and configure the spline shape.
+1. Create a game object with a [spline component](../../animation/paths/spline-component.md) and configure the spline shape.
 2. Add a *Procedural Volume Spline Component* to the same game object.
 3. Set the `Radius` to control how wide the influence area is around the spline.
 4. Configure the `Value`, `BlendMode`, and other properties as needed.
@@ -28,7 +28,7 @@ The procedural volume spline component must be on the same game object as a [spl
 
 ## See Also
 
-* [Spline Component](../../animation/paths/path-component.md)
+* [Spline Component](../../animation/paths/spline-component.md)
 * [Procedural Object Placement](procedural-object-placement.md)
 * [ProcGen Graph Modifier Nodes](procgen-graph-modifiers.md)
 * [Procedural Volume Box Component](procgen-volume-box-component.md)

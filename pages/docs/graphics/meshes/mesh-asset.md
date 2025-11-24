@@ -44,7 +44,7 @@ Since assets are often authered with many different conventions, you can adjust 
 
 * `RecalculateNormals`, `RecalculateTangents`: If enabled, information about normals or tangents in the mesh file is ignored, and is instead computed from the vertex data.
 
-* `NormalPrecision`, `TexCoordPrecision`: These options allow you to choose how precise normals and UV coordinates are represented. Leave these at the default, unless you notice precision issues. Higher precision means the mesh takes up more RAM on the GPU and is slightly slower to render.
+* `HighPrecision`: If enabled, normals, tangents and texture coordinates are stored with higher precision. Leave this at the default (disabled), unless you notice precision issues. Higher precision means the mesh takes up more RAM on the GPU and is slightly slower to render.
 
 * `VertexColorConversion`: How to convert the vertex colors during import:
   * `None`: The color values are taken as-is.

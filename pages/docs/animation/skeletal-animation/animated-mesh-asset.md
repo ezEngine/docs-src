@@ -24,9 +24,7 @@ Animated meshes are placed in a scene with a dedicated [animated mesh component]
 
 * `RecalculateNormals`, `RecalculateTangents`: See the [mesh asset properties](../../graphics/meshes/mesh-asset.md#asset-properties).
 
-* `NormalPrecision`, `TexCoordPrecision`: See the [mesh asset properties](../../graphics/meshes/mesh-asset.md#asset-properties).
-
-* `BoneWeightPrecision`: How precisely to store the bone weights. For highly detailed regions, such as character faces, it may be necessary to increase the precision, to prevent artifacts.
+* `HighPrecision`: See the [mesh asset properties](../../graphics/meshes/mesh-asset.md#asset-properties).
 
 * `NormalizeWeights`: Usually all bone weights should add up to 1 on each vertex. To enforce this, bone weights are usually normalized. However, some meshes violate this rule and normalizing the weights introduces artifacts. Only disable this, option, if it very obviously fixes artifacts.
 

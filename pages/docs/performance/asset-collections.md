@@ -12,6 +12,14 @@ If you need full control, a [game state](../runtime/application/game-state.md) c
 
 Another option is to insert a [collection component](collection-component.md) into a scene or [prefab](../prefabs/prefabs-overview.md). If the component is active, that means it will automatically preload the assets from the referenced collection. Doing this makes sense when a script triggers actions that depend on assets, which are otherwise not loaded. If those assets are not preloaded, they will be loaded on demand, which may result in performance hiccups or visual glitches (if a loading fallback resource is used for a while).
 
+### Automatic Preload Collection for Main Scene
+
+When loading the first scene in a game (the so called "startup scene"), the engine automatically searches for and loads a preload collection that shares the same name as the scene file. For example, if you load a scene called `Level01.ezScene`, and you have an asset collection named `Level01.ezAssetCollection`, that collection will be automatically preloaded before the scene gets loaded.
+
+This is separate from what the [scene transition component](../gameplay/scene-transition-component.md) does and it doesn't apply when you later switch to another level. In those cases you should manually provide a collection for preloading.
+
+To change this behavior, override the function `ezGameState::GetStartupOptions()` in a custom [game state](../runtime/application/game-state.md).
+
 ## Keeping Assets Loaded
 
 Some assets are only ever needed for brief periods of time, for example particle effect textures. As long as no such effect is playing, their textures are not referenced and the [resource manager](../runtime/resource-management.md) may decide to unload them. The next time those assets are needed, they will be loaded again either resulting in a stall, or a visual glitch.

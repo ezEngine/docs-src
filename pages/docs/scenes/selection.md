@@ -25,6 +25,8 @@ You can filter the scene tree with the search box at the top:
 
 ![Scene Tree Filter](media/scene-tree-filter.png)
 
+The search filters by both object names and component types. For example, searching for "light" will find all objects with light components attached, even if "light" is not part of the object's name. This makes it easy to quickly locate all objects that use a specific component type in your scene.
+
 ## Selection Undo
 
 If you accidentally changed the selection, you can restore the previous selection using `Ctrl + B`. This will switch to another scene layer, if necessary.

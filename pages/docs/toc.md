@@ -150,6 +150,16 @@
 ### [Particle Emitters](effects/particle-effects/particle-emitters.md)
 ### [Particle Initializers](effects/particle-effects/particle-initializers.md)
 ### [Particle Behaviors](effects/particle-effects/particle-behaviors.md)
+### Behaviors
+#### [Bounds Behavior](effects/particle-effects/behaviors/pb-bounds.md)
+#### [Color Gradient Behavior](effects/particle-effects/behaviors/pb-color-gradient.md)
+#### [Fade Out Behavior](effects/particle-effects/behaviors/pb-fade-out.md)
+#### [Flies Behavior](effects/particle-effects/behaviors/pb-flies.md)
+#### [Gravity Behavior](effects/particle-effects/behaviors/pb-gravity.md)
+#### [Pull Along Behavior](effects/particle-effects/behaviors/pb-pull-along.md)
+#### [Raycast Behavior](effects/particle-effects/behaviors/pb-raycast.md)
+#### [Size Curve Behavior](effects/particle-effects/behaviors/pb-size-curve.md)
+#### [Velocity Behavior](effects/particle-effects/behaviors/pb-velocity.md)
 ### [Particle Renderers](effects/particle-effects/particle-renderers.md)
 ### [Particle Effect Component](effects/particle-effects/particle-effect-component.md)
 ## Post Processing

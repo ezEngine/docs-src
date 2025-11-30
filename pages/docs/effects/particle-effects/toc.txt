@@ -3,5 +3,6 @@ how-particle-effects-work.md
 particle-emitters.md
 particle-initializers.md
 particle-behaviors.md
+behaviors
 particle-renderers.md
 particle-effect-component.md

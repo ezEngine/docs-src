@@ -1,8 +1,8 @@
 # Textures
 
-Textures come in multiple forms. Most common are 2D textures loaded from file. 2D textures can also be created as render targets for [render-to-texture (TODO)](render-to-texture/render-to-texture.md). For [sky boxes](../effects/sky.md) or special effects you can also set up cubemap textures.
+Textures come in multiple forms. Most common are 2D textures loaded from file. 2D textures can also be created as render targets for [render-to-texture (TODO)](render-to-texture/render-to-texture.md). For [sky boxes](../effects/sky.md) or special effects you can also set up cubemap textures. Additionally, [color gradients](../animation/common/color-gradients.md) can be used directly as 1D textures.
 
-When the source texture comes from a file, you can create a texture [asset](../assets/assets-overview.md) for that file by [importing](../assets/import-assets.md) it. Otherwise you need to create the respective asset [document](../editor/editor-documents.md) manually, for example for render targets.
+When the source texture comes from a file, you can create a texture [asset](../assets/assets-overview.md) for that file by [importing](../assets/import-assets.md) it. Otherwise you need to create the respective asset [document](../editor/editor-documents.md) manually, for example for render targets. Color gradients can be referenced directly without creating a separate texture asset.
 
 Textures are most often referenced by [materials](../materials/materials-overview.md). Texture assets only specify how source files are imported and combined, they don't define rendering behavior. Therefore most components don't use textures directly, but rather use materials, which configure the overall rendering, unless the component in question already sets up the rendering itself, such as the [SkyBox component](../effects/sky.md#skybox-component).
 
@@ -73,6 +73,7 @@ Apart from some properties shared with 2D texture assets, render targets have th
 ## See Also
 
 * [Materials](../materials/materials-overview.md)
+* [Color Gradients](../animation/common/color-gradients.md)
 * [Render to Texture (TODO)](render-to-texture/render-to-texture.md)
 * [Sky](../effects/sky.md)
 * [Color Spaces](../appendix/color-spaces.md)

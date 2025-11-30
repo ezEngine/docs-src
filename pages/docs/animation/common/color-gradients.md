@@ -4,6 +4,10 @@
 
 The color gradient can be sampled along the X-axis. This is frequently used to sample a color over time, but other parameters may be used for the lookup as well. If a gradient is supposed to be used in a looping fashion, the first and last color have to be set up to match.
 
+## Using Gradients as Textures
+
+Color gradients can be directly referenced in [materials](../../materials/materials-overview.md) as [textures](../../graphics/textures-overview.md). When you reference a color gradient asset in a material's texture slot, the engine automatically converts it to a 1D texture with 512 pixels. This is particularly useful for creating color ramps, custom lighting effects, or any shader effect that needs to sample colors along a gradient. The gradient is stored in HDR format (R16G16B16A16_FLOAT), which means it can represent high dynamic range colors with the full intensity values you define in the gradient editor.
+
 ## Gradient Editor
 
 The image below shows a color gradient and its editing controls:
@@ -46,4 +50,6 @@ The dotted lines indicate which keyframe is the leftmost and which is the rightm
 ## See Also
 
 * [Curves](curves.md)
+* [Textures](../../graphics/textures-overview.md)
+* [Materials](../../materials/materials-overview.md)
 * [Property Animation (TODO)](../property-animation/property-animation-overview.md)

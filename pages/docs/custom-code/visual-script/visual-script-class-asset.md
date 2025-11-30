@@ -133,168 +133,34 @@ Loops are often used together with arrays. Various array operations such as `Pus
 
 ## Node Types
 
-The following broad categories of nodes exist:
+Visual scripts provide a wide variety of node types for different operations. For detailed documentation on each node category, see the [Visual Script Node Reference](nodes/index.md).
 
-### Event Handlers
+### Quick Reference
 
-Event handlers are nodes that get executed when a certain [message](../../runtime/world/world-messaging.md) is sent to any of the objects that this script is responsible for. All event handlers are *entry points* into the script and most scripts will only execute as a reaction to an event.
+The following broad categories of nodes are available:
 
-### Blackboards
-
-All the nodes for working with [blackboards](../../Miscellaneous/blackboards.md).
-
-### Clock
-
-There are two clocks, the *global clock* and the *world clock*. The global one always advances in real-time and should be used for animating things that are independent of the game speed. The world clock should be used for all game-play functionality that should slow down or speed up according to the game's speed, so that they work correctly in slow-motion.
-
-### Component
-
-Here you find all functionality shared by all [components](../../runtime/world/components.md) such as:
-
-* `GetOwner`: Returns the components owner game object.
-* `GetWorld`: Returns the world that the component belongs to.
-
-Additionally, all component specific functionality can be found in the sub-menus.
-
-### Coroutine
-
-Here you find all functionality to work with coroutines, see [the coroutines section](#coroutines) above.
-
-### CVar
-
-These nodes allow to read and write [CVars](../../debugging/cvars.md).
-
-### Debug
-
-These nodes are for [debug rendering](../../debugging/debug-rendering.md).
-
-### Enums
-
-These nodes are for working with enum values. There are two node types for each enum. The *value* nodes just return a fixed value and can be used to pass along. The *switch* nodes are used for reading an enum value and then executing a code path depending on the value.
-
-### Game Object
-
-[Game objects](../../runtime/world/game-objects.md) nodes are for reading and writing object transforms, finding and accessing child objects and components.
-
-### Log
-
-Nodes for [logging](../../debugging/logging.md). You can add input values for printing. Reference them in the format string using `{0}`, `{1}`, `{2}` and so on.
-
-### Logic
-
-This group contains mathematical logic operators as well as conditions and loops. Very important nodes are:
-
-* `Branch`: An `if` condition node with two possible outcomes.
-* `Switch`: Several variants to map one value to multiple possible outcomes.
-* `Compare`: Checks whether two values are equal, with a boolean result.
-* `Is Valid`: Checks whether the incoming value, such as a game object or component, can still be used.
-
-### Math
-
-All sorts of mathematical operations for working with number types.
-
-#### Expression Node
-
-The **Expression** node lets you write complex mathematical expressions with multiple input and output values. This is much more convenient than using many individual math nodes.
-
-![Math Expression](media/vs-expression.png)
-
-The following built-in functions are available:
-
-* `abs(number)`
-* `saturate(number)` - clamps number to `[0; 1]` range
-* `sqrt(number)`
-* `exp(number)`
-* `ln(number)`
-* `log2(number)`
-* `log10(number)`
-* `pow2(number)`
-* `sin(number)`
-* `cos(number)`
-* `tan(number)`
-* `asin(number)`
-* `acos(number)`
-* `atan(number)`
-* `radToDeg(number)` or `rad_to_deg(number)`
-* `degToRad(number)` or `deg_to_rad(number)`
-* `round(number)`
-* `floor(number)`
-* `ceil(number)`
-* `trunc(number)`
-* `frac(number)`
-* `length(vector)`
-* `normalize(vector)`
-* `trunc(number)`
-* `all(number)`
-* `any(number)`
-* `mod(number, number)` - computes `a` modulo `b`
-* `log(number, number)`
-* `pow(number, number)`
-* `min(number, number)`
-* `max(number, number)`
-* `dot(vector, vector)`
-* `cross(vector, vector)`
-* `reflect(vector, vector)`
-* `clamp(value, min, max)`
-* `lerp(min, max, factor)`
-* `smoothstep(value, edge1, edge2)` - returns 0, if value is <= edge1, 1 if value >= edge2 and the hermite interpolation in between
-* `smootherstep(value, edge1, edge2)` - returns 0, if value is <= edge1, 1 if value >= edge2 and the second order hermite interpolation in between
-
-### Messages
-
-While event handlers react to messages, the script can also *send messages* to other objects. Messages can be sent directly to a component, or to a game object, in which case they may be broadcast to all components on that object, or even to the whole sub-tree of objects and components. If the `Send Mode` is set to *Event*, however, they are delivered not downwards in the hierarchy, but *upwards* along the parent chain of the target object, to the closest component that handles this type of message. See [this chapter](../../runtime/world/world-messaging.md#event-messages) for details.
-
-### Physics
-
-Various functions to use the physics engine.
-
-### Prefabs
-
-Utility functions to spawn prefabs.
-
-### Property
-
-For reading and writing component properties.
-
-### Quat
-
-Utility functions for working with quaternions.
-
-### Sound
-
-Functions for playing sounds.
-
-### Spatial
-
-The spatial system allows to find nearby objects. Contrary to using the physics engine for this, the spatial system is typically used to find tagged objects (see [Marker Component](../../gameplay/marker-component.md)). This is often useful for game logic. For example, an NPC may want to find the closest health-pack, so it would use the spatial system to search for objects that use a health-pack marker.
-
-### StateMachineInstance and StateMachineState
-
-For interacting with [state machines](../game-logic/state-machine-asset.md). This is mainly necessary when the script itself is used as a *StateMachineState*. Be aware that the *state machine instance* in which the script is run, is passed into the script through the `OnEnter`, `OnExit` and `Update` nodes.
-
-### String
-
-For working with strings, e.g. to format a string by combining variable values.
-
-### Time
-
-For working with the *time* data type.
-
-### Type Conversion
-
-These nodes are for converting variables from one type to another. Especially important is the `ConvertTo` node, which is used for converting a *Variant* to an expected type. A *Variant* is a variable that can contain data of many different types. When a node returns a variant, you usually expect that it contains a certain type and using the `ConvertTo` node, you can get to it.
-
-### Variable Nodes
-
-These nodes operate on [visual script variables](#visual-script-variables). The variables have to be declared on the script first. Use these to keep track of state within the script and also to read state that was passed in through [exposed parameters](../../concepts/exposed-parameters.md).
-
-Additionally, the **Temp Variable** node can be used to store the result of an evaluated expression and reuse it multiple times. Since the node has execution pins, you can control exactly when its input should be evaluated. Its output can then be read as often as desired and won't change.
-
-This is useful for two reasons. The first is performance, as it allows to reuse the value many times without needlessly reevaluating it. The second is, that sometimes expressions can produce different results, depending on when exactly they are evaluated. For example, if an expression reads a variable `A`but then the script also writes to `A`, then evaluating the expression again, would now produce a different result. By using a temp variable, you can guarantee to the see the same value, even after the script already updated `A`.
-
-### World
-
-These nodes provide access to the [world](../../runtime/world/worlds.md), which is used for managing objects.
+* **[Event Handlers](nodes/vscript-nodes-events.md)** - Entry points that execute when specific messages are received
+* **[Blackboards](nodes/vscript-nodes-blackboard.md)** - Working with blackboard data
+* **[Clock and Time](nodes/vscript-nodes-time.md)** - Access to global/world clocks and time operations
+* **[Components](nodes/vscript-nodes-component.md)** - Component operations like GetOwner, GetWorld
+* **[Properties](nodes/vscript-nodes-property.md)** - Reading and writing component properties
+* **[Coroutines](nodes/vscript-nodes-coroutine.md)** - Managing coroutines
+* **[CVars](nodes/vscript-nodes-cvar.md)** - Reading and writing console variables
+* **[Debug](nodes/vscript-nodes-debug.md)** - Debug rendering
+* **[Enums](nodes/vscript-nodes-enum.md)** - Working with enum values
+* **[Game Objects](nodes/vscript-nodes-game-object.md)** - Object transforms, hierarchy, and access
+* **[World](nodes/vscript-nodes-world.md)** - World management operations
+* **[Logic](nodes/vscript-nodes-logic.md)** - Conditionals, loops, comparisons
+* **[Math](nodes/vscript-nodes-math.md)** - Mathematical operations including the Expression node
+* **[Messages](nodes/vscript-nodes-messages.md)** - Sending messages to objects
+* **[Physics](nodes/vscript-nodes-physics.md)** - Physics engine functions
+* **[Prefabs](nodes/vscript-nodes-prefabs.md)** - Spawning prefabs
+* **[Spatial](nodes/vscript-nodes-spatial.md)** - Spatial queries and quaternions
+* **[Sound](nodes/vscript-nodes-sound.md)** - Playing sounds
+* **[State Machines](nodes/vscript-nodes-statemachine.md)** - State machine interaction
+* **[Strings](nodes/vscript-nodes-string.md)** - String operations
+* **[Logging](nodes/vscript-nodes-log.md)** - Logging messages
+* **[Variables and Type Conversion](nodes/vscript-nodes-variables.md)** - Variable operations and type conversions
 
 ## See Also
 

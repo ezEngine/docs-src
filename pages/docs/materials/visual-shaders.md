@@ -105,6 +105,10 @@ The following only describes non-obvious options.
 
 ### Node Options
 
+* `Docs`: A documentation string that describes what the node does. This text appears as a tooltip when you hover over the node title in the visual shader editor. Use `\n` for line breaks to create multi-line descriptions. It's highly recommended to provide clear documentation for all custom nodes to improve usability.
+
+* `Tooltip`: Can be added to individual input and output pins. Provides contextual help that appears when hovering over a pin, explaining what the pin represents or expects. This helps users understand how to correctly connect and use the node.
+
 * `NodeType`: Can be `Main`, `Texture` or empty.
 
   Use `Main` for final output nodes, `Texture` for texture sampling nodes.

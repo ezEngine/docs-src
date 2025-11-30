@@ -13,6 +13,7 @@ This software has to be installed manually.
 These versions are currently supported:
 
 * Visual Studio 2022 64 Bit
+* Visual Studio 2026 64 Bit
 
 These *workloads* have to be installed:
 
@@ -28,9 +29,14 @@ You can also use the file [Utilities/VS2022-ezEngine.vsconfig](https://github.co
 
 In the root folder of the EZ repository you will find a couple of `.bat` files, such as:
 
+* `GenerateWin64vs2026.bat`
 * `GenerateWin64vs2022.bat`
 
 Run one of them to generate a Visual Studio solution for your preferred compiler. Afterwards, there will be a **Workspace** folder in the EZ root folder, where you find a `ezEngine_***.sln` file in the respective folder for the Visual Studio version that you chose.
+
+> **Note:**
+>
+> Visual Studio 2026 uses the new `.slnx` solution file format. If double-clicking the `.slnx` file opens it in Visual Studio 2022 instead of 2026, you need to adjust your Windows file association settings to ensure `.slnx` files open with the correct Visual Studio version.
 
 If the script fails, you most likely don't have all the [prerequisites](#prerequisites) installed. They also sometimes fail, if Visual Studio recently installed an update and you haven't rebooted your PC since. Usually when this script fails it is due to common issues with CMake or the MSVC installation. **Read the full error messages carefully** and search the internet, you'll usually find a solution quickly.
 

@@ -1,6 +1,6 @@
 # Supported Platforms
 
-ezEngine is developed primarily on Windows 11, using Visual Studio 2022 in 64 Bit builds. Therefore this platform has the largest feature set and is the best tested one.
+ezEngine is developed primarily on Windows 11, using Visual Studio 2022 and 2026 in 64 Bit builds. Therefore this platform has the largest feature set and is the best tested one.
 
 The code uses C++ 11, 14 and 17 features, but only where broad compiler support is available.
 

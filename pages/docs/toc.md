@@ -350,7 +350,7 @@
 ## [Occlusion Culling](performance/occlusion-culling.md)
 ## [Profiling](performance/profiling.md)
 # Shipping
-## [Project Export](Shipping/project-export.md)
+## [Project Export](shipping/project-export.md)
 # Tools
 ## [ArchiveTool](tools/archivetool.md)
 ## [FileServe](tools/fileserve.md)

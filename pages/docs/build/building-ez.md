@@ -9,6 +9,21 @@ To try out ezEngine, you can download a [precompiled binary package](../../getti
     * Check out the 'dev' branch.
 1. Unless your git client already checks out git sub-modules for you, also run `git submodule update --init`in your local clone. The EZ project uses submodules to deliver additional data such as [sample content](https://github.com/ezEngine/content) and [precompiled tools](https://github.com/ezEngine/precompiled-tools).
 
+## Vulkan Rendering
+
+The Vulkan renderer in ezEngine no longer requires installing the Vulkan SDK. All necessary Vulkan dependencies (VMA, SPIRV-Reflect, and Vulkan-Headers) are included in the third-party folder and will be automatically available when building.
+
+The Vulkan SDK is now **optional** and only needed if you want to:
+
+* Use Vulkan validation layers for debugging
+* Access Vulkan development tools
+
+The Vulkan loader is dynamically loaded at runtime, so ezEngine will work on systems with or without Vulkan installed.
+
+> **Note for C++ Developers:**
+>
+> Direct Vulkan C function calls are no longer supported and will cause linker errors. You must use Vulkan-hpp (C++ wrapper) functions instead. The `vulkan.hpp` header is only included in `RendererVulkanDLL.h` with the appropriate defines configured.
+
 ## Platform Builds
 
 * [Windows Builds](build-windows.md)

@@ -6,6 +6,6 @@ Event handlers are nodes that get executed when a certain [message](../../../run
 
 ## See Also
 
-- [Visual Script Class Asset](../visual-script-class-asset.md)
-- [Visual Script Overview](../visual-script-overview.md)
-- [Script Component](../script-component.md)
+* [Visual Script Class Asset](../visual-script-class-asset.md)
+* [Visual Script Overview](../visual-script-overview.md)
+* [Script Component](../script-component.md)

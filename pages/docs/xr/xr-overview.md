@@ -23,4 +23,3 @@ To get started with creating an XR application, please follow the [XR Project Se
 * [XR Project Setup](xr-project-setup.md)
 * [XR Graphics](xr-graphics.md)
 * [XR Input](xr-input.md)
-* [XR Components](xr-components.md)

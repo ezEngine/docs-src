@@ -62,6 +62,6 @@ ezColorGammaUB gamma = ezColor(0.39f, 0.58f, 0.93f);
 ## See Also
 
 - Code documentation of `ezColor`.
-- [Gamma and Linear Space: What They Are & How They Differ](https://kinematicsoup.com/news/2016/6/15/gamma-and-linear-space-what-they-are-how-they-differ)
-- [Unity Manual: Differences between linear and gamma color space](https://docs.unity3d.com/6000.1/Documentation/Manual/differences-linear-gamma-color-space.html)
-- [Linear, Gamma, and sRGB Color Spaces (Matt77hias Blog)](https://matt77hias.github.io/blog/2018/07/01/linear-gamma-and-sRGB-color-spaces.html)
+* [Gamma and Linear Space: What They Are & How They Differ](https://kinematicsoup.com/news/2016/6/15/gamma-and-linear-space-what-they-are-how-they-differ)
+* [Unity Manual: Differences between linear and gamma color space](https://docs.unity3d.com/6000.1/Documentation/Manual/differences-linear-gamma-color-space.html)
+* [Linear, Gamma, and sRGB Color Spaces (Matt77hias Blog)](https://matt77hias.github.io/blog/2018/07/01/linear-gamma-and-sRGB-color-spaces.html)

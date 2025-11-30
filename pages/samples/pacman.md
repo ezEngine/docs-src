@@ -29,7 +29,7 @@ The code uses a custom C++ plugin, generated using the [C++ project generation](
 It is advised to watch the tutorial video first, to get a grasp of the basics, and then study the code for details that aren't covered in the video. For example the project also shows:
 
 * how to play sounds
-* how to use a [blackboard](../docs/Miscellaneous/blackboards.md) for tracking state
+* how to use a [blackboard](../docs/misc/blackboards.md) for tracking state
 * how to reset a scene (by loading it from scratch)
 * how to [draw some (debug) text](../docs/debugging/debug-rendering.md) to the screen
 

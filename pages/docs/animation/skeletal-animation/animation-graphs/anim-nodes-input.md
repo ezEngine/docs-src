@@ -2,7 +2,7 @@
 
 Input nodes expose the state of input devices to the animation graph. Input nodes are mainly provided for convenience during prototyping, as they may circumvent key mappings and general game state (e.g. whether the player is even allowed to move a character at all, at the moment).
 
-For a proper game, it is better to use an [input component](../../../input/input-component.md) to forward input state to [custom code](../../../custom-code/custom-code-overview.md) and then decide there which animation shall get played. Then you can forward that state to the animation graph, through a [blackboard](../../../Miscellaneous/blackboards.md). The animation graph itself would retrieve what it should do through the [blackboard nodes](anim-nodes-blackboard.md).
+For a proper game, it is better to use an [input component](../../../input/input-component.md) to forward input state to [custom code](../../../custom-code/custom-code-overview.md) and then decide there which animation shall get played. Then you can forward that state to the animation graph, through a [blackboard](../../../misc/blackboards.md). The animation graph itself would retrieve what it should do through the [blackboard nodes](anim-nodes-blackboard.md).
 
 ## Controller Node
 

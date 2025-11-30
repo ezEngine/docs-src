@@ -52,11 +52,11 @@ When one graph includes another graph, the *animation clip mapping* of the paren
 
 Once an animation graph asset is set up, it can be applied to an [animated mesh](../animated-mesh-component.md) by adding an [animation controller component](animation-controller-component.md) to the same game object. The component will evaluate the graph in every update, and send the final animation pose to the animated mesh.
 
-To control what the animation controller does, you may also need a [blackboard](../../../Miscellaneous/blackboards.md) for storing state, and potentially a script component to decide when which animation should be active.
+To control what the animation controller does, you may also need a [blackboard](../../../misc/blackboards.md) for storing state, and potentially a script component to decide when which animation should be active.
 
 ## See Also
 
 * [Skeletal Animations](../skeletal-animation-overview.md)
 * [Animation Controller Component](animation-controller-component.md)
-* [Blackboards](../../../Miscellaneous/blackboards.md)
+* [Blackboards](../../../misc/blackboards.md)
 * [Simple Animation Component](../simple-animation-component.md)

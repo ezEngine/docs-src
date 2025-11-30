@@ -45,7 +45,7 @@ Takes care of rendering simple data, for example:
 * [ImGui](../../ui/imgui.md)
 * [RmlUi](../../ui/rmlui.md)
 * The editor grid.
-* [Sprites](../sprite-component.md) and [editor shape icons](../../Miscellaneous/components/shape-icon-component.md).
+* [Sprites](../sprite-component.md) and [editor shape icons](../../misc/components/shape-icon-component.md).
 * [Editing Gizmos](../../scenes/gizmos.md).
 * Unlit meshes.
 

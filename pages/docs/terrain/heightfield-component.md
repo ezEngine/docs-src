@@ -6,7 +6,7 @@ The *HeightfieldComponent* can be used for simple, heightmap based terrain, as w
 
 ![Rubble](media/heightfield-rubble.jpg)
 
-The heightfield component uses an [ImageData asset](../Miscellaneous/imagedata-asset.md) to get the height information. Consequently, the heightmap image has to be imported as such an asset type.
+The heightfield component uses an [ImageData asset](../misc/imagedata-asset.md) to get the height information. Consequently, the heightmap image has to be imported as such an asset type.
 
 ## Collision Mesh
 
@@ -16,7 +16,7 @@ Currently all triangles in the collision mesh will all use the same [surface](..
 
 ## Component Properties
 
-`HeightfieldImage:` The [ImageData asset](../Miscellaneous/imagedata-asset.md) that contains the terrain height information.
+`HeightfieldImage:` The [ImageData asset](../misc/imagedata-asset.md) that contains the terrain height information.
 
 `Material:` The single [material](../materials/materials-overview.md) used for the entire mesh. If you need multiple layers (grass, dirt, rock, etc) you can write a custom [visual shader](../materials/visual-shaders.md) that uses a mask texture to fetch and blend the various layers as desired. The vegetation scene in the [Testing Chambers](../../samples/testing-chambers.md) project does this.
 

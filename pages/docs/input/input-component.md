@@ -18,7 +18,7 @@ The message `ezMsgInputActionTriggered` contains information about a single *inp
 
 * `InputSet`: The name of the *input set* to use. All *input actions* that are part of this input set will be forwarded as messages.
 * `Granularity`: Configures whether the component sends messages only for certain state changes, or also continuously while a button is held down.
-* `ForwardToBlackboard`: If enabled, the input component will attempt to store input states in a nearby [blackboard](../Miscellaneous/blackboards.md). If it can find a blackboard on the same owner game object, or a parent game object, it will set a value with the name of the action to a float value between `0` and `1`, depending on whether the action is fully triggered (`1`), not triggered (`0`) or partially triggered (e.g. for a thumb stick). This is an quick way to forward input data to an easily accessible data structure.
+* `ForwardToBlackboard`: If enabled, the input component will attempt to store input states in a nearby [blackboard](../misc/blackboards.md). If it can find a blackboard on the same owner game object, or a parent game object, it will set a value with the name of the action to a float value between `0` and `1`, depending on whether the action is fully triggered (`1`), not triggered (`0`) or partially triggered (e.g. for a thumb stick). This is an quick way to forward input data to an easily accessible data structure.
 
 ## See Also
 

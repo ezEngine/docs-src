@@ -1,6 +1,6 @@
 # Logic and Math Nodes
 
-The animation graph provides nodes to evaluate basic arithmatic and logic. This is meant for very simple use cases and for quick prototyping. Often animation logic requires much more complex rules than what would be feasible to express in the animation graph. Instead use [custom code](../../../custom-code/custom-code-overview.md) to decide which animation should run under which circumstances, and pass the result to the animation graph via a [blackboard](../../../Miscellaneous/blackboards.md). The animation graph can then simply read the state for each animation using the [blackboard nodes](anim-nodes-blackboard.md).
+The animation graph provides nodes to evaluate basic arithmatic and logic. This is meant for very simple use cases and for quick prototyping. Often animation logic requires much more complex rules than what would be feasible to express in the animation graph. Instead use [custom code](../../../custom-code/custom-code-overview.md) to decide which animation should run under which circumstances, and pass the result to the animation graph via a [blackboard](../../../misc/blackboards.md). The animation graph can then simply read the state for each animation using the [blackboard nodes](anim-nodes-blackboard.md).
 
 ## AND Node
 

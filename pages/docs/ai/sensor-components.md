@@ -54,4 +54,4 @@ Finally, you should decide whether doing a visibility check is always necessary.
 * [Marker Component](../gameplay/marker-component.md)
 * [State Machine Component](../custom-code/game-logic/state-machine-component.md)
 * [Custom Code](../custom-code/custom-code-overview.md)
-* [Blackboards](../Miscellaneous/blackboards.md)
+* [Blackboards](../misc/blackboards.md)

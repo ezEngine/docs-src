@@ -1,6 +1,6 @@
 # Blackboard Nodes
 
-The animation graph provides nodes to read and write values from and to a [blackboard](../../../Miscellaneous/blackboards.md). For this, the [game object](../../../runtime/world/game-objects.md) on which the [animation controller component](animation-controller-component.md) is attached, or one of its parent nodes, also needs to hold a [blackboard component](../../../Miscellaneous/local-blackboard-component.md).
+The animation graph provides nodes to read and write values from and to a [blackboard](../../../misc/blackboards.md). For this, the [game object](../../../runtime/world/game-objects.md) on which the [animation controller component](animation-controller-component.md) is attached, or one of its parent nodes, also needs to hold a [blackboard component](../../../misc/local-blackboard-component.md).
 
 > **Note:**
 >

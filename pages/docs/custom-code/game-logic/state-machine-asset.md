@@ -14,7 +14,7 @@ What an entity does, when a certain state is active, is usually up to [other cod
 
 State machines are updated regularly and during every update they may *transition* into another state. Possible transitions are represented by arrows between states. Just as with states, there are also different *types of transitions*. As with states, custom transition types can be implemented with C++ or [visual scripts](../visual-script/visual-script-overview.md).
 
-During the state machine update, each transition on the active state is queried, whether its condition is met. If so, the transition is taken, and the state that it points to becomes the new active state. What it means that a transition's condition is met, is up to the transition type's implementation. For example the *blackboard transition* inspects values from a nearby [blackboard](../../Miscellaneous/blackboards.md), allowing you to set up logical rules. Another type of transition may simply wait for a second and then allow to transition further, acting as a timer.
+During the state machine update, each transition on the active state is queried, whether its condition is met. If so, the transition is taken, and the state that it points to becomes the new active state. What it means that a transition's condition is met, is up to the transition type's implementation. For example the *blackboard transition* inspects values from a nearby [blackboard](../../misc/blackboards.md), allowing you to set up logical rules. Another type of transition may simply wait for a second and then allow to transition further, acting as a timer.
 
 In many state machines there are states that can be reached from pretty much every other state. For example the *Dead* state in the image above is simply reached whenever the health of a creature reaches zero, no matter which state it currently is in. In a pure state machine, one would add transitions from every node to that final state. However, since this is cumbersome, EZ also allows to set up transitions that can transition from any active state to their target state. In the state machine asset, such transitions are represented as an
 **Any State** (taking the place of *any other state*) from which they are drawn to the target state.
@@ -92,7 +92,7 @@ You have to select a *transition type* for every transition in your state machin
 
 ### Blackboard Conditions
 
-*Blackboard conditions* query the [blackboard](../../Miscellaneous/blackboards.md). You can configure the transition condition to be fulfilled either when at least one or all the specified blackboard entries have the desired values.
+*Blackboard conditions* query the [blackboard](../../misc/blackboards.md). You can configure the transition condition to be fulfilled either when at least one or all the specified blackboard entries have the desired values.
 
 ### Timeout Transition
 

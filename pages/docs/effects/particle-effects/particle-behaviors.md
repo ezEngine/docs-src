@@ -105,7 +105,7 @@ This behavior changes a particle's size over the course of its lifetime.
 
 ## Velocity Behavior
 
-This behavior affects particle position and velocity. It can be used to gradually dampen the starting velocity through 'friction' and it may apply a constant upwards movement. If a scene contains [wind](../wind/wind.md), this behavior can also apply a fraction of the wind force to the particle's position.
+This behavior affects particle position and velocity. It can be used to gradually dampen the starting velocity through 'friction' and it may apply a constant upwards movement. If a scene contains [wind](../wind/wind-overview.md), this behavior can also apply a fraction of the wind force to the particle's position.
 
 **RiseSpeed:** If non-zero, the particles will move upwards with at least this constant speed. This is added to the particle position independent from its velocity, so if the current velocity points downward, the two may cancel each other out.
 

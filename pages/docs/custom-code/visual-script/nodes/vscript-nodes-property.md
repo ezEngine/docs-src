@@ -2,7 +2,7 @@
 
 ## Property
 
-Property nodes allow you to read and write the properties of [components](../../runtime/world/components.md) at runtime. This enables dynamic configuration and manipulation of component behavior from within visual scripts.
+Property nodes allow you to read and write the properties of [components](../../../runtime/world/components.md) at runtime. This enables dynamic configuration and manipulation of component behavior from within visual scripts.
 
 Use property nodes to:
 
@@ -18,4 +18,4 @@ Property nodes work with any exposed component property, allowing visual scripts
 * [Visual Script Overview](../visual-script-overview.md)
 * [Script Component](../script-component.md)
 * [Component Nodes](vscript-nodes-component.md)
-* [Components](../../runtime/world/components.md)
+* [Components](../../../runtime/world/components.md)

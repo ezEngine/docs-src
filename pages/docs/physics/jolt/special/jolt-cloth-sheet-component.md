@@ -4,7 +4,7 @@ The *Jolt cloth sheet component* simulates a square patch of cloth as it hangs a
 
 ![Jolt Cloth](media/jolt-cloth-sheet.jpg)
 
-Jolt cloth sheets are affected by [wind](../../../effects/wind/wind.md) and contrary to the [cloth sheet component](../../../effects/cloth-sheet-component.md) they also collide with other physics objects and scene geometry. However, the physics interactions are *one-sided*, meaning that the cloth is pushed by dynamic objects, but does not push them. Although this would be technically possible, it is deliberately disabled, to prevent undesirable physics simulation artifacts.
+Jolt cloth sheets are affected by [wind](../../../effects/wind/wind-overview.md) and contrary to the [cloth sheet component](../../../effects/cloth-sheet-component.md) they also collide with other physics objects and scene geometry. However, the physics interactions are *one-sided*, meaning that the cloth is pushed by dynamic objects, but does not push them. Although this would be technically possible, it is deliberately disabled, to prevent undesirable physics simulation artifacts.
 
 ## Component Properties
 
@@ -14,7 +14,7 @@ Jolt cloth sheets are affected by [wind](../../../effects/wind/wind.md) and cont
 
 * `CollisionLayer`: The [collision layer](../collision-shapes/jolt-collision-layers.md) to use.
 
-* `WindInfluence`: How strongly [wind](../../../effects/wind/wind.md) should make the cloth swing.
+* `WindInfluence`: How strongly [wind](../../../effects/wind/wind-overview.md) should make the cloth swing.
 
 * `GravityFactor`: How strongly gravity pulls on the cloth.
 
@@ -34,4 +34,4 @@ Jolt cloth sheets are affected by [wind](../../../effects/wind/wind.md) and cont
 
 * [Cloth Sheet Component](../../../effects/cloth-sheet-component.md)
 * [Jolt Rope Component](jolt-rope-component.md)
-* [Wind](../../../effects/wind/wind.md)
+* [Wind](../../../effects/wind/wind-overview.md)

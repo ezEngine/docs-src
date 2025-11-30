@@ -20,7 +20,7 @@ Variable nodes operate on [visual script variables](../visual-script-class-asset
 * **Read variables** - Get the current value of a script variable
 * **Write variables** - Update a variable's value during script execution
 * **Track state** - Maintain internal state across multiple script executions
-* **Access parameters** - Read values passed in through [exposed parameters](../../concepts/exposed-parameters.md)
+* **Access parameters** - Read values passed in through [exposed parameters](../../../concepts/exposed-parameters.md)
 
 ### Temp Variable Node
 
@@ -39,5 +39,5 @@ The temp variable's output can be read as often as needed and won't change until
 * [Visual Script Variables](../visual-script-class-asset.md#visual-script-variables)
 * [Visual Script Overview](../visual-script-overview.md)
 * [Script Component](../script-component.md)
-* [Exposed Parameters](../../concepts/exposed-parameters.md)
+* [Exposed Parameters](../../../concepts/exposed-parameters.md)
 * [String Nodes](vscript-nodes-string.md)

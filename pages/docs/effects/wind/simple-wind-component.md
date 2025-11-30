@@ -1,6 +1,6 @@
 # Simple Wind Component
 
-The *simple wind component* implements a very basic [wind system](wind.md). By placing a component of this type in a scene, the *simple wind [world module](../../runtime/world/world-modules.md)* is created. Things that can react to wind are then able to retrieve a wind value at any location. The simple wind system provides one global wind value, which changes randomly.
+The *simple wind component* implements a very basic [wind system](wind-overview.md). By placing a component of this type in a scene, the *simple wind [world module](../../runtime/world/world-modules.md)* is created. Things that can react to wind are then able to retrieve a wind value at any location. The simple wind system provides one global wind value, which changes randomly.
 
 Additionally, it supports [wind volume components](wind-volume-components.md). If any such shape is in a scene, its contribution is added to the global wind value, for objects that are inside such a volume.
 
@@ -12,5 +12,5 @@ Additionally, it supports [wind volume components](wind-volume-components.md). I
 
 ## See Also
 
-* [Wind](wind.md)
+* [Wind](wind-overview.md)
 * [Wind Volume Components](wind-volume-components.md)

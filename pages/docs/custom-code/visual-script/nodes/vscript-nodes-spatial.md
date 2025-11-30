@@ -2,7 +2,7 @@
 
 ## Spatial
 
-The [spatial system](../../runtime/spatial-system.md) allows you to find nearby objects. Unlike using the [physics engine](vscript-nodes-physics.md) for this, the spatial system is typically used to find tagged objects (see [Marker Component](../../gameplay/marker-component.md)). This is often useful for game logic.
+The [spatial system](../../../runtime/world/spatial-system.md) allows you to find nearby objects. Unlike using the [physics engine](vscript-nodes-physics.md) for this, the spatial system is typically used to find tagged objects (see [Marker Component](../../../gameplay/marker-component.md)). This is often useful for game logic.
 
 For example, an NPC may want to find the closest health-pack, so it would use the spatial system to search for objects that use a health-pack marker. Other use cases include:
 
@@ -18,7 +18,7 @@ Spatial queries are more efficient than physics queries when you only need to fi
 * [Visual Script Class Asset](../visual-script-class-asset.md)
 * [Visual Script Overview](../visual-script-overview.md)
 * [Script Component](../script-component.md)
-* [Marker Component](../../gameplay/marker-component.md)
-* [Spatial System](../../runtime/spatial-system.md)
+* [Marker Component](../../../gameplay/marker-component.md)
+* [Spatial System](../../../runtime/world/spatial-system.md)
 * [Physics Nodes](vscript-nodes-physics.md)
 * [Math Nodes](vscript-nodes-math.md)

@@ -2,7 +2,7 @@
 
 ## CVar
 
-CVar nodes allow you to read and write [console variables (CVars)](../../debugging/cvars.md) from within visual scripts. CVars are configuration values that can be modified at runtime through the console, making them useful for debugging, testing, and exposing tunable parameters.
+CVar nodes allow you to read and write [console variables (CVars)](../../../debugging/cvars.md) from within visual scripts. CVars are configuration values that can be modified at runtime through the console, making them useful for debugging, testing, and exposing tunable parameters.
 
 Use CVar nodes to:
 
@@ -18,4 +18,4 @@ CVars are particularly useful during development for tweaking gameplay values, e
 * [Visual Script Class Asset](../visual-script-class-asset.md)
 * [Visual Script Overview](../visual-script-overview.md)
 * [Script Component](../script-component.md)
-* [Console Variables](../../debugging/cvars.md)
+* [Console Variables](../../../debugging/cvars.md)

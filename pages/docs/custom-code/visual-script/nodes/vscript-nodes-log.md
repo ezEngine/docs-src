@@ -2,7 +2,7 @@
 
 ## Log
 
-Logging nodes output messages to the [engine's log system](../../debugging/logging.md), allowing you to track script execution, debug issues, and monitor runtime behavior. These nodes are essential for understanding what your scripts are doing and troubleshooting problems.
+Logging nodes output messages to the [engine's log system](../../../debugging/logging.md), allowing you to track script execution, debug issues, and monitor runtime behavior. These nodes are essential for understanding what your scripts are doing and troubleshooting problems.
 
 Logging features:
 
@@ -18,6 +18,6 @@ Example: A log message with format string `"Player health: {0}, position: {1}"` 
 * [Visual Script Class Asset](../visual-script-class-asset.md)
 * [Visual Script Overview](../visual-script-overview.md)
 * [Script Component](../script-component.md)
-* [Logging](../../debugging/logging.md)
+* [Logging](../../../debugging/logging.md)
 * [Debug Nodes](vscript-nodes-debug.md)
 * [String Nodes](vscript-nodes-string.md)

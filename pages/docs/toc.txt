@@ -18,7 +18,7 @@ terrain|Terrain and Vegetation
 ai
 ui
 gameplay
-Miscellaneous
+misc|Miscellaneous
 concepts
 ---
 custom-code

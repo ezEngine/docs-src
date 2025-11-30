@@ -6,7 +6,7 @@ The *Jolt rope component* is used to physically simulate ropes, cables and chain
 
 Ropes can be attached to walls as decorative elements (cables, wires), or they can even be attached to [dynamic physics objects](../actors/jolt-dynamic-actor-component.md) to link them together. This can be used as a gameplay feature.
 
-If all you need is a decorative rope, that doesn't react to physical stimuli (except [wind](../../../effects/wind/wind.md)), prefer to use a [fake rope component](../../../effects/ropes/fake-rope-component.md), as that has a much lower performance overhead.
+If all you need is a decorative rope, that doesn't react to physical stimuli (except [wind](../../../effects/wind/wind-overview.md)), prefer to use a [fake rope component](../../../effects/ropes/fake-rope-component.md), as that has a much lower performance overhead.
 
 ## Setting Up a Rope
 

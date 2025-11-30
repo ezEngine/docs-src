@@ -34,7 +34,11 @@ The *Bone Weights* node creates a mask for every bone in the skeleton. By defaul
 
 This node is used to switch between different bone weight masks. For example a walk animation should be played on the whole body, but once an upper body animation becomes active, the walk animation should only be played on the lower body.
 
+When the index changes to select a different bone weight mask, the node smoothly transitions between the old and new weight configurations over a configurable duration. This prevents sudden jumps in animation blending and creates more natural-looking transitions between different animation states.
+
 ### Node Properties
+
+* `Transition Duration`: The time it takes to smoothly blend from one bone weight mask to another when the index changes. The default is 200 milliseconds. Set this to zero for instant switching without blending.
 
 * `Weights Count`: How many weight input pins the node should have.
 

@@ -102,7 +102,7 @@ Once your scene starts to become bigger, you may want to use [scene layers](scen
 
 ## Next Steps
 
-Now that you are familiar with how to create, edit and test a basic scene, there are many other things to explore. [Decals](../effects/decals.md) and [particle effects](../effects/particle-effects/particle-effects-overview.md) can make your scene more interesting. Proper [sounds](../sound/sound-overview.md) add a lot of atmosphere. And finally, by writing [custom code](../custom-code/custom-code-overview.md), either in C++ or through scripting, you will bring your own game idea to life.
+Now that you are familiar with how to create, edit and test a basic scene, there are many other things to explore. [Decals](../effects/decals/decals.md) and [particle effects](../effects/particle-effects/particle-effects-overview.md) can make your scene more interesting. Proper [sounds](../sound/sound-overview.md) add a lot of atmosphere. And finally, by writing [custom code](../custom-code/custom-code-overview.md), either in C++ or through scripting, you will bring your own game idea to life.
 
 ## See Also
 

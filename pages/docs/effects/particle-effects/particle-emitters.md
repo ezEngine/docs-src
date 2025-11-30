@@ -52,7 +52,7 @@ This emitter type spawns new particles whenever a specific [event](particle-effe
 
 **SpawnCountScaleParam:** See the [burst emitter](#burst-emitter).
 
-In the animation below, the blue particles use a [raycast behavior](particle-behaviors.md#raycast-behavior) to get removed when a collision is detected. The behavior also sends an *event*. This is picked up by a second particle system, which then spawns a number of red particles.
+In the animation below, the blue particles use a [raycast behavior](behaviors/pb-raycast.md) to get removed when a collision is detected. The behavior also sends an *event*. This is picked up by a second particle system, which then spawns a number of red particles.
 
 <video src="media/onevent-emitter.webm" width="500" height="500" autoplay loop></video>
 

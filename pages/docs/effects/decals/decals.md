@@ -1,6 +1,6 @@
 # Decals
 
-![Decals](media/decals-overview.jpg)
+![Decals](../media/decals-overview.jpg)
 
 *Decals* are textures that are projected onto the underlying geometry. Decals can be used to to apply text and other signs to geometry. The most common use-case, though, is to make scenes look more natural by simulating wear and tear, such as dirt and scratches. Decals can also be used to simulate dynamic surface imperfections like bullet holes, soot and blood spatters.
 
@@ -10,7 +10,7 @@
 
 ## Decal Asset
 
-Before being able to place a *decal component*, you must create a decal [asset](../assets/assets-overview.md).
+Before being able to place a *decal component*, you must create a decal [asset](../../assets/assets-overview.md).
 
 ### Decal Asset Properties
 
@@ -38,7 +38,7 @@ Each *decal component* represents a single instance of a decal. Its position, ro
 
 **Extents:** The size of the decal along each axis.
 
-**SizeVariance:** If this value is non-zero, the decal's *Extents* will be randomized between `Extents - Extents*Variance` and `Extents + Extents*Variance` using a Normal Distribution. See [Variance Values](particle-effects/particle-effects-overview.md#variance-values).
+**SizeVariance:** If this value is non-zero, the decal's *Extents* will be randomized between `Extents - Extents*Variance` and `Extents + Extents*Variance` using a Normal Distribution. See [Variance Values](../particle-effects/particle-effects-overview.md#variance-values).
 
 **Color:** A tint color for the decal.
 
@@ -65,4 +65,4 @@ In addition to projected decals, there are also [mesh decals](mesh-decals.md). M
 
 ## See Also
 
-* [Particle Effects](particle-effects/particle-effects-overview.md)
+* [Particle Effects](../particle-effects/particle-effects-overview.md)

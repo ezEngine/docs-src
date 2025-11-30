@@ -29,7 +29,7 @@ XR input slots are defined in `Code\Engine\GameEngine\XR\XRInputDevice.h` and al
 
 ## Pose Tracking
 
-XR controllers also provide positional data. You can either use the [ezDeviceTrackingComponent](xr-components.md#device-tracking-component) to automatically make a game object follow a controller or you can manually query the controller transform using the `ezXRInputDevice::GetDeviceState` function.
+XR controllers also provide positional data. You can either use the [ezDeviceTrackingComponent](device-tracking-component.md) to automatically make a game object follow a controller or you can manually query the controller transform using the `ezXRInputDevice::GetDeviceState` function.
 
 Many devices support two poses `Grip` and `Aim`. The difference between the two is nicely explained [here](https://registry.khronos.org/OpenXR/specs/1.0/html/xrspec.html#semantic-path-standard-pose-identifiers). 
 
@@ -70,4 +70,3 @@ for (ezXRHand::Enum hand : {ezXRHand::Left, ezXRHand::Right})
 
 * [Input](../input/input-overview.md)
 * [XR Overview](xr-overview.md)
-* [XR Components](xr-components.md)

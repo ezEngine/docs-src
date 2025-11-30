@@ -133,7 +133,7 @@ Loops are often used together with arrays. Various array operations such as `Pus
 
 ## Node Types
 
-Visual scripts provide a wide variety of node types for different operations. For detailed documentation on each node category, see the [Visual Script Node Reference](nodes/index.md).
+Visual scripts provide a wide variety of node types for different operations. For detailed documentation on each node category, see the [Visual Script Node Reference](nodes/vscript-node-reference.md).
 
 ### Quick Reference
 

@@ -138,10 +138,12 @@
 ### [Camera Shake Component](effects/camera-shake/camera-shake-component.md)
 ### [Camera Shake Volume Components](effects/camera-shake/camera-shake-volume-components.md)
 ## [Cloth Sheet Component](effects/cloth-sheet-component.md)
-## [Decals](effects/decals.md)
+## Decals
+### [Decals Overview](effects/decals/decals-overview.md)
+### [Decals](effects/decals/decals.md)
+### [Mesh Decals](effects/decals/mesh-decals.md)
 ## [Fog](effects/fog.md)
 ## [Lensflare Component](effects/lensflare-component.md)
-## [Mesh Decals](effects/mesh-decals.md)
 ## Particle Effects
 ### [Particle Effects](effects/particle-effects/particle-effects-overview.md)
 ### [How Particle Effects Work](effects/particle-effects/how-particle-effects-work.md)
@@ -306,7 +308,7 @@
 ### [Visual Script Class Asset](custom-code/visual-script/visual-script-class-asset.md)
 ### [Script Component](custom-code/visual-script/script-component.md)
 ### Nodes
-#### [Visual Script Node Reference](custom-code/visual-script/nodes/index.md)
+#### [Visual Script Node Reference](custom-code/visual-script/nodes/vscript-node-reference.md)
 #### [Visual Script: Blackboard Nodes](custom-code/visual-script/nodes/vscript-nodes-blackboard.md)
 #### [Visual Script: Component and Property Nodes](custom-code/visual-script/nodes/vscript-nodes-component.md)
 #### [Visual Script: Coroutine Nodes](custom-code/visual-script/nodes/vscript-nodes-coroutine.md)

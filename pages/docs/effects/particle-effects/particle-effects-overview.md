@@ -88,7 +88,7 @@ You can use this in a static way, as a means to add more variety to multiple ins
 
 ## Events and Event Reactions
 
-Particles may raise *events*. The most common one is when a particle dies, but different particle behaviors can raise other events as well. For example when a particle collides with the environment (see [raycast behavior](particle-behaviors.md#raycast-behavior)).
+Particles may raise *events*. The most common one is when a particle dies, but different particle behaviors can raise other events as well. For example when a particle collides with the environment (see [raycast behavior](behaviors/pb-raycast.md)).
 
 The **Event Reactions** tab allows you to configure what happens for a specific event. This is mostly used to chain effects. For example the fireworks effect below has particles that represent the rockets flying up, and when one 'dies', an explosion is spawned at that position, using event reactions.
 
@@ -130,19 +130,19 @@ When enabling **SimulateInLocalSpace** in the *Effect tab*, the effect is simula
 
 <video src="media/sim-local-space.webm" width="500" height="500" autoplay loop></video>
 
-Some behaviors won't properly work for effects that are simulated in local space. For example the [raycast behavior](particle-behaviors.md#raycast-behavior) will do it's raycasts at the origin of the scene, rendering it pointless.
+Some behaviors won't properly work for effects that are simulated in local space. For example the [raycast behavior](behaviors/pb-raycast.md) will do it's raycasts at the origin of the scene, rendering it pointless.
 
 There is no performance benefit to using local space simulation. However, when using [shared effects](#shared-effects), the shared state must be simulated in local space.
 
-Other options to keep particles closer to the owning object are to use the [pull along behavior](particle-behaviors.md#pull-along-behavior) or to [inherit the owner velocity](#owner-velocity-inheritance).
+Other options to keep particles closer to the owning object are to use the [pull along behavior](behaviors/pb-pull-along.md) or to [inherit the owner velocity](#owner-velocity-inheritance).
 
 ### Owner Velocity Inheritance
 
 In the *Effect tab* there is a property **ApplyOwnerVelocity** which is a value between `0` and `1`. By default the value is zero, which means that all particles are initialized with either a zero velocity or with whatever some [initializer](particle-initializers.md) decided. In that case, particles will fly away from the emitter position unaffected by the velocity of the effect object itself. However, if the value is set to non-zero, a part of the velocity of the owning game object will be added to newly spawned particles.
 
-This can be used for effects that may be spawned from moving objects and that shall retain some of that momentum. However, unless you additionally configure the effect to have some velocity damping (ie. using the *friction* property of the [velocity behavior](particle-behaviors.md#velocity-behavior)), the particles will fly into that direction continuously, which may look weird, especially when the owner object changes direction or brakes, and the spawned particles overtake it.
+This can be used for effects that may be spawned from moving objects and that shall retain some of that momentum. However, unless you additionally configure the effect to have some velocity damping (ie. using the *friction* property of the [velocity behavior](behaviors/pb-velocity.md)), the particles will fly into that direction continuously, which may look weird, especially when the owner object changes direction or brakes, and the spawned particles overtake it.
 
-Other options to keep particles closer to the owning object are to use the [pull along behavior](particle-behaviors.md#pull-along-behavior) or to fully [simulate in local space](#local-space-simulation).
+Other options to keep particles closer to the owning object are to use the [pull along behavior](behaviors/pb-pull-along.md) or to fully [simulate in local space](#local-space-simulation).
 
 ### Shared Effects
 

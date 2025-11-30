@@ -2,7 +2,7 @@
 
 *Mesh decals* (also called *floaters*) are a different approach to decals where the decal texture is mapped directly onto mesh geometry rather than being projected. This technique is useful for adding surface detail to meshes like dirt, scratches, or markings that need to follow the mesh topology precisely.
 
-![Mesh Decals](media/mesh-decals.jpg)
+![Mesh Decals](../media/mesh-decals.jpg)
 
 Unlike regular [decals](decals.md) which project a texture onto geometry, mesh decals:
 
@@ -12,7 +12,7 @@ Unlike regular [decals](decals.md) which project a texture onto geometry, mesh d
 
 ## Mesh Decal Component
 
-Add a *Mesh Decal Component* to a game object that has a [mesh component](../graphics/meshes/mesh-component.md). The component manages decal textures and communicates with the runtime decal atlas.
+Add a *Mesh Decal Component* to a game object that has a [mesh component](../../graphics/meshes/mesh-component.md). The component manages decal textures and communicates with the runtime decal atlas.
 
 ### Component Properties
 
@@ -44,4 +44,4 @@ The `DepthBias` material parameter (default: 1.0) controls how far the decal geo
 ## See Also
 
 * [Decals](decals.md)
-* [Meshes](../graphics/meshes/meshes-overview.md)
+* [Meshes](../../graphics/meshes/meshes-overview.md)

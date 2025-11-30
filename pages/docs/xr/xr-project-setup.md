@@ -18,13 +18,13 @@ To be able to move around and use our controllers, we need to modify our charact
 
 ### Stage Space
 
-Once a XR plugin is active it takes control of the rendering camera. This means that the transform and projection of the [camera component](../graphics/camera-component.md) is no longer taken into account when rendering. To move the user in XR, we need to instead move the *stage space* that the XR system is using as a reference point to place the user into the scene. 
+Once a XR plugin is active it takes control of the rendering camera. This means that the transform and projection of the [camera component](../graphics/camera-component.md) is no longer taken into account when rendering. To move the user in XR, we need to instead move the *stage space* that the XR system is using as a reference point to place the user into the scene.
 
-The [ezStageSpaceComponent](xr-components.md#stage-space-component) does just that. In our example, add the component to the root `Player` object of the prefab as it best represents the players position in the world. If the player moves, it will also move the XR camera and controllers relative to it.
+The [ezStageSpaceComponent](stage-space-component.md) does just that. In our example, add the component to the root `Player` object of the prefab as it best represents the players position in the world. If the player moves, it will also move the XR camera and controllers relative to it.
 
 ### Device Tracking
 
-As mentioned above, the XR plugin takes ownership of the rendering camera. However, in many cases you will want to reflect the HMD position and controller positions in the scene as well. A Simple way of achieving this is to add a [ezDeviceTrackingComponent](xr-components.md#device-tracking-component) to a game object that you like to follow one of the XR input devices.
+As mentioned above, the XR plugin takes ownership of the rendering camera. However, in many cases you will want to reflect the HMD position and controller positions in the scene as well. A Simple way of achieving this is to add a [ezDeviceTrackingComponent](device-tracking-component.md) to a game object that you like to follow one of the XR input devices.
 
 Add one component to the `Camera` game object with default settings and one to the `Gun` game object with device type `Right Controller`, pose location `Aim` and `Global` transform.
 
@@ -42,4 +42,3 @@ By default, the engine renders multithreaded. This means that one frame of delay
 
 * [XR Graphics](xr-graphics.md)
 * [XR Input](xr-input.md)
-* [XR Components](xr-components.md)

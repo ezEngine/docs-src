@@ -82,9 +82,11 @@ This renderer visualizes each particle as a quad. There are several modes to cho
 
 This renderer visualizes each particle using a [mesh](../../graphics/meshes/mesh-asset.md).
 
-**Mesh:** The mesh to use for rendering.
+**Mesh:** The mesh to use for rendering. If the mesh contains multiple sub-meshes, the renderer will randomly select one sub-mesh for each particle. This allows for visual variety in effects like debris or broken pieces by including multiple mesh variations in a single mesh asset.
 
-**Material:** The material to use on the mesh.
+**Material:** The material to use on the mesh. If specified, this material overrides the materials defined on the mesh asset. If left empty, the mesh's own materials are used.
+
+**Scale:** A scale factor to adjust the size of the mesh independently of the particle size. This allows you to fine-tune the visual size of the mesh without having to modify the particle size parameter.
 
 **Tint Color Param:** An optional [effect parameter](particle-effects-overview.md#effect-parameters) name. If set, the parameter is used to tint the color of the meshes.
 

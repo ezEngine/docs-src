@@ -46,6 +46,8 @@ The list on the left lists all the available preferences. Items prefixed with `A
 
 * **Clear Editor Logs On Play:** If enabled, the engine log gets cleared every time you [run a scene](run-scene.md).
 
+* **Auto Save Minutes:** Configures how frequently the editor automatically saves all open documents. The default is 5 minutes. Set this value to 0 to disable automatic saving entirely. This helps prevent data loss from crashes or unexpected shutdowns.
+
 * **Highlight Untranslated UI:** If enabled, the editor will highlight all texts in the UI which are missing a translation.
 
 * **Engine View Light Settings:** Many [assets](../assets/assets-overview.md) have 3D previews that require lighting. These are the lighting settings to use.

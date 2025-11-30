@@ -38,7 +38,7 @@ Interactions are triggered by different systems. The [physics engine](../physics
 
 ### Spawning Prefabs
 
-All surface interactions ultimately spawn [prefabs](../prefabs/prefabs-overview.md). So if you want to have different footstep sounds when walking over stone, sand and mud, you need three prefabs, each playing a different sound. However, since they are prefabs, your creativity is not limited to playing a sound. Your "sand footstep effect" may contain spawning a small dust [particle effect](../effects/particle-effects/particle-effects-overview.md). And the "mud footstep effect" could additionally spawn a footprint [decal](../effects/decals/decals.md).
+All surface interactions ultimately spawn [prefabs](../prefabs/prefabs-overview.md). So if you want to have different footstep sounds when walking over stone, sand and mud, you need three prefabs, each playing a different sound. However, since they are prefabs, your creativity is not limited to playing a sound. Your "sand footstep effect" may contain spawning a small dust [particle effect](../effects/particle-effects/particle-effects-overview.md). And the "mud footstep effect" could additionally spawn a footprint [decal](../effects/decals/projected-decals.md).
 
 The following options allow you to adjust how prefabs are spawned:
 

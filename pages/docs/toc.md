@@ -140,7 +140,7 @@
 ## [Cloth Sheet Component](effects/cloth-sheet-component.md)
 ## Decals
 ### [Decals Overview](effects/decals/decals-overview.md)
-### [Decals](effects/decals/decals.md)
+### [Projected Decals](effects/decals/projected-decals.md)
 ### [Mesh Decals](effects/decals/mesh-decals.md)
 ## [Fog](effects/fog.md)
 ## [Lensflare Component](effects/lensflare-component.md)

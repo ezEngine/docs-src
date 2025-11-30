@@ -4,7 +4,7 @@
 
 ![Mesh Decals](../media/mesh-decals.jpg)
 
-Unlike regular [decals](decals.md) which project a texture onto geometry, mesh decals:
+Unlike regular [decals](projected-decals.md) which project a texture onto geometry, mesh decals:
 
 * Follow the mesh geometry exactly without projection distortion
 * Support multiple decal textures per mesh (up to 8 slots)
@@ -43,5 +43,5 @@ The `DepthBias` material parameter (default: 1.0) controls how far the decal geo
 
 ## See Also
 
-* [Decals](decals.md)
+* [Projected Decals](projected-decals.md)
 * [Meshes](../../graphics/meshes/meshes-overview.md)

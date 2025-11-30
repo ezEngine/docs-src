@@ -1,0 +1,3 @@
+decals-overview.md
+projected-decals.md
+mesh-decals.md

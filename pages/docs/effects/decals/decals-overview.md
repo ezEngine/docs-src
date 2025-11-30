@@ -6,7 +6,7 @@ Decals are a way to project textures onto surfaces in your scene. They're useful
 
 EZ provides different types of decals for various use cases:
 
-* **[Decals](decals.md)** - Standard projected decals
+* **[Decals](projected-decals.md)** - Standard projected decals
 * **[Mesh Decals](mesh-decals.md)** - Decals that use mesh geometry
 
 ## See Also

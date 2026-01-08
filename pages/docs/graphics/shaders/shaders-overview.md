@@ -1,6 +1,6 @@
 # Shaders
 
-Shaders are files with the `.ezShader` extension. These files not only provide the HLSL code for each shader stage used, but also the complete render state used when drawing with this shader. Several permutations of the same shader can exist. Permutations can inpact the render state or affect the HLSL source code. Thus, one shader file can produce several outputs.
+Shaders are files with the `.ezShader` extension. These files not only provide the HLSL code for each shader stage used, but also the complete render state used when drawing with this shader. Several permutations of the same shader can exist. Permutations can impact the render state or affect the HLSL source code. Thus, one shader file can produce several outputs.
 
 ## Shader Sections
 
@@ -75,7 +75,7 @@ DEBUG
 
 ### PERMUTATIONS
 
-The `PERMUTATIONS` section defines permutation variables which allow for modofication of the shader code. Each variable is exposed as a preprocessor variable, allowing for various sections of the shader to be modifed via preprocessor blocks. 
+The `PERMUTATIONS` section defines permutation variables which allow for modification of the shader code. Each variable is exposed as a preprocessor variable, allowing for various sections of the shader to be modified via preprocessor blocks. 
 
 The values of these permutation variables are defined by the engine / material and the entire system is explained in detail in the dedicated [shader permutation variables](shader-permutation-variables.md) page.
 
@@ -154,7 +154,7 @@ This is done by changing the *RenderDataCategory* with a line like this: `Render
 
 ### RENDERSTATE
 
-Each shader defines the complete state of the renderer. This includes, but is not limited to blendind, rasterizer, depth stencil etc. You can use permutations variables and preprcessor macros to change the render state of shader permutations.
+Each shader defines the complete state of the renderer. This includes, but is not limited to blending, rasterizer, depth stencil etc. You can use permutation variables and preprocessor macros to change the render state of shader permutations.
 This is explained in more detail on the [shader render state](shader-render-state.md) page.
 
 ```cpp

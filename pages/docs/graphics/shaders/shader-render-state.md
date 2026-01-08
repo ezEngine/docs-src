@@ -47,266 +47,390 @@ The following variables are available in the **[RENDERSTATE]** section. Simply o
 
 ### Rasterizer States
 
-* bool **DepthClip** = false
-
 * bool **FrontCounterClockwise** = false
 
-* bool **LineAA** = false
-
-* bool **MSAA** = false
+  When `false`, triangles with clockwise winding order are considered front-facing. When `true`, counter-clockwise triangles are front-facing. This affects culling and two-sided stencil operations.
 
 * bool **ScissorTest** = false
 
+  When `true`, fragments outside the scissor rectangle are discarded. The scissor rectangle is set by the rendering code, not the shader.
+
 * bool **WireFrame** = false
+
+  When `true`, renders only the edges of triangles instead of filled polygons. Useful for debugging geometry.
+
+* bool **ConservativeRasterization** = false
+
+  When `true`, a pixel is considered covered if the triangle touches any part of the pixel. This is useful for voxelization and collision detection algorithms.
 
 * enum **CullMode** = CullMode_Back
 
   ```cpp
-  CullMode = CullMode_None
-  CullMode = CullMode_Back
-  CullMode = CullMode_Front
+  CullMode = CullMode_None   // Render both front and back faces
+  CullMode = CullMode_Back   // Don't render back faces (default)
+  CullMode = CullMode_Front  // Don't render front faces
   ```
 
 * float **DepthBiasClamp** = 0.0
 
+  Maximum depth bias value. Clamps the computed depth bias to prevent excessive offset.
+
 * float **SlopeScaledDepthBias** = 0.0
+
+  Depth bias that scales with the polygon's slope. Useful for shadow mapping to reduce shadow acne on angled surfaces.
 
 * int **DepthBias** = 0
 
+  Constant depth bias added to each fragment's depth value. Used together with `SlopeScaledDepthBias` for techniques like shadow mapping.
+
 ### Depth-Stencil State
 
-* enum **BackFaceDepthFailOp** = StencilOp_Keep
+#### Depth Testing
 
-  ```cpp
-  BackFaceDepthFailOp = StencilOp_Keep
-  BackFaceDepthFailOp = StencilOp_Zero
-  BackFaceDepthFailOp = StencilOp_Replace
-  BackFaceDepthFailOp = StencilOp_IncrementSaturated
-  BackFaceDepthFailOp = StencilOp_DecrementSaturated
-  BackFaceDepthFailOp = StencilOp_Invert
-  BackFaceDepthFailOp = StencilOp_Increment
-  BackFaceDepthFailOp = StencilOp_Decrement
-  ```
+* bool **DepthEnable** = true
 
-* enum **BackFaceFailOp** = StencilOp_Keep
-
-  ```cpp
-  BackFaceFailOp = StencilOp_Keep
-  BackFaceFailOp = StencilOp_Zero
-  BackFaceFailOp = StencilOp_Replace
-  BackFaceFailOp = StencilOp_IncrementSaturated
-  BackFaceFailOp = StencilOp_DecrementSaturated
-  BackFaceFailOp = StencilOp_Invert
-  BackFaceFailOp = StencilOp_Increment
-  BackFaceFailOp = StencilOp_Decrement
-  ```
-
-* enum **BackFacePassOp** = StencilOp_Keep
-
-  ```cpp
-  BackFacePassOp = StencilOp_Keep
-  BackFacePassOp = StencilOp_Zero
-  BackFacePassOp = StencilOp_Replace
-  BackFacePassOp = StencilOp_IncrementSaturated
-  BackFacePassOp = StencilOp_DecrementSaturated
-  BackFacePassOp = StencilOp_Invert
-  BackFacePassOp = StencilOp_Increment
-  BackFacePassOp = StencilOp_Decrement
-  ```
-
-* enum **BackFaceStencilFunc** = CompareFunc_Always
-
-  ```cpp
-  BackFaceStencilFunc = CompareFunc_Never
-  BackFaceStencilFunc = CompareFunc_Less
-  BackFaceStencilFunc = CompareFunc_Equal
-  BackFaceStencilFunc = CompareFunc_LessEqual
-  BackFaceStencilFunc = CompareFunc_Greater
-  BackFaceStencilFunc = CompareFunc_NotEqual
-  BackFaceStencilFunc = CompareFunc_GreaterEqual
-  BackFaceStencilFunc = CompareFunc_Always
-  ```
-
-* enum **FrontFaceDepthFailOp** = StencilOp_Keep
-
-  ```cpp
-  FrontFaceDepthFailOp = CompareFunc_Never
-  FrontFaceDepthFailOp = CompareFunc_Less
-  FrontFaceDepthFailOp = CompareFunc_Equal
-  FrontFaceDepthFailOp = CompareFunc_LessEqual
-  FrontFaceDepthFailOp = CompareFunc_Greater
-  FrontFaceDepthFailOp = CompareFunc_NotEqual
-  FrontFaceDepthFailOp = CompareFunc_GreaterEqual
-  FrontFaceDepthFailOp = CompareFunc_Always
-  ```
-
-* enum **FrontFaceFailOp** = StencilOp_Keep
-
-  ```cpp
-  FrontFaceFailOp = CompareFunc_Never
-  FrontFaceFailOp = CompareFunc_Less
-  FrontFaceFailOp = CompareFunc_Equal
-  FrontFaceFailOp = CompareFunc_LessEqual
-  FrontFaceFailOp = CompareFunc_Greater
-  FrontFaceFailOp = CompareFunc_NotEqual
-  FrontFaceFailOp = CompareFunc_GreaterEqual
-  FrontFaceFailOp = CompareFunc_Always
-  ```
-
-* enum **FrontFacePassOp** = StencilOp_Keep
-
-  ```cpp
-  FrontFacePassOp = CompareFunc_Never
-  FrontFacePassOp = CompareFunc_Less
-  FrontFacePassOp = CompareFunc_Equal
-  FrontFacePassOp = CompareFunc_LessEqual
-  FrontFacePassOp = CompareFunc_Greater
-  FrontFacePassOp = CompareFunc_NotEqual
-  FrontFacePassOp = CompareFunc_GreaterEqual
-  FrontFacePassOp = CompareFunc_Always
-  ```
-
-* enum **FrontFaceStencilFunc** = CompareFunc_Always
-
-  ```cpp
-  FrontFaceStencilFunc = CompareFunc_Never
-  FrontFaceStencilFunc = CompareFunc_Less
-  FrontFaceStencilFunc = CompareFunc_Equal
-  FrontFaceStencilFunc = CompareFunc_LessEqual
-  FrontFaceStencilFunc = CompareFunc_Greater
-  FrontFaceStencilFunc = CompareFunc_NotEqual
-  FrontFaceStencilFunc = CompareFunc_GreaterEqual
-  FrontFaceStencilFunc = CompareFunc_Always
-  ```
-
-* bool **DepthTest** = true
+  When `true`, depth testing is performed. Fragments are compared against the depth buffer using `DepthTestFunc`. For backwards compatibility, `DepthTest` is also supported but deprecated.
 
 * bool **DepthWrite** = true
 
-* bool **SeparateFrontAndBack** = false
-
-* bool **StencilTest** = false
+  When `true`, fragments that pass the depth test write their depth value to the depth buffer. Typically disabled for transparent objects rendered after opaque geometry.
 
 * enum **DepthTestFunc** = CompareFunc_Less
 
+  Comparison function used for depth testing. The fragment passes if this comparison succeeds.
+
   ```cpp
-  DepthTestFunc = CompareFunc_Never
-  DepthTestFunc = CompareFunc_Less
-  DepthTestFunc = CompareFunc_Equal
-  DepthTestFunc = CompareFunc_LessEqual
-  DepthTestFunc = CompareFunc_Greater
-  DepthTestFunc = CompareFunc_NotEqual
-  DepthTestFunc = CompareFunc_GreaterEqual
-  DepthTestFunc = CompareFunc_Always
+  DepthTestFunc = CompareFunc_Never         // Never pass (no fragments rendered)
+  DepthTestFunc = CompareFunc_Less          // Pass if closer than depth buffer (default)
+  DepthTestFunc = CompareFunc_Equal         // Pass if equal to depth buffer
+  DepthTestFunc = CompareFunc_LessEqual     // Pass if closer or equal
+  DepthTestFunc = CompareFunc_Greater       // Pass if farther than depth buffer
+  DepthTestFunc = CompareFunc_NotEqual      // Pass if not equal
+  DepthTestFunc = CompareFunc_GreaterEqual  // Pass if farther or equal
+  DepthTestFunc = CompareFunc_Always        // Always pass (ignores depth buffer)
   ```
+
+#### Stencil Testing
+
+* bool **StencilEnable** = false
+
+  When `true`, stencil testing is performed. Fragments are compared against the stencil buffer, and operations can modify the stencil buffer based on test results.
 
 * int **StencilReadMask** = 255
 
+  Bitmask applied when reading from the stencil buffer during comparison. Use `255` (all bits) to compare the full stencil value.
+
 * int **StencilWriteMask** = 255
+
+  Bitmask applied when writing to the stencil buffer. Use `255` (all bits) to write the full stencil value.
+
+#### Front-Face Stencil Operations
+
+These operations apply to front-facing polygons (see `FrontCounterClockwise` to configure winding order).
+
+* enum **StencilCompareFunc** = CompareFunc_Always
+
+  Comparison function for stencil testing on front faces.
+
+  ```cpp
+  StencilCompareFunc = CompareFunc_Never         // Never pass
+  StencilCompareFunc = CompareFunc_Less          // Pass if (ref & mask) < (stencil & mask)
+  StencilCompareFunc = CompareFunc_Equal         // Pass if (ref & mask) == (stencil & mask)
+  StencilCompareFunc = CompareFunc_LessEqual     // Pass if (ref & mask) <= (stencil & mask)
+  StencilCompareFunc = CompareFunc_Greater       // Pass if (ref & mask) > (stencil & mask)
+  StencilCompareFunc = CompareFunc_NotEqual      // Pass if (ref & mask) != (stencil & mask)
+  StencilCompareFunc = CompareFunc_GreaterEqual  // Pass if (ref & mask) >= (stencil & mask)
+  StencilCompareFunc = CompareFunc_Always        // Always pass (default)
+  ```
+
+* enum **StencilFailOp** = StencilOp_Keep
+
+  Operation performed when the stencil test fails.
+
+  ```cpp
+  StencilFailOp = StencilOp_Keep               // Keep current value (default)
+  StencilFailOp = StencilOp_Zero               // Set to 0
+  StencilFailOp = StencilOp_Replace            // Replace with reference value
+  StencilFailOp = StencilOp_IncrementSaturated // Increment, clamp to max
+  StencilFailOp = StencilOp_DecrementSaturated // Decrement, clamp to 0
+  StencilFailOp = StencilOp_Invert             // Bitwise invert
+  StencilFailOp = StencilOp_Increment          // Increment, wrap to 0
+  StencilFailOp = StencilOp_Decrement          // Decrement, wrap to max
+  ```
+
+* enum **StencilDepthFailOp** = StencilOp_Keep
+
+  Operation performed when the stencil test passes but the depth test fails.
+
+  ```cpp
+  StencilDepthFailOp = StencilOp_Keep
+  StencilDepthFailOp = StencilOp_Zero
+  StencilDepthFailOp = StencilOp_Replace
+  StencilDepthFailOp = StencilOp_IncrementSaturated
+  StencilDepthFailOp = StencilOp_DecrementSaturated
+  StencilDepthFailOp = StencilOp_Invert
+  StencilDepthFailOp = StencilOp_Increment
+  StencilDepthFailOp = StencilOp_Decrement
+  ```
+
+* enum **StencilPassOp** = StencilOp_Keep
+
+  Operation performed when both stencil and depth tests pass.
+
+  ```cpp
+  StencilPassOp = StencilOp_Keep
+  StencilPassOp = StencilOp_Zero
+  StencilPassOp = StencilOp_Replace
+  StencilPassOp = StencilOp_IncrementSaturated
+  StencilPassOp = StencilOp_DecrementSaturated
+  StencilPassOp = StencilOp_Invert
+  StencilPassOp = StencilOp_Increment
+  StencilPassOp = StencilOp_Decrement
+  ```
+
+#### Back-Face Stencil Operations
+
+These operations apply to back-facing polygons. If not explicitly set, they default to the front-face values, allowing separate stencil operations for two-sided geometry.
+
+* enum **StencilBackFaceCompareFunc** = CompareFunc_Always
+
+  Comparison function for stencil testing on back faces. Falls back to `StencilCompareFunc` if not set.
+
+  ```cpp
+  StencilBackFaceCompareFunc = CompareFunc_Never
+  StencilBackFaceCompareFunc = CompareFunc_Less
+  StencilBackFaceCompareFunc = CompareFunc_Equal
+  StencilBackFaceCompareFunc = CompareFunc_LessEqual
+  StencilBackFaceCompareFunc = CompareFunc_Greater
+  StencilBackFaceCompareFunc = CompareFunc_NotEqual
+  StencilBackFaceCompareFunc = CompareFunc_GreaterEqual
+  StencilBackFaceCompareFunc = CompareFunc_Always
+  ```
+
+* enum **StencilBackFaceFailOp** = StencilOp_Keep
+
+  Operation when stencil test fails on back faces. Falls back to `StencilFailOp` if not set.
+
+  ```cpp
+  StencilBackFaceFailOp = StencilOp_Keep
+  StencilBackFaceFailOp = StencilOp_Zero
+  StencilBackFaceFailOp = StencilOp_Replace
+  StencilBackFaceFailOp = StencilOp_IncrementSaturated
+  StencilBackFaceFailOp = StencilOp_DecrementSaturated
+  StencilBackFaceFailOp = StencilOp_Invert
+  StencilBackFaceFailOp = StencilOp_Increment
+  StencilBackFaceFailOp = StencilOp_Decrement
+  ```
+
+* enum **StencilBackFaceDepthFailOp** = StencilOp_Keep
+
+  Operation when stencil passes but depth fails on back faces. Falls back to `StencilDepthFailOp` if not set.
+
+  ```cpp
+  StencilBackFaceDepthFailOp = StencilOp_Keep
+  StencilBackFaceDepthFailOp = StencilOp_Zero
+  StencilBackFaceDepthFailOp = StencilOp_Replace
+  StencilBackFaceDepthFailOp = StencilOp_IncrementSaturated
+  StencilBackFaceDepthFailOp = StencilOp_DecrementSaturated
+  StencilBackFaceDepthFailOp = StencilOp_Invert
+  StencilBackFaceDepthFailOp = StencilOp_Increment
+  StencilBackFaceDepthFailOp = StencilOp_Decrement
+  ```
+
+* enum **StencilBackFacePassOp** = StencilOp_Keep
+
+  Operation when both tests pass on back faces. Falls back to `StencilPassOp` if not set.
+
+  ```cpp
+  StencilBackFacePassOp = StencilOp_Keep
+  StencilBackFacePassOp = StencilOp_Zero
+  StencilBackFacePassOp = StencilOp_Replace
+  StencilBackFacePassOp = StencilOp_IncrementSaturated
+  StencilBackFacePassOp = StencilOp_DecrementSaturated
+  StencilBackFacePassOp = StencilOp_Invert
+  StencilBackFacePassOp = StencilOp_Increment
+  StencilBackFacePassOp = StencilOp_Decrement
+  ```
 
 ### Blend State
 
 * bool **AlphaToCoverage** = false
 
+  When `true`, uses the alpha channel to determine per-pixel coverage in MSAA rendering. Useful for rendering foliage and other alpha-tested geometry with smoother edges.
+
 * bool **IndependentBlend** = false
 
-The following variables exist with suffix 0 to 7. If **IndependentBlend** is disabled, only the ones with suffix 0 are used.
+  When `true`, each render target (0-7) can have independent blend settings. When `false`, all render targets use the settings from render target 0.
 
-* bool **BlendingEnabled0** = false
+#### Per-Render-Target Blend Settings
 
-* enum **BlendOp0** = BlendOp_Add
+The following variables configure blending for individual render targets. You can specify them without a suffix (e.g., `BlendingEnabled`) to configure render target 0, or with a suffix 0-7 (e.g., `BlendingEnabled0`, `BlendingEnabled1`) to configure specific targets.
 
-  ```cpp
-  BlendOp0 = BlendOp_Add
-  BlendOp0 = BlendOp_Subtract
-  BlendOp0 = BlendOp_RevSubtract
-  BlendOp0 = BlendOp_Min
-  BlendOp0 = BlendOp_Max
-  ```
+When **IndependentBlend** is `false`, all render targets use the settings from target 0.
 
-* enum **BlendOpAlpha0** = BlendOp_Add
+* bool **BlendingEnabled** = false
 
-  ```cpp
-  BlendOpAlpha0 = BlendOp_Add
-  BlendOpAlpha0 = BlendOp_Subtract
-  BlendOpAlpha0 = BlendOp_RevSubtract
-  BlendOpAlpha0 = BlendOp_Min
-  BlendOpAlpha0 = BlendOp_Max
-  ```
+  When `true`, enables blending for this render target. The source color from the pixel shader is combined with the destination color in the render target using the blend operation and factors.
 
-* enum **DestBlend0** = Blend_One
+* enum **BlendOp** = BlendOp_Add
+
+  The operation used to combine source and destination RGB values.
 
   ```cpp
-  DestBlend0 = Blend_Zero
-  DestBlend0 = Blend_One
-  DestBlend0 = Blend_SrcColor
-  DestBlend0 = Blend_InvSrcColor
-  DestBlend0 = Blend_SrcAlpha
-  DestBlend0 = Blend_InvSrcAlpha
-  DestBlend0 = Blend_DestAlpha
-  DestBlend0 = Blend_InvDestAlpha
-  DestBlend0 = Blend_DestColor
-  DestBlend0 = Blend_InvDestColor
-  DestBlend0 = Blend_SrcAlphaSaturated
-  DestBlend0 = Blend_BlendFactor
-  DestBlend0 = Blend_InvBlendFactor
+  BlendOp = BlendOp_Add         // result = src + dest (default)
+  BlendOp = BlendOp_Subtract    // result = src - dest
+  BlendOp = BlendOp_RevSubtract // result = dest - src
+  BlendOp = BlendOp_Min         // result = min(src, dest)
+  BlendOp = BlendOp_Max         // result = max(src, dest)
   ```
 
-* enum **DestBlendAlpha0** = Blend_One
+* enum **BlendOpAlpha** = BlendOp_Add
+
+  The operation used to combine source and destination alpha values. Often the same as `BlendOp`.
 
   ```cpp
-  DestBlendAlpha0 = Blend_Zero
-  DestBlendAlpha0 = Blend_One
-  DestBlendAlpha0 = Blend_SrcColor
-  DestBlendAlpha0 = Blend_InvSrcColor
-  DestBlendAlpha0 = Blend_SrcAlpha
-  DestBlendAlpha0 = Blend_InvSrcAlpha
-  DestBlendAlpha0 = Blend_DestAlpha
-  DestBlendAlpha0 = Blend_InvDestAlpha
-  DestBlendAlpha0 = Blend_DestColor
-  DestBlendAlpha0 = Blend_InvDestColor
-  DestBlendAlpha0 = Blend_SrcAlphaSaturated
-  DestBlendAlpha0 = Blend_BlendFactor
-  DestBlendAlpha0 = Blend_InvBlendFactor
+  BlendOpAlpha = BlendOp_Add
+  BlendOpAlpha = BlendOp_Subtract
+  BlendOpAlpha = BlendOp_RevSubtract
+  BlendOpAlpha = BlendOp_Min
+  BlendOpAlpha = BlendOp_Max
   ```
 
-* enum **SourceBlend0** = Blend_One
+* enum **SourceBlend** = Blend_One
+
+  Factor applied to the source RGB color before blending.
 
   ```cpp
-  SourceBlend0 = Blend_Zero
-  SourceBlend0 = Blend_One
-  SourceBlend0 = Blend_SrcColor
-  SourceBlend0 = Blend_InvSrcColor
-  SourceBlend0 = Blend_SrcAlpha
-  SourceBlend0 = Blend_InvSrcAlpha
-  SourceBlend0 = Blend_DestAlpha
-  SourceBlend0 = Blend_InvDestAlpha
-  SourceBlend0 = Blend_DestColor
-  SourceBlend0 = Blend_InvDestColor
-  SourceBlend0 = Blend_SrcAlphaSaturated
-  SourceBlend0 = Blend_BlendFactor
-  SourceBlend0 = Blend_InvBlendFactor
+  SourceBlend = Blend_Zero              // (0, 0, 0)
+  SourceBlend = Blend_One               // (1, 1, 1) - use source color as-is (default)
+  SourceBlend = Blend_SrcColor          // (Rs, Gs, Bs)
+  SourceBlend = Blend_InvSrcColor       // (1-Rs, 1-Gs, 1-Bs)
+  SourceBlend = Blend_SrcAlpha          // (As, As, As) - common for transparency
+  SourceBlend = Blend_InvSrcAlpha       // (1-As, 1-As, 1-As)
+  SourceBlend = Blend_DestAlpha         // (Ad, Ad, Ad)
+  SourceBlend = Blend_InvDestAlpha      // (1-Ad, 1-Ad, 1-Ad)
+  SourceBlend = Blend_DestColor         // (Rd, Gd, Bd)
+  SourceBlend = Blend_InvDestColor      // (1-Rd, 1-Gd, 1-Bd)
+  SourceBlend = Blend_SrcAlphaSaturated // (f, f, f) where f = min(As, 1-Ad)
+  SourceBlend = Blend_BlendFactor       // Constant blend factor
+  SourceBlend = Blend_InvBlendFactor    // 1 - constant blend factor
   ```
 
-* enum **SourceBlendAlpha0** = Blend_One
+* enum **DestBlend** = Blend_One
+
+  Factor applied to the destination RGB color (current render target value) before blending.
 
   ```cpp
-  SourceBlendAlpha0 = Blend_Zero
-  SourceBlendAlpha0 = Blend_One
-  SourceBlendAlpha0 = Blend_SrcColor
-  SourceBlendAlpha0 = Blend_InvSrcColor
-  SourceBlendAlpha0 = Blend_SrcAlpha
-  SourceBlendAlpha0 = Blend_InvSrcAlpha
-  SourceBlendAlpha0 = Blend_DestAlpha
-  SourceBlendAlpha0 = Blend_InvDestAlpha
-  SourceBlendAlpha0 = Blend_DestColor
-  SourceBlendAlpha0 = Blend_InvDestColor
-  SourceBlendAlpha0 = Blend_SrcAlphaSaturated
-  SourceBlendAlpha0 = Blend_BlendFactor
-  SourceBlendAlpha0 = Blend_InvBlendFactor
+  DestBlend = Blend_Zero              // (0, 0, 0) - ignore destination
+  DestBlend = Blend_One               // (1, 1, 1) - use destination as-is (default)
+  DestBlend = Blend_SrcColor          // (Rs, Gs, Bs)
+  DestBlend = Blend_InvSrcColor       // (1-Rs, 1-Gs, 1-Bs) - common for transparency
+  DestBlend = Blend_SrcAlpha          // (As, As, As)
+  DestBlend = Blend_InvSrcAlpha       // (1-As, 1-As, 1-As)
+  DestBlend = Blend_DestAlpha         // (Ad, Ad, Ad)
+  DestBlend = Blend_InvDestAlpha      // (1-Ad, 1-Ad, 1-Ad)
+  DestBlend = Blend_DestColor         // (Rd, Gd, Bd)
+  DestBlend = Blend_InvDestColor      // (1-Rd, 1-Gd, 1-Bd)
+  DestBlend = Blend_SrcAlphaSaturated // (f, f, f) where f = min(As, 1-Ad)
+  DestBlend = Blend_BlendFactor       // Constant blend factor
+  DestBlend = Blend_InvBlendFactor    // 1 - constant blend factor
   ```
 
-* int **WriteMask** = 255
+* enum **SourceBlendAlpha** = Blend_One
+
+  Factor applied to the source alpha value before blending.
+
+  ```cpp
+  SourceBlendAlpha = Blend_Zero
+  SourceBlendAlpha = Blend_One
+  SourceBlendAlpha = Blend_SrcColor
+  SourceBlendAlpha = Blend_InvSrcColor
+  SourceBlendAlpha = Blend_SrcAlpha
+  SourceBlendAlpha = Blend_InvSrcAlpha
+  SourceBlendAlpha = Blend_DestAlpha
+  SourceBlendAlpha = Blend_InvDestAlpha
+  SourceBlendAlpha = Blend_DestColor
+  SourceBlendAlpha = Blend_InvDestColor
+  SourceBlendAlpha = Blend_SrcAlphaSaturated
+  SourceBlendAlpha = Blend_BlendFactor
+  SourceBlendAlpha = Blend_InvBlendFactor
+  ```
+
+* enum **DestBlendAlpha** = Blend_One
+
+  Factor applied to the destination alpha value before blending.
+
+  ```cpp
+  DestBlendAlpha = Blend_Zero
+  DestBlendAlpha = Blend_One
+  DestBlendAlpha = Blend_SrcColor
+  DestBlendAlpha = Blend_InvSrcColor
+  DestBlendAlpha = Blend_SrcAlpha
+  DestBlendAlpha = Blend_InvSrcAlpha
+  DestBlendAlpha = Blend_DestAlpha
+  DestBlendAlpha = Blend_InvDestAlpha
+  DestBlendAlpha = Blend_DestColor
+  DestBlendAlpha = Blend_InvDestColor
+  DestBlendAlpha = Blend_SrcAlphaSaturated
+  DestBlendAlpha = Blend_BlendFactor
+  DestBlendAlpha = Blend_InvBlendFactor
+  ```
+
+* int **ColorWriteMask** = 255
+
+  Bitmask controlling which color channels are written to the render target. Use `255` to write all channels (RGBA), or combine bits: R=1, G=2, B=4, A=8. For example, use `7` to write only RGB (1+2+4). The deprecated name `WriteMask` is also supported.
+
+## Common Configuration Examples
+
+### Standard Alpha Blending (Transparency)
+
+For typical transparent objects:
+
+```cpp
+[RENDERSTATE]
+
+BlendingEnabled = true
+SourceBlend = Blend_SrcAlpha
+DestBlend = Blend_InvSrcAlpha
+DepthWrite = false  // Don't write to depth buffer for transparent objects
+```
+
+### Additive Blending (Particles, Effects)
+
+For light-emitting particles and effects:
+
+```cpp
+[RENDERSTATE]
+
+BlendingEnabled = true
+SourceBlend = Blend_One
+DestBlend = Blend_One
+BlendOp = BlendOp_Add
+DepthWrite = false
+```
+
+### Wireframe Rendering
+
+For debugging mesh geometry:
+
+```cpp
+[RENDERSTATE]
+
+WireFrame = true
+CullMode = CullMode_None  // Show both front and back faces
+```
+
+### Depth Pre-Pass
+
+For early depth rejection optimization:
+
+```cpp
+[RENDERSTATE]
+
+DepthEnable = true
+DepthWrite = true
+ColorWriteMask = 0  // Only write depth, no color output
+```
 
 ## See Also
 

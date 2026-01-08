@@ -1,3 +1,5 @@
 ui.md
 imgui.md
 rmlui.md
+rmlui-canvas2d-component.md
+rmlui-canvas3d-component.md

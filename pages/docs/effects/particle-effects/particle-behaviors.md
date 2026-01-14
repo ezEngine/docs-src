@@ -7,10 +7,13 @@ Particle behaviors modify particles after they have been spawned. Each behavior 
 * [Fade Out Behavior](behaviors/pb-fade-out.md) - Gradually fades out particle alpha
 * [Flies Behavior](behaviors/pb-flies.md) - Creates erratic flying patterns
 * [Gravity Behavior](behaviors/pb-gravity.md) - Applies gravity to particles
+* [Move Behavior](behaviors/pb-move.md) - Moves particles along an axis
+* [Opacity Behavior](behaviors/pb-opacity.md) - Changes particle opacity over lifetime
 * [Pull Along Behavior](behaviors/pb-pull-along.md) - Pulls particles along with moving effect
 * [Raycast Behavior](behaviors/pb-raycast.md) - Detects collisions using raycasts
 * [Size Curve Behavior](behaviors/pb-size-curve.md) - Changes particle size over lifetime
-* [Velocity Behavior](behaviors/pb-velocity.md) - Affects particle velocity with friction and wind
+* [Velocity Behavior](behaviors/pb-velocity.md) - Affects particle velocity with friction
+* [Wind Behavior](behaviors/pb-wind.md) - Applies wind forces to particles
 
 ## See Also
 

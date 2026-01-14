@@ -46,9 +46,9 @@ This renderer visualizes each particle as a quad. There are several modes to cho
 
 * *Blended Foreground/Background* - Same as *Blended* but when there are multiple particle systems using *Blended* mode, this allows you to influence in which order the systems are rendered. This is used to fix rendering issues.
 
-* *Distortion* - This is used to create a *heat haze* effect, which distorts the scene behind it. The alpha-channel of *Texture* is used to determine the shape of the distortion effect. The *Distortion Texture* and *Distortion Strength* are used to decide for each pixels how much to distort the background. Any texture can be used as the distortion texture, but the effect works best using a *normal map*.
+* *Custom* - Use a custom material for rendering. See **Custom Material** below.
 
-  <video src="media/render-mode-distortion.webm" width="500" height="500" autoplay loop></video>
+**Custom Material:** When *Render Mode* is set to *Custom*, you can assign a custom [material](../../materials/materials-overview.md) for particle rendering. The material must have its *Asset Filter Tag* set to `QuadParticle` to appear in the asset browser. Custom materials can be created using [shader templates](../../graphics/shaders/shader-templates.md) or [visual shaders](../../materials/visual-shaders.md), enabling advanced effects like distortion, custom lighting, or other special rendering techniques.
 
 **Lighting Mode:** Controls whether the particles receive dynamic lighting.
   * `Fullbright`: Particles will not be lit dynamically.
@@ -114,7 +114,7 @@ The light renderer treats each particle as a light source and thus illuminates t
 
 This renderer visualizes particles as long lines that draw the path that the particle took. Trail particles are made up of a fixed number of segments. The more segments the renderer uses, the longer the trails will be. Also the faster a particle moves, the longer the trail will stretch. More segments cost more performance to update and render. For very short sparks that should just stretch a little, it is better to use billboards with *Orientation* set the *Axis: Particle Dir* and *StretchFactor* set to some value between 2 and 5.
 
-**Render Mode, Texture, Texture Atlas, TintColorParam, Lighting Mode:** These options are identical to the [quad renderer](#quad-renderer).
+**Render Mode, Custom Material, Texture, Texture Atlas, TintColorParam, Lighting Mode:** These options are identical to the [quad renderer](#quad-renderer). For custom materials on trails, the *Asset Filter Tag* must be set to `TrailParticle`.
 
 **Segments:** The number of segments to use for each particle. More segments cost more performance but also result in longer and more detailed trails.
 

@@ -157,10 +157,13 @@
 #### [Fade Out Behavior](effects/particle-effects/behaviors/pb-fade-out.md)
 #### [Flies Behavior](effects/particle-effects/behaviors/pb-flies.md)
 #### [Gravity Behavior](effects/particle-effects/behaviors/pb-gravity.md)
+#### [Move Behavior](effects/particle-effects/behaviors/pb-move.md)
+#### [Opacity Behavior](effects/particle-effects/behaviors/pb-opacity.md)
 #### [Pull Along Behavior](effects/particle-effects/behaviors/pb-pull-along.md)
 #### [Raycast Behavior](effects/particle-effects/behaviors/pb-raycast.md)
 #### [Size Curve Behavior](effects/particle-effects/behaviors/pb-size-curve.md)
 #### [Velocity Behavior](effects/particle-effects/behaviors/pb-velocity.md)
+#### [Wind Behavior](effects/particle-effects/behaviors/pb-wind.md)
 ### [Particle Renderers](effects/particle-effects/particle-renderers.md)
 ### [Particle Effect Component](effects/particle-effects/particle-effect-component.md)
 ## Post Processing

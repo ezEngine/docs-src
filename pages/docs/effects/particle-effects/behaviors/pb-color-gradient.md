@@ -6,6 +6,8 @@ This behavior changes a particle's color during the update step. A [color gradie
 
 **TintColor:** An additional color to be multiplied into the gradient, for tweaking the final result.
 
+**ApplyAlpha:** If enabled, the alpha channel from the color gradient is applied to the particle's opacity. This allows the gradient to control both color and transparency simultaneously.
+
 **ColorFrom:** This mode specifies how the color is looked up from the gradient:
 
 * `Age` - In this mode the particle's color depends on its age and remaining lifetime. That means it starts out with the leftmost color from the gradient and transitions towards the rightmost color. Optimally, the color gradient should include alpha values, such that the particles can fade out towards the end.

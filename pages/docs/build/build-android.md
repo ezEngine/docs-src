@@ -18,9 +18,17 @@ You need the following to build for Android:
 
 [Ninja](https://ninja-build.org/) is a build generator used by CMake and needs to be added to the `PATH` environment variable.
 
-The easiest way to install the Android components is to download [Android Studio](https://developer.android.com/studio) and then to select these from the **SDK Manager**.
+The easiest way to install the Android components is to use the provided installation script from the root of the EZ checkout:
 
-Alternatively, you can also install these via the command line tool located in `C:\Users\[USER]\AppData\Local\Android\Sdk\cmdline-tools\latest\bin`:
+```pwsh
+./Utilities/Android/InstallAndroidDependencies.ps1
+```
+
+This script downloads and installs the Android SDK, NDK and required tools to a shared workspace directory. Use the `-InstallEmulator` parameter to also install the emulator, or `-AcceptLicenses` to automatically accept licenses (useful for CI environments).
+
+Alternatively, you can download [Android Studio](https://developer.android.com/studio) and select the required components from the **SDK Manager**.
+
+You can also install these via the command line tool located in `C:\Users\[USER]\AppData\Local\Android\Sdk\cmdline-tools\latest\bin`:
 
 ```pwsh
 # From the root of the EZ checkout, run:
@@ -47,9 +55,39 @@ Change the version to reflect the one you are using.
 * **JAVA_HOME** needs to point to a java runtime. Android Studio has its own version so there is no need to download it separately: `C:\Program Files\Android\Android Studio\jbr`
 * **ANDROID_STUDIO** (Optional for debugging). Needs to point to the root of Android Studio, e.g. `C:\Program Files\Android\Android Studio`. We currently rely on the `lldb-server` that ships with Android Studio. Alternatively, you can also debug any app with Android Studio once at which point the required files are on the device and this env var is no longer needed.
 
+## Building with RunCMake.ps1
+
+The simplest way to configure and build for Android is using the `RunCMake.ps1` script in the root of the repository:
+
+```pwsh
+# Configure for Android arm64 debug build
+./RunCMake.ps1 -target android-arm64-debug
+
+# Configure for Android arm64 release build
+./RunCMake.ps1 -target android-arm64-release
+```
+
+The script uses CMake presets and handles the configuration automatically. After running the script, you can build with:
+
+```pwsh
+cmake --build --preset android-arm64-debug
+```
+
+## Compiling Shaders
+
+To compile shaders for Android, use the `CompileShaders.ps1` script:
+
+```pwsh
+# On Windows (uses precompiled tools by default)
+./Utilities/Android/CompileShaders.ps1
+
+# On Linux (specify the binary directory)
+./Utilities/Android/CompileShaders.ps1 -BinDir /path/to/ezEngine/Output/Bin/LinuxClangDev64
+```
+
 ## Visual Studio / VSCode / CLion
 
-While you can manually run CMake to use the ninja generator, a more convenient solution is to use CMake's `CMakePresets.json` which is already configured for Android arm64 and x64 builds.
+Alternatively, you can use an IDE. CMake's `CMakePresets.json` is already configured for Android arm64 and x64 builds.
 * **Visual Studio**: Use Visual Studio's open folder functionality. Go to `File > Open > Folder...` and select the root of the repository. If all environment variables were set correctly VS should automatically configure CMake. Once done, a drop down appears in the VS toolbar, allowing you to select the configuration, e.g. `android-arm64-debug`. Once changed, VS will start to configure CMake again for the new configuration. Next, select a build target, e.g. `libFoundationTest.so` which are the foundation unit tests. Note that you can only select applications, not all libraries here.
 * **VSCode**: Make sure you have the `C/C++`, `C/C++ Extension Pack`, `CMake` and `CMake Tools` plugins installed. Select `File > Open Folder...` and select the root of the repository. Execute `CMake: Select Configure Preset` to select the config you wish to use. Make sure CMake runs through without errors. On failure fix any errors and execute  `CMake: Configure` until successful. Finally, execute `CMake: Build Target` to build the project you want.
 * **CLion**: Open settings, go to `Build, Execution, Deployment > CMake`, select the profile you wish to use and enable it. Make sure CMake configure runs through without errors. Finally, select the build target of choice in the toolbar and press the build button next to it.

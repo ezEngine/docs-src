@@ -66,6 +66,14 @@ The [RTS Sample](../../samples/rts.md) and the [Sample Game Plugin](../../sample
 
 ## Limitations
 
+### Threading Constraints
+
+ImGui is **not thread-safe** and must only be called from the main thread. This means you cannot call ImGui functions from [component](../runtime/world/components.md) `Update()` methods, as component updates run in parallel across multiple threads.
+
+Instead, call ImGui from your [game state](../runtime/application/game-state.md), which runs on the main thread. If you need to display component data in ImGui, cache the relevant values in your component and read them from the game state when building your UI.
+
+### Styling
+
 It is very difficult to adjust the appearance of ImGui elements. Use ImGui for developer tools and to prototype ideas quickly. Prefer to use [RmlUi](rmlui.md) once you need more control over the look and feel.
 
 ## See Also

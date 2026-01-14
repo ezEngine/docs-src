@@ -1,3 +1,4 @@
 ﻿*.pyc
 obj/
 _site/
+.claude/

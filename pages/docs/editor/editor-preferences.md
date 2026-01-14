@@ -24,7 +24,7 @@ The list on the left lists all the available preferences. Items prefixed with `A
 
 ### Application: General
 
-* **Restore Project On Startup:** If enabled, the editor will load the project that was open the last time.
+* **Restore Project On Startup:** If enabled, the editor will load the project that was open the last time. This can be bypassed using command line options, see [Launching the Editor](editor-launch.md).
 
 * **Show Splashscreen:** Disable this to not have a splashscreen show up every time the editor starts.
 
@@ -56,4 +56,5 @@ The list on the left lists all the available preferences. Items prefixed with `A
 
 ## See Also
 
+* [Launching the Editor](editor-launch.md)
 * [Editor Settings](editor-settings.md)

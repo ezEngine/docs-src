@@ -15,6 +15,7 @@
 ## [Dashboard](editor/dashboard.md)
 ## [Editor Background Operations](editor/editor-bg-operations.md)
 ## [Editor Documents](editor/editor-documents.md)
+## [Launching the Editor](editor/editor-launch.md)
 ## [Editor Plugins](editor/editor-plugins.md)
 ## [Editor Preferences](editor/editor-preferences.md)
 ## [Editor Settings](editor/editor-settings.md)

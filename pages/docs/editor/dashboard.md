@@ -12,6 +12,8 @@ To open a project selected from the list, use the **Open Project** button or dou
 
 If you uncheck *Always load last project*, then the editor won't automatically open the project that you had open last time, when it starts up. Instead, it will always display the dashboard.
 
+You can also start the editor without loading any project by using the command line options, or via the Windows taskbar jumplist. See [Launching the Editor](editor-launch.md) for details.
+
 ## Samples
 
 ![Dashboard samples](media/dashboard-samples.jpg)
@@ -24,6 +26,6 @@ On the community page you find buttons to quickly go to the available online res
 
 ## See Also
 
-
+* [Launching the Editor](editor-launch.md)
 * [Projects](../projects/projects-overview.md)
 * [Contact](../../contact.md)

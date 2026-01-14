@@ -90,6 +90,12 @@ The asset browser allows you to quickly transform assets in multiple ways:
 
 * **Transform Single:** You can also quickly transform just a single asset by clicking the icon overlay at the bottom right of an asset's thumbnail (usually a checkmark or a gear).
 
+## Export Assets with Dependencies
+
+You can export assets along with all their required dependencies to another folder. This is useful for transferring assets between projects.
+
+To export assets, right-click on an asset or folder in the asset browser and select **Export with Dependencies**. The editor will copy the selected items and all files they depend on to the destination folder you choose. Files from the *Base* data directory are excluded from the export, as those are expected to exist in all projects.
+
 ## Resave all Asset Documents
 
 In the context menu of the folder hierarchy you can select `Re-save Assets in Folder`. This opens each and every document in the selected folder, saves it and closes it again. This can be used to migrate all documents to the very latest version. Since document versioning is very robust, there is little practical use for this operation, though.

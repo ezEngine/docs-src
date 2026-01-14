@@ -78,6 +78,10 @@ These nodes define input values for a shader. Constants are always fixed, wherea
 
 These nodes allow you to sample a texture. There are a couple of nodes for typical texture types, like *Base Texture* and *Normal Texture*, that take care of some details. See the tooltip on the output pins for details. If you do not want to use a standard texture, simply use the `Texture 2D` node. If you want to use a non-standard *sampler*, for instance for nearest neighbor sampling, you have to use the `Texture 2D` node and connect a custom sampler type.
 
+## State Nodes
+
+State nodes allow you to configure the [render state](../graphics/shaders/shader-render-state.md) directly in a visual shader. You can set depth state, stencil state, blend state and rasterizer state. This is useful for special effects that require non-default rendering behavior.
+
 ## Input Nodes
 
 These nodes provide various kinds of input data. Some give access to vertex attributes like position, normal, color and UV texture coordinates. Others provide global values, like the time or camera configuration.

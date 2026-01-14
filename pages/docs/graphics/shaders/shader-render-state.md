@@ -124,6 +124,16 @@ The following variables are available in the **[RENDERSTATE]** section. Simply o
 
   Bitmask applied when writing to the stencil buffer. Use `255` (all bits) to write the full stencil value.
 
+* int **StencilRefValue** = 0
+
+  The reference value used for stencil comparisons and operations. When comparing, this value (masked by `StencilReadMask`) is compared against the stencil buffer value. When using `StencilOp_Replace`, this value (masked by `StencilWriteMask`) is written to the stencil buffer.
+
+  Set this to `-1` to use a dynamic stencil reference value provided by the rendering code at runtime, rather than the fixed value from the shader.
+
+* bool **UseUserStencilRef** = false
+
+  When `true`, the stencil reference value is provided dynamically by the rendering code at runtime. When `false`, the shader's `StencilRefValue` is used. Setting `StencilRefValue` to `-1` implicitly enables this option.
+
 #### Front-Face Stencil Operations
 
 These operations apply to front-facing polygons (see `FrontCounterClockwise` to configure winding order).

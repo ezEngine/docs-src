@@ -204,7 +204,7 @@ These categories render with complete lighting calculations including direct lig
 
 ###### Simple Categories (Unlit Rendering)
 
-These categories use unlit rendering without lighting calculations. Useful for debug visualization, editor tools, and effects that should not be affected by scene lighting.
+These categories use unlit rendering without lighting calculations. Useful for debug visualization, editor tools, and effects that should not be affected by scene lighting and tonemapping.
 
 * **SimpleOpaque** - Use for unlit opaque geometry like debug visualizations or editor gizmos. Renders after lit passes. No lighting calculations. Sorted front-to-back.
 
@@ -214,40 +214,31 @@ These categories use unlit rendering without lighting calculations. Useful for d
 
 ###### Special Categories
 
-* **Sky** - Use for skybox and sky dome materials. Renders after the depth pre-pass but before the opaque forward pass to provide the scene background.
-
-* **Light** - Use for light source visualization geometry. Renders with special handling for light volumes and debug rendering.
-
-* **Decal** - Use for projected decals on surfaces. Renders after the opaque forward pass and projects onto opaque geometry.
-
-* **ReflectionProbe** - Use for reflection probe visualization. Primarily used for editor and debug rendering of reflection capture volumes.
-
-* **Selection** - Use for editor selection highlighting. Editor-only category for visualizing selected objects.
+* **Sky** - Use for skybox and sky dome materials. Renders after the opaque forward pass to fill the scene background.
 
 * **GUI** - Use for UI rendering. Special category with specific handling for GUI elements.
 
-##### Static vs Dynamic Resolution
+##### Static vs Dynamic Redirection
 
-LitOpaque and LitMasked are "redirected categories" that automatically resolve to Static or Dynamic variants at runtime:
+LitOpaque and LitMasked are "redirected categories" that are automatically redirected to Static or Dynamic variants at runtime:
 
 * **LitOpaque** resolves to **LitOpaqueStatic** or **LitOpaqueDynamic**
 * **LitMasked** resolves to **LitMaskedStatic** or **LitMaskedDynamic**
 
-This resolution happens during render data extraction based on component flags (whether the object's transform changes or is animated). The rendering pipeline can then optimize static geometry separately from dynamic geometry, enabling better batching and caching strategies.
+This redirection happens during render data extraction based on object flags (whether the object is marked as static or dynamic). The rendering pipeline can then render static geometry separately from dynamic geometry, enabling use cases like screen space velocities for dynamic objects etc.
 
-**Important:** Shader authors should use LitOpaque and LitMasked in the MATERIALCONFIG section, not the Static/Dynamic variants directly. The engine handles the resolution automatically.
+**Important:** Shader authors should use LitOpaque and LitMasked in the MATERIALCONFIG section, not the Static/Dynamic variants directly. The engine handles the redirection automatically.
 
 ##### Rendering Pipeline Order
 
 Materials are rendered in this order during a frame:
 
 1. **Depth Pre-Pass** (optional): LitOpaqueStatic, LitOpaqueDynamic, LitMaskedStatic, LitMaskedDynamic - Renders depth-only for early-z rejection optimization
-2. **Sky Rendering**: Sky - Renders the background skybox or sky dome
-3. **Opaque Forward**: LitOpaqueStatic, LitOpaqueDynamic, LitMaskedStatic, LitMaskedDynamic - Renders opaque geometry with full lighting
-4. **Decals**: Decal - Projects decals onto opaque surfaces
-5. **Transparent Forward**: LitTransparent, LitForeground, LitScreenFX - Renders transparent geometry with lighting
-6. **Simple Rendering**: SimpleOpaque, SimpleTransparent, SimpleForeground - Renders unlit geometry and debug visualization
-7. **Special**: Light, ReflectionProbe, Selection, GUI - Renders specialized visualization and UI
+2. **Opaque Forward**: LitOpaqueStatic, LitOpaqueDynamic, LitMaskedStatic, LitMaskedDynamic - Renders opaque geometry with full lighting
+3. **Sky Rendering**: Sky - Renders the background skybox or sky dome
+4. **Transparent Forward**: LitTransparent, LitForeground, LitScreenFX - Renders transparent geometry with lighting
+5. **Simple Rendering**: SimpleOpaque, SimpleTransparent, SimpleForeground - Renders unlit geometry and debug visualization
+6. **GUI**: GUI - Renders UI
 
 ### RENDERSTATE
 

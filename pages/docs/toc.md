@@ -383,6 +383,7 @@
 ## [Logging](debugging/logging.md)
 ## [RenderDoc Integration](debugging/renderdoc.md)
 ## [Stats](debugging/stats.md)
+## [Tracing](debugging/tracing.md)
 ## [Tracy Integration](debugging/tracy.md)
 # Performance
 ## [Asset Collections](performance/asset-collections.md)

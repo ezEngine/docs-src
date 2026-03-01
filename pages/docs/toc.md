@@ -290,6 +290,7 @@
 ## [Spawn Component](gameplay/spawn-component.md)
 ## [Spawnbox Component](gameplay/spawnbox-component.md)
 ## [Timed Death Component](gameplay/timed-death-component.md)
+## [Volume Sampler Component](gameplay/volume-sampler-component.md)
 # Miscellaneous
 ## [Blackboard Template Asset](misc/blackboard-template-asset.md)
 ## [Blackboards](misc/blackboards.md)

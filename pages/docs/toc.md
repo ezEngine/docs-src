@@ -131,6 +131,7 @@
 #### [Jolt Breakable Slab Component](physics/jolt/special/jolt-breakable-slab-component.md)
 #### [Character Controller](physics/jolt/special/jolt-character-controller.md)
 #### [Jolt Cloth Sheet Component](physics/jolt/special/jolt-cloth-sheet-component.md)
+#### [Jolt Generate Collision Component](physics/jolt/special/jolt-generate-collision-component.md)
 #### [Jolt Grab Object Component](physics/jolt/special/jolt-grab-object-component.md)
 #### [Jolt Rope Component](physics/jolt/special/jolt-rope-component.md)
 # Effects
@@ -184,6 +185,7 @@
 ## Paths
 ### [Follow Path Component](animation/paths/follow-path-component.md)
 ### [Spline Component](animation/paths/spline-component.md)
+### [Spline Mesh Component](animation/paths/spline-mesh-component.md)
 ### [Spline Node Component](animation/paths/spline-node-component.md)
 ## Property Animation
 ### [Color Animation Component](animation/property-animation/color-animation-component.md)

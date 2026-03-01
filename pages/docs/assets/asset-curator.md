@@ -6,9 +6,7 @@ The *asset curator panel* is a tool to help find and fix problems with [assets](
 
 ## Activity
 
-At its top the asset curator panel displays an activity log. If *background transform* is active, this shows which assets have been transformed recently. Whether background transform is enabled can be seen from the progress bar at the bottom:
-
-![Transform Progress](media/transform-progress.png)
+At its top the asset curator panel displays a timeline of recently processed assets. Each bar represents one asset being transformed, with the Y-axis showing the individual worker processes and the X-axis showing time. Periods of inactivity are compressed to keep the view compact, indicated by a diagonal pattern. This makes it easy to see how many assets were processed in parallel and how long each one took.
 
 ## Transform Issues
 

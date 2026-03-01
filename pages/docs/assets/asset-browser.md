@@ -20,7 +20,11 @@ The asset browser can show all files that are on disk in the selected [data dire
 
 **Non-Importable files** are all other files. The editor can't do anything with them, other than to open the default application associated with this file type.
 
-You can also move and delete files and assets. Note that deleting a file moves it to the trash folder, so you can restore the file through the operating system functionality, if necessary. 
+You can also move and delete files and assets. Note that deleting a file moves it to the trash folder, so you can restore the file through the operating system functionality, if necessary.
+
+### Delete & Replace
+
+Right-clicking a single asset reveals a **Delete & Replace...** option. This opens an asset picker where you select a replacement asset. The editor then rewrites every asset document that referenced the deleted asset so that it now points to the replacement, and finally deletes the original asset. This is useful when consolidating duplicate assets.
 
 ## Search Field
 
@@ -50,7 +54,7 @@ On the left the asset browser displays all [data directories](../projects/data-d
 
 The **eye button** to the right of the search field, toggles which assets are shown. If it shows the *open eye*, the asset browser displays *all assets* below the currently selected folder, if it shows the *closed eye*, only the files directly inside the selected folder are shown. The former mode makes it easy to find assets for which you only roughly know where they are, the latter mode is more useful when you have many assets and you only want to see the ones from a specific folder.
 
-When any search term is entered into the text box, automatically all files are displayed. 
+When any search term is entered into the text box, automatically all files are displayed.
 
 Some people prefer one mode or the other as their default, which is why this setting is saved and restored between editor runs.
 

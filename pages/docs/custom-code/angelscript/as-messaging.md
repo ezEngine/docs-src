@@ -47,7 +47,14 @@ If you need to send a message from one component and handle it in another compon
 
 ### AngelScript Event Messages
 
-At the moment it is not supported to send AngelScript messages as event messages.
+AngelScript messages can be sent as event messages using `ezGameObject::SendEventMessage()` and `ezGameObject::PostEventMessage()`, just like C++ event messages:
+
+```cpp
+AsMyEventMsg msg;
+GetOwner().SendEventMessage(msg, GetOwnerComponent());
+```
+
+Event messages travel up the object hierarchy. If intermediate objects have script components that do not handle the message, those components must have the **Pass-Through Unhandled Events** option enabled on their [script component](as-components.md), otherwise the event will stop propagating at that object.
 
 ## See Also
 

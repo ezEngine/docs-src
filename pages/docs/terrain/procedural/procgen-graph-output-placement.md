@@ -30,15 +30,22 @@ More elaborate filtering can be achieved with [modifier nodes](procgen-graph-mod
   ![Different cull distances](media/procgen-cull-distance.jpg)
 
 * `PlacementMode`: How to determine the location where to place objects.
-  1. *Raycast:* In this mode a physics ray is cast downwards from the volume of the [placement component](procgen-placement-component.md). Using the `CollisionLayer` and `Surface` as filters, the closest intersection point is used.
+  1. *Raycast:* A physics ray is cast downwards from the volume of the [placement component](procgen-placement-component.md). Using the `CollisionLayer` and `Surface` as filters, the closest intersection point is used.
 
      ![Placement mode: raycast](media/procgen-placement-raycast.jpg)
 
-  1. *Fixed:* In this mode objects are always placed at the height of the [placement component](procgen-placement-component.md). No ray is cast, and no location is filtered out. This can be used for 2D games where no [collision geometry](../../physics/jolt/collision-shapes/jolt-collision-meshes.md) exists. Custom filtering can still be achieved through [image volumes](procgen-volume-image-component.md) and other [modifiers](procgen-graph-modifiers.md).
+  1. *Raycast High Quality:* Like *Raycast*, but additionally fires `NumAdditionalRays` extra rays in a circle of radius `RaySpread * Footprint` around the initial hit point. If any of the surrounding rays misses (e.g. the object would be placed too close to a ledge or overhang), the placement is rejected. The normals of all successful hits are averaged to produce a smoother surface orientation for `AlignToNormal`. Use this mode when visual quality matters more than raw performance.
+
+  1. *Fixed:* Objects are always placed at the height of the [placement component](procgen-placement-component.md). No ray is cast and no location is filtered out. This can be used for 2D games where no [collision geometry](../../physics/jolt/collision-shapes/jolt-collision-meshes.md) exists. Custom filtering can still be achieved through [image volumes](procgen-volume-image-component.md) and other [modifiers](procgen-graph-modifiers.md).
 
      ![Placement mode: fixed](media/procgen-placement-fixed.jpg)
 
-* `CollisionLayer`: The [collision layer](../../physics/jolt/collision-shapes/jolt-collision-layers.md) to use when `PlacementMode` is set to *Raycast*. The collision layer decides which physical objects will be hit by the raycast and thus on which surfaces objects may get spawned at all. Note that in *Raycast* mode objects can only be placed, if a [collision meshes](../../physics/jolt/collision-shapes/jolt-collision-meshes.md) exist in the scene at all ([greyboxes](../../scenes/greyboxing.md) and [heightfields](../heightfield-component.md) set these up automatically).
+* `CollisionLayer`: The [collision layer](../../physics/jolt/collision-shapes/jolt-collision-layers.md) to use when `PlacementMode` is set to *Raycast* or *Raycast High Quality*. The collision layer decides which physical objects will be hit by the raycast and thus on which surfaces objects may get spawned at all. Note that in raycast modes objects can only be placed, if [collision meshes](../../physics/jolt/collision-shapes/jolt-collision-meshes.md) exist in the scene ([greyboxes](../../scenes/greyboxing.md) and [heightfields](../heightfield-component.md) set these up automatically).
+
+* `NumAdditionalRays`: Only used in *Raycast High Quality* mode. The number of extra rays fired around the initial hit in a circle. Minimum 3, default 4. More rays improve accuracy at the cost of performance.
+
+* `RaySpread`: Only used in *Raycast High Quality* mode. Scales the radius of the surrounding ray circle relative to the object's `Footprint`. A value of `1` means the circle has the same radius as the footprint.
+
 * `Surface`: An optional [surface](../../materials/surfaces.md) that's used to filter object placement. Objects will only be placed on surfaces of this type (or derived). This is used to only plant certain vegetation on each type of ground.
 
   ![Filter by surface type](media/procgen-surface.jpg)

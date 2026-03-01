@@ -83,3 +83,4 @@ Also see the [spline node component](spline-node-component.md) for options on ea
 
 * [Spline Node Component](spline-node-component.md)
 * [Follow Path Component](follow-path-component.md)
+* [Spline Mesh Component](spline-mesh-component.md)

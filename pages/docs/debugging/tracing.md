@@ -1,14 +1,16 @@
 # Tracing
 
-ezEngine provides a cross-platform tracing system that emits structured events to the operating system's tracing infrastructure. Tracing is different from [profiling](../performance/profiling.md) and [logging](../performance/logging.md) as it allows for different debugging aproaches:
-1. Unlike [profiling](../performance/profiling.md), which stores data in an in-process ring buffer, tracing sends events to an external OS-level backend for capture by dedicated tools. This enables correlation with e.g.kernel events (scheduling, I/O).
+ezEngine provides a cross-platform tracing system that emits structured events to the operating system's tracing infrastructure. Tracing is different from [profiling](../performance/profiling.md) and [logging](logging.md) as it allows for different debugging approaches:
+
+1. Unlike [profiling](../performance/profiling.md), which stores data in an in-process ring buffer, tracing sends events to an external OS-level backend for capture by dedicated tools. This enables correlation with e.g. kernel events (scheduling, I/O).
 1. Traces are system wide so you can capture events from multiple threads / processes, even those you don't own.
 1. You can attach data fields to a trace event which are structured, allowing tools to aggregate or filter by them.
-1. Each trace event stores process and thread information, allowing to filter by various dimensions unlike [logging](../performance/logging.md) which is always linear.
+1. Each trace event stores process and thread information, allowing to filter by various dimensions unlike [logging](logging.md) which is always linear.
 
 When you should not use tracing:
-1. If you need instant feedback in the debugger, use [logging](../performance/logging.md) instead.
-1. If you want to do performance profiling on CPU / GPU, use [profiling](../performance/profiling.md) for capturing or [tracy](../performance/profiling.md) for real-time observation instead.
+
+1. If you need instant feedback in the debugger, use [logging](logging.md) instead.
+1. If you want to do performance profiling on CPU / GPU, use [profiling](../performance/profiling.md) for capturing or [tracy](tracy.md) for real-time observation instead.
 
 
 The tracing system uses:

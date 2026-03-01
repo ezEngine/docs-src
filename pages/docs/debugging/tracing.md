@@ -274,7 +274,7 @@ While you can use the most common trace viewer for you respective platform:
 
 You also have the option of converting to different trace formats to use different tools. No tool is perfect and each has its own strength and weaknesses. Some options to consider:
 1. There are many tools that can read LTTNG traces.
-1. You can use [ctf2ctf](https://github.com/KDABLabs/ctf2ctf) to convert LTTNG traces to Chrome Trace Format (json). Chrome trace format can be opened by [chrome://tracing/](chrome://tracing/) in chromium-based browser or in Qt's [Chrome Trace Format Visualizer](https://doc.qt.io/qtcreator/creator-ctf-visualizer.html).
+1. You can use [ctf2ctf](https://github.com/KDABLabs/ctf2ctf) to convert LTTNG traces to Chrome Trace Format (json). Chrome trace format can be opened by typing `chrome://tracing` into the address bar of a Chromium-based browser or in Qt's [Chrome Trace Format Visualizer](https://doc.qt.io/qtcreator/creator-ctf-visualizer.html).
 1. You can install [Microsoft Performance Tools Linux / Android](https://github.com/microsoft/Microsoft-Performance-Tools-Linux-Android) plugins into WPA to be able to load perfetto and LTTNG (ctf format) traces. Note that you need to zip the LTTNG trace folder and rename it to `*.ctf` in order to open it in WPA.
 
 ## See Also

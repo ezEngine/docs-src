@@ -2,6 +2,8 @@
 
 The *RmlUi Canvas 3D* component (`ezRmlUiCanvas3DComponent`) renders an [RmlUi](rmlui.md) document into a texture that is applied to a mesh in the scene. This allows UI panels to exist as physical objects in the 3D world — for example interactive terminals, noticeboards, or in-world displays.
 
+![3D UI with RmlUI](media/rmlui-3d.jpg)
+
 ## Component Properties
 
 For the base properties shared with the 2D canvas (Rml Resource, Autobind Blackboards, Send Event Message, On Demand Update), see the [RmlUI Canvas 2D Component](rmlui-canvas2d-component.md).

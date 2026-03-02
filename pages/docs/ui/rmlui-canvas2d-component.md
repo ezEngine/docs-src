@@ -2,6 +2,8 @@
 
 The *RmlUi Canvas 2D* component (`ezRmlUiCanvas2DComponent`) renders an [RmlUi](rmlui.md) document as a screen-space overlay. This is the standard choice for HUDs and menus.
 
+![2D UI with RmlUI](media/rmlui.jpg)
+
 ## Component Properties
 
 ### Base Properties

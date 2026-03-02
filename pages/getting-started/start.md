@@ -20,7 +20,7 @@ Finally, the [Testing Chambers](../samples/testing-chambers.md) project contains
 
 ## Videos
 
-The [ezEngine YouTube channel](https://www.youtube.com/@ezEngine) demonstrates various aspects of the engine. Since the engine is constantly being improved, some vidoes are somewhat outdated, but still contain valuable information.
+The [ezEngine YouTube channel](https://www.youtube.com/@ezEngine) demonstrates various aspects of the engine. Since the engine is constantly being improved, some videos are somewhat outdated, but still contain valuable information.
 
 The [videos](videos.md) page has a selection of videos that might be interesting to start with.
 

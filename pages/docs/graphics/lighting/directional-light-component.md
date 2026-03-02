@@ -24,9 +24,9 @@ See [this page](dynamic-shadows.md#shadow-component-properties) for shadow relat
 
 * `FadeOutStart`: At what fraction of the shadow range it should start to fade out. For instance, if the `MinShadowRange` is set to 10 meters, and `FadeOutStart` is set to 0.8, then the shadows will start to fade out at a distance of 8 meters.
 
-* `SplitModeWeight`: TODO
+* `SplitModeWeight`: Controls how the shadow range is divided among the cascades. A value of `0` distributes cascades evenly (linear split), while a value of `1` uses a fully logarithmic split that concentrates more cascades near the camera for sharper close-up shadows. Values in between blend the two modes. Increase this value to improve shadow quality near the camera at the cost of quality in the distance.
 
-* `NearPlaneOffset`: TODO
+* `NearPlaneOffset`: Extends the shadow camera's near plane behind the main camera. This ensures that objects located just behind the viewer can still cast shadows into the visible scene. Increase this value if you notice missing shadows from objects that are slightly outside the camera's view.
 
 ## See Also
 

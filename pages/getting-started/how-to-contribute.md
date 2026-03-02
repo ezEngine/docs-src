@@ -26,7 +26,7 @@ If you itch to fix *something* you can also search our [bug tickets](https://git
 
 EZ ships with a large number of unit tests. Especially the lower level functionality is well covered with tests, but the higher up code coverage becomes more and more spotty. If you want to add a test, that's great. Especially if you run into a bug, no matter whether you are able to fix it yourself or not, adding a test that reproduces the bug (and thus ensures it won't reappear after a fix) is very useful. If you do not want to go through the hassle of setting up a proper test, even just posting a piece of code that reproduces an issue in general, allows us to put that into a proper test scenario with little effort.
 
-And if you really want to contribute to the overall test coverage, search the code-base for "\\\\\\test" or "TODO" to find code pieces that developers already marked up to need a test.
+And if you really want to contribute to the overall test coverage, search the code-base for `\test` or `TODO` to find code pieces that developers already marked up to need a test.
 
 ## Features
 

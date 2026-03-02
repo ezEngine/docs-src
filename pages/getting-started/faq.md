@@ -12,7 +12,7 @@ For more details see [Supported Platforms](../docs/build/supported-platforms.md)
 
 ## Building
 
-See [this page](https://ezengine.net/pages/docs/build/building-ez.html) for instructions how to build the engine.
+See [this page](../docs/build/building-ez.md) for instructions how to build the engine.
 
 ## Render API
 

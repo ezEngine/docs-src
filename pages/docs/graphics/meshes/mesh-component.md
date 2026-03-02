@@ -11,6 +11,8 @@ Mesh components will cast [shadows](../lighting/dynamic-shadows.md) when the `Ca
 * `Mesh`: The [mesh asset](mesh-asset.md) to render.
 * `Color`: A tint color for the mesh instance. Typically this is just multiplied into the diffuse color of the mesh [materials](../../materials/materials-overview.md), though if the material uses a [visual shader](../../materials/visual-shaders.md), the mesh color can be used to represent arbitrary input data, for example to blend between material states.
 * `CustomData`: A 4-component vector to pass in arbitrary values. By default, this data is not used, at all, but custom shaders are free to use it in any way they like.
+* `SortingDepthOffset`: An offset (in world units) added to the camera distance when computing the render sort order. This is mainly relevant for transparent materials, which are rendered back-to-front. A positive value makes the mesh sort as if it were further away (rendered earlier, behind other transparent objects), a negative value makes it sort as if it were closer (rendered later, in front of other transparent objects). Use this to resolve incorrect overlap ordering between transparent meshes that are at similar depths.
+
 * `Materials`: By default the referenced mesh is rendered with the materials that are set up inside the mesh asset. However, the mesh component can override the materials. Each mesh has one or many *sub-meshes*, meaning mesh parts that use different materials. This array allows to set an override for each of those sub-meshes.
 
 ## See Also

@@ -49,7 +49,7 @@ Dynamic light sources such as [directional lights](directional-light-component.m
 
   ![Penumbra Size](media/penumbra.jpg)
 
-* `SlopeBias, ConstantBias`: TODO
+* `SlopeBias, ConstantBias`: These values control the shadow bias used to combat *shadow acne*. `ConstantBias` shifts all shadow map depth values by a fixed amount, while `SlopeBias` adds an additional offset that scales with the slope of the surface relative to the light direction — steeper angles receive a larger offset. Increase either value if you see light leaking through surfaces in shadowed areas. Decrease them if shadows appear detached from their casters (*Peter Panning*). The appropriate values depend on the scene geometry and light angle, so some manual tuning per light is often necessary.
 
 * `ShadowFadeOutRange`: If specified, shadows are faded out when the light source has less than a certain size in screen space. This makes it possible to have many shadow casting lights in a scene, and although all of them contribute light, only the most prominent ones cast shadows, which reduces the performance impact.
 

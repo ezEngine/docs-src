@@ -20,6 +20,10 @@ See [this page](dynamic-shadows.md#shadow-component-properties) for shadow relat
 
 * `Use Color Temperature`: If enabled, the light color is defined through a temperature value. This makes it easier to set up physically accurate lighting conditions.
 
+* `Temperature`: Visible when `Use Color Temperature` is enabled. Specifies the color temperature of the light in Kelvin. Lower values (around 2700 K) produce warm, orange-tinted light; higher values (around 6500 K) produce cool, blue-tinted light.
+
+* `SpecularMultiplier`: A multiplier applied to the light's specular contribution. The default value of `1` uses the standard specular intensity. Set to `0` to make the light affect only diffuse lighting, or increase it beyond `1` to exaggerate specular highlights.
+
 * `Range`: The distance over which the light source affects geometry. By default this is set to `Auto`, meaning the necessary range will be computed from the light's brightness. For full control, the range can be set manually. The light will always attenuate to zero within the given range, so by specifying a small range you can create a small, yet very bright light.
 
 ## See Also

@@ -200,7 +200,7 @@ RmlUi is the C++ user interface package based on the HTML and CSS standards, des
 
 Link: [http://www.sfml-dev.org](http://www.sfml-dev.org)
 
-Compile switch: **currently none (TODO)**
+Compile switch: **currently none**
 
 This library provides a simple and portable interface for window creation, input handling and more. Used by ezWindow and ezStandardInputDevice on non-Windows platforms (Mac, Linux).
 

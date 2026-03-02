@@ -10,9 +10,7 @@ Objects inside the water volume are pushed upward against gravity (buoyancy) and
 
 The water volume component requires a [Jolt trigger component](../actors/jolt-trigger-component.md) on the **same game object**. The trigger detects when dynamic actors enter and leave the water volume. Without the trigger component, no buoyancy will be applied and a warning is emitted at simulation start.
 
-Typically you set up the trigger component to match the extents of the water volume, so that actors are detected as soon as they overlap the water region.
-
-> **Note:** Only [dynamic actors](../actors/jolt-dynamic-actor-component.md) (non-kinematic) are affected by the water volume. Static and kinematic actors are ignored.
+> **Note:** Only [dynamic actors](../actors/jolt-dynamic-actor-component.md) are affected by the water volume. Static and kinematic actors are ignored.
 
 ## Buoyancy Factor
 

@@ -34,6 +34,10 @@ See [this page](dynamic-shadows.md#shadow-component-properties) for shadow relat
 
 * `Use Color Temperature`: If enabled, the light color is defined through a temperature value. This makes it easier to set up physically accurate lighting conditions.
 
+* `Temperature`: Visible when `Use Color Temperature` is enabled. Specifies the color temperature of the light in Kelvin. Lower values (around 2700 K) produce warm, orange-tinted light; higher values (around 6500 K) produce cool, blue-tinted light.
+
+* `SpecularMultiplier`: A multiplier applied to the light's specular contribution. The default value of `1` uses the standard specular intensity. Set to `0` to make the light affect only diffuse lighting, or increase it beyond `1` to exaggerate specular highlights.
+
 * `Range`: The distance over which the light source affects geometry. By default this is set to `Auto`, meaning the necessary range will be computed from the light's brightness. For full control, the range can be set manually. The light will always attenuate to zero within the given range, so by specifying a small range you can create a small, yet very bright light.
 
 * `InnerSpotAngle`: The inner angle of the spot light's cone. Within this angle the spot light will not attenuate (except by distance) and stay equally bright.
@@ -43,6 +47,10 @@ See [this page](dynamic-shadows.md#shadow-component-properties) for shadow relat
 * `Cookie`: A texture to project a light pattern ("cookie") into the scene. This can be used for effects like complex shadows or light shapes.
 
 * `Material`: Uses a decal material for animated light projection effects. Such materials can be created with the [Visual Shader Editor](../../materials/visual-shaders.md). They need to use the *decal* output node, and to be selectable in the [Asset Browser](../../assets/asset-browser.md) their `Asset Filter Tags` property has to be set to **Decal**.
+
+* `MaterialResolution`: The resolution of the internal texture that the material is rendered into, in pixels. Valid range is 16 to 1024, default is 512. Reduce this for performance if the projected image doesn't need to be sharp.
+
+* `MaterialUpdateInterval`: How frequently the material texture is re-rendered, in seconds. A value of `0` (the default) re-renders every frame, which is needed for animated materials. Set a higher value for materials that change slowly, or that are only updated on demand, to reduce rendering cost.
 
 * **Note:** If both a material and a cookie are set, only the material will be used.
 

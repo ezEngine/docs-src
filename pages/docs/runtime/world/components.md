@@ -110,9 +110,7 @@ The *message handler* section is important to enable [messaging](world-messaging
 
 The *functions* section is used to expose certain member functions to the reflection system, such that script bindings, such as [Visual Scripts](../../custom-code/visual-script/visual-script-overview.md) can call these functions.
 
-<!-- TODO: at some point 'we' must document all the available options *sigh* -->
-
-At the moment there is no documentation that lists all the available options. It is best to get inspiration by looking at the code for existing components.
+For a complete reference of all available property macros (including maps, enums, bitflags, functions and message senders) see the [Reflection System](../reflection-system.md) page. For all available property and type attributes (such as `ezDefaultValueAttribute`, `ezClampValueAttribute`, `ezAssetBrowserAttribute`, manipulators, and visualizers) see the [Reflection Attributes](../reflection-attributes.md) page.
 
 ## Component Activation
 

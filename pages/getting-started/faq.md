@@ -52,8 +52,6 @@ We don't plan very far ahead. Here are the things we intend to work on in the ne
 
 1. Vulkan renderer
 1. Linux port
-1. Animation system improvements
-1. Better ragdoll system
 1. General usability improvements
 1. Game AI functionality
 

@@ -87,7 +87,7 @@ EZ_END_COMPONENT_TYPE
 ```
 <!-- END-DOCS-CODE-SNIPPET -->
 
-This information is used in various ways. The editor uses it for the UI. Attributes on each property allow you to configure what default values the editor should use, and whether it should clamp the range for values, etc. Bindings to other languages also use this information to generate the necessary code. Everything that is not mentioned in this block, is internal to the C++ code and hidden from the tools.
+This information is used in various ways. The editor uses it for the UI. [Attributes](../../runtime/reflection-attributes.md) on each property allow you to configure what default values the editor should use, and whether it should clamp the range for values, etc. Bindings to other languages also use this information to generate the necessary code. Everything that is not mentioned in this block, is internal to the C++ code and hidden from the tools.
 
 ## Initialization and Update
 

@@ -127,7 +127,7 @@ The bitflags constants can either be declared via `EZ_BITFLAGS_CONSTANTS()` or `
   
 ## Properties
 
-Properties are the most important information in a type as they define the data inside it. The properties of a type can be accessed via `ezRTTI::GetProperties()`. There are different categories of properties, each deriving from `ezAbstractProperty`. The type of property can be determined by calling `ezAbstractProperty::GetCategory()`.
+Properties are the most important information in a type as they define the data inside it. The properties of a type can be accessed via `ezRTTI::GetProperties()`. There are different categories of properties, each deriving from `ezAbstractProperty`. The type of property can be determined by calling `ezAbstractProperty::GetCategory()`. Properties can also have [attributes](reflection-attributes.md) attached to them that control how they appear and behave in the editor.
 Properties are added via the property macros inside the `EZ_BEGIN_PROPERTIES()` / `EZ_END_PROPERTIES()` block of the type declaration like this:
 
 ```cpp
@@ -193,7 +193,7 @@ const ezTexture2DResourceHandle& GetTexture2() const;
 
 > **IMPORTANT**
 >
-> The reflection system treats resource handles like strings. The macros above just automatically generate the necessary boilerplate code for this. It is the `ezAssetBrowserAttribute` which makes the editor treat such a string differently.
+> The reflection system treats resource handles like strings. The macros above just automatically generate the necessary boilerplate code for this. It is the [`ezAssetBrowserAttribute`](reflection-attributes.md#ezassetbrowserattribute) which makes the editor treat such a string differently.
 
 ### Arrays
 
@@ -240,6 +240,83 @@ EZ_SET_MEMBER_PROPERTY_READ_ONLY("SetRO", m_SetMember),
 
 To access an instance's set, cast the property to `ezAbstractSetProperty` and call `ezAbstractSetProperty::GetElementType()` to determine the element type. From here you can use the various functions inside `ezAbstractSetProperty` to manipulate an instance's set.
 
+### Maps
+
+Map properties expose `ezMap` or `ezHashTable` members (string key → value). Direct map properties are declared via `EZ_MAP_MEMBER_PROPERTY(PropertyName, MemberName)`. Accessor variants allow hiding the underlying container and intercepting writes.
+
+The available macros are:
+
+```cpp
+EZ_MAP_MEMBER_PROPERTY("Map", m_Map),
+EZ_MAP_MEMBER_PROPERTY_READ_ONLY("MapRO", m_Map),
+EZ_MAP_ACCESSOR_PROPERTY("MapAccessor", GetKeyRange, GetValue, Insert, Remove),
+EZ_MAP_ACCESSOR_PROPERTY_READ_ONLY("MapAccessorRO", GetKeyRange, GetValue),
+EZ_MAP_WRITE_ACCESSOR_PROPERTY("MapWriteAccessor", GetContainer, Insert, Remove),
+```
+
+The required function signatures for the full accessor form are:
+
+```cpp
+const RangeType& GetKeyRange() const;   // RangeType must be range-for iterable with string-convertible keys
+bool GetValue(const char* szKey, Type& out_value) const;
+void Insert(const char* szKey, Type value);
+void Remove(const char* szKey);
+```
+
+### Enum and Bitflags Properties
+
+For members of type `ezEnum<>` or `ezBitflags<>`, use the dedicated enum and bitflags macros. These ensure the editor displays the correct dropdown or checkbox list.
+
+```cpp
+// Enum member / accessor
+EZ_ENUM_MEMBER_PROPERTY("BlendMode", ezBlendMode, m_BlendMode),
+EZ_ENUM_MEMBER_PROPERTY_READ_ONLY("BlendModeRO", ezBlendMode, m_BlendMode),
+EZ_ENUM_ACCESSOR_PROPERTY("BlendMode", ezBlendMode, GetBlendMode, SetBlendMode),
+EZ_ENUM_ACCESSOR_PROPERTY_READ_ONLY("BlendModeRO", ezBlendMode, GetBlendMode),
+
+// Bitflags member / accessor
+EZ_BITFLAGS_MEMBER_PROPERTY("RenderFlags", ezRenderFlags, m_RenderFlags),
+EZ_BITFLAGS_MEMBER_PROPERTY_READ_ONLY("RenderFlagsRO", ezRenderFlags, m_RenderFlags),
+EZ_BITFLAGS_ACCESSOR_PROPERTY("RenderFlags", ezRenderFlags, GetRenderFlags, SetRenderFlags),
+EZ_BITFLAGS_ACCESSOR_PROPERTY_READ_ONLY("RenderFlagsRO", ezRenderFlags, GetRenderFlags),
+```
+
+### Functions
+
+Functions can be registered so that the scripting system and other tools can call them. Use `EZ_BEGIN_FUNCTIONS` / `EZ_END_FUNCTIONS` inside the type block:
+
+```cpp
+EZ_BEGIN_FUNCTIONS
+{
+  // Expose a regular member or static function by its C++ name
+  EZ_FUNCTION_PROPERTY(MyFunction),
+
+  // Same, but with a custom display name or to resolve an overloaded function
+  EZ_FUNCTION_PROPERTY_EX("Fire", MyClass::FireProjectile),
+
+  // Mark a function as callable from visual scripts; list In/Out/Inout and parameter names
+  EZ_SCRIPT_FUNCTION_PROPERTY(SetTarget, In, "Position", In, "Speed"),
+
+  // Expose a constructor
+  EZ_CONSTRUCTOR_PROPERTY(float, float),
+}
+EZ_END_FUNCTIONS;
+```
+
+`EZ_SCRIPT_FUNCTION_PROPERTY` is a convenience wrapper around `EZ_FUNCTION_PROPERTY` that automatically attaches an [`ezScriptableFunctionAttribute`](reflection-attributes.md#scripting-attributes) with the specified argument directions and names.
+
+### Message Senders
+
+Message senders are member variables of types derived from `ezMessageSenderBase`. Registering them lets tools inspect what messages a component sends. Use `EZ_BEGIN_MESSAGESENDERS` / `EZ_END_MESSAGESENDERS`:
+
+```cpp
+EZ_BEGIN_MESSAGESENDERS
+{
+  EZ_MESSAGE_SENDER(m_CollisionSender),
+}
+EZ_END_MESSAGESENDERS;
+```
+
 ## Flags
 
 Types as well as properties have flags that quickly let you determine the kind of type / property you are dealing with.
@@ -260,4 +337,5 @@ EZ_ACCESSOR_PROPERTY("ArraysPtr", GetArrays, SetArrays)->AddFlags(ezPropertyFlag
 
 ## See Also
 
-
+* [Reflection Attributes](reflection-attributes.md)
+* [Components](world/components.md)

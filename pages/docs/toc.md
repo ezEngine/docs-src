@@ -366,6 +366,7 @@
 ### [Singleton Interfaces](runtime/configuration/interfaces.md)
 ### [Startup System](runtime/configuration/startup.md)
 ## [FileSystem](runtime/filesystem.md)
+## [Reflection Attributes](runtime/reflection-attributes.md)
 ## [Reflection System](runtime/reflection-system.md)
 ## [Resource Management](runtime/resource-management.md)
 ## World

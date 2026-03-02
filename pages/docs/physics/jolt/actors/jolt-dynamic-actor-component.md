@@ -49,9 +49,11 @@ Consequently, you have to be careful how you set up your rigid-bodies, to improv
 * `CollisionLayer`: The [collision layer](../collision-shapes/jolt-collision-layers.md) to use.
 * `Kinematic`: See [Kinematic vs. Simulated](#kinematic-vs-simulated) above.
 * `StartAsleep`: If enabled, the actor starts in the 'sleeping' state and will not be physically simulated until it gets into contact with another active actor. This is a performance optimization to prevent performance spikes after loading a level. If used badly, an object can float in air and not fall down until something else touches it. Make sure to only use this on objects that are [convincingly placed](../../../editor/run-scene.md#keep-simulation-changes) to begin with.
+* `AllowSleeping`: Whether this actor is allowed to go to sleep when it comes to rest. Disabling sleeping keeps the actor active every frame, which has a performance cost. Only disable this in rare cases where sleeping causes undesired behavior.
 * `WeightCategory`, `WeightScale`: See [actor mass](#actor-mass) above.
 * `Surface`: The [surface](../../../materials/surfaces.md) to use for this actor's shapes. The surface determines the friction and restitution during simulation, but also determines what effects are spawned when you interact with the object. Note that [collision meshes](../collision-shapes/jolt-collision-meshes.md) already specify the surface to use. If a surface is selected on the actor, it overrides the mesh's surface.
 * `GravityFactor`: Adjusts the influence of gravity on this object. If set to zero, it will float in space.
+* `BuoyancyFactor`: Determines how the actor behaves when submerged in a [water volume](../special/jolt-water-volume-component.md). A value of `1.0` means neutral buoyancy (neither floats nor sinks), values above `1.0` cause the actor to float upward, and values below `1.0` cause it to sink.
 * `LinearDamping`, `AngularDamping`: The damping properties affect how quickly an actor loses momentum and comes to rest. This can be adjusted separately for positional (linear) movement and rotational (angular) movement.
 * `ContinuousCollisionDetection`: See [Simulation Stability](#simulation-stability) above.
 * `OnContact`: See [OnContact Reactions](#oncontact-reactions) above.
@@ -63,3 +65,4 @@ Consequently, you have to be careful how you set up your rigid-bodies, to improv
 * [Jolt Shapes](../collision-shapes/jolt-shapes.md)
 * [Jolt Constraints](../constraints/jolt-constraints.md)
 * [Weights and Forces](../concepts/weights-forces.md)
+* [Jolt Water Volume Component](../special/jolt-water-volume-component.md)

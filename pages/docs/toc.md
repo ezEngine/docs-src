@@ -77,6 +77,7 @@
 ### [Render to Texture (TODO)](graphics/render-to-texture/render-to-texture.md)
 ## Shaders
 ### [Shader Debugging](graphics/shaders/shader-debugging.md)
+### [Shader Material Sections](graphics/shaders/shader-material-sections.md)
 ### [Shader Permutation Variables](graphics/shaders/shader-permutation-variables.md)
 ### [Shader Render State](graphics/shaders/shader-render-state.md)
 ### [Shaders Resources](graphics/shaders/shader-resources.md)

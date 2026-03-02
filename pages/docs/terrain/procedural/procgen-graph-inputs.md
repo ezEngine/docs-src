@@ -33,7 +33,20 @@ This node can be used to place objects only at specific altitudes, or to change 
 
 ## Mesh Vertex Color Input Node
 
-<!-- PAGE IS TODO -->
+The *Mesh Vertex Color* node reads the **original, authored vertex colors** baked into the mesh asset itself — for example, colors painted directly in a 3D modeling application such as Blender. It exposes these per-vertex colors as individual output pins so they can be combined with procedural inputs or passed through math nodes before reaching a [Vertex Color Output](procgen-graph-output-vertexcolor.md) node.
+
+This is useful for workflows where an artist paints blend masks or weights directly on the mesh (e.g. a "coverage" mask in the red channel), and the ProcGen graph then combines those authored values with procedural inputs such as slope, height, or noise.
+
+> **Note:** This node is only meaningful when the graph is evaluated by a [Procedural Vertex Color Component](procgen-vertex-color-component.md). It is *not* available in placement graphs, since object placement does not operate on individual mesh vertices.
+
+### Output Pins
+
+* `R`: The red channel of the mesh's baked vertex color at this vertex.
+* `G`: The green channel of the mesh's baked vertex color at this vertex.
+* `B`: The blue channel of the mesh's baked vertex color at this vertex.
+* `A`: The alpha channel of the mesh's baked vertex color at this vertex.
+
+All values are in [0;1] range. If the mesh has no vertex color stream, all outputs will be `0`.
 
 ## Position Node
 

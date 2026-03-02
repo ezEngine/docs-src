@@ -28,7 +28,7 @@ When you select a node, the *property grid* shows additional configuration optio
 What exact output the procedural rules generate depends on which *output nodes* are present in the graph. Currently these types of output are available:
 
 1. [ProcGen Graph Placement Output](procgen-graph-output-placement.md)
-1. [ProcGen Graph Vertex Color Output (TODO)](procgen-graph-output-vertexcolor.md)
+1. [ProcGen Graph Vertex Color Output](procgen-graph-output-vertexcolor.md)
 
 > **Tip:**
 >
@@ -43,7 +43,7 @@ The scene should contain some geometry with [collision meshes](../../physics/jol
 You also need a component that applies the ProcGen graph. Depending on the *output nodes* used in the graph this would be one of these:
 
 1. [Procedural Placement Component](procgen-placement-component.md)
-1. [Procedural Vertex Color Component (TODO)](procgen-vertex-color-component.md)
+1. [Procedural Vertex Color Component](procgen-vertex-color-component.md)
 
 Make sure the ProcGen graph asset is [transformed](../../assets/assets-overview.md). Then [press play to simulate it](../../editor/run-scene.md). If everything is set up right, you should see objects getting placed around the camera, within the specified volume.
 
@@ -69,7 +69,7 @@ When you then switch to a scene and run the simulation, you will see this patter
 
 Once you've figured out the basics, you can build more complex rules.
 
-1. Use the [ProcGen graph input nodes (TODO)](procgen-graph-inputs.md) to receive more information about a location, such as its slope or height.
+1. Use the [ProcGen graph input nodes](procgen-graph-inputs.md) to receive more information about a location, such as its slope or height.
 1. Pass the data through [ProcGen graph math nodes](procgen-graph-math.md) to adjust it as necessary.
 1. Use [ProcGen graph modifier nodes](procgen-graph-modifiers.md) to make it possible to configure the rules locally.
 
@@ -77,7 +77,7 @@ Once you've figured out the basics, you can build more complex rules.
 
 * [Procedural Placement Component](procgen-placement-component.md)
 * [ProcGen Graph Placement Output](procgen-graph-output-placement.md)
-* [Procedural Vertex Color Component (TODO)](procgen-vertex-color-component.md)
-* [ProcGen Graph Vertex Color Output (TODO)](procgen-graph-output-vertexcolor.md)
+* [Procedural Vertex Color Component](procgen-vertex-color-component.md)
+* [ProcGen Graph Vertex Color Output](procgen-graph-output-vertexcolor.md)
 * [Procedural Volume Box Component](procgen-volume-box-component.md)
 * [Procedural Volume Image Component](procgen-volume-image-component.md)

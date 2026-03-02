@@ -70,4 +70,4 @@ The input value is used as the X coordinate on the curve, and the Y value at tha
 ## See Also
 
 * [Procedural Object Placement](procedural-object-placement.md)
-* [ProcGen Graph Input Nodes (TODO)](procgen-graph-inputs.md)
+* [ProcGen Graph Input Nodes](procgen-graph-inputs.md)

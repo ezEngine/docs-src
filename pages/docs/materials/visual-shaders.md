@@ -66,6 +66,27 @@ This is used for projected textures in [spotlights](../graphics/lighting/spot-li
 
 This output node is **pixel shader only**. It does not allow to modify the vertex shader.
 
+#### Quad Particle Output Node
+
+This is used for custom particle shaders on [quad particle renderers](../effects/particle-effects/particle-renderers.md#quad-renderer).
+
+> **IMPORTANT**
+>
+> When using this output node, the `Asset Filter Tags` property on the material must be set to **QuadParticle** for the material to be available for quad particle renderers.
+
+This output node is **pixel shader only**. It does not allow to modify the vertex shader.
+
+It has two input pins:
+
+* **Color**: The RGB color of the particle (default: `1, 1, 1`).
+* **Opacity**: The transparency of the particle (default: `1`).
+
+To use a custom particle material, enable the `Use Custom Material` property on the quad particle renderer and assign the material. The particle system also provides dedicated input nodes (see [Input Nodes](#input-nodes)) that expose per-particle data such as lifetime and variation, which are useful for animating particles through the shader.
+
+> **NOTE**
+>
+> VSE currently only supports quad particles. Trail particles are not yet supported.
+
 ## Constants and Parameters
 
 These nodes define input values for a shader. Constants are always fixed, whereas parameters show up in the material properties section (after saving and transforming the asset).
@@ -87,6 +108,11 @@ State nodes allow you to configure the [render state](../graphics/shaders/shader
 These nodes provide various kinds of input data. Some give access to vertex attributes like position, normal, color and UV texture coordinates. Others provide global values, like the time or camera configuration.
 
 Of particular interest should be the **InstanceData** node, which allows to access object specific per-instance data. This is used to configure a shader differently and dynamically per object. Particularly the **Custom Data** value, which is available on [mesh components](../graphics/meshes/mesh-component.md), allows you to dynamically adjust a shader.
+
+When using the [Quad Particle Output Node](#quad-particle-output-node), two additional particle-specific input nodes become relevant:
+
+* **ParticleEffect**: Provides system-wide data. Currently exposes `TotalLifeTime`, the total time elapsed since the particle effect started.
+* **Particle**: Provides per-particle data. Exposes `Life` (a value from `1.0` when the particle spawns to `0.0` at death) and `Variation` (a random value per particle, useful for visual variety).
 
 ## How to Add Visual Shader Nodes
 

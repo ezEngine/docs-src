@@ -36,7 +36,13 @@ Since assets are often authered with many different conventions, you can adjust 
 
   If any *include tag* is specified, only meshes whose names **start or end** with that string are used. For instance, the include tag `LOD1` means that a mesh named *Bunny_LOD1* would be imported, but a mesh named *Bunny* would be skipped.
 
-  If any *exclude tag* is specified, meshes whose names *start or end** with that string are skipped. However, include tags take precedence.
+  If any *exclude tag* is specified, meshes whose names **start or end** with that string are skipped. However, include tags take precedence.
+
+  > **Note:**
+  >
+  > Only *mesh names* are considered, the names of material slots are not used here.
+  >
+  > If *any* include or exclude tag is set, the mesh importer writes the names of all found meshes to the [editor log](../../debugging/logging.md). You have to switch the **log filter** to *Dev* to see these messages. Then *force transform* the mesh to see the log messages show up. Usually you should use your DCC tool to see and edit mesh names, but this is a quick way to check.
 
 * `ImportTransform`, `RightDir`, `UpDir`, `FlipForwardDir`: How to rotate or mirror the mesh during import, so that it is oriented correctly for use in ezEngine. See [Mesh Orientation](#mesh-orientation) above.
 

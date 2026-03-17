@@ -3,6 +3,12 @@
 TexConv is a command-line tool to process textures from typical input formats like PNG, TGA, JPEG and DDS into optimized formats for runtime consumption.
 The most common scenario is to convert a single input file `A.xxx` into an optimized format `B.yyy`. However, the tool has many additional options for advanced uses.
 
+TexConv operates in one of three modes, selected with `-mode`:
+
+* `-mode Convert` (default): Full texture conversion with channel mapping, compression, mipmap generation, etc.
+* `-mode Compare`: Compare two images and produce difference images and an HTML report.
+* `-mode Reduce`: Convert DDS or TGA files to JPG or PNG to reduce file size, without any texture processing.
+
 ## Command-line Help
 
 Run TexConv.exe with the `--help` parameter to list all available options. Additionally, TexConv prints the used options when it is executed, to help understand what it is doing. Consult this output for details.
@@ -120,6 +126,75 @@ The `-usage` option specifies the purpose of the output and thus tells TexConv w
 TexConv can also compare two images and generate difference images and an HTML page with embedded images for easy inspection.
 
 Use `-mode Compare` to enable comparison mode, and the `-cmpXYZ` options to configure which images to compare and what outputs to generate. Consult the `--help` output for details.
+
+## Reduce Mode
+
+Reduce mode converts DDS and TGA files to JPG or PNG without applying any texture processing such as compression or mipmap generation. It is intended to reduce the on-disk size of imported source assets.
+
+The output format is chosen automatically based on the alpha channel:
+
+* If the image has no meaningful alpha (all pixels fully opaque), it is saved as **JPG**.
+* If the image contains any non-trivial alpha values, it is saved as **PNG**.
+
+If an output file with the target name already exists, the file is skipped.
+
+### Reduce Mode Options
+
+* `-in` : Path to the input file, or a folder path. Append `*` to the folder path to process subdirectories recursively (e.g. `-in "D:/textures/*"`).
+* `-out` : Optional output path. Can be an existing directory, a direct output file path, or a directory path with a trailing `*` to mirror the input subfolder structure in the output.
+* `-deleteSource` : If set to `true`, the source file is deleted after a successful conversion.
+
+### Reduce Mode Examples
+
+Convert a single file:
+
+```cmd
+TexConv.exe -mode Reduce -in D:/texture.dds
+```
+
+Convert all DDS and TGA files in a folder recursively, deleting the originals:
+
+```cmd
+TexConv.exe -mode Reduce -in "D:/textures/*" -deleteSource true
+```
+
+Convert files in a folder and place outputs in a separate directory, mirroring the folder structure:
+
+```cmd
+TexConv.exe -mode Reduce -in "D:/textures/*" -out "D:/output/*"
+```
+
+## Utility Scripts for Reducing Texture Sizes
+
+The repository provides PowerShell scripts in `Utilities/Scripts/` to automate texture size reduction on a folder of assets.
+
+### reduce-texture-sizes.ps1
+
+Orchestrates DDS/TGA conversion and optional post-processing of the resulting JPG and PNG files.
+
+```powershell
+./reduce-texture-sizes.ps1 "C:/path/to/folder" [-Convert] [-OptimizeJpeg] [-OptimizePng]
+```
+
+* `-Convert`: Runs TexConv in reduce mode on all DDS and TGA files in the folder (recursively). Source files are deleted after successful conversion.
+* `-OptimizeJpeg`: Runs `optimize-jpeg.ps1` on all JPG files afterwards.
+* `-OptimizePng`: Runs `optimize-png.ps1` on all PNG files afterwards.
+
+### optimize-jpeg.ps1
+
+Recompresses all JPG files in a folder using [mozjpeg](https://github.com/imagemin/mozjpeg-bin). Requires Node.js and mozjpeg installed globally (`npm install --global mozjpeg`). Files inside `AssetCache` directories are skipped.
+
+```powershell
+./optimize-jpeg.ps1 "C:/path/to/folder"
+```
+
+### optimize-png.ps1
+
+Recompresses all PNG files in a folder using `optipng`, which ships with the repository at `Data/Tools/Precompiled/optipng/optipng.exe`. Files inside `AssetCache` directories are skipped.
+
+```powershell
+./optimize-png.ps1 "C:/path/to/folder"
+```
 
 ## Examples
 

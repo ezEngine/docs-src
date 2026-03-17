@@ -105,7 +105,7 @@ Regular messages are used to 'instruct' components to do something. For example 
 
 The idea is, that for complex objects you typically want to have a single script at the top of the hierarchy that deals with everything that's happening below. For example an NPC may have many different child nodes, but if an `ezMsgDamage` is sent to any of them, the script at the top should decide what to do about it.
 
-Any message can be sent as an *event* by using `ezGameObject::SendEventMessage()`, however, messages that are meant to be always treated as events should derive from `ezEventMessage`, so that they include additional information.
+Any message can be sent as an *event* by using `ezGameObject::SendEventMessage()`.
 
 Finally, there is the `ezEventMessageHandlerComponent` interface, which is only implemented by very few component types, for example the [script component](../../custom-code/visual-script/script-component.md).
 
@@ -125,13 +125,15 @@ The message is then delivered to the closest parent node that handles event mess
 
 ### Declaring Event Messages
 
-Messages that are always sent as events should derive from `ezEventMessage`, however, this is not mandatory.
+Event messages are just regular messages. They don't require any special base class. To declare an event message, derive from `ezMessage` as usual.
 
 ### Sending Event Messages
 
 You can send messages as events to every object using `ezGameObject::SendEventMessage()`. This will determine the closest parent to handle events on the fly and deliver the message accordingly.
 
 For components that regularly send events to the same object hierarchy (their own), such as trigger components, it is more efficient to have a member of type `ezEventMessageSender<>`. Sending a message through this object will cache the receiving target and be more efficient the second time.
+
+When searching for event message handlers, the sender component itself is excluded from being a receiver on its own game object. This prevents a component that is also an event message handler from receiving its own event messages, which would otherwise cause an infinite loop. Once the search moves up to parent objects, this exclusion no longer applies.
 
 If a component that is an `ezEventMessageHandlerComponent` itself wants to send an event message further up the hierarchy, it has to send the event to its own parent node.
 

@@ -16,7 +16,7 @@ Jolt breakable slabs can be anchored on any of their edges, allowing you to cont
 * `Shape`: The basic shape of the slab (rectangle, triangle, or circle).
 * `Flags`: Which edges of the slab are fixed/anchored in the world. Shards adjacent to fixed edges will not fall under gravity.
 * `GravityFactor`: How strongly gravity affects the shards.
-* `ContactReportForceThreshold`: When this is set to a value larger than `0`, physical contacts with other objects will be reported (to script code) with the `ezMsgPhysicContact` message. Then a script may react to such impacts by breaking the slab. Set this to `0` to ignore physical impacts. Note that this property can be adjusted dynamically, so for example an unbroken slab may ignore physical impacts, but once it got damaged, contacts can be used to break the object further.
+* `ContactReportForceThreshold`: When this is set to a value larger than `0`, physical contacts with other objects will be reported (to script code) with the `ezMsgPhysicContact` message. The message includes `m_hOtherObject`, a handle to the other game object involved in the contact, which can be used for advanced scripting logic. Then a script may react to such impacts by breaking the slab. Set this to `0` to ignore physical impacts. Note that this property can be adjusted dynamically, so for example an unbroken slab may ignore physical impacts, but once it got damaged, contacts can be used to break the object further.
 
 ## Scripting and Events
 

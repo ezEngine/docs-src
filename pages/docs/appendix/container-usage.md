@@ -5,6 +5,8 @@ ezEngine has the following container classes:
   * `ezStaticArray`
   * `ezHybridArray`
   * `ezDynamicArray`
+  * `ezTempArray`
+  * `ezTempHybridArray`
   * `ezStaticRingBuffer`
   * `ezDeque`
   * `ezList`
@@ -18,6 +20,8 @@ The following containers store their data as contiguous arrays:
   * `ezStaticArray`
   * `ezHybridArray`
   * `ezDynamicArray`
+  * `ezTempArray`
+  * `ezTempHybridArray`
   * `ezStaticRingBuffer`
   * `ezArrayMap`
 
@@ -41,9 +45,7 @@ Never remove an element in between (using `RemoveAt`), unless there is really no
 Similarly, never insert elements anywhere else than at the end.
 The only exception is `ezDeque`, which is very efficient at insertion and removal of elements at both ends.
 
-
-
-#### `ezHybridArray` ####
+#### ezHybridArray
 
 `ezHybridArray` uses an internal fixed size cache (which you can specify as a template argument). When you create an `ezHybridArray` on the stack, that data is also allocated on the stack. This is the most important container for writing performance critical yet safe code. `ezHybridArray` allows to implement many algorithms without the need to use dynamic allocations.
 
@@ -53,8 +55,7 @@ However, be careful not to make the internal buffer too large. When creating `ez
 
 **Note:** `ezHybridArray` is derived from `ezDynamicArray`, that means every function that takes an `ezDynamicArray` (even for writing output to), can be given an `ezHybridArray`.
 
-
-#### `ezDynamicArray` ####
+#### ezDynamicArray
 
 `ezDynamicArray` always allocates its data on the heap. The upside is, that it has a very low memory overhead, as long as it is empty, and it can handle any number of elements.
 
@@ -62,8 +63,23 @@ Prefer `ezDynamicArray` if your working set is generally larger and when you kno
 
 Also prefer `ezDynamicArray` if the memory overhead in the empty state is of concern.
 
+#### ezTempArray
 
-#### `ezDeque` ####
+`ezTempArray<T>` is a `ezDynamicArray<T>` that uses `ezTempAllocator` instead of the default heap allocator. It is intended for arrays with a short lifetime that are created and destroyed within a narrow scope.
+
+Because `ezTempArray` derives from `ezDynamicArray`, it can be passed to any function that accepts an `ezDynamicArray<T>`, including functions that write output into the array.
+
+`ezTempAllocator` is a stack-based allocator. It allocates memory in large buckets and reclaims that memory as soon as the allocations at the top of the stack are freed. Out-of-order deallocations are supported, but the memory of an out-of-order deallocation is not reclaimed until all allocations above it have been freed. For the allocator to work well, temp arrays should not outlive the scope in which they are created.
+
+For allocations larger than the internal bucket size, `ezTempAllocator` falls back to the default heap allocator.
+
+#### ezTempHybridArray
+
+`ezTempHybridArray<T, Size>` is a `ezHybridArray<T, Size>` that uses `ezTempAllocator` when the in-place storage is exceeded. It combines the stack-local inline storage of `ezHybridArray` with the temp allocator for overflow, making it suitable for temporary arrays that usually stay within the inline buffer.
+
+Like `ezTempArray`, it is compatible with functions that accept `ezDynamicArray<T>` or `ezHybridArray<T, Size>`.
+
+#### ezDeque
 
 `ezDeque` stores its data as several chunks of contiguous arrays. An additional "redirection array" is used to know how to index into these chunks.
 `ezDeque` requires one pointer indirection to make a lookup into its data.
@@ -84,24 +100,17 @@ The memory overhead of `ezDeques` is rather high, so do not use it for small dat
 
 `ezDeques` are also very well suited, whenever you have large objects to store that are very costly to construct or copy around, and you want to prevent those operations by all means, such that you do not want a container reallocation to trigger that.
 
-
-
-
-#### `ezStaticArray` ####
+#### ezStaticArray
 
 This is a container that only stores a static array internally and cannot resize itself to be larger than that. Use this in code that has a definite upper limit of elements and whenever you must prevent the usage of any allocator by all means (such as for global variables).
 
 Typically there should be no need for this container, as `ezHybridArray` delivers the same performance advantages and the safety of reallocating to the required size dynamically.
 
-
-
-#### `ezStaticRingBuffer` ####
+#### ezStaticRingBuffer
 
 Use this when you need a ring-buffer that shall have a fixed size. Use `ezDeque` if you need a dynamically resizing ring-buffer.
 
-
-
-### Lists ###
+### Lists
 
 There is only one implementation of a doubly linked list: `ezList`
 
@@ -113,11 +122,9 @@ You should typically not use `ezList` in code that is performance critical. Use 
 
 Nodes in an `ezList` are never relocated in memory, as such iterators stay valid as long as the element is still alive.
 
+### Associative Containers
 
-
-### Associative Containers ###
-
-#### `ezMap` and `ezSet` ####
+#### ezMap and ezSet
 
 Both containers are basically the same, except that `ezMap` stores a 'value' for each 'key', whereas a set only stores 'keys'.
 
@@ -134,7 +141,7 @@ Insertion, lookup and removal are all `O(log n)` operations, since they are red-
 Note that the nodes in the Map/Set each contain one element of their key/value type and those are stored in an `ezDeque`. As such, when you put an `ezHybridArray` (or an `ezString`) into an `ezMap`, only one allocation is needed to allocate all the memory for a chunk (in the `ezDeque`) of data, which holds a large number of nodes, which already embed the data of their keys/values (e.g. `ezHybridArray`). Thus you can get away with very few memory allocations.
 If however you store an `ezDynamicArray` in an `ezMap`, each element still needs to allocate its own internal storage, which means you will get one additional allocation per element.
 
-#### `ezArrayMap` ####
+#### ezArrayMap
 
 This container provides similar functionality as `ezMap` but should be more efficient in scenarios where elements are looked up more often than they are inserted or removed. The implementation simply uses an array that is kept sorted, such that lookups can be done in a more cache friendly manner.
 
@@ -142,7 +149,7 @@ If all you need is an associative container and your use case consists of changi
 
 Note, however, that this container will rearrange elements in memory whenever it needs to be sorted. In contrast an `ezMap` guarantees that elements never move in memory, allowing to store pointers to the memory locations. Likewise the iterators of an `ezMap` stay valid as long as an elements resides in the map. For `ezArrayMap` this is not true, the index at which an element is stored can change whenever any element is added or removed.
 
-#### `ezHashTable` ####
+#### ezHashTable
 
 The `ezHashTable` is optimized for very fast lookup, which should typically be a `O(1)` operation. Prefer the hash table whenever you will have a data set that is modified infrequently, but lookups will be done often and need to be as fast as possible.
 

@@ -56,7 +56,7 @@ The density of the grid shows the current position snap value. If position snap 
 
 ## Manipulators
 
-Manipulators are component and property specific gizmos. Properties of a component that can be changed with a manipulator, are highlighted in blue (off) or violet (on). You can click the property label to toggle the manipulator mode. Once a manipulator is enabled, all *Standard Gizmos* are disabled. You can now also use the `Q` key to toggle manipulator mode off and on.
+Manipulators are component and property specific gizmos. Properties of a component that can be changed with a manipulator, are highlighted in blue (off) or violet (on). Each such property also shows a small toggle button next to its label. Click the property label or the toggle button to activate the manipulator. Once a manipulator is enabled, all *Standard Gizmos* are disabled. Press `Q` to cycle through the available manipulators on the selected object, or to deactivate the current one if no further manipulators are available.
 
 ![Manipulator](media/manipulator.jpg)
 

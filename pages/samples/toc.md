@@ -2,6 +2,7 @@
 # [Screenshots](screenshots.md)
 # [Testing Chambers](testing-chambers.md)
 # [Basic FPS Project Template](basic-fps-template.md)
+# [Bistro Sample](bistro-sample.md)
 # Monster Attack
 ## [Monster Attack Sample](monster-attack/monster-attack.md)
 ## [MA Devlog 1 - Intro](monster-attack/devlog-1.md)
@@ -13,7 +14,6 @@
 ## [MA Devlog 7 - Level Pieces](monster-attack/devlog-7.md)
 # [PacMan Sample](pacman.md)
 # [Crazy Ball Sample](crazyball.md)
-# [Bistro Sample](bistro-sample.md)
 # [Store Sample](store-sample.md)
 # [Sample Game Plugin](sample-game-plugin.md)
 # [RTS Sample](rts.md)

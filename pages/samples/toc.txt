@@ -2,6 +2,7 @@ samples-overview.md
 screenshots.md
 testing-chambers.md
 basic-fps-template.md
+bistro-sample.md
 monster-attack
 pacman.md
 crazyball.md

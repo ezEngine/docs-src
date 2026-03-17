@@ -9,27 +9,25 @@ The spline component defines smooth curves in 3D space using cubic Bezier curves
 1. Add a [game object](../../runtime/world/game-objects.md) and attach a *spline component* to it.
 1. Add several game objects as child objects (at least two).
 1. Attach a *spline node component* to each child object.
-1. Give each child object a different name. It is easiest to just give them numbers in the order in which you want them to be used in the spline.
+1. Position the child objects in the world to form a spline. Enable the `Visualize Spline` flag to see a preview of the curve.
 
    ![Path hierarchy config](media/path-hierarchy.png)
 
-1. Add those names in the desired order to the **Nodes** property of the spline component.
-
-   ![Path property config](media/path-properties.png)
-
-1. Position the child objects in the world to form a spline. Enable the `Visualize Spline` flag to see a preview of the curve.
+The spline uses the child objects in the order in which they appear in the scene hierarchy. To change the order of spline nodes, reorder the child objects in the [scene tree](../../editor/editor-views.md). Node names do not need to be unique.
 
 ### Editing Tips
 
 When editing a spline you often need to select the child path nodes and then go back to the spline object. `Ctrl+Q` selects the parent object of the currently selected object, which is very useful here. Also `Ctrl+B` changes to the previous selection, which can also be used to *undo* a selection change.
 
+The *Edit Nodes* manipulator is available both when the spline object itself is selected and when one of its child nodes is selected. This avoids having to switch back to the parent object to add or adjust nodes.
+
 ### Adding Points Interactively
 
-When the *Edit Nodes* manipulator is active, small gizmos appear on each spline segment. Click on a segment gizmo to insert a new spline node at that position. The editor automatically creates a child game object with a spline node component, gives it a proper name and adds it to the nodes list.
+When the *Edit Nodes* manipulator is active, small gizmos appear at the midpoint of each spline segment. Click on a segment gizmo to insert a new spline node at that position. The new node is immediately selected.
 
 ![Spline editing](media/spline-edit.jpg)
 
-To re-enable *manipulator mode* after translating an object, press `Q` or click on the `Edit Nodes` property again.
+To re-enable *manipulator mode* after translating an object, press `Q` to cycle back to the *Edit Nodes* manipulator, or click the toggle button next to the `Edit Nodes` property.
 
 ### Editing Tangents
 
@@ -75,7 +73,6 @@ See the *ScatterOnSpline* sample script in the [Testing Chambers](../../../sampl
 
 * `Flags`: Preview flags for the spline. Options include *Visualize Spline*, *Visualize Up Dir*, and *Visualize Tangents*.
 * `Closed`: Whether the spline should loop back to the first node.
-* `Nodes`: This array references all nodes by name or [object path](../../concepts/object-paths.md). Non-existing names are ignored.
 
 Also see the [spline node component](spline-node-component.md) for options on each node.
 

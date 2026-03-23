@@ -29,4 +29,5 @@ performance
 shipping
 tools
 ---
+tutorials
 appendix

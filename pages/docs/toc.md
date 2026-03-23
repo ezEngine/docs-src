@@ -411,6 +411,8 @@
 ## [StaticLinkUtil](tools/staticlinkutil.md)
 ## [ezTexConv](tools/texconv.md)
 ## [Unit Tests](tools/unit-tests.md)
+# Tutorials
+## [Tutorial: Custom Per-Instance Shader Data](tutorials/custom-instance-shader-data.md)
 # Appendix
 ## [Coding Guidelines](appendix/coding-guidelines.md)
 ## [Library Structure](appendix/library-structure.md)

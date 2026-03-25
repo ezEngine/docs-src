@@ -186,3 +186,4 @@ On the *effect* you can configure the number of *wind samples* that should be ta
 
 * [How Particle Effects Work](how-particle-effects-work.md)
 * [Particle Effect Component](particle-effect-component.md)
+* [Particle Attractor Component](particle-attractor-component.md)

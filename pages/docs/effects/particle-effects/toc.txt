@@ -6,3 +6,4 @@ particle-behaviors.md
 behaviors
 particle-renderers.md
 particle-effect-component.md
+particle-attractor-component.md

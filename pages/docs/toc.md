@@ -155,6 +155,8 @@
 ### [Particle Initializers](effects/particle-effects/particle-initializers.md)
 ### [Particle Behaviors](effects/particle-effects/particle-behaviors.md)
 ### Behaviors
+#### [Attract Behavior](effects/particle-effects/behaviors/pb-attract.md)
+#### [Bounds Sphere Behavior](effects/particle-effects/behaviors/pb-bounds-sphere.md)
 #### [Bounds Behavior](effects/particle-effects/behaviors/pb-bounds.md)
 #### [Color Gradient Behavior](effects/particle-effects/behaviors/pb-color-gradient.md)
 #### [Fade Out Behavior](effects/particle-effects/behaviors/pb-fade-out.md)
@@ -165,10 +167,12 @@
 #### [Pull Along Behavior](effects/particle-effects/behaviors/pb-pull-along.md)
 #### [Raycast Behavior](effects/particle-effects/behaviors/pb-raycast.md)
 #### [Size Curve Behavior](effects/particle-effects/behaviors/pb-size-curve.md)
+#### [Turbulence Behavior](effects/particle-effects/behaviors/pb-turbulence.md)
 #### [Velocity Behavior](effects/particle-effects/behaviors/pb-velocity.md)
 #### [Wind Behavior](effects/particle-effects/behaviors/pb-wind.md)
 ### [Particle Renderers](effects/particle-effects/particle-renderers.md)
 ### [Particle Effect Component](effects/particle-effects/particle-effect-component.md)
+### [Particle Attractor Component](effects/particle-effects/particle-attractor-component.md)
 ## Post Processing
 ### [Post-Processing Component](effects/post-processing/post-processing-component.md)
 ### [Volume Components](effects/post-processing/volume-components.md)

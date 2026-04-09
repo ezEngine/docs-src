@@ -34,7 +34,7 @@ Used by ezImage and the ezTexConv tool for BC7 encoding on Linux as an alternati
 
 ## Bend Studio Screen Space Shadows
 
-Link: [https://www.bendstudio.com/blog/inside-bend-screen-space-shadows]
+Link: [https://www.bendstudio.com/blog/inside-bend-screen-space-shadows)
 
 Compile switch: Currently none
 

@@ -32,6 +32,14 @@ Compile switch: Currently none, but only enabled on Linux.
 
 Used by ezImage and the ezTexConv tool for BC7 encoding on Linux as an alternative to [DirectXTex](#directxtex).
 
+## Bend Studio Screen Space Shadows
+
+Link: [https://www.bendstudio.com/blog/inside-bend-screen-space-shadows]
+
+Compile switch: Currently none
+
+A very efficient implementation of screen space shadows. Used by ezScreenSpaceShadowPass.
+
 ## cc0Textures
 
 Link: [https://cc0textures.com](https://cc0textures.com)

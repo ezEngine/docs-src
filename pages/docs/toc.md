@@ -160,6 +160,7 @@
 #### [Bounds Sphere Behavior](effects/particle-effects/behaviors/pb-bounds-sphere.md)
 #### [Bounds Behavior](effects/particle-effects/behaviors/pb-bounds.md)
 #### [Color Gradient Behavior](effects/particle-effects/behaviors/pb-color-gradient.md)
+#### [Expression Behavior](effects/particle-effects/behaviors/pb-expression.md)
 #### [Fade Out Behavior](effects/particle-effects/behaviors/pb-fade-out.md)
 #### [Flies Behavior](effects/particle-effects/behaviors/pb-flies.md)
 #### [Gravity Behavior](effects/particle-effects/behaviors/pb-gravity.md)
@@ -272,6 +273,7 @@
 # Ai
 ## Aiplugin
 ### [AiPlugin Overview](ai/AiPlugin/ai-plugin-overview.md)
+### [Detour Crowd Agent Component](ai/AiPlugin/detour-crowd-agent-component.md)
 ### [AI Navigation Component](ai/AiPlugin/navigation-component.md)
 ### [Navmesh Obstacle Component](ai/AiPlugin/navmesh-obstacle-component.md)
 ### [Navmesh Path Test Component](ai/AiPlugin/navmesh-path-test-component.md)
@@ -362,6 +364,7 @@
 ### [State Machine Asset](custom-code/game-logic/state-machine-asset.md)
 ### [State Machine Component](custom-code/game-logic/state-machine-component.md)
 ### [Trigger Delay Modifier Component](custom-code/game-logic/trigger-delay-modifier-component.md)
+## [Expressions](custom-code/expressions.md)
 # Runtime
 ## Application
 ### [Application](runtime/application/application.md)

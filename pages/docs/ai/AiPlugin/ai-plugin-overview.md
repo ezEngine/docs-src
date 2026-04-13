@@ -10,8 +10,12 @@ To get access to the C++ functionality, your code needs to additionally link aga
 
 The plugin provides functionality to create navmeshes on-demand at runtime. See [this chapter](runtime-navmesh.md) for details.
 
-Additionally there is C++ functionality available for searching paths and *steering* characters along the found path. See the [Monster Attack Sample](../../../samples/monster-attack/monster-attack.md), specifically the *monster component*, to see how this can be used. 
+Additionally there is C++ functionality available for searching paths and *steering* characters along the found path. See the [Monster Attack Sample](../../../samples/monster-attack/monster-attack.md), specifically the *monster component*, to see how this can be used.
+
+The [Detour Crowd Agent Component](detour-crowd-agent-component.md) provides a ready-to-use component for multi-agent navigation with local obstacle avoidance between agents.
 
 ## See Also
 
 * [Runtime Navmesh](runtime-navmesh.md)
+* [AI Navigation Component](navigation-component.md)
+* [Detour Crowd Agent Component](detour-crowd-agent-component.md)

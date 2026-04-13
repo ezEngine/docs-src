@@ -60,6 +60,17 @@ The toolbar buttons allow you to play/pause/reset and slow-down the animation pl
 
 Below the time scrubber there is an additional strip to edit [animation events](animation-events.md). Here you can add events that shall occur at specific times during the animation clip playback, such as *foot-down* or *fire-weapon*. Use the time scrubber above to play the clip and inspect at which time the event shall occur. Then *right click* into the event track and select **Add Event**. Which type of event will be added is specified with the combo box at the bottom right.
 
+## Custom Curves
+
+In the properties panel, you can add any number of named **custom curves**. You then edit these curves in the *Curves* widget at the bottom.
+
+At runtime, whenever the animation system plays back a clip, it samples each curve and broadcasts an `ezMsgAnimationCurveValue` message. Game code can handle this message in scripts or custom C++ components to drive other things, such as controlling light intensity, moving objects, or adjusting particle emission.
+
+The message provides aggregated values for the *minimum*, *maximum* and *average* sampled value. If only a single animation clip with this curve is active, all three values will be the same. When multiple clips are active at the same time (e.g. through an [animation graph](animation-graphs/animation-graph-overview.md)), curves with the same name across different clips are combined into a single message with these three values. This allows game code to choose the most appropriate value for its use case — for example, using the maximum value when multiple clips would trigger the same effect.
+
+In the majority of use cases, the *average* value is the most useful one.
+
 ## See Also
 
 * [Skeletal Animations](skeletal-animation-overview.md)
+* [Animation Events](animation-events.md)

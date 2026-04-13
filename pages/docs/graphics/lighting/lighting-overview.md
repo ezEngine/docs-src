@@ -30,6 +30,7 @@ There are different component types to provide different types of lighting:
 * [Spot Light Component](spot-light-component.md): For flashlights and directed lighting.
 * [Sky Light Component](sky-light-component.md): For dynamic light contribution from the sky.
 * [Reflection Probe Components](reflection-probe-components.md): For localized reflection probes.
+* [Light Shafts Component](light-shafts-component.md): For screen-space volumetric light shaft effects from a directional light.
 
 ## See Also
 

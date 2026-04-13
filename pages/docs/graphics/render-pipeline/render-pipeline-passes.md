@@ -112,6 +112,21 @@ Implements *Line Sweep Ambient Occlusion* (LSAO), an alternative SSAO algorithm 
 * `DepthCompareFunction`: How depth is evaluated when gathering samples — `Depth` (hard cutoff), `Normal` (plane-weighted), or `NormalAndSampleDistance` (plane and sample-distance weighted).
 * `DistributedGathering`: Spreads gather samples across multiple frames to reduce per-frame cost.
 
+## Light Shafts Pass
+
+Screen-space post-processing pass that produces volumetric light shaft effects (god rays / crepuscular rays) from the brightest directional light. It builds a mask from the depth buffer, applies a radial blur toward the projected light source position, and additively composites the result into the scene color.
+
+The pass reads light shaft parameters from the [Light Shafts Component](../lighting/light-shafts-component.md) present in the scene.
+
+**Properties:**
+
+* `DownsampleFactor`: How much to downsample the internal mask texture before blurring. Higher values reduce cost but lower the precision of the effect.
+* `NumBlurPasses`: Number of radial blur iterations. More passes produce smoother, longer shafts at increased cost.
+* `NumSamples`: Number of samples taken per blur pass along each ray.
+* `MaxBlurDistance`: Maximum length of the radial blur in normalized screen space. Larger values produce longer shafts.
+
+**Required Extractor:** [Clustered Data Extractor](render-pipeline-extractors.md#clustered-data-extractor)
+
 ## MSAA Resolve Pass
 
 Resolves a multi-sampled render target into a regular texture by averaging the samples. Required before passing MSAA output into passes that cannot process multi-sampled textures.
@@ -174,7 +189,7 @@ The pass takes a resolved depth buffer as input and produces a single-channel sh
 * `SurfaceThickness`: Controls how thick surfaces are considered to be during the ray march. Smaller values produce thinner, tighter contact shadows; larger values tolerate more depth variation before the shadow terminates. Range: `0.001` to `0.5`, default `0.005`.
 * `ShadowContrast`: Sharpens or softens the shadow falloff. Higher values give harder shadow edges; lower values produce a more gradual falloff. Range: `1.0` to `10.0`, default `4.0`.
 
-See [Screen Space Shadows](../../graphics/lighting/dynamic-shadows.md#screen-space-shadows) for usage instructions.
+See [Screen Space Shadows](../lighting/dynamic-shadows.md#screen-space-shadows) for usage instructions.
 
 ## Separated Bilateral Blur Pass
 

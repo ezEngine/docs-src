@@ -51,6 +51,7 @@
 ## Lighting
 ### [Lighting](graphics/lighting/lighting-overview.md)
 ### [Directional Light Component](graphics/lighting/directional-light-component.md)
+### [Light Shafts Component](graphics/lighting/light-shafts-component.md)
 ### [Point Light Component](graphics/lighting/point-light-component.md)
 ### [Spot Light Component](graphics/lighting/spot-light-component.md)
 ### [Dynamic Shadows](graphics/lighting/dynamic-shadows.md)

@@ -34,3 +34,4 @@ See [this page](dynamic-shadows.md#shadow-component-properties) for shadow relat
 
 * [Lighting](lighting-overview.md)
 * [Dynamic Shadows](dynamic-shadows.md)
+* [Light Shafts Component](light-shafts-component.md)

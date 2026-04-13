@@ -163,6 +163,19 @@ Draws a colored outline and translucent overlay around selected objects. Used ex
 * `HighlightColor`: Outline and overlay color.
 * `OverlayOpacity`: Opacity of the fill drawn over the selected object.
 
+## Screen Space Shadow Pass
+
+Generates a screen-space shadow mask using per-pixel ray marching against the depth buffer. The shadow mask is used by directional lights that have `ScreenSpaceShadows` enabled to produce contact shadows for surfaces that are too fine for shadow maps to capture.
+
+The pass takes a resolved depth buffer as input and produces a single-channel shadow factor texture. This texture is consumed by the [Opaque Forward Render Pass](#opaque-forward-render-pass) during lighting.
+
+**Properties:**
+
+* `SurfaceThickness`: Controls how thick surfaces are considered to be during the ray march. Smaller values produce thinner, tighter contact shadows; larger values tolerate more depth variation before the shadow terminates. Range: `0.001` to `0.5`, default `0.005`.
+* `ShadowContrast`: Sharpens or softens the shadow falloff. Higher values give harder shadow edges; lower values produce a more gradual falloff. Range: `1.0` to `10.0`, default `4.0`.
+
+See [Screen Space Shadows](../../graphics/lighting/dynamic-shadows.md#screen-space-shadows) for usage instructions.
+
 ## Separated Bilateral Blur Pass
 
 A depth-aware blur that preserves silhouette edges. Uses a two-pass separable bilateral filter that considers both spatial distance and depth difference, preventing blur from bleeding across object boundaries. Commonly used to smooth out SSAO or similar noisy per-pixel effects.

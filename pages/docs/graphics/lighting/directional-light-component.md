@@ -12,6 +12,8 @@ See [this page](dynamic-shadows.md#shadow-component-properties) for shadow relat
 
 * `LightColor, Intensity`: The color and brightness of the light.
 
+* `ScreenSpaceShadows`: When enabled, the directional light will additionally use [screen space shadows](dynamic-shadows.md#screen-space-shadows) to produce contact shadows and improve self-shadowing on small objects. Requires the `ScreenSpaceShadowPass` to be present in the [render pipeline](../render-pipeline/render-pipeline-passes.md#screen-space-shadow-pass).
+
 * `NumCascades`: How many shadow cascades to use. The more cascades are used, the crisper shadows close to the camera become. However, each cascade costs additional performance.
 
 * `MinShadowRange`: How far from the camera the light should cast shadows. A low value means that only objects a short distance away will cast shadows, and objects farther away won't.

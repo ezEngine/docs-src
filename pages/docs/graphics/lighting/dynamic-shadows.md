@@ -55,6 +55,14 @@ Dynamic light sources such as [directional lights](directional-light-component.m
 
 By default this range is the same as the light range.
 
+## Screen Space Shadows
+
+Screen space shadows are a complementary shadowing technique that operates on the depth buffer using per-pixel ray marching. Unlike shadow maps, which operate in world space and have a fixed resolution, screen space shadows derive all information from what is already on screen. This makes them well suited for capturing fine contact shadows and self-shadowing on small objects, where shadow map resolution is typically insufficient.
+
+Screen space shadows are currently supported by [directional lights](directional-light-component.md) only. Enable them by setting `ScreenSpaceShadows` on the directional light component. For the effect to work, the render pipeline must also contain an `ezScreenSpaceShadowPass` node, which is included in all built-in render pipelines by default. That pass is configurable; see the [Screen Space Shadow Pass](../render-pipeline/render-pipeline-passes.md#screen-space-shadow-pass) documentation for details.
+
+Screen space shadows have inherent limitations: they only affect surfaces that are visible to the camera, and their effective range is bounded by what is on screen. They are not a replacement for shadow maps, but rather a supplement that improves quality near the camera at low additional cost.
+
 ## See Also
 
 * [Directional Light Component](directional-light-component.md)

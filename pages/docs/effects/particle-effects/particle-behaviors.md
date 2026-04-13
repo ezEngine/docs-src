@@ -6,6 +6,7 @@ Particle behaviors modify particles after they have been spawned. Each behavior 
 * [Bounds Behavior](behaviors/pb-bounds.md) - Confines particles to a box area
 * [Bounds Sphere Behavior](behaviors/pb-bounds-sphere.md) - Confines particles to a spherical area
 * [Color Gradient Behavior](behaviors/pb-color-gradient.md) - Changes particle color over time
+* [Expression Behavior](behaviors/pb-expression.md) - Evaluates a custom math expression per particle
 * [Fade Out Behavior](behaviors/pb-fade-out.md) - Gradually fades out particle alpha
 * [Flies Behavior](behaviors/pb-flies.md) - Creates erratic flying patterns
 * [Gravity Behavior](behaviors/pb-gravity.md) - Applies gravity to particles

@@ -10,6 +10,7 @@ Common game object operations:
 * **Hierarchy navigation** - Find parent and child objects, search by name
 * **Component access** - Get components attached to game objects
 * **Object state** - Check if objects are active, valid, or tagged
+* **Tag management** - Set and remove tags on game objects with `SetTag` and `RemoveTag`
 * **Object creation** - Spawn and destroy game objects dynamically
 
 Game object nodes are fundamental to most visual scripts, as they allow you to locate and manipulate objects in the scene. Use them together with [component nodes](vscript-nodes-component.md) to access specific functionality, and [prefab nodes](vscript-nodes-prefabs.md) to instantiate new objects.

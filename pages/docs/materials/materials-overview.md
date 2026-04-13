@@ -76,6 +76,14 @@ For testing transparent materials it may be useful to create an object in a scen
 
 **UseEmissiveTexture:** If enabled, the *Emissive Texture* is used to define per pixel where the material will *glow*. This is multiplied with the *EmissiveColor*, so make sure that is not set to black (its default).
 
+**UseHeightTexture:** If enabled, a *Height Texture* (also called a heightmap) is used to apply *Parallax Occlusion Mapping (POM)*. This technique offsets texture coordinates based on the viewing angle and the stored height values, giving flat surfaces an apparent depth without additional geometry. All other textures (base color, normal, roughness, etc.) are sampled from the offset coordinates, so the entire surface appears to have relief.
+
+The height texture should store height values in the red channel. Brighter values represent raised areas, darker values represent recessed areas.
+
+**HeightScale:** Controls the strength of the parallax effect. The range is `-0.3` to `0.3`, with a default of `0.05`. Negative values invert the depth direction. Larger absolute values produce a stronger apparent depth but can introduce artifacts at grazing angles.
+
+**PomMaxSteps:** The maximum number of raymarching iterations used to resolve the parallax offset. Higher values produce more accurate results at grazing angles but increase the per-pixel cost. The range is `4` to `64`, with a default of `16`.
+
 ## Material Preview
 
 The 3D viewport of the material editor allows you to switch the [render mode](../editor/editor-views.md#render-modes) to inspect only specific aspects of the material.

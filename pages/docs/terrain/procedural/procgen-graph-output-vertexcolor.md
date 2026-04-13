@@ -4,7 +4,7 @@ The *Vertex Color Output* node defines what procedurally computed color values g
 
 A [ProcGen graph](procgen-graph-asset.md) can contain multiple vertex color output nodes. Each one represents an independent RGBA layer of vertex color data. They are consumed by the [Procedural Vertex Color Component](procgen-vertex-color-component.md), which applies them to a mesh at runtime.
 
-<!-- ![ProcGen vertex color output node](media/procgen-vertexcolor-output-node.jpg) -->
+<!-- !ProcGen vertex color output node media/procgen-vertexcolor-output-node.jpg -->
 
 ## How It Works
 

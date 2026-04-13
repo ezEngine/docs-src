@@ -12,7 +12,7 @@ A popular method to represent terrain are heightmaps - 2D grayscale images, wher
 
 Vegetation can be created with standard meshes. Using custom [visual shaders](../materials/visual-shaders.md), a basic per-vertex wind animation can be applied.
 
-Additionally, ezEngine has built in support for [Kraut](kraut-overview.md), a tool that allows you to procedurally generate tree meshes.
+Additionally, ezEngine has built in support for [Kraut](kraut-overview.md), a system for procedurally generating tree meshes directly inside the editor.
 
 Finally, there is a system to procedurally place objects, typically plants, around the current player position. This system is currently undocumented, but the [Testing Chambers](../../samples/testing-chambers.md) project contains scenes which show basic usage.
 

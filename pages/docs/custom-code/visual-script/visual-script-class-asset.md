@@ -34,7 +34,7 @@ Through the general script properties you can add *variables* to your script. Th
 
 ### Variable Types
 
-Variables support various data types including numbers, strings, vectors, and more. Additionally, you can create:
+Variables support various data types including numbers, strings, and vectors. The available vector types are `Vec2`, `Vec3`, and `Vec4`. Additionally, you can create:
 
 * **Array Variables:** Set the variable category to *Array* to create a typed array. On the component side, arrays are displayed with their element type for better readability. Note that internally within visual scripts, arrays store variants and are not strictly typed.
 

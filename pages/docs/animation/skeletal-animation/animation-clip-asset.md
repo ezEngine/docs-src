@@ -24,6 +24,8 @@ Animation clips can also be imported automatically when [importing an animated m
 
 * `PreviewMesh`: The [animated mesh](animated-mesh-asset.md) to use for previewing this animation clip. This has to be set to see any preview.
 
+* `PreviewAnim`: For additive animation clips, this optionally selects another animation clip to use as the reference pose in the editor preview. The first keyframe of that clip is used to reconstruct the base pose, and the additive animation is layered on top. This makes the preview more representative of how the clip will look in practice. If left empty, the rest pose is used instead.
+
 * `UseAnimationClip`: The (case sensitive) name of the animation clip to import from the file. *Transform* the asset once to populate the list of `AvailableClips`. Then type the name of the desired clip into this field and transform the asset again. If a clip doesn't show up in the list, make sure it is correctly exported. See the chapter [Authoring and Exporting Animations with Blender](blender-export.md) for known issues.
 
 * `FirstFrame`, `NumFrames`: It is best to put every animation into a separate clip and export them that way. However, sometimes files contain only a single animation and each clip is found at another interval. By specifying the index of the first frame and the number of frames to use, you can extract individual clips from such data. Note that setting NumFrames to zero always means to use all the remaining frames after the first frame.
@@ -36,7 +38,7 @@ Animation clips can also be imported automatically when [importing an animated m
 
   > **Important**
   >
-  > Additive animations usually only work well, if they are applied to a skeleton that is in a similar pose as the reference pose of the additive animation. The animation clip window always displays the animation on top of the *rest pose*. This can look very broken, especially when the rest pose is a proper *T-pose* or *A-pose*.
+  > Additive animations usually only work well, if they are applied to a skeleton that is in a similar pose as the reference pose of the additive animation. By default the animation clip window displays the animation on top of the *rest pose*. This can look very broken, especially when the rest pose is a proper *T-pose* or *A-pose*. Use the `PreviewAnim` property to select a more representative reference animation for the editor preview.
 
 * `RootMotion`: If the animation clip should be able to move the [game object](../../runtime/world/game-objects.md), this can be achieved through [root motion](root-motion.md). This option allows you to select how root motion should be incorporated into the animation clip.
 

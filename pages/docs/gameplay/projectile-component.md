@@ -12,11 +12,17 @@ There are many ways projectiles may work in different games. The projectile comp
 
 * `MaxLifetime`: If the projectile lives longer than this, it will destroy itself.
 
-* `SpawnPrefabOnStatic`: If enabled, the `OnDeathPrefab` will be spawned when the projectile lost so much speed that it is nearly static (not moving anymore). Only useful in combination with the *bounce* behavior.
+* `SpawnPrefabOnStatic`: If enabled, the `OnDeathPrefab` will be spawned when the projectile lost so much speed that it is nearly static (not moving anymore). See also `StaticVelocityRatio` to control the threshold value below which the projectile is considered nearly static. Only useful in combination with the *bounce* behavior
 
 * `OnDeathPrefab`: If the projectile destroys itself because it didn't hit anything before `MaxLifetime` ended or it slowed to a halt and `SpawnPrefabOnStatic` is enabled, it will spawn this prefab. Can be used to let rockets 'explode' after a while.
 
 * `CollisionLayer`: The physics [collision layer](../physics/jolt/collision-shapes/jolt-collision-layers.md) to use for raycasting whether the projectile hit something.
+
+* `Radius`: Specifies the size of the projectile, which is used for collision detection. Can be zero.
+
+* `StaticVelocityRatio`: If the projectile speed becomes lower than `StaticVelocityRatio * Speed`, the simulation of the projectile is stopped and the projectile is considered nearly static. Only useful in combination with the *bounce* behavior.
+
+* `BounceOrientation`: How the projectile changes its orientation after it hits a surface with a *reflect* or *bounce* reaction. `Reflection` means the projectile is oriented along the new flying direction after the hit. `Spinning` means the projectile is rotated by an angle whose value depends on the projectile's speed before and after the hit. Higher speeds lead to larger rotations. The rotation scaling and direction can be controlled by `InertiaRatio` in the `Interactions` settings.
 
 * `ShapeTypesToHit`: Specifies what types of physics geometry to hit, at all.
 
@@ -31,6 +37,7 @@ There are many ways projectiles may work in different games. The projectile comp
 * `Interaction`: The [surface interaction](../materials/surfaces.md#surface-interactions) to trigger when the projectile hits this type of surface.
 * `Impulse`: The amount of physical impulse to exert on the hit object.
 * `Damage`: The amount of damage to apply to the hit object.
+* `InertiaRatio`: Analogue of mass for spinning behavior. Larger values lead to smaller rotations. If negative, the projectile is rotated in the opposite direction. If zero, no rotation is applied. Only useful in combination with `Reaction` set to `Bounce` or `Reflect` and the projectile `BounceOrientation` set to `Spinning`.
 
 ## Example
 

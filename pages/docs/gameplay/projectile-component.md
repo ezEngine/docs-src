@@ -30,7 +30,6 @@ There are many ways projectiles may work in different games. The projectile comp
 
 * `Interactions`: This array allows you to specify exactly what the projectile will do, when it hits different types of surfaces. Each entry is used to configure the action of the projectile if a certain type of surface is hit. Note that surfaces and surface interactions already work hierarchically. That means for most types of projectiles this array only needs to contain a single entry, with a base surface, and all it needs to specify is what 'interaction' to trigger. The exact type of surface that is hit, will then decide what prefabs to spawn for that kind of interaction.
 
-
 ### Interaction Properties
 
 * `Surface`: The (base) type of surface for which this array element applies.

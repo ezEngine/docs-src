@@ -40,6 +40,8 @@ See [this page](dynamic-shadows.md#shadow-component-properties) for shadow relat
 
 * `Range`: The distance over which the light source affects geometry. By default this is set to `Auto`, meaning the necessary range will be computed from the light's brightness. For full control, the range can be set manually. The light will always attenuate to zero within the given range, so by specifying a small range you can create a small, yet very bright light.
 
+* `Radius`: The radius of the emitter disc at the spot light's origin, in meters. Clamped to 0–0.5 m. A non-zero value produces softer specular highlights and area-light style shading. Does not affect light attenuation or the cone shape.
+
 * `InnerSpotAngle`: The inner angle of the spot light's cone. Within this angle the spot light will not attenuate (except by distance) and stay equally bright.
 
 * `OuterSpotAngle`: The spot light will attenuate between the inner angle and the outer angle to zero. If the outer angler is very close to the inner angle, the spot light will have a very sharp cut off. If the outer angle is considerably larger than the inner angle, the spot light will smoothly fade to black at the edges.

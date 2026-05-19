@@ -26,6 +26,10 @@ See [this page](dynamic-shadows.md#shadow-component-properties) for shadow relat
 
 * `Range`: The distance over which the light source affects geometry. By default this is set to `Auto`, meaning the necessary range will be computed from the light's brightness. For full control, the range can be set manually. The light will always attenuate to zero within the given range, so by specifying a small range you can create a small, yet very bright light.
 
+* `Length`: The length of the tube along the light's local X axis. When non-zero, the light is treated as a tube (capsule) area light. The bounding volume is enlarged accordingly and specular highlights become elongated. A value of `0` produces a standard point light.
+
+* `Radius`: The radius of the tube's cross-section. A non-zero value widens specular highlights and produces area-light style shading. Has no effect on light attenuation. When `Length` is zero, a non-zero radius alone produces a sphere area light. A value of `0` produces a standard point light.
+
 ## See Also
 
 * [Lighting](lighting-overview.md)

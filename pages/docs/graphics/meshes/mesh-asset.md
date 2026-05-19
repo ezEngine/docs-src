@@ -71,7 +71,9 @@ Since assets are often authered with many different conventions, you can adjust 
 
 * `Mesh Simplification`: How strongly to attempt to simplify the mesh.
 
-* `Max Simplification Error`: How much the mesh may change during simplification. A higher error theshold may allow for stronger simplification.
+* `Max Simplification Error`: How much the mesh may change during simplification. A higher error threshold may allow for stronger simplification.
+
+* `Normal Weight`: How strongly surface normals influence the simplification. A higher value preserves normal variation better, which is useful for meshes with hard edges or baked normal detail, but may result in less aggressive triangle reduction. The default value of `0.5` balances geometry and normal preservation.
 
 * `Aggressive Simplification`: If enabled, the mesh simplification may throw away even more quality to reach the maximum simplification.
 

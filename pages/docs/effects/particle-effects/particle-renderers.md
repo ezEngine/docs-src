@@ -78,6 +78,10 @@ This renderer visualizes each particle as a quad. There are several modes to cho
 
 **Particle Stretch:** Only available in the 'axis' render modes. Allows to stretch the particles along their fixed axis. Useful to create sparks.
 
+**Geometry Proximity Fade Out:** Particles fade out when they intersect with or come close to scene geometry. This value controls the distance over which the fade-out occurs.
+
+**Camera Proximity Fade Out:** Particles fade out when the camera is close to them. This value controls the distance over which the fade-out occurs.
+
 ## Mesh Renderer
 
 This renderer visualizes each particle using a [mesh](../../graphics/meshes/mesh-asset.md).

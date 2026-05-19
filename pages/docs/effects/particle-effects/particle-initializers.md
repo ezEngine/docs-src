@@ -68,6 +68,8 @@ Initializes a particle's size to a random value.
 
 **SizeCurve:** If specified, the [curve](../../animation/common/curves.md) is sampled at a random location and the normalized value (always between `0` and `1`) is used to scale the randomly chosen base size. The shape of the curve has no meaning for this use case, it only provides a way to affect the distribution of the random sizes. For example, you could have a curve that sets exactly half of all particles to exactly a tenth of the base size. If you want exactly the same distribution as the curve has, you should set the variance of the *base size* to zero.
 
+**SizeScaleParameter:** An optional [effect parameter](particle-effects-overview.md#effect-parameters) name. If set, the float parameter is used to scale the initial size of all particles.
+
 <video src="media/random-size-init.webm" width="500" height="500" autoplay loop></video>
 
 ## Rotation Speed Initializer
@@ -87,6 +89,8 @@ Initializes a particle's velocity to a random up vector.
 **Angle:** The maximum opening angle of the upside down cone. With a small opening angle, particles will fly straight up. With a wide opening angle, particles will fly in all directions.
 
 **Speed:** The initial speed for the particles.
+
+**SpeedScaleParam:** An optional [effect parameter](particle-effects-overview.md#effect-parameters) name. If set, the float parameter is used to scale the initial speed of all particles.
 
 <video src="media/velocity-cone-init.webm" width="500" height="500" autoplay loop></video>
 

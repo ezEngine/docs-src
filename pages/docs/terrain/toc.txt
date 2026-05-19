@@ -1,4 +1,6 @@
 terrain-overview.md
 heightfield-component.md
 kraut-overview.md
+kraut-tree-asset.md
+kraut-tree-component.md
 procedural|Procedural Generation

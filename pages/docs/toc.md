@@ -256,6 +256,8 @@
 ## [Terrain and Vegetation](terrain/terrain-overview.md)
 ## [Heightfield Component](terrain/heightfield-component.md)
 ## [Kraut](terrain/kraut-overview.md)
+## [Kraut Tree Asset](terrain/kraut-tree-asset.md)
+## [Kraut Tree Component](terrain/kraut-tree-component.md)
 ## Procedural Generation
 ### [Procedural Object Placement](terrain/procedural/procedural-object-placement.md)
 ### [ProcGen Graph Asset](terrain/procedural/procgen-graph-asset.md)

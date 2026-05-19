@@ -54,6 +54,10 @@ The image below shows the difference of a texture that is completely black in th
 
 **Input N:** Depending on the chosen *channel mapping* you need to specify one to four input textures.
 
+**IsArrayTexture:** When enabled, the texture is created as a 2D texture array. Instead of using the *Channel Mapping* and *Input* properties, you specify an explicit list of images via *ArraySlices*. The texture will contain one array slice per image. All images are scaled to the resolution of the first image in the list. The 3D preview shows all slices layered behind each other.
+
+**ArraySlices:** Only available when *IsArrayTexture* is enabled. The list of images to include as slices in the texture array. Images are processed using the same *Usage*, *Mipmaps*, *Compression* and *Filtering* settings as a regular 2D texture.
+
 ## Cubemap Texture Asset
 
 Cubemap assets have a subset of the properties that 2D textures have. Their behavior is identical, except for **Channel Mapping**, which allows you to build a cubemap either from one or from six input files.

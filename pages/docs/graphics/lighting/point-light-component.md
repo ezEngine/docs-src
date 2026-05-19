@@ -12,6 +12,16 @@ Note that unless a light source casts [dynamic shadows](dynamic-shadows.md), it'
 
 [![video](https://img.youtube.com/vi/QCYoYexvynQ/0.jpg)](https://youtu.be/QCYoYexvynQ)
 
+## Area Lights
+
+When the `Length` or `Radius` property are set to non-zero, the point light acts as an area light, either as a sphere or tube light. The image below shows how this can be used to light an area better, where a pure pointlight would result in unnatural light distribution.
+
+![Tube light example](media/point-vs-tube.jpg)
+
+> **Important!**
+>
+> Area lights have a higher performance cost. Only use them where it makes a noticeable difference. The exact size values make no difference, an area light with a small radius has the same higher performance impact as one with a large radius. However, it is cheaper to use an area light, than to use multiple light sources to approximate area lighting.
+
 ## Component Properties
 
 See [this page](dynamic-shadows.md#shadow-component-properties) for shadow related component properties.

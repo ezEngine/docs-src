@@ -12,7 +12,7 @@ See [this page](dynamic-shadows.md#shadow-component-properties) for shadow relat
 
 * `LightColor, Intensity`: The color and brightness of the light.
 
-* `SourceAngle`: The angular diameter of the light emitter disc (the "sun disc") as seen from the ground, in degrees. Clamped to 0–10°. A non-zero value produces softer specular highlights via area-light shading. Has no effect on attenuation since directional lights are treated as infinitely far away. For reference, the real sun subtends approximately 0.53°. Values above a few degrees are physically implausible but may be used for stylised looks.
+* `SourceAngle`: The angular diameter of the light emitter disc (the "sun disc") as seen from the ground, in degrees. Clamped to 0–10°. A non-zero value produces softer specular highlights via [area-light shading](point-light-component.md#area-lights), at a higher shader cost than a zero angle. Has no effect on attenuation since directional lights are treated as infinitely far away. For reference, the real sun subtends approximately 0.53°. Values above a few degrees are physically implausible but may be used for stylised looks.
 
 * `ScreenSpaceShadows`: When enabled, the directional light will additionally use [screen space shadows](dynamic-shadows.md#screen-space-shadows) to produce contact shadows and improve self-shadowing on small objects. Requires the `ScreenSpaceShadowPass` to be present in the [render pipeline](../render-pipeline/render-pipeline-passes.md#screen-space-shadow-pass).
 

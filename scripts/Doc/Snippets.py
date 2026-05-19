@@ -10,7 +10,7 @@ def SearchSourceSnippets(srcDir: str, snippets: dict):
         if not name.endswith(".h") and not name.endswith(".cpp"):
             return True
 
-        with open(os.path.join(parentDir, name), mode='r', encoding='utf-8') as file:
+        with open(os.path.join(parentDir, name), mode='r', encoding='utf-8', errors='replace') as file:
             lines = file.readlines()
 
         lineIdx = 0

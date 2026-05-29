@@ -36,6 +36,7 @@ jobs:
           
       - name: Generate Code Snippetes
         working-directory: .
+        continue-on-error: true
         run: python ./scripts/code-snippets.py
 
       - name: Checkout docs host repo

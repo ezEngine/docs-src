@@ -2,6 +2,7 @@
 
 import os
 import re
+import sys
 
 import Doc
 
@@ -16,4 +17,5 @@ elif os.path.exists("./../ezEngine/Code"):
 else:
     raise Exception("Couldn't find ezEngine repository")
 
-Doc.ReplaceTargetSnippets("./pages/docs", snippets)
+if Doc.ReplaceTargetSnippets("./pages/docs", snippets):
+    sys.exit(1)

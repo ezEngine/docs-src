@@ -71,7 +71,9 @@ def SearchSourceSnippets(srcDir: str, snippets: dict):
 
 
 
-def ReplaceTargetSnippets(targetDir: str, snippets: dict):
+def ReplaceTargetSnippets(targetDir: str, snippets: dict) -> bool:
+
+    hadErrors = [False]
 
     def FoundFile(parentDir: str, name: str):
 
@@ -104,7 +106,15 @@ def ReplaceTargetSnippets(targetDir: str, snippets: dict):
                 replacedAny = True
 
                 if not snippetName in snippets:
-                    print(f"\nERROR: Snippet '{snippetName}' doesn't exist. Check that the code wasn't removed or moved to a location that isn't searched.\n")
+                    print(f"::error::Snippet '{snippetName}' doesn't exist in '{name}'. Check that the code wasn't removed or moved to a location that isn't searched.")
+                    hadErrors[0] = True
+                    while(lineIdx < len(lines)):
+                        newLines.append(lines[lineIdx])
+                        is_end = lines[lineIdx].find("END-DOCS-CODE-SNIPPET") >= 0
+                        lineIdx += 1
+                        if is_end:
+                            break
+                    continue
 
                 newLines.append("```cpp\n")
                 newLines.append(snippets[snippetName])
@@ -124,3 +134,4 @@ def ReplaceTargetSnippets(targetDir: str, snippets: dict):
         return True
 
     WalkFileStructure(targetDir, FoundFile, reportFolders=False)
+    return hadErrors[0]

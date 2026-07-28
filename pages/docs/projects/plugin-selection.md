@@ -31,20 +31,9 @@ If you have a [custom plugin](../custom-code/cpp/engine-plugins.md) that should 
 
 Each ezPluginBundle file contains information for one plugin. Since the editor and the engine runtime are different processes, though, it is possible that one *logical* plugin actually consists of multiple DLLs. For example it is common that one DLL must be loaded into the runtime process (the actual game), another one into the editor process to add custom UI elements and a third one into the *editor engine process* for custom, editor-specific rendering.
 
-How ezPluginBundle files work is documented inside this file:
-
-> `Code/EditorPlugins/Assets/EditorPluginAssets/Assets.ezPluginBundle`
+See [Editor Plugins](../editor/editor-plugins.md#ezpluginbundle) for the full file format and how to set up the required CMake copy step.
 
 The editor searches for ezPluginBundle files in the binary folder where `Editor.exe` is located. All files that are found add an entry to the dialog. Typically the original ezPluginBundle file is stored next to the source code of a plugin and copied to the binary folder in a post-build step.
-
-Examples for this can be found in the `CMakeLists.txt` files of existing plugins, for example in `Code/EnginePlugins/XBoxControllerPlugin/CMakeLists.txt`:
-
-```cmd
-add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
-  COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/XBoxController.ezPluginBundle" $<TARGET_FILE_DIR:${PROJECT_NAME}>
-  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-)
-```
 
 > **NOTE:**
 >

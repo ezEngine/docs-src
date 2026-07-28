@@ -112,7 +112,7 @@ Of particular interest should be the **InstanceData** node, which allows to acce
 When using the [Quad Particle Output Node](#quad-particle-output-node), two additional particle-specific input nodes become relevant:
 
 * **ParticleEffect**: Provides system-wide data. Currently exposes `TotalLifeTime`, the total time elapsed since the particle effect started.
-* **Particle**: Provides per-particle data. Exposes `Life` (a value from `1.0` when the particle spawns to `0.0` at death) and `Variation` (a random value per particle, useful for visual variety).
+* **Particle**: Provides per-particle data. Exposes `Life` (a value from `1.0` when the particle spawns to `0.0` at death), `Variation` (a random value per particle, useful for visual variety), `QuadUV` (the raw `[0-1]` UV coordinate across the particle, unaffected by flipbook animations and random variations — useful for textures that should not be chopped up by the flipbook, e.g. a pattern that a flipbook mask is blended with) and `FlipbookUV` (the UV coordinate transformed into the current flipbook animation / random variation frame, which is what texturing nodes sample with by default).
 
 ## How to Add Visual Shader Nodes
 

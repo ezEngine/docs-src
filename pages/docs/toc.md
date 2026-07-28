@@ -38,6 +38,7 @@
 ## [Selecting Objects](scenes/selection.md)
 # Assets
 ## [Asset Browser](assets/asset-browser.md)
+## [Asset Check Panel](assets/asset-check-panel.md)
 ## [Asset Curator](assets/asset-curator.md)
 ## [Asset Profiles](assets/asset-profiles.md)
 ## [Assets](assets/assets-overview.md)

@@ -25,4 +25,5 @@ Once you fix an asset and make sure it is transformed, the asset curator will no
 ## See Also
 
 * [Asset Browser](asset-browser.md)
+* [Asset Check Panel](asset-check-panel.md)
 * [Assets](assets-overview.md)

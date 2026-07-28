@@ -47,6 +47,14 @@ The property is neither shown in the editor nor serialized. It exists only at ru
 EZ_MEMBER_PROPERTY("CachedHandle", m_hCached)->AddAttributes(new ezTemporaryAttribute()),
 ```
 
+### `ezRequiredAttribute`
+
+Marks a property as required. It has no effect on how the property is displayed, but is picked up by the [Check Assets panel](../assets/asset-check-panel.md), which reports an issue when the property is left empty or, for a game object / component reference property, when it references an object that no longer exists.
+
+```cpp
+EZ_MEMBER_PROPERTY("Target", m_sTarget)->AddAttributes(new ezRequiredAttribute()),
+```
+
 ## Type-Level Attributes
 
 These are placed on the **type** in an `EZ_BEGIN_ATTRIBUTES` block, not on individual properties.

@@ -90,40 +90,47 @@ The plugin bundle files use the [OpenDDL](https://openddl.org/) format.
 ```cpp
 PluginInfo
 {
-	// The name with which the bundle appears in the UI.
-	string %DisplayName{"Pretzel Plugin"}
-
-	// A description of what functionality this bundle adds.
-	string %Description{"Procedural mesh generation."}
-	
-	// List of plugins (without path or extension) to load into the editor process.
-	string %EditorPlugins{"ezEditorPluginPretzel"}
-
-	// List of plugins (without path or extension) to load into the editor engine process.
-	string %EditorEnginePlugins{"ezEnginePluginPretzel"}
-
-	// List of plugins (without path or extension) to load into the engine process (e.g. also ezPlayer.exe and stand-alone apps).
-	string %RuntimePlugins{"ezPretzelPlugin"}
-	
-	// List of bundles (without path or extension) that are always needed for this bundle to work.
-	string %RequiredPlugins{}
-
-	// List of additional files that need to be shipped for the plugin to work right (usually other DLLs).
-	string %PackageDependencies{}
-	
-	// List of tags for "features" that this bundle provides. 
-	// Only one bundle with each feature may be selected.
-	// Typically used to prevent multiple physics or sound engines to be in use at the same time.
-	string %ExclusiveFeatures{}
-
-	// List of 'template' names in which this bundle should be selected.
-	// All used template names appear in the UI for the user to choose from.
-	// For a bundle to be active by default in new projects, include the "General3D" template here.
-	string %EnabledInTemplates{}
-
-	// if true, the plugin is not shown in the UI and always loaded
-	// only used for system functionality
-	bool %Mandatory{false}
+  // The name with which the bundle appears in the UI.
+  string %DisplayName{"Pretzel Plugin"}
+  
+  // A description of what functionality this bundle adds.
+  string %Description{"Procedural mesh generation."}
+  
+  // List of plugins (without path or extension) to load into the editor process.
+  string %EditorPlugins{"ezEditorPluginPretzel"}
+  
+  // List of plugins (without path or extension) to load into the editor engine process.
+  string %EditorEnginePlugins{"ezEnginePluginPretzel"}
+  
+  // List of plugins (without path or extension) to load into the engine process (e.g. also ezPlayer.exe and stand-alone apps).
+  string %RuntimePlugins{"ezPretzelPlugin"}
+  
+  // List of bundles (without path or extension) that are always needed for this bundle to work.
+  string %RequiredPlugins{}
+  
+  // List of additional files that need to be shipped for the plugin to work right (usually other DLLs).
+  string %PackageDependencies{}
+  
+  // Like %PackageDependencies, but only included in Debug / Dev / Shipping builds respectively.
+  // Use these for dependencies that are only needed in a specific build configuration,
+  // for example a debugging tool DLL that should not be shipped in a Shipping build.
+  string %PackageDependenciesDebug{}
+  string %PackageDependenciesDev{}
+  string %PackageDependenciesShipping{}
+  
+  // List of tags for "features" that this bundle provides. 
+  // Only one bundle with each feature may be selected.
+  // Typically used to prevent multiple physics or sound engines to be in use at the same time.
+  string %ExclusiveFeatures{}
+  
+  // List of 'template' names in which this bundle should be selected.
+  // All used template names appear in the UI for the user to choose from.
+  // For a bundle to be active by default in new projects, include the "General3D" template here.
+  string %EnabledInTemplates{}
+  
+  // if true, the plugin is not shown in the UI and always loaded
+  // only used for system functionality
+  bool %Mandatory{false}
 }
 ```
 

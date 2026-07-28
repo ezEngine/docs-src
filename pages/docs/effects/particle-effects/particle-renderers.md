@@ -74,6 +74,10 @@ This renderer visualizes each particle as a quad. There are several modes to cho
 
 * *Random Row, Animated Column* - The texture contains *NumSpritesY* animations, each with *NumSpritesX* frames. Each particle plays one random animation over its lifetime.
 
+* *Random Column, Animated Row* - The texture contains *NumSpritesX* animations, each with *NumSpritesY* frames. Each particle plays one random animation over its lifetime.
+
+**Texture Orientation:** Specifies which edge of the source texture is treated as "forward" (unrotated). If a texture is authored with its forward direction pointing in a different direction than the particle system expects, use this to rotate the sampled texture in 90° steps (*Up*, *Right*, *Down*, *Left*) instead of having to change the source texture.
+
 **Tint Color Param:** An optional [effect parameter](particle-effects-overview.md#effect-parameters) name. If set, the parameter is used to tint the final color of the particle.
 
 **Particle Stretch:** Only available in the 'axis' render modes. Allows to stretch the particles along their fixed axis. Useful to create sparks.

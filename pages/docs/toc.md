@@ -419,6 +419,7 @@
 ## [Occlusion Culling](performance/occlusion-culling.md)
 ## [Profiling](performance/profiling.md)
 # Shipping
+## [Polishing an Exported Project](shipping/polishing-your-game.md)
 ## [Project Export](shipping/project-export.md)
 # Tools
 ## [ArchiveTool](tools/archivetool.md)

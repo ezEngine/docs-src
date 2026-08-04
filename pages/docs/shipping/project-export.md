@@ -14,7 +14,20 @@ To get started with generating a self-contained package of your game, use the *p
 
 Select an output folder and click **Export Project**.
 
-Once the export is finished, it will automatically open the folder where the files have been copied to. The export also generates one `.bat` file for every scene in your project. These scripts launch the respective scene with [ezPlayer](../tools/player.md).
+The options are:
+
+* **Compile C++ Plugin** builds the project's [C++ code](../custom-code/cpp/cpp-overview.md) before exporting. Disabled for projects that have no C++ plugin.
+* **Transform all Assets** makes sure that the [asset](../assets/assets-overview.md) outputs are up-to-date, since only those are exported, not the source assets.
+* **Create Launch Scripts** writes `.bat` files for launching the exported project (see below).
+* **Open Output Folder** opens the output folder in the file browser, once the export finished.
+
+The state of these options is kept until the editor is closed.
+
+### Launch Scripts
+
+If the project has its own game executable, which the [C++ project generation](../custom-code/cpp/cpp-project-generation.md) sets up, a single `.bat` file for launching that executable is created. The executable is also added to the exported binaries automatically, and [ezPlayer](../tools/player.md) is not exported in this case.
+
+Otherwise the export generates one `.bat` file for every scene in your project. These scripts launch the respective scene with [ezPlayer](../tools/player.md).
 
 ## Configuring Project Export
 
@@ -52,11 +65,12 @@ Each line in the file represents one file path pattern:
 ## Limitations
 
 * At this time it is not analyzed which plugin DLLs are actually needed, instead all DLLs are included. Edit your `ProjectBinaries.ezExportFilter` to control this.
-* Currently the export step always creates `.bat` files to load each scene with ezPlayer. There is no way to automatically set up something different.
+* The exported package contains no [shader cache](polishing-your-game.md), so shaders are compiled on the machine of every player, during the first launch.
 * You currently can't automatically execute custom logic (C++ code, or a script) to finalize the package.
 
 ## See Also
 
+* [Polishing an Exported Project](polishing-your-game.md)
 * [Profiling](../performance/profiling.md)
 * [Supported Platforms](../build/supported-platforms.md)
 * [ezPlayer](../tools/player.md)

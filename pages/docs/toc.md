@@ -423,6 +423,7 @@
 ## [Project Export](shipping/project-export.md)
 # Tools
 ## [ArchiveTool](tools/archivetool.md)
+## [ezEditorProcessor](tools/editor-processor.md)
 ## [FileServe](tools/fileserve.md)
 ## [HeaderCheck Tool](tools/headercheck.md)
 ## [ezInspector](tools/inspector.md)

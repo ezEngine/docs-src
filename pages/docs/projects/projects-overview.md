@@ -34,6 +34,16 @@ The following project templates are currently available:
 
 * [Basic FPS Project Template](../../samples/basic-fps-template.md)
 
+### Creating a Project from the Command Line
+
+Projects can also be created without the wizard, which is mainly useful for scripts and automated tests:
+
+```cmd
+ezEditor.exe -createProject "C:/dev/MyGame" -projectTemplate "Basic FPS"
+```
+
+*ezEditorProcessor.exe* accepts the same options and creates the project without opening a UI. See [Launching the Editor](../editor/editor-launch.md#creating-a-project) for the details.
+
 ## Configuring a Blank Project
 
 If you choose to create a blank project, the creation wizard asks you to select which [plugins](plugin-selection.md) to use, since this also determines which [asset types](../assets/assets-overview.md) will be available. This can be adjusted later.

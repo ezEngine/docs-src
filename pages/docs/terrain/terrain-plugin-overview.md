@@ -50,7 +50,7 @@ It is technically possible to modify the terrain visuals *in-game* by adding, re
 
 ## Limitations
 
-* **No LOD for terrain volumes.** [Terrain patches](terrain-patch-component.md) automatically [reduce detail at a distance](terrain-patch-component.md#level-of-detail), but [terrain volumes](terrain-volume-component.md) have no level-of-detail support and always render at full detail.
+* **No LOD for terrain volumes.** [Terrain patches](terrain-patch-component.md) automatically [reduce detail at a distance](terrain-patch-component.md#level-of-detail-lod), but [terrain volumes](terrain-volume-component.md) have no level-of-detail support and always render at full detail.
 * **Collision baked at export.** Terrain with collision meshes cannot change collision shape at runtime (see [Collision](#collision)). Visual changes still work.
 * **One material override per voxel.** Terrain volumes support only a single painted override per vertex — no blending multiple overrides at same spot.
 

@@ -58,7 +58,7 @@ By default, *skirt* polygons are rendered around the border of each patch. This 
 
   * `BaseMaterialIndex` — The material layer (0–31) assigned to vertices not covered by any brush.
 
-`LodDistanceScale` — Scales the distance at which this patch switches [LOD](#level-of-detail) levels. `1` uses the default distance (as configured by the `Terrain.LodTargetCoverage` CVar), values above `1` switch LOD later (at a greater distance, keeping detail longer), values below `1` switch earlier. Set to `0` ("LOD Disabled") to always render the patch at full resolution; this also turns off the skirt, since it is only needed to hide seams against a coarser LOD neighbor.
+`LodDistanceScale` — Scales the distance at which this patch switches [LOD levels](#level-of-detail-lod). `1` uses the default distance (as configured by the `Terrain.LodTargetCoverage` CVar), values above `1` switch LOD later (at a greater distance, keeping detail longer), values below `1` switch earlier. Set to `0` ("LOD Disabled") to always render the patch at full resolution; this also turns off the skirt, since it is only needed to hide seams against a coarser LOD neighbor.
 
 `Collider` — Controls whether and at what detail a physics collision shape is generated at scene export time. Lower values save memory, but lose detail. Colliders are  needed when using [procedural object placement](procedural/procedural-object-placement.md). When possible, deactivate colliders (for far away terrain that's only there for decoration) or reduce its detail.
 

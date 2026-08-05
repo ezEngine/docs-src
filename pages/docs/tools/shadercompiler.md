@@ -25,7 +25,7 @@ ShaderCompiler.exe -help
 ## Example
 
 ```cmd
-ShaderCompiler.exe -project "C:\ez\Data\Base" -platform DX11_SM50 -shader "Shaders\Debug" -perm TOPOLOGY=TOPOLOGY_LINES CAMERA_MODE=CAMERA_MODE_PERSPECTIVE
+ShaderCompiler.exe -project "C:\ez\Data\Base" -platform DX11_SM50 -shader "Shaders\Debug" -perm CAMERA_MODE=CAMERA_MODE_PERSPECTIVE
 ```
 
 ```cmd

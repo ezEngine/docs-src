@@ -427,6 +427,7 @@
 ## [FileServe](tools/fileserve.md)
 ## [HeaderCheck Tool](tools/headercheck.md)
 ## [ezInspector](tools/inspector.md)
+## [MCP Server](tools/mcp-server.md)
 ## [MiniDump Tool](tools/minidumptool.md)
 ## [ezPlayer](tools/player.md)
 ## [ShaderCompiler](tools/shadercompiler.md)

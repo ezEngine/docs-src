@@ -18,8 +18,9 @@ The editor supports the following command line arguments:
 | `-projectTemplate <name>` | Which project template `-createProject` should use. |
 | `-pluginTemplate <name>` | Which plugin template `-createProject` should use. |
 | `-listTemplates` | Logs the names that `-projectTemplate` and `-pluginTemplate` accept, then continues. |
+| `-editor-mcpport <port>` | The port for the editor's [MCP server](../tools/mcp-server.md), by default `7391`. Only needed to run several editors at once. |
 
-Running `ezEditor.exe -help` prints the full list.
+Running `ezEditor.exe -help` prints the full list and then exits.
 
 ### Examples
 
@@ -75,3 +76,4 @@ On Windows, the editor integrates with the taskbar jumplist. Right-click the edi
 * [Editor Preferences](editor-preferences.md)
 * [Projects](../projects/projects-overview.md)
 * [ezEditorProcessor](../tools/editor-processor.md)
+* [MCP Server](../tools/mcp-server.md)

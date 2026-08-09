@@ -27,7 +27,7 @@ The default key bindings for the console are:
 * **TAB** - Auto-completes the current input. Also displays all available input options in the output.
 * **Enter** - Executes the typed command. If the typed text is only the name of a CVar without an assignment, this will print the current value and description of the CVar.
 
-When the console is open, the mouse cursor is shown and not clipped to the window, allowing interaction with elements outside the console.
+When the console is open, the mouse cursor is shown and not clipped to the window, allowing interaction with elements outside the console. A [custom mouse cursor](../input/mouse-cursor.md) is not drawn while it is open, since it may not indicate where clicks go.
 
 ## Modify CVars
 

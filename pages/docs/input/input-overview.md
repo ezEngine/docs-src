@@ -105,7 +105,12 @@ This message based approach is how [script components](../custom-code/visual-scr
 
 Input sets can be configured either from code, or through the editor [project settings](../projects/project-settings.md). For details, see [this page](input-config.md).
 
+## Mouse Cursor
+
+Besides reading input, the input manager also holds the state of the mouse cursor: which custom ('software') cursor to display, whether the operating system cursor is visible, and whether the mouse is confined to the window. See [Mouse Cursor](mouse-cursor.md).
+
 ## See Also
 
 * [Input Set Configuration](input-config.md)
 * [Input Component](input-component.md)
+* [Mouse Cursor](mouse-cursor.md)

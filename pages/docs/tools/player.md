@@ -36,3 +36,4 @@ See [this page](../runtime/application/common-application-features.md) for detai
 * [Game States](../runtime/application/game-state.md)
 * [Engine Plugins](../custom-code/cpp/engine-plugins.md)
 * [Projects](../projects/projects-overview.md)
+* [MCP Server](mcp-server.md)

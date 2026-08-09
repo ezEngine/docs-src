@@ -1,3 +1,4 @@
 input-overview.md
 input-config.md
 input-component.md
+mouse-cursor.md

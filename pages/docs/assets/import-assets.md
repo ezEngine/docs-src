@@ -46,11 +46,15 @@ You then get a table where you can select for each file how to import it:
 
 This can be useful, if you want to import many meshes, but need to decide which ones shall be static meshes and which ones animated meshes. It can also be useful, if you want to import many textures, as the dialog allows to select how each texture gets imported.
 
+Where an import mode needs more explanation than its name gives, hovering over it in the drop-down shows a description.
+
 > **Note:**
 >
 > Importing textures directly is typically not needed when the textures are part of meshes, since the mesh import automatically imports textures for you.
 
 Once you click *Import* the asset documents are generated and you can then open them. If background asset processing is enabled, the editor will already start [transforming](assets-overview.md#asset-transform) the asset data.
+
+Importing a file that was imported before does not create a second document and does not overwrite the existing one, it is simply skipped. So it is safe to select a whole folder and import it repeatedly, to pick up the files that were added since. File types from which multiple documents can be created, such as [animation clips](../animation/skeletal-animation/animation-clip-asset.md), can still be imported again.
 
 ### Import Via Drag And Drop
 

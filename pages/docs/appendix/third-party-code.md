@@ -6,6 +6,14 @@ This page lists which third party code and data is used by EZ.
 >
 > Before you distribute any project, please check the licensing conditions for all used components. The list below tries to be exhaustive and up-to-date for components directly used by EZ, but this is only provided for your convenience and we give no guarantee for correctness. It is still your responsibility to make absolutely certain that your project doesn't violate any licensing conditions from third-party components used directly or indirectly in your project.
 
+## 7-Zip
+
+Link: <https://www.7-zip.org>
+
+Compile switch: None
+
+The `7z` command line tool is shipped as a precompiled tool. It is used by the build system to unpack downloaded packages, and by the editor to unpack the archives of a downloaded [remote project](../editor/dashboard.md).
+
 ## AngelScript
 
 Link: <https://www.angelcode.com/angelscript>
@@ -52,6 +60,14 @@ Link: [https://cgbookcase.com](https://cgbookcase.com)
 
 cgbookcase provides hundreds of high quality, PBR textures. All textures on cgbookcase.com are licensed as CC0.
 
+## CMake
+
+Link: [https://cmake.org](https://cmake.org)
+
+Compile switch: None
+
+The build system of EZ. A precompiled version is shipped, so that projects which use [custom C++ code](../custom-code/cpp/cpp-overview.md) can be built without installing CMake separately.
+
 ## Dear Imgui
 
 Link: [https://github.com/ocornut/imgui](https://github.com/ocornut/imgui)
@@ -60,6 +76,22 @@ Compile switch: **EZ_3RDPARTY_IMGUI_SUPPORT**
 
 A nice library for easily creating ingame GUIs.
 
+## DirectXMath
+
+Link: [https://github.com/microsoft/DirectXMath](https://github.com/microsoft/DirectXMath)
+
+Compile switch: None
+
+A SIMD math library. It is used by the integrated copy of [DirectXTex](#directxtex), not by the engine's own math code.
+
+## DirectX Shader Compiler
+
+Link: [https://github.com/microsoft/DirectXShaderCompiler](https://github.com/microsoft/DirectXShaderCompiler)
+
+Compile switch: None
+
+Compiles HLSL shaders to SPIR-V for the Vulkan renderer. The binaries are downloaded during the CMake step.
+
 ## DirectXTex
 
 Link: [https://github.com/Microsoft/DirectXTex](https://github.com/Microsoft/DirectXTex)
@@ -67,6 +99,14 @@ Link: [https://github.com/Microsoft/DirectXTex](https://github.com/Microsoft/Dir
 Compile switch: Currently none
 
 Used by ezImage and the ezTexConv tool for GPU-enabled block compression.
+
+## Embree
+
+Link: [https://github.com/RenderKit/embree](https://github.com/RenderKit/embree)
+
+Compile switch: **EZ_BUILD_EMBREE**
+
+A ray tracing kernel library. It is used by the baking plugin to trace rays against the scene geometry when baking indirect lighting.
 
 ## Enet
 
@@ -100,6 +140,16 @@ Link: [https://freesound.org](https://freesound.org/)
 
 Freesound is a collaborative database of Creative Commons Licensed sounds.
 
+## GLFW
+
+Link: [https://www.glfw.org](https://www.glfw.org)
+
+Compile switch: **EZ_3RDPARTY_GLFW_SUPPORT** (on by default on Linux, off elsewhere)
+
+This library provides a simple and portable interface for window creation, input handling and more. Used by ezWindow and ezStandardInputDevice on Linux. When it is enabled, it also handles gamepad input, so the separate XBox controller plugin is not used.
+
+It can be enabled on Windows as well, but that configuration is not tested.
+
 ## jc_voronoi
 
 Link: [https://github.com/JCash/voronoi/blob/dev/src/jc_voronoi.h](https://github.com/JCash/voronoi/blob/dev/src/jc_voronoi.h)
@@ -122,6 +172,22 @@ Link: [kenney.nl](https://kenney.nl/)
 
 Kenney provides thousands of textures, 3D models and sound effects under a generous public domain license. Some of them are used in our sample projects.
 
+## Kraut
+
+Link: [https://github.com/JanKrassnigg/Kraut](https://github.com/JanKrassnigg/Kraut)
+
+Compile switch: **EZ_3RDPARTY_KRAUT_SUPPORT**
+
+Generates tree meshes from a description of the tree's growth parameters. Used by the Kraut tree asset.
+
+## Live++
+
+Link: [https://liveplusplus.tech](https://liveplusplus.tech)
+
+Compile switch: **EZ_3RDPARTY_LIVEPP_SUPPORT** (off by default)
+
+Allows to recompile C++ code and patch it into the running application. Only the API headers are part of EZ. Live++ is a commercial product and you need to acquire a license and install it separately to use this.
+
 ## Lua
 
 Link: [(http://www.lua.org](http://www.lua.org)
@@ -129,6 +195,14 @@ Link: [(http://www.lua.org](http://www.lua.org)
 Compile switch: **EZ_3RDPARTY_LUA_SUPPORT**
 
 The Lua scripting language. Can be used directly or through ezLuaWrapper for easier access to common functionality. Non-essential for EZ, only the ingame console interpreter would stop working without it.
+
+## meshoptimizer
+
+Link: [https://github.com/zeux/meshoptimizer](https://github.com/zeux/meshoptimizer)
+
+Compile switch: None
+
+Optimizes the vertex and index order of imported meshes for better GPU cache utilization. Used during mesh asset import.
 
 ## Mikktspace
 
@@ -154,6 +228,14 @@ Compile switch: None
 
 Used as the basis for skeletal animations. Both during asset import (to build an optimized skeleton structure) and at runtime for animation playback.
 
+## Perfetto
+
+Link: [https://perfetto.dev](https://perfetto.dev)
+
+Compile switch: **EZ_3RDPARTY_PERFETTO_SUPPORT**
+
+A tracing library. It is used to forward the engine's profiling data to the system tracing service on Android.
+
 ## PolyHaven
 
 Link: [PolyHaven.com](https://polyhaven.com/)
@@ -162,7 +244,7 @@ Poly Haven is a small company based in South Africa, working with artists around
 
 Some of PolyHaven's assets are used in our sample projects.
 
-## Qt 5
+## Qt 6
 
 Link: [https://www.qt.io](https://www.qt.io)
 
@@ -204,19 +286,19 @@ Link: [https://mikke89.github.io/RmlUiDoc/](https://mikke89.github.io/RmlUiDoc/)
 
 RmlUi is the C++ user interface package based on the HTML and CSS standards, designed as a complete solution for any project's interface needs. It is a fork of the libRocket project, introducing new features, bug fixes, and performance improvements.
 
-## SFML
-
-Link: [http://www.sfml-dev.org](http://www.sfml-dev.org)
-
-Compile switch: **currently none**
-
-This library provides a simple and portable interface for window creation, input handling and more. Used by ezWindow and ezStandardInputDevice on non-Windows platforms (Mac, Linux).
-
 ## Silk Icons
 
 Link: [http://www.famfamfam.com/lab/icons/silk](http://www.famfamfam.com/lab/icons/silk)
 
 Icons from this set were extensively used in the past and may still be used by some of the tools.
+
+## SPIRV-Reflect
+
+Link: [https://github.com/KhronosGroup/SPIRV-Reflect](https://github.com/KhronosGroup/SPIRV-Reflect)
+
+Compile switch: None
+
+Extracts the resource bindings and other reflection data from compiled SPIR-V shaders. Used by the Vulkan renderer's shader compiler.
 
 ## Sonniss
 
@@ -327,6 +409,22 @@ Link: [https://github.com/kmammou/v-hacd](https://github.com/kmammou/v-hacd)
 Compile switch: **EZ_3RDPARTY_VHACD_SUPPORT**
 
 The "Volumetric Hierarchical Approximate Convex Decomposition" library is used to decompose a concave triangle mesh into multiple convex pieces. This allows you to generate complex [collision meshes](../physics/jolt/collision-shapes/jolt-collision-meshes.md) which can be used as the shapes of [dynamic actors](../physics/jolt/actors/jolt-dynamic-actor-component.md).
+
+## Vulkan-Headers
+
+Link: [https://github.com/KhronosGroup/Vulkan-Headers](https://github.com/KhronosGroup/Vulkan-Headers)
+
+Compile switch: None
+
+The official Vulkan API headers. Used by the Vulkan renderer, so that no Vulkan SDK installation is required to build EZ.
+
+## Vulkan Memory Allocator
+
+Link: [https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator](https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator)
+
+Compile switch: None
+
+Handles GPU memory allocation and sub-allocation for the Vulkan renderer.
 
 ## xxHash
 

@@ -8,12 +8,19 @@ On Windows, both the D3D11 and Vulkan renderers are built by default, with D3D11
 
 On Mac, Android and Linux only the base libraries are fully functional. Once the Vulkan renderer is more mature, the goal is to have most features available everywhere.
 
+## Hardware Requirements
+
+* A 64 Bit CPU. There are no 32 Bit builds.
+* A GPU with support for either Direct3D 11 or Vulkan 1.1. The Direct3D renderer falls back to lower feature levels if necessary, but not all rendering features work then.
+
+To build C++ code, whether the engine itself or just a [game plugin](../custom-code/cpp/cpp-overview.md), a supported compiler has to be installed. See the platform specific pages below for details.
+
 ## List of Officially Supported Platforms
 
 * Windows 10/11 ([details](build-windows.md))
-* OS X 10.9 (Mavericks) ([details](build-macos.md))
 * Linux ([details](build-linux.md))
-* Android 6.0 Marshmallow (API 23) or newer ([details](build-android.md))
+* Android 10 (API level 29) or newer ([details](build-android.md))
+* macOS 11 (Big Sur) or newer, on Intel and Apple Silicon ([details](build-macos.md))
 
 ## Consoles (Unofficial Ports)
 

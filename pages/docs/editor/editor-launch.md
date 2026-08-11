@@ -10,10 +10,10 @@ The editor supports the following command line arguments:
 |--------|-------------|
 | `-project <path>` | Opens the editor with the specified project. The path should point to the project's `ezProject` file, or to the folder containing it. |
 | `-documents <path> ...` | Documents to open after the project. The paths are relative to a [data directory](../projects/data-directories.md). Only used together with `-project`. |
-| `-noRecent` | Opens the editor without loading a recent project. Use this to start with a blank editor. |
+| `-dashboard` | Opens the editor into the [dashboard](dashboard.md), rather than restoring the last project. |
 | `-safe` | Starts the editor in *safe mode*, which disables automatic loading of projects and scenes. This is useful for troubleshooting startup issues. |
 | `-unattended` | Tells the editor that no user is present, see [below](#unattended-mode). |
-| `-NoSplash` | Disables the splash screen. |
+| `-NoSplash` | Disables the splash screen. Can also be disabled permanently in the [editor preferences](editor-preferences.md). |
 | `-createProject <path>` | Creates a new project and opens it, see [below](#creating-a-project). |
 | `-projectTemplate <name>` | Which project template `-createProject` should use. |
 | `-pluginTemplate <name>` | Which plugin template `-createProject` should use. |
@@ -29,7 +29,7 @@ ezEditor.exe -project "C:/dev/MyGame/ezProject"
 ```
 
 ```cmd
-ezEditor.exe -noRecent
+ezEditor.exe -dashboard
 ```
 
 ```cmd
@@ -67,7 +67,7 @@ Without this option, a dialog that nobody closes blocks the editor indefinitely.
 On Windows, the editor integrates with the taskbar jumplist. Right-click the editor icon in the taskbar to access:
 
 * **Recent Projects** - Quickly open one of your recently used projects.
-* **New Window** - Launch a new editor instance without loading a project.
+* **New Window** - Launch a new editor instance without loading a project, showing the dashboard.
 * **Start in Safe Mode** - Launch the editor in safe mode.
 
 ## See Also

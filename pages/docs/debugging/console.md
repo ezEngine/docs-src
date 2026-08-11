@@ -13,6 +13,14 @@ The console provides multiple windows that can be shown, hidden, and rearranged:
 * **CVar Window:** Hierarchical tree view of all [CVars](cvars.md). CVars are organized by their dot-separated names (e.g., `r.Bloom` appears under "r" > "Bloom").
 * **Stats Window:** Shows FPS, frame time graph, and memory usage.
 
+### Menu Bar
+
+While the console is open, a menu bar is shown at the top of the screen:
+
+* **Windows:** Toggles the visibility of the individual console windows, including [custom windows](#custom-windows).
+* **Layout:** *Reset Layout* moves all windows back to their default position and size and makes them visible again.
+* Further menus are added by [console actions](#console-actions). Each entry shows the key that triggers it and can also be clicked to execute the action.
+
 ### Pinnable Overlays
 
 The Stats and Log windows can be *pinned* using the "Pin Window" checkbox. Pinned windows remain visible as overlays even when the console is closed. This is useful for monitoring performance or watching for specific log messages during gameplay.
@@ -62,6 +70,40 @@ The Log window provides filtering options to help find specific messages:
 * **Text Filter:** Type in the filter field to show only log messages containing that text (case-insensitive).
 * **Severity Filter:** Use the dropdown to filter messages by severity.
 * **Clear Log:** Remove all current log messages from the display.
+
+## Console Actions
+
+Console actions are commands that are bound to an [input action](../input/input-overview.md) and are additionally listed in the console's menu bar. They are registered through `ezConsoleActions`:
+
+```cpp
+ezInputActionConfig config;
+config.m_sInputSlotTrigger[0] = ezInputSlot_KeyF9;
+ezInputManager::SetInputActionConfig("Game", "MyAction", config, true);
+
+ezConsoleActions::AddAction("Game", "MyAction", "MyMenu", []()
+  { ezLog::Info("Action executed"); });
+```
+
+The *input set* and *action* names must be identical to what was passed to `ezInputManager::SetInputActionConfig()`, since they are used both to identify the action and to look up the key that is displayed next to the menu entry. The *menu* name determines under which menu the entry appears.
+
+For the shortcut to work, `ezConsoleActions::HandleInput()` has to be called once per frame. `ezGameApplication` does this in `Run_ProcessApplicationInput()`, and also registers its own [developer shortcuts](../runtime/application/common-application-features.md) this way.
+
+## Custom Windows
+
+Additional ImGui windows can be added to the console. They show up in the *Windows* menu and are rendered while the console is open:
+
+```cpp
+ezImGuiRegisteredWndHandle hWindow = ezImGuiConsole::RegisterWindow("My Window", [](bool& ref_bOpen)
+  {
+    if (ImGui::Begin("My Window", &ref_bOpen))
+    {
+      ImGui::Text("Hello");
+    }
+    ImGui::End();
+  });
+```
+
+The callback is only invoked while the window is toggled on. The `bool` reference is the window's open state, so passing it to `ImGui::Begin()` makes the window's close button work.
 
 ## Console Functions
 

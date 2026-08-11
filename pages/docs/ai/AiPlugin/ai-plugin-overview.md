@@ -14,8 +14,11 @@ Additionally there is C++ functionality available for searching paths and *steer
 
 The [Detour Crowd Agent Component](detour-crowd-agent-component.md) provides a ready-to-use component for multi-agent navigation with local obstacle avoidance between agents.
 
+For objects that move freely through 3D space, such as flying creatures or spaceships, the plugin provides [3D voxel navigation](voxel-navigation.md) instead, which uses volumetric grids rather than a navmesh.
+
 ## See Also
 
 * [Runtime Navmesh](runtime-navmesh.md)
 * [AI Navigation Component](navigation-component.md)
 * [Detour Crowd Agent Component](detour-crowd-agent-component.md)
+* [3D Voxel Navigation](voxel-navigation.md)

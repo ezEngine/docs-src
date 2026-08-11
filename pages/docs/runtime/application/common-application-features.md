@@ -2,6 +2,8 @@
 
 All applications that are built on top of `ezGameApplication` provide a number of useful features for developers.
 
+The shortcuts below are also listed in the *Engine* menu of the in-game [console](../../debugging/console.md) and can be triggered from there.
+
 ## In-game console
 
 **Press F1** to toggle the in-game [console](../../debugging/console.md). See its documentation for further details.
@@ -19,6 +21,10 @@ Reloading resources works for all assets that are used directly by the engine (e
 ## Take a Profiling Capture
 
 **Press F8** to take a capture of the profiling data. See the [profiling](../../performance/profiling.md) documentation for details.
+
+## Open ezInspector
+
+**Press F10** to launch the [ezInspector](../../tools/inspector.md) tool. It is started from the directory of the running application, so it is only available if `ezInspector` was built and deployed next to it.
 
 ## Take a RenderDoc Capture
 

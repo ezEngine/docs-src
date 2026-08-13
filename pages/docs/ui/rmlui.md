@@ -31,6 +31,28 @@ ezEngine provides two canvas components for placing RmlUi documents in a scene:
 
 Both components support blackboard data binding, event messages, and on-demand rendering. See the individual component pages for their full property reference.
 
+## Debugger
+
+RmlUi comes with its own [debugger](https://mikke89.github.io/RmlUiDoc/pages/cpp_manual/debugger.html), which shows the element hierarchy of a document, the applied styles, and a log. It can be attached to a context through the [CVar](../debugging/cvars.md) `RmlUi.DebugContext`.
+
+Set the CVar to the name of the context that should be debugged. The canvas components name their context after the Rml asset that they display, so entering the asset's file name is usually sufficient. The lookup is a case insensitive substring match, so a partial name works as well. Setting the CVar to an empty string closes the debugger again.
+
+For example, to debug the UI of an Rml asset called `MainMenu.ezRmlUiAsset`, open the [console](../debugging/console.md) while the game runs and type:
+
+```cmd
+RmlUi.DebugContext = "MainMenu"
+```
+
+The same can be done through the *CVars* panel in ezEditor, or from the command line when starting the application:
+
+```cmd
+MyGame.exe -RmlUi.DebugContext MainMenu
+```
+
+Only a single context can be debugged at a time. Attaching to another context detaches the previous one. If no context matches the given name at that moment, the debugger is closed, but it opens automatically once a matching context loads a document afterwards.
+
+The debugger is only available in development builds and only on Windows, since it is loaded from `RmlDebugger.dll` at runtime. If that DLL can't be found, an error is logged and nothing else happens.
+
 ## Localization
 
 All text content in RmlUi documents is automatically passed through ezEngine's localization system (`ezTranslate`). That means you can set up translation tables for different languages.

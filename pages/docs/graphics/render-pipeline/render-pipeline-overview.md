@@ -40,7 +40,7 @@ Note that, although the *BloomPass* does create a new image, you do not need to 
 
 > **NOTE**
 >
-> All render passes have an 'active' flag, with which they can be deactivated. Depending on what the pass is supposed to do when active, a deactivated pass may do nothing and also output nothing, or it may pass input render targets through as outputs, or it may do a copy of a texture (but nothing else). Some passes also may not support being deactivated.
+> Render passes can't be deactivated individually. To disable parts of a pipeline, route around them with a *switch* pass. A switch forwards one of its inputs, selected through an integer [blackboard](../../misc/blackboards.md) entry, and all passes that only feed unselected inputs are skipped.
 
 Be aware that *render pass nodes* are a high level functional unit. They don't map directly to render passes in graphics APIs like Vulkan or D3D12 even though there are definitely similarities.
 

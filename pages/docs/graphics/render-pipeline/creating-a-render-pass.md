@@ -10,7 +10,7 @@ Creating a custom pass requires:
 
 1. A **header** declaring the class, its pins, and any configurable properties.
 2. An **implementation** with reflection metadata and the `AddRenderPasses()` override.
-3. Optionally, `Serialize`/`Deserialize` overrides for persistence and `AddRenderPassesInactive` for inactive state handling.
+3. Optionally, `Serialize`/`Deserialize` overrides for persistence.
 
 ## Pin Types
 
@@ -18,7 +18,7 @@ Pins define the inputs and outputs visible in the render pipeline editor. Declar
 
 * `ezRenderPipelineNodeInputPin` — receives a texture from an upstream node.
 * `ezRenderPipelineNodeOutputPin` — produces a new texture for downstream nodes.
-* `ezRenderPipelineNodePassThroughPin` — receives a texture and passes it through. The pass renders into the texture without creating a new one. Has both an input and output index.
+* `ezRenderPipelineNodePassThroughPin` — receives a texture and passes it through. The pass renders into the texture without creating a new one. Has both an input and output index. Because the texture is modified in place, the pass is executed after all other passes that read the same texture, and only one pass may modify a texture this way.
 
 ## Minimal Example: Copy Texture Pass
 
@@ -83,7 +83,7 @@ The function `AddRenderPasses` does all the actual rendering work. Here, you can
 
 **Set the execution callback:** The actual rendering code needs to be placed in the execution callback. Use `ctx.ResolveTexture()` to convert graph handles to real GPU handles inside the callback.
 
-If your pass can be toggled off in the editor but downstream passes depend on its output, override `AddRenderPassesInactive()`. This has the same interface as `AddRenderPasses` and must still create a valid output texture, typically cleared to a neutral value.
+Passes can't be deactivated individually. To make a pass optional, route around it with a switch pass in the pipeline. Passes that only feed unselected switch inputs are culled and not executed. If a downstream pass may receive an unconnected input this way, it should handle that, for example by binding a neutral fallback texture.
 
 
 

@@ -28,6 +28,10 @@ The brush footprint is a 3D rounded box oriented by the owner object's rotation.
 
 For the remaining properties, see [Terrain Brush 2D Component](terrain-brush-2d-component.md#footprint).
 
+## Noise
+
+3D brushes have no height axis to displace along, so they don't expose `NoiseStrength`. `NoiseEdge` distorts the volume boundary — relative to `InnerRadius` rather than `OuterRadius` — which is how you get jagged cave and tunnel walls instead of perfectly smooth tubes. `NoiseType`, `NoiseFrequency`, `NoiseWarp` and `NoiseSeed` work as described for [2D brushes](terrain-brush-2d-component.md#noise).
+
 ## Spline Brushes
 
 Spline support works the same way as for 2D brushes. Attaching a [Spline Component](../animation/paths/spline-component.md) to the same game object extrudes the brush volume along the spline. This is the best way to create tunnels and passages.

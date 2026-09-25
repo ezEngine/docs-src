@@ -25,6 +25,16 @@ The collision geometry is rendered using these color codes:
 
 ![Color coding](media/jolt-debug-geo-types.jpg)
 
+## Visualize Jolt Surfaces
+
+* `Jolt.Visualize.Surfaces`: Enables visualization of physics collision geometry, color coded by the [surface](../../materials/surfaces.md) that is assigned to it.
+
+The same geometry as with `Jolt.Visualize.Geometry` is rendered, but instead of using the shape type for the color, the geometry uses the *Debug Color* that is configured on its surface asset. Shapes whose triangles use several surfaces are split accordingly. Geometry without an assigned surface is rendered in grey.
+
+Since the colors are freely chosen in the surface assets, it is up to you to pick colors that are easy to tell apart.
+
+Both visualizations render the same geometry, so only one of them is active at a time. If both CVars are enabled, `Jolt.Visualize.Surfaces` wins.
+
 ## Debug Draw Constraints
 
 The *debug draw* CVars enable wireframe overlays which are mainly useful to debug issues with constraints. This visualization has a high performance impact and thus should only be used in very small test scenes.

@@ -20,6 +20,10 @@ Surfaces are used by [collision meshes](../physics/jolt/collision-shapes/jolt-co
 
 **Ground Type:** This property is used by the [AiPlugin](../ai/AiPlugin/ai-plugin-overview.md) during [navmesh generation](../ai/AiPlugin/runtime-navmesh.md) and path searches to determine whether a character can traverse this kind of terrain and at what speed.
 
+## Debugging Properties
+
+**Debug Color:** The color that this surface uses in the surface debug visualization (see the CVar `Jolt.Visualize.Surfaces` in [Jolt Debug Visualizations](../physics/jolt/jolt-debug-visualizations.md)). It has no effect on anything but that visualization.
+
 ## Surface Interactions
 
 The main feature of surfaces are *surface interactions*. These are used to tell the engine which effects it should spawn when a surface interacts with something else. The other thing may be another surface, for example when a box slides over the ground, then both the box and the ground have a surface. However, the other thing could also be something entirely different. For example a laser beam. In this case the surface may define whether the beam should create sparks or fire or steam, etc.

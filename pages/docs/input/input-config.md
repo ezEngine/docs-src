@@ -57,6 +57,8 @@ To build a UI where the player can select an action and then press a key to bind
 
 For display purposes there are also `ezInputManager::GetInputSlotDisplayName()` and `ezInputManager::GetActionDisplayName()`.
 
+The [RmlUi Main Menu component](../ui/rmlui-main-menu-component.md) contains a working key binding page built this way. It saves the bindings that the player changed to `ezGameAppInputConfig::s_sUserConfigFile` (`:appdata/RuntimeConfigs/InputConfig.ddl`), which `ezGameApplication` applies after the project's own input configuration.
+
 ## See Also
 
 

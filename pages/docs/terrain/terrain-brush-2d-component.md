@@ -14,6 +14,8 @@ The `ModifyMode` property selects how the brush affects the terrain. **Raise** p
 
 **Paint Only** does not affect height, and only assigns a material. For material painting to work, `Material Strength` must be set to a non-zero value (usually `1`) and `Material Index` can then be used to select the material layer to paint.
 
+**Displace** adds a signed noise offset to whatever height the terrain already has, rather than blending it towards the brush. The brush Z position is not used at all, and the brush does nothing unless `NoiseStrength` is non-zero. Use it as a detail overlay: a large brush with a soft falloff and ridged or warped noise adds erosion-like structure across an existing mountain without flattening its silhouette. *Displace* only works on terrain patches, terrain volumes ignore it.
+
 ## Footprint
 
 The brush footprint is a rounded rectangle oriented by the owner object's rotation in the XY plane. The yellow line represents the inner shape, the green line the outer shape. The 2D brushes affect all terrain *below and above* them (depending on the *modify mode* they lower or raise the terrain).
@@ -24,11 +26,18 @@ The brush footprint is a rounded rectangle oriented by the owner object's rotati
 
 ![Brush Shapes](media/brushes-2d.jpg)
 
-`OuterRadius` — Corner rounding of the falloff zone. The outer edge of the brush is at *InnerRadius + OuterRadius*. Vertices between the inner and outer edge are blended using the *Falloff* exponent. Setting this to 0 gives a hard edge.
+`OuterRadius` — Corner rounding of the falloff zone. The outer edge of the brush is at *InnerRadius + OuterRadius*. Vertices between the inner and outer edge are blended across that zone, shaped by *Sharpness*. Setting this to 0 gives a hard edge.
 
-`Falloff` — Falloff between inner and outer radius. A falloff of `1` (top left image) results in a natural hill. `0.5` (top right image) and other values below `1` result in shapes more like domes or plateaus. `2` (bottom left), `5` (bottom right) and other values above `1` produce steep cliffs.
+`Sharpness` — How abruptly the brush transitions from full strength to nothing, between `0` and `1`. `0` is a smooth, natural falloff across the whole zone between the inner and outer radius. Higher values compress the transition towards the middle of that zone, flattening the brush centre and the outer edge while steepening what is between them, until at `1` the change happens across roughly a seventh of the zone.
 
-![Brush Falloff](media/brush-falloff.jpg)
+`Sharpness` deliberately does not move the point at which the brush reaches half strength, nor how wide the falloff zone is — those are what `InnerRadius` and `OuterRadius` are for. Use the radii to say *where* the edge is and how far it reaches, and `Sharpness` to say how hard it is.
+
+| `Sharpness` | transition occupies | |
+|---|---|---|
+| 0 | 73% of the falloff zone | a natural hill |
+| 0.25 | 29% | a firm edge |
+| 0.5 | 18% | a steep bank |
+| 1 | 10% | close to a cliff |
 
 ## Material Painting
 
@@ -44,9 +53,46 @@ Material painting let's you change the material layer that is used in some area.
 
 Noise affects both geometry and material painting. Noise is used to introduce random patterns to make the result more natural. See the image below for an example where the same brush settings are used, only with varying noise strength and frequency.
 
-`NoiseStrength` — Amount of noise applied to perturb the brush influence. 0 disables noise.
+`NoiseType` — The shape of the noise.
 
-`NoiseFrequency` — Spatial frequency of the noise. Small values make the effect very local, producing high-frequency noise, higher values are useful for larger terrain features, like mountains.
+| Type | Description |
+|------|-------------|
+| `None` | No noise. All other noise properties are hidden. |
+| `FBM` | Sum of octaves. Rolling, evenly distributed hills. |
+| `Ridged` | Sharp ridge lines running between smooth valleys. Mountain ranges. Detail concentrates along the ridges, so the valleys between them stay clean. |
+| `Billow` | Rounded humps with rounded hollows between them and no sharp edges anywhere. Dunes and boulder fields. |
+| `Terraced` | Quantized into flat steps with a sharp riser. Mesas and plateaus. |
+
+*Ridged* and *Billow* are biased upwards, so in *Displace* mode a negative `NoiseStrength` flips them into carved channels and canyons.
+
+Each type sits on its own part of the noise lattice, so switching between them gives a genuinely different pattern rather than the same features with a different profile.
+
+`NoiseStrength` — Vertical noise amplitude in world units. 0 disables the vertical displacement. This has no effect on 3D brushes, which have no height axis.
+
+Which *side of the brush plane* the noise displaces towards follows from the modify mode, so that by default it can never push the surface past the boundary the mode promises. *Raise* cuts downwards from the plane, keeping the result below it; *Lower* builds upwards from the plane, keeping the result above it. *Set* has no such boundary and displaces both ways. *Displace* has no plane at all.
+
+A negative `NoiseStrength` moves the band to the other side of the plane. That deliberately gives up the mode's boundary — a *Raise* brush with negative noise strength reaches above its own height — so it only happens when you ask for it.
+
+| Mode | `NoiseStrength` > 0 | `NoiseStrength` < 0 |
+|------|---------------------|---------------------|
+| `Raise` | brush height − amplitude … brush height | brush height … brush height + amplitude |
+| `Lower` | brush height … brush height + amplitude | brush height − amplitude … brush height |
+| `Set` | ± amplitude around the brush height | ± amplitude around the brush height |
+| `Displace` | adds up to the amplitude | subtracts up to the amplitude |
+
+Throughout, a higher noise value means higher terrain. Neither the mode nor the sign ever flips which end of the noise ends up on top, so the crests of `Ridged` stay crests in every combination instead of turning into grooves in some of them.
+
+The noise is normalized so that its peaks reach the full amplitude. A *Raise* brush's highest points therefore touch the brush plane exactly, rather than stopping short of it and sinking further the more amplitude is used.
+
+`NoiseFrequency` — World-space size of one noise cell. Small values make the effect very local, producing high-frequency noise, higher values are useful for larger terrain features, like mountains.
+
+`NoiseEdge` — Perturbs the brush outline sideways, relative to `OuterRadius`, without changing heights. Use it to break up the regular rounded-rectangle silhouette, particularly for material painting. It is separate from `NoiseStrength` so that an irregular outline doesn't force a bumpy surface, and vice versa. The perturbation fades out towards the brush edge so that the footprint stays contained.
+
+`NoiseWarp` — Displaces the noise lookup by a second, coarser noise before sampling. This stretches and swirls the pattern into flowing bands instead of evenly spread blobs, which reads as strata or water-carved channels. 0 disables it, values around 1 give a strong effect.
+
+`NoiseSeed` — Two brushes with the same frequency, placement and rotation produce identical noise. Change the seed to make them differ.
+
+The noise pattern is rotated by the brush, so turning the brush around its up axis turns the pattern with it. It is not otherwise attached to the brush: moving the brush slides it over the noise rather than carrying the pattern along. That is what lets the many stamps a spline brush generates share one continuous noise field instead of each repeating the same pattern.
 
 ![Noise](media/brush-noise.jpg)
 

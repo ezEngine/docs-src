@@ -69,6 +69,22 @@ This is used in the default pipelines to create three named hook points:
 * `RenderDataCategoryName`: The name of the render data category to collect and render.
 * `SortingFunction`: How render data is ordered before rendering. Options: `ByRenderDataThenFrontToBack`, `BackToFrontThenByRenderData`, `ByDepthOffsetOnly`. See [Sorting Functions](#sorting-functions) below.
 
+## Debug Screen Render Pass
+
+Draws the screen space output of the debug renderer: 2D text, info text, lines and rectangles that `ezDebugRenderer` places in pixel coordinates. It has only a color pin, since this output needs no depth. With a render scale, place it after the [Upscale Pass](#upscale-pass), otherwise the output ends up in the wrong place.
+
+A pipeline without this pass shows no screen space debug output, and a warning is logged for main and editor views.
+
+**Properties:** *none*
+
+## Debug World Render Pass
+
+Draws the world space output of the debug renderer: lines, boxes and text that `ezDebugRenderer` places in the world. Place it where the scene is rendered and connect the scene's depth buffer, so that the output is hidden behind objects. A depth input of a different size than the color input is ignored.
+
+A pipeline without this pass shows no world space debug output, and a warning is logged for main and editor views.
+
+**Properties:** *none*
+
 ## Depth Only Pass
 
 Renders geometry into a depth buffer without producing any color output. Used for depth pre-passes and shadow map generation.
@@ -203,7 +219,7 @@ A depth-aware blur that preserves silhouette edges. Uses a two-pass separable bi
 
 ## Simple Render Pass
 
-Renders unlit and debug geometry as well as all UI and editor overlays. Accepts an optional color input and renders on top of it, or renders directly into the view's current render target if no input is provided.
+Renders unlit geometry as well as UI and editor overlays. Output of the debug renderer is drawn by the [Debug World Render Pass](#debug-world-render-pass) and [Debug Screen Render Pass](#debug-screen-render-pass) instead. Accepts an optional color input and renders on top of it, or renders directly into the view's current render target if no input is provided.
 
 What the simple render pass renders depends on which extractors are active:
 
@@ -214,9 +230,9 @@ What the simple render pass renders depends on which extractors are active:
 * [Editing gizmos](../../scenes/gizmos.md)
 * Unlit meshes
 
-**Properties:**
+If a depth input of a different size than the color input is connected (for example because the pass comes after an [Upscale Pass](#upscale-pass)), the depth input is ignored.
 
-* `Message`: Debug string shown in the render output during development.
+**Properties:** *none*
 
 ## Sky Render Pass
 
@@ -234,6 +250,7 @@ Allocates a new render target for downstream passes to render into. This is wher
 * `MsaaMode`: MSAA sample count (`None`, `2`, `4`, `8`).
 * `ClearColor`: Color the texture is cleared to when `Clear` is enabled.
 * `Clear`: If `true`, the render target is cleared at the start of every frame.
+* `ApplyRenderScale`: If `true`, the texture is smaller than the view by the view's render scale (the `App.RenderScale` CVar for the game's main view). Enable it on all sources of the scene, and bring the result back to full size with an [Upscale Pass](#upscale-pass). Without one, the scaled textures reach the output at the wrong size. The render scale also reduces the size of the shadow maps rendered for the view.
 
 ## Stereo Test Pass
 
@@ -261,6 +278,16 @@ Converts high dynamic range (HDR) color values to display output. Combines expos
 Forward render pass for transparent geometry. Objects are sorted back-to-front to produce correct alpha blending. Optionally accepts a resolved depth input for soft particle effects.
 
 **Required Extractor:** [Clustered Data Extractor](render-pipeline-extractors.md#clustered-data-extractor)
+
+## Upscale Pass
+
+Stretches its input to the size of the view with bilinear filtering. It is the counterpart to [Source Passes](#source-pass) with `ApplyRenderScale` enabled: the scene is rendered at a reduced resolution, and this pass brings it back to the output size. If the input already has the size of the view, it is passed through without any rendering.
+
+Place it after tonemapping and before UI and screen space debug output, so that those stay sharp. Passes after it must not use the scaled depth buffer.
+
+**Properties:**
+
+* `Sharpness`: Counters the blur of the upscaling, from 0 (off) to 1 (strongest), default 0.5. The sharpening adapts to the local contrast, so edges don't get halos and noise isn't amplified much. It is meant for tonemapped input; pixels brighter than 1 are left unchanged. At a render scale of 100% the pass does nothing, so there is no sharpening either.
 
 ## Sorting Functions
 

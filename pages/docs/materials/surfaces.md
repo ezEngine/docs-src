@@ -1,4 +1,4 @@
-# Surfaces
+    # Surfaces
 
 *Surfaces* are assets that define the physical properties of objects. This includes both the actual physics parameters such as friction, but also how objects interact from a gameplay perspective. For example, surfaces define what sounds are played when objects slide or roll around and what effects should be spawned when there is an impact on an object.
 
@@ -19,6 +19,10 @@ Surfaces are used by [collision meshes](../physics/jolt/collision-shapes/jolt-co
 ## AI Properties
 
 **Ground Type:** This property is used by the [AiPlugin](../ai/AiPlugin/ai-plugin-overview.md) during [navmesh generation](../ai/AiPlugin/runtime-navmesh.md) and path searches to determine whether a character can traverse this kind of terrain and at what speed.
+
+## Debugging Properties
+
+**Debug Color:** The color that this surface uses in the surface debug visualization (see the CVar `Jolt.Visualize.Surfaces` in [Jolt Debug Visualizations](../physics/jolt/jolt-debug-visualizations.md)).
 
 ## Surface Interactions
 

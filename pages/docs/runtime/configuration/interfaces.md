@@ -20,7 +20,7 @@ First, you need to have a virtual base class that declares the actual interface.
 
 <!-- BEGIN-DOCS-CODE-SNIPPET: singleton-interface -->
 ```cpp
-/// \brief Pure virtual interface for demonstrating the singleton work flow
+/// Pure virtual interface for demonstrating the singleton work flow
 ///
 /// This declaration would typically be in a shared location, that all code can #include
 class PrintInterface
@@ -41,7 +41,7 @@ Next, you need one or more *implementations* of your interface. You can, of cour
 
 <!-- BEGIN-DOCS-CODE-SNIPPET: singleton-impl-declaration -->
 ```cpp
-/// \brief Implementation of the PrintInterface, just forwards the text to ezLog::Info()
+/// Implementation of the PrintInterface, just forwards the text to ezLog::Info()
 ///
 /// This would typically be in a different plugin than the interface and would be allocated by that plugin on startup.
 class PrintImplementation : public PrintInterface

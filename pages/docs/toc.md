@@ -302,6 +302,7 @@
 ## [RmlUi](ui/rmlui.md)
 ## [RmlUI Canvas 2D Component](ui/rmlui-canvas2d-component.md)
 ## [RmlUI Canvas 3D Component](ui/rmlui-canvas3d-component.md)
+## [RmlUI Main Menu Component](ui/rmlui-main-menu-component.md)
 # Gameplay
 ## [Area Damage Component](gameplay/area-damage-component.md)
 ## Camera

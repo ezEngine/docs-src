@@ -26,7 +26,7 @@ Animation clips can also be imported automatically when [importing an animated m
 
 * `PreviewAnim`: For additive animation clips, this optionally selects another animation clip to use as the reference pose in the editor preview. The first keyframe of that clip is used to reconstruct the base pose, and the additive animation is layered on top. This makes the preview more representative of how the clip will look in practice. If left empty, the rest pose is used instead.
 
-* `UseAnimationClip`: The (case sensitive) name of the animation clip to import from the file. *Transform* the asset once to populate the list of `AvailableClips`. Then type the name of the desired clip into this field and transform the asset again. If a clip doesn't show up in the list, make sure it is correctly exported. See the chapter [Authoring and Exporting Animations with Blender](blender-export.md) for known issues.
+* `UseAnimationClip`: The (case sensitive) name of the animation clip to import from the file. *Transform* the asset once, afterwards the dropdown lists all animation clips that were found in the file. Select the desired clip and transform the asset again. The list reflects the last transform, so after changing `File`, transform the asset again to update it. If a clip doesn't show up in the list, make sure it is correctly exported. See the chapter [Authoring and Exporting Animations with Blender](blender-export.md) for known issues.
 
 * `FirstFrame`, `NumFrames`: It is best to put every animation into a separate clip and export them that way. However, sometimes files contain only a single animation and each clip is found at another interval. By specifying the index of the first frame and the number of frames to use, you can extract individual clips from such data. Note that setting NumFrames to zero always means to use all the remaining frames after the first frame.
 
@@ -51,8 +51,6 @@ Animation clips can also be imported automatically when [importing an animated m
     > Constant root motion can be estimated automatically by the editor for you. Click the button *Extract Root Motion From Feet* in the toolbar, or from the *Asset* main menu. The editor then samples the animation clip and estimates how the feet would move the character to determine an average direction and speed. For this to work, the [skeleton](skeleton-asset.md) must specify which bones are the left and right foot bones. Upon success, it fills out the root motion direction value. You can then adjust the value, for example, it is often necessary to remove unwanted motion along the Z axis.
 
 * `AdjustScale`: Allows you to scale the position data of the animation clip during import. This is useful if the animation was authored or exported at a different scale than the mesh. The default value is `1.0` (no scaling).
-
-* `AvailableClips`: When you manually *transform* the asset, this list shows all the animation clips that have been found in the given file. Use this information to fill out the `UseAnimationClip` property.
 
 ## Playback
 

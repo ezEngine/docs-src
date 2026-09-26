@@ -24,7 +24,11 @@ You can also move and delete files and assets. Note that deleting a file moves i
 
 ### Delete & Replace
 
-Right-clicking a single asset reveals a **Delete & Replace...** option. This opens an asset picker where you select a replacement asset. The editor then rewrites every asset document that referenced the deleted asset so that it now points to the replacement, and finally deletes the original asset. This is useful when consolidating duplicate assets.
+Right-clicking an asset shows a **Delete & Replace...** option. Using this, you are asked what should happen to existing references:
+
+* **Replace With Other Asset...:** Opens an asset picker where you select a replacement asset of the same type. The editor then rewrites every asset document that referenced the deleted asset so that it now points to the replacement. This is useful when consolidating duplicate assets.
+* **Clear References:** Removes the reference from every asset document that referenced the deleted asset, leaving those properties empty.
+* **Delete Anyway:** Deletes the asset without modifying other assets. Their references then point to an asset that doesn't exist anymore and have to be fixed manually.
 
 ## Search Field
 
@@ -64,13 +68,19 @@ You can right-click on any asset and select **Filter to this Path** to set the f
 
 ### Hidden Folders
 
-By default when an asset is located in a folder with a **_data** suffix (e.g. 'MyAssets_data'), it is not displayed in the asset browser, unless you select exactly that folder in the asset browser. This way you can easily hide assets that are rarely needed. Hidden folders are indicated with a grey font.
+Folders with a **_data** suffix (e.g. 'MyAssets_data') and folders whose name starts with a dot (e.g. '.git') are treated as *hidden folders*. By default, items located in a hidden folder are not displayed in the asset browser. For *_data* folders this does not apply when you select exactly that folder (or a folder inside it) in the folder tree, folders starting with a dot stay hidden regardless. This way you can easily hide assets that are rarely needed. Hidden folders are indicated with a grey font.
 
 ![Hidden Folders](media/hidden-folders.png)
 
 A common use case is to put [materials](../materials/materials-overview.md) and textures that are very specific for a [mesh](../graphics/meshes/meshes-overview.md) or [prefab](../prefabs/prefabs-overview.md) into a *xyz_data* subfolder to group the data together, but prevent it from cluttering the asset browser.
 
-You can toggle this feature by right clicking any folder and selecting **Show items in hidden folders**.
+You can toggle this feature with the **hidden folder button** in the toolbar, to the left of the icon size slider, or by right clicking any folder and selecting **Show items in hidden folders**.
+
+When searching for the users of an asset (see [Find Asset References](#find-asset-references-ref-and-ref-all)), items in *_data* folders are always included, since references are often located there.
+
+### Plugin Directories
+
+Plugins can provide their own [data directories](../projects/data-directories.md). By default these data directories are hidden entirely, both in the folder tree and in the item view. To display them, right click in the folder tree and enable **Show Plugin Directories**.
 
 ## Create Asset Documents
 
@@ -79,6 +89,10 @@ You can create new asset [documents](../editor/editor-documents.md) by right cli
 ## Display Assets in Recently Used Order
 
 The editor remembers which assets you used recently. The asset browser can list recently used assets at the top. This option can be toggled from the context menu on the right hand side of the asset browser. Note that the state of this option is remembered separately for the asset browser *panel* and for the asset browser when used as a *file picker*. In panel mode, it is typically disabled and all assets are sorted alphabetically, in file picker mode, it typically sorts by recently used time.
+
+## Asset Specific Actions
+
+Some asset types provide additional operations, which are listed in the *Asset* sub-menu of the context menu. For example, for [mesh assets](../graphics/meshes/mesh-asset.md) this is where you can create LODs, collision meshes and prefabs. Many of these actions also work when multiple assets are selected.
 
 ## Copy Asset Guid
 

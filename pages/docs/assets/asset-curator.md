@@ -12,7 +12,7 @@ At its top the asset curator panel displays a timeline of recently processed ass
 
 If an asset fails to transform for some reason, it will be listed in the view to the bottom left. The most common issue is a missing file reference. For example when a texture source file has been moved or renamed, the texture asset can't find it anymore and thus fails to transform.
 
-When you select an asset from that list, the log at the bottom right will display any error message from the failed transform. Double click the asset to directly open the document.
+When you select an asset from that list, the log at the bottom right will display any error message from the failed transform. Double click the asset to directly open the document. Right click it for a context menu that allows you to either open the document or to select the asset in the [asset browser](asset-browser.md).
 
 If **Show Indirect Issues** is disabled (the default), only assets that have problems finding their source files are displayed. Otherwise all assets which failed to transform are displayed, however, most of them will be follow-up issues due to other assets being incomplete.
 

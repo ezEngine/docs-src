@@ -85,6 +85,16 @@ Through the `PrimitiveType` option you can choose to create a mesh procedurally.
 
 Be aware that some *detail* values seemingly have no effect. For instance, for cones, capsules and cylinders the *detail* represents the number of subdivisions along the circumference, and therefore can't be lower than 3. Therefore the values `1`, `2` and `3` all produce the same result.
 
+## Creating LODs, Colliders and Prefabs from a Mesh
+
+For mesh and animated mesh assets, the editor can generate related assets automatically. These actions are available from the *Asset* menu of the mesh asset document, and in the [asset browser](../../assets/asset-browser.md) from the *Asset* sub-menu of the context menu.
+
+**Create LODs:** Creates additional mesh assets that import the same source file with progressively stronger [mesh simplification](#asset-properties). These can be used with the [LOD mesh component](lod-mesh-component.md) or the [LOD animated mesh component](../../animation/skeletal-animation/lod-animated-mesh-component.md). The mesh asset itself is LOD 0 and is not modified.
+
+**Create Collider:** Creates a [Jolt collision mesh](../../physics/jolt/collision-shapes/jolt-collision-meshes.md) asset from the same source file. Select whether to create a convex hull mesh representation or a full triangle mesh, depending on whether you want to use it for [dynamic actors](../../physics/jolt/actors/jolt-dynamic-actor-component.md) or [static actors](../../physics/jolt/actors/jolt-static-actor-component.md).
+
+**Create Prefab:** Creates a [prefab](../../prefabs/prefabs-overview.md) that renders the mesh, and optionally sets up physics for it.
+
 ## See Also
 
 * [Meshes](meshes-overview.md)

@@ -48,6 +48,8 @@ Since assets are often authered with many different conventions, you can adjust 
 
 * `UniformScaling`: Adjusts the size of the mesh, for example to convert a mesh from centimeter to meter scale.
 
+* `PositionOffset`: Moves all vertices of the mesh by this amount. This can be used to center a mesh, or to place its pivot at the bottom, so that this doesn't need to be done with an additional node in a [prefab](../../prefabs/prefabs-overview.md). The offset is applied after the orientation and scaling, so it is specified in the final coordinate system of the mesh. It also applies to procedurally generated meshes.
+
 * `RecalculateNormals`, `RecalculateTangents`: If enabled, information about normals or tangents in the mesh file is ignored, and is instead computed from the vertex data.
 
 * `HighPrecision`: If enabled, normals, tangents and texture coordinates are stored with higher precision. Leave this at the default (disabled), unless you notice precision issues. Higher precision means the mesh takes up more RAM on the GPU and is slightly slower to render.

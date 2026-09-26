@@ -58,6 +58,10 @@ Sometimes a **dedicated collider mesh** is embedded in the same source asset as 
 
 As an example, if the graphics mesh is called *Bunny* and the dedicated collider mesh is called *$COL_Bunny*, you can set the *MeshIncludeTags* to `$COL` to only import *$COL_Bunny* as the collider mesh.
 
+## Import Transform
+
+Collision mesh assets use the same `ImportTransform`, `UniformScaling` and `PositionOffset` properties as [mesh assets](../../../graphics/meshes/mesh-asset.md#asset-properties). When a collision mesh is created from the same file as a render mesh, these values have to match, otherwise the collider won't line up with the rendered geometry.
+
 ## Mesh Simplification
 
 Collision meshes support mesh simplification to reduce their amount of triangles and vertices. See the [mesh asset](../../../graphics/meshes/mesh-asset.md#asset-properties) for details about the parameters.

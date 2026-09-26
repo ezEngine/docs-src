@@ -78,6 +78,18 @@ Apart from some properties shared with 2D texture assets, render targets have th
 
 **CVarResScale:** If the resolution is read from a CVar, this allows to scale it. For instance to create a *half resolution* render target.
 
+## Texture Resolution Limits
+
+The resolution at which 2D, 3D and cubemap textures are uploaded to the GPU can be reduced at runtime through [CVars](../debugging/cvars.md). This is meant for quality settings, for instance to reduce GPU memory usage on weaker hardware.
+
+* `Rendering.Textures.DropMips` (default `0`): How many of the highest mipmaps to skip for every texture. This reduces all textures by the same factor, regardless of their size. For example, a value of `1` loads a 2048 texture at 1024 and a 512 texture at 256.
+* `Rendering.Textures.MinResolution` (default `64`): Textures are never reduced below this resolution by `DropMips`. Textures that are already smaller than this are not reduced at all. This prevents small textures, from losing all detail.
+* `Rendering.Textures.MaxResolution` (default `16384`): The maximum resolution a texture is uploaded at. Larger textures drop as many mipmaps as needed to fit. This is a hard limit. If it is smaller than `MinResolution`, it takes precedence.
+
+`DropMips` is applied first, the two resolution limits then clamp the result.
+
+All three CVars are saved and restored between runs.
+
 ## See Also
 
 * [Materials](../materials/materials-overview.md)

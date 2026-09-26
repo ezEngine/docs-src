@@ -31,6 +31,10 @@ ezEngine provides two canvas components for placing RmlUi documents in a scene:
 
 Both components support blackboard data binding, event messages, and on-demand rendering. See the individual component pages for their full property reference.
 
+## Main Menu
+
+The [RmlUI Main Menu Component](rmlui-main-menu-component.md) (`ezRmlUiMainMenuComponent`) provides a ready made main menu with a settings page. Add it to an object in a scene to get *Resume*, *Settings* and *Exit* on *ESC*, without writing any code. Its documents are in `Data/Plugins/RmlUiPlugin/rmlui-menu/` and can be replaced with your own.
+
 ## Debugger
 
 RmlUi comes with its own [debugger](https://mikke89.github.io/RmlUiDoc/pages/cpp_manual/debugger.html), which shows the element hierarchy of a document, the applied styles, and a log. It can be attached to a context through the [CVar](../debugging/cvars.md) `RmlUi.DebugContext`.

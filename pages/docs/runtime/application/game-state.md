@@ -33,6 +33,17 @@ Similarly, most scenes have a camera component whose usage hint is set to 'Main 
 
 As you can see, by implementing a custom game state, you can gain control over many things that otherwise appear to be built-in.
 
+## Quitting
+
+A game state quits the application by calling `ezGameState::RequestQuit()`. The argument states who asked for it, which lets a game state react differently depending on the source:
+
+* `window` - the user closed the application window.
+* `dev-esc` - the *ESC* key, which `ezGameApplication` only registers for this in development builds.
+* `dev-quickclose` - `Ctrl+Q`, also only in development builds. Unlike *ESC* this is meant to always quit, so a game state should not intercept it.
+* `editor-esc` and `editor-force` - ezEditor ending play-the-game mode. This stops the play mode, not the editor.
+
+`ezFallbackGameState` uses this to intercept the *ESC* key: when the world contains an [RmlUI Main Menu Component](../../ui/rmlui-main-menu-component.md), *ESC* opens that menu instead of quitting. Without such a component the behavior is unchanged.
+
 ## Game State Instantiation
 
 It is the responsibility of the `ezGameApplication` to instantiate a game state. By default this is done right at application startup, but if you write your own [application](application.md) you could handle this differently. For example the editor only instantiates the game state for play-the-game mode.

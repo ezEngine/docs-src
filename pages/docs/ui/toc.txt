@@ -3,3 +3,4 @@ imgui.md
 rmlui.md
 rmlui-canvas2d-component.md
 rmlui-canvas3d-component.md
+rmlui-main-menu-component.md

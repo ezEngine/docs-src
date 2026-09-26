@@ -24,6 +24,8 @@ All rendered objects automatically benefit from occlusion culling. The only thin
 
 The easiest way to do so, is to use [greyboxing geometry](../scenes/greyboxing.md). It is automatically used as occluders and all its shapes are supported. Another option is to use [occluder components](../graphics/occluder-component.md). These components allow you to create invisible occluder geometry, that can also be moved around dynamically.
 
+[Terrain patches](../terrain/terrain-patch-component.md#occlusion-culling) generate occluder geometry for their surface as well. This geometry is only generated when the scene is exported or simulated, so it has no effect in the regular editor viewport.
+
 ### Visualizing Occluder Geometry
 
 Use the [CVar](../debugging/cvars.md) `Spatial.Occlusion.VisView` to enable a screen overlay that displays the main view's occlusion buffer:
@@ -50,3 +52,4 @@ Click the image below to watch the video:
 
 * [Profiling](profiling.md)
 * [Greyboxing](../scenes/greyboxing.md)
+* [Terrain Patch Component](../terrain/terrain-patch-component.md)

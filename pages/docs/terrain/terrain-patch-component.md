@@ -42,6 +42,14 @@ The detail level is controlled by the CVar `Terrain.LodTargetCoverage`, which sp
 
 By default, *skirt* polygons are rendered around the border of each patch. This is a downward strip of geometry that overlaps with the neighboring patches, and is used to hide the cracks that would otherwise appear at the seam between patches, when neighboring patches render at different LOD levels or use different resolutions to begin with. The skirt is disabled when `LodDistanceScale` is set to 0.
 
+### Occlusion Culling
+
+Terrain patches can act as occluders for [occlusion culling](../performance/occlusion-culling.md), so that objects behind hills and mountains are not rendered. For this, a coarse, decimated mesh of the terrain surface is generated. The level of detail of this mesh is controlled with the `OcclusionCellSize` property.
+
+The occluder mesh is built from the same data as the [collider](#component-properties), so a patch whose `Collider` is set to *None* gets no occluder either. The mesh is generated during scene export and when the editor starts the simulation. Therefore, patches don't occlude anything in the regular editor viewport, and changing `OcclusionCellSize` only takes effect the next time the mesh is generated.
+
+To inspect the occluder geometry, enable the [CVar](../debugging/cvars.md) `Terrain.VisOccluder` while the simulation is running.
+
 ## Component Properties
 
 `Size` — World-space side length of the patch. Combined with *Resolution*, this determines the distance between vertices.
@@ -61,6 +69,8 @@ By default, *skirt* polygons are rendered around the border of each patch. This 
 `LodDistanceScale` — Scales the distance at which this patch switches [LOD levels](#level-of-detail-lod). `1` uses the default distance (as configured by the `Terrain.LodTargetCoverage` CVar), values above `1` switch LOD later (at a greater distance, keeping detail longer), values below `1` switch earlier. Set to `0` ("LOD Disabled") to always render the patch at full resolution; this also turns off the skirt, since it is only needed to hide seams against a coarser LOD neighbor.
 
 `Collider` — Controls whether and at what detail a physics collision shape is generated at scene export time. Lower values save memory, but lose detail. Colliders are  needed when using [procedural object placement](procedural/procedural-object-placement.md). When possible, deactivate colliders (for far away terrain that's only there for decoration) or reduce its detail.
+
+`OcclusionCellSize` — Size in meters of one cell of the [occluder mesh](#occlusion-culling). Larger values produce a coarser mesh, which is cheaper to rasterize but occludes less. The value can't be smaller than the grid spacing of the collider. Set to `0` ("Occlusion Disabled") to not generate an occluder for this patch.
 
 `Surfaces` — Per-material-index [physics surface](../materials/surfaces.md) array. Entry *i* is the surface used where material index *i* is dominant. Used to control physics behavior such as footstep sounds and friction per material layer.
 

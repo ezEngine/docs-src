@@ -12,13 +12,13 @@ For an overview of the terrain system, see [Terrain System](terrain-plugin-overv
 
 You can place multiple terrain patches next to each other to cover large areas. Position each patch using its `Size` as the grid spacing, e.g. place patches with `Size` 64 exactly 64 units apart.
 
-By default (unless `LodDistanceScale` is set to `0`), each patch renders a skirt: a downward strip of geometry around its border that overlaps into the neighboring patch. This hides the cracks that would otherwise appear where two patches meet, for instance if they render at different LOD levels, or use a different `Resolution`.
+By default (unless `LodCellPixelSize` is set to `0`), each patch renders a skirt: a downward strip of geometry around its border that overlaps into the neighboring patch. This hides the cracks that would otherwise appear where two patches meet, for instance if they render at different LOD levels, or use a different `Resolution`.
 
 The image below shows what the expected overlap looks like. Here two patches are placed next to each other. Above ground they match perfectly, below ground you see the skirt geometry curving downwards.
 
 ![Terrain Overlap](media/terrain-overlap.jpg)
 
-The image below shows what those cracks would look like without a skirt (`LodDistanceScale` set to `0` on both patches) and a mismatched *vertex density* (ie `Size` / `Resolution`):
+The image below shows what those cracks would look like without a skirt (`LodCellPixelSize` set to `0` on both patches) and a mismatched *vertex density* (ie `Size` / `Resolution`):
 
 ![Terrain Cracks](media/terrain-cracks.jpg)
 
@@ -38,9 +38,9 @@ Terrain patches are much more memory efficient than [terrain volumes](terrain-vo
 
 Terrain patches automatically reduce their triangle count when the vertex density on screen exceeds what's needed, fading between LOD levels as the patch moves closer to or farther from the camera. LOD0 is the full resolution, LOD1 halves the vertex density in each direction (1/4 the triangle count), and LOD2 halves it again (1/16 the triangle count).
 
-The detail level is controlled by the CVar `Terrain.LodTargetCoverage`, which specifies the target screen-space size of a single grid cell. The `LodDistanceScale` property allows to fine tune this per patch.
+The detail level is controlled by the `LodCellPixelSize` property: once a single grid cell of the patch covers fewer pixels on screen than this value, the patch switches to the next coarser LOD. The on-screen size is measured at the point of the patch that is closest to the camera, and always relative to a view that is 1080 pixels high, so the chosen LOD doesn't depend on the window size or display resolution. The CVar `Terrain.LodQuality` is a global multiplier for `LodCellPixelSize` of all patches and can be used to implement a quality setting.
 
-By default, *skirt* polygons are rendered around the border of each patch. This is a downward strip of geometry that overlaps with the neighboring patches, and is used to hide the cracks that would otherwise appear at the seam between patches, when neighboring patches render at different LOD levels or use different resolutions to begin with. The skirt is disabled when `LodDistanceScale` is set to 0.
+By default, *skirt* polygons are rendered around the border of each patch. This is a downward strip of geometry that overlaps with the neighboring patches, and is used to hide the cracks that would otherwise appear at the seam between patches, when neighboring patches render at different LOD levels or use different resolutions to begin with. The skirt is disabled when `LodCellPixelSize` is set to 0.
 
 ### Occlusion Culling
 
@@ -66,7 +66,7 @@ To inspect the occluder geometry, enable the [CVar](../debugging/cvars.md) `Terr
 
   * `BaseMaterialIndex` — The material layer (0–31) assigned to vertices not covered by any brush.
 
-`LodDistanceScale` — Scales the distance at which this patch switches [LOD levels](#level-of-detail-lod). `1` uses the default distance (as configured by the `Terrain.LodTargetCoverage` CVar), values above `1` switch LOD later (at a greater distance, keeping detail longer), values below `1` switch earlier. Set to `0` ("LOD Disabled") to always render the patch at full resolution; this also turns off the skirt, since it is only needed to hide seams against a coarser LOD neighbor.
+`LodCellPixelSize` — The on-screen size in pixels (relative to a 1080 pixel high view) below which a grid cell makes the patch switch to the next coarser [LOD level](#level-of-detail-lod). Defaults to `16`. Set to `0` ("LOD Disabled") to always render the patch at full resolution; this also turns off the skirt, since it is only needed to hide seams against a coarser LOD neighbor.
 
 `Collider` — Controls whether and at what detail a physics collision shape is generated at scene export time. Lower values save memory, but lose detail. Colliders are  needed when using [procedural object placement](procedural/procedural-object-placement.md). When possible, deactivate colliders (for far away terrain that's only there for decoration) or reduce its detail.
 

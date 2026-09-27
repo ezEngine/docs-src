@@ -21,6 +21,16 @@ Both sample shaders use three texture arrays (type `Texture2DArray`):
 
 The sample material supports up to 8 layers and there is a mapping to reuse the same texture layer across different material layers. The shader uses different textures to project onto the ground and walls. This is just one way to do this, when you write your own terrain shaders, you can use entirely different methods to organize your data and you can support much more layers, as well.
 
+## Height Blending
+
+By default, the transition between two material layers is a linear cross-fade. With *height blending*, each layer additionally provides a height map, and in the transition area the layer that is locally higher is shown. For example, where rocks transition into sand, the stones of the rock texture stay visible further into the sand, while the sand fills the crevices between the stones. This makes transitions sharper and more detailed. Height blending requires additional texture samples in the pixel shader for every layer that contributes to a pixel.
+
+To use height blending, enable the `TERRAIN_HEIGHT_BLEND` permutation on the material and set up these additional properties:
+
+* `LayerHeightTexture` — texture array with the height map of each layer, read from the R channel. 
+* `HeightBlendDepth` — the width of the transition between layers. Small values result in hard edges around individual features, large values approach the linear blend.
+* `HeightBlendStrength` — how strongly the height maps affect the transition. A value of `0` results in the linear blend.
+
 ## Writing a Custom Heightfield Shader
 
 The engine exposes the heightfield's vertex data through include-able header files. A custom heightfield shader must do the following:

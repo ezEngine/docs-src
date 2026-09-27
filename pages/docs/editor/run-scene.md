@@ -26,11 +26,17 @@ When simulating, you can also press *pause* to pause the game simulation. Press 
 
 ### Keep Simulation Changes
 
-The *simulate mode* is useful to quickly check how some object behaves. It can also be used to simulate physical objects (e.g. boxes falling down) and then save that simulated transform to the scene.
+The *simulate mode* is useful to quickly check how some object behaves. It can also be used to simulate [physical objects](../physics/jolt/actors/jolt-dynamic-actor-component.md) (e.g. boxes falling down) and then save that simulated transform to the scene.
 
 While the simulation is active, select the objects that you are interested in and press `K` (or *Scene > Utilities > Keep Simulation Changes*). Once you stop the simulation, an undoable action is executed that moves the selected objects to the recorded location.
 
 You can record multiple *keep changes* actions during one simulation.
+
+#### Placing Static Objects
+
+This also works for [static physics actors](../physics/jolt/actors/jolt-static-actor-component.md) and *kinematic* [dynamic actors](../physics/jolt/actors/jolt-dynamic-actor-component.md) whose shapes are all convex (boxes, spheres, capsules, cylinders and convex meshes), which is often used for rocks or furniture, making it possible to place them phyiscally accurate once, but keep them as static objects in game.
+
+Static actors that use a triangle collision mesh can't be physically simulated this way.
 
 #### Video: How to Keep Simulation Changes
 

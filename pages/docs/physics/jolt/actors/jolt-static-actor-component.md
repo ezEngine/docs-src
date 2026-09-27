@@ -6,6 +6,10 @@ All [Jolt shapes](../collision-shapes/jolt-shapes.md) that can be found in the h
 
 If you need your geometry to be able to move, use a [dynamic actor](jolt-dynamic-actor-component.md) instead.
 
+## Placing Static Actors
+
+To place objects with static actors realistically, for example rocks on uneven ground, you can temporarily simulate them in the editor and keep the resulting transform. See how to [keep simulation changes](../../../editor/run-scene.md#keep-simulation-changes). This requires that the actor uses only convex shapes.
+
 ## Component Properties
 
 * `CollisionLayer`: The [collision layer](../collision-shapes/jolt-collision-layers.md) defines which objects will collide with this actor.

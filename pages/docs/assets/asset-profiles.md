@@ -14,9 +14,9 @@ For the selected profile, the right hand side shows the available options. In th
 
 Below that the available asset profile configs are listed. These can affect various aspect of the engine:
 
-### Rendering Options
-
-This allows you to configure some general rendering options that shall be used on this target platform. For example, the [dynamic shadows](../graphics/lighting/dynamic-shadows.md).
+> **Note:**
+>
+> General runtime settings, such as the size of the [shadow](../graphics/lighting/dynamic-shadows.md) atlas, are configured through [CVars](../debugging/cvars.md). Platform specific values for those are set up as [project default values](../debugging/cvars.md#project-default-values) per asset profile.
 
 ### Render Pipelines
 

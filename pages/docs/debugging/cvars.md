@@ -71,7 +71,28 @@ Values specified through the command line take precedence over stored values.
 
 The value of a CVar is typically discarded when the program closes, however, if the CVar uses `ezCVarFlags::Save`, it will be saved and restored in the next run. Be careful with this flag, as it can be very confusing when it is used to toggle subtle behavior. Be especially careful keeping this flag in for production code.
 
-There is also `ezCVarFlags::RequiresRestart` which means that modifying that variable will take no effect unless you restart the application. This can be used for things like screen resolutions and other initial values.
+Only values that differ from the CVar's default value are written to disk. Thus, if the default value changes later (for instance through a [project default](#project-default-values)), it still takes effect for everyone who hasn't modified that CVar.
+
+Game applications store these user specific values in the `CVars` folder of the application's user data directory (`:appdata`). [ezPlayer](../tools/player.md) uses a separate folder for every project, so modifying a saved CVar in one project doesn't affect other projects.
+
+There is also `ezCVarFlags::RequiresRestart` which means that modifying that variable will take no effect unless you restart the application.
+
+## Project Default Values
+
+The default value of a CVar is specified in code. A project can override these defaults with configuration files in its `RuntimeConfigs` folder:
+
+* `RuntimeConfigs/CVars.cfg`: Default values for all platforms.
+* `RuntimeConfigs/CVars_<Profile>.cfg`: Default values for a specific [asset profile](../assets/asset-profiles.md), for instance `CVars_PC.cfg`. Values in this file take precedence over the ones in `CVars.cfg`.
+
+This allows a project to ship with different defaults, for instance for rendering quality settings, and to use different defaults for each platform.
+
+Values from these files replace the default value of the CVar. When a CVar is reset to its default value, it is reset to the project default.
+
+### Saving Project Defaults
+
+To create such a file, run the game, change the CVars to the desired values, and then call the [console](console.md) function `SaveProjectCVars()`. This writes the profile specific file (`CVars_<Profile>.cfg`) for the currently active asset profile. It contains every CVar whose value differs from its default, as well as the values that this file already contained before. Afterwards copy or rename the file to `CVars.cfg`, if the values should apply to all platforms.
+
+This function is only available in development builds, and only works when the project folder is writable.
 
 ## Callbacks
 

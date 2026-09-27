@@ -26,13 +26,11 @@ Shadow maps are prone to artifacts called *shadow acne*. Either light leaks thro
 
 ## Global Shadow Settings
 
-You can adjust global settings for shadows in the platform-specific [asset profile](../../assets/asset-profiles.md).
+Global settings for shadows are configured through [CVars](../../debugging/cvars.md). They can be changed at runtime, in which case the shadow atlas is recreated. To use different values per project or per platform, set them as [project default values](../../debugging/cvars.md#project-default-values).
 
-* `Shadow Atlas Texture Size`: How large the texture atlas should be that is used for all shadow rendering. This is a single texture, where all shadow maps are stored. For many shadow casting lights with high quality shadows, this texture has to be reasonably large.
+* `Rendering.Shadows.AtlasSize`: The size of the texture atlas. For many shadow casting lights with high quality shadows, this texture has to be reasonably large.
 
-* `Min/Max Shadow Map Size`: The minimum and maximum space that a single shadow map should take up inside the shadow map atlas. The minimum size determines how bad the shadow quality can get, ie a very low value means that far away light sources can look very blurry. The maximum size determines how good the quality can get, ie with a large value, close up shadows are very crisp whereas with a low value, even close shadows are very blurry. If these values are low and only few dynamic lights are used, the shadow atlas size can also be reduced.
-
-**Note:** These values can also be adjusted at runtime using the [CVars](../../debugging/cvars.md) `cvar_RenderingShadowsAtlasSize`, `cvar_RenderingShadowsMaxShadowMapSize` and `cvar_RenderingShadowsMinShadowMapSize`.
+* `Rendering.Shadows.MinShadowMapSize`, `Rendering.Shadows.MaxShadowMapSize`: The minimum and maximum space that a single shadow map should take up inside the shadow map atlas. The minimum size determines how bad the shadow quality can get, ie a very low value means that far away light sources can look very blurry. The maximum size determines how good the quality can get, ie with a large value, close up shadows are very crisp whereas with a low value, even close shadows are very blurry. If these values are low and only few dynamic lights are used, the shadow atlas size can also be reduced.
 
 ## Shadow Component Properties
 

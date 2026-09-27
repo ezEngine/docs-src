@@ -14,6 +14,8 @@ Unlike regular [decals](projected-decals.md) which project a texture onto geomet
 
 Add a *Mesh Decal Component* to a game object that has a [mesh component](../../graphics/meshes/mesh-component.md). The component manages decal textures and communicates with the runtime decal atlas.
 
+The size of the runtime decal atlas texture is configured with the [CVar](../../debugging/cvars.md) `Rendering.Decals.DynamicAtlasSize`. This atlas is shared with [spot light](../../graphics/lighting/spot-light-component.md) cookies. If many different textures are in use at the same time, a larger atlas may be necessary.
+
 ### Component Properties
 
 **Decals:** An array of decal definitions. Each entry has:

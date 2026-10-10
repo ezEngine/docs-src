@@ -44,6 +44,17 @@ Be aware that *render pass nodes* are a high level functional unit. They don't m
 
 For a list of all available pass nodes, see [this page](render-pipeline-passes.md).
 
+### Render Scale
+
+A view can render the scene at a lower resolution than its output and upscale the result at the end. This reduces the GPU cost on high resolution displays. [Source Passes](render-pipeline-passes.md#source-pass) with `ApplyRenderScale` enabled, create their textures at the reduced size, and an [Upscale Pass](render-pipeline-passes.md#upscale-pass) brings the image back to the full size. Everything after the upscale pass, for instance UI, is rendered at full resolution and stays sharp.
+
+For the main view of a game, the render scale is set through the [CVar](../../debugging/cvars.md) `App.RenderScale`:
+
+* `0` (the default) selects the scale automatically, such that the scene is rendered with about as many pixels as a full HD image (1920x1080).
+* A value between `0.1` and `1` uses that scale.
+
+The pixel count that the automatic selection aims for can be changed in code through `ezRenderWorld::SetAutoRenderScaleMaxPixels()`. For other views the scale is set with `ezView::SetRenderScale()`, and `ezRenderWorld::GetEffectiveRenderScale()` computes the automatic value.
+
 ### Sub-Graphs
 
 A render pipeline asset can be embedded into another one through a *Subgraph* node. Its `Pipeline` property references the render pipeline asset to embed. During asset transform the node is replaced with the contents of the referenced pipeline, so at runtime there is no difference to a pipeline that contains all passes directly. This is used to share parts between multiple pipelines, for example the scene rendering and post-processing steps, which the main and the editor pipeline have in common.

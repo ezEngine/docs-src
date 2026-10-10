@@ -10,6 +10,8 @@ Memory usage and voxelization cost grow with the size of the box and with the nu
 
 The grid is only voxelized once. Changes to the geometry afterwards are not picked up.
 
+Make the box large enough to fully contain the geometry that it should cover, and leave a margin of free voxels at its edges. Paths that come from outside the grid enter it through the voxel that the straight line towards the destination hits first. If that part of the boundary is occupied, the path search fails. See [Entering and Leaving Grids](voxel-navigation.md#entering-and-leaving-grids).
+
 ## Component Properties
 
 * `Size`: The size of the box in world units. The box is centered on the game object's position.

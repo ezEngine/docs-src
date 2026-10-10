@@ -20,6 +20,18 @@ Path searches use A* through free voxels. A search may span multiple grids. Path
 
 Path searches are limited by the number of A* iterations per grid, and by the number of grids that a path may pass through. Both are exposed as properties on the components that do the searching.
 
+### Entering and Leaving Grids
+
+A* is only used inside of grids. Outside of them, the path goes in a straight line from the current position towards the destination, until that line hits the box of a grid. The voxel where the line enters the box is where the search inside that grid starts. To leave a grid, the search looks for a free voxel at the grid's boundary that leads towards the destination.
+
+If the voxel where the path enters a grid is occupied, the search tries free voxels up to two voxels away from it. If there are none, the search fails. Increasing the number of iterations doesn't help in this case, since the search inside the grid never starts.
+
+This leads to these rules for placing grids:
+
+* **Cover all relevant geometry.** Geometry that isn't inside any grid is never voxelized, so paths may go straight through it.
+* **Keep the edges of a grid free** wherever paths are expected to enter or leave it. Make the box a bit larger than the geometry, so that there is at least one row of free voxels around it. Geometry that is cut off by the edge of a grid can block the entrance, even when there is plenty of free space just a bit further inside.
+* If a path search fails although start and destination are reachable, check whether the path enters a grid through occupied voxels, for example with the [voxel path test component](voxel-path-test-component.md) and grid visualization.
+
 ![Path Search](media/voxel-path-test.jpg)
 
 ## Visualization

@@ -10,7 +10,7 @@ Values fade towards the volume borders according to the volume's [falloff](../ef
 1. Set `VolumeType` to the [spatial category](../runtime/world/spatial-system.md) that matches the volumes you want to sample (e.g. `GenericVolume`).
 1. Add one entry per value to the `Values` list. For each entry set:
    * `Name`: The key to look up in the volumes (must match a key stored in the volume's [blackboard template](../misc/blackboard-template-asset.md) or `Values` list).
-   * `DefaultValue`: The value to use when no volume is active.
+   * `DefaultValue`: The value to use when no volume is active. May be left empty, see [Default Value](#default-value).
    * `InterpolationDuration`: How long to interpolate between values when transitioning between volumes. Set to zero for instant changes.
 1. Read the current values at runtime using the scriptable functions `GetFloatValue`, `GetColorValue`, or the generic `GetValue`.
 
@@ -24,7 +24,7 @@ Enable `WriteToBlackboard` to also write every sampled value into a [blackboard]
 
 * `Values`: A list of values to sample. Each entry has:
   * `Name`: The key name to look up inside volumes. If `WriteToBlackboard` is enabled, this is also the key that the value is written to in the blackboard.
-  * `DefaultValue`: Returned when the owner is outside all volumes.
+  * `DefaultValue`: The value outside of all volumes. Empty by default, see [Default Value](#default-value).
   * `InterpolationDuration`: The time over which the value transitions when moving into or out of a volume.
 
 * `AttachToMainCamera`: If enabled, the sampling position is taken from the main camera instead of the owner game object's position. Use this for effects that should follow what the player sees rather than a specific object's location.
@@ -32,6 +32,21 @@ Enable `WriteToBlackboard` to also write every sampled value into a [blackboard]
 * `WriteToBlackboard`: If enabled, sampled values are written into a [blackboard](../misc/blackboards.md) every time they change, using the names from `Values` as keys.
 
 * `BlackboardName`: The name of the [blackboard](../misc/blackboards.md) to write to, looked up the same way as [`ezBlackboardComponent::FindBlackboard`](../misc/blackboards.md). Leave empty to write to the world's blackboard.
+
+## Default Value
+
+`DefaultValue` decides what happens outside of all volumes:
+
+* **Set:** The value moves to the default value. Near a volume's border, it is a mix of the default and the volume's value. Values from volumes are converted to the type of the default value.
+* **Empty:** The value doesn't change, it keeps the last value that came from a volume. Until the first volume is entered, it has no value at all.
+
+Leave it empty when whoever reads the value already has its own setting for the outside. For example, the [fog component](../effects/fog.md) has its own fog density. With a default value of `1` for `Fog.Density`, the fog near a volume's border would blend towards a density of `1`, instead of towards the fog component's own density.
+
+## Strength
+
+When `WriteToBlackboard` is enabled, every value gets a second blackboard entry with `_Strength` appended to its name, for example `Fog.Density_Strength`. It tells how much volumes affect the value at the current position: `0` outside of all volumes, `1` fully inside one, and in between in a volume's falloff region. It changes over the same `InterpolationDuration` as the value.
+
+The [fog component](../effects/fog.md) uses the strength to blend from its own settings to the blackboard value. [Render pipeline properties](../graphics/render-pipeline/render-pipeline-properties.md) ignore it and use the value directly.
 
 ## Scriptable Functions
 

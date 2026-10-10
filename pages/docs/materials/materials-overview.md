@@ -60,7 +60,7 @@ For testing transparent materials it may be useful to create an object in a scen
 
 **UseNormalTexture:** If enabled, the shader uses the *Normal Texture* to apply *normal mapping*.
 
-**UseOcclusionTexture:** If enabled, an *OcclusionTexture* is used to affect lighting and to pronounce crevices. The effect of this can be very subtle.
+**UseOcclusionTexture:** If enabled, an *OcclusionTexture* is used to affect lighting and to pronounce crevices. See [Occlusion Textures](#occlusion-textures) below for how to author them.
 
 **Roughness Value:** If no *Roughness Texture* is given, this value is used for lighting. If a roughness texture is available, this value is multiplied into the texture's value. The rougher a material is (value closer to one), the more *diffuse* the lighting will be (stone, cloth, etc). The smoother the material is (value closer to zero), the more pronounced specular highlights it will have (glass, ceramic).
 
@@ -83,6 +83,23 @@ The height texture should store height values in the red channel. Brighter value
 **HeightScale:** Controls the strength of the parallax effect. The range is `-0.3` to `0.3`, with a default of `0.05`. Negative values invert the depth direction. Larger absolute values produce a stronger apparent depth but can introduce artifacts at grazing angles.
 
 **PomMaxSteps:** The maximum number of raymarching iterations used to resolve the parallax offset. Higher values produce more accurate results at grazing angles but increase the per-pixel cost. The range is `4` to `64`, with a default of `16`.
+
+### Occlusion Textures
+
+An occlusion texture (or the red channel of an ORM texture) describes how much a point on the surface is hidden by the small bumps and cracks of the surface itself. White means fully exposed, darker values mean the point lies in a crevice.
+
+EZ applies occlusion to all kinds of light:
+
+* **Ambient light and reflections** are multiplied by the occlusion value. This is combined with [SSAO](../graphics/render-pipeline/render-pipeline-passes.md#ao-pass), if active.
+* **Direct light** from light sources is reduced as well, using *micro shadows*. Here the occlusion value is treated as an opening angle: light that hits the surface head-on gets through even in moderately occluded areas, light that comes in at a flat angle gets blocked.
+
+The effect on direct light is not used by all tools. Texture painting tools and glTF viewers often only apply occlusion to ambient light, so the same texture can look noticeably darker in EZ, especially under strong direct light. For direct light the values roughly have this effect:
+
+* `1`: No effect.
+* Around `0.7`: Light from the front still gets through, light from the side is blocked.
+* Below `0.7`: Direct light is reduced even when it comes from the front, and at `0` it is blocked entirely.
+
+So an occlusion texture should be mostly white, with darker values only in actual crevices. A texture that is mid grey or darker everywhere makes the whole surface look unlit. If an existing texture is too dark, brighten it, or reduce the contrast of the baked occlusion, rather than using it as is. Use the *Ambient Occlusion* [render mode](../editor/editor-views.md#ambient-occlusion) to inspect the values.
 
 ## Material Preview
 

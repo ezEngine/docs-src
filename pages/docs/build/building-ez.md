@@ -11,9 +11,9 @@ To try out ezEngine, you can download a [precompiled binary package](../../getti
 
 ## Renderer Selection
 
-On platforms that support it, both the D3D11 and Vulkan renderers are built by default. This is controlled by the CMake switches `EZ_BUILD_D3D11` and `EZ_BUILD_VULKAN`, which both default to `ON`. Set either of them to `OFF` to exclude that renderer from the build entirely.
+By default only the Vulkan renderer is built. This is controlled by the CMake switches `EZ_BUILD_VULKAN`, which defaults to `ON`, and `EZ_BUILD_D3D11`, which defaults to `OFF`. D3D11 is nearing end of life and may be removed in a future release. On Windows it can still be included by setting `EZ_BUILD_D3D11` to `ON`.
 
-On Windows, D3D11 is used by default at runtime when both renderers are built. This can be overridden per run by passing `-renderer Vulkan` on the application's command line. To change the compiled-in default instead, set the CMake switch `EZ_DEFAULT_RENDERER` to `Vulkan` or `DX11`.
+When both renderers are built, D3D11 is used by default at runtime. This can be overridden per run by passing `-renderer Vulkan` or `-renderer DX11` on the application's command line. To change the compiled-in default instead, set the CMake switch `EZ_DEFAULT_RENDERER` to `Vulkan` or `DX11`.
 
 ## Vulkan Rendering
 

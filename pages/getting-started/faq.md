@@ -16,7 +16,7 @@ See [this page](../docs/build/building-ez.md) for instructions how to build the 
 
 ## Render API
 
-At the moment we provide a **DX11 renderer** and a **Vulkan renderer**. Vulkan will fully replace DX11 in the near future.
+The **Vulkan renderer** is the default. A **DX11 renderer** is still available, but isn't built by default anymore and will be removed in the future.
 
 ## Networking & Multiplayer
 

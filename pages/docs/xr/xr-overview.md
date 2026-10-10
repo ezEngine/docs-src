@@ -6,12 +6,12 @@
 
 *XR* stands for both *VR* (virtual reality) as well as *AR* (augmented reality) devices. Currently supported devices:
 
- 1. **VR**: Windows desktop VR devices that support DX11 and OpenXR.
+ 1. **VR**: Windows desktop VR devices that support OpenXR.
 
 Currently there are three XR implementations:
 
 1. **ezDummyXR**: If XR is requested and no other plugin is available the dummy XR implementation is used. This one allows for stereo rendering to be tested on a PC without needing to use an actual *HMD* (head mounted device).
-2. **ezOpenXR**: This plugin uses *OpenXR* and supports both AR and VR devices, DX11 only for now.
+2. **ezOpenXR**: This plugin uses *OpenXR* and supports both AR and VR devices, with the Vulkan and the DX11 renderer.
 3. **ezOpenVR**: WIP, currently not functional.
 
 ## Getting started

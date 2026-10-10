@@ -16,7 +16,9 @@ Grids are managed by the `ezAiVoxelWorldModule`. Its `IsReady()` function return
 
 ### Caves and Enclosed Spaces
 
-To build caves and tunnels in the editor, a [terrain volume](../../terrain/terrain-volume-component.md) can be carved with [3D terrain brushes](../../terrain/terrain-brush-3d-component.md). With `EnableCollider` enabled, the terrain volume generates a collision mesh, which is rasterized into the voxel AI grid like any collision mesh.
+To build caves and tunnels in the editor, a [terrain volume](../../terrain/terrain-volume-component.md) can be carved with [3D terrain brushes](../../terrain/terrain-brush-3d-component.md). The terrain volume generates a collision mesh, which is rasterized into the voxel AI grid like any collision mesh.
+
+You can also place any other [static collision mesh](../../physics/jolt/collision-shapes/jolt-collision-meshes.md) to build an outer cave wall. Only the surfaces mark voxels as blocked, the inside and outside areas stay free. You can even use the volume terrain for prototyping, then export the mesh from the editor (using `Scene > Utilities > Export Scene Geoemtry`) and improve upon it in an external program like Blender and finally place it as a static collider.
 
 ## Path Searches
 

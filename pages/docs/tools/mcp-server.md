@@ -29,7 +29,7 @@ The engine process that the editor runs the game in serves on the editor's port 
 A game process starts a server only when asked to, by port:
 
 ```cmd
-ezPlayer.exe -project "C:/dev/MyGame" -scene "Scenes/Main.ezScene" -mcpport 7401
+ezPlayer.exe -project "C:/dev/MyGame" -scene "Scenes/Main.ezScene" -unattended -mcpport 7401
 ```
 
 Without `-mcpport` no server is started. This works for any game application built on the [game application](../runtime/application/application.md) framework, not just [ezPlayer](player.md), because the plugin is loaded on demand when the option is present.
@@ -48,7 +48,7 @@ This is worth doing for game specific functionality that an agent otherwise has 
 
 * Every call runs on the main thread of the host and blocks it. Calls happen one at a time, and some - transforming all assets, exporting, compiling C++ - run for minutes.
 * The editor suppresses modal dialogs for the duration of a call, so an agent cannot leave the editor waiting on a dialog that nobody will answer, and reports afterwards what was suppressed. Dialogs during startup are not covered by this, which is why an editor that an agent launches itself should be started with `-unattended`, see [Unattended Mode](../editor/editor-launch.md#unattended-mode).
-* Injected input is merged with real input rather than replacing it, so you are never locked out of a game that an agent is driving.
+* Injected input is merged with real input rather than replacing it, so you are never locked out of a game that an agent is driving. When the game is started with `-unattended`, real mouse and keyboard input is ignored instead, and only the agent's input has an effect. A game that an agent launches itself should be started that way, so that it doesn't block on assert message boxes, doesn't take the focus, and isn't affected by someone working on the same machine. See [Unattended Runs](../runtime/application/common-application-features.md#unattended-runs).
 * Nothing is saved implicitly, and everything an agent changed in a document can be undone.
 * The server is bound to `127.0.0.1` and is reachable only from the same machine.
 

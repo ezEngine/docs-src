@@ -36,18 +36,35 @@ The input and output pins are used to connect which render target a render pass 
 
 In the image above the *TonemapPass* takes two inputs, one for the general image to tonemap, and one (optionally) to composite bloom on top of. There are different ways how the bloom image could be generated. In this case, the output from the *AntialiasingPass* is used both for the tonemapping, as well as for generating bloom. So the output is fed into two render passes. The *BloomPass* extracts overbright areas and creates a new (temporary) image with the result, which is then given to the *TonemapPass* as well.
 
-Note that, although the *BloomPass* does create a new image, you do not need to give it an input image to write to. It automatically retrieves a *scratch texture* internally.
-
 > **NOTE**
 >
-> All render passes have an 'active' flag, with which they can be deactivated. Depending on what the pass is supposed to do when active, a deactivated pass may do nothing and also output nothing, or it may pass input render targets through as outputs, or it may do a copy of a texture (but nothing else). Some passes also may not support being deactivated.
+> Render passes can't be deactivated individually. To disable parts of a pipeline, route around them with a [switch pass](render-pipeline-passes.md#switch-pass). A switch forwards one of its inputs, selected through an integer [blackboard](../../misc/blackboards.md) entry, and all passes that only feed unselected inputs are skipped. See [Render Pipeline Properties](render-pipeline-properties.md#switches).
 
 Be aware that *render pass nodes* are a high level functional unit. They don't map directly to render passes in graphics APIs like Vulkan or D3D12 even though there are definitely similarities.
 
 For a list of all available pass nodes, see [this page](render-pipeline-passes.md).
 
+### Sub-Graphs
+
+A render pipeline asset can be embedded into another one through a *Subgraph* node. Its `Pipeline` property references the render pipeline asset to embed. During asset transform the node is replaced with the contents of the referenced pipeline, so at runtime there is no difference to a pipeline that contains all passes directly. This is used to share parts between multiple pipelines, for example the scene rendering and post-processing steps, which the main and the editor pipeline have in common.
+
+![Subgraph Use](media/pipeline-subgraph-use.png)
+
+The pins of a *Subgraph* node are defined by the boundary nodes inside the referenced pipeline: *Texture Input*, *Texture Output*, *Buffer Input* and *Buffer Output*. The name of each boundary node becomes the name of the corresponding pin.
+
+## Default Render Pipelines
+
+The `Base` data directory contains these render pipelines in `RenderPipelines`:
+
+* **MainRenderPipeline:** The default pipeline for games, configured in the [asset profiles](../../assets/asset-profiles.md#render-pipelines).
+* **EditorRenderPipeline:** Used by all editor viewports, including the asset previews. Post-processing is skipped in the debug [render modes](../../editor/editor-views.md) through a switch.
+* **Subgraphs:** Shared parts of the pipelines above, such as the depth pre-pass, scene rendering and post-processing.
+
+Some optional parts of these pipelines are controlled through switches that read [pipeline CVars](render-pipeline-properties.md#pipeline-cvars), for example whether SSAO and screen space shadows are used.
+
 ## See Also
 
 * [Render Pipeline Passes](render-pipeline-passes.md)
 * [Render Pipeline Extractors](render-pipeline-extractors.md)
+* [Render Pipeline Properties](render-pipeline-properties.md)
 * [Shaders](../shaders/shaders-overview.md)

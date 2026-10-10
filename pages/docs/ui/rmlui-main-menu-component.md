@@ -36,6 +36,8 @@ What the user picks is stored in [CVars](../debugging/cvars.md) whose names star
 
 They are deliberately separate from the engine's own CVars: a quality selection is a single number that means 'Medium', while the engine is configured through several unrelated values (shadow atlas size, mip drop, ...). Only the selection is worth saving and showing, the mapping to the engine's CVars is what `ezRmlUiMainMenuComponent::ApplySettings()` does. A game that offers its own menu would do the same.
 
+Settings that map to a single engine CVar are not duplicated. The *SSAO* and *Screen Space Shadows* check boxes directly change the [pipeline CVars](../graphics/render-pipeline/render-pipeline-properties.md#pipeline-cvars) `Rendering.Pipeline.SSAO` and `Rendering.Pipeline.SSS`, which are saved as well.
+
 The component applies these settings when it is activated, which is how the settings of a previous run take effect.
 
 ## Using the documents as an RmlUi example

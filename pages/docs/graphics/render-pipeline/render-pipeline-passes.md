@@ -17,6 +17,8 @@ Generates a screen-space ambient occlusion (SSAO) texture from the depth buffer.
 * `MipLevelScale`: Controls which mip level is sampled at different distances.
 * `DepthBlurThreshold`: Depth difference at which bilateral filtering stops blurring across edges.
 
+In the default pipelines this pass is named `Rendering.Pipeline.SSAO` and is selected through the `Rendering.Pipeline.SSAO` switch. See [Pipeline CVars](render-pipeline-properties.md#pipeline-cvars).
+
 **Required Extractor:** [Visible Objects Extractor](render-pipeline-extractors.md#visible-objects-extractor)
 
 ## Antialiasing Pass
@@ -50,6 +52,12 @@ Applies a separable Gaussian blur to the input texture.
 
 * `Radius`: Blur kernel radius in pixels.
 
+## Convert To Target Format Pass
+
+Copies a color texture into a new texture that has the format of the view's render target. Place it directly in front of the [Target Pass](#target-pass) when the format of the image may not match the target, for example on a branch of a [switch](#switch-pass) that skips the [Tonemap Pass](#tonemap-pass).
+
+Values are copied as is. HDR input gets clamped, not tonemapped. Size, array size and MSAA sample count of the input are kept.
+
 ## Copy Texture Pass
 
 Copies a texture from input to output verbatim. Useful to preserve an intermediate result for later use in the pipeline.
@@ -68,6 +76,18 @@ This is used in the default pipelines to create three named hook points:
 
 * `RenderDataCategoryName`: The name of the render data category to collect and render.
 * `SortingFunction`: How render data is ordered before rendering. Options: `ByRenderDataThenFrontToBack`, `BackToFrontThenByRenderData`, `ByDepthOffsetOnly`. See [Sorting Functions](#sorting-functions) below.
+
+## Debug Screen Render Pass
+
+Draws the screen space output of the debug renderer: 2D text, info text, lines and rectangles that `ezDebugRenderer` places in pixel coordinates. With a render scale, place it after the [Upscale Pass](#upscale-pass), otherwise the output ends up in the wrong place.
+
+A pipeline without this pass shows no screen space debug output, and a warning is logged for main and editor views.
+
+## Debug World Render Pass
+
+Draws the world space output of the debug renderer: lines, boxes and text that `ezDebugRenderer` places in the world. Place it where the scene is rendered and connect the scene's depth buffer, so that the output is hidden behind objects. A depth input of a different size than the color input is ignored.
+
+A pipeline without this pass shows no world space debug output, and a warning is logged for main and editor views.
 
 ## Depth Only Pass
 
@@ -203,7 +223,7 @@ A depth-aware blur that preserves silhouette edges. Uses a two-pass separable bi
 
 ## Simple Render Pass
 
-Renders unlit and debug geometry as well as all UI and editor overlays. Accepts an optional color input and renders on top of it, or renders directly into the view's current render target if no input is provided.
+Renders unlit geometry as well as UI and editor overlays. Output of the debug renderer is drawn by the [Debug World Render Pass](#debug-world-render-pass) and [Debug Screen Render Pass](#debug-screen-render-pass) instead. Accepts an optional color input and renders on top of it, or renders directly into the view's current render target if no input is provided.
 
 What the simple render pass renders depends on which extractors are active:
 
@@ -214,9 +234,7 @@ What the simple render pass renders depends on which extractors are active:
 * [Editing gizmos](../../scenes/gizmos.md)
 * Unlit meshes
 
-**Properties:**
-
-* `Message`: Debug string shown in the render output during development.
+If a depth input of a different size than the color input is connected (for example because the pass comes after an [Upscale Pass](#upscale-pass)), the depth input is ignored.
 
 ## Sky Render Pass
 
@@ -234,10 +252,26 @@ Allocates a new render target for downstream passes to render into. This is wher
 * `MsaaMode`: MSAA sample count (`None`, `2`, `4`, `8`).
 * `ClearColor`: Color the texture is cleared to when `Clear` is enabled.
 * `Clear`: If `true`, the render target is cleared at the start of every frame.
+* `ApplyRenderScale`: If `true`, the texture is smaller than the view by the view's render scale (the `App.RenderScale` CVar for the game's main view). Enable it on all sources of the scene, and bring the result back to full size with an [Upscale Pass](#upscale-pass). Without one, the scaled textures reach the output at the wrong size.
 
 ## Stereo Test Pass
 
 A test pass for verifying stereoscopic rendering. Not used in production pipelines.
+
+## Switch Pass
+
+Forwards one of several inputs to its output. Which input is used is selected by an integer value read from a [blackboard](../../misc/blackboards.md) entry, see [Render Pipeline Properties](render-pipeline-properties.md#switches). There are two variants, the *Texture Switch Pass* for texture connections and the *Buffer Switch Pass* for buffer connections.
+
+Only the branch that feeds the selected input is executed. All passes that exclusively feed unselected inputs are culled from the pipeline. This is the way to make parts of a pipeline optional. Changing the selected value rebuilds the pipeline's pass graph, so it is meant for configuration changes, not for values that change every frame.
+
+**Properties:**
+
+* `BlackboardProperty`: Name of the blackboard entry that selects the input. If it is empty, the entry doesn't exist or the value doesn't match any entry in `Values`, the **first entry of `Values` is used**. Thus the first entry should always be the default that should be used, when a setting is not configured. Boolean entries are treated as `0` and `1`.
+* `Values`: The value that selects each input. The input pins are named after these values, so changing them disconnects existing connections.
+
+> **NOTE**
+>
+> Two passes that modify the same texture in place (through a pass-through pin) can't both be active at the same time. Since this depends on the selected switch values, it is only detected at runtime, in which case an error is logged and the pipeline isn't executed.
 
 ## Target Pass
 
@@ -261,6 +295,16 @@ Converts high dynamic range (HDR) color values to display output. Combines expos
 Forward render pass for transparent geometry. Objects are sorted back-to-front to produce correct alpha blending. Optionally accepts a resolved depth input for soft particle effects.
 
 **Required Extractor:** [Clustered Data Extractor](render-pipeline-extractors.md#clustered-data-extractor)
+
+## Upscale Pass
+
+Stretches its input to the size of the view. It is the counterpart to [Source Passes](#source-pass) with `ApplyRenderScale` enabled: the scene is rendered at a reduced resolution, and this pass brings it back to the output size. If the input already has the size of the view, it is passed through without any rendering.
+
+Place it after tonemapping and before UI and screen space debug output, so that those stay sharp. Passes after it must not use the scaled depth buffer.
+
+**Properties:**
+
+* `Sharpness`: Counters the blur of the upscaling, from 0 (off) to 1 (strongest). It is meant for tonemapped input; pixels brighter than 1 are left unchanged.
 
 ## Sorting Functions
 

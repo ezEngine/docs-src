@@ -14,6 +14,10 @@ Voxelization happens once, a few frames after the simulation started. It is not 
 
 Grids are managed by the `ezAiVoxelWorldModule`. Its `IsReady()` function returns true once voxelization has finished. Before that, path searches fail. The module also provides `FindGridsInBox()` to find all grids in an area.
 
+### Caves and Enclosed Spaces
+
+To build caves and tunnels in the editor, a [terrain volume](../../terrain/terrain-volume-component.md) can be carved with [3D terrain brushes](../../terrain/terrain-brush-3d-component.md). With `EnableCollider` enabled, the terrain volume generates a collision mesh, which is rasterized into the voxel AI grid like any collision mesh.
+
 ## Path Searches
 
 Path searches use A* through free voxels. A search may span multiple grids. Pathfinding is always done within a single grid at a time. If the destination lies outside the grid that is currently searched, the search only looks for a way out of that grid, and then continues in the next grid on the way to the destination. **Space that is not covered by any grid is treated as free.** This means that grids only need to be placed around areas that actually contain obstacles, and that the space in between is crossed in a straight line.

@@ -56,9 +56,11 @@ In the following `LMB` refers to the *left mouse button*, `RMB` to the *right mo
 
 To temporarily focus on certain objects, it is possible to make objects invisible.
 
-* `H`: Hide the selected objects
+* `H`: Hide the selected objects. If all selected objects are already hidden, they are shown again instead. The menu entry changes between *Hide Selected* and *Unhide Selected* accordingly.
 * `CTRL + H`: Show all hidden objects
 * `SHIFT + H`: Hide all objects that are not selected
+
+Hidden objects can't be picked in the viewport, but they can still be selected in the *Scenegraph* panel. To show only some of the hidden objects again, select them there and press `H`.
 
 Note that 'hide unselected' may hide lighting nodes, which can turn your level very dark. You can either activate [ambient lighting](../graphics/lighting/lighting-overview.md) in your scene, or switch the [render mode](../editor/editor-views.md#render-modes) to 'Diffuse Color', if necessary.
 

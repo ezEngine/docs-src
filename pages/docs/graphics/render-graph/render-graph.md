@@ -51,7 +51,8 @@ ezRenderGraphTextureHandle hMsaaColor = graph.CreateTexture(descMsaa);
 
 // Import persistent non-MSAA resolve target
 ezGALTextureCreationDescription descResolved;
-descResolved.SetAsRenderTarget(64, 64, ezGALResourceFormat::RGBAHalf);
+descResolved.SetAsRenderTarget(128, 128, ezGALResourceFormat::RGBAHalf);
+descResolved.m_uiMipLevelCount = 2;
 ezGALTextureHandle hResolvedGAL = m_pDevice->CreateTexture(descResolved);
 ezRenderGraphTextureHandle hResolved = graph.ImportTexture(hResolvedGAL);
 ```
@@ -87,7 +88,7 @@ You can also optionally set a shader stage via `ezGALShaderStageFlags`. Only use
 ```cpp
 auto pass = graph.AddTransferPass("MsaaColorResolve");
 pass.ReadTexture(hMsaaColor, {}, ezGALResourceState::ResolveSource);
-pass.WriteTexture(hResolved, {}, ezGALResourceState::ResolveDestination);
+pass.WriteTexture(hResolved, ezGALTextureRange{0, 1, 1, 1}, ezGALResourceState::ResolveDestination);
 ```
 <!-- END-DOCS-CODE-SNIPPET -->
 
@@ -109,10 +110,10 @@ You can set an execute callback that is run when the graph is executed later in 
 ```cpp
 pass.SetExecuteCallback([=](const ezRenderGraphContext& ctx)
   {
-  ezGALTextureSubresource subresource;
-  subresource.m_uiMipLevel = 0;
-  subresource.m_uiArraySlice = 0;
-  ctx.GetCommandEncoder()->ResolveTexture(ctx.ResolveTexture(hResolved), subresource, ctx.ResolveTexture(hMsaaColor), subresource); });
+  ezGALTextureSubresource destinationSubresource;
+  destinationSubresource.m_uiMipLevel = 1;
+  ezGALTextureSubresource sourceSubresource;
+  ctx.GetCommandEncoder()->ResolveTexture(ctx.ResolveTexture(hResolved), destinationSubresource, ctx.ResolveTexture(hMsaaColor), sourceSubresource); });
 ```
 <!-- END-DOCS-CODE-SNIPPET -->
 

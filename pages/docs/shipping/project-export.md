@@ -64,7 +64,7 @@ Each line in the file represents one file path pattern:
 
 ## Limitations
 
-* At this time it is not analyzed which plugin DLLs are actually needed, instead all DLLs are included. Edit your `ProjectBinaries.ezExportFilter` to control this.
+* Which DLLs are exported is not determined by analyzing what the game actually uses. The core engine DLLs listed in `CommonBinaries.ezExportFilter` are always included, plus the DLLs of the [engine plugins](../projects/plugin-selection.md) that are selected for the project, along with the dependencies their plugin bundles declare. Edit your `ProjectBinaries.ezExportFilter` to add or remove files.
 * The exported package contains no [shader cache](polishing-your-game.md), so shaders are compiled on the machine of every player, during the first launch.
 * You currently can't automatically execute custom logic (C++ code, or a script) to finalize the package.
 

@@ -14,7 +14,7 @@ Another option is to insert a [collection component](collection-component.md) in
 
 ### Automatic Preload Collection for Main Scene
 
-When loading the first scene in a game (the so called "startup scene"), the engine automatically searches for and loads a preload collection that shares the same name as the scene file. For example, if you load a scene called `Level01.ezScene`, and you have an asset collection named `Level01.ezAssetCollection`, that collection will be automatically preloaded before the scene gets loaded.
+When loading the first scene in a game (the so called "startup scene"), the engine automatically searches for and loads a preload collection that shares the same name as the scene file. For example, if you load a scene called `Level01.ezScene`, and you have a collection asset named `Level01.ezCollectionAsset` in the same folder, that collection will be automatically preloaded before the scene gets loaded.
 
 This is separate from what the [scene transition component](../gameplay/scene-transition-component.md) does and it doesn't apply when you later switch to another level. In those cases you should manually provide a collection for preloading.
 

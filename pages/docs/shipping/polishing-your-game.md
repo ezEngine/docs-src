@@ -61,7 +61,7 @@ Two things make the world visibly appear piece by piece after the loading screen
 The [project export dialog](project-export.md) has options that matter for a final package:
 
 * **Create Launch Scripts** writes the `.bat` files for starting the game. For a package that is distributed to players, these are usually not wanted, since the executable can be started directly.
-* The `ProjectBinaries.ezExportFilter` and `ProjectData.ezExportFilter` files in your project folder control which files end up in the package. All DLLs of the SDK are currently exported, whether the project uses them or not, so this is the place to remove the ones that you don't need.
+* The `ProjectBinaries.ezExportFilter` and `ProjectData.ezExportFilter` files in your project folder control which files end up in the package. Besides the core engine DLLs, the DLLs of all selected engine plugins are exported, whether the game actually uses them or not, so this is the place to remove the ones that you don't need.
 
 ## See Also
 

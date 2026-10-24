@@ -55,6 +55,12 @@ For the main view of a game, the render scale is set through the [CVar](../../de
 
 The pixel count that the automatic selection aims for can be changed in code through `ezRenderWorld::SetAutoRenderScaleMaxPixels()`. For other views the scale is set with `ezView::SetRenderScale()`, and `ezRenderWorld::GetEffectiveRenderScale()` computes the automatic value.
 
+### MSAA
+
+The MSAA sample count is a property of the [Source Passes](render-pipeline-passes.md#source-pass) that create the color and depth targets. To make it configurable, a pipeline contains one source pass per sample count and selects one of them with a [switch](render-pipeline-passes.md#switch-pass).
+
+The passes that convert between multi-sampled and regular textures also work with input that has no MSAA: the [MSAA Resolve Pass](render-pipeline-passes.md#msaa-resolve-pass) copies it, the [Antialiasing Pass](render-pipeline-passes.md#antialiasing-pass) and the [MSAA Upscale Pass](render-pipeline-passes.md#msaa-upscale-pass) forward it unchanged. Thus the rest of the pipeline doesn't need a separate branch for rendering without MSAA.
+
 ### Sub-Graphs
 
 A render pipeline asset can be embedded into another one through a *Subgraph* node. Its `Pipeline` property references the render pipeline asset to embed. During asset transform the node is replaced with the contents of the referenced pipeline, so at runtime there is no difference to a pipeline that contains all passes directly. This is used to share parts between multiple pipelines, for example the scene rendering and post-processing steps, which the main and the editor pipeline have in common.
@@ -71,7 +77,7 @@ The `Base` data directory contains these render pipelines in `RenderPipelines`:
 * **EditorRenderPipeline:** Used by all editor viewports, including the asset previews. Post-processing is skipped in the debug [render modes](../../editor/editor-views.md) through a switch.
 * **Subgraphs:** Shared parts of the pipelines above, such as the depth pre-pass, scene rendering and post-processing.
 
-Some optional parts of these pipelines are controlled through switches that read [pipeline CVars](render-pipeline-properties.md#pipeline-cvars), for example whether SSAO and screen space shadows are used.
+Some optional parts of these pipelines are controlled through switches that read [pipeline CVars](render-pipeline-properties.md#pipeline-cvars), for example whether SSAO and screen space shadows are used, or which [MSAA](#msaa) sample count the main pipeline uses.
 
 ## See Also
 

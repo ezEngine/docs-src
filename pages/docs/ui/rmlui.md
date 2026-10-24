@@ -33,7 +33,7 @@ Both components support blackboard data binding, event messages, and on-demand r
 
 ## Main Menu
 
-The [RmlUI Main Menu Component](rmlui-main-menu-component.md) (`ezRmlUiMainMenuComponent`) provides a ready made main menu with a settings page. Add it to an object in a scene to get *Resume*, *Settings* and *Exit* on *ESC*, without writing any code. Its documents are in `Data/Plugins/RmlUiPlugin/rmlui-menu/` and can be replaced with your own.
+The [RmlUI Main Menu Component](rmlui-main-menu-component.md) (`ezRmlUiMainMenuComponent`) provides a ready made main menu with a settings page. Add it to an object in a scene to get *Resume*, *Settings* and *Exit* on *ESC*, without writing any code. The component is part of the *Game Components* plugin. Its documents are in `Data/Plugins/GameComponentsPlugin/rmlui-menu/` and can be replaced with your own.
 
 ## Debugger
 

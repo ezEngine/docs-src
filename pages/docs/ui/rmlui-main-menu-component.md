@@ -2,6 +2,8 @@
 
 The *RmlUi Main Menu* component (`ezRmlUiMainMenuComponent`) provides a main menu with a settings page, without any code or UI authoring. Add it to any object in a scene, and pressing *ESC* opens a menu with *Resume*, *Settings* and *Exit*.
 
+The component is part of the *Game Components* [plugin](../editor/editor-plugins.md), which requires the [RmlUi](rmlui.md) plugin. Enabling *Game Components* in a project therefore also enables RmlUi. The component is meant as a sample implementation: a project can use it directly, or copy its code and documents into its own plugin to build a custom version.
+
 ![Main Menu](media/rml-main-menu.jpg)
 
 This exists so that samples and new projects have a way to leave the application and to change the most common settings. A finished game will usually want its own menu, either by replacing the documents that this component displays, or by building the UI from scratch, as the [RTS sample](../../samples/rts.md) does.
@@ -28,6 +30,10 @@ A custom game state can also utilize this main menu component, for an example, s
 
 **Input Sets:** The input sets whose actions the *Controls* tab offers for rebinding. When this is empty, every input set is listed, except the ones that the engine registers for itself (the console, the debug keys of `ezGameApplication`, the scene switching of *ezPlayer*, the menu itself). Set this to the input set that the game's own actions use (`Player` in the sample projects) to keep the actions of other systems out of the menu.
 
+**Title:** The text shown at the top of the main menu page, in the element with the ID `menu-title`. If empty, the name of the project directory is shown. The text is displayed as is, it is not interpreted as RML.
+
+**Style Sheet:** An additional RmlUi style sheet (`.rcss`) for both the main menu and the settings document. Its rules are applied after each document's own style sheets, as if it was linked last, so it can override the built-in styles. The built-in documents use the body classes `main-menu` and `app-settings`, which allows the style sheet to tell them apart. See [Restyling the menu](#restyling-the-menu).
+
 **Pause World:** Whether the game gets paused while the menu is open.
 
 ## Saved settings
@@ -36,7 +42,7 @@ What the user picks is stored in [CVars](../debugging/cvars.md) whose names star
 
 They are deliberately separate from the engine's own CVars: a quality selection is a single number that means 'Medium', while the engine is configured through several unrelated values (shadow atlas size, mip drop, ...). Only the selection is worth saving and showing, the mapping to the engine's CVars is what `ezRmlUiMainMenuComponent::ApplySettings()` does. A game that offers its own menu would do the same.
 
-Settings that map to a single engine CVar are not duplicated. The *SSAO* and *Screen Space Shadows* check boxes directly change the [pipeline CVars](../graphics/render-pipeline/render-pipeline-properties.md#pipeline-cvars) `Rendering.Pipeline.SSAO` and `Rendering.Pipeline.SSS`, which are saved as well.
+Settings that map to a single engine CVar are not duplicated. The *SSAO* and *Screen Space Shadows* check boxes and the *Anti-Aliasing (MSAA)* drop down directly change the [pipeline CVars](../graphics/render-pipeline/render-pipeline-properties.md#pipeline-cvars) `Rendering.Pipeline.SSAO`, `Rendering.Pipeline.SSS` and `Rendering.Pipeline.MSAA`, which are saved as well.
 
 The component applies these settings when it is activated, which is how the settings of a previous run take effect.
 
@@ -44,9 +50,13 @@ The component applies these settings when it is activated, which is how the sett
 
 Besides being a working menu, the two documents show most of what a settings UI needs from [RmlUi](rmlui.md): a tab set, tables, buttons, check boxes, sliders, drop downs, radio buttons, a text field, images, and rows that are generated from C++ at runtime (the sound groups and the key bindings). The component's implementation shows how each widget is read and written.
 
+## Restyling the menu
+
+To change only how the menu looks, set the *Style Sheet* property instead of copying the documents. The built-in documents then still get new settings when the engine adds them, and they keep the element IDs that the component expects.
+
 ## Replacing the documents
 
-The built-in documents live in `Data/Plugins/RmlUiPlugin/rmlui-menu/`, next to the default RmlUi styles, so they are available in every project that has the RmlUi plugin enabled. To change how the menu looks, copy them into your project, adjust them, and point the *Menu File* and *Settings File* properties at your copies.
+The built-in documents live in `Data/Plugins/GameComponentsPlugin/rmlui-menu/`. This data directory is added by the *Game Components* plugin, so the documents are available in every project that has this plugin enabled. To change the layout or content of the menu, copy them into your project, adjust them, and point the *Menu File* and *Settings File* properties at your copies.
 
 The component addresses the widgets by their element IDs, and the buttons by the identifiers in their `onclick` and `onchange` attributes, so those have to be kept. A widget that a document does not contain is simply skipped, which is how a stripped down settings page can be built: remove the rows that should not be offered and leave the rest alone.
 

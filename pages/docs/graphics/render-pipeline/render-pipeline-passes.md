@@ -25,6 +25,8 @@ In the default pipelines this pass is named `Rendering.Pipeline.SSAO` and is sel
 
 Post-process anti-aliasing pass. Performs an advanced resolve of MSAA render targets using a two-pixel-wide B-spline filter. No configurable properties.
 
+If the input is not multi-sampled, it is forwarded to the output unchanged. The output is then the same texture as the input, see the [MSAA Resolve Pass](#msaa-resolve-pass) for what this means for passes that modify the input in place.
+
 ## Blend Pass
 
 Linearly interpolates between two input textures and writes the result to the output.
@@ -149,15 +151,19 @@ The pass reads light shaft parameters from the [Light Shafts Component](../light
 
 ## MSAA Resolve Pass
 
-Resolves a multi-sampled render target into a regular texture by averaging the samples. Required before passing MSAA output into passes that cannot process multi-sampled textures.
+Resolves a multi-sampled render target into a regular texture by averaging the samples. Supports color and depth-stencil textures. Required before passing MSAA output into passes that cannot process multi-sampled textures.
+
+If the input is not multi-sampled, it is copied instead, so the same pipeline works with and without MSAA. See [MSAA](render-pipeline-overview.md#msaa).
 
 **Properties:**
 
-* `IsDepth`: Set to `true` when resolving a depth-stencil texture rather than a color texture.
+* `GuaranteeCopy`: Only affects non-multi-sampled input. If enabled (the default), the input is copied into a new texture. If disabled, the input is forwarded to the output, which saves the copy, but then the output is the same texture as the input. Passes that modify the input in place (through a pass-through pin) are only ordered after the passes that read the input directly, not after the passes that read this pass's output. Those may then see the modified content. Only disable this when nothing writes to the input after this pass.
 
 ## MSAA Upscale Pass
 
 Converts a regular texture into a multi-sampled render target by replicating each pixel across all samples. Used when transitioning back from non-MSAA post-processing to an MSAA render target.
+
+If `MsaaMode` is `None`, or the input already has that sample count, the input is forwarded to the output unchanged. An input with a different sample count is reported as an error.
 
 **Properties:**
 

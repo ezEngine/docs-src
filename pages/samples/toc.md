@@ -3,6 +3,7 @@
 # [Testing Chambers](testing-chambers.md)
 # [Basic FPS Project Template](basic-fps-template.md)
 # [Bistro Sample](bistro-sample.md)
+# [Demon's Cove Sample](demons-cove.md)
 # Monster Attack
 ## [Monster Attack Sample](monster-attack/monster-attack.md)
 ## [MA Devlog 1 - Intro](monster-attack/devlog-1.md)

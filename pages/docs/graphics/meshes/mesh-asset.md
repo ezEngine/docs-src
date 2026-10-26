@@ -34,15 +34,17 @@ Since assets are often authered with many different conventions, you can adjust 
 
 * `MeshIncludeTags`, `MeshExcludeTags`: Some source assets pack different types of meshes into a single file, for example different LODs or a dedicated collider mesh. These options allow you to select which meshes to import. Both are *semicolon-separated* lists of strings. Ie *A;B* represents two *tags*, `A` and `B`.
 
-  If any *include tag* is specified, only meshes whose names **start or end** with that string are used. For instance, the include tag `LOD1` means that a mesh named *Bunny_LOD1* would be imported, but a mesh named *Bunny* would be skipped.
+  Each tag is compared against two names: the name of the mesh itself, and the name of the scene node that the mesh is attached to. In most DCC tools the node (or *object*) is what users name explicitly, whereas mesh names are often generated. A tag matches if either name **starts or ends** with it. The comparison is case insensitive. Only the node that directly holds the mesh is checked, not its parent nodes.
 
-  If any *exclude tag* is specified, meshes whose names **start or end** with that string are skipped. However, include tags take precedence.
+  If any *include tag* is specified, only meshes where a tag matches are used. For instance, the include tag `LOD1` means that a mesh in a node named *Bunny_LOD1* would be imported, but a mesh in a node named *Bunny* would be skipped (unless the mesh name itself matches).
+
+  If any *exclude tag* is specified, meshes where a tag matches are skipped. However, include tags take precedence. If any include tag is set, the exclude tags are ignored.
 
   > **Note:**
   >
-  > Only *mesh names* are considered, the names of material slots are not used here.
+  > Only node and mesh names are considered, the names of material slots are not used here.
   >
-  > If *any* include or exclude tag is set, the mesh importer writes the names of all found meshes to the [editor log](../../debugging/logging.md). You have to switch the **log filter** to *Dev* to see these messages. Then *force transform* the mesh to see the log messages show up. Usually you should use your DCC tool to see and edit mesh names, but this is a quick way to check.
+  > If *any* include or exclude tag is set, the mesh importer writes the names of all found meshes, in the form `NodeName::MeshName`, to the [editor log](../../debugging/logging.md). You have to switch the **log filter** to *Dev* to see these messages. Then *force transform* the mesh to see the log messages show up. Usually you should use your DCC tool to see and edit mesh names, but this is a quick way to check.
 
 * `ImportTransform`, `RightDir`, `UpDir`, `FlipForwardDir`: How to rotate or mirror the mesh during import, so that it is oriented correctly for use in ezEngine. See [Mesh Orientation](#mesh-orientation) above.
 

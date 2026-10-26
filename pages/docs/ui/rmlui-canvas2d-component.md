@@ -12,7 +12,7 @@ These properties are shared with the [RmlUI Canvas 3D Component](rmlui-canvas3d-
 
 **Rml Resource:** The `.rml` document file to load and render.
 
-**Autobind Blackboards:** When enabled, the component searches the owner object's hierarchy for a [blackboard](../misc/blackboards.md) component and binds it automatically. The blackboard's name is used as the RmlUi model name, making its entries accessible as RmlUi data model variables. You can also bind blackboards manually from C++ using `ezRmlUiCanvasComponentBase::AddBlackboardBinding()`. Both scalar values and [variant arrays](https://mikke89.github.io/RmlUiDoc/pages/data_bindings.html) stored in the blackboard are supported.
+**Autobind Blackboards:** When enabled, the component searches the owner object's hierarchy for a [blackboard](../misc/blackboards.md) component and binds it automatically. The blackboard's name is used as the RmlUi model name, making its entries accessible as RmlUi data model variables. You can also bind blackboards manually from C++ using `ezRmlUiCanvasComponentBase::AddBlackboardBinding()`. Scalar values, variant arrays and variant dictionaries stored in the blackboard are supported. See [blackboard data binding](rmlui.md#blackboard-data-binding) for details.
 
 **Send Event Message:** When enabled, every RmlUi event (such as a button click) fires an `ezMsgRmlUiEvent` message on the component's owner object. The message carries:
 

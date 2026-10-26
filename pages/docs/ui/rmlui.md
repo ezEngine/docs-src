@@ -31,6 +31,32 @@ ezEngine provides two canvas components for placing RmlUi documents in a scene:
 
 Both components support blackboard data binding, event messages, and on-demand rendering. See the individual component pages for their full property reference.
 
+## Blackboard Data Binding
+
+A [blackboard](../misc/blackboards.md) can be bound to an RmlUi context as a [data model](https://mikke89.github.io/RmlUiDoc/pages/data_bindings.html). The canvas components do this automatically with *Autobind Blackboards*, or from C++ through `ezRmlUiCanvasComponentBase::AddBlackboardBinding()`. The blackboard's name is used as the model name, and every entry becomes a data variable with the entry's name.
+
+Entries of these types are bound:
+
+* Scalars: `bool`, integer and floating point types, `ezString` and `ezHashedString`.
+* `ezVariantArray`: Accessed as an RmlUi array, for instance with `data-for` or `list[2]`. `list.size` returns the number of elements.
+* `ezVariantDictionary`: Accessed as an RmlUi struct, using the dictionary keys as member names, for instance `player.health`.
+
+Arrays and dictionaries can be nested in each other in any combination, for example `{{ inventory[0].name }}` for an array of dictionaries. Entries of other types are ignored.
+
+```html
+<body data-model="HUD">
+  <p>{{ player.name }}: {{ player.health }}</p>
+  <div data-for="item : inventory">{{ item.name }} x{{ item.count }}</div>
+</body>
+```
+
+Limitations:
+
+* Only top level scalar entries can be written from the UI, for instance through `data-value`. Arrays, dictionaries and all values nested inside of them are read-only. Change them through the blackboard instead.
+* `data-for` can iterate over arrays, but not over the members of a dictionary. Dictionary members have to be accessed by name.
+* Only entries that exist when the binding is set up are bound. Entries that are added later are not picked up.
+* An entry must not change between scalar, array and dictionary after setup. Changing the value is fine, for example replacing an array with one that has a different number of elements.
+
 ## Main Menu
 
 The [RmlUI Main Menu Component](rmlui-main-menu-component.md) (`ezRmlUiMainMenuComponent`) provides a ready made main menu with a settings page. Add it to an object in a scene to get *Resume*, *Settings* and *Exit* on *ESC*, without writing any code. The component is part of the *Game Components* plugin. Its documents are in `Data/Plugins/GameComponentsPlugin/rmlui-menu/` and can be replaced with your own.

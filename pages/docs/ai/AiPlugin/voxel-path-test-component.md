@@ -20,6 +20,7 @@ If no path shows up, use `VisualizePathState` to see why the search failed, and 
 * `SearchMargin`: How much extra space around the start and destination is searched for voxel grids.
 * `MaxIterationsPerHop`: The maximum number of A* steps that may be spent within a single voxel grid. Lower values prevent frame stalls in large grids, but may make long paths fail.
 * `MaxHops`: Through how many voxel grids a path may pass.
+* `Radius`: The clearance radius used for the path search. Set this to the value used by the actual navigating object to see which paths it would take. See [agent radius](voxel-navigation.md#agent-radius).
 
 ## See Also
 

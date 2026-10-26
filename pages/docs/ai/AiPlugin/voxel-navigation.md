@@ -26,11 +26,23 @@ Path searches use A* through free voxels. A search may span multiple grids. Path
 
 Path searches are limited by the number of A* iterations per grid, and by the number of grids that a path may pass through. Both are exposed as properties on the components that do the searching.
 
+### Agent Radius
+
+By default a path search treats the moving object as a point. Such a path may squeeze through openings that are only one voxel wide, and the smoothed path may cut close to corners, which makes larger objects clip into geometry.
+
+The components that do path searches therefore have a `Radius` property. When it is larger than zero, a voxel only counts as navigable if all voxels within that radius around it are free as well. Openings that are narrower than twice the radius are avoided, and path smoothing keeps the same distance to obstacles. The check is conservative: a voxel counts as blocking as soon as any part of its box lies within the radius.
+
+The radius only applies inside of grids. Space that isn't covered by any grid is still treated as free, so the edges of a grid need even more free space around the geometry when a radius is used. If the start or destination is too close to geometry to fit the radius, the search moves it to the closest voxel nearby that has enough clearance. If there is none, the search fails.
+
+> **Important!**
+>
+> Non-zero radii add significant performance overhead, so only use this feature, if you clearly need it. It also only makes sense, if the voxel size is smaller than the radius.
+
 ### Entering and Leaving Grids
 
 A* is only used inside of grids. Outside of them, the path goes in a straight line from the current position towards the destination, until that line hits the box of a grid. The voxel where the line enters the box is where the search inside that grid starts. To leave a grid, the search looks for a free voxel at the grid's boundary that leads towards the destination.
 
-If the voxel where the path enters a grid is occupied, the search tries free voxels up to two voxels away from it. If there are none, the search fails. Increasing the number of iterations doesn't help in this case, since the search inside the grid never starts.
+If the voxel where the path enters a grid is occupied, the search tries free voxels up to two voxels away from it (plus the agent radius, if one is used). If there are none, the search fails. Increasing the number of iterations doesn't help in this case, since the search inside the grid never starts.
 
 This leads to these rules for placing grids:
 

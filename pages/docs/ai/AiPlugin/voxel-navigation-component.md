@@ -22,6 +22,7 @@ The object doesn't necessarily have to come to a stop at its destination. Use `I
 * `Speed`: The target movement speed.
 * `Acceleration`, `Deceleration`: How quickly to gain speed and how quickly to brake. The deceleration value also determines how far ahead of the destination the object starts slowing down.
 * `ReachedDistance`: The distance at which the destination counts as reached.
+* `Radius`: The clearance radius of the object. Paths keep at least this distance to occupied voxels and avoid openings that are too narrow. Zero treats the object as a point. See [agent radius](voxel-navigation.md#agent-radius).
 * `ApplySteering`: If disabled, the component computes everything but doesn't move the game object. Used when another system applies the movement.
 * `LookAheadDistance`: How far ahead along the path the object steers towards. Larger values cut corners more and produce smoother movement.
 * `MaxPathOffset`: How far the visual position may stray from the path before it is pulled back.
@@ -45,7 +46,7 @@ The object doesn't necessarily have to come to a stop at its destination. Use `I
 * `FindRandomPointAroundSphere(center, radius, maxAttempts, point)`: Searches for a random navigable position within a sphere. Returns false if no such position was found within the given number of attempts.
 * `GetValidCellNearby(start, searchRadius, point)`: Returns the given position if it is navigable, otherwise the closest navigable position within the search radius. Returns false if there is none. Combine this with `SetDestinationDirect()` to get an object out of a blocked position.
 
-Positions count as navigable if they are in a free voxel, or if they are not covered by any voxel grid at all.
+Positions count as navigable if they are in a free voxel, or if they are not covered by any voxel grid at all. If `Radius` is set, all voxels within the radius around the position have to be free as well.
 
 ## See Also
 

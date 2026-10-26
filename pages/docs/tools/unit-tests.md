@@ -8,7 +8,12 @@ The test framework can be built purely for console execution or to have a graphi
 
 ### Command Line Options
 
-Run any test suite with the argument `-help` to get the full list of available options.
+Run any test suite with the argument `-help` to get the full list of available options. The most important ones are:
+
+* `-noGui`: Runs the tests in console mode, without the test framework GUI. The tests start on their own and the process exits when they are done, whether they passed or not. This is what automated runs use.
+* `-headless`: Tests that support it don't create native windows. Instead they render into offscreen render targets, so image comparison tests still work. This is implemented for **RendererTest** and **GameEngineTest**. Other test suites ignore it, and the **EditorTest** still opens windows.
+* `-agent`: Combines `-noGui` and `-headless`. Use this when running tests from scripts or coding agents, so that test runs don't open windows that take away the focus.
+* `-filter`: Only runs tests and subtests whose name contains the given text (case insensitive). With `*` or `?` in the text, the name has to match the wildcard pattern fully.
 
 ### Test Structure
 

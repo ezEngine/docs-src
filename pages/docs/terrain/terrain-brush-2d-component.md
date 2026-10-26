@@ -40,6 +40,16 @@ Material painting let's you change the material layer that is used in some area.
 
 ![Material Painting](media/brushes-paint.jpg)
 
+### Overlapping Brushes
+
+On [terrain patches](terrain-patch-component.md), painting brushes are layered on top of each other in order of their `Priority`, like layers with opacity in an image editor. Each brush first reduces the weight of everything that was painted before it (including the base material) by its own weight, and then adds its material on top. As a result:
+
+* Where a brush paints with full strength, it completely replaces the materials of all lower-priority brushes. For example, a road brush with a higher priority than the surrounding ground brushes keeps its own material at full strength. If the road has a lower priority instead, the other brushes cover it.
+* With partial strength, the later brush is dominant. Two overlapping brushes that both paint with a weight of `0.5` result in `0.5` for the higher-priority brush, and `0.25` for the lower-priority one. The base material gets the remaining `0.25`.
+* Each vertex can hold up to four painted materials. If more brushes overlap, a material only replaces the weakest one when its weight is higher, otherwise that brush has no effect at this vertex.
+
+Use the `Priority` to define which material ends up on top where brushes overlap.
+
 ## Noise
 
 Noise affects both geometry and material painting. Noise is used to introduce random patterns to make the result more natural. See the image below for an example where the same brush settings are used, only with varying noise strength and frequency.
@@ -52,7 +62,7 @@ Noise affects both geometry and material painting. Noise is used to introduce ra
 
 ## Shared Properties
 
-`Priority` — Brush evaluation order. Brushes with higher priority are applied later and win over lower-priority brushes in the same region. It is very rarely necessary to adjust this, but if you have multiple brushes in the same area and one brush doesn't have the effect that you expect it to have, increase its priority, to make it more dominant.
+`Priority` — Brush evaluation order. Brushes with higher priority are applied later and win over lower-priority brushes in the same region. This applies both to height changes and to [material painting](#overlapping-brushes), where a higher-priority brush covers the materials of lower-priority brushes. If you have multiple brushes in the same area and one brush doesn't have the effect that you expect it to have, increase its priority, to make it more dominant.
 
 `AffectPatches`, `AffectVolumes` — Whether the brush applies to [terrain patches](terrain-patch-component.md) or [terrain volumes](terrain-volume-component.md). By default 2D brushes only affect terrain patches, and 3D brushes only affect volumes.
 

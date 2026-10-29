@@ -32,6 +32,8 @@ The list on the left lists all the available preferences. Items prefixed with `A
 
 * **Field Of View:** The FOV of the generic editor camera.
 
+* **Show Orientation Indicator:** Shows the axis indicator in the top right corner of 3D views.
+
 * **Max Framerate:** Limits how fast the editor should render the scene.
 
 * **Gizmo Size:** Allows you to change the size of the editor gizmos.

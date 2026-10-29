@@ -52,6 +52,28 @@ In the following `LMB` refers to the *left mouse button*, `RMB` to the *right mo
 
 * `F` and `SHIFT + F`: *Frame object*, same as in perspective view
 
+## View Direction Shortcuts
+
+The numpad keys rotate the camera to predefined directions. In perspective views the camera orbits around the focus point (the same point that `ALT + LMB` orbits around).
+
+| Shortcut | Action |
+|---|---|
+| `Num 1` | View from front (look along -X) |
+| `CTRL + Num 1` | View from back (look along +X) |
+| `Num 3` | View from right (look along -Y) |
+| `CTRL + Num 3` | View from left (look along +Y) |
+| `Num 7` | View from top (look down) |
+| `CTRL + Num 7` | View from bottom (look up) |
+| `Num 9` | Flip the view to look from the opposite side |
+| `Num 4` / `Num 6` | Orbit left / right by 15 degrees |
+| `Num 8` / `Num 2` | Orbit up / down by 15 degrees |
+
+The shortcuts apply to the view under the mouse cursor.
+
+In orthographic views, `Num 1`, `Num 3` and `Num 7` switch the view to the front, right and top orthographic mode. The other shortcuts have no effect there.
+
+These actions can also be found in the menu *View > Camera View*.
+
 ## Show/Hide Objects
 
 To temporarily focus on certain objects, it is possible to make objects invisible.
